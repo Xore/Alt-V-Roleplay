@@ -50,30 +50,5 @@ namespace Altv_Roleplay.Handler
             if (User.ExistPlayerSocialClub(player) || User.ExistPlayerEmail(email) || User.ExistPlayerName(username)) return;
             User.CreatePlayerAccount(player, username, email, pass);
         }
-
-        [AsyncClientEvent("Server:Whitelist:success")]
-        public async void WhitelistSuccess(IPlayer player)
-        {
-            if (player == null || !player.Exists) return;
-
-            User.SetPlayerWhitelistState(User.GetPlayerAccountId(player), true);
-
-            player.EmitLocked("Client:Login:showArea", "login");
-
-            await Task.Delay(new Random().Next(2000, 2500));
-        }
-
-        [AsyncClientEvent("Server:Whitelist:unsuccess")]
-        public async void WhitelistUnsuccess(IPlayer player)
-        {
-            if (player == null || !player.Exists) return;
-
-            User.SetPlayerWhitelistState(User.GetPlayerAccountId(player), false);
-            User.IncreaseWhitelistTime(User.GetPlayerAccountId(player), 15);
-
-            player.EmitLocked("Client:Login:showArea", "login");
-
-            await Task.Delay(new Random().Next(2000, 2500));
-        }
     }
 }

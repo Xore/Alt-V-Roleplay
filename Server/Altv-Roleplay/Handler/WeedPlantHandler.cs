@@ -1,20 +1,24 @@
 ﻿using AltV.Net;
-using AltV.Net.Async;
 using AltV.Net.Data;
-using AltV.Net.Elements.Entities;
-using AltV.Net.EntitySync;
-using AltV.Net.EntitySync.ServerEvent;
-using AltV.Net.EntitySync.SpatialPartitions;
-using Altv_Roleplay.Factories;
-using Altv_Roleplay.Model;
-using Altv_Roleplay.models;
-using Altv_Roleplay.Utils;
+using AltV.Net.Resources.Chat.Api;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Text;
 using System.Timers;
+using System.Threading.Tasks;
+using AltV.Net.Async;
+using AltV.Net.Elements.Entities;
+using AltV.Net.Enums;
+using Altv_Roleplay.Factories;
+using Altv_Roleplay.Model;
+using Altv_Roleplay.models;
+using Altv_Roleplay.Utils;
+using AltV.Net.EntitySync;
+using AltV.Net.EntitySync.ServerEvent;
+using AltV.Net.EntitySync.SpatialPartitions;
 
 namespace Altv_Roleplay.Handler
 {
@@ -132,10 +136,9 @@ namespace Altv_Roleplay.Handler
             float potWeight = ServerItems.GetItemWeight("Blumentopf");
             float invWeight = CharactersInventory.GetCharacterItemWeight(charId, "inventory");
             float backpackWeight = CharactersInventory.GetCharacterItemWeight(charId, "backpack");
-            if (invWeight + weedWeight + potWeight > 15.02f && backpackWeight + weedWeight + potWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId)))
-            {
-                HUDHandler.SendNotification(player, 3, 2500, $"Deine Taschen sind voll.");
-                return;
+            if (invWeight + weedWeight + potWeight > 15.02f && backpackWeight + weedWeight + potWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId))) { 
+                HUDHandler.SendNotification(player, 3, 2500, $"Deine Taschen sind voll."); 
+                return; 
             }
 
             if (invWeight + weedWeight + potWeight <= 15.02f)

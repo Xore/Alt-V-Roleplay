@@ -1,22 +1,26 @@
 ﻿using AltV.Net;
-using AltV.Net.Async;
 using AltV.Net.Data;
 using AltV.Net.Elements.Entities;
-using AltV.Net.Elements.Refs;
-using Altv_Roleplay.Factories;
 using Altv_Roleplay.Model;
-using Altv_Roleplay.Utils;
 using System;
-using System.Diagnostics;
-using System.Globalization;
-using System.Linq;
+using System.Collections.Generic;
+using System.Text;
 using System.Timers;
+using Altv_Roleplay.Utils;
+using Altv_Roleplay.Factories;
+using System.Linq;
+using System.Globalization;
+using AltV.Net.Elements.Refs;
+using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Threading;
+using AltV.Net.Async;
+using Altv_Roleplay.models;
 
 namespace Altv_Roleplay.Handler
 {
     class TimerHandler
     {
-        #region OnCheckTimer
         public static void OnCheckTimer(object sender, ElapsedEventArgs e)
         {
             try
@@ -24,7 +28,7 @@ namespace Altv_Roleplay.Handler
                 //Console.WriteLine($"Timer - Thread = {Thread.CurrentThread.ManagedThreadId}");
                 Stopwatch stopwatch = new Stopwatch();
                 stopwatch.Start();
-                foreach (IPlayer player in Alt.Server.GetPlayers().ToList())
+                foreach (IPlayer player in Alt.GetAllPlayers().ToList())
                 {
                     if (player == null) continue;
                     using (var playerReference = new PlayerRef(player))
@@ -34,22 +38,20 @@ namespace Altv_Roleplay.Handler
                         lock (player)
                         {
                             if (player == null || !player.Exists) continue;
-                            if (player.Dimension != 10000 && ((ClassicPlayer)player).accountId == 0) player.kickWithMessage("Fehler #1339 erkannt");
-                            if (player.Dimension == 0) { if (User.GetPlayerOnline(player) <= 0 || User.GetPlayerSocialclubIdbyAccId(User.GetPlayerAccountId(player)) != player.SocialClubId || User.GetPlayerHardwareIdbyAccId(User.GetPlayerAccountId(player)) != player.HardwareIdHash) player.kickWithMessage("Fehler #1338 erkannt"); }
+                            if (player.Dimension != 10000 && ((ClassicPlayer)player).accountId == 0) player.kickWithMessage("Fehler #1339 erkannt, Bitte versuche es Erneut!");
+                            if (player.Dimension == 0) { if (User.GetPlayerOnline(player) <= 0 || User.GetPlayerHardwareIdbyAccId(User.GetPlayerAccountId(player)) != player.HardwareIdHash) player.kickWithMessage("Fehler #1338: Falsche SocialClub/HWID"); }
                         }
                     }
                 }
                 stopwatch.Stop();
                 //Alt.Log($"OnCheckTimer: Player Foreach benötigte: {stopwatch.Elapsed}");
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 Alt.Log($"{ex}");
             }
         }
-        #endregion
 
-        #region OnEntityTimer
         public static void OnEntityTimer(object sender, ElapsedEventArgs e)
         {
             try
@@ -69,10 +71,7 @@ namespace Altv_Roleplay.Handler
                             long vehID = Veh.GetVehicleId();
                             if (vehID <= 0) { continue; }
                             ServerVehicles.SaveVehiclePositionAndStates(Veh);
-                            if (Veh.EngineOn == true)
-                            {
-                                ServerVehicles.SetVehicleFuel(Veh, ServerVehicles.GetVehicleFuel(Veh) - 0.15f);
-                            }
+                            if (Veh.EngineOn == true) { ServerVehicles.SetVehicleFuel(Veh, ServerVehicles.GetVehicleFuel(Veh) - 0.10f); }
                         }
                     }
                 }
@@ -141,11 +140,11 @@ namespace Altv_Roleplay.Handler
                                     else if (fastFarmTime <= 0) Characters.SetCharacterFastFarm(charId, false, 0);
                                 }
 
-                                if (Characters.IsCharacterInJail(charId))
+                                if(Characters.IsCharacterInJail(charId))
                                 {
                                     int jailTime = Characters.GetCharacterJailTime(charId);
                                     if (jailTime > 0) Characters.SetCharacterJailTime(charId, true, jailTime - 1);
-                                    else if (jailTime <= 0)
+                                    else if(jailTime <= 0)
                                     {
                                         if (CharactersWanteds.HasCharacterWanteds(charId))
                                         {
@@ -251,14 +250,12 @@ namespace Altv_Roleplay.Handler
                 stopwatch.Stop();
                 //Alt.Log($"OnEntityTimer: Player Foreach benötigte: {stopwatch.Elapsed}");
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 Alt.Log($"{ex}");
             }
         }
-        #endregion
 
-        #region VehicleAutomaticParkFetch-Hotel
         internal static void VehicleAutomaticParkFetch(object sender, ElapsedEventArgs e)
         {
             try
@@ -284,25 +281,23 @@ namespace Altv_Roleplay.Handler
                 //    }
                 //}
 
-                foreach (var hotelApartment in ServerHotels.ServerHotelsApartments_.Where(x => x.ownerId > 0))
+                foreach(var hotelApartment in ServerHotels.ServerHotelsApartments_.Where(x => x.ownerId > 0))
                 {
                     if (hotelApartment == null) continue;
-                    if (DateTime.Now.Subtract(Convert.ToDateTime(hotelApartment.lastRent)).TotalHours >= hotelApartment.maxRentHours)
+                    if(DateTime.Now.Subtract(Convert.ToDateTime(hotelApartment.lastRent)).TotalHours >= hotelApartment.maxRentHours)
                     {
                         int oldOwnerId = hotelApartment.ownerId;
-                        ServerHotels.SetApartmentOwner(hotelApartment.hotelId, hotelApartment.id, 0);
-                        foreach (IPlayer players in Alt.GetAllPlayers().ToList().Where(x => x != null && x.Exists && User.GetPlayerOnline(x) == oldOwnerId))
+                        ServerHotels.SetApartmentOwner(hotelApartment.hotelId, hotelApartment.id, 0);                 
+                        foreach(IPlayer players in Alt.GetAllPlayers().ToList().Where(x => x != null && x.Exists && User.GetPlayerOnline(x) == oldOwnerId))
                         {
                             HUDHandler.SendNotification(players, 3, 2500, "Deine Mietdauer im Hotel ist ausgelaufen, dein Zimmer wurde gekündigt");
                         }
                     }
                 }
             }
-            catch (Exception ex) { Alt.Log($"{ex}"); }
+            catch(Exception ex) { Alt.Log($"{ex}"); }
         }
-        #endregion
 
-        #region OnDesireTimer
         internal static void OnDesireTimer(object sender, ElapsedEventArgs e)
         {
             //Alt.Log("OnDesireTimer Timer aufgerufen");
@@ -348,82 +343,5 @@ namespace Altv_Roleplay.Handler
                 }
             }
         }
-        #endregion
-
-        #region OnAlcTimer
-        internal static void OnAlcTimer(object sender, ElapsedEventArgs e)
-        {
-            //Alt.Log("OnDesireTimer Timer aufgerufen");
-            foreach (IPlayer player in Alt.GetAllPlayers().ToList())
-            {
-                if (player == null || Characters.IsCharacterAnimal(((ClassicPlayer)player).CharacterId)) continue;
-                using (var pRef = new PlayerRef(player))
-                {
-                    if (!pRef.Exists) return;
-                    lock (player)
-                    {
-                        if (player.Exists && User.GetPlayerOnline(player) != 0)
-                        {
-                            int charId = User.GetPlayerOnline(player);
-
-                            /*if (Characters.GetCharacterAlclvl(User.GetPlayerOnline(player)) > 0)
-                            {
-                                Characters.SetCharacterAlclvl(charId, Characters.GetCharacterAlclvl(User.GetPlayerOnline(player)) - 0.15f);
-                                Alt.Log($"OnAlcTimer: {Characters.GetCharacterAlclvl(charId)}");
-                                return;
-
-                                var curAlcLvl = Characters.GetCharacterAlclvl(User.GetPlayerOnline(player));
-                                while (curAlcLvl >= 0);
-                                {
-                                    curAlcLvl = Characters.GetCharacterAlclvl(User.GetPlayerOnline(player));
-                                }
-                            }*/
-
-                            var curAlcLvl = Characters.GetCharacterAlclvl(User.GetPlayerOnline(player));
-                            while (curAlcLvl >= 0.01f)
-                            {
-                                Characters.SetCharacterAlclvl(charId, Characters.GetCharacterAlclvl(User.GetPlayerOnline(player)) - 0.01f);
-                                Alt.Log($"OnAlcTimer: {Characters.GetCharacterAlclvl(charId)}");
-                                return;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        #endregion
-
-        #region OnDrugTimer
-        internal static void OnDrugTimer(object sender, ElapsedEventArgs e)
-        {
-            //Alt.Log("OnDesireTimer Timer aufgerufen");
-            foreach (IPlayer player in Alt.GetAllPlayers().ToList())
-            {
-                if (player == null || Characters.IsCharacterAnimal(((ClassicPlayer)player).CharacterId)) continue;
-                using (var pRef = new PlayerRef(player))
-                {
-                    if (!pRef.Exists) return;
-                    lock (player)
-                    {
-                        if (player.Exists && User.GetPlayerOnline(player) != 0)
-                        {
-                            int charId = User.GetPlayerOnline(player);
-
-                            if (Characters.GetCharacterDrug(User.GetPlayerOnline(player)) == "Clean")
-                            {
-                                //
-                            }
-                            else
-                            {
-                                Characters.SetCharacterDrug(charId, "Clean");
-                            }
-
-                            Alt.Log($"OnDrugTimer: {Characters.GetCharacterDrug(charId)}");
-                        }
-                    }
-                }
-            }
-        }
-        #endregion
     }
 }

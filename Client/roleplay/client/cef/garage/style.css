@@ -109,11 +109,10 @@ div#GarageCEFBox {
     top: 20%;
     position: absolute;
     z-index: 100;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.425), rgba(86, 0, 121, 0.329));
+    background: linear-gradient(0deg, rgb(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
     text-align: center;
     padding-bottom: 0;
     left: 20px;
-    border-radius: 35px;
 }
 
 div#GarageCEFBox>p#GarageCEFBOX-title {
@@ -147,16 +146,15 @@ div#GarageCEFBox>hr {
 }
 
 div#GarageCEFBox>div.secbox {
-    background: rgb(0 0 0 / 29%);
+    background: rgba(0, 0, 0, 0.2);
     margin-left: -35px;
     margin-right: -35px;
     margin-top: -16px;
     z-index: 100;
     padding: 15px;
     padding-bottom: 5px;
+    border-bottom: 1px solid #00000063;
     display: flow-root;
-    border-bottom-left-radius: 35px;
-    border-bottom-right-radius: 35px;
 }
 
 div#GarageCEFBox>div.secbox>p.title {
@@ -247,8 +245,8 @@ div#GarageCEFBox>p.closebtn {
     position: absolute;
     margin-left: -35px;
     margin-top: -34px;
-    padding-left: 20px;
-    padding-top: 15px;
+    padding-left: 14px;
+    padding-top: 6px;
     padding-bottom: 6px;
     padding-right: 14px;
     transition: all 0.5s ease-in-out;

@@ -2,6 +2,7 @@
 using Altv_Roleplay.models;
 using System;
 using System.Collections.Generic;
+using System.Text;
 using System.Linq;
 
 namespace Altv_Roleplay.Model
@@ -34,7 +35,7 @@ namespace Altv_Roleplay.Model
                     }
                 }
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 Alt.Log($"{e}");
             }
@@ -62,7 +63,7 @@ namespace Altv_Roleplay.Model
             {
                 using (var db = new gtaContext())
                 {
-                    foreach (var wantedEntry in CharactersWanteds_.ToList().Where(x => x.charId == charId))
+                    foreach(var wantedEntry in CharactersWanteds_.ToList().Where(x => x.charId == charId))
                     {
                         var entry = db.Characters_Wanteds.Find(wantedEntry.charId);
                         if (entry != null)
@@ -70,8 +71,8 @@ namespace Altv_Roleplay.Model
 
                         CharactersWanteds_.Remove(wantedEntry);
                     }
-                    db.SaveChanges();
-
+                    db.SaveChanges(); 
+                    
                 }
             }
             catch (Exception e)

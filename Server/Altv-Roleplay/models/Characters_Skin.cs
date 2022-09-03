@@ -14,9 +14,7 @@ namespace Altv_Roleplay.models
         public int charId { get; set; }
         public string facefeatures { get; set; }
         public string headblendsdata { get; set; }
-        public string headoverlays1 { get; set; }
-        public string headoverlays2 { get; set; }
-        public string headoverlays3 { get; set; }
+        public string headoverlays { get; set; }
         public int clothesTop { get; set; }
         public int clothesTorso { get; set; }
         public int clothesLeg { get; set; }

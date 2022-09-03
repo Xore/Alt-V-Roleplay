@@ -1,5 +1,4 @@
 ﻿using AltV.Net.Data;
-using System.Collections.Generic;
 
 namespace Altv_Roleplay.Utils
 {
@@ -10,11 +9,11 @@ namespace Altv_Roleplay.Utils
             //------------------------------------------------------------//
             //Live Server
             //------------------------------------------------------------///
-            //public static string Host = "localhost";
-            //public static string User = "altv";
-            //public static string Password = "fm.I7fUM+QpCSU!x#S";
-            //public static string Port = "3306";
-            //public static string Database = "altv";
+            public static string Host = "localhost";
+            public static string User = "altv";
+            public static string Password = "fm.I7fUM+QpCSU!x#S";
+            public static string Port = "3306";
+            public static string Database = "altv";
             //------------------------------------------------------------//
             //Dev Server
             //------------------------------------------------------------//
@@ -27,11 +26,11 @@ namespace Altv_Roleplay.Utils
             //------------------------------------------------------------//
             //Dev Server
             //------------------------------------------------------------//
-            public static string Host = "localhost";
-            public static string User = "root";
-            public static string Password = "root";
-            public static string Port = "3306";
-            public static string Database = "altv";
+            //public static string Host = "localhost";
+            //public static string User = "root";
+            //public static string Password = "root";
+            //public static string Port = "3306";
+            //public static string Database = "altv";
             //------------------------------------------------------------//
         }
 
@@ -108,18 +107,6 @@ namespace Altv_Roleplay.Utils
             public static readonly Position dynasty8_pedPositionStorage = new Position(-706.5231f, 264.567f, 82.131f);
             public static readonly float dynasty8_pedRotationStorage = 25.817f;
             public static readonly Position dynasty8_positionStorage = new Position(-707.894f, 266.3209f, 82.131f);
-        }
-
-        public static class DealerPositions
-        {
-            public static readonly Position Dealer_1 = new Position(-1469.78f, -366.778f, 39.198f);
-            public static readonly float Dealer_1_Rot = -49.704f;
-            public static readonly Position Dealer_2 = new Position(-703.041f, 266.189f, 82.131f);
-            public static readonly float Dealer_2_Rot = 29.940f;
-            public static readonly Position Dealer_3 = new Position(-703.041f, 266.189f, 82.131f);
-            public static readonly float Dealer_3_Rot = 29.940f;
-            public static readonly Position Dealer_4 = new Position(-703.041f, 266.189f, 82.131f);
-            public static readonly float Dealer_4_Rot = 29.940f;
         }
     }
 }

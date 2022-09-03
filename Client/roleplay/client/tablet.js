@@ -2,13 +2,10 @@ import * as alt from 'alt';
 import * as game from 'natives';
 
 let tabletBrowser = null;
-let lastInteract = 0;
 let tabletReady = false;
 
-alt.on('keyup', (key) => {
-    if (!canInteract) return;
-    lastInteract = Date.now();
-    if (key == 0x73) {
+
+alt.on("Client:Tablet:Key0x73", () => {
         if (tabletBrowser == null) {
             alt.emitServer("Server:Tablet:openCEF");
             alt.emit('objectAttacher:attachObjectAnimated', 'tablet', true);
@@ -16,10 +13,7 @@ alt.on('keyup', (key) => {
             closeTabletCEF();
             alt.emit('objectAttacher:detachObject');
         }
-    }
 });
-
-function canInteract() { return lastInteract + 1000 < Date.now() }
 
 let tablet = null;
 
@@ -141,10 +135,9 @@ alt.onServer("Client:Tablet:SetTutorialAppContent", (array) => {
 });
 
 alt.onServer("Client:Tablet:sendDispatchSound", (filePath) => {
-    /*if (tabletBrowser != null) {
+    if (tabletBrowser != null) {
         tabletBrowser.emit("CEF:Tablet:playDispatchSound", filePath);
-    }*/
-    game.playSoundFrontend(-1, "Metal_Detector_Online", "dlc_ch_heist_finale_security_alarms_sounds", true);
+    }
 })
 
 alt.onServer('Client:Tablet:closeCEF', () => {
@@ -206,42 +199,30 @@ let openTabletCEF = function() {
 
 function DeleteFactionDispatch(factionId, senderId) {
     if (factionId <= 0 || senderId < 0) return;
-    if (!canInteract) return;
-    lastInteract = Date.now();
     alt.emitServer("Server:Tablet:DeleteFactionDispatch", parseInt(factionId), parseInt(senderId));
 }
 
 function AppStoreInstallUninstallApp(action, appname) {
     if (action != "install" && action != "uninstall") return;
     if (appname == "" || appname == "undefined") return;
-    if (!canInteract) return;
-    lastInteract = Date.now();
     let isInstalling = false;
     if (action == "install") { isInstalling = true; } else if (action == "uninstall") { isInstalling = false; }
     alt.emitServer("Server:Tablet:AppStoreInstallUninstallApp", appname, isInstalling);
 }
 
 function BankingAppnewTransaction(targetBankNumber, transactiontext, moneyAmount) {
-    if (!canInteract) return;
-    lastInteract = Date.now();
     alt.emitServer("Server:Tablet:BankingAppNewTransaction", parseInt(targetBankNumber), transactiontext, parseInt(moneyAmount));
 }
 
 function EventsAppNewEntry(title, callNumber, eventDate, Time, location, eventType, information) {
-    if (!canInteract) return;
-    lastInteract = Date.now();
     alt.emitServer("Server:Tablet:EventsAppNewEntry", title, callNumber, eventDate, Time, location, eventType, information);
 }
 
 function NotesAppNewNote(title, text, color) {
-    if (!canInteract) return;
-    lastInteract = Date.now();
     alt.emitServer("Server:Tablet:NotesAppNewNote", title, text, color);
 }
 
 function NotesAppDeleteNote(noteId) {
-    if (!canInteract) return;
-    lastInteract = Date.now();
     alt.emitServer("Server:Tablet:NotesAppDeleteNote", parseInt(noteId));
 }
 
@@ -251,100 +232,72 @@ function LocateTabletVehicle(x, y) {
 }
 
 function VehicleStoreBuyVehicle(hash, shopId, color) {
-    if (!canInteract) return;
-    lastInteract = Date.now();
     alt.emitServer("Server:Tablet:VehicleStoreBuyVehicle", hash, parseInt(shopId), color);
 }
 
 function FactionManagerAppInviteNewMember(charName, dienstnummer, factionId) {
-    if (!canInteract) return;
-    lastInteract = Date.now();
     if (charName == "" || dienstnummer <= 0 || factionId <= 0 || dienstnummer == null || dienstnummer == undefined || factionId == undefined || factionId == null) return;
     alt.emitServer("Server:Tablet:FactionManagerAppInviteNewMember", charName, parseInt(dienstnummer), parseInt(factionId));
 }
 
 function GangManagerAppInviteNewMember(charName, gangId) {
-    if (!canInteract) return;
-    lastInteract = Date.now();
     if (charName == "" || gangId <= 0 || gangId == undefined || gangId == null) return;
     alt.emitServer("Server:Tablet:GangManagerAppInviteNewMember", charName, parseInt(gangId));
 }
 
 function FactionManagerRankAction(action, charId) {
-    if (!canInteract) return;
-    lastInteract = Date.now();
     if (action != "rankup" && action != "rankdown" && action != "remove") return;
     if (charId <= 0 || charId == undefined) return;
     alt.emitServer("Server:Tablet:FactionManagerRankAction", action, parseInt(charId));
 }
 
 function GangManagerRankAction(action, charId) {
-    if (!canInteract) return;
-    lastInteract = Date.now();
     if (action != "rankup" && action != "rankdown" && action != "remove") return;
     if (charId <= 0 || charId == undefined) return;
     alt.emitServer("Server:Tablet:GangManagerRankAction", action, parseInt(charId));
 }
 
 function FactionManagerSetRankPaycheck(rankId, paycheck) {
-    if (!canInteract) return;
-    lastInteract = Date.now();
     if (rankId <= 0 || paycheck <= 0) return;
     alt.emitServer("Server:Tablet:FactionManagerSetRankPaycheck", parseInt(rankId), parseInt(paycheck));
 }
 
 function LSPDAppSearchPerson(charName) {
-    if (!canInteract) return;
-    lastInteract = Date.now();
     if (charName.length <= 0 || charName == "") return;
     alt.emitServer("Server:Tablet:LSPDAppSearchPerson", charName);
 }
 
 function LSPDAppSearchVehiclePlate(plate) {
-    if (!canInteract) return;
-    lastInteract = Date.now();
     if (plate.length <= 0 || plate == "") return;
     alt.emitServer("Server:Tablet:LSPDAppSearchVehiclePlate", plate);
 }
 
 function LSPDAppSearchLicense(charName) {
-    if (!canInteract) return;
-    lastInteract = Date.now();
     if (charName.length <= 0 || charName == "") return;
     alt.emitServer("Server:Tablet:LSPDAppSearchLicense", charName);
 }
 
 function LSPDAppTakeLicense(charName, lic) {
-    if (!canInteract) return;
-    lastInteract = Date.now();
     if (charName.length <= 0 || charName == "" || lic == "" || lic.length <= 0) return;
     alt.emitServer("Server:Tablet:LSPDAppTakeLicense", charName, lic);
 }
 
 function JusticeAppGiveWeaponLicense(charName) {
-    if (!canInteract) return;
-    lastInteract = Date.now();
     if (charName.length <= 0) return;
     alt.emitServer("Server:Tablet:JusticeAppGiveWeaponLicense", charName);
 }
 
 function JusticeAppSearchBankAccounts(charName) {
-    if (!canInteract) return;
-    lastInteract = Date.now();
     if (charName.length <= 0) return;
     alt.emitServer("Server:Tablet:JusticeAppSearchBankAccounts", charName);
 }
 
 function JusticeAppViewBankTransactions(accNumber) {
-    if (!canInteract) return;
-    lastInteract = Date.now();
     if (accNumber.length <= 0) return;
     alt.emitServer("Server:Tablet:JusticeAppViewBankTransactions", parseInt(accNumber));
 }
 
 function sendDispatchToFaction(factionId, msg) {
-    if (!canInteract) return;
-    lastInteract = Date.now();
     if (factionId <= 0 || msg == undefined || msg == "") return;
     alt.emitServer("Server:Tablet:sendDispatchToFaction", parseInt(factionId), msg);
 }

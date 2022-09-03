@@ -1,4 +1,11 @@
 ﻿
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
+using System.Diagnostics;
 using AltV.Net;
 using AltV.Net.Async;
 using AltV.Net.Data;
@@ -7,8 +14,6 @@ using Altv_Roleplay.Factories;
 using Altv_Roleplay.Model;
 using Altv_Roleplay.models;
 using Altv_Roleplay.Utils;
-using System;
-using System.Linq;
 
 namespace Altv_Roleplay.Handler
 {
@@ -175,6 +180,19 @@ namespace Altv_Roleplay.Handler
                     return;
                 }
 
+                var fish = FishingHandler.sandyFishPositions.ToList().FirstOrDefault(x => player.Position.IsInRange(x.position, 2.5f));
+                if (fish != null && !player.IsInVehicle)
+                {
+                    FishingHandler.startFishing((ClassicPlayer)player);
+                    return;
+                }
+
+                /*if (player.Position.IsInRange(FishingHandler.fishPositions.Sandy1, 2f))
+                {
+                    FishingHandler.startFishing((ClassicPlayer)player);
+                    return;
+                }*/
+
                 Server_Storages storageEntry = ServerStorages.ServerStorages_.ToList().FirstOrDefault(x => player.Position.IsInRange(x.entryPos, 2f) && !x.isLocked);
                 if (storageEntry != null && !player.IsInVehicle)
                 {
@@ -272,7 +290,7 @@ namespace Altv_Roleplay.Handler
                 var barberPos = ServerBarbers.ServerBarbers_.FirstOrDefault(x => player.Position.IsInRange(new Position(x.posX, x.posY, x.posZ), 2f));
                 if (barberPos != null && !player.IsInVehicle)
                 {
-                    player.EmitLocked("Client:Barber:barberCreateCEF", Characters.GetCharacterHeadOverlay1(charId), Characters.GetCharacterHeadOverlay2(charId), Characters.GetCharacterHeadOverlay3(charId));
+                    player.EmitLocked("Client:Barber:barberCreateCEF", Characters.GetCharacterHeadOverlays(charId));
                     return;
                 }
 
@@ -389,7 +407,7 @@ namespace Altv_Roleplay.Handler
                     return;
                 }
 
-                if (player.Position.IsInRange(Constants.Positions.IdentityCardApply, 3.5f) && Characters.GetCharacterAccState(charId) == 0 && !player.IsInVehicle) //Rathaus IdentityCardApply
+                if (player.Position.IsInRange(Constants.Positions.IdentityCardApply, 2.5f) && Characters.GetCharacterAccState(charId) == 0 && !player.IsInVehicle) //Rathaus IdentityCardApply
                 {
                     TownhallHandler.tryCreateIdentityCardApplyForm(player);
                     return;
@@ -427,10 +445,10 @@ namespace Altv_Roleplay.Handler
                             if (doorKey == null || doorKey2 == null) return;
                             if (!CharactersInventory.ExistCharacterItem(charId, doorKey, "inventory") && !CharactersInventory.ExistCharacterItem(charId, doorKey, "schluessel") && !CharactersInventory.ExistCharacterItem(charId, doorKey2, "inventory") && !CharactersInventory.ExistCharacterItem(charId, doorKey2, "schluessel")) return;
 
-                            if (!doorColData.state) { HUDHandler.SendNotification(player, 1, 2500, "Abgeschlossen."); }
-                            else { HUDHandler.SendNotification(player, 1, 2500, "Aufgeschlossen."); }
+                            if (!doorColData.state) { HUDHandler.SendNotification(player, 1, 2500, "Tür abgeschlossen."); }
+                            else { HUDHandler.SendNotification(player, 1, 2500, "Tür aufgeschlossen."); }
                             doorColData.state = !doorColData.state;
-                            Alt.EmitAllClients("Client:DoorManager:ManageDoor", doorColData.mainDoor, doorColData.secondDoor, new Position(doorColData.posX, doorColData.posY, doorColData.posZ), (bool)doorColData.state);
+                            Alt.EmitAllClients("Client:DoorManager:ManageDoor", doorColData.hash, new Position(doorColData.posX, doorColData.posY, doorColData.posZ), (bool)doorColData.state);
                             return;
                         }
                     }
@@ -513,7 +531,7 @@ namespace Altv_Roleplay.Handler
             if (objects != null && !player.IsInVehicle)
             {
                 lock (objects)
-                    ObjectHandler.removeItem((ClassicPlayer)player, objects);
+                ObjectHandler.removeItem((ClassicPlayer)player, objects);
                 return;
             }
         }

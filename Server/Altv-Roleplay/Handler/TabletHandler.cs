@@ -1,12 +1,16 @@
-﻿using AltV.Net;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using AltV.Net;
 using AltV.Net.Async;
 using AltV.Net.Data;
 using AltV.Net.Elements.Entities;
 using Altv_Roleplay.Model;
 using Altv_Roleplay.Utils;
-using System;
-using System.Diagnostics;
-using System.Linq;
+using Newtonsoft.Json;
 
 namespace Altv_Roleplay.Handler
 {
@@ -242,7 +246,6 @@ namespace Altv_Roleplay.Handler
             {
                 if (player == null || !player.Exists || hash == "" || hash == "undefined" || shopId <= 0 || color == "" || color == "undefined") return;
                 long fHash = Convert.ToInt64(hash);
-                int vehClass = ServerVehicles.VehicleClass(fHash);
                 int charId = User.GetPlayerOnline(player);
                 if (charId == 0 || fHash == 0) return;
                 int Price = ServerVehicleShops.GetVehicleShopPrice(shopId, fHash);
@@ -268,8 +271,7 @@ namespace Altv_Roleplay.Handler
                 DateTime dateTime = DateTime.Now;
                 CharactersBank.SetBankAccountMoney(bankAccountNumber, (CharactersBank.GetBankAccountMoney(bankAccountNumber) - Price));
                 ServerBankPapers.CreateNewBankPaper(bankAccountNumber, dateTime.ToString("dd.MM.yyyy"), dateTime.ToString("HH.mm"), "Ausgehende Überweisung", "Online Fahrzeugshop", $"Fahrzeugkauf: {ServerVehicles.GetVehicleNameOnHash(fHash)}", $"-{Price}", "Online Banking");
-                int serialNumber = new Random().Next(1, 10000);
-                ServerVehicles.CreateVehicle(fHash, charId, 0, 0, true, 1, new Position(0, 0, 0), new Rotation(0, 0, 0), $"LS{rnd}", color_R, color_G, color_B, vehClass, serialNumber);
+                ServerVehicles.CreateVehicle(fHash, charId, 0, 0, true, 1, new Position(0, 0, 0), new Rotation(0, 0, 0), $"LS{rnd}", color_R, color_G, color_B);
                 CharactersInventory.AddCharacterItem(charId, $"Fahrzeugschluessel LS{rnd}", 2, "schluessel");
                 HUDHandler.SendNotification(player, 2, 2500, $"Fahrzeug '{ServerVehicles.GetVehicleNameOnHash(fHash)}' erfolgreich für {Price}$ erworben.<br>Lieferort: Pillbox Hill Fahrzeuggarage.");
             }
@@ -426,7 +428,7 @@ namespace Altv_Roleplay.Handler
                     if (currentTargetRank + 1 > currentActorRank) { HUDHandler.SendNotification(player, 3, 2500, "Diese Person kannst du nicht befördern"); return; }
                     if (currentTargetRank == ServerFactions.GetFactionMaxRankCount(factionId)) { HUDHandler.SendNotification(player, 3, 2500, "Diesen Rang gibt es nicht."); return; }
                     if (currentActorRank <= currentTargetRank) { HUDHandler.SendNotification(player, 3, 2500, "Diese Person kannst du nicht verwalten."); return; }
-                    if (currentActorRank == ServerFactions.GetFactionMaxRankCount(factionId) - 1 && currentTargetRank >= ServerFactions.GetFactionMaxRankCount(factionId) - 1) { HUDHandler.SendNotification(player, 3, 2500, "Diese Person kannst du nicht verwalten."); return; }
+                    if (currentActorRank == ServerFactions.GetFactionMaxRankCount(factionId) - 1 && currentTargetRank >= ServerFactions.GetFactionMaxRankCount(factionId) - 1) { HUDHandler.SendNotification(player,3, 2500, "Diese Person kannst du nicht verwalten."); return; }
                     if (currentActorRank == ServerFactions.GetFactionMaxRankCount(factionId) - 2 && currentTargetRank >= ServerFactions.GetFactionMaxRankCount(factionId) - 2) { HUDHandler.SendNotification(player, 3, 2500, "Diese Person kannst du nicht verwalten."); return; }
                     ServerFactions.SetCharacterFactionRank(targetCharId, currentTargetRank + 1);
                     HUDHandler.SendNotification(player, 1, 2500, $"Sie haben den Rang von der Person {Characters.GetCharacterName(targetCharId)} von {currentTargetRank} auf {currentTargetRank + 1} geändert.");

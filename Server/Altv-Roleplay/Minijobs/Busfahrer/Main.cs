@@ -7,8 +7,10 @@ using Altv_Roleplay.Model;
 using Altv_Roleplay.models;
 using Altv_Roleplay.Utils;
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Altv_Roleplay.Minijobs.Busfahrer
@@ -217,8 +219,7 @@ namespace Altv_Roleplay.Minijobs.Busfahrer
                     if (veh == null || !veh.Exists) continue;
                     if (veh.Position.IsInRange(Constants.Positions.Minijob_Busdriver_VehOutPos, 8f)) { HUDHandler.SendNotification(player, 3, 2500, "Der Ausparkpunkt ist blockiert."); return; }
                 }
-                int serialNumber = new Random().Next(1, 10000);
-                ServerVehicles.CreateVehicle(Model.GetRouteVehicleHash(routeId), charId, 2, 0, false, 0, Constants.Positions.Minijob_Busdriver_VehOutPos, Constants.Positions.Minijob_Busdriver_VehOutRot, $"BUS-{charId}", 255, 255, 255, 0, serialNumber);
+                ServerVehicles.CreateVehicle(Model.GetRouteVehicleHash(routeId), charId, 2, 0, false, 0, Constants.Positions.Minijob_Busdriver_VehOutPos, Constants.Positions.Minijob_Busdriver_VehOutRot, $"BUS-{charId}", 255, 255, 255);
                 player.SetPlayerCurrentMinijob("Busfahrer");
                 player.SetPlayerCurrentMinijobStep("FirstStepInVehicle");
                 player.SetPlayerCurrentMinijobRouteId((long)routeId);

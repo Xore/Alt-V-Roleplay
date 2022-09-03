@@ -16,7 +16,7 @@ namespace Altv_Roleplay.models
         public float storageY { get; set; }
         public float storageZ { get; set; }
         public float storageLimit { get; set; }
-
+    
         public float manageX { get; set; }
         public float manageY { get; set; }
         public float manageZ { get; set; }

@@ -1,4 +1,8 @@
-﻿using AltV.Net;
+﻿using System;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using AltV.Net;
 using AltV.Net.Async;
 using AltV.Net.Data;
 using AltV.Net.Elements.Entities;
@@ -6,9 +10,6 @@ using AltV.Net.Enums;
 using Altv_Roleplay.Factories;
 using Altv_Roleplay.Model;
 using Altv_Roleplay.Utils;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Altv_Roleplay.Handler
 {
@@ -132,38 +133,24 @@ namespace Altv_Roleplay.Handler
                 interactHTML += "<li><p id='InteractionMenu-SelectedTitle'>Schließen</p></li><li class='interactitem' data-action='close' data-actionstring='Schließen'><img src='../utils/img/cancel.png'></li>";
                 interactHTML += "<li class='interactitem' id='InteractionMenu-playersupportId' data-action='playersupportId' data-actionstring='Support ID anzeigen'><img src='../utils/img/playersupportid.png'></li>";
                 interactHTML += "<li class='interactitem' id='InteractionMenu-playergiveItem' data-action='playergiveItem' data-actionstring='Gegenstand geben'><img src='../utils/img/order.png'></li>";
-                //interactHTML += "<li class='interactitem' id='InteractionMenu-showIdCard' data-action='showIdCard' data-actionstring='Ausweis zeigen'><img src='../utils/img/inventory/Ausweis.png'></li>";
-                //Ausweis {Characters.GetCharacterName(charId)}
+                interactHTML += "<li class='interactitem' id='InteractionMenu-showIdCard' data-action='showIdCard' data-actionstring='Ausweis zeigen'><img src='../utils/img/inventory/Ausweis.png'></li>";
+
                 #region Documents
-                //Identification & Licenses
-                if (CharactersInventory.ExistCharacterItem(charId, $"Ausweis {Characters.GetCharacterName(charId)}", "brieftasche"))
+                if (CharactersInventory.ExistCharacterItem(charId, "Waffenschein", "brieftasche"))
                 {
-                    interactHTML += "<li class='interactitem' id='InteractionMenu-showIdentityCard' data-action='showIdentityCard' data-actionstring='Ausweis zeigen'><img src='../utils/img/inventory/Ausweis.png'></li>";
+                    interactHTML += "<li class='interactitem' id='InteractionMenu-showGunPermit' data-action='showGunPermit' data-actionstring='Waffenschein zeigen'><img src='../utils/img/inventory/Ausweis.png'></li>";
                 }
-                if (CharactersInventory.ExistCharacterItem(charId, $"Fuehrerschein {Characters.GetCharacterName(charId)}", "brieftasche"))
+                if (CharactersInventory.ExistCharacterItem(charId, "Führerschein", "brieftasche"))
                 {
-                    interactHTML += "<li class='interactitem' id='InteractionMenu-showDriversLic' data-action='showDriversLic' data-actionstring='Führerschein zeigen'><img src='../utils/img/inventory/Fuehrerschein.png'></li>";
-                }
-                if (CharactersInventory.ExistCharacterItem(charId, $"Waffenschein {Characters.GetCharacterName(charId)}", "brieftasche"))
-                {
-                    interactHTML += "<li class='interactitem' id='InteractionMenu-showWepLic' data-action='showWepLic' data-actionstring='Waffenschein zeigen'><img src='../utils/img/inventory/Waffenschein.png'></li>";
-                }
-                //Faction Shit
-                if (ServerFactions.IsCharacterInAnyFaction(charId) && ServerFactions.IsCharacterInFactionDuty(charId))
-                {
-                    interactHTML += "<li class='interactitem' id='InteractionMenu-showFactionCard' data-action='showFactionCard' data-actionstring='Dienstausweis zeigen'><img src='../utils/img/inventory/Fraktion.png'></li>";
+                    interactHTML += "<li class='interactitem' id='InteractionMenu-showDriversPermit' data-action='showDriversPermit' data-actionstring='Waffenschein zeigen'><img src='../utils/img/inventory/Ausweis.png'></li>";
                 }
                 if (ServerFactions.IsCharacterInAnyFaction(charId) && ServerFactions.IsCharacterInFactionDuty(charId) && ServerFactions.GetCharacterFactionId(charId) == 2)
                 {
-                    interactHTML += "<li class='interactitem' id='InteractionMenu-showPoliceCard' data-action='showPoliceCard' data-actionstring='Dienstausweis zeigen'><img src='../utils/img/inventory/Dienstausweis.png'></li>";
+                    interactHTML += "<li class='interactitem' id='InteractionMenu-showPoliceId' data-action='showPoliceId' data-actionstring='Dienstausweis zeigen'><img src='../utils/img/inventory/Ausweis.png'></li>";
                 }
                 if (ServerFactions.IsCharacterInAnyFaction(charId) && ServerFactions.IsCharacterInFactionDuty(charId) && ServerFactions.GetCharacterFactionId(charId) == 12)
                 {
-                    interactHTML += "<li class='interactitem' id='InteractionMenu-showFIBCard' data-action='showFIBCard' data-actionstring='Dienstausweis zeigen'><img src='../utils/img/inventory/Dienstausweis.png'></li>";
-                }
-                if (ServerFactions.IsCharacterInAnyFaction(charId) && ServerFactions.IsCharacterInFactionDuty(charId) && ServerFactions.GetCharacterFactionId(charId) == 3)
-                {
-                    interactHTML += "<li class='interactitem' id='InteractionMenu-showLSMDCard' data-action='showLSMDCard' data-actionstring='Dienstausweis zeigen'><img src='../utils/img/inventory/Medic.png'></li>";
+                    interactHTML += "<li class='interactitem' id='InteractionMenu-showFIBId' data-action='showFIBId' data-actionstring='Dienstausweis zeigen'><img src='../utils/img/inventory/Ausweis.png'></li>";
                 }
                 #endregion
 
@@ -332,10 +319,7 @@ namespace Altv_Roleplay.Handler
             bool LockState = ServerVehicles.GetVehicleLockState(veh);
             ServerVehicles.SetVehicleLockState(veh, !LockState);
             //player.EmitLocked("Client:Inventory:PlayAnimation", "anim@mp_player_intupperface_palm", "fob_click_fp", 1000, 49, false);
-            if (LockState == true)
-            {
-                HUDHandler.SendNotification(player, 1, 2500, "Du hast das Fahrzeug aufgeschlossen.");
-            }
+            if (LockState == true) { HUDHandler.SendNotification(player, 1, 2500, "Du hast das Fahrzeug aufgeschlossen."); }
             else
             {
                 //player.EmitLocked("Client:Inventory:PlayAnimation", "anim@mp_player_intupperface_palm", "fob_click_fp", 1000, 49, false);
@@ -671,11 +655,12 @@ namespace Altv_Roleplay.Handler
                     InventoryHandler.StopAnimation(targetPlayer, "mp_arresting", "sprint");
                     targetPlayer.SetPlayerIsCuffed("handcuffs", false);
                     HUDHandler.SendNotification(targetPlayer, 3, 2500, "Dir wurden die Handschellen abgenommen.");
+
                     float itemWeight = ServerItems.GetItemWeight("Handschellen");
                     float invWeight = CharactersInventory.GetCharacterItemWeight(charId, "inventory");
                     float backpackWeight = CharactersInventory.GetCharacterItemWeight(charId, "backpack");
-                    if (invWeight + itemWeight > 5f && backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId))) { HUDHandler.SendNotification(player, 3, 2500, $"Du hast nicht genug Platz in deinen Taschen."); return; }
-                    if (invWeight + itemWeight <= 5f)
+                    if (invWeight + itemWeight > 15f && backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId))) { HUDHandler.SendNotification(player, 3, 2500, $"Du hast nicht genug Platz in deinen Taschen."); return; }
+                    if (invWeight + itemWeight <= 15f)
                     {
                         HUDHandler.SendNotification(player, 3, 2500, $"Handschellen abgenommen.");
                         CharactersInventory.AddCharacterItem(charId, "Handschellen", 1, "inventory");
@@ -734,8 +719,8 @@ namespace Altv_Roleplay.Handler
                     float itemWeight = ServerItems.GetItemWeight("Kabelbinder");
                     float invWeight = CharactersInventory.GetCharacterItemWeight(charId, "inventory");
                     float backpackWeight = CharactersInventory.GetCharacterItemWeight(charId, "backpack");
-                    if (invWeight + itemWeight > 5f && backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId))) { HUDHandler.SendNotification(player, 3, 2500, $"Du hast nicht genug Platz in deinen Taschen."); return; }
-                    if (invWeight + itemWeight <= 5f)
+                    if (invWeight + itemWeight > 15f && backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId))) { HUDHandler.SendNotification(player, 3, 2500, $"Du hast nicht genug Platz in deinen Taschen."); return; }
+                    if (invWeight + itemWeight <= 15f)
                     {
                         HUDHandler.SendNotification(player, 1, 2500, $"Kabelbinder abgenommen.");
                         CharactersInventory.AddCharacterItem(charId, "Kabelbinder", 1, "inventory");
@@ -795,9 +780,8 @@ namespace Altv_Roleplay.Handler
             player.EmitLocked("SaltyChat:EnablePlayer");
         }
         #region Show Documents
-
-        [AsyncClientEvent("Server:Raycast:showIdentityCard")]
-        public void showIdentityCard(IPlayer player, IPlayer targetPlayer)
+        [AsyncClientEvent("Server:Raycast:showIdcard")]
+        public void showIdCard(IPlayer player, IPlayer targetPlayer)
         {
             try
             {
@@ -806,13 +790,13 @@ namespace Altv_Roleplay.Handler
                 int targetId = (int)targetPlayer.GetCharacterMetaId();
                 if (charId <= 0 || targetId <= 0) return;
                 if (Characters.GetCharacterAccState(charId) <= 0) return;
-                if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 5000, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
-                var data = "[]";
+                if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 2500, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
+                var perso = "[]";
 
-                data = Characters.GetCharacterInformations(charId);
-                if (data == null || data == "[]") return;
-                player.EmitLocked("Client:IdentityCard:showIdentityCard", "perso", data);
-                targetPlayer.EmitLocked("Client:IdentityCard:showIdentityCard", "perso", data);
+                perso = Characters.GetCharacterInformations(charId);
+                if (perso == null || perso == "[]") return;
+                player.EmitLocked("Client:IdentityCard:showIdentityCard", perso);
+                targetPlayer.EmitLocked("Client:IdentityCard:showIdentityCard", perso);
                 InventoryHandler.InventoryAnimation(player, "give", 0);
             }
             catch (Exception e)
@@ -820,9 +804,8 @@ namespace Altv_Roleplay.Handler
                 Alt.Log($"{e}");
             }
         }
-        //Needs to be Tested
-        [AsyncClientEvent("Server:Raycast:showDriversLic")]
-        public void showDriversLic(IPlayer player, IPlayer targetPlayer)
+        [AsyncClientEvent("Server:Raycast:showPoliceId")]
+        public void showPoliceId(IPlayer player, IPlayer targetPlayer)
         {
             try
             {
@@ -831,13 +814,14 @@ namespace Altv_Roleplay.Handler
                 int targetId = (int)targetPlayer.GetCharacterMetaId();
                 if (charId <= 0 || targetId <= 0) return;
                 if (Characters.GetCharacterAccState(charId) <= 0) return;
-                if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 5000, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
-                var data = "[]";
+                if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 2500, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
+                var police = "[]";
 
-                data = CharactersLicenses.GetDriverLicenses(charId);
-                if (data == null || data == "[]") return;
-                player.EmitLocked("Client:IdentityCard:showDriversLic", "drivers", data);
-                targetPlayer.EmitLocked("Client:IdentityCard:showDriversLic", "drivers", data);
+                police = Characters.GetCharacterFactionInformations(charId);
+                if (police == null || police == "[]") return;
+                player.EmitLocked("Client:IdentityCard:showPoliceId", police);
+                targetPlayer.EmitLocked("Client:IdentityCard:showPoliceId", police);
+                
                 InventoryHandler.InventoryAnimation(player, "give", 0);
             }
             catch (Exception e)
@@ -845,9 +829,8 @@ namespace Altv_Roleplay.Handler
                 Alt.Log($"{e}");
             }
         }
-        //ToDo
-        [AsyncClientEvent("Server:Raycast:showWepLic")]
-        public void showWepLic(IPlayer player, IPlayer targetPlayer)
+        [AsyncClientEvent("Server:Raycast:showFIBId")]
+        public void showFIBId(IPlayer player, IPlayer targetPlayer)
         {
             try
             {
@@ -856,13 +839,14 @@ namespace Altv_Roleplay.Handler
                 int targetId = (int)targetPlayer.GetCharacterMetaId();
                 if (charId <= 0 || targetId <= 0) return;
                 if (Characters.GetCharacterAccState(charId) <= 0) return;
-                if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 5000, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
-                var data = "[]";
+                if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 2500, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
+                var fib = "[]";
 
-                data = Characters.GetCharacterInformations(charId);
-                if (data == null || data == "[]") return;
-                player.EmitLocked("Client:IdentityCard:showWepLic", "wep", data);
-                targetPlayer.EmitLocked("Client:IdentityCard:showWepLic", "wep", data);
+                fib = Characters.GetCharacterFactionInformations(charId);
+                if (fib == null || fib == "[]") return;
+                player.EmitLocked("Client:IdentityCard:showFIBId", fib);
+                targetPlayer.EmitLocked("Client:IdentityCard:showFIBId", fib);
+
                 InventoryHandler.InventoryAnimation(player, "give", 0);
             }
             catch (Exception e)
@@ -870,103 +854,6 @@ namespace Altv_Roleplay.Handler
                 Alt.Log($"{e}");
             }
         }
-        [AsyncClientEvent("Server:Raycast:showFactionCard")]
-        public void showFactionCard(IPlayer player, IPlayer targetPlayer)
-        {
-            try
-            {
-                if (player == null || targetPlayer == null || !player.Exists || !targetPlayer.Exists) return;
-                int charId = (int)player.GetCharacterMetaId();
-                int targetId = (int)targetPlayer.GetCharacterMetaId();
-                if (charId <= 0 || targetId <= 0) return;
-                if (Characters.GetCharacterAccState(charId) <= 0) return;
-                if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 5000, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
-                var data = "[]";
-
-                data = Characters.GetCharacterFactionInformations(charId);
-                if (data == null || data == "[]") return;
-                player.EmitLocked("Client:IdentityCard:showFactionCard", "faction", data);
-                targetPlayer.EmitLocked("Client:IdentityCard:showFactionCard", "faction", data);
-                InventoryHandler.InventoryAnimation(player, "give", 0);
-            }
-            catch (Exception e)
-            {
-                Alt.Log($"{e}");
-            }
-        }
-        [AsyncClientEvent("Server:Raycast:showPoliceCard")]
-        public void showPoliceCard(IPlayer player, IPlayer targetPlayer)
-        {
-            try
-            {
-                if (player == null || targetPlayer == null || !player.Exists || !targetPlayer.Exists) return;
-                int charId = (int)player.GetCharacterMetaId();
-                int targetId = (int)targetPlayer.GetCharacterMetaId();
-                if (charId <= 0 || targetId <= 0) return;
-                if (Characters.GetCharacterAccState(charId) <= 0) return;
-                if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 5000, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
-                var data = "[]";
-
-                data = Characters.GetCharacterFactionInformations(charId);
-                if (data == null || data == "[]") return;
-                player.EmitLocked("Client:IdentityCard:showPoliceCard", "police", data);
-                targetPlayer.EmitLocked("Client:IdentityCard:showPoliceCard", "police", data);
-                InventoryHandler.InventoryAnimation(player, "give", 0);
-            }
-            catch (Exception e)
-            {
-                Alt.Log($"{e}");
-            }
-        }
-        [AsyncClientEvent("Server:Raycast:showFIBCard")]
-        public void showFIBCard(IPlayer player, IPlayer targetPlayer)
-        {
-            try
-            {
-                if (player == null || targetPlayer == null || !player.Exists || !targetPlayer.Exists) return;
-                int charId = (int)player.GetCharacterMetaId();
-                int targetId = (int)targetPlayer.GetCharacterMetaId();
-                if (charId <= 0 || targetId <= 0) return;
-                if (Characters.GetCharacterAccState(charId) <= 0) return;
-                if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 5000, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
-                var data = "[]";
-
-                data = Characters.GetCharacterFactionInformations(charId);
-                if (data == null || data == "[]") return;
-                player.EmitLocked("Client:IdentityCard:showFIBCard", "fib", data);
-                targetPlayer.EmitLocked("Client:IdentityCard:showFIBCard", "fib", data);
-                InventoryHandler.InventoryAnimation(player, "give", 0);
-            }
-            catch (Exception e)
-            {
-                Alt.Log($"{e}");
-            }
-        }
-        [AsyncClientEvent("Server:Raycast:showLSMDCard")]
-        public void showLSMDCard(IPlayer player, IPlayer targetPlayer)
-        {
-            try
-            {
-                if (player == null || targetPlayer == null || !player.Exists || !targetPlayer.Exists) return;
-                int charId = (int)player.GetCharacterMetaId();
-                int targetId = (int)targetPlayer.GetCharacterMetaId();
-                if (charId <= 0 || targetId <= 0) return;
-                if (Characters.GetCharacterAccState(charId) <= 0) return;
-                if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 5000, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
-                var data = "[]";
-
-                data = Characters.GetCharacterFactionInformations(charId);
-                if (data == null || data == "[]") return;
-                player.EmitLocked("Client:IdentityCard:showLSMDCard", "lsmd", data);
-                targetPlayer.EmitLocked("Client:IdentityCard:showLSMDCard", "lsmd", data);
-                InventoryHandler.InventoryAnimation(player, "give", 0);
-            }
-            catch (Exception e)
-            {
-                Alt.Log($"{e}");
-            }
-        }
-
         #endregion
         [AsyncClientEvent("Server:Raycast:BreakVehicleEngine")]
         public async Task BreakVehicleEngine(IPlayer player, IVehicle veh)

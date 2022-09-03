@@ -3,6 +3,7 @@ using Altv_Roleplay.models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace Altv_Roleplay.Model
 {
@@ -15,7 +16,7 @@ namespace Altv_Roleplay.Model
             int tax = 0;
             if (hash <= 0) return tax;
             var veh = ServerAllVehicles_.FirstOrDefault(x => x.hash == hash);
-            if (veh != null)
+            if(veh != null)
             {
                 tax = veh.tax;
             }
@@ -27,7 +28,7 @@ namespace Altv_Roleplay.Model
             string vehName = "undefined";
             if (hash == 0) return vehName;
             var vehs = ServerAllVehicles_.FirstOrDefault(x => x.hash == hash);
-            if (vehs != null)
+            if(vehs != null)
             {
                 vehName = vehs.name;
             }
@@ -40,7 +41,7 @@ namespace Altv_Roleplay.Model
             {
                 if (hash <= 0) return 0;
                 var vehs = ServerAllVehicles_.FirstOrDefault(x => x.hash == hash);
-                if (vehs != null)
+                if(vehs != null)
                 {
                     return vehs.vehClass;
                 }
@@ -50,36 +51,6 @@ namespace Altv_Roleplay.Model
                 Alt.Log($"{e}");
             }
             return 0;
-        }
-
-        public static int GetVehiclePrice(long hash)
-        {
-            try
-            {
-                if (hash <= 0) return 0;
-                var vehs = ServerAllVehicles_.FirstOrDefault(x => x.hash == hash);
-                if (vehs != null)
-                {
-                    return vehs.price;
-                }
-            }
-            catch (Exception e)
-            {
-                Alt.Log($"{e}");
-            }
-            return 0;
-        }
-
-        public static string GetVehicleFuelType(long hash)
-        {
-            string fuelType = "undefined";
-            if (hash == 0) return fuelType;
-            var vehs = ServerAllVehicles_.FirstOrDefault(x => x.hash == hash);
-            if (vehs != null)
-            {
-                fuelType = vehs.fuelType;
-            }
-            return fuelType;
         }
     }
 }

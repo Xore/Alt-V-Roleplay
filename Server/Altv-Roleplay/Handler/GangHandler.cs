@@ -1,9 +1,12 @@
-﻿using AltV.Net;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
+using AltV.Net;
 using AltV.Net.Async;
 using AltV.Net.Elements.Entities;
 using Altv_Roleplay.Model;
 using Altv_Roleplay.Utils;
-using System;
 
 namespace Altv_Roleplay.Handler
 {
@@ -18,10 +21,10 @@ namespace Altv_Roleplay.Handler
                 if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 2500, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
                 if (!ServerGangs.IsCharacterInAnyGang(charId)) { HUDHandler.SendNotification(player, 3, 2500, "Du bist in keiner Fraktion."); return; }
                 int cGangId = ServerGangs.GetCharacterGangId(charId);
-                if (cGangId != gangId) { return; }
-                if (!CharactersInventory.ExistCharacterItem(charId, itemName, fromContainer)) { HUDHandler.SendNotification(player, 3, 2500, "Diesen Gegenstand besitzt du nicht."); return; }
-                if (CharactersInventory.GetCharacterItemAmount(charId, itemName, fromContainer) < amount) { HUDHandler.SendNotification(player, 3, 2500, "Du hast nicht genügend Gegenstände davon dabei."); return; }
-                if (CharactersInventory.IsItemActive(player, itemName)) { HUDHandler.SendNotification(player, 3, 2500, "Ausgerüstete Gegenstände können nicht umgelagert werden."); return; }
+                if(cGangId != gangId) { return; }
+                if(!CharactersInventory.ExistCharacterItem(charId, itemName, fromContainer)) { HUDHandler.SendNotification(player, 3, 2500, "Diesen Gegenstand besitzt du nicht."); return; }
+                if(CharactersInventory.GetCharacterItemAmount(charId, itemName, fromContainer) < amount) { HUDHandler.SendNotification(player, 3, 2500, "Du hast nicht genügend Gegenstände davon dabei."); return; }
+                if(CharactersInventory.IsItemActive(player, itemName)) { HUDHandler.SendNotification(player, 3, 2500, "Ausgerüstete Gegenstände können nicht umgelagert werden."); return; }
                 CharactersInventory.RemoveCharacterItemAmount(charId, itemName, amount, fromContainer);
                 ServerGangs.AddServerGangStorageItem(gangId, charId, itemName, amount);
                 DiscordLog.SendEmbed("frak", "NightOut-Admin | Log", Characters.GetCharacterName((int)player.GetCharacterMetaId()) + " Eingelagert: " + itemName + " " + amount + "x | " + gangId);
@@ -42,13 +45,13 @@ namespace Altv_Roleplay.Handler
                 if (!ServerGangs.IsCharacterInAnyGang(charId)) { HUDHandler.SendNotification(player, 3, 2500, "Fehler: Du bist in keiner Fraktion."); return; }
                 int cGangId = ServerGangs.GetCharacterGangId(charId);
                 if (cGangId != gangId) return;
-                if (!ServerGangs.ExistServerGangStorageItem(gangId, charId, itemName)) { HUDHandler.SendNotification(player, 3, 2500, "Fehler: Der Gegenstand existiert im Spind nicht."); return; }
-                if (ServerGangs.GetServerGangStorageItemAmount(gangId, charId, itemName) < amount) { HUDHandler.SendNotification(player, 3, 2500, "Fehler: Soviele Gegenstände sind nicht im Spind."); return; }
+                if(!ServerGangs.ExistServerGangStorageItem(gangId, charId, itemName)) { HUDHandler.SendNotification(player, 3, 2500, "Fehler: Der Gegenstand existiert im Spind nicht."); return; }
+                if(ServerGangs.GetServerGangStorageItemAmount(gangId, charId, itemName) < amount) { HUDHandler.SendNotification(player, 3, 2500, "Fehler: Soviele Gegenstände sind nicht im Spind."); return; }
                 float itemWeight = ServerItems.GetItemWeight(itemName) * amount;
                 float invWeight = CharactersInventory.GetCharacterItemWeight(charId, "inventory");
                 float backpackWeight = CharactersInventory.GetCharacterItemWeight(charId, "backpack");
                 float schluesselWeight = CharactersInventory.GetCharacterItemWeight(charId, "schluessel");
-                if (invWeight + itemWeight > 5f && backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId))) { HUDHandler.SendNotification(player, 3, 2500, $"Du hast nicht genug Platz in deinen Taschen."); return; }
+                if (invWeight + itemWeight > 15f && backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId))) { HUDHandler.SendNotification(player, 3, 2500, $"Du hast nicht genug Platz in deinen Taschen."); return; }
                 ServerGangs.RemoveServerGangStorageItemAmount(gangId, charId, itemName, amount);
                 DiscordLog.SendEmbed("frak", "NightOut-Admin | Log", Characters.GetCharacterName((int)player.GetCharacterMetaId()) + " Ausgelagert: " + itemName + " " + amount + "x | " + gangId);
 
@@ -82,7 +85,7 @@ namespace Altv_Roleplay.Handler
                     CharactersInventory.AddCharacterItem(charId, itemName, amount, "schluessel");
                     return;
                 }
-                else if (invWeight + itemWeight <= 5f)
+                else if (invWeight + itemWeight <= 15f)
                 {
                     HUDHandler.SendNotification(player, 3, 2500, $"Du hast ({amount}x) {itemName}aus dem Lager genommen.");
                     CharactersInventory.AddCharacterItem(charId, itemName, amount, "inventory");

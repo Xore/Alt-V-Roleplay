@@ -1,7 +1,10 @@
 ﻿using AltV.Net;
 using AltV.Net.Data;
+using AltV.Net.Elements.Entities;
+using Altv_Roleplay.Handler;
 using Altv_Roleplay.models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -67,7 +70,7 @@ namespace Altv_Roleplay.Model
             {
                 if (shopId <= 0 || string.IsNullOrWhiteSpace(itemName) || itemAmount <= 0) return;
                 Server_Shops_Items existItem = ServerShopsItems_.FirstOrDefault(x => x.shopId == shopId && x.itemName == itemName);
-                if (existItem != null)
+                if(existItem != null)
                 {
                     //Item existiert, Anzahl erhöhen.
                     existItem.itemAmount += itemAmount;
@@ -128,13 +131,6 @@ namespace Altv_Roleplay.Model
             return 0;
         }
 
-        public static int GetShopID(int shopId)
-        {
-            Server_Shops shop = ServerShops_.ToList().FirstOrDefault(x => x.id == shopId);
-            if (shop != null) return shop.id;
-            return 0;
-        }
-
         public static int GetShopPrice(int shopId)
         {
             Server_Shops shop = ServerShops_.ToList().FirstOrDefault(x => x.id == shopId);
@@ -149,44 +145,6 @@ namespace Altv_Roleplay.Model
                 Server_Shops shop = ServerShops_.FirstOrDefault(x => x.id == shopId);
                 if (shop == null) return;
                 shop.bank = money;
-                using (gtaContext db = new gtaContext())
-                {
-                    db.Server_Shops.Update(shop);
-                    db.SaveChanges();
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"{e}");
-            }
-        }
-
-        public static void SetShopClosed(int shopId)
-        {
-            try
-            {
-                Server_Shops shop = ServerShops_.FirstOrDefault(x => x.id == shopId);
-                if (shop == null) return;
-                shop.closed = 1;
-                using (gtaContext db = new gtaContext())
-                {
-                    db.Server_Shops.Update(shop);
-                    db.SaveChanges();
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"{e}");
-            }
-        }
-
-        public static void SetShopOpen(int shopId)
-        {
-            try
-            {
-                Server_Shops shop = ServerShops_.FirstOrDefault(x => x.id == shopId);
-                if (shop == null) return;
-                shop.closed = 0;
                 using (gtaContext db = new gtaContext())
                 {
                     db.Server_Shops.Update(shop);
@@ -222,13 +180,6 @@ namespace Altv_Roleplay.Model
         {
             Server_Shops shop = ServerShops_.ToList().FirstOrDefault(x => x.id == shopId);
             if (shop != null) return shop.bank;
-            return 0;
-        }
-
-        public static int GetShopStateClosed(int shopId)
-        {
-            Server_Shops shop = ServerShops_.ToList().FirstOrDefault(x => x.id == shopId);
-            if (shop != null) return shop.stateClosed;
             return 0;
         }
 

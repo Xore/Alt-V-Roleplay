@@ -70,7 +70,7 @@ namespace Altv_Roleplay.Handler
                 float itemWeight = ServerItems.GetItemWeight(itemName) * itemAmount;
                 float invWeight = CharactersInventory.GetCharacterItemWeight(User.GetPlayerOnline(player), "inventory");
                 float backpackWeight = CharactersInventory.GetCharacterItemWeight(User.GetPlayerOnline(player), "backpack");
-                if (CharactersInventory.GetCharacterItemWeight(User.GetPlayerOnline(player), "inventory") + itemWeight > 5f)
+                if (CharactersInventory.GetCharacterItemWeight(User.GetPlayerOnline(player), "inventory") + itemWeight > 15f)
                 {
                     HUDHandler.SendNotification(player, 3, 2500, "Du hast nicht genügend Platz für diese Gegenstände.");
                     return;
@@ -106,7 +106,7 @@ namespace Altv_Roleplay.Handler
                     CharactersInventory.AddCharacterItem(User.GetPlayerOnline(player), itemName, itemAmount, "schluessel");
                     return;
                 }
-                else if (invWeight + itemWeight <= 5f)
+                else if (invWeight + itemWeight <= 15f)
                 {
                     HUDHandler.SendNotification(player, 3, 2500, $"Du hast {itemAmount}x {itemName} ausgelagert.");
                     CharactersInventory.AddCharacterItem(User.GetPlayerOnline(player), itemName, itemAmount, "inventory");

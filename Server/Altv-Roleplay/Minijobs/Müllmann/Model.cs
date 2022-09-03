@@ -7,6 +7,7 @@ using Altv_Roleplay.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace Altv_Roleplay.Minijobs.Müllmann
 {
@@ -28,7 +29,7 @@ namespace Altv_Roleplay.Minijobs.Müllmann
             };
             ServerMinijobGarbageSpots_.Add(spotData);
 
-            foreach (var item in ServerMinijobGarbageSpots_)
+            foreach(var item in ServerMinijobGarbageSpots_)
             {
                 ((ClassicColshape)item.destinationColshape).Radius = 1.5f;
             }

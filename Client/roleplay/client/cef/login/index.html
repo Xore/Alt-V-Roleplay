@@ -12,94 +12,56 @@
 </head>
 
 <body>
-    <div class="box" id="mainbox">
-        <img class="Pic" src="Logo_no-bg.png">
-        <div class="box2">
+    <div class="box vignette" id="mainbox">
+        <div id="LoginArea" class="loginArea">
+             <img class="Pic" src="Logo_no-bg.png">
+            <p class="logintitle">Login</p>
+            <div class="inputgroup">
+                <input id="email" autocomplete="off" type="text" maxlength="32" placeholder="Username" spellcheck="false">
+            </div>
+            <div class="inputgroup">
+                <input id="password" autocomplete="off" type="password" maxlength="32" placeholder="Passwort" spellcheck="false">
+            </div>
+            <button id="loginbtn" type="button" class="loginBtn">Anmelden</button>
             <p id="error"></p>
-            <div id="LoginArea">
-                <p class="logintitle">LOGIN</p>
-
-                <div class="inputgroup">
-                    <input id="email" type="text" maxlength="32" placeholder="Benutzername" spellcheck="false">
-                </div>
-
-                <div class="inputgroup">
-                    <input id="password" type="password" maxlength="32" placeholder="Passwort" spellcheck="false">
-                </div>
-
-                <button id="loginbtn" type="button" class="btn btn-outline-secondary loginbtn">ANMELDEN</button><br><br>
-                <button id="noidlol" type="button" class="btn btn-outline-secondary loginbtn" onclick="showArea('register');">Noch nicht angemeldet? Registrieren!</button>
+        </div>
+        <!--<div id="RegisterArea" class="registerArea" style="display: none;">
+            <img class="Pic" src="Logo_no-bg.png">
+            <p class="logintitle">Registrieren</p>
+            <div class="inputgroup">
+                <input id="registername" autocomplete="off" type="text" maxlength="32" placeholder="Username eingeben..." spellcheck="false">
             </div>
-            <div id="RegisterArea">
-                <p class="logintitle">REGISTRIEREN</p>
-
-                <div class="inputgroup">
-                    <input id="registername" type="text" maxlength="32" placeholder="Username eingeben..." spellcheck="false">
-                </div>
-
-                <div class="inputgroup">
-                    <input id="registeremail" type="text" maxlength="32" placeholder="E-Mail eingeben..." spellcheck="false">
-                </div>
-
-                <div class="inputgroup">
-                    <input id="registerpassword" type="password" maxlength="32" placeholder="Passwort eingeben..." spellcheck="false">
-                </div>
-
-                <div class="inputgroup">
-                    <input id="registerpasswordrepeat" type="password" maxlength="32" placeholder="Passwort wiederholen..." spellcheck="false">
-                </div>
-
-                <button id="registerbtn" type="button" class="btn btn-outline-secondary loginbtn">REGISTRIEREN</button><br><br>
-                <button id="noidlol" type="button" class="btn btn-outline-secondary loginbtn" onclick="showArea('login');">ANMELDEN</button>
+            <div class="inputgroup">
+                <input id="registeremail" autocomplete="off" type="text" maxlength="32" placeholder="E-Mail eingeben..." spellcheck="false">
             </div>
-
-            <div id="CharSelectArea">
-                <p class="logintitle" style="font-size: 1.25rem; margin-bottom: 0.2rem;">CHARAKTERAUSWAHL</p>
-                <p class="infotext" style="font-size: 0.9rem">Um fortzufahren wähle einen Charakter aus oder erstelle einen.</p>
-
-                <div id="charlist" class="charlist">
-                    <div class="Character">
-                        <div class="name">Max Mustermänn</div>
-                        <div class="playerId">ID: 1234</div>
-                        <div class="birthDate">Geb.-Datum: 00.00.0000</div>
-                        <div class="birthPlace">Geburtsort: Geburtsort</div>
-                        <div class="playHours">Spiel Stunden: 1337 Stunden</div>
-                        <button class="btn charbtn play" onclick="CharSelectAreaAction(`play`, `215`, `false`);"><i class="fa fa-play" aria-hidden="true"></i> Spielen</button>
-                    </div>
-                    <div class="Character">
-                        <div class="name">Max Mustermänn</div>
-                        <div class="playerId">ID: 1234</div>
-                        <div class="birthDate">Geb.-Datum: 00.00.0000</div>
-                        <div class="birthPlace">Geburtsort: Geburtsort</div>
-                        <div class="playHours">Spiel Stunden: 1337 Stunden</div>
-                        <button class="btn charbtn play" onclick="CharSelectAreaAction(`play`, `215`, `false`);"><i class="fa fa-play" aria-hidden="true"></i> Spielen</button>
-                    </div>
-                    <div class='Character'><div class='name'>Kein Charakter vorhanden</div>
-                        <button class='btn charbtn create' onclick='CharSelectAreaAction(`create`);'>
-                        <i style='' class='fa fa-plus'></i></button>
-                    </div>
-                </div>
-
-                <div id="chardeatharea">
-                    <!--<div class="dropdown">
-                        <input class="dropdown-selector" type="checkbox" />
-                        <div class="dropdown-caption">
-                            <i class="fas fa-angle-double-down dropdown"></i> Gestorbene Charaktere
-                        </div>
-                        <div id="chardeathlist" class="dropdown-content"></div>
-                    </div>-->
-                </div>
+            <div class="inputgroup">
+                <input id="registerpassword" autocomplete="off" type="password" maxlength="32" placeholder="Passwort eingeben..." spellcheck="false">
             </div>
-
-            <div id="SpawnSelectArea">
-                <p class="logintitle" style="font-size: 1.25rem; margin-bottom: 0.2rem;">SPAWNAUSWAHL</p>
-                <p class="infotext" style="font-size: 0.9rem">Um fortzufahren wähle einen Ort deiner Wahl an dem du spawnen möchtest.<br>Jeder Ort hat einen anderen Anfang, bedenke gut welchen du wählst.</p>
-
-                <ul id="SpawnSelectList"></ul>
+            <div class="inputgroup">
+                <input id="registerpasswordrepeat" autocomplete="off" type="password" maxlength="32" placeholder="Passwort wiederholen..." spellcheck="false">
             </div>
+            <button id="registerbtn" type="button" class="loginbtn">Registrieren</button>
+            <button id="changeToLogin" class="registerbtn">Mit Account einloggen</button>
+        </div>-->
+        <div id="CharSelectArea" class="charselectArea">
+            <img class="Pic" src="Logo_no-bg.png">
+            <p class="logintitle">Charakterauswahl</p>
+            <p class="infotext">Um fortzufahren wähle einen Charakter aus oder erstelle einen.</p>
+            <ul id="charlist" class="list-group charlist">
+                <li class='list-group-item'>
+                    <span class='name'>Kein Charakter vorhanden</span>
+                    <button class='charbtn' onclick='CharSelectAreaAction(`create`);'><i class='fa fa-plus'></i> Erstellen</button>
+                </li>
+            </ul>
+        </div>
+        <div id="SpawnSelectArea" class="spawnselectArea">
+            <img class="Pic" src="Logo_no-bg.png">
+            <p class="logintitle">Spawnauswahl</p>
+            <p class="infotext">Um fortzufahren wähle einen Ort deiner Wahl an dem du spawnen möchtest aus.<br>Jeder Ort hat einen anderen Anfang, bedenke gut welchen du wählst.</p>
+            <ul id="SpawnSelectList">
+            </ul>
         </div>
     </div>
-
     <div class="modal fade" id="killCharacterModalCenter" tabindex="-1" role="dialog" aria-labelledby="killCharacterModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -132,7 +94,7 @@
 
 <script>
     var playbtn_selecteduid = 0;
-    var maxAvailableChars = 3;
+    var maxAvailableChars = 2;
 
     $(function() {
         $('#killCharacterModalCenter').on('show.bs.modal', function(e) {
@@ -153,37 +115,34 @@
     });
 
     function showArea(area) {
+        console.log(area);
         $("#error").fadeOut(500);
         $(".box").fadeOut(800, function() {
-            $("#mainbox").css("width", "1035");
+            $("#mainbox").css("width", "600");
             $("#LoginArea").hide();
             $("#CharSelectArea").hide();
             $("#SpawnSelectArea").hide();
             $("#RegisterArea").hide();
             $("#registertext").hide();
 
-            $(".box").fadeTo(10, 1, function() {});
-            $(".box").fadeIn(10);
+            $(".box").fadeTo(800, 1, function() {});
+            $(".box").fadeIn(800);
 
             switch (area) {
                 case "login":
-                    $("#LoginArea").fadeIn(10);
+                    $("#LoginArea").fadeIn(800);
                     $("#registertext").fadeIn();
-                    $("#mainbox").css("width", "600");
                     break;
                 case "register":
-                    $("#RegisterArea").fadeIn(10);
-                    $("#mainbox").css("width", "600");
+                    $("#RegisterArea").fadeIn(800);
                     break;
                 case "charselect":
-                    $("#CharSelectArea").fadeIn(10);
-                    $(".Pic").hide();
-                    $(".box").css("backdrop-filter", "none");
+                    $("#CharSelectArea").fadeIn(800);
                     break;
                 case "spawnselect":
                     $("#mainbox").css("left", "auto");
                     $("#mainbox").css("width", "750");
-                    $("#SpawnSelectArea").fadeIn(10);
+                    $("#SpawnSelectArea").fadeIn(800);
                     break;
             }
         });
@@ -202,6 +161,15 @@
             $("#SpawnSelectList").html(SpawnListHTML);
         }
     }
+
+    $("#changeToRegister").click(function () {
+        showArea("register");
+    })
+
+    $("#changeToLogin").click(function () {
+        showArea("login");
+    })
+
 
     // Login Button
     $("#loginbtn").click(function() {
@@ -257,19 +225,11 @@
         charArray = JSON.parse(charArray);
         for (var i in charArray) {
             var charFullName = charArray[i].charname;
-            var charId = charArray[i].charId;
-            var charbirthdate = charArray[i].birthdate;
-            var charbirthplace = charArray[i].birthplace;
-            var charplaytimeHours = charArray[i].playtimeHours;
 
             if (charArray[i].death === false) {
                 //Charakter am leben
-                charAlive += "<div class='Character'><div class='name'>" + charArray[i].charname + "</div>" +
-                             "<div class='playerId'>ID: <b>" + charArray[i].charId + "</b></div>" +
-                             "<div class='birthDate'>Geb.-Datum: <b>" + charArray[i].birthdate + "</b></div>" +
-                             "<div class='birthPlace'>Geburtsort: <b>" + charArray[i].birthplace + "</b></div>" +
-                             "<div class='playHours'>Spiel Stunden: <b>" + charArray[i].playtimeHours + "</b></div>";
-                charAlive += "<button class='btn charbtn play' style='margin-top:110px;' onclick='CharSelectAreaAction(`play`, `" + charArray[i].charId + "`, `" + charArray[i].firstjoin + "`);'><i class='fa fa-play'></i> Spielen</button></div>";
+                charAlive += "<li class='list-group-item'><span onclick='CharSelectAreaAction(`view`, " + charArray[i].charId + ");' class='name'>" + charArray[i].charname + "</span>";
+                charAlive += "<button class='btn charbtn play' onclick='CharSelectAreaAction(`play`, `" + charArray[i].charId + "`, `" + charArray[i].firstjoin + "`);'><i class='fa fa-play'></i> Spielen</button></li>";
                 charAliveCount++;
             } else {
                 //Charakter tot
@@ -278,8 +238,8 @@
         }
 
         if (charAliveCount < maxAvailableChars) {
-            charAlive += "<div class='Character'><div class='name'>Kein Charakter vorhanden</div>" +
-                "<button class='btn charbtn create' onclick='CharSelectAreaAction(`create`);'><i class='fa fa-plus'></i></button></div>";
+            charAlive += "<li class='list-group-item'><span class='name'>Kein Charakter vorhanden</span>" +
+                "<button class='charbtn play' onclick='CharSelectAreaAction(`create`);'><i class='fa fa-plus'></i> Erstellen</button></li>";
         }
 
         $("#charlist").html(charAlive);
@@ -349,6 +309,10 @@
 
     alt.on("CEF:Login:showArea", (area) => {
         showArea(area);
+    });
+
+    alt.on("CEF:Charselector:setMaxChars", (maxChars) => {
+        maxAvailableChars = maxChars;
     });
 
     alt.on("CEF:Login:setStorage", (name, password) => {

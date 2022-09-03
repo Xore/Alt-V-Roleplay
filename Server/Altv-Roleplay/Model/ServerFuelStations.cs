@@ -4,6 +4,8 @@ using Altv_Roleplay.models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Altv_Roleplay.Model
 {
@@ -16,7 +18,7 @@ namespace Altv_Roleplay.Model
         {
             if (fuelId == 0) return "";
             var fs = ServerFuelStations_.FirstOrDefault(x => x.id == fuelId);
-            if (fs != null)
+            if(fs != null)
             {
                 return fs.name;
             }
@@ -27,7 +29,7 @@ namespace Altv_Roleplay.Model
         {
             if (fuelId == 0) return "";
             var fs = ServerFuelStations_.FirstOrDefault(x => x.id == fuelId);
-            if (fs != null)
+            if(fs != null)
             {
                 return fs.availableFuel;
             }
@@ -60,7 +62,7 @@ namespace Altv_Roleplay.Model
         {
             if (fuelId == 0) return 0;
             var fs = ServerFuelStations_.FirstOrDefault(x => x.id == fuelId);
-            if (fs != null) { return fs.bank; }
+            if(fs != null) { return fs.bank; }
             return 0;
         }
 
@@ -68,7 +70,7 @@ namespace Altv_Roleplay.Model
         {
             if (fuelId == 0) return 0;
             var fs = ServerFuelStations_.FirstOrDefault(x => x.id == fuelId);
-            if (fs != null)
+            if(fs != null)
             {
                 return fs.owner;
             }
@@ -79,7 +81,7 @@ namespace Altv_Roleplay.Model
         {
             if (ownerId == 0) return "Staat";
             var chars = Characters.PlayerCharacters.FirstOrDefault(x => x.charId == ownerId);
-            if (chars != null)
+            if(chars != null)
             {
                 return chars.charname;
             }
@@ -90,7 +92,7 @@ namespace Altv_Roleplay.Model
         {
             if (fuelId == 0) return 0;
             var fs = ServerFuelStations_.FirstOrDefault(x => x.id == fuelId);
-            if (fs != null)
+            if(fs != null)
             {
                 return fs.availableLiters;
             }
@@ -113,7 +115,7 @@ namespace Altv_Roleplay.Model
                     }
                 }
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 Alt.Log($"{e}");
             }
@@ -123,7 +125,7 @@ namespace Altv_Roleplay.Model
         {
             if (spotId == 0) return 0;
             var spot = ServerFuelStationSpots_.FirstOrDefault(x => x.id == spotId);
-            if (spot != null)
+            if(spot != null)
             {
                 return spot.fuelStationId;
             }
@@ -134,7 +136,7 @@ namespace Altv_Roleplay.Model
         {
             if (spotId == 0) return new Position(0, 0, 0);
             var spot = ServerFuelStationSpots_.FirstOrDefault(x => x.id == spotId);
-            if (spot != null)
+            if(spot != null)
             {
                 return new Position(spot.posX, spot.posY, spot.posZ);
             }

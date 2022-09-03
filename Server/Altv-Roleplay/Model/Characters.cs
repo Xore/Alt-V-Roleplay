@@ -5,11 +5,14 @@ using AltV.Net.Elements.Entities;
 using Altv_Roleplay.Factories;
 using Altv_Roleplay.Handler;
 using Altv_Roleplay.models;
+using Altv_Roleplay.Utils;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Altv_Roleplay.Model
 {
@@ -20,7 +23,7 @@ namespace Altv_Roleplay.Model
         public static List<Characters_LastPos> CharactersLastPos = new List<Characters_LastPos>();
         public static List<Characters_Permissions> CharactersPermissions = new List<Characters_Permissions>();
 
-        public static void CreatePlayerCharacter(IPlayer client, string charname, string birthdate, bool gender, string facefeaturesarray, string headblendsdataarray, string headoverlaysarray1, string headoverlaysarray2, string headoverlaysarray3)
+        public static void CreatePlayerCharacter(IPlayer client, string charname, string birthdate, bool gender, string facefeaturesarray, string headblendsdataarray, string headoverlaysarray)
         {
             try
             {
@@ -36,7 +39,7 @@ namespace Altv_Roleplay.Model
                     firstJoinTimestamp = DateTime.Now,
                     gender = gender,
                     birthdate = birthdate,
-                    birthplace = "Unbekannt",
+                    birthplace = "None",
                     health = 100,
                     armor = 0,
                     hunger = 100,
@@ -66,9 +69,7 @@ namespace Altv_Roleplay.Model
                     isInJail = false,
                     jailTime = 0,
                     pedName = "none",
-                    isAnimalPed = 0, 
-                    alcLvl = 0, 
-                    drug = "Clean"
+                    isAnimalPed = 0
                 };
                 PlayerCharacters.Add(CharData);
 
@@ -81,7 +82,7 @@ namespace Altv_Roleplay.Model
 
                 GenerateCharacterPhonenumber(client, CharData.charId);
 
-                CreateCharacterSkin(charname, facefeaturesarray, headblendsdataarray, headoverlaysarray1, headoverlaysarray2, headoverlaysarray3);
+                CreateCharacterSkin(charname, facefeaturesarray, headblendsdataarray, headoverlaysarray);
             }
             catch (Exception e)
             {
@@ -89,7 +90,7 @@ namespace Altv_Roleplay.Model
             }
         }
 
-        public static void CreateCharacterSkin(string charname, string facefeaturesarray, string headblendsdataarray, string headoverlaysarray1, string headoverlaysarray2, string headoverlaysarray3)
+        public static void CreateCharacterSkin(string charname, string facefeaturesarray, string headblendsdataarray, string headoverlaysarray)
         {
             int charId = GetCharacterIdFromCharName(charname);
             var CharSkinData = new Characters_Skin
@@ -97,9 +98,7 @@ namespace Altv_Roleplay.Model
                 charId = charId,
                 facefeatures = facefeaturesarray,
                 headblendsdata = headblendsdataarray,
-                headoverlays1 = headoverlaysarray1,
-                headoverlays2 = headoverlaysarray2,
-                headoverlays3 = headoverlaysarray3,
+                headoverlays = headoverlaysarray,
                 clothesTop = -2,
                 clothesTorso = -2,
                 clothesLeg = -2,
@@ -380,20 +379,23 @@ namespace Altv_Roleplay.Model
             }
         }
 
-        public static void SetCharacterHeadOverlays(int charid, string headoverlayarray1, string headoverlayarray2, string headoverlayarray3)
+        public static void SetCharacterHeadOverlays(int charid, string headoverlays)
         {
-            if (charid == 0 || headoverlayarray1.Length == 0 || headoverlayarray2.Length == 0 || headoverlayarray3.Length == 0) return;
+            if (charid == 0 || headoverlays == "") return;
             var chars = CharactersSkin.FirstOrDefault(x => x.charId == charid);
             if (chars != null)
             {
-                chars.headoverlays1 = headoverlayarray1;
-                chars.headoverlays2 = headoverlayarray2;
-                chars.headoverlays3 = headoverlayarray3;
+                chars.headoverlays = headoverlays;
 
                 using (gtaContext db = new gtaContext())
                 {
-                    db.Characters_Skin.Update(chars);
+                    var entry = db.Characters_Skin.Find(chars.charId);
+                    if (entry != null)
+                    {
+                        entry.headoverlays = headoverlays;
+                    }
                     db.SaveChanges();
+
                 }
             }
         }
@@ -458,39 +460,16 @@ namespace Altv_Roleplay.Model
             }
         }
 
-        public static float[] GetCharacterHeadOverlay1(int charid)
+        public static string GetCharacterHeadOverlays(int charid)
         {
-            if (charid == 0) return null;
+            if (charid == 0) return "";
             var chars = CharactersSkin.FirstOrDefault(x => x.charId == charid);
             if (chars != null)
             {
-                return Array.ConvertAll(chars.headoverlays1.Split(';'), param => float.Parse(param, CultureInfo.InvariantCulture));
+                return chars.headoverlays;
             }
 
-            return null;
-        }
-        public static float[] GetCharacterHeadOverlay2(int charid)
-        {
-            if (charid == 0) return null;
-            var chars = CharactersSkin.FirstOrDefault(x => x.charId == charid);
-            if (chars != null)
-            {
-                return Array.ConvertAll(chars.headoverlays2.Split(';'), param => float.Parse(param, CultureInfo.InvariantCulture));
-            }
-
-            return null;
-        }
-        public static float[] GetCharacterHeadOverlay3(int charid)
-        {
-            if (charid == 0) return null;
-            var chars = CharactersSkin.FirstOrDefault(x => x.charId == charid);
-            if (chars != null)
-            {
-                return Array.ConvertAll(chars.headoverlays3.Split(';'), param => float.Parse(param, CultureInfo.InvariantCulture));
-            }
-
-            return null;
-
+            return "";
         }
 
         public static void CreateCharacterLastPos(int charid, Position pos, short dimension)
@@ -624,24 +603,6 @@ namespace Altv_Roleplay.Model
             }
         }
 
-        public static int GetCharacterPlayTimeHours(int charId)
-        {
-            try
-            {
-                if (charId <= 0) return 0;
-                var chars = PlayerCharacters.FirstOrDefault(p => p.charId == charId);
-                if (chars != null)
-                {
-                    return chars.playtimeHours;
-                }
-            }
-            catch (Exception e)
-            {
-                Alt.Log($"{e}");
-            }
-            return 0;
-        }
-
         public static void IncreaseCharacterJobHourCounter(int charId)
         {
             try
@@ -731,7 +692,7 @@ namespace Altv_Roleplay.Model
             {
                 Alt.Log($"{e}");
             }
-            return "";
+            return "None";
         }
 
         public static int GetCharacterAccState(int charId)
@@ -903,69 +864,14 @@ namespace Altv_Roleplay.Model
                 switch (type)
                 {
                     case "facefeatures":
-                        return $"{Array.ConvertAll(chars.facefeatures.Split(';'), int.Parse)}";
-                        return $"{Array.ConvertAll(chars.headblendsdata.Split(';'), int.Parse)}";
-                    case "headoverlays1":
-                        return $"{Array.ConvertAll(chars.headoverlays1.Split(';'), int.Parse)}";
-                    case "headoverlays2":
-                        return $"{Array.ConvertAll(chars.headoverlays2.Split(';'), int.Parse)}";
-                    case "headoverlays3":
-                        return $"{Array.ConvertAll(chars.headoverlays3.Split(';'), int.Parse)}";
+                        return chars.facefeatures;
+                    case "headblendsdata":
+                        return chars.headblendsdata;
+                    case "headoverlays":
+                        return chars.headoverlays;
                 }
             }
             return "";
-        }
-
-        public static void SetCharacterSkin(IPlayer player)
-        {
-            try
-            {
-                int charId = User.GetPlayerOnline(player);
-                if (charId <= 0) return;
-                var chars = CharactersSkin.FirstOrDefault(p => p.charId == charId);
-                if (chars != null)
-                {
-
-                    float[] facefeatures = Array.ConvertAll(chars.facefeatures.Split(';'), param => float.Parse(param, CultureInfo.InvariantCulture));
-                    float[] headblendsdata = Array.ConvertAll(chars.headblendsdata.Split(';'), param => float.Parse(param, CultureInfo.InvariantCulture));
-                    float[] headoverlays1 = Array.ConvertAll(chars.headoverlays1.Split(';'), param => float.Parse(param, CultureInfo.InvariantCulture));
-                    float[] headoverlays2 = Array.ConvertAll(chars.headoverlays2.Split(';'), param => float.Parse(param, CultureInfo.InvariantCulture));
-                    float[] headoverlays3 = Array.ConvertAll(chars.headoverlays3.Split(';'), param => float.Parse(param, CultureInfo.InvariantCulture));
-
-                    player.SetHeadBlendData((uint)headblendsdata[0], (uint)headblendsdata[1], 0, (uint)headblendsdata[2], (uint)headblendsdata[5], 0, (uint)headblendsdata[3], (uint)headblendsdata[4], 0);
-                    player.SetHeadOverlayColor(1, 1, (byte)headoverlays3[1], 1);
-                    player.SetHeadOverlayColor(2, 1, (byte)headoverlays3[2], 1);
-                    player.SetHeadOverlayColor(5, 2, (byte)headoverlays3[5], 1);
-                    player.SetHeadOverlayColor(8, 2, (byte)headoverlays3[8], 1);
-                    player.SetHeadOverlayColor(10, 1, (byte)headoverlays3[10], 1);
-                    player.SetEyeColor((ushort)headoverlays1[14]);
-                    player.SetHeadOverlay(0, (byte)headoverlays1[0], headoverlays2[0]);
-                    player.SetHeadOverlay(1, (byte)headoverlays1[1], headoverlays2[1]);
-                    player.SetHeadOverlay(2, (byte)headoverlays1[2], headoverlays2[2]);
-                    player.SetHeadOverlay(3, (byte)headoverlays1[3], headoverlays2[3]);
-                    player.SetHeadOverlay(4, (byte)headoverlays1[4], headoverlays2[4]);
-                    player.SetHeadOverlay(5, (byte)headoverlays1[5], headoverlays2[5]);
-                    player.SetHeadOverlay(6, (byte)headoverlays1[6], headoverlays2[6]);
-                    player.SetHeadOverlay(7, (byte)headoverlays1[7], headoverlays2[7]);
-                    player.SetHeadOverlay(8, (byte)headoverlays1[8], headoverlays2[8]);
-                    player.SetHeadOverlay(9, (byte)headoverlays1[9], headoverlays2[9]);
-                    player.SetHeadOverlay(10, (byte)headoverlays1[10], headoverlays2[10]);
-
-                    player.HairColor = (byte)headoverlays3[13];
-                    player.HairHighlightColor = (byte)headoverlays2[13];
-
-                    player.SetClothes(2, (ushort)headoverlays1[13], 0, 2);
-
-                    for (int i = 0; i < 20; i++)
-                    {
-                        player.SetFaceFeature((byte)i, facefeatures[i]);
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Alt.Log($"{e}");
-            }
         }
 
         public static string GetPlayerCharacters(IPlayer player)
@@ -980,9 +886,6 @@ namespace Altv_Roleplay.Model
                 death = x.death,
                 firstjoin = x.firstJoin,
                 gender = x.gender,
-                birthdate = x.birthdate,
-                birthplace = x.birthplace,
-                playtimeHours = x.playtimeHours,
             }).ToList();
 
             return JsonConvert.SerializeObject(items);
@@ -1243,83 +1146,6 @@ namespace Altv_Roleplay.Model
             return 0;
         }
 
-        public static float GetCharacterAlclvl(int charId)
-        {
-            var chars = PlayerCharacters.FirstOrDefault(p => p.charId == charId);
-
-            if (chars != null)
-            {
-                return (float)Math.Round(chars.alcLvl, 2);
-            }
-
-            return 0;
-        }
-
-        public static void SetCharacterAlclvl(int charId, float alcLvl)
-        {
-            var chars = PlayerCharacters.FirstOrDefault(p => p.charId == charId);
-
-            if (chars != null)
-            {
-                chars.alcLvl = alcLvl;
-                try
-                {
-                    using (gtaContext db = new gtaContext())
-                    {
-                        var entry = db.AccountsCharacters.Find(chars.charId);
-                        if (entry != null)
-                        {
-                            entry.alcLvl = alcLvl;
-                        }
-                        db.SaveChanges();
-
-                    }
-                }
-                catch (Exception e)
-                {
-                    Alt.Log($"{e}");
-                }
-            }
-        }
-
-        public static string GetCharacterDrug(int charId)
-        {
-            var chars = PlayerCharacters.FirstOrDefault(p => p.charId == charId);
-
-            if (chars != null)
-            {
-                return chars.drug;
-            }
-            return "Clean";
-        }
-
-        public static void SetCharacterDrug(int charId, string drug)
-        {
-            var chars = PlayerCharacters.FirstOrDefault(p => p.charId == charId);
-
-            if (chars != null)
-            {
-                chars.drug = drug;
-                try
-                {
-                    using (gtaContext db = new gtaContext())
-                    {
-                        var entry = db.AccountsCharacters.Find(chars.charId);
-                        if (entry != null)
-                        {
-                            entry.drug = drug;
-                        }
-                        db.SaveChanges();
-
-                    }
-                }
-                catch (Exception e)
-                {
-                    Alt.Log($"{e}");
-                }
-            }
-        }
-
         public static int GetCharacterClothes(int charId, string clothesType)
         {
             if (charId == 0) return -2;
@@ -1378,10 +1204,8 @@ namespace Altv_Roleplay.Model
             switch (BackpackDrawId)
             {
                 case 31:
-                    return 30f;
+                    return 35f;
                 case 45:
-                    return 40f;
-                case 66: //ToDo 45 > EMT Draw ID
                     return 40f;
             }
             return 0f;
@@ -1738,10 +1562,6 @@ namespace Altv_Roleplay.Model
                     case "Tasche":
                         player.EmitLocked("Client:SpawnArea:setCharClothes", 5, 45, 0);
                         BackpackDrawId = 45;
-                        break;
-                    case "EMT-Rucksack":
-                        player.EmitLocked("Client:SpawnArea:setCharClothes", 5, 100, 0); //TODO
-                        BackpackDrawId = 100; //TODO
                         break;
                 }
 
@@ -2312,7 +2132,6 @@ namespace Altv_Roleplay.Model
             if (GetCharacterBackpack(charid) == 0) SetCharacterBackpack(player, "None");
             else if (GetCharacterBackpack(charid) == 31) SetCharacterBackpack(player, "Rucksack");
             else if (GetCharacterBackpack(charid) == 45) SetCharacterBackpack(player, "Tasche");
-            else if (GetCharacterBackpack(charid) == 100) SetCharacterBackpack(player, "EMT-Rucksack");//ToDo
 
             if (GetCharacterClothes(charid, "Top") == -2) player.EmitLocked("Client:SpawnArea:setCharClothes", 11, 15, 0);
             else player.EmitLocked("Client:SpawnArea:setCharClothes", 11, ServerClothes.GetClothesDraw(GetCharacterClothes(charid, "Top"), Convert.ToInt32(gender)), ServerClothes.GetClothesTexture(GetCharacterClothes(charid, "Top"), Convert.ToInt32(gender)));

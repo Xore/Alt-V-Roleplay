@@ -1,15 +1,16 @@
 ﻿using AltV.Net;
 using AltV.Net.Async;
-using AltV.Net.Elements.Entities;
 using Altv_Roleplay.Factories;
 using Altv_Roleplay.Model;
-using Altv_Roleplay.Utils;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using Altv_Roleplay.Utils;
+using System.Linq;
+using Newtonsoft.Json;
+using System.Globalization;
+using AltV.Net.Elements.Entities;
 
 namespace Altv_Roleplay.Handler
 {
@@ -62,7 +63,7 @@ namespace Altv_Roleplay.Handler
                     CharactersPhone.CreatePhoneVerlauf(player, 912, targetPhoneNumber);
                 }
                 else
-                {
+                {                    
                     CharactersPhone.CreatePhoneVerlauf(player, Characters.GetCharacterPhonenumber((int)player.GetCharacterMetaId()), targetPhoneNumber);
                 }
 
@@ -142,7 +143,7 @@ namespace Altv_Roleplay.Handler
         }
 
         [AsyncClientEvent("Server:Smartphone:denyCall")]
-        public static void denyCall(ClassicPlayer player)
+        public void denyCall(ClassicPlayer player)
         {
             try
             {
@@ -379,13 +380,6 @@ namespace Altv_Roleplay.Handler
             {
                 Alt.Log($"{e}");
             }
-        }
-
-        [AsyncClientEvent("Server:Smartphone:requestPhoneBook")]
-        public void requestPhoneBook(ClassicPlayer player)
-        {
-            var numbers = ServerFactions.GetServerFactionInfos();
-            Global.mGlobal.VirtualAPI.TriggerClientEventSafe(player, "Client:Smartphone:SetFactionContent", numbers);
         }
         #endregion
 

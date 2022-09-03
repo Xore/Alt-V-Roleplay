@@ -157,8 +157,7 @@ alt.onServer("Client:Tuningmenu:OpenMenu", (veh, pMods, iMods, modPrices) => {
 });
 
 
-alt.on('keydown', (key) => {
-    if (key == 'N'.charCodeAt(0)) {
+alt.on("Client:Tuning:KeyNDown", () => {
         if (!webview || !vehicle || viewModeActive) return;
 
         alt.showCursor(false);
@@ -166,21 +165,17 @@ alt.on('keydown', (key) => {
         viewModeActive = true;
         webview.unfocus();
         webview.emit("viewModeActive", true);
-    }
 });
 
-alt.on('keyup', (key) => {
-    if (key == 'N'.charCodeAt(0)) {
+alt.on("Client:Tuning:KeyN", () => {
         if (!webview || !vehicle || !viewModeActive) return;
 
         alt.showCursor(true);
         alt.toggleGameControls(false);
         viewModeActive = false;
         webview.focus();
-        webview.emit("viewModeActive", false);
-    }
+        webview.emit("viewModeActive", false);	
 });
-
 function resetToNormal(vehicle, mods) {
     let count = 0;
     mods.forEach(index => {

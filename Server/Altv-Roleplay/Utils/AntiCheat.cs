@@ -1,4 +1,8 @@
-﻿namespace Altv_Roleplay.Utils
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Altv_Roleplay.Utils
 {
     public class AntiCheat
     {

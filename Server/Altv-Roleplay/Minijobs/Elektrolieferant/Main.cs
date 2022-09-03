@@ -11,11 +11,13 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Altv_Roleplay.Minijobs.Elektrolieferant
 {
     public class Main
-    {
+    {       
         public partial class Minijob_Spots
         {
             public int id { get; set; }
@@ -25,7 +27,7 @@ namespace Altv_Roleplay.Minijobs.Elektrolieferant
         }
         public static List<Minijob_Spots> MinijobSpots_ = new List<Minijob_Spots>();
         public static ClassicColshape startJobShape = (ClassicColshape)Alt.CreateColShapeSphere(Constants.Positions.Minijob_Elektrolieferent_StartPos, 2f);
-
+        
 
         public static void Initialize()
         {
@@ -51,7 +53,7 @@ namespace Altv_Roleplay.Minijobs.Elektrolieferant
 
             startJobShape.Radius = 2f;
 
-            foreach (var item in MinijobSpots_)
+            foreach(var item in MinijobSpots_)
             {
                 ((ClassicColshape)item.depositColshape).Radius = 2f;
             }
@@ -64,7 +66,7 @@ namespace Altv_Roleplay.Minijobs.Elektrolieferant
                 if (player == null || !player.Exists) return;
                 int charId = User.GetPlayerOnline(player);
                 if (charId <= 0) return;
-                foreach (var veh in Alt.GetAllVehicles().Where(x => x.NumberplateText == $"EL-{charId}").ToList())
+                foreach(var veh in Alt.GetAllVehicles().Where(x => x.NumberplateText == $"EL-{charId}").ToList())
                 {
                     if (veh == null || !veh.Exists) continue;
                     ServerVehicles.RemoveVehiclePermanently(veh);
@@ -89,7 +91,7 @@ namespace Altv_Roleplay.Minijobs.Elektrolieferant
                 if (player.GetPlayerCurrentMinijob() == "None") return;
                 if (player.GetPlayerCurrentMinijobStep() == "None") return;
                 if (player.GetPlayerCurrentMinijob() != "Elektrolieferant") return;
-                if (player.GetPlayerCurrentMinijobStep() == "FirstStepInVehicle")
+                if(player.GetPlayerCurrentMinijobStep() == "FirstStepInVehicle")
                 {
                     player.SetPlayerCurrentMinijobStep("DELIVER_TO_DESTINATION");
                     player.SetPlayerCurrentMinijobActionCount(1);
@@ -97,7 +99,7 @@ namespace Altv_Roleplay.Minijobs.Elektrolieferant
                     player.EmitLocked("Client:Minijob:CreateJobMarker", "Diamond Casino", 3, 514, 30, MinijobSpots_[0].pos.X, MinijobSpots_[0].pos.Y, MinijobSpots_[0].pos.Z, true);
                     return;
                 }
-                else if (player.GetPlayerCurrentMinijobStep() == "DELIVER_TO_DESTINATION" && player.GetPlayerCurrentMinijobActionCount() == 2)
+                else if(player.GetPlayerCurrentMinijobStep() == "DELIVER_TO_DESTINATION" && player.GetPlayerCurrentMinijobActionCount() == 2)
                 {
                     HUDHandler.SendNotification(player, 1, 2500, "Fahre zum Unternehmen um die Elektrozellen abzuliefern.");
                     player.EmitLocked("Client:Minijob:CreateJobMarker", "Lifeinvader", 3, 514, 30, MinijobSpots_[1].pos.X, MinijobSpots_[1].pos.Y, MinijobSpots_[1].pos.Z, true);
@@ -127,7 +129,7 @@ namespace Altv_Roleplay.Minijobs.Elektrolieferant
                     player.EmitLocked("Client:Minijob:CreateJobMarker", "Glass Heroes", 3, 514, 30, MinijobSpots_[5].pos.X, MinijobSpots_[5].pos.Y, MinijobSpots_[5].pos.Z, true);
                     return;
                 }
-                else if (player.GetPlayerCurrentMinijobStep() == "DRIVE_BACK_TO_START")
+                else if(player.GetPlayerCurrentMinijobStep() == "DRIVE_BACK_TO_START")
                 {
                     HUDHandler.SendNotification(player, 1, 2500, "Fahre zurück zum Department of Water and Power und stelle dein Fahrzeug ab.");
                     player.EmitLocked("Client:Minijob:CreateJobMarker", "Department of Water and Power: Fahrzeugabgabe", 3, 514, 39, Constants.Positions.Minijob_Elektrolieferant_VehOutPos.X, Constants.Positions.Minijob_Elektrolieferant_VehOutPos.Y, Constants.Positions.Minijob_Elektrolieferant_VehOutPos.Z, true);
@@ -160,8 +162,7 @@ namespace Altv_Roleplay.Minijobs.Elektrolieferant
                         HUDHandler.SendNotification(player, 1, 2500, "Begebe dich zur Tür und gebe das Paket ab.");
                         return;
                     }
-                    else if (player.GetPlayerCurrentMinijobActionCount() == 2 && vehicle.Position.IsInRange(new Position(MinijobSpots_[1].pos.X, MinijobSpots_[1].pos.Y, MinijobSpots_[1].pos.Z), 5f))
-                    {
+                    else if (player.GetPlayerCurrentMinijobActionCount() == 2 && vehicle.Position.IsInRange(new Position(MinijobSpots_[1].pos.X, MinijobSpots_[1].pos.Y, MinijobSpots_[1].pos.Z), 5f)) {
                         player.EmitLocked("Client:Minijob:RemoveJobMarker");
                         player.EmitLocked("Client:Minijob:CreateJobMarker", "Lifeinvader", 3, 514, 1, MinijobSpots_[1].depositPos.X, MinijobSpots_[1].depositPos.Y, MinijobSpots_[1].depositPos.Z - 1, false);
                         HUDHandler.SendNotification(player, 1, 2500, "Begebe dich zur Tür und gebe das Paket ab.");
@@ -194,16 +195,15 @@ namespace Altv_Roleplay.Minijobs.Elektrolieferant
                         player.EmitLocked("Client:Minijob:CreateJobMarker", "Glass Heroes", 3, 514, 1, MinijobSpots_[5].depositPos.X, MinijobSpots_[5].depositPos.Y, MinijobSpots_[5].depositPos.Z - 1, false);
                         HUDHandler.SendNotification(player, 1, 2500, "Begebe dich zur Tür und gebe das Paket ab.");
                         return;
-                    }
+                    }                    
                 }
                 else if (player.GetPlayerCurrentMinijob() == "Elektrolieferant" && player.GetPlayerCurrentMinijobStep() == "DRIVE_BACK_TO_START" && vehicle.Position.IsInRange(Constants.Positions.Minijob_Elektrolieferant_VehOutPos, 8f))
                 {
                     player.EmitLocked("Client:Minijob:RemoveJobMarker");
-                    foreach (var veh in Alt.GetAllVehicles().Where(x => x.NumberplateText == $"EL-{charId}").ToList())
-                    {
+                    foreach (var veh in Alt.GetAllVehicles().Where(x => x.NumberplateText == $"EL-{charId}").ToList()) {
                         if (veh == null || !veh.Exists) continue;
                         ServerVehicles.RemoveVehiclePermanently(veh);
-                        veh.Remove();
+                        veh.Remove(); 
                     }
                     player.SetPlayerCurrentMinijob("None");
                     player.SetPlayerCurrentMinijobStep("None");
@@ -218,7 +218,7 @@ namespace Altv_Roleplay.Minijobs.Elektrolieferant
                     return;
                 }
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 Alt.Log($"{e}");
             }
@@ -291,7 +291,7 @@ namespace Altv_Roleplay.Minijobs.Elektrolieferant
                     return;
                 }
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 Alt.Log($"{e}");
             }
@@ -304,14 +304,13 @@ namespace Altv_Roleplay.Minijobs.Elektrolieferant
                 if (player == null || !player.Exists || !((ClassicColshape)startJobShape).IsInRange((ClassicPlayer)player)) return;
                 int charId = User.GetPlayerOnline(player);
                 if (charId <= 0) return;
-                if (player.GetPlayerCurrentMinijob() == "Elektrolieferant")
+                if(player.GetPlayerCurrentMinijob() == "Elektrolieferant")
                 {
                     //Job abbrechen
-                    foreach (var veh in Alt.GetAllVehicles().Where(x => x.NumberplateText == $"EL-{charId}").ToList())
-                    {
+                    foreach(var veh in Alt.GetAllVehicles().Where(x => x.NumberplateText == $"EL-{charId}").ToList()) {
                         if (veh == null || !veh.Exists) continue;
                         ServerVehicles.RemoveVehiclePermanently(veh);
-                        veh.Remove();
+                        veh.Remove(); 
                     }
                     HUDHandler.SendNotification(player, 1, 2500, "Du hast den Minijob: Elektrolieferant beendet.");
                     player.SetPlayerCurrentMinijob("None");
@@ -320,16 +319,15 @@ namespace Altv_Roleplay.Minijobs.Elektrolieferant
                     player.SetPlayerCurrentMinijobRouteId(0);
                     return;
                 }
-                else if (player.GetPlayerCurrentMinijob() == "None")
+                else if(player.GetPlayerCurrentMinijob() == "None")
                 {
                     //Job annehmen
-                    foreach (var veh in Alt.GetAllVehicles().ToList())
-                    {
+                    foreach(var veh in Alt.GetAllVehicles().ToList()) {
                         if (veh == null || !veh.Exists) continue;
-                        if (veh.Position.IsInRange(Constants.Positions.Minijob_Elektrolieferant_VehOutPos, 5f)) { HUDHandler.SendNotification(player, 3, 2500, "Der Ausparkpunkt links vom Haupteingang ist blockiert."); return; }
+                        if(veh.Position.IsInRange(Constants.Positions.Minijob_Elektrolieferant_VehOutPos, 5f)) { HUDHandler.SendNotification(player, 3, 2500, "Der Ausparkpunkt links vom Haupteingang ist blockiert."); return; }
                     }
-                    int serialNumber = new Random().Next(1, 10000);
-                    ServerVehicles.CreateVehicle(2307837162, charId, 2, 0, false, 0, Constants.Positions.Minijob_Elektrolieferant_VehOutPos, Constants.Positions.Minijob_Elektrolieferant_VehOutRot, $"EL-{charId}", 255, 255, 255, 0, serialNumber);
+
+                    ServerVehicles.CreateVehicle(2307837162, charId, 2, 0, false, 0, Constants.Positions.Minijob_Elektrolieferant_VehOutPos, Constants.Positions.Minijob_Elektrolieferant_VehOutRot, $"EL-{charId}", 255, 255, 255);
                     player.SetPlayerCurrentMinijob("Elektrolieferant");
                     player.SetPlayerCurrentMinijobStep("FirstStepInVehicle");
                     HUDHandler.SendNotification(player, 1, 2500, "Du hast den Minijob begonnen. Wir haben dir ein Fahrzeug mit Energiezellen links vom Haupteingang abgestellt.");

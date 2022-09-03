@@ -23,8 +23,9 @@ namespace SaltyChat.Server
         public IEnumerable<VoiceClient> VoiceClients => _voiceClients.Values;
 
         private readonly Dictionary<IPlayer, VoiceClient> _voiceClients = new();
+        private readonly List<PhoneCall> _phoneCalls = new();
         private readonly List<RadioChannel> _radioChannels = new();
-        private const string _Version = "1.2.0"; // ToDo: Change on update
+        private const string _Version = "1.2.1"; // ToDo: Change on update
 
         #endregion
 
@@ -49,7 +50,7 @@ namespace SaltyChat.Server
             Instance = this;
             Alt.OnPlayerDisconnect += OnServerPlayerDisconnect;
             Alt.OnServer<IPlayer, bool>("SaltyChat:SetPlayerAlive", OnServerSetPlayerAlive);
-            Alt.OnServer<IPlayer, int>("SaltyChat:EnablePlayer", OnServerEnablePlayer);
+            Alt.OnServer<IPlayer>("SaltyChat:EnablePlayer", OnServerEnablePlayer);
             Alt.OnServer<string>("SaltyChat:UpdateRadioTowers", OnServerUpdateRadioTowers);
             Alt.OnServer<IPlayer, string, bool>("SaltyChat:JoinRadioChannel", OnServerJoinRadioChannel);
             Alt.OnServer<IPlayer, string>("SaltyChat:LeaveRadioChannel", OnServerLeaveRadioChannel);
@@ -72,9 +73,9 @@ namespace SaltyChat.Server
             lock (player)
             {
                 Alt.EmitAllClients("SaltyChat:RemoveClient", player.Id);
-                if (!_voiceClients.TryGetValue(player, out var voiceClient)) return;
+                if (!_voiceClients.Remove(player, out var voiceClient)) return;
                 foreach (var radioChannel in _radioChannels) radioChannel.RemoveMember(voiceClient);
-                _voiceClients.Remove(player, out _);
+                foreach (var call in _phoneCalls.Where(c => c.CallerId == player.Id || c.CalledId == player.Id)) EndCall(call);
             }
         }
 
@@ -105,7 +106,6 @@ namespace SaltyChat.Server
             if (Array.IndexOf(Configuration.VoiceRanges, range) == -1) return;
             voiceClient.VoiceRange = range;
             Alt.EmitAllClients("SaltyChat:UpdateClientRange", player, range);
-            player.Emit("client::updateVoiceRange", range);
         }
 
         private void OnClientIsUsingMegaphone(IPlayer player, bool state)
@@ -137,9 +137,9 @@ namespace SaltyChat.Server
             Alt.EmitAllClients("SaltyChat:UpdateClientAlive", voiceClient.Player, isAlive);
         }
 
-        private void OnServerEnablePlayer(IPlayer player, int charId)
+        private void OnServerEnablePlayer(IPlayer player)
         {
-            var voiceClient = new VoiceClient(player, GetTeamSpeakName(player, charId), Configuration.VoiceRanges[1], player.Health > 100);
+            var voiceClient = new VoiceClient(player, GetTeamSpeakName(player), Configuration.VoiceRanges[1], player.Health > 100);
             if (_voiceClients.ContainsKey(player)) _voiceClients[player] = voiceClient;
             else _voiceClients.TryAdd(player, voiceClient);
 
@@ -197,12 +197,21 @@ namespace SaltyChat.Server
         {
             caller.Emit("SaltyChat:PhoneEstablish", called, called.Position);
             called.Emit("SaltyChat:PhoneEstablish", caller, caller.Position);
+            _phoneCalls.Add(new PhoneCall(caller, called));
         }
 
         private void OnServerEndCall(IPlayer caller, IPlayer called)
         {
-            if (caller.Exists) caller.Emit("SaltyChat:PhoneEnd", called.Id);
-            if (called.Exists) called.Emit("SaltyChat:PhoneEnd", caller.Id);
+            var phoneCall = _phoneCalls.FirstOrDefault(c => c.Caller == caller && c.Called == called);
+            if (phoneCall == null) return;
+            EndCall(phoneCall);
+        }
+
+        private void EndCall(PhoneCall phoneCall)
+        {
+            if (phoneCall.Caller is {Exists: true}) phoneCall.Caller.Emit("SaltyChat:PhoneEnd", phoneCall.CalledId);
+            if (phoneCall.Called is {Exists: true}) phoneCall.Called.Emit("SaltyChat:PhoneEnd", phoneCall.CallerId);
+            _phoneCalls.Remove(phoneCall);
         }
 
         #endregion
@@ -285,19 +294,15 @@ namespace SaltyChat.Server
 
         #region Methods: Misc
 
-        private string GetTeamSpeakName(IPlayer player, int charId)
+        private string GetTeamSpeakName(IPlayer player)
         {
-            string name;
+            var name = Configuration.NamePattern;
             do
             {
-                name = $"[{charId}] | alt:V";
-
-                if (name.Length > 30)
-                {
-                    name = name.Substring(0, 30);
-                }
-            }
-            while (this._voiceClients.Values.Any(c => c.TeamSpeakName == name));
+                name = Regex.Replace(name, @"(\{guid\})", Guid.NewGuid().ToString().Replace("-", ""));
+                name = Regex.Replace(name, @"(\{serverid\})", player.Id.ToString());
+                if (name.Length > 30) name = name.Remove(29, name.Length - 30);
+            } while (_voiceClients.Values.Any(c => c.TeamSpeakName == name));
 
             return name;
         }

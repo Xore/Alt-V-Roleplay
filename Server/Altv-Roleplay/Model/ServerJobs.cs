@@ -1,7 +1,9 @@
 ﻿using Altv_Roleplay.models;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace Altv_Roleplay.Model
 {
@@ -26,7 +28,7 @@ namespace Altv_Roleplay.Model
         {
             if (jobName == "") return 0;
             var job = ServerJobs_.FirstOrDefault(x => x.jobName == jobName);
-            if (job != null)
+            if(job != null)
             {
                 return job.jobPaycheck;
             }
@@ -37,7 +39,7 @@ namespace Altv_Roleplay.Model
         {
             if (jobName == "") return false;
             var job = ServerJobs_.FirstOrDefault(x => x.jobName == jobName);
-            if (job != null) { return true; }
+            if(job != null) { return true; }
             return false;
         }
 
@@ -45,7 +47,7 @@ namespace Altv_Roleplay.Model
         {
             if (jobName == "") return 0;
             var job = ServerJobs_.FirstOrDefault(x => x.jobName == jobName);
-            if (job != null) { return job.jobNeededHours; }
+            if(job != null) { return job.jobNeededHours; }
             return 0;
         }
     }

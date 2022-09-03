@@ -1,7 +1,9 @@
 ﻿using AltV.Net.Data;
 using Altv_Roleplay.models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace Altv_Roleplay.Model
 {
@@ -14,7 +16,7 @@ namespace Altv_Roleplay.Model
         {
             if (garageID == 0) return "Unbekannt";
             var garages = ServerGarages_.FirstOrDefault(g => g.id == garageID);
-            if (garages != null)
+            if(garages != null)
             {
                 return garages.name;
             }
@@ -25,7 +27,7 @@ namespace Altv_Roleplay.Model
         {
             if (garageID == 0) return -1;
             var garages = ServerGarages_.FirstOrDefault(g => g.id == garageID);
-            if (garages != null)
+            if(garages != null)
             {
                 return garages.type;
             }
@@ -37,7 +39,7 @@ namespace Altv_Roleplay.Model
             Position pos = new Position(0, 0, 0);
             if (garageid == 0 || pId == 0) return pos;
             var slot = ServerGarageSlots_.FirstOrDefault(s => s.garageId == garageid && s.parkId == pId);
-            if (slot != null)
+            if(slot != null)
             {
                 pos = new Position(slot.posX, slot.posY, slot.posZ);
             }
@@ -49,7 +51,7 @@ namespace Altv_Roleplay.Model
             Rotation rot = new Rotation(0, 0, 0);
             if (garageid == 0 || pId == 0) return rot;
             var slot = ServerGarageSlots_.FirstOrDefault(s => s.garageId == garageid && s.parkId == pId);
-            if (slot != null)
+            if(slot != null)
             {
                 rot = new Rotation(slot.rotX, slot.rotY, slot.rotZ);
             }

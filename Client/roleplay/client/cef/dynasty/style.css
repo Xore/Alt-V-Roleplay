@@ -43,7 +43,7 @@ div#dynasty8HUD-Storages>div>p.title {
 }
 
 div#dynasty8HUD-Shops>div:nth-child(2)>ul,
-div#dynasty8HUD-Storages>div:nth-child(2)>ul {
+div#dynasty8HUD-Storages>div:nth-child(2)>ul, {
     max-height: 610.74px !important;
     height: 610.74px !important;
 }
@@ -171,9 +171,9 @@ div#dynasty8HUD-Storages>div:nth-child(2)>ul>li>div {
 div#dynasty8HUD-Shops>div,
 div#dynasty8HUD-Storages>div {
     width: 500px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.425), rgba(86, 0, 121, 0.329));
-    border-radius: 20px;
+    background: #000000c4;
     text-align: center;
+    border-radius: 4px;
     box-shadow: 1px 4px 22px rgba(25, 25, 25, 0.8) !important;
     height: 421.2px;
     margin: 28.08px;
@@ -184,9 +184,9 @@ div#dynasty8HUD-Storages>div {
 div#dynasty8HUD-Shops>div:nth-child(2),
 div#dynasty8HUD-Storages>div:nth-child(2) {
     width: 700px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.425), rgba(86, 0, 121, 0.329));
-    border-radius: 20px;
+    background: #000000c4;
     text-align: center;
+    border-radius: 4px;
     box-shadow: 1px 4px 22px rgba(25, 25, 25, 0.8) !important;
     height: 645.84px;
     margin: 28.08px;
@@ -197,8 +197,8 @@ div#dynasty8HUD-Storages>div:nth-child(2) {
 div#dynasty8HUD-Shops>div>span,
 div#dynasty8HUD-Storages>div>span {
     position: absolute;
-    left: 5px;
-    top: 5px;
+    left: 0;
+    top: 0;
     padding-left: 6px;
     padding-right: 6px;
     padding-top: 4px;
@@ -233,10 +233,8 @@ div#dynasty8HUD-Shops>div>p.title,
 div#dynasty8HUD-Storages>div>p.title {
     font-family: PEL;
     color: #d2d2d2;
-    background: rgba(0, 0, 0, 0.342);
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
     font-size: 24px;
+    background: #000000c4;
     padding: 4px;
     border-bottom: 1px solid #353535;
 }

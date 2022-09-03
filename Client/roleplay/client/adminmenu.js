@@ -154,7 +154,7 @@ alt.onServer("Client:AdminMenu:Godmode", (info) => {
 
 alt.onServer("Client:AdminMenu:Spectate", (target, info) => {
     if (info == "on") {
-        spectate_lastpos = game.getEntityCoords(alt.Player.local.scriptID, true);
+        spectate_lastpos = game.getEntityCoords(alt.Player.local.scriptID);
         game.setEntityCoords(alt.Player.local.scriptID, target.pos.x, target.pos.y, target.pos.z - 3, 0, 0, 0, false);
         alt.setTimeout(() => {
             spectate_camera = game.createCam("DEFAULT_SCRIPTED_CAMERA", true);

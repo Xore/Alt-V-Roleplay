@@ -1,0 +1,139 @@
+﻿<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../utils/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../utils/toastr.min.css">
+    <link rel="stylesheet" href="../utils/mdb/css/mdb-sass.css">
+    <script type="text/javascript" src="../utils/colorpicker.js"></script>
+    <script type="text/javascript" src="viewport.js"></script>
+    <title>LSPD</title>
+</head>
+
+<body>
+    <!--LSPD-->
+    <div id="LSPDCarCEFBox">
+        <p class="closebtn" onclick="closeLSPDCarCEFBox();"><i class="fas fa-times"></i></p>
+        <p class="title">Fahrzeuge</p>
+        <div class="billUnderlineBody"></div>
+        <ul class="list-group">
+            <li class="list-group-item" onclick="LSPDCarCEFSelectJob(1);">
+                <p class="title">Rang-1</p>
+                <p class="veh">Dodge Charger</p>
+            </li>
+            <li class="list-group-item" onclick="LSPDCarCEFSelectJob(2);">
+                <p class="title">Rang-2</p>
+                <p class="veh">Ford CVPI</p>
+            </li>
+            <li class="list-group-item" onclick="LSPDCarCEFSelectJob(3);">
+                <p class="title">Rang-3</p>
+                <p class="veh">Ford Taurus</p>
+            </li>
+            <li class="list-group-item" onclick="LSPDCarCEFSelectJob(4);">
+                <p class="title">Rang-4</p>
+                <p class="veh">Chevrolet Tahoe</p>
+            </li>
+            <li class="list-group-item" onclick="LSPDCarCEFSelectJob(5);">
+                <p class="title">Rang-5</p>
+                <p class="veh">Ford F150</p>
+            </li>
+            <li class="list-group-item" onclick="LSPDCarCEFSelectJob(6);">
+                <p class="title">Rang-6</p>
+                <p class="veh">Ford Explorer</p>
+            </li>
+        </ul>
+    </div>
+    <div id="LSPDGearCEFBox">
+        <p class="closebtn" onclick="closeLSPDGearCEFBox();"><i class="fas fa-times"></i></p>
+        <p class="title">Uniform</p>
+        <div class="billUnderlineBody"></div>
+        <ul class="list-group">
+            <li class="list-group-item" onclick="LSPDCarCEFSelectGear(1);">
+                <p class="desc">Standard Streifen Uniform</p>
+                <p class="veh">Streifen Uniform</p>
+            </li>
+            <li class="list-group-item" onclick="LSPDCarCEFSelectGear(2);">
+                <p class="desc">Uniform für Besondere Anlässe</p>
+                <p class="veh">Paraden Uniform</p>
+            </li>
+            <li class="list-group-item" onclick="LSPDCarCEFSelectGear(3);">
+                <p class="desc">Unterziehweste | Holster | Marke</p>
+                <p class="veh">Zivil</p>
+            </li>
+        </ul>
+        <p class="title">Ausrüstung</p>
+        <ul class="list-group">
+            <li class="list-group-item" onclick="LSPDCarCEFSelectGear(4);">
+                <p class="desc">Pistole | Tazer | Schlagstock | 2x Handschellen +Schlüssel | First-Aid Kit</p>
+                <p class="veh">Stufe-1</p>
+            </li>
+            <li class="list-group-item" onclick="LSPDCarCEFSelectGear(5);">
+                <p class="desc">SMG | Pistole | Tazer | Schlagstock | 2x Handschellen +Schlüssel | First-Aid Kit</p>
+                <p class="veh">Stufe-2</p>
+            </li>
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="../utils/bootstrap.min.js"></script>
+    <script src="../utils/mdb/js/mdb.min.js"></script>
+    <script src="../utils/anime.min.js"></script>
+    <script src="../utils/toastr.js"></script>
+    <script defer src="../utils/fontawesome/js/all.js"></script>
+</body>
+
+<script>
+    $(document).ready(function() {
+        alt.emit("Client:HUD:cefIsReady");
+        setTimeout(function() {
+        }, 1000);
+    });
+
+    function LSPDCarCEFSelectJob(level) {
+        if (level <= 0) return;
+        closeLSPDCarCEF();
+        alt.emit("Client:LSPD:SelectJob", level);
+    }
+
+    function LSPDCarCEFSelectGear(level) {
+        if (level <= 0) return;
+        closeLSPDCarCEF();
+        alt.emit("Client:LSPD:SelectGear", level);
+    }
+
+    function closeLSPDCarCEF() {
+        $("#LSPDCarCEFBox").fadeOut(50, function() {
+            alt.emit("Client:LSPD:destroyCEF");
+        });
+    }
+
+    function closeLSPDGearCEF() {
+        $("#LSPDGearCEFBox").fadeOut(50, function() {
+            alt.emit("Client:LSPD:destroyGearCEF");
+        });
+    }
+</script>
+<script type="text/javascript">
+    //Alt On Events
+
+    alt.on("CEF:General:hideAllCEFs", (hideCursor) => {
+        $("#LSPDCarCEFBox").fadeOut(50, function() {
+            $("#LSPDCarCEFBox").hide();
+            $("#LSPDGearCEFBox").hide();
+        });
+    });
+
+    alt.on("CEF:LSPD:openCEF", () => {
+        $("#LSPDCarCEFBox").fadeTo(250, 1, function() {});
+    });
+
+    alt.on("CEF:LSPD:openGearCEF", () => {
+        $("#LSPDGearCEFBox").fadeTo(250, 1, function() {});
+    });
+</script>
+
+</html>

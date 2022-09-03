@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'PEL';
+    src: url('../utils/fonts/Poppins-ExtraLight.ttf') format('truetype');
+}
+
+body {
+    background-color: transparent !important;
+    overflow: hidden;
+}
+
+.div_progress {
+    display: none;
+    top: 50px;
+    width: 400px;
+    height: 10px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px #00000086;
+    background: rgba(0, 0, 0, 0.308);
+    position: absolute;
+    left: calc(50% - 200px)
+}
+
+.div_title {
+    position: absolute;
+    z-index: 12351325;
+    width: 100%;
+    text-align: center;
+    color: white;
+    top: 20px;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+    font-family: PEL;
+}
+
+.div_progress_bar {
+    width: 0%;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+}

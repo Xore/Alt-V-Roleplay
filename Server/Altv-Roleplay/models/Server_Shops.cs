@@ -1,4 +1,5 @@
 ﻿using AltV.Net.Data;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -26,8 +27,6 @@ namespace Altv_Roleplay.models
         public int faction { get; set; }
         public bool isOnlySelling { get; set; }
         public string neededLicense { get; set; }
-        public int closed { get; set; }
-        public int stateClosed { get; set; }
 
         [NotMapped]
         public bool isRobbedNow { get; set; } = false;

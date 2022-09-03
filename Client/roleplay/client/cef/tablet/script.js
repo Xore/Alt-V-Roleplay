@@ -86,7 +86,6 @@ $(document).ready(function() {
 	alt.emit("Client:Tablet:cefIsReady");	
 });
 
-const toggleButton = document.querySelector('.dark-light');
 const homeButton = $("#homebutton");
 
 
@@ -478,11 +477,6 @@ newTransaction.bind('click', () => {
 
 homeButton.bind('click', () => {
 	showArea("homescreen");
-});
-
-toggleButton.addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
-	$(".left-side").toggle();
 });
 
 
@@ -1047,16 +1041,12 @@ function bankingButtonClicked(){//Neue Transaktion: Button (final)
 
 }
 
-var dbg = "";
-var dbg2 = "";
 //  done 09.01.2022 xore
 function SetBankingAppContent(bankArray, historieArray) {
-var bankingHistorieHTML = "";
+var bankingHistorieHTML = `<div class="apps-card">`;
 bankArray = JSON.parse(bankArray);
 historieArray = JSON.parse(historieArray);
 var bankNumber = bankArray[0].banknumber.toString();
-var dbg = bankArray[0].banknumber;
-var dbg2 = bankArray;
 bankNumber = bankNumber.split('').join(' ');
 
 $("#cardholder").html(`${bankArray[0].charname}`);
@@ -1067,27 +1057,29 @@ $(".card-item__number").html(bankNumber);
 for (var i in historieArray) {
 
 
-	bankingHistorieHTML += `<li>`
+	bankingHistorieHTML += `<div class="app-card">`
 
     if (historieArray[i].type == "Einzahlung" || historieArray[i].type == "Eingehende Überweisung") {
-        bankingHistorieHTML += `<font color="green">(+)` + historieArray[i].type + `</font>`;
+		bankingHistorieHTML += `<span><font color="green">` + historieArray[i].type + `</font></span>`
     } else {
-        bankingHistorieHTML += `<font color="red">(-)` + historieArray[i].type + `</font>`;
+		bankingHistorieHTML += `<span><font color="red">` + historieArray[i].type + `</font></span>`
     }
 
     if (historieArray[i].type == "Einzahlung" || historieArray[i].type == "Auszahlung") {
-        bankingHistorieHTML += `<b>Standort: </b> ${historieArray[i].location} Betrag: </b> ${historieArray[i].moneyamount}`;
+		bankingHistorieHTML += `<div class="app-card__subtext">Standort: ${historieArray[i].location} Betrag: ${historieArray[i].moneyamount}</div>`
     } else if (historieArray[i].type == "Eingehende Überweisung" || historieArray[i].type == "Ausgehende Überweisung") {
         if (historieArray[i].type == "Eingehende Überweisung") {
-            bankingHistorieHTML += `<b>Kontonummer (von): </b> ${historieArray[i].banknumber}`;
+			bankingHistorieHTML += `<div class="app-card__subtext">Kontonummer (von):  ${historieArray[i].banknumber}`
         } else {
-            bankingHistorieHTML += `<b>Kontonummer (an): </b> ${historieArray[i].banknumber}`;
+			bankingHistorieHTML += `<div class="app-card__subtext">Kontonummer (an):  ${historieArray[i].banknumber}`
         }
-        bankingHistorieHTML += `<b>Verwendungszweck: </b> ${historieArray[i].text}<b>Betrag: </b> ${historieArray[i].moneyamount}`;
+        bankingHistorieHTML += `</br>Verwendungszweck: ${historieArray[i].text}</br>Betrag:  ${historieArray[i].moneyamount}`;
+		bankingHistorieHTML += `</div>`
     }
 
-	bankingHistorieHTML += `</li>`
+	bankingHistorieHTML += `</div>`
 }
+bankingHistorieHTML += `</div>`
 
 $("#bankapp-bankhistory-list").html(bankingHistorieHTML);
 }
@@ -1163,20 +1155,15 @@ $("#eventsapp-clock").val("");
 });
 
 function SetEventsAppEventEntrys(eventsArray) {
-var eventEntryHTML = "";
+var eventEntryHTML = `<div class="apps-card">`;
 eventsArray = JSON.parse(eventsArray);
 for (var i in eventsArray) {
-    eventEntryHTML += `<div class='card text-white border-left-warning'>` +
-        `<div class='card-header'>Event am: ${eventsArray[i].date} ${eventsArray[i].time} Uhr</div>` +
-        `<div class='card-body'>` +
-        `<h6 class='card-title'>${eventsArray[i].title}</h6>` +
-        `<p class='card-text'>` +
-        `<b>Veranstalter:</b> ${eventsArray[i].owner}<br>` +
-        `<b>Telefonnr.:</b> ${eventsArray[i].callnumber}<br>` +
-        `<b>Standort:</b> ${eventsArray[i].location}<br>` +
-        `<b>Art der Veranstaltung:</b> ${eventsArray[i].eventtype}<br>` +
-        `<b>Weitere Informationen:</b> ${eventsArray[i].info}</p></div></div>`;
+	eventEntryHTML += `<div class="app-card"><span>${eventsArray[i].title}</span>` + 
+					  `<div class="app-card__subtext"> Event am: ${eventsArray[i].date} ${eventsArray[i].time} Uhr </br>Veranstalter: ${eventsArray[i].owner} </br>Telefonnr.: ${eventsArray[i].callnumber} </br>Standort: ${eventsArray[i].location} </br>Art der Veranstaltung: ${eventsArray[i].eventtype} </br>Weitere Informationen: ${eventsArray[i].info}</div>` +
+					  `</div>`;
 }
+
+eventEntryHTML += `</div>`;
 
 $("#event-entry-list").html(eventEntryHTML);
 }
@@ -1189,31 +1176,25 @@ if (posX != null && posY != null) {
 }
 
 function SetVehiclesAppListEntrys(vehicleArray) {
-var VehiclesAppEntryHTML = "";
+var VehiclesAppEntryHTML = `<div class="apps-card">`;
 vehicleArray = JSON.parse(vehicleArray);
 for (var i in vehicleArray) {
-    VehiclesAppEntryHTML += `<tr><td>${vehicleArray[i].name}</td><td>${vehicleArray[i].plate}</td><td>${vehicleArray[i].lastgarage}</td>`;
+	VehiclesAppEntryHTML += `<div class="app-card"><span>Model: ${vehicleArray[i].name}</span>`;
 
     if (vehicleArray[i].parkstate == true) {
         //Eingeparkt
-        VehiclesAppEntryHTML += "<td>In der Garage</td>";
+		VehiclesAppEntryHTML += `<div class="app-card__subtext">Kennzeichen: ${vehicleArray[i].plate} </br>Garage ${vehicleArray[i].lastgarage} </br>Status In der Garage</div>`;
     } else if (vehicleArray[i].parkstate == false) {
         //Ausgeparkt
-        VehiclesAppEntryHTML += "<td>Unterwegs</td>";
+		VehiclesAppEntryHTML += `<div class="app-card__subtext">Kennzeichen: ${vehicleArray[i].plate} </br>Garage ${vehicleArray[i].lastgarage} </br>Status Unterwegs</div>`;
     }
-
-    if (vehicleArray[i].hasgps == true) {
-        //hat GPS
-        VehiclesAppEntryHTML += `<td><button class='content-button' onclick='VehiclesAppLocateVehicle(${vehicleArray[i].posX}, ${vehicleArray[i].posY});'><i class='fas fa-search'></i></button></td></tr>`;
-    } else if (vehicleArray[i].hasgps == false) {
-        //hat kein GPS
-        VehiclesAppEntryHTML += "<td>Kein GPS vorhanden</td></tr>";
-    }
+	VehiclesAppEntryHTML += `<div class="app-card-buttons"><button class='content-button' onclick='VehiclesAppLocateVehicle(${vehicleArray[i].posX}, ${vehicleArray[i].posY});'><i class='fas fa-search'></i></button></div>`;
+	VehiclesAppEntryHTML += `</div>`;
 }
 
-if (VehiclesAppEntryHTML != "") {
-    $("#VehiclesApp-VehicleList").html(VehiclesAppEntryHTML);
-}
+	VehiclesAppEntryHTML += `</div>`;
+	$("#VehiclesApp-VehicleList").html(VehiclesAppEntryHTML);
+
 }
 
 function SetShopsListEntrys(shopArray) {
@@ -1281,8 +1262,8 @@ function FactionManagerSetRankPaycheck(rankId, htmlElem) {
 }
 
 function SetFactionManagerAppContent(factionId, infoArray, memberArray, rankArray) {
-	var factionManagerMemberHTML = "",
-		factionManagerRankHTML = "",
+	var factionManagerMemberHTML = `<div class="apps-card">`,
+		factionManagerRankHTML = `<div class="apps-card">`,
 		infoArray = JSON.parse(infoArray),
 		memberArray = JSON.parse(memberArray),
 		rankArray = JSON.parse(rankArray);
@@ -1295,28 +1276,32 @@ function SetFactionManagerAppContent(factionId, infoArray, memberArray, rankArra
 	}
 
 	for (var i in memberArray) {
-		factionManagerMemberHTML += `<li><b>Vor- / Nachname</b>${memberArray[i].charName}` +
-			`<b>Tel.</b>${memberArray[i].phone}<b>Rang</b>${memberArray[i].rank}<b>Dienst Nummer</b>${memberArray[i].serviceNumber}` +
-			`<b>Verwaltung</b>` +
-			"<button type='button' onclick='FactionManagerRankAction(`rankup`, " + memberArray[i].charId + ");' class='content-button'><i class='far fa-arrow-alt-circle-up'></i></button>" +
-			"<button type='button' onclick='FactionManagerRankAction(`rankdown`, " + memberArray[i].charId + ");'class='content-button'><i class='far fa-arrow-alt-circle-down'></i></button>" +
-			"<button type='button' onclick='FactionManagerRankAction(`remove`, " + memberArray[i].charId + ");'class='content-button'><i class='fas fa-times'></i></button></li>";
+
+		factionManagerMemberHTML += `<div class="app-card"><span>${memberArray[i].charName}</span>` + 
+			`<div class="app-card__subtext">Tel. ${memberArray[i].phone} </br>Rang ${memberArray[i].rank} </br>Dienst Nummer ${memberArray[i].serviceNumber}` + 
+			`<div class="app-card-buttons"><button type="button" onclick="GangManagerRankAction("rankup", ` + memberArray[i].charId + `);" class="content-button"><i class="far fa-arrow-alt-circle-up"></i></button></div>` + 
+			`<button type="button" onclick="GangManagerRankAction("rankdown", ` + memberArray[i].charId + `);" class="content-button"><i class="far fa-arrow-alt-circle-down"></i></button>` + 
+			`<button type="button" onclick="GangManagerRankAction("remove", ` + memberArray[i].charId + `);" class="content-button"><i class="fas fa-times"></i></button>` + 
+			`</div></div>`;
 	}
 
 	for (var i in rankArray) {
-		factionManagerRankHTML += `<li><b>Rank-ID</b>${rankArray[i].rankId}` +
-			`<b>Rangname</b>${rankArray[i].rankName}` +
-			`<b>Gehalt</b>${rankArray[i].rankCurPaycheck}$<b>Neues Gehalt</b><input type='number' placeholder='Neues Gehalt..' spellcheck='false' class='form__input' onkeypress='return event.charCode >= 48 && event.charCode <= 57'>` +
-			"<button onclick='FactionManagerSetRankPaycheck(" + rankArray[i].rankId + ", this);' type='btn' style='margin-top: 0; padding: .08rem .5rem;' class='content-button'>Setzen</button></li>";
+		factionManagerRankHTML += `<div class="app-card"><span>>Rank-ID ${rankArray[i].rankId}</span>` + 
+								`<div class="app-card__subtext">Rangname ${rankArray[i].rankName}` + 
+								`</br>Gehalt</b>${rankArray[i].rankCurPaycheck}$</br>Neues Gehalt</br><input type='number' placeholder='Neues Gehalt..' spellcheck='false' class='form__input' onkeypress='return event.charCode >= 48 && event.charCode <= 57'></div>` + 
+								`<div class="app-card-buttons"><button onclick='FactionManagerSetRankPaycheck(" + rankArray[i].rankId + ", this);' type='btn' style='margin-top: 0; padding: .08rem .5rem;' class='content-button'>Setzen</button>` + 
+								`</div></div>`;
 	}
 
+	factionManagerMemberHTML += `</div>`;
+	factionManagerRankHTML += `</div>`;
 	$("#FactionManagerApp-Area-ViewAllMembers-List").html(factionManagerMemberHTML);
 	$("#FactionManagerApp-Area-RankManage-List").html(factionManagerRankHTML);
 }
 
 function SetGangManagerAppContent(gangId, infoArray, memberArray, rankArray) {
-	var gangManagerMemberHTML = "",
-		gangManagerRankHTML = "",
+	var gangManagerMemberHTML = `<div class="apps-card">`,
+		gangManagerRankHTML = `<div class="apps-card">`,
 		infoArray = JSON.parse(infoArray),
 		memberArray = JSON.parse(memberArray),
 		rankArray = JSON.parse(rankArray);
@@ -1329,19 +1314,21 @@ function SetGangManagerAppContent(gangId, infoArray, memberArray, rankArray) {
 	}
 
 	for (var i in memberArray) {
-		gangManagerMemberHTML += `<li><b>Vor- / Nachname</b>${memberArray[i].charName}` +
-			`<b>Rang</b>${memberArray[i].rank}` +
-			`<b>Verwaltung</b>` +
-			"<button type='button' onclick='GangManagerRankAction(`rankup`, " + memberArray[i].charId + ");' class='content-button'><i class='far fa-arrow-alt-circle-up'></i></button>" +
-			"<button type='button' onclick='GangManagerRankAction(`rankdown`, " + memberArray[i].charId + ");'class='content-button'><i class='far fa-arrow-alt-circle-down'></i></button>" +
-			"<button type='button' onclick='GangManagerRankAction(`remove`, " + memberArray[i].charId + ");' class='content-button'><i class='fas fa-times'></i></button></li>";
+		gangManagerMemberHTML += `<div class="app-card"><span>${memberArray[i].charName}</span>` + 
+								 `<div class="app-card__subtext">Rang ${memberArray[i].rank}` + 
+								 `<div class="app-card-buttons"><button type="button" onclick="GangManagerRankAction("rankup", ` + memberArray[i].charId + `);" class="content-button"><i class="far fa-arrow-alt-circle-up"></i></button></div>` + 
+								 `<button type="button" onclick="GangManagerRankAction("rankdown", ` + memberArray[i].charId + `);" class="content-button"><i class="far fa-arrow-alt-circle-down"></i></button>` + 
+								 `<button type="button" onclick="GangManagerRankAction("remove", ` + memberArray[i].charId + `);" class="content-button"><i class="fas fa-times"></i></button>` + 
+								 `</div></div>`;
 	}
 
 	for (var i in rankArray) {
-		gangManagerRankHTML += `<li><b>Rank-ID</b>${rankArray[i].rankId}` +
-			`<b>Rangname</b>${rankArray[i].rankName}</li>`;
+		gangManagerRankHTML += `<div class="app-card"><span>>Rank-ID ${rankArray[i].rankId}</span>` + 
+								`<div class="app-card__subtext">Rangname ${rankArray[i].rankName}</div></div>`;
 	}
 
+		gangManagerMemberHTML += `</div>`;
+		gangManagerRankHTML += `</div>`;
 	$("#GangManagerApp-Area-ViewAllMembers-List").html(gangManagerMemberHTML);
 	$("#GangManagerApp-Area-RankManage-List").html(gangManagerRankHTML);
 }
@@ -1365,7 +1352,7 @@ function SetFactionAppContent(dutyMemberCount, dispatchCount) {
 }
 
 // done div names 06.01.2022 - xore
-function SetlspdAppPersonSearchData(charName, gender, birthdate, birthplace, address, mainBankAcc, firstJoinDate) {
+function SetLSPDAppPersonSearchData(charName, gender, birthdate, birthplace, address, mainBankAcc, firstJoinDate) {
 	$("#lspdApp-Area-SearchPerson-charName").html(`${charName}`);
 	$("#fbiApp-Area-SearchPerson-charName").html(`${charName}`);
 	$("#justiceApp-Area-SearchPerson-charName").html(`${charName}`);
@@ -1390,28 +1377,28 @@ function SetlspdAppPersonSearchData(charName, gender, birthdate, birthplace, add
 }
 
 // done div names 06.01.2022 - xore
-function lspdAppSearchPerson() {
+function LSPDAppSearchPerson() {
 	var charName = $("#lspdApp-Area-SearchPerson-InputName").val().replace(/^\s+|\s+$/g, "");
 	if (charName.length <= 0 || charName == "") return;
-	alt.emit("Client:Tablet:lspdAppSearchPerson", charName);
+	alt.emit("Client:Tablet:LSPDAppSearchPerson", charName);
 }
 
 // done div names 06.01.2022 - xore
-function fbiAppSearchPerson() {
+function FBIAppSearchPerson() {
 	var charName = $("#fbiApp-Area-SearchPerson-InputName").val().replace(/^\s+|\s+$/g, "");
 	if (charName.length <= 0 || charName == "") return;
-	alt.emit("Client:Tablet:lspdAppSearchPerson", charName);
+	alt.emit("Client:Tablet:LSPDAppSearchPerson", charName);
 }
 
 // done div names 06.01.2022 - xore
-function justiceAppSearchPerson() {
+function JusticeAppSearchPerson() {
 	var charName = $("#justiceApp-Area-SearchPerson-InputName").val().replace(/^\s+|\s+$/g, "");
 	if (charName.length <= 0 || charName == "") return;
-	alt.emit("Client:Tablet:lspdAppSearchPerson", charName);
+	alt.emit("Client:Tablet:LSPDAppSearchPerson", charName);
 }
 
 // done div names 06.01.2022 - xore
-function SetlspdAppSearchVehiclePlateData(owner, name, manufactor, buydate, trunk, maxfuel, fueltype) {
+function SetLSPDAppSearchVehiclePlateData(owner, name, manufactor, buydate, trunk, maxfuel, fueltype) {
 	$("#lspdApp-Area-SearchVehiclePlate-charName").html(`${owner}`);
 	$("#fbiApp-Area-SearchVehiclePlate-charName").html(`${owner}`);
 	$("#justiceApp-Area-SearchVehiclePlate-charName").html(`${owner}`);
@@ -1436,36 +1423,35 @@ function SetlspdAppSearchVehiclePlateData(owner, name, manufactor, buydate, trun
 }
 
 // done div names 06.01.2022 - xore
-function lspdAppSearchVehiclePlate() {
+function LSPDAppSearchVehiclePlate() {
 	var plate = $("#lspdApp-Area-SearchVehiclePlate-InputPlate").val();
 	if (plate == "" || plate.length <= 0) return;
 	var newPlate = plate.replace(" ", "-");
-	alt.emit("Client:Tablet:lspdAppSearchVehiclePlate", newPlate.toUpperCase());
+	alt.emit("Client:Tablet:LSPDAppSearchVehiclePlate", newPlate.toUpperCase());
 }
 
 // done div names 06.01.2022 - xore
-function fbiAppSearchVehiclePlate() {
+function FBIAppSearchVehiclePlate() {
 	var plate = $("#fbiApp-Area-SearchVehiclePlate-InputPlate").val();
 	if (plate == "" || plate.length <= 0) return;
 	var newPlate = plate.replace(" ", "-");
-	alt.emit("Client:Tablet:lspdAppSearchVehiclePlate", newPlate.toUpperCase());
+	alt.emit("Client:Tablet:LSPDAppSearchVehiclePlate", newPlate.toUpperCase());
 }
 
 // done div names 06.01.2022 - xore
-function justiceAppSearchVehiclePlate() {
+function JusticeAppSearchVehiclePlate() {
 	var plate = $("#justiceApp-Area-SearchVehiclePlate-InputPlate").val();
 	if (plate == "" || plate.length <= 0) return;
 	var newPlate = plate.replace(" ", "-");
-	alt.emit("Client:Tablet:lspdAppSearchVehiclePlate", newPlate.toUpperCase());
+	alt.emit("Client:Tablet:LSPDAppSearchVehiclePlate", newPlate.toUpperCase());
 }
 
+
 // done div names 06.01.2022 - xore
-function SetlspdAppLicenseSearchData(charName, licArray) {
-	var licHTML = "",
+function SetLSPDAppLicenseSearchData(charName, licArray) {
+	var licHTML = `<div class="content-section-title">Person: ${charName}</div>`,
 		licArray = JSON.parse(licArray);
-
-	licHTML += `<div class='container'><p><b>Name der Person:</b>${charName}</p></div>`;
-
+	licHTML += `<div class="apps-card">`;
 	for (var i in licArray) {
 		var hasPkw = "Nicht vorhanden",
 			hasLKW = "Nicht vorhanden",
@@ -1484,15 +1470,15 @@ function SetlspdAppLicenseSearchData(charName, licArray) {
 		if (licArray[i].PassengerTransport) hasPassengerTransport = "Vorhanden";
 		if (licArray[i].weaponlicense) hasWeaponLicense = "Vorhanden";
 
-		licHTML += `<div class='container'><p><b>${licArray[i].pkwName}:</b>${hasPkw}<button type='button' onclick='lspdAppTakeLicense("` + charName + `", "pkw");' class='btn btn-sm btn-danger' style='margin-left: 10px'><i class='fas fa-times'></i></button></p></div>`;
-		licHTML += `<div class='container'><p><b>${licArray[i].lkwName}:</b>${hasLKW}<button type='button' onclick='lspdAppTakeLicense("` + charName + `", "lkw");' class='btn btn-sm btn-danger' style='margin-left: 10px'><i class='fas fa-times'></i></button></p></div>`;
-		licHTML += `<div class='container'><p><b>${licArray[i].bikeName}:</b>${hasBike}<button type='button' onclick='lspdAppTakeLicense("` + charName + `", "bike");' class='btn btn-sm btn-danger' style='margin-left: 10px'><i class='fas fa-times'></i></button></p></div>`;
-		licHTML += `<div class='container'><p><b>${licArray[i].boatName}:</b>${hasBoat}<button type='button' onclick='lspdAppTakeLicense("` + charName + `", "boat");' class='btn btn-sm btn-danger' style='margin-left: 10px'><i class='fas fa-times'></i></button></p></div>`;
-		licHTML += `<div class='container'><p><b>${licArray[i].flyName}:</b>${hasFly}<button type='button' onclick='lspdAppTakeLicense("` + charName + `", "fly");' class='btn btn-sm btn-danger' style='margin-left: 10px'><i class='fas fa-times'></i></button></p></div>`;
-		licHTML += `<div class='container'><p><b>${licArray[i].heliName}:</b>${hasHelicopter}<button type='button' onclick='lspdAppTakeLicense("` + charName + `", "helicopter");' class='btn btn-sm btn-danger' style='margin-left: 10px'><i class='fas fa-times'></i></button></p></div>`;
-		licHTML += `<div class='container'><p><b>${licArray[i].passengerTransportName}:</b>${hasPassengerTransport}<button type='button' onclick='lspdAppTakeLicense("` + charName + `", "passengertransport");' class='btn btn-sm btn-danger' style='margin-left: 10px'><i class='fas fa-times'></i></button></p></div>`;
-		licHTML += `<div class='container'><p><b>Waffenschein:</b>${hasWeaponLicense}<button type='button' onclick='lspdAppTakeLicense("` + charName + `", "weaponlicense");' class='btn btn-sm btn-danger' style='margin-left: 10px'><i class='fas fa-times'></i></button></p></div>`;
+		licHTML += `<div class="app-card"><span>${licArray[i].pkwName}: ${hasPkw}</span><div class="app-card-buttons"><button type='button' onclick='LSPDAppTakeLicense("` + charName + `", "pkw");' class='content-button' style='margin-left: 10px'><i class='fas fa-times'></i></button></div></div>`;
+		licHTML += `<div class="app-card"><span>${licArray[i].lkwName}: ${hasLKW}</span><div class="app-card-buttons"><button type='button' onclick='LSPDAppTakeLicense("` + charName + `", "lkw");' class='content-button' style='margin-left: 10px'><i class='fas fa-times'></i></button></div></div>`;
+		licHTML += `<div class="app-card"><span>${licArray[i].bikeName}: ${hasBike}</span><div class="app-card-buttons"><button type='button' onclick='LSPDAppTakeLicense("` + charName + `", "bike");' class='content-button' style='margin-left: 10px'><i class='fas fa-times'></i></button></div></div>`;
+		licHTML += `<div class="app-card"><span>${licArray[i].boatName}: ${hasBoat}</span><div class="app-card-buttons"><button type='button' onclick='LSPDAppTakeLicense("` + charName + `", "boat");' class='content-button' style='margin-left: 10px'><i class='fas fa-times'></i></button></div></div>`;
+		licHTML += `<div class="app-card"><span>${licArray[i].heliName}: ${hasHelicopter}</span><div class="app-card-buttons"><button type='button' onclick='LSPDAppTakeLicense("` + charName + `", "helicopter");' class='content-button' style='margin-left: 10px'><i class='fas fa-times'></i></button></div></div>`;
+		licHTML += `<div class="app-card"><span>${licArray[i].passengertransportName}: ${hasPassengerTransport}</span><div class="app-card-buttons"><button type='button' onclick='LSPDAppTakeLicense("` + charName + `", "passengertransport");' class='content-button' style='margin-left: 10px'><i class='fas fa-times'></i></button></div></div>`;
+		licHTML += `<div class="app-card"><span>Waffenschein: ${hasWeaponLicense}</span><div class="app-card-buttons"><button type='button' onclick='LSPDAppTakeLicense("` + charName + `", "weaponlicense");' class='content-button' style='margin-left: 10px'><i class='fas fa-times'></i></button></div></div>`;
 	}
+	licHTML += `</div>`;	
 
 	$("#justiceApp-Area-SearchLicense-List").html(licHTML);
 	$("#lspdApp-Area-SearchLicense-List").html(licHTML);
@@ -1500,89 +1486,93 @@ function SetlspdAppLicenseSearchData(charName, licArray) {
 }
 
 // done div names 06.01.2022 - xore
-function SetjusticeAppSearchedBankAccounts(bankArray) {
-	var accHTML = "",
+function SetJusticeAppSearchedBankAccounts(bankArray) {
+	var accHTML = `<div class="apps-card">`,
 		bankArray = JSON.parse(bankArray);
 
 	for (var i in bankArray) {
-		accHTML += `<li class='list-group-item'><p>${bankArray[i].accountNumber} (${bankArray[i].money}$)</p><button onclick='justiceAppViewBankTransactions(${bankArray[i].accountNumber});' type='button' class='btn btn-sm btn-danger'><i class='fas fa-check'></i></button></li>`;
+		accHTML += `<div class="app-card"><span>${bankArray[i].accountNumber} (${bankArray[i].money}$)</span>`;
+		accHTML += `<div class="app-card-buttons"><button onclick='JusticeAppViewBankTransactions(${bankArray[i].accountNumber});' type='button' class='content-button'><i class='fas fa-check'></i></button></div>`;
 	}
-
+	accHTML += `</div>`;
 	$("#justiceApp-Area-ViewBankTransactions-AccountList").html(accHTML);
 	}
 
 	// done div names 06.01.2022 - xore
-	function SetjusticeAppBankTransactions(paperArray) {
-	var paperHTML = "",
+	function SetJusticeAppBankTransactions(paperArray) {
+	var paperHTML = `<div class="apps-card">`,
 		paperArray = JSON.parse(paperArray);
 
 	for (var i in paperArray) {
-		paperHTML += `<li class='list-group-item'><div class='container left'><p><b>Art</b></p><p>${paperArray[i].type}</p></div><div class='container left'><p><b>Von/Zu</b></p><p>${paperArray[i].banknumber} (${paperArray[i].moneyamount})</p></div>` +
-			`<div class='container left'><p><b>Standort</b></p><p>${paperArray[i].location}</p></div><div class='container left text'><p><b>Text</b></p><p>${paperArray[i].text}</p></div></li>`;
+		paperHTML += `<div class="app-card"><span>${paperArray[i].type} Von/Zu ${paperArray[i].banknumber}</span>`;
+		paperHTML += `<div class="app-card__subtext">Betrag ${paperArray[i].moneyamount} </br>Standort${paperArray[i].location}</br>Text<${paperArray[i].text}</div>`;
 	}
-
+	paperHTML += `</div>`;
 	$("#justiceApp-Area-ViewBankTransactions-HistoryList").html(paperHTML);
 }
 
 // done div names 06.01.2022 - xore
-function justiceAppViewBankTransactions(accNumber) {
+function JusticeAppViewBankTransactions(accNumber) {
 	if (accNumber.length <= 0 || accNumber == undefined || accNumber == null) return;
-	alt.emit("Client:Tablet:justiceAppViewBankTransactions", accNumber);
+	alt.emit("Client:Tablet:JusticeAppViewBankTransactions", accNumber);
 }
 
 // done div names 06.01.2022 - xore
-function lspdAppTakeLicense(charName, lic) {
+function LSPDAppTakeLicense(charName, lic) {
 	if (charName == "" || charName.length <= 0 || lic == "" || lic.length <= 0) return;
 	if (lic != "pkw" && lic != "lkw" && lic != "bike" && lic != "boat" && lic != "fly" && lic != "helicopter" && lic != "passengertransport" && lic != "weaponlicense") return;
-	alt.emit("Client:Tablet:lspdAppTakeLicense", charName, lic);
+	alt.emit("Client:Tablet:LSPDAppTakeLicense", charName, lic);
 }
 
 // done div names 06.01.2022 - xore
-function lspdAppSearchLicense() {
+function LSPDAppSearchLicense() {
 	var charName = $("#lspdApp-Area-SearchLicense-InputName").val().replace(/^\s+|\s+$/g, "");
 	if (charName.length <= 0 || charName == "") return;
-	alt.emit("Client:Tablet:lspdAppSearchLicense", charName);
+	alt.emit("Client:Tablet:LSPDAppSearchLicense", charName);
 }
 
 // done div names 06.01.2022 - xore
-function fbiAppSearchLicense() {
+function FBIAppSearchLicense() {
 	var charName = $("#fbiApp-Area-SearchLicense-InputName").val().replace(/^\s+|\s+$/g, "");
 	if (charName.length <= 0 || charName == "") return;
-	alt.emit("Client:Tablet:lspdAppSearchLicense", charName);
+	alt.emit("Client:Tablet:LSPDAppSearchLicense", charName);
 }
 
 // done div names 06.01.2022 - xore
-function justiceAppSearchLicense() {
+function JusticeAppSearchLicense() {
 	var charName = $("#justiceApp-Area-SearchLicense-InputName").val().replace(/^\s+|\s+$/g, "");
 	if (charName.length <= 0 || charName == "") return;
-	alt.emit("Client:Tablet:lspdAppSearchLicense", charName);
+	alt.emit("Client:Tablet:LSPDAppSearchLicense", charName);
 }
 
 // done div names 06.01.2022 - xore
-function justiceAppGiveWeaponLicense() {
+function JusticeAppGiveWeaponLicense() {
 	var charName = $("#justiceApp-Area-GiveWeaponLicense-InputName").val().replace(/^\s+|\s+$/g, "");
 	if (charName.length <= 0 || charName == "") return;
-	alt.emit("Client:Tablet:justiceAppGiveWeaponLicense", charName);
+	alt.emit("Client:Tablet:JusticeAppGiveWeaponLicense", charName);
 	openSubWindow("justiceapp-overview");
 }
 
 // done div names 06.01.2022 - xore
-function justiceAppSearchBankAccounts() {
+function JusticeAppSearchBankAccounts() {
 	var charName = $("#justiceApp-Area-ViewBankTransactions-InputName").val().replace(/^\s+|\s+$/g, "");
 	if (charName.length <= 0) return;
-	alt.emit("Client:Tablet:justiceAppSearchBankAccounts", charName);
+	alt.emit("Client:Tablet:JusticeAppSearchBankAccounts", charName);
 }
 
 // done div names 06.01.2022 - xore
 function SetFactionAppViewFactionVehicleData(vehicleArray) {
-	var viewFactionHTML = "",
+	var viewFactionHTML = `<div class="apps-card">`,
 		vehicleArray = JSON.parse(vehicleArray);
 
 	for (var i in vehicleArray) {
-		viewFactionHTML += `<div class='container'><div class='left'><img src='../utils/img/vehicles/${vehicleArray[i].vehHash}.png'></div><div class='leftmid name'><p class='name'><b>Fahrzeugname</b></p><p>${vehicleArray[i].vehName}</p></div>` +
-			`<div class='leftmid'><p class='name'><b>Kennzeichen</b></p><p>${vehicleArray[i].vehPlate}</p></div><div class='leftmid flex'>` +
-			`<button type='button' onclick='VehiclesAppLocateVehicle(${vehicleArray[i].vehPosX}, ${vehicleArray[i].vehPosY});' class='btn btn-success'><i class='fas fa-search'></i></button></div></div>`;
+		viewFactionHTML += `<div class="app-card">`;
+		viewFactionHTML += `<span><img src='../utils/img/vehicles/${vehicleArray[i].vehHash}.png'>${vehicleArray[i].vehName}</span>`;
+		viewFactionHTML += `<div class="app-card__subtext">Kennzeichen${vehicleArray[i].vehPlate}</div>`;
+		viewFactionHTML += `<div class="app-card-buttons"><button type='button' onclick='VehiclesAppLocateVehicle(${vehicleArray[i].vehPosX}, ${vehicleArray[i].vehPosY});' class='content-button'><i class='fas fa-search'></i></button></div>`;
+		viewFactionHTML += `</div></div>`;
 	}
+	viewFactionHTML += `</div>`;
 
 	$("#justiceApp-Area-ViewFactionVehicles-List").html(viewFactionHTML);
 	$("#lspdApp-Area-ViewFactionVehicles-List").html(viewFactionHTML);
@@ -1614,25 +1604,36 @@ function SendDispatchToFaction(factionId) {
 
 // done div names 06.01.2022 - xore
 function setFactionDispatches(factionId, dispatchArray) {
-	var dispatchHTML = "",
+	var dispatchHTML = `<div class="apps-card">`,
 		dispatchArray = JSON.parse(dispatchArray);
 
 	for (var i in dispatchArray) {
 		if (dispatchArray[i].senderCharId == 0) {
-			dispatchHTML += `<div class='container'><div class='left'><p class='title'>Absender</p><p>${dispatchArray[i].altname}<p>${dispatchArray[i].Date} - ${dispatchArray[i].Time}</p></p></div><div class='left leftmid'><p class='title'>Nachricht</p><p>${dispatchArray[i].message}</p></div>` +
-			`<div class='left'><button type='button' onclick='VehiclesAppLocateVehicle(${dispatchArray[i].posX}, ${dispatchArray[i].posY});' class='btn btn-success'><i class='fas fa-search'></i></button><button type='button' onclick='DeleteDispatch(${dispatchArray[i].factionId}, ${dispatchArray[i].senderCharId});' class='btn btn-danger'><i class='fas fa-times'></i></button></div></div>`;
+			dispatchHTML += `<div class="app-card">`;
+			dispatchHTML += `<span> Absender ${dispatchArray[i].altname} ${dispatchArray[i].Date} - ${dispatchArray[i].Time}</span>`;
+			dispatchHTML += `<div class="app-card__subtext">Nachricht${dispatchArray[i].message}</div>`;
+			dispatchHTML += `<div class="app-card-buttons">`;
+			dispatchHTML += `<button type='button' onclick='VehiclesAppLocateVehicle(${dispatchArray[i].posX}, ${dispatchArray[i].posY});' class='content-button'><i class='fas fa-search'></i></button><button type='button' onclick='DeleteDispatch(${dispatchArray[i].factionId}, ${dispatchArray[i].senderCharId});' class='btn btn-danger'><i class='fas fa-times'></i></button>`;
+			dispatchHTML += `</div>`;
+			dispatchHTML += `</div>`;
 		} else {
-			dispatchHTML += `<div class='container'><div class='left'><p class='title'>Absender</p><p>${dispatchArray[i].senderName}<p>${dispatchArray[i].Date} - ${dispatchArray[i].Time}</p></p></div><div class='left leftmid'><p class='title'>Nachricht</p><p>${dispatchArray[i].message}</p></div>` +
-			`<div class='left'><button type='button' onclick='VehiclesAppLocateVehicle(${dispatchArray[i].posX}, ${dispatchArray[i].posY});' class='btn btn-success'><i class='fas fa-search'></i></button><button type='button' onclick='DeleteDispatch(${dispatchArray[i].factionId}, ${dispatchArray[i].senderCharId});' class='btn btn-danger'><i class='fas fa-times'></i></button></div></div>`;
+			dispatchHTML += `<div class="app-card">`;
+			dispatchHTML += `<span> Absender ${dispatchArray[i].senderName} ${dispatchArray[i].Date} - ${dispatchArray[i].Time}</span>`;
+			dispatchHTML += `<div class="app-card__subtext">Nachricht${dispatchArray[i].message}</div>`;
+			dispatchHTML += `<div class="app-card-buttons">`;
+			dispatchHTML += `<button type='button' onclick='VehiclesAppLocateVehicle(${dispatchArray[i].posX}, ${dispatchArray[i].posY});' class='content-button'><i class='fas fa-search'></i></button><button type='button' onclick='DeleteDispatch(${dispatchArray[i].factionId}, ${dispatchArray[i].senderCharId});' class='btn btn-danger'><i class='fas fa-times'></i></button>`;
+			dispatchHTML += `</div>`;
+			dispatchHTML += `</div>`;
 		}
 	}
+	dispatchHTML += `</div>`;
 
 	if (factionId == 2) {
 		$("#lspdApp-Area-ViewDispatches-List").html(dispatchHTML);
 	} else if (factionId == 3) {
 		$("#lsfdApp-Area-ViewDispatches-List").html(dispatchHTML);
 	} else if (factionId == 4) {
-		$("#lspdaclsApp-Area-ViewDispatches-List").html(dispatchHTML);
+		$("#aclsApp-Area-ViewDispatches-List").html(dispatchHTML);
 	} else if (factionId == 12) {
 		$("#fbiApp-Area-ViewDispatches-List").html(dispatchHTML);
 	} else if (factionId == 16) {
@@ -1643,7 +1644,7 @@ function setFactionDispatches(factionId, dispatchArray) {
 }
 
 // done div names 06.01.2022 - xore
-function DeleteDispatch(factionId, senderId) {
+	function DeleteDispatch(factionId, senderId) {
 	if (factionId <= 0 || senderId < 0) return;
 	alt.emit("Client:Tablet:DeleteFactionDispatch", factionId, senderId);
 	}
@@ -1679,186 +1680,195 @@ function DeleteDispatch(factionId, senderId) {
 			}
 			break;
 	}
-}
-
-function SetInternetAppVehicleStoreContent(vehstoreArray) {
-	var VehStoreHTML = "";
-	vehstoreArray = JSON.parse(vehstoreArray);
-
-	for (var i in vehstoreArray) {
-		VehStoreHTML += `<li>${vehstoreArray[i].name}<img src='../utils/img/vehicles/${vehstoreArray[i].hash}.png'> ${vehstoreArray[i].manufactor} ${vehstoreArray[i].fueltype} ${vehstoreArray[i].fuellimit} Liter ${vehstoreArray[i].storage}kg ${vehstoreArray[i].seats} Sitzplätze` +
-			`<button type='button' class='content-button' onclick='VehStoreBuyVehicleOnline(${vehstoreArray[i].hash}, ${vehstoreArray[i].shopId});'>Kaufen (${vehstoreArray[i].price}$)</button></li>`;
 	}
-	$("#VehicleStore-List").html(VehStoreHTML);
-}
 
-function playDispatchAudio(path) {
-	dispatchAudio = new Audio(path);
-	dispatchAudio.play();
-}
+	function SetInternetAppVehicleStoreContent(vehstoreArray) {
+		var VehStoreHTML = `<div class="apps-card">`;
+		vehstoreArray = JSON.parse(vehstoreArray);
 
-function stopDispatchAudio() {
-	if (dispatchAudio != null) {
-		dispatchAudio.pause();
-		dispatchAudio = null;
-	} else {
-		return false;
+		for (var i in vehstoreArray) {
+			VehStoreHTML += `<div class="app-card">`;
+			VehStoreHTML += `<span>`;
+			VehStoreHTML += `<img src='../utils/img/vehicles/${vehstoreArray[i].hash}.png'>`;
+			VehStoreHTML += `${vehstoreArray[i].name} ${vehstoreArray[i].manufactor}`;
+			VehStoreHTML += `</span>`;
+			VehStoreHTML += `<div class="app-card__subtext">${vehstoreArray[i].fueltype} </br>${vehstoreArray[i].fuellimit} Liter </br>${vehstoreArray[i].storage}kg </br>${vehstoreArray[i].seats} Sitzplätze</div>`;
+			VehStoreHTML += `<div class="app-card-buttons">`;
+			VehStoreHTML += `<button type='button' class='content-button' onclick='VehStoreBuyVehicleOnline(${vehstoreArray[i].hash}, ${vehstoreArray[i].shopId});'>Kaufen (${vehstoreArray[i].price}$)</button>`;
+			VehStoreHTML += `</div>`;
+			VehStoreHTML += `</div>`;
+		}
+		VehStoreHTML += `</div>`;
+		$("#VehicleStore-List").html(VehStoreHTML);
 	}
-}
 
-var acc = document.getElementsByClassName("accordion");
-var i;
-var open = null;
+	function playDispatchAudio(path) {
+		dispatchAudio = new Audio(path);
+		dispatchAudio.play();
+	}
 
-for (i = 0; i < acc.length; i++) {
-acc[i].addEventListener("click", function() {
-    if (open == this) {
-        open.classList.toggle("active");
-        open = null;
-    } else {
-        if (open != null) {
-            open.classList.toggle("active");
-        }
-        this.classList.toggle("active");
-        open = this;
-    }
-});
-}
-
-
-
-
-function SetInternetAppAppStoreContent(appArray) {
-		var appArray = JSON.parse(appArray);
-
-	for (var i in appArray) {
-		if (appArray[i].factionmanager == true) {
-			$("#factionmanagementapp").show();
-		}
-
-		if (appArray[i].gangmanager == true) {
-			$("#gangmangementapp").show();
-		}
-
-		if (appArray[i].lspdapp == true) {
-			$("#lspdapp").show();
-		}
-
-		if (appArray[i].lsfdapp == true) {
-			$("#lsfdapp").show();
-		}
-
-		if (appArray[i].aclsapp == true) {
-			$("#aclsapp").show();
-		}
-
-		if (appArray[i].fbiapp == true) {
-			$("#fbiapp").show();
-		}
-
-		if (appArray[i].bennysapp == true) {
-			$("#bennysapp").show();
-		}
-
-		if (appArray[i].taxiapp == true) {
-			$("#taxiapp").show();
-		}
-
-		if (appArray[i].justiceapp == true) {
-			$("#justiceapp").show();
+	function stopDispatchAudio() {
+		if (dispatchAudio != null) {
+			dispatchAudio.pause();
+			dispatchAudio = null;
+		} else {
+			return false;
 		}
 	}
-}
+
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+	var open = null;
+
+	for (i = 0; i < acc.length; i++) {
+	acc[i].addEventListener("click", function() {
+		if (open == this) {
+			open.classList.toggle("active");
+			open = null;
+		} else {
+			if (open != null) {
+				open.classList.toggle("active");
+			}
+			this.classList.toggle("active");
+			open = this;
+		}
+	});
+	}
+
+
+
+
+	function SetInternetAppAppStoreContent(appArray) {
+			var appArray = JSON.parse(appArray);
+
+		for (var i in appArray) {
+			if (appArray[i].factionmanager == true) {
+				$("#factionmanagementapp").show();
+			}
+
+			if (appArray[i].gangmanager == true) {
+				$("#gangmangementapp").show();
+			}
+
+			if (appArray[i].lspdapp == true) {
+				$("#lspdapp").show();
+			}
+
+			if (appArray[i].lsfdapp == true) {
+				$("#lsfdapp").show();
+			}
+
+			if (appArray[i].aclsapp == true) {
+				$("#aclsapp").show();
+			}
+
+			if (appArray[i].fbiapp == true) {
+				$("#fbiapp").show();
+			}
+
+			if (appArray[i].bennysapp == true) {
+				$("#bennysapp").show();
+			}
+
+			if (appArray[i].taxiapp == true) {
+				$("#taxiapp").show();
+			}
+
+			if (appArray[i].justiceapp == true) {
+				$("#justiceapp").show();
+			}
+		}
+	}
 
 //#endregion
 
 
 //#region altv events
-//Alt:on Events
-alt.on("CEF:Tablet:openCEF", () => {
-	//showArea("homescreen");
-	$(".TabletBG").hide();
-	$(".TabletBG").fadeIn(1000);
-});
+	//Alt:on Events
+	alt.on("CEF:Tablet:openCEF", () => {
+		//showArea("homescreen");
+		$(".TabletBG").hide();
+		$(".TabletBG").fadeIn(1000);
+	});
 
-alt.on("CEF:Tablet:showTabletArea", (area) => {
-	showArea(area);
-});
+	alt.on("CEF:Tablet:showTabletArea", (area) => {
+		showArea(area);
+	});
 
-alt.on("CEF:Tablet:SetEventsAppEventEntrys", (eventsArray) => {
-	SetEventsAppEventEntrys(eventsArray);
-});
+	alt.on("CEF:Tablet:SetEventsAppEventEntrys", (eventsArray) => {
+		SetEventsAppEventEntrys(eventsArray);
+	});
 
-alt.on("CEF:Tablet:SetBankingAppContent", (bankArray, historieArray) => {
-	SetBankingAppContent(bankArray, historieArray);
-});
+	alt.on("CEF:Tablet:SetBankingAppContent", (bankArray, historieArray) => {
+		SetBankingAppContent(bankArray, historieArray);
+	});
 
-alt.on("CEF:Tablet:SetVehiclesAppContent", (vehicleArray) => {
-	SetVehiclesAppListEntrys(vehicleArray);
-});
+	alt.on("CEF:Tablet:SetVehiclesAppContent", (vehicleArray) => {
+		SetVehiclesAppListEntrys(vehicleArray);
+	});
 
-alt.on("CEF:Tablet:SetShopsContent", (shopArray) => {
-	SetShopsListEntrys(shopArray);
-});
+	alt.on("CEF:Tablet:SetShopsContent", (shopArray) => {
+		SetShopsListEntrys(shopArray);
+	});
 
-alt.on("CEF:Tablet:SetInternetAppAppStoreContent", (appArray) => {
-	SetInternetAppAppStoreContent(appArray);
-});
+	alt.on("CEF:Tablet:SetInternetAppAppStoreContent", (appArray) => {
+		SetInternetAppAppStoreContent(appArray);
+	});
 
-alt.on("CEF:Tablet:SetVehicleStoreAppContent", (vehStoreArray) => {
-	SetInternetAppVehicleStoreContent(vehStoreArray);
-});
+	alt.on("CEF:Tablet:SetVehicleStoreAppContent", (vehStoreArray) => {
+		SetInternetAppVehicleStoreContent(vehStoreArray);
+	});
 
 
-alt.on("CEF:Tablet:SetFactionManagerAppContent", (factionId, infoArray, memberArray, rankArray) => {
-	SetFactionManagerAppContent(factionId, infoArray, memberArray, rankArray);
-});
+	alt.on("CEF:Tablet:SetFactionManagerAppContent", (factionId, infoArray, memberArray, rankArray) => {
+		SetFactionManagerAppContent(factionId, infoArray, memberArray, rankArray);
+	});
 
-alt.on("CEF:Tablet:SetGangManagerAppContent", (gangId, infoArray, memberArray, rankArray) => {
-	SetGangManagerAppContent(gangId, infoArray, memberArray, rankArray);
-});
+	alt.on("CEF:Tablet:SetGangManagerAppContent", (gangId, infoArray, memberArray, rankArray) => {
+		SetGangManagerAppContent(gangId, infoArray, memberArray, rankArray);
+	});
 
-alt.on("CEF:Tablet:SetFactionAppContent", (dutyMemberCount, dispatchCount, vehicleArray) => {
-	SetFactionAppContent(dutyMemberCount, dispatchCount);
-	SetFactionAppViewFactionVehicleData(vehicleArray);
-});
+	alt.on("CEF:Tablet:SetFactionAppContent", (dutyMemberCount, dispatchCount, vehicleArray) => {
+		SetFactionAppContent(dutyMemberCount, dispatchCount);
+		SetFactionAppViewFactionVehicleData(vehicleArray);
+	});
 
-alt.on("CEF:Tablet:SetlspdAppPersonSearchData", (charName, gender, birthdate, birthplace, address, mainBankAcc, firstJoinDate) => {
-	SetlspdAppPersonSearchData(charName, gender, birthdate, birthplace, address, mainBankAcc, firstJoinDate);
-});
+	alt.on("CEF:Tablet:SetLSPDAppPersonSearchData", (charName, gender, birthdate, birthplace, address, mainBankAcc, firstJoinDate) => {
+		SetLSPDAppPersonSearchData(charName, gender, birthdate, birthplace, address, mainBankAcc, firstJoinDate);
+	});
 
-alt.on("CEF:Tablet:SetlspdAppSearchVehiclePlateData", (owner, name, manufactor, buydate, trunk, maxfuel, tax, fueltype) => {
-	SetlspdAppSearchVehiclePlateData(owner, name, manufactor, buydate, trunk, maxfuel, tax, fueltype);
-});
+	alt.on("CEF:Tablet:SetLSPDAppSearchVehiclePlateData", (owner, name, manufactor, buydate, trunk, maxfuel, tax, fueltype) => {
+		SetLSPDAppSearchVehiclePlateData(owner, name, manufactor, buydate, trunk, maxfuel, tax, fueltype);
+	});
 
-alt.on("CEF:Tablet:SetlspdAppLicenseSearchData", (charName, licArray) => {
-	SetlspdAppLicenseSearchData(charName, licArray);
-});
+	alt.on("CEF:Tablet:SetLSPDAppLicenseSearchData", (charName, licArray) => {
+		SetLSPDAppLicenseSearchData(charName, licArray);
+	});
 
-alt.on("CEF:Tablet:SetjusticeAppSearchedBankAccounts", (array) => {
-	SetjusticeAppSearchedBankAccounts(array);
-});
+	alt.on("CEF:Tablet:SetJusticeAppSearchedBankAccounts", (array) => {
+		SetJusticeAppSearchedBankAccounts(array);
+	});
 
-alt.on("CEF:Tablet:SetjusticeAppBankTransactions", (array) => {
-	SetjusticeAppBankTransactions(array);
-});
+	alt.on("CEF:Tablet:SetJusticeAppBankTransactions", (array) => {
+		SetJusticeAppBankTransactions(array);
+	});
 
-alt.on("CEF:Tablet:SetTutorialAppContent", (array) => {
-	SetTutorialAppContent(array);
-});
+	alt.on("CEF:Tablet:SetTutorialAppContent", (array) => {
+		SetTutorialAppContent(array);
+	});
 
-alt.on("CEF:Tablet:SetDispatches", (factionid, dispatchArray) => {
-	setFactionDispatches(factionid, dispatchArray);
-});
+	alt.on("CEF:Tablet:SetDispatches", (factionid, dispatchArray) => {
+		setFactionDispatches(factionid, dispatchArray);
+	});
 
-alt.on("CEF:Tablet:SetShops", () => {
-	setShopsList();
-});
+	alt.on("CEF:Tablet:SetShops", () => {
+		setShopsList();
+	});
 
-alt.on("CEF:Tablet:playDispatchSound", (filePath) => {
-	playDispatchAudio(filePath);
-	setTimeout(() => {
-		stopDispatchAudio();
-	}, 10000);
-})
+	alt.on("CEF:Tablet:playDispatchSound", (filePath) => {
+		playDispatchAudio(filePath);
+		setTimeout(() => {
+			stopDispatchAudio();
+		}, 10000);
+	})
 //#endregion

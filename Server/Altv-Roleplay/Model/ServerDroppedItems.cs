@@ -1,9 +1,14 @@
-﻿using AltV.Net.Data;
+﻿using AltV.Net;
+using AltV.Net.Async;
+using AltV.Net.Data;
 using Altv_Roleplay.Factories;
 using Altv_Roleplay.Handler;
 using Altv_Roleplay.models;
+using Altv_Roleplay.Utils;
 using System;
 using System.Collections.Generic;
+using System.Text;
+using System.Timers;
 
 namespace Altv_Roleplay.Model
 {
@@ -129,7 +134,7 @@ namespace Altv_Roleplay.Model
                 CharactersInventory.AddCharacterItem(charId, droppedItem.itemName, droppedItem.itemAmount, "schluessel");
                 return;
             }
-            else if (invWeight + totalWeight <= 5f)
+            else if (invWeight + totalWeight <= 15f)
             {
                 RemoveItem(droppedItem);
                 HUDHandler.SendNotification(player, 1, 2500, $"Du hast {droppedItem.itemAmount}x {droppedItem.itemName} aufgehoben.");
@@ -146,7 +151,7 @@ namespace Altv_Roleplay.Model
             }
 
 
-            canTakeInv = (int)((5f - invWeight) / singleWeight);
+            canTakeInv = (int)((15f - invWeight) / singleWeight);
             canTakeBack = (int)((backpackSize - backpackWeight) / singleWeight);
             int summed = 0;
             bool invTrue = false;

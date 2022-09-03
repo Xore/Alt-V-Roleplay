@@ -3,6 +3,8 @@ using Altv_Roleplay.models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Altv_Roleplay.Model
 {
@@ -46,7 +48,7 @@ namespace Altv_Roleplay.Model
             try
             {
                 var jobEntry = CharactersMinijobsData_.FirstOrDefault(x => x.charId == charId && x.jobName == job);
-                if (jobEntry != null)
+                if(jobEntry != null)
                 {
                     return jobEntry.exp;
                 }
@@ -64,7 +66,7 @@ namespace Altv_Roleplay.Model
             {
                 if (charId <= 0 || job == "") return;
                 var jobEntry = CharactersMinijobsData_.FirstOrDefault(x => x.charId == charId && x.jobName == job);
-                if (jobEntry != null)
+                if(jobEntry != null)
                 {
                     jobEntry.exp += amount;
                     using (gtaContext db = new gtaContext())

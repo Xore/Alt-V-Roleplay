@@ -13,10 +13,8 @@ namespace Altv_Roleplay.models
         public float posX { get; set; }
         public float posY { get; set; }
         public float posZ { get; set; }
-        public string mainDoor { get; set; }
-        public string secondDoor { get; set; }
+        public string hash { get; set; }
         public bool state { get; set; } //0 Zu | 1 = offens
-        public bool pickable { get; set; }
         public string doorKey { get; set; }
         public string doorKey2 { get; set; }
         public string type { get; set; } //Door | Gate

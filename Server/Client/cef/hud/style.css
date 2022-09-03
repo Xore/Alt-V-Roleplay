@@ -1,0 +1,5197 @@
+@font-face {
+    font-family: 'PEL';
+    src: url('../utils/fonts/Poppins-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PM';
+    src: url('../utils/fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PT';
+    src: url('../utils/fonts/Poppins-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSR';
+    src: url('../utils/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSL';
+    src: url('../utils/fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DB';
+    src: url('../utils/fonts/db.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSSB';
+    src: url('../utils/fonts/OpenSans-Semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BNT';
+    src: url('../utils/fonts/bnt.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "PricedownBL";
+    src: url('../utils/fonts/pricedownbl.ttf') format('truetype');
+}
+
+@keyframes flickerAnimationn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 0.95;
+        transform: translateX(0%);
+    }
+}
+
+h4 {
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    color: rgba(255, 255, 255, 0.80);
+    outline: none;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+body {
+    -webkit-user-select: none;
+    user-select: none;
+    background: none;
+    /*background: url(../utils/img/bg2.jpg);*/
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+/* MONEYHUD */
+
+#moneybar {
+    width: 130px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.493);
+    position: absolute;
+    right: 10px;
+    top: 169.5px;
+    font-size: 17px;
+    font-family: PEL;
+    color: #fff;
+    text-align: center;
+    padding-left: 30px;
+    padding-top: 3px;
+}
+
+#moneyicon {
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.219);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 110px;
+    top: 169.5px;
+    z-index: 3;
+    text-align: center;
+    padding-top: 7px;
+}
+
+#thirstbar {
+    width: 130px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.493);
+    position: absolute;
+    padding: 0.0025px;
+    right: 10px;
+    top: 201.5px;
+}
+
+#thirsticon {
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.219);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 110px;
+    top: 201.5px;
+    z-index: 3;
+    text-align: center;
+    padding-top: 7px;
+}
+
+#thirstline {
+    width: 82px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.486);
+    position: absolute;
+    right: 19.7px;
+    top: 212px;
+    z-index: 1;
+}
+
+#thirstsubline {
+    width: 50%;
+    height: 8px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 2;
+}
+
+#foodbar {
+    width: 130px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.493);
+    position: absolute;
+    padding: 0.0025px;
+    right: 10px;
+    top: 233.5px;
+}
+
+#foodicon {
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.219);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 110px;
+    top: 233.5px;
+    z-index: 3;
+    text-align: center;
+    padding-top: 7px;
+}
+
+#foodline {
+    width: 82px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.486);
+    position: absolute;
+    right: 19.7px;
+    top: 244.5px;
+    z-index: 1;
+}
+
+#foodsubline {
+    width: 50%;
+    height: 8px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 2;
+}
+
+#micbar {
+    width: 130px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.493);
+    position: absolute;
+    padding: 0.0025px;
+    right: 10px;
+    top: 106px;
+}
+
+#micicon {
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.219);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 110px;
+    top: 105.5px;
+    z-index: 3;
+    text-align: center;
+    padding-top: 7px;
+}
+
+#micline {
+    width: 82px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.486);
+    position: absolute;
+    right: 19.7px;
+    top: 117px;
+    z-index: 1;
+}
+
+#micsubline {
+    width: 50%;
+    height: 8px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 2;
+}
+
+#healthbar {
+    width: 130px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.493);
+    position: absolute;
+    padding: 0.0025px;
+    right: 10px;
+    top: 138px;
+}
+
+#healthicon {
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.219);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 110px;
+    top: 137.5px;
+    z-index: 3;
+    text-align: center;
+    padding-top: 7px;
+}
+
+#healthline {
+    width: 82px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.486);
+    position: absolute;
+    right: 19.7px;
+    top: 149px;
+    z-index: 1;
+}
+
+#healthsubline {
+    width: 50%;
+    max-width: 100%;
+    height: 8px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 2;
+}
+
+
+/* VEH HUD */
+
+p#locationtext {
+    opacity: 0;
+}
+
+p#locationtext {
+    display: none;
+}
+
+p#locationtext {
+    bottom: 6px;
+    position: absolute;
+    color: #d2d2d2;
+    left: 310px;
+    text-shadow: 2px 2px 4px black;
+    font-family: PEL;
+    font-weight: bold;
+    width: auto;
+}
+
+#vehud {
+    visibility: hidden;
+}
+
+#fuelbar {
+    width: 130px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.493);
+    position: absolute;
+    right: 10px;
+    top: 271.5px;
+    font-size: 15px;
+    font-family: PEL;
+    color: #fff;
+    text-align: center;
+    padding-left: 42px;
+    padding-top: 4px;
+}
+
+#fuelicon {
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.219);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 110px;
+    top: 271.5px;
+    z-index: 3;
+    text-align: center;
+    padding-top: 7px;
+}
+
+#kmhbar {
+    width: 130px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.493);
+    position: absolute;
+    right: 10px;
+    top: 303.5px;
+    font-size: 15px;
+    font-family: PEL;
+    color: #fff;
+    text-align: center;
+    padding-left: 30px;
+}
+
+.kmhtext {
+    position: absolute;
+    right: 13px;
+    font-size: 15px;
+    top: 307px;
+    font-family: PEL;
+    color: #fff;
+    text-align: center;
+    padding-left: 45px;
+}
+
+#kmhicon {
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.219);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 110px;
+    top: 304px;
+    z-index: 3;
+    text-align: center;
+    padding-top: 7px;
+}
+
+#kmhline {
+    width: 120px;
+    height: 20px;
+    position: absolute;
+    right: 19.7px;
+    top: 62.5px;
+    z-index: 1;
+}
+
+#kmhsubline {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    font-size: 15px;
+    font-family: PEL;
+    color: #fff;
+    right: 1px;
+    z-index: 2;
+}
+
+#kmbar {
+    width: 130px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.493);
+    position: absolute;
+    right: 10px;
+    top: 335.5px;
+    font-size: 15px;
+    font-family: PEL;
+    color: #fff;
+    text-align: center;
+    padding-left: 37px;
+    padding-top: 4px;
+}
+
+#kmicon {
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.219);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 110px;
+    top: 336px;
+    z-index: 3;
+    text-align: center;
+    padding-top: 7px;
+}
+
+#kmline {
+    width: 120px;
+    height: 20px;
+    position: absolute;
+    right: 19.7px;
+    top: 62.5px;
+    z-index: 1;
+}
+
+#kmsubline {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    font-size: 15px;
+    font-family: PEL;
+    color: #fff;
+    right: 1px;
+    z-index: 2;
+}
+
+
+/* VEH HUD */
+
+img#waterMarkImage,
+div#barberCEFBox,
+div#healthLowBorder,
+div#GivePlayerContractCEFBox,
+div#RecievePlayerContractCEFBox,
+div#VehicleTrunkCEFBox,
+div#PlayerSearchInventoryCEFBox,
+div#Minijob-BusDriverCEFBox,
+div#Deathscreen-Box,
+div#VehicleTuningMainMenuBox,
+div#TattooShopHUD,
+div#RotationHUD {
+    opacity: 0;
+}
+
+div#bankFactionATMForm {
+    opacity: 0;
+}
+
+div#GivePlayerLicenseCEFBox {
+    opacity: 0;
+}
+
+div#HouseManageCEFBox {
+    opacity: 0;
+}
+
+div#TownhallHouseSelectorBox {
+    opacity: 0;
+}
+
+div#HouseEntranceCEFBox {
+    opacity: 0;
+}
+
+div#HotelManageCEFBox {
+    opacity: 0;
+}
+
+div#FactionStorageCEFBox {
+    opacity: 0;
+}
+
+div#RecievePlayerBillCEFBox {
+    opacity: 0;
+}
+
+div#GivePlayerBillCEFBox {
+    opacity: 0;
+}
+
+div#VehicleFuelstationCEFBox {
+    opacity: 0;
+}
+
+div#identityCardApplyForm {
+    opacity: 0;
+}
+
+div#VehicleLicensingCEFBox {
+    opacity: 0;
+}
+
+div#ProcessingBox {
+    opacity: 0;
+}
+
+div#VehicleShopCEFBox {
+    opacity: 0;
+}
+
+div#VehicleKeyCEFBox {
+    opacity: 0;
+}
+
+div#VehicleSellCEFBox {
+    opacity: 0;
+}
+
+div#bankAccountManageForm {
+    opacity: 0;
+}
+
+div#changeVehOwnerHUD {
+    opacity: 0;
+}
+
+div#changeVehOwnerHUD {
+    display: none;
+}
+
+div#bankATMbox,
+div#bankATMbox-WithDrawArea,
+div#bankATMbox-DepositArea,
+div#bankATMbox-ViewTransactionArea,
+div#bankATMbox-BalanceArea,
+div#bankATMbox-PinArea,
+div#bankATMbox-OverviewArea {
+    opacity: 0;
+}
+
+div#bankATMbox,
+div#bankATMbox-WithDrawArea,
+div#bankATMbox-DepositArea,
+div#bankATMbox-ViewTransactionArea,
+div#bankATMbox-BalanceArea,
+div#bankATMbox-PinArea,
+div#bankATMbox-OverviewArea {
+    display: none;
+}
+
+div#barberCEFBox,
+div#healthLowBorder,
+div#GivePlayerContractCEFBox,
+div#RecievePlayerContractCEFBox,
+div#VehicleTrunkCEFBox,
+div#PlayerSearchInventoryCEFBox,
+div#Minijob-BusDriverCEFBox,
+div#Deathscreen-Box,
+div#VehicleTuningMainMenuBox,
+div#VehicleTuningMenuColorSelection,
+div#TattooShopHUD,
+div#RotationHUD {
+    display: none;
+}
+
+div#bankFactionATMForm {
+    display: none;
+}
+
+div#GivePlayerLicenseCEFBox {
+    display: none;
+}
+
+div#HouseManageCEFBox {
+    display: none;
+}
+
+div#TownhallHouseSelectorBox {
+    display: none;
+}
+
+div#HouseEntranceCEFBox {
+    display: none;
+}
+
+div#HotelManageCEFBox {
+    display: none;
+}
+
+div#FactionStorageCEFBox {
+    display: none;
+}
+
+div#RecievePlayerBillCEFBox {
+    display: none;
+}
+
+div#GivePlayerBillCEFBox {
+    display: none;
+}
+
+div#VehicleFuelstationCEFBox {
+    display: none;
+}
+
+div#identityCardApplyForm {
+    display: none;
+}
+
+div#VehicleLicensingCEFBox {
+    display: none;
+}
+
+div#ProcessingBox {
+    display: none;
+}
+
+div#VehicleShopCEFBox {
+    display: none;
+}
+
+div#VehicleKeyCEFBox {
+    display: none;
+}
+
+div#VehicleSellCEFBox {
+    display: none;
+}
+
+div#bankAccountManageForm {
+    display: none;
+}
+
+div#ClothesShopCEFBox {
+    opacity: 0;
+}
+
+div#ClothesShopCEFBox {
+    display: none;
+}
+
+div#ClothesShopCEFBox {
+    width: 450px;
+    top: 20%;
+    left: 50px;
+    padding: 20px;
+    position: absolute;
+    background: #171616;
+    text-align: center;
+    box-shadow: 1px 4px 22px rgba(0, 0, 0, 0.8);
+    max-height: 560px;
+    overflow-y: auto;
+}
+
+div#ClothesShopCEFBox>p.title {
+    font-size: 18px;
+    font-family: PEL;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background-color: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2px;
+}
+
+div#ClothesShopCEFBox>hr,
+div#ClothesShopCEFBox>div.container>hr {
+    border: 1px solid transparent;
+    background-color: white;
+    border-image-slice: 1;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    opacity: .75;
+}
+
+div#ClothesShopCEFBox>div.container>hr {
+    border-image: linear-gradient(to right, #7d7d7d, #545454);
+    border-image-slice: 1;
+}
+
+div#ClothesShopCEFBox>div.container>p.title {
+    color: #d2d2d2;
+    font-family: PEL;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-bottom: 0rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+div#ClothesShopCEFBox>div.container>p.name {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+div#ClothesShopCEFBox>div.container>img {
+    float: left;
+    width: 46px;
+    position: absolute;
+    left: 35px;
+    margin-top: 28px;
+}
+
+div#ClothesShopCEFBox>div.container>button.clothbtn {
+    background-color: rgb(117, 117, 117);
+    border: none;
+    color: #d2d2d2;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    font-size: 20px;
+    width: 80px;
+    transition: all 0.5s ease-in-out;
+    filter: grayscale(1);
+    opacity: .5;
+}
+
+div#ClothesShopCEFBox>div.container>button.buybtn {
+    background-image: linear-gradient(to right, #2b7538, #06523b);
+    border: none;
+    color: #d2d2d2;
+    padding: 6px 12px;
+    filter: grayscale(1);
+    opacity: .5;
+    cursor: pointer;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    border-radius: 2px;
+    width: 60px;
+    transition: all 0.5s ease-in-out;
+}
+
+div#ClothesShopCEFBox>div.container>button.clothbtn:hover,
+div#ClothesShopCEFBox>div.container>button.buybtn:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+div#TattooShopHUD>span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background: #ffffff75;
+    color: #ffffff;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    opacity: .6;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+}
+
+div#TattooShopHUD>span:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+div#TattooShopHUD>p.title {
+    font-family: BNT;
+    color: #d2d2d2;
+    font-size: 24px;
+    background: #212121;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 4px;
+    border-bottom: 1px solid #353535;
+}
+
+div#TattooShopHUD {
+    width: 250px;
+    position: absolute;
+    background: #000000e5;
+    text-align: center;
+    right: 140px;
+    top: 100px;
+    height: 600px;
+}
+
+ul#TattooShopHUD-TattooList {
+    overflow: auto;
+}
+
+ul#TattooShopHUD-TattooList>li>button {
+    font-size: 12px;
+    background: #1f1f1f;
+    border-radius: 4px;
+    border: 1px solid #101010;
+    opacity: .7;
+    transition: all 0.3s ease-in-out;
+}
+
+ul#TattooShopHUD-TattooList>li>button.blue:hover {
+    background: #205694 !important;
+}
+
+ul#TattooShopHUD-TattooList>li>button:hover {
+    background: #209449;
+    opacity: 1;
+}
+
+ul#TattooShopHUD-TattooList>li>span {
+    color: #d2d2d2;
+    font-family: OSR;
+    font-size: 14px;
+    float: left;
+    border-right: 1px solid #3c3c3c;
+    width: 8vw;
+    text-align: center;
+}
+
+ul#TattooShopHUD-TattooList>li>button {
+    margin-left: 5px;
+}
+
+ul#TattooShopHUD-TattooList>li>span {
+    width: 12vw !important;
+}
+
+div#TattooShopHUD>ul#TattooShopHUD-HomeList>li>p {
+    color: #d2d2d2;
+}
+
+div#TattooShopHUD-TattooList {
+    display: none;
+}
+
+div#TattooShopHUD>ul#TattooShopHUD-HomeList>li:hover {
+    opacity: 1;
+    background-color: #4e6cac;
+}
+
+div#TattooShopHUD>ul {
+    display: block;
+    margin-left: 0.5vw;
+    position: relative;
+    height: 28vw;
+    max-height: 28vw;
+    overflow-y: auto;
+}
+
+div#TattooShopHUD>ul#TattooShopHUD-TattooList>li {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    padding: 1.25rem 1.25rem !important;
+}
+
+div#TattooShopHUD>ul#TattooShopHUD-HomeList>li {
+    padding: 1.25rem 1.25rem !important;
+    width: 9vw;
+    float: left;
+    border-radius: 4px !important;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    background: #1d1d1d;
+    border: 1px solid #060606;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    padding-bottom: 0px !important;
+    transition: all 0.3s ease-in-out;
+    opacity: .7;
+}
+
+ul#TattooShopHUD-TattooList {
+    margin-left: 0 !important;
+}
+
+ul#TattooShopHUD-TattooList>li:nth-child(odd) {
+    background: #101010;
+}
+
+ul#TattooShopHUD-TattooList>li:nth-child(even) {
+    background: #191919;
+}
+
+div#Deathscreen-Box {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+ul#InteractionMenu-List {
+    display: none;
+    position: relative;
+    left: 800px;
+    top: 440px;
+    list-style-type: none;
+    max-width: 1000px;
+    margin: 0;
+    max-width: 300px;
+}
+
+ul#InteractionMenu-List>li {
+    position: absolute;
+    background-color: #100f0f;
+    opacity: .95;
+    color: #d2d2d2;
+    text-align: center;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+    border: 2px solid #0a0a0ab8;
+    filter: grayscale(1);
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul#InteractionMenu-List>li:hover {
+    cursor: pointer;
+    filter: grayscale(0);
+    background-color: #6d6d6dbd;
+    border-color: #0a0a0ab8;
+}
+
+ul#InteractionMenu-List>li>img {
+    height: 64px;
+    width: 64px;
+}
+
+ul#InteractionMenu-List>li>p {
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-family: PEL;
+    font-size: 14px;
+}
+
+ul#InteractionMenu-List>li:nth-child(1) {
+    background-color: #171717ad;
+    color: #fff;
+    filter: grayscale(0.5);
+    border: 2px solid #000000ad;
+    width: 165px;
+    height: 165px;
+    max-height: 170px;
+    max-width: 170;
+    margin-left: -8px;
+    margin-top: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul#InteractionMenu-List>li:nth-child(1)>p {
+    font-size: 15px;
+    word-break: break-word;
+}
+
+#identityCardApplyForm {
+    width: 650px;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: linear-gradient(0deg, rgb(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
+    text-align: center;
+    padding-bottom: 12px;
+}
+
+div#VehicleFuelstationCEFBox {
+    width: 650px;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: rgb(37, 37, 37);
+    text-align: center;
+}
+
+div#GivePlayerBillCEFBox,
+div#RecievePlayerBillCEFBox,
+div#GivePlayerContractCEFBox,
+div#RecievePlayerContractCEFBox {
+    width: 450;
+    top: 20%;
+    left: 50%;
+    margin-left: -250px;
+    padding: 20px;
+    position: absolute;
+    background: rgb(37, 37, 37);
+    text-align: center;
+}
+
+div#FactionStorageCEFBox,
+div#VehicleTrunkCEFBox {
+    width: 650;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: linear-gradient(0deg, rgb(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
+    text-align: center;
+}
+
+div#PlayerSearchInventoryCEFBox {
+    width: 650;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #171616db;
+    text-align: center;
+}
+
+div#VehicleLicensingCEFBox {
+    width: 650;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #171616db;
+    text-align: center;
+}
+
+div#VehicleKeyCEFBox {
+    width: 650;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #171616db;
+    text-align: center;
+}
+
+div#VehicleSellCEFBox {
+    width: 650;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #171616db;
+    text-align: center;
+}
+
+div#HotelManageCEFBox,
+div#HouseEntranceCEFBox,
+div#TownhallHouseSelectorBox,
+div#HouseManageCEFBox {
+    width: 650;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: rgb(37, 37, 37);
+    text-align: center;
+}
+
+div#GivePlayerLicenseCEFBox {
+    width: 650;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #171616db;
+    text-align: center;
+}
+
+div#Minijob-BusDriverCEFBox {
+    width: 650;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #171616db;
+    text-align: center;
+}
+
+#bankAccountManageForm {
+    width: 750px;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #252525;
+    text-align: center;
+    padding-bottom: 12px;
+    border: 2px solid #1ca46d33;
+}
+
+div#bankFactionATMForm {
+    width: 650px;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: #252525;
+    text-align: center;
+    padding-bottom: 12px;
+    border: 2px solid #a8a8a833;
+}
+
+#bankATMbox {
+    width: 1000px;
+    height: 650px;
+    top: 20%;
+    left: 50%;
+    margin-left: -455px;
+    padding: 20px;
+    position: absolute;
+    background: #252525;
+    text-align: center;
+    padding-bottom: 12px;
+    border: 2px solid #1ca46d33;
+}
+
+#identityCardApplyForm>p.title,
+#bankAccountManageForm>p.title,
+div#bankFactionATMForm>p.title,
+#bankATMbox>p.title {
+    color: #d2d2d2;
+    font-size: 20px;
+    font-family: PEL;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+div#VehicleFuelstationCEFBox>p.title,
+div#GivePlayerBillCEFBox>p.title,
+div#RecievePlayerBillCEFBox>p.title,
+div#GivePlayerContractCEFBox>p.title,
+div#RecievePlayerContractCEFBox>p.title,
+div#FactionStorageCEFBox>p.title,
+div#VehicleTrunkCEFBox>p.title,
+div#VehicleLicensingCEFBox>p.title,
+div#VehicleKeyCEFBox>p.title,
+div#VehicleSellCEFBox>p.title,
+div#PlayerSearchInventoryCEFBox>p.title,
+div#GivePlayerLicenseCEFBox>p.title,
+div#Minijob-BusDriverCEFBox>p.title,
+div#HotelManageCEFBox>p.title,
+div#HouseEntranceCEFBox>p.title,
+div#TownhallHouseSelectorBox>p.title,
+div#HouseManageCEFBox>p.title {
+    font-size: 20px;
+    font-family: PEL;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2px;
+}
+
+div#HouseEntranceCEFBox>p.title.green {
+    background-image: linear-gradient(to right, #7bef73, #33e841);
+}
+
+div#GivePlayerLicenseCEFBox>p.title {
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
+}
+
+div#Minijob-BusDriverCEFBox>p.title {
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
+}
+
+div#VehicleLicensingCEFBox>p.title,
+div#VehicleSellCEFBox>p.title,
+div#VehicleKeyCEFBox>p.title {
+    background-image: linear-gradient(to right, #ffffff, #ffffff) !important;
+}
+
+div#PlayerSearchInventoryCEFBox>p.title {
+    background-image: linear-gradient(to right, #ffffff, #ffffff) !important;
+}
+
+div#GivePlayerBillCEFBox>p.title,
+div#RecievePlayerBillCEFBox>p.title,
+div#GivePlayerContractCEFBox>p.title,
+div#RecievePlayerContractCEFBox>p.title,
+div#FactionStorageCEFBox>p.title,
+div#VehicleTrunkCEFBox>p.title {
+    background-image: linear-gradient(to right, #ffffff, #c1c1c1) !important;
+}
+
+div#VehicleFuelstationCEFBox>hr,
+div#GivePlayerBillCEFBox>hr,
+div#RecievePlayerBillCEFBox>hr,
+div#GivePlayerContractEFBox>hr,
+div#RecievePlayerContractCEFBox>hr,
+div#FactionStorageCEFBox>hr,
+div#VehicleTrunkCEFBox>hr,
+div#VehicleLicensingCEFBox>hr,
+div#VehicleKeyCEFBox>hr,
+div#VehicleSellCEFBox>hr,
+div#PlayerSearchInventoryCEFBox>hr,
+div#GivePlayerLicenseCEFBox>hr,
+div#Minijob-BusDriverCEFBox>hr,
+div#HotelManageCEFBox>hr,
+div#HouseEntranceCEFBox>hr,
+div#TownhallHouseSelectorBox>hr,
+div#HouseManageCEFBox>hr {
+    border: 1px solid transparent;
+    border-image: linear-gradient( to right, #ffffff, #ffffff) 1 100%;
+    border-image-slice: 1;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    opacity: .75;
+}
+
+div#HouseEntranceCEFBox>hr.green {
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, #7bef73, #33e841);
+    border-image-slice: 1;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+div#GivePlayerLicenseCEFBox>hr {
+    border: 1px solid transparent !important;
+    border-image: linear-gradient(to right, #ffffff, #ffffff) !important;
+    border-image-slice: 1 !important;
+}
+
+div#Minijob-BusDriverCEFBox>hr {
+    border: 1px solid transparent !important;
+    border-image: linear-gradient(to right, #efc973, #e83333) !important;
+    border-image-slice: 1 !important;
+}
+
+div#Minijob-BusDriverCEFBox>div#Minijob-BusDriverCEFBox-List>div.container {
+    background: #1b1b1bc4;
+    width: 90%;
+    border: 1px solid #404ecd;
+    display: table;
+    padding: 10px;
+    padding-left: 15px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    opacity: .5;
+    transition: all 0.3s ease-in-out;
+}
+
+div#Minijob-BusDriverCEFBox>div#Minijob-BusDriverCEFBox-List>div.container:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+div#Minijob-BusDriverCEFBox>div#Minijob-BusDriverCEFBox-List>div.container>p.title {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-weight: bold;
+    float: left;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+div#Minijob-BusDriverCEFBox>div#Minijob-BusDriverCEFBox-List {
+    overflow-y: auto;
+    max-height: 375px;
+}
+
+div#Minijob-BusDriverCEFBox>div#Minijob-BusDriverCEFBox-List>div.container>p.subtitle {
+    float: left;
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 14px;
+    margin-left: 20px;
+    width: 65%;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+div#Minijob-BusDriverCEFBox>div#Minijob-BusDriverCEFBox-List>div.container>p.subtitle>font {
+    float: right;
+    font-weight: bold;
+}
+
+div#Minijob-BusDriverCEFBox>div#Minijob-BusDriverCEFBox-List>div.container>img {
+    float: left;
+    width: 156px;
+}
+
+div#Minijob-BusDriverCEFBox>hr {
+    border: 1px solid transparent !important;
+    border-image: linear-gradient(to right, #ffffff, #ffffff) !important;
+    border-image-slice: 1 !important;
+}
+
+div#VehicleLicensingCEFBox>hr,
+div#VehicleSellCEFBox>hr,
+div#VehicleKeyCEFBox>hr {
+    border: 1px solid transparent !important;
+    border-image: linear-gradient(to right, #ffffff, #ffffff) !important;
+    border-image-slice: 1 !important;
+}
+
+div#PlayerSearchInventoryCEFBox>hr {
+    border: 1px solid transparent !important;
+    border-image: linear-gradient(to right, #ffffff, #ffffff) !important;
+    border-image-slice: 1 !important;
+}
+
+div#VehicleLicensingCEFBox>p.description,
+div#VehicleKeyCEFBox>p.description,
+div#VehicleSellCEFBox>p.description,
+div#GivePlayerLicenseCEFBox>p.description,
+div#Minijob-BusDriverCEFBox>p.description,
+div#HotelManageCEFBox>p.description,
+div#HouseEntranceCEFBox>p.description,
+div#TownhallHouseSelectorBox>p.description,
+div#HouseManageCEFBox>p.description {
+    color: #d2d2d2;
+    font-size: 14px;
+    font-family: PEL;
+}
+
+div#VehicleLicensingCEFBox>p.warndescription {
+    color: #ff0000;
+    font-size: 15px;
+    font-family: PEL;
+}
+
+div#VehicleLicensingCEFBox>ul.list-group,
+div#VehicleSellCEFBox>ul.list-group,
+div#VehicleKeyCEFBox>ul.list-group {
+    background: rgba(23, 23, 23, 0.7);
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 2px solid #ffffff63;
+    max-height: 285px;
+    overflow-y: auto;
+    display: block;
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item,
+div#VehicleSellCEFBox>ul.list-group>li.list-group-item,
+div#VehicleKeyCEFBox>ul.list-group>li.list-group-item {
+    position: relative;
+    height: 100px;
+    border-top: 1px solid #000000c4;
+    width: 100%;
+    max-height: 100px;
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item:nth-child(odd),
+div#VehicleSellCEFBox>ul.list-group>li.list-group-item:nth-child(odd),
+div#VehicleKeyCEFBox>ul.list-group>li.list-group-item:nth-child(odd) {
+    background: rgb(27, 27, 27);
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item:nth-child(1),
+div#VehicleSellCEFBox>ul.list-group>li.list-group-item:nth-child(1),
+div#VehicleKeyCEFBox>ul.list-group>li.list-group-item:nth-child(1) {
+    border-top: none;
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item:nth-child(even),
+div#VehicleSellCEFBox>ul.list-group>li.list-group-item:nth-child(even),
+div#VehicleKeyCEFBox>ul.list-group>li.list-group-item:nth-child(even) {
+    background: rgb(39, 39, 39);
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item>div.container.left,
+div#VehicleSellCEFBox>ul.list-group>li.list-group-item>div.container.left,
+div#VehicleKeyCEFBox>ul.list-group>li.list-group-item>div.container.left {
+    height: 100%;
+    width: 32%;
+    float: left;
+    border-right: 2px solid #ffffff;
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item>div.container.mid,
+div#VehicleSellCEFBox>ul.list-group>li.list-group-item>div.container.mid,
+div#VehicleKeyCEFBox>ul.list-group>li.list-group-item>div.container.mid {
+    height: 100%;
+    width: 25%;
+    float: left;
+    border-right: 2px solid #ffffff;
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item>div.container.right,
+div#VehicleSellCEFBox>ul.list-group>li.list-group-item>div.container.right,
+div#VehicleKeyCEFBox>ul.list-group>li.list-group-item>div.container.right {
+    height: 100%;
+    width: 40%;
+    float: left;
+}
+
+button.btn-anmelden {
+    border-color: #0e0e0e;
+    color: #ffffff;
+    background: rgb(10, 121, 0);
+    opacity: .5;
+    font-size: 14px;
+    text-align: center;
+    float: left;
+    transition: all 0.3s ease-in-out;
+    margin-right: 5px;
+}
+
+button.btn-abmelden {
+    border-color: #0e0e0e;
+    color: #d2d2d2;
+    background: rgb(21, 21, 21);
+    opacity: .5;
+    font-size: 14px;
+    text-align: center;
+    float: left;
+    transition: all 0.3s ease-in-out;
+}
+
+button.btn-anmelden:hover {
+    cursor: pointer;
+    color: #d2d2d2;
+    transform: scale(1.05);
+    background: rgb(35, 148, 91);
+    opacity: 1;
+}
+
+button.btn-abmelden:hover {
+    cursor: pointer;
+    color: #d2d2d2;
+    transform: scale(1.05);
+    background: rgb(148, 35, 35);
+    opacity: 1;
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item>div.container.right>input,
+div#VehicleSellCEFBox>ul.list-group>li.list-group-item>div.container.right>input,
+div#VehicleKeyCEFBox>ul.list-group>li.list-group-item>div.container.right>input {
+    outline: none;
+    border: 1px solid #00000026;
+    background: rgba(0, 0, 0, 0.2);
+    width: 60%;
+    border-radius: 4px;
+    text-align: center;
+    color: #d2d2d2;
+    float: left;
+    font-family: PEL;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item>div.container>p.title,
+div#VehicleSellCEFBox>ul.list-group>li.list-group-item>div.container>p.title,
+div#VehicleKeyCEFBox>ul.list-group>li.list-group-item>div.container>p.title {
+    color: #ffffff;
+    font-family: PEL;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: auto;
+}
+
+div#VehicleLicensingCEFBox>ul.list-group>li.list-group-item>div.container>p.name,
+div#VehicleSellCEFBox>ul.list-group>li.list-group-item>div.container>p.name,
+div#VehicleKeyCEFBox>ul.list-group>li.list-group-item>div.container>p.name {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 14px;
+}
+
+div#GivePlayerBillCEFBox>hr,
+div#RecievePlayerBillCEFBox>hr,
+div#GivePlayerContractCEFBox>hr,
+div#RecievePlayerContractCEFBox>hr,
+div#FactionStorageCEFBox>hr,
+div#VehicleTrunkCEFBox>hr {
+    border: 1px solid transparent !important;
+    border-image: linear-gradient(to right, #ffffff, #c1c1c1) !important;
+    border-image-slice: 1 !important;
+}
+
+div#FactionStorageCEFBox>div.container>ul.list-group,
+div#VehicleTrunkCEFBox>div.container>ul.list-group,
+div#PlayerSearchInventoryCEFBox>div.container>ul.list-group,
+div#GivePlayerLicenseCEFBox>ul.list-group,
+div#HotelManageCEFBox>ul.list-group {
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 210px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    max-height: 210;
+    overflow-y: auto;
+    display: block;
+}
+
+div#HotelManageCEFBox>ul.list-group {
+    height: 450px !important;
+    max-height: 450px !important;
+}
+
+div#HotelManageCEFBox>ul.list-group {
+    border: none !important;
+}
+
+div#GivePlayerLicenseCEFBox>ul.list-group {
+    height: 300px;
+    max-height: 300px;
+}
+
+div#PlayerSearchInventoryCEFBox>div.container>ul.list-group {
+    height: 310px !important;
+    max-height: 310px !important;
+}
+
+div#GivePlayerLicenseCEFBox>ul.list-group>li.list-group-item>p {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 14px;
+}
+
+div#FactionStorageCEFBox>div.container>ul.list-group>li.list-group-item,
+div#VehicleTrunkCEFBox>div.container>ul.list-group>li.list-group-item,
+div#PlayerSearchInventoryCEFBox>div.container>ul.list-group>li.list-group-item,
+div#HotelManageCEFBox>ul.list-group>li.list-group-item {
+    width: 30%;
+    margin-left: 2%;
+    margin-top: 1%;
+    background: rgba(84, 84, 84, 0.2);
+    border: 2px solid #333333;
+    border-radius: 4px;
+    float: left;
+    padding: 0px 0px;
+    padding-top: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 10px;
+    max-height: 135px;
+    height: 135px;
+    margin-bottom: 1%;
+    transition: all 0.3s ease-in-out;
+}
+
+div#GivePlayerLicenseCEFBox>ul.list-group>li.list-group-item {
+    width: 47%;
+    margin-left: 2%;
+    margin-top: 1%;
+    background: rgba(84, 84, 84, 0.2);
+    border: 2px solid #333333;
+    float: left;
+    padding: 0px 0px;
+    padding-top: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 10px;
+    max-height: 135px;
+    height: 135px;
+    margin-bottom: 1%;
+    transition: all 0.3s ease-in-out;
+}
+
+div#HotelManageCEFBox>ul.list-group>li.list-group-item {
+    width: 278px !important;
+    margin-left: 16px !important;
+    border: 2px solid #0a0a0a !important;
+    background: rgba(12, 12, 12, 0.59) !important;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 200px;
+    max-height: 200px !important;
+}
+
+div#HotelManageCEFBox>ul.list-group>li.list-group-item>p.title {
+    color: #eaeaea;
+    font-family: PEL;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    background: #e83838;
+    margin-top: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    padding-top: 4px;
+    border-bottom: 2px solid #0a0a0a !important;
+    padding-bottom: 4px;
+    margin-bottom: 0;
+}
+
+div#HouseEntranceCEFBox>div#HouseEntranceCEFBox-List>div.container>p {
+    color: #eaeaea;
+    font-family: PEL;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid black;
+    border-bottom: 0;
+}
+
+div#HouseEntranceCEFBox>div#HouseEntranceCEFBox-List>div.container:nth-last-of-type(1)>p {
+    border-bottom: 1px solid black !important;
+}
+
+div#HouseEntranceCEFBox>div#HouseEntranceCEFBox-List>div.container:nth-last-of-type(1) {
+    margin-bottom: 15px;
+}
+
+div#HouseEntranceCEFBox>div#HouseEntranceCEFBox-List>button {
+    font-family: PEL;
+    font-size: 14px;
+    opacity: .25;
+    transition: all 0.3s ease-in-out;
+    margin-left: 5px;
+}
+
+div#HouseEntranceCEFBox>div#HouseEntranceCEFBox-List>button.green {
+    background: #33c76799 !important;
+    border-color: #33c76799 !important;
+}
+
+div#HouseEntranceCEFBox>div#HouseEntranceCEFBox-List>button:hover {
+    letter-spacing: 1px;
+    opacity: 1 !important;
+}
+
+div#HouseEntranceCEFBox>div#HouseEntranceCEFBox-List>div.container>p.red {
+    background: #c73340eb;
+}
+
+div#HouseEntranceCEFBox>div#HouseEntranceCEFBox-List>div.container>p.green {
+    background: #33c76799;
+}
+
+div#HouseEntranceCEFBox>div#HouseEntranceCEFBox-List>div.container>p>font {
+    float: right;
+    padding-right: 10px;
+}
+
+div#HotelManageCEFBox>ul.list-group>li.list-group-item>p.rentstate {
+    color: #d2d2d2;
+    font-family: PEL;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 15px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #080808;
+}
+
+div#HotelManageCEFBox>ul>li>p.rentstate:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.34);
+}
+
+div#HotelManageCEFBox>ul>li>p.rentstate:nth-child(even) {
+    background: rgba(23, 23, 23, 0.34);
+}
+
+div#HotelManageCEFBox>ul>li>p.rentstate:nth-last-child(4) {
+    margin-bottom: 8px !important;
+}
+
+div#HotelManageCEFBox>ul.list-group>li.list-group-item>p.rentstate>i {
+    padding-right: 6px;
+}
+
+div#HotelManageCEFBox>ul.list-group>li.list-group-item>p.rentstate>font {
+    float: right;
+    padding-top: 2px;
+    font-size: 14px;
+    padding-right: 6px;
+    color: #e83838;
+}
+
+div#HotelManageCEFBox>ul>li>button.btn-sm.btn-danger {
+    background: #252525;
+    border: 1px solid #151515;
+    opacity: .25;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+div#HotelManageCEFBox>ul>li>button.btn-sm.btn-danger:hover {
+    opacity: 1;
+    background: #e83838;
+}
+
+div#GivePlayerLicenseCEFBox>ul.list-group>li.list-group-item:hover {
+    opacity: 1;
+    cursor: pointer;
+    background: rgba(54, 191, 103, 0.78);
+    transform: scale(1.05);
+}
+
+div#PlayerSearchInventoryCEFBox>div.container>ul.list-group>li.list-group-item {
+    padding-top: 15px !important;
+    max-height: 140px;
+    height: 140px;
+}
+
+div#FactionStorageCEFBox>div.container>ul.list-group>li.list-group-item>img,
+div#VehicleTrunkCEFBox>div.container>ul.list-group>li.list-group-item>img,
+div#PlayerSearchInventoryCEFBox>div.container>ul.list-group>li.list-group-item>img {
+    width: 32px;
+}
+
+div#FactionStorageCEFBox>div.container>ul.list-group>li.list-group-item>button,
+div#VehicleTrunkCEFBox>div.container>ul.list-group>li.list-group-item>button,
+div#PlayerSearchInventoryCEFBox>div.container>ul.list-group>li.list-group-item>button {
+    border-color: #0e0e0ea8;
+    background: #3a3a3a;
+    font-size: 12px;
+    opacity: .6;
+    transition: all 0.3s ease-in-out;
+}
+
+div#FactionStorageCEFBox>div.container>ul.list-group>li.list-group-item>button:hover,
+div#VehicleTrunkCEFBox>div.container>ul.list-group>li.list-group-item>button:hover,
+div#PlayerSearchInventoryCEFBox>div.container>ul.list-group>li.list-group-item>button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background: #2cbf60b5;
+    opacity: 1;
+}
+
+div#FactionStorageCEFBox>div.container>ul.list-group>li.list-group-item>input,
+div#VehicleTrunkCEFBox>div.container>ul.list-group>li.list-group-item>input,
+div#PlayerSearchInventoryCEFBox>div.container>ul.list-group>li.list-group-item>input {
+    width: 40%;
+    outline: none;
+    border: 1px solid #0e0e0ea8;
+    background: #2b2b2b;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: PEL;
+    font-size: 13px;
+    text-align: center;
+    color: #d2d2d2;
+    font-weight: bold;
+}
+
+div#FactionStorageCEFBox>div.container>ul.list-group>li.list-group-item>p.name,
+div#VehicleTrunkCEFBox>div.container>ul.list-group>li.list-group-item>p.name,
+div#PlayerSearchInventoryCEFBox>div.container>ul.list-group>li.list-group-item>p.name {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+div#FactionStorageCEFBox>div.container>p.title,
+div#VehicleTrunkCEFBox>div.container>p.title {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 16px;
+    margin-bottom: 0.35rem;
+}
+
+div#GivePlayerBillCEFBox>div.container>p,
+div#GivePlayerContractCEFBox>div.container>p,
+div#RecievePlayerContractCEFBox>div.container>p,
+div#RecievePlayerBillCEFBox>div.container>p {
+    color: #d2d2d2;
+    font-family: PEL;
+    text-transform: uppercase;
+    font-size: 17px;
+    margin-bottom: 0.35rem;
+}
+
+div#GivePlayerBillCEFBox>div.container>input#GivePlayerBillCEFBox-AmountInput,
+div#GivePlayerBillCEFBox>div.container>input#GivePlayerBillCEFBox-ReasonInput,
+div#RecievePlayerBillCEFBox>div.container>input#RecievePlayerBillCEFBox-NameInput,
+div#RecievePlayerBillCEFBox>div.container>input#RecievePlayerBillCEFBox-AmountInput,
+div#RecievePlayerBillCEFBox>div.container>input#RecievePlayerContractCEFBox-ReasonInput,
+div#GivePlayerBillCEFBox>div.container>input#GivePlayerContractCEFBox-AmountInput,
+div#GivePlayerBillCEFBox>div.container>input#GivePlayerContractCEFBox-ReasonInput,
+div#RecievePlayerBillCEFBox>div.container>input#RecievePlayerContractCEFBox-NameInput,
+div#RecievePlayerBillCEFBox>div.container>input#RecievePlayerContractCEFBox-AmountInput,
+div#RecievePlayerBillCEFBox>div.container>input#RecievePlayerContractCEFBox-ReasonInput {
+    outline: none;
+    border: 1px solid #131212;
+    background: rgba(51, 51, 51, 0.82);
+    text-align: center;
+    color: #d2d2d2;
+    font-family: OSR;
+    font-size: 14px;
+    margin-bottom: 1.25rem;
+    padding: 2px 0px;
+}
+
+div#GivePlayerBillCEFBox>button.btn,
+div#RecievePlayerBillCEFBox>button.btn,
+div#GivePlayerContractCEFBox>button.btn,
+div#RecievePlayerContractCEFBox>button.btn {
+    border-color: #1d1d1d;
+    font-family: PEL;
+    color: #d2d2d2;
+    background: #2d2d2de0;
+    padding: 5px 10px;
+    font-size: 14px;
+    opacity: .5;
+    transition: all 0.3s ease-in-out;
+}
+
+div#GivePlayerBillCEFBox>button.btn:hover,
+div#RecievePlayerBillCEFBox>button.btn:hover,
+div#GivePlayerContractCEFBox>button.btn:hover,
+div#RecievePlayerContractCEFBox>button.btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    color: #d2d2d2;
+    background: #34a7629e;
+    letter-spacing: 1px;
+    opacity: 1;
+}
+
+div#VehicleFuelstationCEFBox>div.container>p.subtitle {
+    text-align: left;
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 15px;
+}
+
+div#VehicleFuelstationCEFBox>div.container>p.subtitle>font {
+    float: right;
+    color: rgb(255, 255, 255);
+}
+
+div#VehicleFuelstationCEFBox>div.container>p.title {
+    font-size: 16px;
+    font-family: PEL;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+#identityCardApplyForm>p.description,
+#bankAccountManageForm>p.description,
+div#bankFactionATMForm>p.description,
+#bankATMbox>p.description {
+    color: #d2d2d2;
+    font-size: 14px;
+    padding-left: 12px;
+    font-family: PEL;
+    padding-right: 12px;
+}
+
+#identityCardApplyForm>hr {
+    border-top: 1px solid rgb(255, 255, 255);
+    margin-left: -20px;
+    width: 650px;
+}
+
+#bankAccountManageForm>hr,
+#bankATMbox>hr {
+    border-top: 1px solid rgba(63, 169, 105, 0.57);
+    width: 650px;
+}
+
+#identityCardApplyForm>.inputgroup {
+    margin-bottom: 0.75rem;
+}
+
+#identityCardApplyForm>.inputgroup>.icon {
+    display: inline;
+    background: rgba(255, 255, 255, 0.57);
+    color: white;
+    font-size: 16px;
+    border: 1px solid #0c0c0c;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+#identityCardApplyForm>.inputgroup>#identityCardApplyFormCharname,
+#identityCardApplyForm>.inputgroup>#identityCardApplyFormGender,
+#identityCardApplyForm>.inputgroup>#identityCardApplyFormAdress,
+#identityCardApplyForm>.inputgroup>#identityCardApplyFormBirthdate,
+#identityCardApplyForm>.inputgroup>#identityCardApplyFormBirthplace {
+    background: #00000066;
+    outline: none;
+    border: 1px solid #0c0c0c;
+    font-family: PT;
+    font-weight: bold;
+    font-size: 16px;
+    color: #a7a4a4;
+    margin-left: -5px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    text-align: center;
+    width: 300px;
+}
+
+#identityCardApplyForm>img#sendIdentityCardApplyForm {
+    width: 186px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transform: rotate(6deg);
+    opacity: .5;
+    transition: all 0.3s ease-in-out;
+    filter: grayscale(.7);
+}
+
+#identityCardApplyForm>img#sendIdentityCardApplyForm:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform: rotate(0deg);
+    transform: scale(1.15);
+    filter: grayscale(0);
+}
+
+#bankAccountManageForm>ul.list-group,
+#bankATMbox>div#bankATMbox-OverviewArea>ul.list-group,
+div#bankFactionATMForm>ul.list-group {
+    float: left;
+    background: transparent;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-left: 10px;
+    display: block;
+}
+
+div#bankFactionATMForm>ul.list-group {
+    padding: 0 !important;
+}
+
+div#VehicleFuelstationCEFBox>div.container>ul.list-group {
+    float: left;
+    background: rgba(51, 51, 51, 0.1);
+    padding: 5px;
+    padding-top: 0px;
+    border-radius: 8px;
+    display: block;
+    max-width: 100%;
+    min-width: 100%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    max-height: 460px;
+    overflow-y: auto;
+}
+
+#bankATMbox>div#bankATMbox-OverviewArea>ul.list-group,
+div#bankFactionATMForm>ul.list-group {
+    margin-bottom: -15px;
+}
+
+div#VehicleFuelstationCEFBox>div.container>ul.list-group>li.list-group-item {
+    background: #181918 !important;
+    float: left;
+    padding: 15px;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    border: 2px groove #131212c9;
+    width: 178px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    transition: all 0.5s ease-in-out;
+    filter: grayscale(1);
+}
+
+div#VehicleFuelstationCEFBox>div.container>ul.list-group>li.list-group-item>img {
+    margin-top: 5px;
+}
+
+div#VehicleFuelstationCEFBox>div.container>ul.list-group>li.list-group-item:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+}
+
+div#VehicleFuelstationCEFBox>div.container>ul.list-group>li.list-group-item:hover>p {
+    color: #fff;
+}
+
+div#VehicleFuelstationCEFBox>div.container>ul.list-group>li.list-group-item>p {
+    margin-bottom: 0;
+    margin-top: 15px;
+    color: #a5a5a5;
+    font-family: PEL;
+    text-transform: uppercase;
+}
+
+div#VehicleFuelstationCEFBox>div.container>form {
+    margin-block-end: 0.25rem;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item,
+#bankATMbox>div#bankATMbox-OverviewArea>ul.list-group>li.list-group-item,
+div#bankFactionATMForm>ul.list-group>li.list-group-item {
+    background: #181918 !important;
+    float: left;
+    padding: 1rem;
+    margin-left: 20px;
+    margin-top: 15px;
+    width: 600px;
+    text-align: center;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    border: 2px groove #00ff6d63;
+}
+
+#bankATMbox>div#bankATMbox-OverviewArea>ul.list-group>li.list-group-item,
+div#bankFactionATMForm>ul.list-group>li.list-group-item {
+    padding: 2rem !important;
+    margin-left: 50px !important;
+    width: 200px !important;
+    opacity: .4;
+    padding-bottom: 0rem !important;
+    margin-bottom: 20px;
+    border-color: #34ad79 !important;
+}
+
+div#bankFactionATMForm>ul.list-group>li.list-group-item {
+    margin-left: 40px !important;
+    width: 230px !important;
+    border-color: #ad3434 !important;
+    opacity: .8;
+    padding-top: 15px !important;
+}
+
+#bankATMbox>div#bankATMbox-OverviewArea>ul.list-group>li.list-group-item:hover {
+    opacity: .85;
+    cursor: pointer;
+}
+
+#bankATMbox>div#bankATMbox-OverviewArea>ul.list-group>li.list-group-item>p.title,
+div#bankFactionATMForm>ul.list-group>li.list-group-item>p.title {
+    color: #fff;
+    padding-top: 12px;
+    font-family: PEL;
+}
+
+div#bankFactionATMForm>ul.list-group>li.list-group-item>p.title {
+    padding-top: 0px !important;
+    margin-bottom: 0.6vw;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+
+div#bankFactionATMForm>ul.list-group>li.list-group-item>p.payin {
+    color: #23ad00;
+    padding-top: 0px !important;
+    margin-bottom: 0.6vw;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+
+div#bankFactionATMForm>ul.list-group>li.list-group-item>p.payout {
+    color: #ad0000;
+    padding-top: 0px !important;
+    margin-bottom: 0.6vw;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+
+div#bankFactionATMForm>ul.list-group>li.list-group-item>p.description {
+    color: #d2d2d2;
+    font-size: 15px;
+    padding-left: 12px;
+    font-family: PEL;
+    padding-right: 12px;
+}
+
+div#bankFactionATMForm>ul.list-group>li.list-group-item>p.payin:hover {
+    cursor: pointer;
+    border-color: #23ad00;
+    letter-spacing: 1px;
+}
+
+div#bankFactionATMForm>ul.list-group>li.list-group-item>p.payout:hover {
+    cursor: pointer;
+    border-color: #ad0000;
+    letter-spacing: 1px;
+}
+
+input#bankFactionATMForm-DepositInput,
+input#bankFactionATMForm-WithDrawInput {
+    outline: none;
+    border: none;
+    background: rgba(95, 95, 95, 0.34);
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #f1f1f1;
+    font-family: PEL;
+    border: 1px solid #131313;
+    padding: 0.2rem 0rem;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item.new {
+    border: 2px dashed #fbfbfb57;
+    height: 230px;
+    transition: all 0.5s ease-in-out;
+    color: #23262b;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item.new:hover {
+    background: #317d50 !important;
+    color: #d2d2d2 !important;
+    cursor: pointer;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item.new>i {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item>p.title {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #319859;
+    padding-bottom: 10px;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item>p.floatleft {
+    float: left;
+    width: 50%;
+    text-align: left;
+    color: #d2d2d2;
+    font-size: 15px;
+    border-bottom: 1px solid #7373731c;
+    padding-bottom: 16px;
+    font-family: OSR;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item>p.floatright {
+    float: left;
+    width: 50%;
+    text-align: right;
+    color: #31985a;
+    font-size: 15px;
+    border-bottom: 1px solid #7373731c;
+    padding-bottom: 16px;
+    font-family: PT;
+    font-weight: bold;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item>button {
+    margin-left: 8px;
+    padding: 9px;
+    font-size: 16px;
+    text-align: center;
+    background: #31985894;
+    border-color: #242d28;
+    transition: all 0.3s ease-in-out;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item>button:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+    background: #34be6994;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item>button:focus {
+    box-shadow: 0 0 0 0.1rem rgba(50, 51, 50, 0.5);
+}
+
+div#bankATMbox>div#bankATMbox-PinArea>input#bankATMBox-PinInput,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositInput,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawInput,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferTargetInput,
+div#banKATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneytransferInput {
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    padding-top: 10px;
+    text-align: center;
+    background: rgba(224, 224, 224, 0.47);
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #313131;
+    border-radius: 6px;
+    border: 2px solid #252b28;
+    opacity: .35;
+}
+
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositBalanceInput,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawBalanceInput,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferBalanceInput {
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    padding-top: 10px;
+    text-align: center;
+    background: #252525;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #00cf1c;
+    border-radius: 6px;
+    border: 2px solid #252b28;
+    opacity: .35;
+    font-size: 35px;
+}
+
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositBalanceInput,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositInput,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawInput,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawBalanceInput,
+div#bankATMbox>div#banKATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferBalanceInput,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferTargetInput,
+div#banKATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneytransferInput {
+    margin-top: 0 !important;
+    padding-bottom: 6px !important;
+    padding-top: 6px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+}
+
+div#bankATMbox>div#bankATMbox-PinArea>input#bankATMBox-PinInput::placeholder,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositBalanceInput::placeholder,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositInput::placeholder,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawInput::placeholder,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawBalanceInput::placeholder,
+div#bankATMbox>div#banKATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferBalanceInput::placeholder,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferTargetInput::placeholder,
+div#banKATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneytransferInput::placeholder {
+    color: #313131;
+}
+
+div#bankATMbox>div#bankATMbox-PinArea>input#bankATMBox-PinInput:focus,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositBalanceInput:focus,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositInput:focus,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawBalanceInput:focus,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawInput:focus,
+div#bankATMbox>div#banKATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferBalanceInput:focus,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferTargetInput:focus,
+div#banKATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneytransferInput:focus {
+    opacity: .8;
+    transform: scale(1.05);
+}
+
+div#bankATMbox>div#bankATMbox-DepositArea>p.title,
+div#bankATMbox>div#bankATMbox-WithDrawArea>p.title,
+div#bankATMbox>div#banKATMbox-DoMoneyTransfer>p.title {
+    color: #d2d2d2;
+    font-size: 16px;
+    font-family: PEL;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+div#bankATMbox>div#bankATMbox-PinArea>button#bankATMBox-PinInput-Button,
+div#bankATMbox>div#bankATMbox-DepositArea>button#bankATMBox-DepositArea-Button,
+div#bankATMbox>div#bankATMbox-WithdrawArea>button#bankATMBox-WithdrawArea-Button,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>button#bankATMBox-DoMoneyTransfer-Button {
+    border: 1px solid #2194636e;
+    margin-top: 12px;
+    color: #d2d2d2;
+    font-family: PEL;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 3px;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 6px;
+    opacity: .5;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+div#bankATMbox>div#bankATMbox-PinArea>button#bankATMBox-PinInput-Button:hover,
+div#bankATMbox>div#bankATMbox-DepositArea>button#bankATMBox-DepositArea-Button:hover,
+div#bankATMbox>div#bankATMbox-WithdrawArea>button#bankATMBox-WithdrawArea-Button:hover,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>button#bankATMBox-DoMoneyTransfer-Button:hover {
+    cursor: pointer;
+    background: #219463;
+    opacity: .8;
+    color: #d2d2d2;
+    border: 1px solid #3b3b3b;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List {
+    display: block;
+    float: left;
+    top: 46px;
+    max-height: 490px;
+    overflow-y: auto;
+    margin-left: 170;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card.green {
+    border-left: 5px solid #23a55d !important;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card.red {
+    border-left: 5px solid #bf3f32 !important;
+    background: rgba(204, 70, 70, 0.32) !important;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card.blue {
+    border-left: 5px solid #3287bf !important;
+    background: rgba(70, 133, 204, 0.32) !important;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card {
+    min-width: 600px;
+    max-width: 600px;
+    max-height: 190px;
+    min-height: 190px;
+    margin-left: 5px;
+    margin-bottom: 14px;
+    background: rgba(82, 191, 128, 0.25) !important;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card>div.card-header {
+    font-size: 0.9rem;
+    font-family: PEL;
+    letter-spacing: 0.1px;
+    padding-left: 0.8rem;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card>div.card-body>h6.card-title {
+    font-family: OSR;
+    margin-bottom: 5px;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card>div.card-body>p.card-text {
+    font-family: PEL;
+    font-size: 15px;
+    text-align: left;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card.green>div.card-body>p.card-text>b {
+    color: #23a55d !important;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card.red>div.card-body>p.card-text>b {
+    color: #bf3f32 !important;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card.blue>div.card-body>p.card-text>b {
+    color: #3287bf !important;
+}
+
+div#bankATMbox>span#bankATMbox-CloseBankCef {
+    position: absolute;
+    color: #d2d2d2;
+    font-family: PEL;
+    text-align: center;
+    left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    top: 0;
+}
+
+div#bankATMbox>span#bankATMbox-CloseBankCef:hover {
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+div#bankAccountManageForm>span.closeBankManageForm,
+div#barberCEFBox>span.closeBarberCEF,
+div#bankFactionATMForm>span.closeBankManageForm {
+    background: rgba(0, 0, 0, 0.5);
+    color: #d2d2d2;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    top: 0;
+    opacity: .45;
+    transition: all 0.5s ease-in-out;
+}
+
+div#bankAccountManageForm>span.closeBankManageForm:hover,
+div#barberCEFBox>span.closeBarberCEF:hover,
+div#bankFactionATMForm>span.closeBankManageForm:hover {
+    opacity: .8;
+    background: rgba(160, 28, 28, 0.68);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+div#barberCEFBox {
+    width: 400px;
+    padding: 35px;
+    padding-left: 20px;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 215px;
+    transform: translate(-50%, -50%);
+    background: #000000e6;
+    padding-bottom: 12px;
+}
+
+div#barberCEFBox>p.title {
+    text-align: center;
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 1.2rem;
+    margin-top: -10px;
+}
+
+div#barberCEFBox>div.dropdown>div.dropdown-caption>i.fas.fa-angle-double-right.dropdown {
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    padding-left: 7px;
+    padding-right: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 2px;
+    margin-right: 0.25rem;
+}
+
+div#barberCEFBox>div.dropdown>div.dropdown-content>div.subboxcontent {
+    background: rgba(10, 10, 10, 0.38);
+    padding-left: 8px;
+    padding-top: 6px;
+    border-bottom: 1px solid #252525;
+}
+
+div#barberCEFBox>div.dropdown>div.dropdown-content>div.subboxcontent>p {
+    color: #d2d2d2;
+    font-family: PT;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.05rem;
+}
+
+div#barberCEFBox>div.dropdown>div.dropdown-content>div.subboxcontent>div.nose-pegel {
+    margin-bottom: -0.8rem;
+}
+
+div#barberCEFBox>div.dropdown>div.dropdown-content>div.subboxcontent>div.nose-pegel>form>input.slider,
+div#VehicleFuelstationCEFBox>div.container>form>input#VehicleFuelStationCEFBox-LiterSlider {
+    opacity: 0.5;
+    -webkit-appearance: none;
+    width: 298px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    border-radius: 2px
+}
+
+div#barberCEFBox>div.dropdown>div.dropdown-content>div.subboxcontent>div.nose-pegel>form>input.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 20px;
+    background: linear-gradient(to left, #ffffff 0%, #ffffff 100%);
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+div#VehicleFuelstationCEFBox>div.container>form>input#VehicleFuelStationCEFBox-LiterSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 20px;
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+div#barberCEFBox>div.dropdown>div.dropdown-content>div.subboxcontent>div.nose-pegel>form>output.numberfield,
+div#VehicleFuelstationCEFBox>div.container>form>output.numberfield {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.5);
+    font-family: PEL;
+    font-weight: bold;
+    color: #d2d2d2;
+    font-size: 0.85rem;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    border-radius: 4px;
+    margin-left: 10px;
+    top: -4px;
+    position: relative;
+}
+
+div#barberCEFBox>div.dropdown {
+    width: 360px;
+}
+
+div#barberCEFBox>div.dropdown div.dropdown-caption {
+    display: block;
+    box-sizing: border-box;
+    padding: 15px;
+    transition: all .25 ease;
+}
+
+div#barberCEFBox>div.dropdown .dropdown-selector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+}
+
+div#barberCEFBox>button {
+    background: #1c4a3196;
+    border: none;
+    color: #d2d2d2;
+    opacity: .45;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    font-size: 16px;
+    font-family: OSL;
+    width: 200px;
+    margin-left: 50%;
+    transform: translateX(-100px);
+    transition: all 0.3s ease-in-out;
+}
+
+div#barberCEFBox>button:hover {
+    opacity: .9;
+    cursor: pointer;
+}
+
+div#barberCEFBox>div.dropdown div.dropdown-content {
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    max-height: 0;
+    opacity: .5;
+    transition: all .25s ease;
+    overflow: hidden;
+}
+
+div#barberCEFBox>div.dropdown div.dropdown-content li {
+    list-style: none;
+    display: block;
+    padding: 15px;
+}
+
+div#barberCEFBox>div.dropdown .dropdown-selector:checked~.dropdown-content {
+    max-height: 500px;
+    opacity: 1;
+}
+
+div#barberCEFBox>div.dropdown {
+    font-family: Proxima Nova, Arial, sans-serif;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+div#barberCEFBox>div.dropdown .dropdown-caption {
+    line-height: 20px;
+    padding: 5px 10px;
+    color: #d2d2d2;
+    background: #7575752e;
+    font-family: PEL;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-radius: 2px;
+}
+
+div#barberCEFBox>div.dropdown .dropdown-caption:after {
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+    right: 17px;
+}
+
+div#barberCEFBox>.dropdown-selector:checked~.dropdown-caption:before {
+    -webkit-transform: rotateZ(135deg);
+    transform: rotateZ(135deg);
+}
+
+div#barberCEFBox>.dropdown-selector:checked~.dropdown-caption:after {
+    -webkit-transform: rotateZ(-135deg);
+    transform: rotateZ(-135deg);
+}
+
+div#healthLowBorder {
+    min-height: 100%;
+    border-color: darkred red;
+    border-style: inset;
+    border-width: 10px;
+    opacity: 0.4;
+}
+
+div#VehicleShopCEFBox {
+    width: 760px;
+    padding: 35px;
+    position: absolute;
+    z-index: 100;
+    background: linear-gradient(0deg, rgb(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
+    text-align: center;
+    left: 35px;
+    top: 150px;
+}
+
+div#VehicleShopCEFBox>p.closebtn {
+    display: table;
+    color: red;
+    text-align: left;
+    position: absolute;
+    margin-left: -20px;
+    margin-top: -20px;
+    padding-left: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 14px;
+    transition: all 0.5s ease-in-out;
+    font-size: 14px;
+}
+
+div#VehicleFuelstationCEFBox>p.closebtn,
+div#Minijob-PilotCEFBox>p.closebtn,
+div#GivePlayerBillCEFBox>p.closebtn,
+div#RecievePlayerBillCEFBox>p.closebtn,
+div#ClothesShopCEFBox>p.closebtn,
+div#GivePlayerContractCEFBox>p.closebtn,
+div#RecievePlayerContractCEFBox>p.closebtn,
+div#FactionStorageCEFBox>p.closebtn,
+div#VehicleTrunkCEFBox>p.closebtn,
+div#VehicleLicensingCEFBox>p.closebtn,
+div#VehicleKeyCEFBox>p.closebtn,
+div#VehicleSellCEFBox>p.closebtn,
+div#PlayerSearchInventoryCEFBox>p.closebtn,
+div#GivePlayerLicenseCEFBox>p.closebtn,
+div#Minijob-BusDriverCEFBox>p.closebtn,
+div#HotelManageCEFBox>p.closebtn,
+div#HouseEntranceCEFBox>p.closebtn,
+div#HouseManageCEFBox>p.closebtn,
+div#TownhallHouseSelectorBox>p.closebtn {
+    display: table;
+    color: red;
+    text-align: left;
+    position: absolute;
+    margin-left: -20px;
+    margin-top: -20px;
+    padding-left: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 14px;
+    transition: all 0.5s ease-in-out;
+    font-size: 14px;
+}
+
+div#VehicleShopCEFBox>p.closebtn:hover,
+div#VehicleFuelstationCEFBox>p.closebtn:hover,
+div#ClothesShopCEFBox>p.closebtn:hover,
+div#GarageCEFBox>p.closebtn:hover,
+div#GivePlayerBillCEFBox>p.closebtn:hover,
+div#RecievePlayerBillCEFBox>p.closebtn:hover,
+div#GivePlayerContractCEFBox>p.closebtn:hover,
+div#RecievePlayerContractCEFBox>p.closebtn:hover,
+div#FactionStorageCEFBox>p.closebtn:hover,
+div#VehicleTrunkCEFBox>p.closebtn:hover,
+div#VehicleLicensingCEFBox>p.closebtn:hover,
+div#VehicleKeyCEFBox>p.closebtn:hover,
+div#VehicleSellCEFBox>p.closebtn:hover,
+div#PlayerSearchInventoryCEFBox>p.closebtn:hover,
+div#GivePlayerLicenseCEFBox>p.closebtn:hover,
+div#Minijob-BusDriverCEFBox>p.closebtn:hover,
+div#Minijob-PilotCEFBox>p.closebtn:hover,
+div#HotelManageCEFBox>p.closebtn:hover,
+div#HouseEntranceCEFBox>p.closebtn:hover,
+div#HouseManageCEFBox>p.closebtn:hover,
+div#TownhallHouseSelectorBox>p.closebtn:hover {
+    cursor: pointer;
+    background: rgba(214, 28, 28, 0.72);
+    color: #fff;
+    opacity: 1;
+}
+
+div#VehicleShopCEFBox>img {
+    margin-top: -25px;
+    width: 96px;
+}
+
+div#VehicleShopCEFBox>p#VehicleShopCEFBox-title {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 16px;
+}
+
+div#VehicleShopCEFBox>hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    margin-left: -35px;
+    border-top: 1px solid rgba(0, 0, 0, 0.28);
+    width: 560px;
+}
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList {
+    margin-top: 1.5rem;
+    overflow-y: auto;
+    max-height: 450px;
+}
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li {
+    padding: 0.2rem 0.75rem;
+    text-align: left;
+    border: 1px solid #000000 !important;
+}
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li>img {
+    width: 6.9vw;
+    float: left;
+    margin-top: 52px;
+}
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li>span {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 12px;
+    margin-left: 1rem;
+    top: 8px;
+    position: relative;
+}
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li>span>b {
+    color: #2c9c64e0;
+}
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li:nth-child(odd) {
+    background: rgba(25, 25, 25, 0.35);
+    padding: 0.2rem 0.75rem;
+    text-align: left;
+    border: 1px solid #000000 !important;
+}
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li:nth-child(even) {
+    background: rgba(16, 16, 16, 0.59);
+}
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li>span.buybtn {
+    color: #d8d8d89e;
+    font-family: none;
+    font-size: unset;
+    margin-left: unset;
+    float: right;
+    border: 1px solid #00000085;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 3px;
+    background: #11100f;
+    top: -60px;
+    transition: all 0.5s ease-in-out;
+    margin-left: 5px;
+}
+
+div#VehicleShopCEFBox>ul#VehicleShopCEFBox-StoreList>li>span.buybtn:hover {
+    cursor: pointer;
+    background: #00ff7e73;
+    color: #d2d2d2;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #888;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6d6d6d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(85, 85, 85);
+}
+
+div#HouseManageCEFBox>ul.nav.nav-tabs {
+    border-bottom: 1px transparent;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+div#HouseManageCEFBox>ul.nav.nav-tabs>li {
+    background: #dc2944;
+    padding: 5px 15px 5px 15px;
+    border: 1px solid #000000b5;
+    color: #d2d2d2;
+    opacity: .25;
+    filter: grayscale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+div#HouseManageCEFBox>ul.nav.nav-tabs>li.active {
+    opacity: 1;
+    filter: grayscale(0);
+}
+
+div#HouseManageCEFBox>ul.nav.nav-tabs>li>a {
+    color: #d2d2d2 !important;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>h3,
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>div.container>p.title {
+    color: #dd2943;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: OSR;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>div.container>p.title {
+    font-size: 16px !important;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>p {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 13px;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>div.container>input {
+    text-align: center;
+    background: rgba(14, 14, 14, 0.95);
+    outline: none;
+    border: 1px solid #040404;
+    color: #d2d2d2;
+    font-family: PEL;
+    padding: 4px 0px 4px 0px;
+    max-width: 100px;
+    border-radius: 1px;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>div.container>button {
+    border-radius: 2px;
+    margin-left: 5px;
+    padding: 4px 8px 4px 8px;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>div.container {
+    margin-bottom: 25px;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>div.container>button.btn-success {
+    padding: 4px 15px 4px 15px;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>ul {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>ul>li {
+    position: relative;
+    width: 80%;
+    max-width: 80%;
+    padding: 4px 0px 4px 0px;
+    border-radius: 2px;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>ul>li>p {
+    margin-bottom: 0;
+    color: #d2d2d2;
+    font-family: PEL;
+    opacity: .75;
+    float: left;
+    padding-left: 4%;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>ul>li:nth-child(odd) {
+    background: rgb(12, 12, 12);
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>ul>li:nth-child(even) {
+    background: rgb(16, 16, 16);
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>ul>li>button {
+    float: right;
+    margin-right: 2%;
+    opacity: .15;
+    transition: all 0.3s ease-in-out;
+}
+
+div#HouseManageCEFBox>div.tab-content>div.tab-pane>ul>li>button:hover {
+    opacity: 1;
+}
+
+ul#TownHallHouseSelector-List>li:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid black;
+}
+
+ul#TownHallHouseSelector-List>li:nth-child(even) {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+ul#TownHallHouseSelector-List>li {
+    text-align: left;
+}
+
+ul#TownHallHouseSelector-List>li>span {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+}
+
+ul#TownHallHouseSelector-List>li>button {
+    float: right;
+    background: #505050;
+    border-color: #0000008a;
+    opacity: .35;
+    transition: all 0.3s ease-in-out;
+    margin-left: 5px;
+}
+
+ul#TownHallHouseSelector-List>li>button.btn-danger:hover {
+    background: #dc3545;
+    opacity: 1;
+}
+
+ul#TownHallHouseSelector-List>li>button.btn-success:hover {
+    opacity: 1;
+    background: #35dc68;
+}
+
+
+/* Hudlist */
+
+#pseudo-box-hudlist {
+    pointer-events: none;
+    position: absolute;
+    width: 25%;
+    min-width: 400px;
+    left: 2%;
+}
+
+#HUDlist-Box {
+    z-index: 10;
+    background-color: rgba(29, 29, 29, 0.473);
+    position: relative;
+    min-height: 400px;
+    height: 100%;
+    right: 0;
+    width: 100%;
+    color: white;
+    display: none;
+}
+
+#HUDlist-labelbox,
+#HUDlist-carousel {
+    position: relative;
+    width: 100%;
+}
+
+#HUDlist-labelbox {
+    text-align: center;
+    height: 15%;
+    background: #535353;
+    margin-bottom: 3%;
+}
+
+#HUDlist-labelbox>div {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+#HUDlist-label {
+    position: absolute;
+    vertical-align: middle;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: auto;
+    color: white;
+    font-size: 20px;
+    font-family: PEL;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-top: 5%;
+}
+
+#HUDlist-carousel {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    height: 80%;
+}
+
+#HUDlist-carousel div {
+    height: 100%;
+}
+
+#HUDlist-carousel div ul {
+    height: auto;
+}
+
+#HUDlist-carousel>div>div {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow: hidden !important;
+}
+
+#HUDlist-carousel div ul li {
+    outline: none !important;
+    width: 100%;
+    background-color: rgb(0 0 0 / 50%);
+    color: white;
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: 10px;
+    border-right: 0;
+    border-left: 0;
+}
+
+#HUDlist-carousel div ul li.active {
+    border-bottom: 2px solid #ffffff;
+    color: white;
+}
+
+
+/* Smartphone */
+
+div#Smartphone-Box {
+    display: none;
+}
+
+div#Smartphone-Box {
+    opacity: 0;
+}
+
+.phone {
+    z-index: 100;
+    position: fixed;
+    min-height: 700px;
+    min-width: 345px;
+    bottom: -10px;
+    right: 0px;
+    padding: none;
+    margin-bottom: -56vh;
+}
+
+.menubutton {
+    border: none;
+    color: white;
+    background-color: #04040400;
+    padding: 0px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: -30px 120px;
+    cursor: none;
+}
+
+@media screen and (min-height: 1081px) and (max-height: 1440px) {
+    .phone-header-text {
+        font-size: 18px;
+    }
+    #phone-screen-call {
+        font-size: 25px !important;
+    }
+    .phone-scaleable {
+        font-size: 30px !important;
+    }
+    #phone-screen-sms {
+        font-size: 18px !important;
+    }
+}
+
+
+/* PHONE_WALLPAPER_BOX */
+
+.vertical-menu {
+    width: 235px;
+    overflow: hidden;
+    max-height: 130px;
+    overflow-y: scroll;
+}
+
+.vertical-menu a {
+    background-color: #3b3b3b;
+    color: white;
+    display: block;
+    padding: 1px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+/* If the screen size is 1080px wide or less, set the font-size of <div> to 30px */
+
+@media screen and (max-height: 1080px) {
+    .phone-header-text {
+        font-size: 14px;
+    }
+    #phone-banner {
+        font-size: 14px;
+    }
+    .phone-scaleable {
+        font-size: 22px !important;
+    }
+    .phoneBackGroundSetting {
+        height: 35px;
+    }
+}
+
+.full-phone {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: none;
+    margin: none;
+}
+
+.in-phone {
+    position: absolute;
+    width: 86%;
+    height: 87%;
+    margin: 13% 7%;
+}
+
+.in-screen-content {
+    position: absolute;
+    width: 80%;
+    height: 75%;
+    margin: 20% 10%;
+}
+
+.phone-header-markdown {
+    z-index: 184;
+    height: 8%;
+    width: 100%;
+}
+
+.phone-sms-gradient {
+    background-image: linear-gradient(120deg, #65ee3b 0, #2bc740 100%);
+}
+
+.phone-sms-color-header {
+    background-color: rgb(36, 119, 108) !important;
+}
+
+.phone-sms-color-bg {
+    background-color: #2B9789;
+}
+
+.phone-sms-chat-pre {
+    width: 100%;
+    height: 12%;
+    padding: 2% 10%;
+}
+
+.phone-sms-chat-divider {
+    margin: 0 5%;
+}
+
+.phone-sms-chat-pre-name {
+    font-weight: bold;
+    display: inline-block;
+    color: white;
+}
+
+.phone-sms-chat-pre-text {
+    display: inline-block;
+    color: white;
+}
+
+.phone-sms-chat-pre-time {
+    float: right;
+    display: inline-block;
+    color: white;
+}
+
+.phone-sms-chat-pre-alert {
+    float: right;
+    display: inline-block;
+}
+
+#phone-screen-sms-header {
+    position: absolute;
+    z-index: 150;
+    color: white;
+    width: 100%;
+}
+
+#phone-chat-main-info {
+    margin: 5%;
+    padding: 10px;
+    width: 90%;
+    border-radius: 15px;
+    background-color: #FEF4C5;
+}
+
+.phone-chat-info {
+    overflow: hidden;
+    margin: 5% auto;
+    padding: 10px;
+    width: 90%;
+    border-radius: 15px;
+    background-color: #FEF4C5;
+    text-align: center;
+}
+
+.phone-chat-info-sm {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 2px;
+    width: 30%;
+    border-radius: 15px;
+    background-color: #FEF4C5;
+    text-align: center;
+    font-size: 14px;
+}
+
+#phone-chat-start {
+    position: absolute;
+    right: 4%;
+    bottom: 4%;
+    font-size: 25px;
+    padding: 5%;
+    border-radius: 50%;
+    background-color: lime;
+    color: white;
+}
+
+#phone-sms-header-chat {
+    overflow-x: auto;
+    position: relative;
+    width: 100%;
+    padding: 14px;
+}
+
+#phone-sms-header-chat>span,
+#phone-sms-header-chat>svg {
+    display: inline-block;
+}
+
+.phone-chat-header-text {
+    line-height: 50px;
+    height: 100%;
+}
+
+#phone-sms-chat-window {
+    height: 100%;
+}
+
+#phone-chat-display {
+    overflow: auto;
+    position: relative;
+    height: 90%;
+    padding: 5%;
+}
+
+.phone-chat-box {
+    width: 85%;
+    margin: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    word-break: break-word;
+}
+
+.phone-chat-time {
+    font-size: 12px;
+    color: grey;
+    position: absolute;
+    right: 4%;
+    bottom: -2px;
+}
+
+.phone-chat-other {
+    text-align: left;
+    float: left;
+}
+
+.phone-chat-other:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid white;
+    border-top: 10px solid white;
+    border-bottom: 10px solid transparent;
+    left: -19px;
+    top: 6px;
+}
+
+.phone-chat-me {
+    background-color: #DEF9C8;
+    text-align: left;
+    float: right;
+}
+
+.phone-chat-me:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid #DEF9C8;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #DEF9C8;
+    border-bottom: 10px solid transparent;
+    right: -20px;
+    top: 6px;
+}
+
+#phone-chat-footer {
+    position: absolute;
+    width: 100%;
+    margin-top: auto;
+    bottom: 25px;
+    vertical-align: bottom;
+}
+
+#phone-chat-input-area {
+    margin: 0 3%;
+    padding: 1% 0;
+}
+
+#phone-chat-input {
+    display: inline-block;
+    width: 85%;
+    padding-right: 13%;
+}
+
+#phone-chat-emotes>span {
+    position: absolute;
+    display: inline;
+    right: 20%;
+    top: -28px;
+    transition: .3s;
+}
+
+#phone-chat-emotes>.dropdown-menu {
+    margin-right: 10%;
+    padding: 4%;
+}
+
+.emote {
+    color: #ffd900;
+}
+
+#emote-toggler:hover {
+    color: #ffd900;
+}
+
+#phone-sms-send {
+    margin: auto;
+    float: right;
+    display: block;
+    background-color: rgb(36, 119, 108)!important;
+}
+
+.phone-header-shadow {
+    box-shadow: 0 -3px 6px 4px gray;
+}
+
+#phone-screen-sms-header-upper {
+    overflow: auto;
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+#phone-screen-sms-header-upper-text {
+    float: left;
+    height: 100%;
+    line-height: 50px;
+}
+
+#phone-screen-sms-header-upper-buttons {
+    height: 100%;
+    box-sizing: content-box;
+    margin: 0 5%;
+    float: right;
+}
+
+#phone-sms-home-chats {
+    padding: 0;
+    padding-bottom: 20%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#phone-sms-home {
+    position: relative;
+    height: 100%;
+}
+
+#phone-sms-home-settings {
+    height: 34px;
+    text-align: center;
+    margin: 7px 0;
+    line-height: 60px;
+    color: inherit;
+    box-shadow: none !important;
+}
+
+.phone-number-disp {
+    font-family: PEL;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.phone-address-pre-number {
+    color: white;
+}
+
+.phone-messenger-row {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    padding-left: 30px;
+    font-size: 14px;
+}
+
+#phone-input-new-chat {
+    float: left;
+    display: inline-block;
+    width: 80%;
+    margin: 10px;
+    margin-left: 0;
+}
+
+#phone-button-newchat {
+    display: inline-block;
+    margin: 12.5px auto;
+    background-color: lime;
+    color: white;
+}
+
+#phone-screen-sms-header-nav {
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    list-style: none;
+}
+
+.phoneBackGroundSetting {
+    height: 35px;
+}
+
+.pseudo-box {
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+}
+
+#phone-address-list {
+    position: relative;
+    overflow-y: auto;
+    height: auto;
+    padding-bottom: 300px;
+}
+
+.phone-address-item {
+    width: 100%;
+    padding: 5%;
+    border-bottom: 1px solid black;
+}
+
+.phone-address-nickname {
+    width: 70%;
+    display: inline-block;
+    color: white;
+}
+
+.phone-address-phonenumber {
+    width: 20%;
+    display: inline-block;
+    color: white;
+}
+
+#phone-address-addOrEdit,
+#phone-address-view,
+#phone-address-home,
+#phone-screen-sms-home {
+    height: 95%;
+}
+
+#phone-sms-newchat {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.phone-sms-largeoffset {
+    padding-top: 86px;
+}
+
+.phone-sms-smalloffset {
+    padding-top: 50px;
+}
+
+.phone-sms-nav-item {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #2B9789;
+    padding: 10px 10%;
+    margin: auto;
+    opacity: .6;
+}
+
+.phone-sms-nav-item-active {
+    border-bottom: 2px solid white !important;
+    opacity: 1 !important;
+}
+
+.phone-scaleable {
+    font-size: 14px;
+}
+
+#phone-banner {
+    position: absolute;
+    display: none;
+    top: 0;
+    padding-top: 25px;
+    z-index: 180;
+    width: 100%;
+    color: white;
+    height: 50px;
+}
+
+#phone-notif {
+    position: absolute;
+    display: none;
+    top: 0;
+    padding-top: 40px;
+    z-index: 185;
+    width: 100%;
+    color: white;
+    background-color: black;
+    opacity: 0.9;
+    height: 100px;
+}
+
+#phone-notif-content,
+#phone-notif-app {
+    opacity: 3;
+    color: white;
+    text-align: center;
+}
+
+#phone-notif-app {}
+
+#phone-header {
+    pointer-events: none;
+    position: relative;
+    display: block;
+    z-index: 190;
+    top: 14;
+    height: 5%;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: #00000085;
+}
+
+#phone-footer {
+    z-index: 201 !important;
+    pointer-events: none;
+    position: relative;
+    display: block;
+    z-index: 190;
+    top: 95%;
+    height: 4.5%;
+    width: 100%;
+    opacity: .9;
+}
+
+#phone-home {
+    pointer-events: auto;
+    width: 20%;
+    height: 50%;
+    padding: 2px 10%;
+    margin: 0;
+}
+
+#phone-clock {
+    color: white;
+    margin-top: 16%;
+}
+
+#phone-time {
+    font-size: 64px;
+    margin-bottom: -16px;
+}
+
+#phone-appspace {
+    position: relative;
+    z-index: 150;
+    top: 315px;
+    padding: none;
+    height: 40%;
+    padding: 3%;
+    width: 100%;
+}
+
+.phone-app {
+    z-index: 115;
+    display: inline-block;
+    text-align: center;
+    width: 68px;
+    height: 68px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10%;
+}
+
+.phone-app .badge {
+    z-index: 116;
+    font-size: 12px;
+    padding: 5px;
+    height: 22px;
+    width: 22px;
+    margin-top: -15px;
+    position: absolute;
+}
+
+#phone-screen-police>div>h3 {
+    font-family: PEL;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#phone-police-main-head {
+    padding: 20% 10%;
+}
+
+#phone-police-main-footer {
+    height: 100%;
+    padding: 0 10%;
+}
+
+#phone-police-main-footer>.btn {
+    width: 100%;
+    margin: 0;
+    margin-top: 5%;
+    border-radius: 5px;
+    padding: 0.7rem 0;
+}
+
+#phone-police-querylist,
+#phone-police-wanteds,
+#phone-police-addwanteds,
+#phone-police-mostwanted {
+    display: none;
+}
+
+#phone-police-querylist-head,
+#phone-police-mostwanted-head {
+    position: relative;
+    width: 100%;
+}
+
+#phone-police-querylist-head>.background-police,
+#phone-police-mostwanted-head>.background-police {
+    width: 100%;
+    height: 7%;
+}
+
+.phone-police-overlay {
+    height: 95%;
+    width: 100%;
+    z-index: 120;
+    pointer-events: none;
+    position: absolute;
+}
+
+#phone-police-querylist-subhead {
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    top: 7%;
+    text-align: center;
+}
+
+.phone-police-return {
+    pointer-events: auto;
+    position: absolute;
+    top: 90%;
+    left: 2%;
+}
+
+.phone-police-addwanted {
+    pointer-events: auto;
+    position: absolute;
+    float: right;
+    top: 90%;
+    right: 2%;
+}
+
+#phone-police-querylist-main,
+#phone-police-mostwanted-main {
+    overflow-y: auto;
+    position: relative;
+    height: 93%;
+    width: 100%;
+    padding-bottom: 20%;
+    padding-top: 10%;
+}
+
+#phone-police-querylist-main>.btn,
+#phone-police-mostwanted-main>.btn {
+    text-transform: none;
+    padding: 10px;
+    width: 90%;
+    margin: 5%;
+    margin-top: 0;
+    text-align: left;
+}
+
+#phone-police-wanteds-header,
+#phone-police-addwanteds-header {
+    height: 6.7%;
+    color: white;
+    text-align: center;
+}
+
+#phone-police-wanteds-display {
+    width: 100%;
+    height: 88.3%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#phone-police-wanteds-total {
+    padding-top: 10px;
+    text-align: center;
+    height: 10%;
+    width: 100%;
+}
+
+#phone-police-wanteds-list {
+    padding-bottom: 20%;
+    height: 90%;
+}
+
+#phone-police-addwanteds-content {
+    height: 88.3%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 20%;
+}
+
+#phone-police-addwanteds-content>div {
+    width: 100%;
+}
+
+#phone-police-addwanteds-stgb>.btn,
+#phone-police-addwanteds-active>.btn {
+    text-transform: none;
+    padding: 10px;
+    width: 95%;
+    margin: 2.5%;
+    text-align: left;
+}
+
+#phone-police-addwanteds-stgb>.collapse {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+}
+
+#phone-police-addwanteds-stgb>.collapsing {
+    -webkit-transition: none;
+    transition: none;
+    display: none;
+}
+
+#phone-police-addwanteds-stgb>.collapse>.btn {
+    text-transform: none;
+    padding: 10px;
+    width: 90%;
+    margin: 2.5%;
+    margin-left: 7.5%;
+    text-align: left;
+}
+
+#phone-police-wanteds-list>.wanted-entry {
+    text-transform: none;
+    text-align: left;
+    padding: 2% 5%;
+    width: 95%;
+    margin: 0px 2.5% 10px 2.5%;
+    border: 1px solid #000000a1;
+}
+
+#phone-police-wanteds-list>.wanted-entry>.close {
+    float: right;
+    vertical-align: top;
+    top: 3px;
+    right: 3px;
+    opacity: .25;
+}
+
+#phone-police-wanteds-list>.wanted-entry>.close:hover {
+    opacity: 1;
+}
+
+.background-police-gradient {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 50%, rgba(2, 0, 36, 1) 100%);
+}
+
+.background-police {
+    background: rgb(2, 0, 36);
+}
+
+.h-95 {
+    height: 95%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#phone-screen-radio .input-group {
+    width: 80%;
+}
+
+#phone-screen-radio .diode {
+    float: right;
+    margin-top: -38px;
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    border: 1px solid #888;
+    background-image: linear-gradient(to top, #cfd9df 0, #e2ebf0 100%);
+}
+
+#phone-screen-radio .active {
+    background-image: linear-gradient(120deg, #d4fc79 0, #96e6a1 100%) !important;
+}
+
+.freq-tuning {
+    width: 75%;
+    margin: 5% 12.5%;
+}
+
+#phone-radio-frequency-frame {
+    margin: 10%;
+    width: 80%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-bottom: none;
+    background: rgb(160, 160, 160);
+    /*border-top-left-radius: 15px;
+    border-top-right-radius: 15px;*/
+    height: 50px;
+}
+
+#phone-radio-frequency-slider {
+    box-sizing: content-box;
+    margin: 0 30px;
+}
+
+#phone-radio-frequency-frame::-webkit-scrollbar {
+    height: 10px !important;
+}
+
+#phone-radio-frequency-frame::-webkit-scrollbar-thumb {
+    width: 15px;
+    background: white;
+}
+
+#phone-radio-frequency-frame::-webkit-scrollbar-track {
+    border-radius: 0 !important;
+}
+
+#freqTickmarks {
+    display: flex;
+    box-sizing: content-box;
+    margin: 0 20px;
+    margin-top: -5px;
+}
+
+#freqTickmarks option {
+    padding: 0;
+    font-size: 10px;
+    text-align: center;
+    width: 30px;
+}
+
+#phone-screen-home {
+    z-index: 110;
+}
+
+#phone-screen-call,
+#phone-screen-sms,
+#phone-screen-address,
+#phone-screen-debug,
+#phone-screen-police,
+#phone-screen-radio,
+#phone-screen-dispatch,
+#phone-screen-mainmenu,
+#phone-screen-trevor,
+#phone-screen-settings {
+    display: none;
+    z-index: 120;
+}
+
+.phone-grey-color-header {
+    background-image: linear-gradient(120deg, rgb(51, 51, 51) 0, rgb(26, 26, 26) 100%) !important;
+}
+
+.phone-blue-color-header {
+    background: linear-gradient(40deg, #4e8ff1, #303f9f) !important;
+}
+
+#phone-screen-calling {
+    display: none;
+    z-index: 130;
+}
+
+.phone-calling-button {
+    border-radius: 50% !important;
+    height: 74px;
+    width: 74px;
+    padding: 12px 12px !important;
+}
+
+.phone-header-text {
+    position: relative;
+    color: white;
+    opacity: 1;
+}
+
+.phone-align-right {
+    float: right;
+}
+
+.phone-inline {
+    display: inline;
+}
+
+.btn-rounded {
+    padding: 10px !important;
+    border-radius: 50%!important;
+}
+
+.btn-dial {
+    width: 50px;
+    height: 50px;
+    padding: 10px !important;
+    border-radius: 50%!important;
+}
+
+.phone-dial-table {
+    margin-top: 5%;
+    padding: none !important;
+    width: 100%;
+}
+
+.phone-dial-row {
+    width: 100%;
+    border: none;
+    padding: 0;
+}
+
+.image-based {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#phone-sms-chat {
+    background-image: url("../utils/img/phone/messenger.png") !important;
+    height: 100%;
+    width: 100%;
+}
+
+.layer1 {
+    /* Display */
+    z-index: 100;
+    background-image: url("../utils/img/phone/layer1.png");
+}
+
+.layer2 {
+    z-index: 101;
+    /*background-image: url("../utils/img/phone/brightmode.png");*/
+}
+
+
+/*#phone-screen-call {
+    background-image: url("../utils/img/phone/call.png");
+}*/
+
+.layer3 {
+    /* Casing */
+    z-index: 200;
+    background-image: url("../utils/img/phone/layer3.png");
+    pointer-events: none;
+    height: 100%;
+}
+
+.layer4 {
+    z-index: 210;
+    background-image: url("../utils/img/phone/layer4.png");
+    pointer-events: none;
+    display: none;
+}
+
+
+/*switch*/
+
+.switch {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 30px;
+    padding: 3px;
+    margin: 0 10px 10px 0;
+    background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+    background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+    border-radius: 18px;
+    box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    box-sizing: content-box;
+}
+
+.switch-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    box-sizing: content-box;
+}
+
+.switch-label {
+    position: relative;
+    display: block;
+    height: inherit;
+    font-size: 10px;
+    text-transform: uppercase;
+    background: #eceeef;
+    border-radius: inherit;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+    box-sizing: content-box;
+}
+
+.switch-label:before,
+.switch-label:after {
+    position: absolute;
+    top: 50%;
+    margin-top: -.5em;
+    line-height: 1;
+    -webkit-transition: inherit;
+    -moz-transition: inherit;
+    -o-transition: inherit;
+    transition: inherit;
+    box-sizing: content-box;
+}
+
+.switch-label:before {
+    content: attr(data-off);
+    right: 11px;
+    color: #aaaaaa;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.switch-label:after {
+    content: attr(data-on);
+    left: 11px;
+    color: #FFFFFF;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+
+.switch-input:checked~.switch-label {
+    background: #E1B42B;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.switch-input:checked~.switch-label:before {
+    opacity: 0;
+}
+
+.switch-input:checked~.switch-label:after {
+    opacity: 1;
+}
+
+.switch-handle {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+    background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+    border-radius: 100%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.switch-handle:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -6px 0 0 -6px;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
+    background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
+    border-radius: 6px;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+}
+
+.switch-input:checked~.switch-handle {
+    left: 74px;
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Transition
+========================== */
+
+.switch-label,
+.switch-handle {
+    transition: All 0.3s ease;
+    -webkit-transition: All 0.3s ease;
+    -moz-transition: All 0.3s ease;
+    -o-transition: All 0.3s ease;
+}
+
+
+/* Switch Flat
+==========================*/
+
+.switch-flat {
+    padding: 0;
+    background: #FFF;
+    background-image: none;
+}
+
+.switch-flat .switch-label {
+    background: rgb(66, 66, 66);
+    border: solid 2px #eceeef;
+    box-shadow: none;
+}
+
+.switch-flat .switch-label:after {
+    color: #0088cc;
+}
+
+.switch-flat .switch-handle {
+    top: 6px;
+    left: 6px;
+    background: #dadada;
+    width: 22px;
+    height: 22px;
+    box-shadow: none;
+}
+
+.switch-flat .switch-handle:before {
+    background: #eceeef;
+}
+
+.switch-flat .switch-input:checked~.switch-label {
+    background: rgb(66, 66, 66);
+    border-color: #0088cc;
+}
+
+.switch-flat .switch-input:checked~.switch-handle {
+    left: 72px;
+    background: #0088cc;
+    box-shadow: none;
+}
+
+
+/* Processing Box */
+
+#ProcessingBox {
+    font-family: PEL;
+    text-transform: uppercase;
+    width: 450px;
+    top: 20%;
+    left: 150px;
+    padding: 20px;
+    position: absolute;
+    background: rgba(41, 41, 41, 0.9);
+    text-align: center;
+    max-height: 560px;
+    overflow-y: auto;
+}
+
+.ProcessingBoxLoop {
+    animation: spin1 2s infinite linear;
+    display: block;
+}
+
+.ProcessingBoxHammer {
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+}
+
+.ProcessingBoxHammer:hover {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.ProcessingBoxIconBox {
+    border: rgb(255, 255, 255) 1px solid;
+    width: 10%;
+    display: inline-block;
+}
+
+.ProcessingBoxNeededItemIMG {
+    width: 50%;
+}
+
+.ProcessingBoxZutaten {
+    margin-left: 5%;
+    padding-bottom: 15%;
+    text-align: center;
+    font-size: 89%;
+    width: 25%;
+}
+
+.ProcessingBoxProducedItem {
+    border: #ffffff 1px solid;
+}
+
+.ProcessingBoxNeededItem,
+#ProcessingBoxProducedItem {
+    margin: 3%;
+    color: white;
+    font-size: 150%;
+}
+
+.ProcessingBoxNeededItemTwo,
+.ProcessingBoxNeededItemThree {
+    margin-top: 2%;
+}
+
+.fa-arrow-down {
+    color: white !important;
+    size: 120%;
+    font-size: 120%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#ProcessingBoxNeededItems {
+    border: #ffffff 1px solid;
+    margin: 2%;
+}
+
+#ProcessingBox {
+    position: relative;
+}
+
+#ProcessingBox #ProcessingBoxButtonBoxes {
+    position: absolute;
+    bottom: 2%;
+}
+
+#ProcessingBoxButtonBoxes,
+.ProcessingBoxTitle {
+    text-align: center;
+}
+
+.ProcessingBoxLoopBox {
+    margin-left: 2%;
+}
+
+.ProcessingIMG {
+    width: 100%;
+}
+
+.ProcessingBoxTitle {
+    font-size: 200%;
+    color: white;
+    margin-left: 2%;
+    margin-left: 1%;
+}
+
+.ProcessingBoxLinie {
+    margin-left: 8% !important;
+    margin-right: 8% !important;
+    color: #ffffff !important;
+}
+
+#ProcessingBoxLinie {
+    color: #ffffff !important;
+}
+
+.ProcessingBocCloseBtn {
+    color: #850000;
+    margin-left: -100%;
+    margin-top: -2%;
+    size: 150%;
+}
+
+#ProcessingBoxMainfraim {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 30%;
+    margin-right: 10%;
+}
+
+.ProcessingBoxMainfraimElement {
+    /*width: 15%;*/
+    border: rgb(255, 255, 255) 1px solid;
+    border-radius: 5px;
+    color: white;
+    /*font-size: 100%;*/
+    display: inline-block;
+}
+
+#ProcessingBoxMainfraim,
+.ProcessingBoxZutaten {
+    display: inline-block;
+}
+
+.ProcessingBoxMainfraimElementIMG {
+    width: 70%;
+    margin: 3% 3% 3% 3%;
+}
+
+.fa-arrow-right,
+.ProcessingBoxMainframePlus {
+    size: 180% !important;
+    font-size: 180%;
+    margin-left: 2%;
+    margin-right: 2%;
+    color: white;
+}
+
+@-webkit-keyframes spin1 {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spin1 {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes spin1 {
+    0% {
+        -o-transform: rotate(0deg);
+    }
+    100% {
+        -o-transform: rotate(360deg);
+    }
+}
+
+@-ms-keyframes spin1 {
+    0% {
+        -ms-transform: rotate(0deg);
+    }
+    100% {
+        -ms-transform: rotate(360deg);
+    }
+}
+
+@-keyframes spin1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Slider */
+
+.slidecontainer {
+    width: 100%;
+}
+
+.slidecontainer>.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #1d1d1ddb;
+    outline: none;
+    opacity: 0.6;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slidecontainer>.slider:hover {
+    opacity: 1;
+}
+
+.slidecontainer>.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4c7aaf;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+#animInput {
+    background: #1b1b1b6b;
+    background-position: 10px 12px;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+    font-family: PEL;
+    padding: 12px 20px 12px 40px;
+    margin-bottom: 12px;
+}
+
+
+/* PERSO */
+
+#UserIdCard {
+    display: none;
+    animation: fadeInLeft 1.5s;
+    top: 150px;
+    right: 10px;
+    width: 500px;
+    height: 300px;
+    background-image: url(../utils/img/identi/useridcard.png);
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+#UserIdCard-name {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    top: 125px;
+    left: 175px;
+}
+
+#UserIdCard-address {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    top: 165px;
+    left: 175px;
+}
+
+#UserIdCard-birthdate {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    top: 215px;
+    left: 45px;
+}
+
+#UserIdCard-birthplace {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    top: 250px;
+    left: 46px;
+}
+
+#UserIdCard-signature {
+    position: absolute;
+    color: #5a8ff1;
+    font-size: 15px;
+    font-family: DB;
+    font-weight: bolder;
+    text-align: left;
+    top: 225px;
+    left: 310px;
+}
+
+#UserIdCard-joinInfo {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    top: 225px;
+    left: 195px;
+}
+
+
+/* PERSO-END */
+
+
+/* FACTION-CARD */
+
+#FactionCard {
+    display: none;
+    animation: fadeInLeft 1.5s;
+    top: 150px;
+    right: 10px;
+    width: 500px;
+    height: 300px;
+    background-image: url(../utils/img/identi/factioncard.png);
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+#FactionCard-name {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    top: 125px;
+    left: 175px;
+}
+
+#FactionCard-address {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    top: 165px;
+    left: 175px;
+}
+
+#FactionCard-birthdate {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    top: 215px;
+    left: 45px;
+}
+
+#FactionCard-birthplace {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    top: 250px;
+    left: 46px;
+}
+
+#FactionCard-signature {
+    position: absolute;
+    color: #5a8ff1;
+    font-size: 15px;
+    font-family: DB;
+    font-weight: bolder;
+    text-align: left;
+    top: 225px;
+    left: 310px;
+}
+
+#FactionCard-joinInfo {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    top: 225px;
+    left: 195px;
+}
+
+#FactionCard-serviceNumber {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+    top: 86px;
+    left: 245px;
+}
+
+#FactionCard-rankname {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+    top: 65px;
+    left: 212px;
+}
+
+#FactionCard-factionname {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    top: 30px;
+    left: 175px;
+}
+
+
+/* FACTION-CARD-END */
+
+div#changeVehOwnerHUD {
+    position: absolute;
+    text-align: center;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-35%);
+    height: 200px;
+    width: 295px;
+    background-color: rgba(54, 54, 54, .9);
+}
+
+div#changeVehOwnerHUD>p.title {
+    position: relative;
+    text-align: center;
+    top: 0%;
+    left: 0%;
+    margin: 0;
+    padding: 0;
+    padding-right: 5%;
+    margin-top: 3%;
+    color: #fdfdfdb9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+div#changeVehOwnerHUD>p.desc {
+    position: relative;
+    text-align: center;
+    top: 0%;
+    margin: 0;
+    padding: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8vw;
+}
+
+div#changeVehOwnerHUD>input {
+    position: relative;
+    text-align: center;
+    top: 0%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2%;
+    height: 1.8vw;
+    width: 90%;
+    border: none;
+    outline: none;
+    background-color: rgb(17, 17, 17);
+    color: rgb(255, 255, 255);
+    transition: all 0.15s ease-in-out;
+}
+
+div#changeVehOwnerHUD>input:focus {
+    background-color: rgb(6, 6, 6);
+}
+
+div#changeVehOwnerHUD>button {
+    position: relative;
+    text-align: center;
+    top: 0%;
+    margin: 0;
+    padding: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 2%;
+    height: 1.8vw;
+    width: fit-content;
+    border: solid .15vw #ffffffb9;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: .8vw;
+    color: rgb(255, 255, 255);
+    background-color: rgb(6, 6, 6);
+    transition: all 0.15s ease-in-out;
+}
+
+div#changeVehOwnerHUD>button:active {
+    border: solid .15vw #00d9ff00;
+    color: rgb(0, 0, 0);
+    background-color: #00d9ffb9;
+}
+
+div#changeVehOwnerHUD>p.closebtn:active {
+    color: rgb(184, 0, 0);
+    opacity: 1;
+}
+
+div#changeVehOwnerHUD>p.closebtn {
+    display: table;
+    color: #ffffff;
+    text-align: left;
+    position: absolute;
+    background: rgba(204, 33, 33, 0.47);
+    opacity: .4;
+    border-top: none;
+    border-left: none;
+    transition: all 0.5s ease-in-out;
+    font-size: 14px;
+    width: 20px;
+    height: 20px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+
+/* SHOP */
+
+div#shopCEFBox {
+    opacity: 0;
+}
+
+div#shopCEFBox {
+    display: none;
+}
+
+div#shopCEFBox>ul.list-group {
+    float: left;
+    padding: 12px;
+    border-radius: 8px;
+    display: block;
+    max-height: 410px;
+    overflow-y: auto;
+}
+
+div#shopCEFBox>ul.list-group>li.list-group-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    float: left;
+    padding: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
+    width: 172px;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+div#shopCEFBox>span.closeBankManageForm {
+    color: #b10b0b;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    top: 0;
+    opacity: .45;
+    transition: all 0.5s ease-in-out;
+}
+
+div#shopCEFBox>span.robShop {
+    color: #b10b0b;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    top: 0;
+    opacity: .45;
+    transition: all 0.5s ease-in-out;
+}
+
+div#shopCEFBox>span.closeBankManageForm:hover {
+    opacity: .8;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.buybtn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+div#shopCEFBox {
+    width: 620px;
+    top: 20%;
+    left: 150px;
+    padding: 10px;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(0deg, rgb(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
+    text-align: center;
+    padding-bottom: 12px;
+}
+
+div#shopCEFBox>ul.list-group>li.list-group-item>img {
+    width: 46px;
+    margin-bottom: 5px;
+}
+
+div#shopCEFBox>ul.list-group>li.list-group-item>p.name {
+    color: #d2d2d2;
+    font-family: PT;
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+div#shopCEFBox>ul.list-group>li.list-group-item>hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+div#shopCEFBox>ul.list-group>li.list-group-item>p.price {
+    color: #3fb734eb;
+    font-family: PT;
+    font-size: 15px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+div#shopCEFBox>ul.list-group>li.list-group-item>input {
+    outline: none;
+    border: none;
+    width: 100px;
+    text-align: center;
+    color: #909090;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.21);
+    border: 1px solid #0000004f;
+    margin-top: 5px;
+}
+
+div#shopCEFBox>ul.list-group>li.list-group-item>button {
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    border-radius: 4px;
+    padding-bottom: 6px;
+    border: none;
+    background-color: #272727;
+    color: #676767;
+    margin-top: -2px;
+    margin-right: -5px;
+    transition: all 0.5s ease-in-out;
+}
+
+div#shopCEFBox>ul.list-group>li.list-group-item>button:hover {
+    cursor: pointer;
+    background: #ffffff63;
+    color: #d2d2d2;
+}
+
+
+/* GARAGE */
+
+div#GarageCEFBox {
+    opacity: 0;
+}
+
+div#GarageCEFBox {
+    display: none;
+}
+
+div#GarageCEFBox {
+    width: 600px;
+    padding: 35px;
+    top: 20%;
+    position: absolute;
+    z-index: 100;
+    background: linear-gradient(0deg, rgb(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
+    text-align: center;
+    padding-bottom: 0;
+    left: 20px;
+}
+
+div#GarageCEFBox>p#GarageCEFBOX-title {
+    display: table;
+    color: #d2d2d2;
+    text-align: center;
+    margin-left: 150px;
+    margin-top: -35px;
+    font-size: 0.95rem;
+    border-top-left-radius: 12px;
+    font-family: PT;
+    font-weight: bold;
+    padding-left: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 12px;
+}
+
+div#GarageCEFBox>img.Pic {
+    width: 150px;
+    height: 100px;
+    margin-top: -0.5rem;
+}
+
+div#GarageCEFBox>hr {
+    margin-top: 1.45px;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #00000063;
+    width: 600px;
+    margin-left: -35px;
+}
+
+div#GarageCEFBox>div.secbox {
+    background: rgba(0, 0, 0, 0.2);
+    margin-left: -35px;
+    margin-right: -35px;
+    margin-top: -16px;
+    z-index: 100;
+    padding: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #00000063;
+    display: flow-root;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+div#GarageCEFBox>div.secbox>p.title {
+    font-size: 1.25rem;
+    margin-bottom: 0.2rem;
+    color: #dedbdb;
+}
+
+div#GarageCEFBox>div.secbox>p.infotext {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 0.9rem;
+    word-break: break-word;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList {
+    margin-bottom: 0.5rem;
+    display: block;
+    float: left;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item {
+    background: #31313170;
+    padding: 0 0;
+    text-align: left;
+    margin-left: 0.8rem;
+    float: left;
+    max-width: 260px;
+    margin-bottom: 1rem;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    filter: grayscale(0.3);
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.vehname,
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.vehtank,
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.vehkz {
+    color: #c3bcbc;
+    font-family: OSL;
+    font-weight: bold;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.11);
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px solid #00000096;
+    border-top: none;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.vehname {
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-left: none;
+    float: left;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.vehkz {
+    float: right;
+    border-right: none;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>img {
+    margin-left: 35px;
+    margin-bottom: 15px;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item.green:hover {
+    cursor: pointer;
+    background: rgba(40, 158, 99, 0.3);
+    filter: grayscale(0);
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item.red:hover {
+    cursor: pointer;
+    background: rgba(152, 36, 36, 0.3);
+    filter: grayscale(0);
+}
+
+div#GarageCEFBox>p.closebtn {
+    display: table;
+    color: red;
+    text-align: left;
+    position: absolute;
+    margin-left: -35px;
+    margin-top: -34px;
+    padding-left: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 14px;
+    transition: all 0.5s ease-in-out;
+    font-size: 14px;
+}
+
+
+/*CarRental*/
+
+div#Minijob-PilotCEFBox {
+    opacity: 0;
+}
+
+div#Minijob-PilotCEFBox {
+    display: none;
+}
+
+div#Minijob-PilotCEFBox {
+    width: 650px;
+    height: 295px;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: linear-gradient(0deg, rgb(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
+    text-align: center;
+}
+
+div#Minijob-PilotCEFBox>p.title {
+    font-size: 20px;
+    font-family: PEL;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background-color: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2px;
+}
+
+div#Minijob-PilotCEFBox>p.description {
+    color: #d2d2d2;
+    font-size: 14px;
+    font-family: PEL;
+}
+
+div#Minijob-PilotCEFBox>ul.list-group {
+    background: transparent;
+    height: 150px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+div#Minijob-PilotCEFBox>ul.list-group::-webkit-scrollbar {
+    display: none;
+}
+
+div#Minijob-PilotCEFBox>ul.list-group>li.list-group-item {
+    background: rgba(0, 0, 0, 0.267);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    padding-top: 25px;
+    transition: all 0.3s;
+    filter: grayscale(1);
+}
+
+div#Minijob-PilotCEFBox>ul.list-group>li.list-group-item:hover {
+    cursor: pointer;
+    filter: grayscale(0);
+}
+
+div#Minijob-PilotCEFBox>ul.list-group>li.list-group-item>p.title {
+    background-image: linear-gradient(to right, #36E969, #36E969);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: PM;
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-bottom: -40;
+}
+
+div#Minijob-PilotCEFBox>ul.list-group>li.list-group-item>p.veh {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 14px;
+    letter-spacing: 1px;
+}

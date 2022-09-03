@@ -1,13 +1,17 @@
-﻿using AltV.Net;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
+using AltV.Net;
 using AltV.Net.Async;
 using AltV.Net.Data;
 using AltV.Net.Elements.Entities;
 using Altv_Roleplay.Factories;
 using Altv_Roleplay.Model;
 using Altv_Roleplay.Utils;
-using System;
-using System.Diagnostics;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Altv_Roleplay.Handler
 {
@@ -66,7 +70,60 @@ namespace Altv_Roleplay.Handler
             client.EmitLocked("Client:Login:CreateCEF"); //Login triggern
         }
 
-        #region Login
+        #region Login (WBB)
+        private const string Key = "J@McQfTjWnZr4u7x"; //128-Character Key
+        private const string RequestUrl = "https://forum.nightout-gaming.de/Wbb-Verify.php";  //URL to PHP-File
+
+        private static readonly HttpClient Client = new HttpClient();
+
+        public enum LoginStatusCode
+        {
+            Error = 0,
+            KeyWrong = 1,
+            DataMissing = 2,
+            Success = 10,
+            WrongPasswordUsername = 11
+        }
+
+        public class LoginUserData
+        {
+            public int UserId { get; set; }
+            public string Username { get; set; }
+            public bool Banned { get; set; }
+            public string BanReason { get; set; }
+            public bool Whitelisted { get; set; }
+        }
+
+        public class LoginResponse
+        {
+            public LoginStatusCode StatusCode { get; set; }
+            public LoginUserData UserData { get; set; }
+
+            public LoginResponse(LoginStatusCode statusCode, LoginUserData userData)
+            {
+                StatusCode = statusCode;
+                UserData = userData;
+            }
+        }
+
+        private static async Task<LoginResponse> MakePostRequest(string requestUrl, string username, string password, string key)
+        {
+
+            var values = new Dictionary<string, string>
+            {
+                { "Username", username.ToLower() },
+                { "Password", password },
+                { "Key", key }
+            };
+
+            var content = new FormUrlEncodedContent(values);
+            var response = await Client.PostAsync(requestUrl, content);
+            var responseString = await response.Content.ReadAsStringAsync();
+
+            return JsonConvert.DeserializeObject<LoginResponse>(responseString);
+        }
+
+
         [AsyncClientEvent("Server:Login:ValidateLoginCredentials")]
         public void ValidateLoginCredentials(ClassicPlayer client, string username, string password)
         {
@@ -79,69 +136,90 @@ namespace Altv_Roleplay.Handler
                 return;
             }
 
-            if (!User.ExistPlayerName(username))
+            LoginResponse loginInfo;
+            Console.WriteLine($"ValidateLoginCredentials - Thread = {Thread.CurrentThread.ManagedThreadId}");
+
+            loginInfo = MakePostRequest(RequestUrl, username, password, Key).Result;
+
+            switch (loginInfo.StatusCode)
             {
-                client.EmitLocked("Client:Login:showError", "Der eingegebene Benutzername wurde nicht gefunden.");
-                
-                DiscordLog.SendEmbed("login", "NightOut-Admin | Log", "\nUsername: " + username + "\nSocialID: " + client.SocialClubId + "\nIP: " + client.Ip + "\nHWID: " + client.HardwareIdHash + "\nDer eingegebene Benutzername wurde nicht gefunden.");
-                return;
+                case LoginStatusCode.Success:
+                    ((ClassicPlayer)client).accountId = loginInfo.UserData.UserId;
+
+                    if (User.ExistPlayerName(username.ToLower()))
+                    {
+                        // nothing
+                        User.SetPlayerIP(client, username.ToLower());
+                        User.SetPlayerHardwareID(client, username.ToLower());
+                    }
+                    else
+                    {
+                        User.CreatePlayerAccount(client, username.ToLower());
+                        User.SetPlayerHardwareID(client, username.ToLower());
+                    }
+
+
+                    if (loginInfo.UserData.Banned)
+                    {
+                        if (User.IsPlayerBanned(client))
+                        {
+                            client.EmitLocked("Client:Login:showError", "Du wurdest gebannt. Grund: {0}", loginInfo.UserData.BanReason);
+                        }
+                        else
+                        {
+                            User.SetPlayerBanned(client, true, loginInfo.UserData.BanReason);
+                            client.EmitLocked("Client:Login:showError", "Du wurdest gebannt. Grund: {0}", loginInfo.UserData.BanReason);
+                        }
+
+                    }
+                    else
+                    {
+                        if (User.IsPlayerBanned(client))
+                        {
+                            User.SetPlayerBanned(client, false, "");
+                        }
+                    }
+
+                    if (!User.ExistPlayerName(username.ToLower()))
+                    {
+                        client.EmitLocked("Client:Login:showError", "Dieser Account wurde nicht gefunden. Erstelle dir einen Account bei uns im Forum.");
+                    }
+
+                    if (loginInfo.UserData.Whitelisted)
+                    {
+                        //User.CreatePlayerAccount(client, username);
+                        client.Dimension = (short)User.GetPlayerAccountId(client);
+                        client.EmitLocked("Client:Login:SaveLoginCredentialsToStorage", username, password);
+                        User.SetPlayerOnline(client, 1);
+                        SendDataToCharselectorArea(client);
+                        stopwatch.Stop();
+                        if (stopwatch.Elapsed.Milliseconds > 30) //Alt.Log($"ValidateLoginCredentials benötigte {stopwatch.Elapsed.Milliseconds}ms");
+                            return;
+                    }
+                    else
+                    {
+                        client.EmitLocked("Client:Login:showError", "Du musst dich erst Whitelisten lassen!");
+                    }
+                    break;
+
+                case LoginStatusCode.WrongPasswordUsername:
+                    client.EmitLocked("Client:Login:showError", "Der Benutzername oder das Passwort stimmen nicht überein.");
+                    break;
+
+                case LoginStatusCode.DataMissing:
+                    client.EmitLocked("Client:Login:showError", "Trage deinen Benutzernamen oder Passwort ein.");
+                    new LoginResponse(LoginStatusCode.DataMissing, null);
+                    break;
+
+                case LoginStatusCode.KeyWrong:
+                    client.EmitLocked("Client:Login:showError", "Der Login Service ist nicht erreichbar.");
+                    new LoginResponse(LoginStatusCode.KeyWrong, null);
+                    break;
+
+                default:
+                    new LoginResponse(LoginStatusCode.Error, null);
+                    break;
             }
-
-            if (!BCrypt.Net.BCrypt.Verify(password, User.GetPlayerPassword(username)))
-            {
-                client.EmitLocked("Client:Login:showError", "Das eingegebene Passwort ist falsch.");
-                
-                DiscordLog.SendEmbed("login", "NightOut-Admin | Log", "\nUsername: " + username + "\nSocialID: " + client.SocialClubId + "\nIP: " + client.Ip + "\nHWID: " + client.HardwareIdHash + "\nDas eingegebene Passwort ist falsch.");
-                return;
-            }
-
-            /*if(User.GetPlayerSocialclubId(username) != client.SocialClubId)*/
-            if (User.GetPlayerSocialclubId(username) != 0) { if (User.GetPlayerSocialclubId(username) != client.SocialClubId) { client.EmitLocked("Client:Login:showError", "Fehler bei der Anmeldung (Fehlercode 508)."); return; } }
-            else { User.SetPlayerSocialID(client); }
-
-            if (!User.IsPlayerWhitelisted(username))
-            {
-                //client.EmitLocked("Client:Login:showError", "Dieser Benutzeraccount wurde noch nicht im Support aktiviert.");
-                var pl = User.GetPlayerAccountIdByUsername(username);
-                if (User.GetPlayerWhitelistTime(pl) == 0)
-                {
-                    client.EmitLocked("Client:Login:showArea", "whitelist");
-                }
-                else
-                {
-                    //client.EmitLocked("Client:Login:showArea", "login");
-                    client.EmitLocked("Client:Login:showError", "Du hast die Whitelist leider nicht bestanden, nach dem nächsten Server Restart kannst du es nochmal versuchen!");
-                }
-
-                DiscordLog.SendEmbed("login", "NightOut-Admin | Log", "\nUsername: " + username + "\nSocialID: " + client.SocialClubId + "\nIP: " + client.Ip + "\nHWID: " + client.HardwareIdHash + "\nDieser Benutzeraccount wurde noch nicht im Support aktiviert.");
-                return;
-            }
-
-            if (User.GetPlayerHardwareID(client) != 0) { if (User.GetPlayerHardwareID(client) != client.HardwareIdHash) { client.EmitLocked("Client:Login:showError", "Fehler bei der Anmeldung (Fehlercode 187)."); return; } }
-            else { User.SetPlayerHardwareID(client); }
-
-            if (User.IsPlayerBanned(client))
-            {
-                client.EmitLocked("Client:Login:showError", "Dieser Benutzeraccount wurde gebannt, im Support melden.");
-                
-                DiscordLog.SendEmbed("login", "NightOut-Admin | Log", "\nUsername: " + username + "\nSocialID: " + client.SocialClubId + "\nIP: " + client.Ip + "\nHWID: " + client.HardwareIdHash + "\nDieser Benutzeraccount wurde gebannt, im Support melden.");
-                return;
-            }
-
-            client.EmitLocked("Client:Login:SaveLoginCredentialsToStorage", username, password);
-            User.SetPlayerOnline(client, 0);
-            lock (client)
-            {
-                if (client == null || !client.Exists) return;
-                client.accountId = (short)User.GetPlayerAccountId(client);
-                client.Dimension = (short)User.GetPlayerAccountId(client);
-            }
-
-            SendDataToCharselectorArea(client);
-            
-            DiscordLog.SendEmbed("login", "NightOut-Admin | Log", "\nUsername: " + username + "\nSocialID: " + client.SocialClubId + "\nIP: " + client.Ip + "\nHWID: " + client.HardwareIdHash + "\nErfolgreich eingeloggt.");
-            stopwatch.Stop();
-            if (stopwatch.Elapsed.Milliseconds > 30) Alt.Log($"ValidateLoginCredentials benötigte {stopwatch.Elapsed.Milliseconds}ms");
         }
         #endregion
 
@@ -175,7 +253,7 @@ namespace Altv_Roleplay.Handler
             }
 
             string charName = Characters.GetCharacterName(charid);
-            User.SetPlayerOnline(client, charid); 
+            User.SetPlayerOnline(client, charid); //Online Feld = CharakterID
             lock (client)
             {
                 if (client == null || !client.Exists) return;
@@ -231,7 +309,7 @@ namespace Altv_Roleplay.Handler
 
             client.EmitLocked("Client:ServerBlips:LoadAllBlips", ServerBlips.GetAllServerBlips());
             client.EmitLocked("Client:ServerMarkers:LoadAllMarkers", ServerBlips.GetAllServerMarkers());
-            
+            client.EmitLocked("Client:SpawnArea:setCharSkin", Characters.GetCharacterSkin("facefeatures", charid), Characters.GetCharacterSkin("headblendsdata", charid), Characters.GetCharacterSkin("headoverlays", charid));
             Position dbPos = Characters.GetCharacterLastPosition(charid);
             lock (client)
             {
@@ -248,14 +326,13 @@ namespace Altv_Roleplay.Handler
                 client.Armor = (ushort)Characters.GetCharacterArmor(charid);
             }
             HUDHandler.CreateHUDBrowser(client); //HUD erstellen
-            
+            //WeatherHandler.SetRealTime(client); //Echtzeit setzen
             Characters.SetCharacterCorrectClothes(client);
-            Characters.SetCharacterSkin(client);
             Characters.SetCharacterLastLogin(charid, DateTime.Now);
             Characters.SetCharacterCurrentFunkFrequence(charid, null);
             Alt.Emit("SaltyChat:EnablePlayer", client, (int)charid);
             client.EmitLocked("SaltyChat_OnConnected");
-            
+            //client.SetSyncedMetaData("NAME", User.GetPlayerUsername(((ClassicPlayer)client).accountId) + " | " + Characters.GetCharacterName((int)client.GetCharacterMetaId()));
             if (Characters.IsCharacterUnconscious(charid))
             {
                 lock (client)
@@ -321,7 +398,7 @@ namespace Altv_Roleplay.Handler
             }
             client.updateTattoos();
             stopwatch.Stop();
-            if (stopwatch.Elapsed.Milliseconds > 30) 
+            if (stopwatch.Elapsed.Milliseconds > 30) //Alt.Log($"{charid} - CharacterSelectedSpawnPlace benötigte {stopwatch.Elapsed.Milliseconds}ms");
                 await Task.Delay(5000);
             Model.ServerTattoos.GetAllTattoos(client);
         }

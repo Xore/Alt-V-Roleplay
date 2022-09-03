@@ -1,17 +1,18 @@
 ﻿using AltV.Net;
-using AltV.Net.Async;
 using AltV.Net.Data;
 using AltV.Net.Elements.Entities;
-using AltV.Net.Enums;
-using Altv_Roleplay.Factories;
-using Altv_Roleplay.Handler;
 using Altv_Roleplay.models;
-using Altv_Roleplay.Utils;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
+using System.Text;
+using AltV.Net.Enums;
 using System.Linq;
+using System.Globalization;
+using Altv_Roleplay.Utils;
+using Newtonsoft.Json;
+using System.Threading.Tasks;
+using AltV.Net.Async;
+using Altv_Roleplay.Factories;
 
 namespace Altv_Roleplay.Model
 {
@@ -22,27 +23,6 @@ namespace Altv_Roleplay.Model
         public static List<Server_Vehicles> ServerVehicles_ = new List<Server_Vehicles>();
         public static List<Server_Vehicles_Mod> ServerVehiclesMod_ = new List<Server_Vehicles_Mod>();
         public static List<Server_Vehicle_Items> ServerVehicleTrunkItems_ = new List<Server_Vehicle_Items>();
-        public static List<Server_All_Vehicles> ServerAllVehicles_ = new List<Server_All_Vehicles>();
-
-
-
-        public static int VehicleClass(long hash)
-        {
-            try
-            {
-                if (hash <= 0) return 0;
-                var vehs = ServerAllVehicles_.FirstOrDefault(x => x.hash == hash);
-                if (vehs != null)
-                {
-                    return vehs.vehClass;
-                }
-            }
-            catch (Exception e)
-            {
-                Alt.Log($"{e}");
-            }
-            return 0;
-        }
 
         public static void CreateServerVehicle(int id, int charid, uint hash, int vehType, int factionid, float fuel, float km, bool engineState, bool isEngineHealthy, bool lockState, bool isInGarage, int garageId, Position position, Rotation rotation, string plate, DateTime lastUsage, DateTime buyDate)
         {
@@ -145,89 +125,6 @@ namespace Altv_Roleplay.Model
             }
             return 0;
         }
-
-        public static int GetVehicleIdBySerial(int serial)
-        {
-            try
-            {
-                var vehicle = ServerVehicles_.FirstOrDefault(x => x.serial == serial);
-                if (vehicle != null)
-                {
-                    return vehicle.id;
-                }
-            }
-            catch (Exception e)
-            {
-                Alt.Log($"{e}");
-            }
-            return 0;
-        }
-
-        public static int GetSerialByVehicleId(int vehId)
-        {
-            try
-            {
-                var vehicle = ServerVehicles_.FirstOrDefault(x => x.id == vehId);
-                if (vehicle != null)
-                {
-                    return vehicle.serial;
-                }
-            }
-            catch (Exception e)
-            {
-                Alt.Log($"{e}");
-            }
-            return 0;
-        }
-
-        /*public void GetVehicleInformations(int vehId)
-        {
-            try
-            {   
-                if (vehId <= 0) return;
-                int ownerId = ServerVehicles.GetVehicleOwnerById(vehId);
-                if (ownerId <= 0) return;
-
-                string owner = Characters.GetCharacterName(ownerId);
-
-                string vehName = ServerVehicles.GetVehicleNameOnHash(ServerVehicles.GetVehicleHashById(vehId));
-
-                string manufactor = ServerVehicles.GetVehicleManufactorOnHash(ServerVehicles.GetVehicleHashById(vehId));
-
-                int serial = ServerVehicles.GetSerialByVehicleId(vehId);
-
-                //string plate = ServerVehicles.GetPlateByID(vehid); //ToDo
-
-                string buyDate = $"{ServerVehicles.GetVehicleBuyDate(vehId).ToString("d", CultureInfo.CreateSpecificCulture("de-DE"))}";
-                
-                string fuelType = ServerVehicles.GetVehicleFuelTypeOnHash(ServerVehicles.GetVehicleHashById(vehId));
-            }
-            catch (Exception e)
-            {
-                Alt.Log($"{e}");
-            }
-        }
-
-        internal static void openVehReg(IPlayer player, int vehId)
-        {
-            try
-            {
-                if (player == null || !player.Exists) return;
-                if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 2500, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
-                int charId = User.GetPlayerOnline(player);
-                int serial = ServerVehicles.GetSerialByVehicleId(vehId);
-                if (!CharactersInventory.ExistCharacterItem(charId, $"Fahrzeugpapiere {serial}", "brieftasche")) return;
-                if (charId <= 0) return;
-
-                var data = ServerVehicles.GetVehicleInformations(vehId);
-
-                player.EmitLocked("Client:IdentityCard:showVehReg", "veh", data);
-            }
-            catch (Exception e)
-            {
-                Alt.Log($"{e}");
-            }
-        }*/
 
         public static int GetVehicleTrunkItemAmount(int vehId, string itemName, bool inGlovebox)
         {
@@ -475,7 +372,7 @@ namespace Altv_Roleplay.Model
             long vehID = veh.GetVehicleId();
             if (veh == null || !veh.Exists || vehID == 0) return 0;
             var vehs = ServerVehicles_.FirstOrDefault(v => (long)v.id == vehID);
-
+            
             if (vehs != null)
             {
                 return vehs.vehType == 13 ? 50f : vehs.fuel;
@@ -805,7 +702,7 @@ namespace Altv_Roleplay.Model
                     using (gtaContext db = new gtaContext())
                     {
                         db.Server_Vehicles.Update(vehs);
-                        db.SaveChanges();
+                        db.SaveChanges();                        
                     }
                 }
             }
@@ -1128,7 +1025,7 @@ namespace Altv_Roleplay.Model
             }
         }
 
-        public static void CreateVehicle(long hash, int charid, int vehtype, int faction, bool isInGarage, int garageId, Position pos, Rotation rot, string plate, int colorR, int colorG, int colorB, int vehClass, int serial)
+        public static void CreateVehicle(long hash, int charid, int vehtype, int faction, bool isInGarage, int garageId, Position pos, Rotation rot, string plate, int colorR, int colorG, int colorB)
         {
             try
             {
@@ -1153,9 +1050,7 @@ namespace Altv_Roleplay.Model
                     rotZ = rot.Yaw,
                     plate = plate,
                     lastUsage = DateTime.Now,
-                    buyDate = DateTime.Now,
-                    vehClass = ServerAllVehicles.GetVehicleClass(hash),
-                    serial = serial
+                    buyDate = DateTime.Now
                 };
                 ServerVehicles_.Add(nVehicle);
 
@@ -1209,8 +1104,8 @@ namespace Altv_Roleplay.Model
                         if (dbitem == null) return;
                         db.Remove(dbitem);
                         ServerVehicleTrunkItems_.Remove(item);
-                    }
-
+                    }                  
+                    
                     db.SaveChanges();
                     Alt.RemoveVehicle(veh);
                 }

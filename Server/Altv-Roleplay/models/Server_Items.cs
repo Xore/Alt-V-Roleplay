@@ -21,6 +21,14 @@ namespace Altv_Roleplay.models
         public bool isItemDroppable { get; set; }
         public bool isItemUseable { get; set; }
         public bool isItemGiveable { get; set; }
+        public bool isItemClothes { get; set; }
+        public string ClothesType { get; set; }
+        public int ClothesDraw { get; set; }
+        public int ClothesTexture { get; set; }
+        public int ClothesUndershirt { get; set; }
+        public int ClothesUndershirtTexture { get; set; }
+        public int ClothesDecals { get; set; }
+        public int ClothesDecalsTexture { get; set; }
         public string itemPicSRC { get; set; }
     }
 }

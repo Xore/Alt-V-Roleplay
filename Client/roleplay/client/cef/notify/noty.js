@@ -554,7 +554,7 @@
 
                 var Defaults = exports.Defaults = {
                     type: 'alert',
-                    layout: 'bottomCenter',
+                    layout: 'topCenter',
                     theme: 'mint',
                     text: '',
                     timeout: false,
@@ -696,7 +696,7 @@
                 function build(ref) {
                     findOrCreateContainer(ref);
 
-                    var markup = '<div class="noty_body">' + ref.options.text + '</div>' + buildButtons(ref) + '<div class="noty_progressbar" style="z-index:2;background: purple;"></div>';
+                    var markup = '<div class="noty_body" style="z-index:6;">' + ref.options.text + '</div>' + buildButtons(ref) + '<div class="noty_progressbar" style="z-index:2;"></div>';
 
                     ref.barDom = document.createElement('div');
                     ref.barDom.setAttribute('id', ref.id);

@@ -1,13 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using AltV.Net;
 using AltV.Net.Async;
 using AltV.Net.Data;
 using AltV.Net.Elements.Entities;
+using AltV.Net.Enums;
 using Altv_Roleplay.Factories;
 using Altv_Roleplay.Model;
 using Altv_Roleplay.Utils;
-using System;
-using System.Globalization;
-using System.Linq;
 
 namespace Altv_Roleplay.Handler
 {
@@ -51,11 +55,11 @@ namespace Altv_Roleplay.Handler
                 float backpackWeight = CharactersInventory.GetCharacterItemWeight(charId, "backpack");
                 if (!CharactersInventory.ExistCharacterItem(charId, itemname, fromContainer)) return;
 
-                if (toContainer == "inventory") { if (invWeight + itemWeight > 5f) { HUDHandler.SendNotification(player, 3, 2500, $"Soviel Platz hast du im Inventar nicht."); return; } }
+                if (toContainer == "inventory") { if (invWeight + itemWeight > 15f) { HUDHandler.SendNotification(player, 3, 2500, $"Soviel Platz hast du im Inventar nicht."); return; } }
                 else if (toContainer == "backpack") { if (backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId))) { HUDHandler.SendNotification(player, 3, 2500, $"Soviel Platz hast du in deinen Taschen / deinem Rucksack nicht."); return; } }
 
                 if (CharactersInventory.GetCharacterItemAmount(charId, itemname, fromContainer) < itemAmount) { HUDHandler.SendNotification(player, 3, 2500, "Die angegebene Item-Anzahl ist größer als die Anzahl der Items die du mit dir trägst."); return; }
-                if (itemname == "Rucksack" || itemname == "Tasche" || itemname == "EMT-Rucksack" || normalName == "Ausweis" || normalName == "Fahrzeugpapiere" || normalName == "Fuehrerschein" || normalName == "Waffenschein" || normalName == "Bargeld" || normalName == "Smartphone" || normalName == "EC-Karte" || normalName == "Fahrzeugschluessel") { HUDHandler.SendNotification(player, 3, 2500, "Diesen Gegenstand kannst du nicht in deinen Rucksack / deine Tache legen."); return; }
+                if (itemname == "Rucksack" || itemname == "Tasche" || normalName == "Ausweis" || normalName == "Bargeld" || normalName == "Smartphone" || normalName == "EC-Karte" || normalName == "Fahrzeugschluessel") { HUDHandler.SendNotification(player, 3, 2500, "Diesen Gegenstand kannst du nicht in deinen Rucksack / deine Tache legen."); return; }
                 CharactersInventory.RemoveCharacterItemAmount(charId, itemname, itemAmount, fromContainer);
                 CharactersInventory.AddCharacterItem(charId, itemname, itemAmount, toContainer);
                 HUDHandler.SendNotification(player, 1, 2500, $"Du hast {itemAmount}x {itemname} verschoben.");
@@ -91,72 +95,6 @@ namespace Altv_Roleplay.Handler
                     player.EmitLocked("Client:HUD:UpdateDesire", Characters.GetCharacterHunger(charId), Characters.GetCharacterThirst(charId)); //HUD updaten
                 }
 
-                #region Documents
-                else if (itemname.Contains("Ausweis"))
-                {
-                    if (player == null || !player.Exists) return; ;
-                    if (charId <= 0) return;
-                    if (Characters.GetCharacterAccState(charId) <= 0) return;
-                    if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 5000, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
-                    var data = "[]";
-
-                    data = Characters.GetCharacterInformations(charId);
-                    if (data == null || data == "[]") return;
-                    player.EmitLocked("Client:IdentityCard:showIdentityCard", "perso", data);
-                }
-
-                else if (itemname.Contains("Fuehrerschein"))
-                {
-                    if (player == null || !player.Exists) return;
-                    if (charId <= 0) return;
-                    if (Characters.GetCharacterAccState(charId) <= 0) return;
-                    if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 5000, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
-                    var data = "[]";
-
-                    data = CharactersLicenses.GetDriverLicenses(charId);
-                    if (data == null || data == "[]") return;
-                    player.EmitLocked("Client:IdentityCard:showDriversLic", "drivers", data);
-                }
-
-                else if (itemname.Contains("Waffenschein"))
-                {
-                    if (player == null || !player.Exists) return;
-                    if (charId <= 0) return;
-                    if (Characters.GetCharacterAccState(charId) <= 0) return;
-                    if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 5000, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
-                    var data = "[]";
-
-                    data = Characters.GetCharacterInformations(charId);
-                    if (data == null || data == "[]") return;
-                    player.EmitLocked("Client:IdentityCard:showWepLic", "wep", data);
-                }
-
-                /*else if (itemname.Contains("Fahrzeugpapiere")) //ToDo
-                {
-                    if (player == null || !player.Exists) return;
-                    if (charId <= 0) return;
-                    if (Characters.GetCharacterAccState(charId) <= 0) return;
-                    if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 5000, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
-                    var data = "[]";
-
-                    int serialNumber = Server_Vehicles.;
-                    string serial1 = ($"Fahrzeugpapiere {serialNumber}");
-
-                    data = ServerVehicles.GetVehicleInformations(serial);
-                    if (data == null || data == "[]") return;
-                    player.EmitLocked("Client:IdentityCard:showVehReg", "veh", data);
-                }*/
-                else if (itemname == "EC-Karte")
-                {
-                    var atmPos = ServerATM.ServerATM_.FirstOrDefault(x => player.Position.IsInRange(new Position(x.posX, x.posY, x.posZ), 1f));
-                    if (atmPos == null || player.IsInVehicle) { HUDHandler.SendNotification(player, 3, 2500, "Du bist an keinem ATM oder sitzt in einem Auto."); return; }
-                    int usingAccountNumber = Convert.ToInt32(ECData);
-                    if (CharactersBank.GetBankAccountLockStatus(usingAccountNumber)) { if (CharactersInventory.ExistCharacterItem(charId, "EC-Karte " + usingAccountNumber, "inventory")) { CharactersInventory.RemoveCharacterItemAmount(charId, "EC-Karte " + usingAccountNumber, 1, "inventory"); } HUDHandler.SendNotification(player, 3, 2500, $"Ihre EC-Karte wurde einzogen da diese gesperrt ist."); return; }
-                    player.EmitLocked("Client:ATM:BankATMcreateCEF", CharactersBank.GetBankAccountPIN(usingAccountNumber), usingAccountNumber, atmPos.zoneName);
-                }
-                #endregion
-
-                #region Clothes
                 else if (itemname == "Beamtenschutzweste")
                 {
                     CharactersInventory.RemoveCharacterItemAmount(charId, "Beamtenschutzweste", 1, fromContainer);
@@ -171,7 +109,7 @@ namespace Altv_Roleplay.Handler
                     if (Characters.GetCharacterGender(charId)) player.EmitLocked("Client:SpawnArea:setCharClothes", 9, 17, 2);
                     else player.EmitLocked("Client:SpawnArea:setCharClothes", 9, 15, 2);
                 }
-                if (itemname == "Rucksack" || itemname == "Tasche" || itemname == "EMT-Rucksack")
+                if (itemname == "Rucksack" || itemname == "Tasche")
                 {
                     if (fromContainer == "backpack") { HUDHandler.SendNotification(player, 3, 2500, "Kleidungen & Taschen können nicht aus dem Rucksack aus benutzt werden."); return; }
                     if (Characters.GetCharacterBackpack(charId) == 31)
@@ -208,55 +146,19 @@ namespace Altv_Roleplay.Handler
                             return;
                         }
                     }
-                    else if (Characters.GetCharacterBackpack(charId) == 66/*TODO*/)
-                    {
-                        if (itemname == "EMT-Rucksack")
-                        {
-                            if (CharactersInventory.GetCharacterBackpackItemCount(charId) == 0)
-                            {
-                                Characters.SetCharacterBackpack(player, "None");
-                                HUDHandler.SendNotification(player, 1, 2500, "Du hast deine Tasche ausgezogen.");
-                            }
-                            else { HUDHandler.SendNotification(player, 3, 2500, "Du hast zuviele Sachen in deiner Tasche, du kannst deine Tasche nicht ablegen."); return; }
-                        }
-                        else
-                        {
-                            HUDHandler.SendNotification(player, 3, 2500, "Du hast bereits einen Rucksack angelegt, lege diesen vorher ab um deine Tasche anzulegen.");
-                            return;
-                        }
-                    }
                     else if (Characters.GetCharacterBackpack(charId) == 0)
                     {
                         Characters.SetCharacterBackpack(player, itemname);
-                        /*if (itemname == "Rucksack")
-                        {
-                            HUDHandler.SendNotification(player, 1, 2500, "Du hast deinen Rucksack angezogen");
-                        }
-                        else
-                        {
-                            HUDHandler.SendNotification(player, 1, 2500, "Du hast deine Tasche angezogen.");
-                        }*/
-
-
                         if (itemname == "Rucksack")
                         {
                             HUDHandler.SendNotification(player, 1, 2500, "Du hast deinen Rucksack angezogen");
                         }
-
-                        else if(itemname == "Tasche")
-                        {
-                            HUDHandler.SendNotification(player, 1, 2500, "Du hast deine Tasche angezogen.");
-                        }
-
-                        else if(itemname == "EMT-Rucksack")
+                        else
                         {
                             HUDHandler.SendNotification(player, 1, 2500, "Du hast deine Tasche angezogen.");
                         }
                     }
                 }
-                #endregion
-
-                #region Drugs
                 else if (itemname == "Kokain")
                 {
                     CharactersInventory.RemoveCharacterItemAmount(charId, "Kokain", 1, fromContainer);
@@ -275,20 +177,10 @@ namespace Altv_Roleplay.Handler
                     ushort currentHealth = player.Health;
                     currentHealth += 5;
                     CharactersInventory.RemoveCharacterItemAmount(charId, "Joint", 1, fromContainer);
-                    player.EmitLocked("objectAttacher:attachObjectAnimated", "joint", true);
+                    player.EmitLocked("Client:Inventory:AttachObject", "joint");
                     player.EmitLocked("Client:Inventory:PlayEffect", "ChopVision", 900000);
                     player.EmitLocked("Client:Inventory:PlayWalking", "move_m@gangster@generic");
-                    Characters.SetCharacterDrug(charId, "Cannabis");
                 }
-                else if (itemname == "Methamphetamin")
-                {
-                    CharactersInventory.RemoveCharacterItemAmount(charId, "Methamphetamin", 1, fromContainer);
-                    player.EmitLocked("Client:Inventory:PlayEffect", "DMT_flight", 900000);
-                    player.EmitLocked("Client:Inventory:PlayWalking", "move_characters@michael@fire");
-                }
-                #endregion
-
-                #region Consumables
                 else if (itemname == "Zigaretten")
                 {
                     if (!CharactersInventory.ExistCharacterItem(charId, "Zigaretten", fromContainer)) { return; }
@@ -303,50 +195,56 @@ namespace Altv_Roleplay.Handler
                     ushort currentHealth = player.Health;
                     currentHealth -= 1;
                     CharactersInventory.RemoveCharacterItemAmount(charId, "Zigarette", 1, fromContainer);
-                    player.EmitLocked("objectAttacher:attachObjectAnimated", "cigarette", true);
+                    player.EmitLocked("Client:Inventory:AttachObject", "cigarette");
                 }
-                else if (itemname == "Whiskey")
+                else if (itemname == "Methamphetamin")
+                {
+                    CharactersInventory.RemoveCharacterItemAmount(charId, "Methamphetamin", 1, fromContainer);
+                    player.EmitLocked("Client:Inventory:PlayEffect", "DMT_flight", 900000);
+                    player.EmitLocked("Client:Inventory:PlayWalking", "move_characters@michael@fire");
+                }
+                else if (itemname == "Whisky")
                 {
                     CharactersInventory.RemoveCharacterItemAmount(charId, "Whisky", 1, fromContainer);
                     player.EmitLocked("Client:Inventory:PlayEffect", "BikerFilter", 270000);
                     player.EmitLocked("Client:Inventory:PlayWalking", "move_m@drunk@verydrunk");
-                    Characters.SetCharacterAlclvl(charId, Characters.GetCharacterAlclvl(User.GetPlayerOnline(player)) + 2.99f);
                 }
                 else if (itemname == "Tequila")
                 {
                     CharactersInventory.RemoveCharacterItemAmount(charId, "Tequila", 1, fromContainer);
                     player.EmitLocked("Client:Inventory:PlayEffect", "BikerFilter", 270000);
                     player.EmitLocked("Client:Inventory:PlayWalking", "move_m@drunk@verydrunk");
-                    Characters.SetCharacterAlclvl(charId, Characters.GetCharacterAlclvl(User.GetPlayerOnline(player)) + 2.99f);
                 }
                 else if (itemname == "Bier")
                 {
                     CharactersInventory.RemoveCharacterItemAmount(charId, "Bier", 1, fromContainer);
                     player.EmitLocked("Client:Inventory:PlayEffect", "BikerFilter", 150000);
                     player.EmitLocked("Client:Inventory:PlayWalking", "move_m@drunk@a");
-                    Characters.SetCharacterAlclvl(charId, Characters.GetCharacterAlclvl(User.GetPlayerOnline(player)) + 2.99f);
                 }
                 else if (itemname == "Vodka")
                 {
                     CharactersInventory.RemoveCharacterItemAmount(charId, "Vodka", 1, fromContainer);
                     player.EmitLocked("Client:Inventory:PlayEffect", "BikerFilter", 300000);
                     player.EmitLocked("Client:Inventory:PlayWalking", "move_m@drunk@verydrunk");
-                    Characters.SetCharacterAlclvl(charId, Characters.GetCharacterAlclvl(User.GetPlayerOnline(player)) + 2.99f);
                 }
                 else if (itemname == "Wein")
                 {
                     CharactersInventory.RemoveCharacterItemAmount(charId, "Wein", 1, fromContainer);
                     player.EmitLocked("Client:Inventory:PlayEffect", "BikerFilter", 210000);
                     player.EmitLocked("Client:Inventory:PlayWalking", "move_m@drunk@a");
-                    Characters.SetCharacterAlclvl(charId, Characters.GetCharacterAlclvl(User.GetPlayerOnline(player)) + 2.99f);
                 }
-                #endregion
-
-                #region GunStuff
-                else if (ServerItems.GetItemType(itemname) == "weapon")
+                else if (itemname == "EC-Karte")
                 {
+                    var atmPos = ServerATM.ServerATM_.FirstOrDefault(x => player.Position.IsInRange(new Position(x.posX, x.posY, x.posZ), 1f));
+                    if (atmPos == null || player.IsInVehicle) { HUDHandler.SendNotification(player, 3, 2500, "Du bist an keinem ATM oder sitzt in einem Auto."); return; }
+                    int usingAccountNumber = Convert.ToInt32(ECData);
+                    if (CharactersBank.GetBankAccountLockStatus(usingAccountNumber)) { if (CharactersInventory.ExistCharacterItem(charId, "EC-Karte " + usingAccountNumber, "inventory")) { CharactersInventory.RemoveCharacterItemAmount(charId, "EC-Karte " + usingAccountNumber, 1, "inventory"); } HUDHandler.SendNotification(player, 3, 2500, $"Ihre EC-Karte wurde einzogen da diese gesperrt ist."); return; }
+                    player.EmitLocked("Client:ATM:BankATMcreateCEF", CharactersBank.GetBankAccountPIN(usingAccountNumber), usingAccountNumber, atmPos.zoneName);
+                }
+                else if (ServerItems.GetItemType(itemname) == "weapon")
+                {                    
                     if (itemname.Contains("Munitionsbox"))
-                    {
+                    {                        
                         string wName = itemname.Replace(" Munitionsbox", "");
                         CharactersInventory.RemoveCharacterItemAmount(charId, itemname, itemAmount, fromContainer);
                         CharactersInventory.AddCharacterItem(charId, $"{wName} Munition", 30 * itemAmount, fromContainer);
@@ -354,6 +252,7 @@ namespace Altv_Roleplay.Handler
                     else if (itemname.Contains("Munition")) { WeaponHandler.EquipCharacterWeapon(player, "Ammo", itemname, itemAmount, fromContainer); }
                     else { WeaponHandler.EquipCharacterWeapon(player, "Weapon", itemname, 0, fromContainer); }
                 }
+                #region NOT_WORKING???
                 else if (itemname == "Micro-Kiste")
                 {
                     if (!CharactersInventory.ExistCharacterItem(charId, "Brecheisen", fromContainer)) { HUDHandler.SendNotification(player, 3, 2500, "Du hast kein Brecheisen dabei.."); return; }
@@ -395,18 +294,14 @@ namespace Altv_Roleplay.Handler
                     CharactersInventory.AddCharacterItem(charId, $"Compact Munitionsbox", 5, fromContainer);
                 }
                 #endregion
-
-                #region Medical
                 else if (itemname == "Verbandskasten")
                 {
-                    if (ServerFactions.GetFactionDutyMemberCount(3) > 0) { HUDHandler.SendNotification(player, 3, 2500, "Du solltest einen Mediziner Aufsuchen..."); return; }
                     CharactersInventory.RemoveCharacterItemAmount(charId, "Verbandskasten", 1, fromContainer);
                     Characters.SetCharacterHealth(charId, 200);
                     player.Health = 200;
                 }
                 else if (itemname == "Verband")
                 {
-                    if (ServerFactions.GetFactionDutyMemberCount(3) > 0) { HUDHandler.SendNotification(player, 3, 2500, "Du solltest einen Mediziner Aufsuchen..."); return; }
                     ushort currentHealth = player.Health; //get currentHealth of player
                     currentHealth += 35; //adds 35 health to currentHealth
                     CharactersInventory.RemoveCharacterItemAmount(charId, "Verband", 1, fromContainer);
@@ -415,7 +310,6 @@ namespace Altv_Roleplay.Handler
                 }
                 else if (itemname == "Pflaster")
                 {
-                    if (ServerFactions.GetFactionDutyMemberCount(3) > 0) { HUDHandler.SendNotification(player, 3, 2500, "Du solltest einen Mediziner Aufsuchen..."); return; }
                     ushort currentHealth = player.Health; //get currentHealth of player
                     currentHealth += 15; //adds 25 health to currentHealth
                     CharactersInventory.RemoveCharacterItemAmount(charId, "Pflaster", 1, fromContainer);
@@ -424,16 +318,12 @@ namespace Altv_Roleplay.Handler
                 }
                 else if (itemname == "Tabletten")
                 {
-                    if (ServerFactions.GetFactionDutyMemberCount(3) > 0) { HUDHandler.SendNotification(player, 3, 2500, "Du solltest einen Mediziner Aufsuchen..."); return; }
                     ushort currentHealth = player.Health; //get currentHealth of player
                     currentHealth += 25; //adds 25 health to currentHealth
                     CharactersInventory.RemoveCharacterItemAmount(charId, "Tabletten", 1, fromContainer);
                     Characters.SetCharacterHealth(charId, currentHealth);
                     player.Health = currentHealth;
                 }
-                #endregion
-
-                #region Divers
                 else if (itemname == "Benzinkanister" && player.IsInVehicle && player.Vehicle.Exists)
                 {
                     if (ServerVehicles.GetVehicleFuel(player.Vehicle) >= ServerVehicles.GetVehicleFuelLimitOnHash(player.Vehicle.Model)) { HUDHandler.SendNotification(player, 3, 2500, "Der Tank ist bereits voll."); return; }
@@ -461,7 +351,7 @@ namespace Altv_Roleplay.Handler
                     CharactersInventory.RemoveCharacterItemAmount(charId, "Weed", 1, fromContainer);
                     CharactersInventory.AddCharacterItem(charId, $"Joint", 1, fromContainer);
                 }
-                else if (itemname == "Schweissbrenner")
+                else if (itemname == "Schweißbrenner")
                 {
                     var atmPos = ServerATM.ServerATM_.FirstOrDefault(x => player.Position.IsInRange(new Position(x.posX, x.posY, x.posZ), 1f));
                     int usingAccountNumber = Convert.ToInt32(ECData);
@@ -525,16 +415,10 @@ namespace Altv_Roleplay.Handler
                     WeedPlantHandler.fertilizeNearestPot(player);
                     CharactersInventory.RemoveCharacterItemAmount(charId, "Dünger", 1, fromContainer);
                 }
-                #endregion
-
-                #region Placeables
                 else if (itemname == "PD-Absperrung")
                 {
                     ObjectHandler.PlaceNewBarrier(player);
                 }
-                #endregion
-
-                #region Electronics
                 else if (itemname == "Smartphone")
                 {
                     //Alt.Log("Phone benutzt.");
@@ -558,7 +442,6 @@ namespace Altv_Roleplay.Handler
                 {
                     Console.WriteLine(itemname);
                 }
-                #endregion
 
                 if (ServerItems.hasItemAnimation(ServerItems.ReturnNormalItemName(itemname))) { InventoryAnimation(player, ServerItems.GetItemAnimationName(ServerItems.ReturnNormalItemName(itemname)), 0); }
 
@@ -639,33 +522,6 @@ namespace Altv_Roleplay.Handler
                         return;
                     }
                 }
-                else if (itemname == "EMT-Rucksack")
-                {
-                    if (Characters.GetCharacterBackpack(charId) == 45/*ToDo*/)
-                    {
-                        if (CharactersInventory.GetCharacterItemAmount(charId, "EMT-Rucksack", "inventory") == itemAmount)
-                        {
-                            HUDHandler.SendNotification(player, 3, 2500, "Du musst zuerst deine Tasche ablegen, bevor du diese wegwerfen kannst.");
-                            return;
-                        }
-                        else
-                        {
-                            CharactersInventory.RemoveCharacterItemAmount(charId, itemname, itemAmount, fromContainer);
-                            InventoryAnimation(player, "drop", 0);
-                            HUDHandler.SendNotification(player, 1, 2500, $"Der Gegenstand {itemname} ({itemAmount}) wurde erfolgreich weggeworfen ({fromContainer}).");
-                            RequestInventoryItems(player);
-                            return;
-                        }
-                    }
-                    else
-                    {
-                        CharactersInventory.RemoveCharacterItemAmount(charId, itemname, itemAmount, fromContainer);
-                        InventoryAnimation(player, "drop", 0);
-                        HUDHandler.SendNotification(player, 1, 2500, $"Der Gegenstand {itemname} ({itemAmount}) wurde erfolgreich weggeworfen ({fromContainer}).");
-                        RequestInventoryItems(player);
-                        return;
-                    }
-                }
                 else if (ServerItems.GetItemType(itemname) == "weapon")
                 {
                     if ((string)Characters.GetCharacterWeapon(player, "PrimaryWeapon") == normalItemName || (string)Characters.GetCharacterWeapon(player, "SecondaryWeapon") == normalItemName || (string)Characters.GetCharacterWeapon(player, "SecondaryWeapon2") == normalItemName || (string)Characters.GetCharacterWeapon(player, "FistWeapon") == normalItemName)
@@ -706,7 +562,7 @@ namespace Altv_Roleplay.Handler
                 var targetPlayer = Alt.GetAllPlayers().ToList().FirstOrDefault(x => x.GetCharacterMetaId() == (ulong)targetPlayerId);
                 if (targetPlayer == null) return;
                 if (!player.Position.IsInRange(targetPlayer.Position, 2f)) { HUDHandler.SendNotification(player, 3, 2500, "Die Person ist zu weit entfernt."); return; }
-                if (invWeight + itemWeight > 5f && backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(targetPlayerId))) { HUDHandler.SendNotification(player, 3, 2500, $"Der Spieler hat nicht genug Platz in seinen Taschen."); return; }
+                if (invWeight + itemWeight > 15f && backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(targetPlayerId))) { HUDHandler.SendNotification(player, 3, 2500, $"Der Spieler hat nicht genug Platz in seinen Taschen."); return; }
 
                 if (itemname.Contains("Bargeld"))
                 {
@@ -763,7 +619,7 @@ namespace Altv_Roleplay.Handler
                     return;
                 }
 
-                if (invWeight + itemWeight <= 5f)
+                if (invWeight + itemWeight <= 15f)
                 {
                     HUDHandler.SendNotification(targetPlayer, 1, 2500, $"Dir wurde ({itemAmount}x) {itemname} gegeben.");
                     HUDHandler.SendNotification(player, 1, 2500, $"Du hast ({itemAmount}x) {itemname} weiter gegeben.");
@@ -813,7 +669,7 @@ namespace Altv_Roleplay.Handler
                 float backpackWeight = CharactersInventory.GetCharacterItemWeight(charId, "backpack");
                 float schluesselWeight = CharactersInventory.GetCharacterItemWeight(charId, "Schluessel");
                 float brieftascheWeight = CharactersInventory.GetCharacterItemWeight(charId, "brieftasche");
-                if (invWeight + itemWeight > 5f && backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId))) { HUDHandler.SendNotification(player, 3, 2500, $"Du hast nicht genug Platz in deinen Taschen."); return; }
+                if (invWeight + itemWeight > 15f && backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId))) { HUDHandler.SendNotification(player, 3, 2500, $"Du hast nicht genug Platz in deinen Taschen."); return; }
                 CharactersInventory.RemoveCharacterItemAmount(targetCharId, itemName, itemAmount, itemLocation);
                 if (itemName.Contains("Bargeld"))
                 {
@@ -856,7 +712,7 @@ namespace Altv_Roleplay.Handler
                     Alt.Emit("Server:Smartphone:leaveRadioFrequence", targetPlayer);
                     return;
                 }
-                else if (invWeight + itemWeight <= 5f)
+                else if (invWeight + itemWeight <= 15f)
                 {
                     HUDHandler.SendNotification(player, 1, 2500, $"Du hast der Person {itemName} ({itemAmount}x) abgenommen.");
                     HUDHandler.SendNotification(targetPlayer, 1, 2500, $"Dir wurde der {itemName} ({itemAmount}x) abgenommen.");
@@ -887,78 +743,30 @@ namespace Altv_Roleplay.Handler
             }
         }
 
-        #region InvAnimations
         internal static void InventoryAnimation(IPlayer player, string Animation, int duration)
         {
             if (player == null || !player.Exists || player.IsInVehicle || Animation == "") return;
-            if (Animation == "eat")
-            {
-                player.EmitLocked("objectAttacher:attachObjectAnimated", "burger", true);
-            }
-            else if (Animation == "drink")
-            {
-                player.EmitLocked("Client:audioEngine:play", "audio/slurp.wav", 0.25);
-                player.EmitLocked("objectAttacher:attachObjectAnimated", "drink", true);
-            }
-            else if (Animation == "alcohol")
-            {
-                player.EmitLocked("objectAttacher:attachObjectAnimated", "alcohol", true);
-            }
-            else if (Animation == "drop")
-            {
-                player.EmitLocked("Client:Inventory:PlayAnimation", "anim@narcotics@trash", "drop_front", 500, 1, false);
-            }
-            else if (Animation == "give")
-            {
-                player.EmitLocked("Client:Inventory:PlayAnimation", "anim@narcotics@trash", "drop_front", 500, 1, false);
-            }
-            else if (Animation == "farmPickup")
-            {
-                player.EmitLocked("Client:Inventory:PlayAnimation", "pickup_object", "pickup_low", duration, 1, false);
-            }
-            else if (Animation == "handcuffs")
-            {
-                player.EmitLocked("Client:Inventory:PlayAnimation", "mp_arresting", "sprint", -1, 50, false);
-            }
-            else if (Animation == "revive")
-            {
-                player.EmitLocked("Client:Inventory:PlayAnimation", "missheistfbi3b_ig8_2", "cpr_loop_paramedic", duration, 1, false);
-            }
-            else if (Animation == "weste")
-            {
-                player.EmitLocked("Client:Inventory:PlayAnimation", "anim@heists@narcotics@funding@gang_idle", "gang_chatting_idle01", 3000, 49, false);
-            }
-            else if (Animation == "Kokain")
-            {
-                player.EmitLocked("Client:Inventory:PlayAnimation", "anim@heists@narcotics@funding@gang_idle", "gang_chatting_idle01", 2000, 49, false);
-            }
-            else if (Animation == "verband")
-            {
-                player.EmitLocked("Client:Inventory:PlayAnimation", "anim@heists@narcotics@funding@gang_idle", "gang_chatting_idle01", 3000, 49, false);
-            }
-            else if (Animation == "Kokain2")
-            {
-                player.EmitLocked("Client:Inventory:PlayAnimation", "anim@mp_player_intupperface_palm", "idle_a", 2000, 49, false);
-            }
-            else if (Animation == "Trash")
-            {
-                player.EmitLocked("objectAttacher:attachObjectAnimated", "trash", true);
-            }
-            else if (Animation == "Pickaxe")
-            {
-                player.EmitLocked("objectAttacher:attachObjectAnimated", "pickaxe", true);
-            }
-            else if (Animation == "Trash2")
-            {
-                player.EmitLocked("Client:Inventory:PlayAnimation", "anim@heists@narcotics@trash", "throw_b", 0, 49, false);
-            }
+            if (Animation == "eat") player.EmitLocked("Client:Inventory:AttachObject", "burger");
+            else if (Animation == "drink") player.EmitLocked("Client:Inventory:AttachObject", "drink");
+            else if (Animation == "alcohol") player.EmitLocked("Client:Inventory:AttachObject", "alcohol");
+            else if (Animation == "drop") player.EmitLocked("Client:Inventory:PlayAnimation", "anim@narcotics@trash", "drop_front", 500, 1, false);
+            else if (Animation == "give") player.EmitLocked("Client:Inventory:PlayAnimation", "anim@narcotics@trash", "drop_front", 500, 1, false);
+            else if (Animation == "farmPickup") player.EmitLocked("Client:Inventory:PlayAnimation", "pickup_object", "pickup_low", duration, 1, false);
+            else if (Animation == "handcuffs") player.EmitLocked("Client:Inventory:PlayAnimation", "mp_arresting", "sprint", -1, 50, false);
+            else if (Animation == "revive") player.EmitLocked("Client:Inventory:PlayAnimation", "missheistfbi3b_ig8_2", "cpr_loop_paramedic", duration, 1, false);
+            else if (Animation == "weste") player.EmitLocked("Client:Inventory:PlayAnimation", "anim@heists@narcotics@funding@gang_idle", "gang_chatting_idle01", 3000, 49, false);
+            else if (Animation == "Kokain") player.EmitLocked("Client:Inventory:PlayAnimation", "anim@heists@narcotics@funding@gang_idle", "gang_chatting_idle01", 2000, 49, false);
+            else if (Animation == "verband") player.EmitLocked("Client:Inventory:PlayAnimation", "anim@heists@narcotics@funding@gang_idle", "gang_chatting_idle01", 3000, 49, false);
+            else if (Animation == "Kokain2") player.EmitLocked("Client:Inventory:PlayAnimation", "anim@mp_player_intupperface_palm", "idle_a", 2000, 49, false);
+            else if (Animation == "Trash") player.EmitLocked("Client:Inventory:AttachObject", "trash");
+            else if (Animation == "Pickaxe") player.EmitLocked("Client:Inventory:AttachObject", "pickaxe");
+            else if (Animation == "Trash2") player.EmitLocked("Client:Inventory:PlayAnimation", "anim@heists@narcotics@trash", "throw_b", 0, 49, false);
         }
 
         internal static void DetachObject(IPlayer player)
         {
             if (player == null || !player.Exists) return;
             player.EmitLocked("Client:Inventory:DetachObject");
-            player.EmitLocked("objectAttacher: detachObject"); 
         }
 
         internal static void StopAnimation(IPlayer player, string animDict, string animName)
@@ -966,6 +774,5 @@ namespace Altv_Roleplay.Handler
             if (player == null || !player.Exists) return;
             player.EmitLocked("Client:Inventory:StopAnimation", animDict, animName);
         }
-        #endregion
     }
 }

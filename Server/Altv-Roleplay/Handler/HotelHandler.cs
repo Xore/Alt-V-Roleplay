@@ -1,12 +1,16 @@
-﻿using AltV.Net;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using AltV.Net;
 using AltV.Net.Async;
+using AltV.Net.Data;
 using AltV.Net.Elements.Entities;
 using Altv_Roleplay.Model;
 using Altv_Roleplay.models;
 using Altv_Roleplay.Utils;
-using System;
-using System.Globalization;
-using System.Linq;
 
 namespace Altv_Roleplay.Handler
 {
@@ -21,7 +25,7 @@ namespace Altv_Roleplay.Handler
                 if (hotelPos.id <= 0) return;
                 int charId = User.GetPlayerOnline(player);
                 if (charId <= 0) return;
-                ServerHotels.RequestHotelApartmentItems(player, hotelPos.id);
+                ServerHotels.RequestHotelApartmentItems(player, hotelPos.id);                
             }
             catch (Exception e)
             {
@@ -37,14 +41,14 @@ namespace Altv_Roleplay.Handler
                 if (player == null || !player.Exists || hotelId <= 0 || apartmentId <= 0) return;
                 int charId = User.GetPlayerOnline(player);
                 if (charId <= 0) return;
-                if (!ServerHotels.ExistHotelApartment(hotelId, apartmentId)) { HUDHandler.SendNotification(player, 3, 2500, "Ein unerwarteter Fehler ist aufgetreten [HOTEL-001]."); return; }
+                if(!ServerHotels.ExistHotelApartment(hotelId, apartmentId)) { HUDHandler.SendNotification(player, 3, 2500, "Ein unerwarteter Fehler ist aufgetreten [HOTEL-001]."); return; }
                 if (ServerHotels.HasCharacterAnApartment(charId)) { HUDHandler.SendNotification(player, 3, 2500, $"Du besitzt bereits ein Hotelzimmer in dem Hotel '{ServerHotels.GetCharacterRentedHotelName(charId)}'."); return; }
                 if (ServerHotels.GetApartmentOwner(hotelId, apartmentId) > 0) { HUDHandler.SendNotification(player, 3, 2500, "Dieses Apartment ist bereits vermietet."); return; }
-                if (!CharactersBank.HasCharacterBankMainKonto(charId)) { HUDHandler.SendNotification(player, 3, 2500, "Du hast noch kein Hauptkonto in der Bank festgelegt."); return; }
+                if(!CharactersBank.HasCharacterBankMainKonto(charId)) { HUDHandler.SendNotification(player, 3, 2500, "Du hast noch kein Hauptkonto in der Bank festgelegt."); return; }
                 int accNumber = CharactersBank.GetCharacterBankMainKonto(charId);
                 if (accNumber <= 0) return;
                 if (CharactersBank.GetBankAccountLockStatus(accNumber)) { HUDHandler.SendNotification(player, 3, 2500, "Dein Bankkonto ist gesperrt."); return; }
-                if (CharactersBank.GetBankAccountMoney(accNumber) < ServerHotels.GetApartmentPrice(hotelId, apartmentId)) { HUDHandler.SendNotification(player, 3, 2500, $"Soviel Geld hast du auf deinem Konto nicht ({ServerHotels.GetApartmentPrice(hotelId, apartmentId)}$) - du hast {CharactersBank.GetBankAccountMoney(accNumber)}$"); return; }
+                if(CharactersBank.GetBankAccountMoney(accNumber) < ServerHotels.GetApartmentPrice(hotelId, apartmentId)) { HUDHandler.SendNotification(player, 3, 2500, $"Soviel Geld hast du auf deinem Konto nicht ({ServerHotels.GetApartmentPrice(hotelId, apartmentId)}$) - du hast {CharactersBank.GetBankAccountMoney(accNumber)}$"); return; }
                 CharactersBank.SetBankAccountMoney(accNumber, CharactersBank.GetBankAccountMoney(accNumber) - ServerHotels.GetApartmentPrice(hotelId, apartmentId));
                 ServerBankPapers.CreateNewBankPaper(accNumber, DateTime.Now.ToString("d", CultureInfo.CreateSpecificCulture("de-DE")), DateTime.Now.ToString("t", CultureInfo.CreateSpecificCulture("de-DE")), "Ausgehende Überweisung", "Hotelzahlung", $"Zimmerbuchung: {apartmentId}", $"+{ServerHotels.GetApartmentPrice(hotelId, apartmentId)}$", "Bankeinzug");
                 ServerHotels.SetApartmentOwner(hotelId, apartmentId, charId);
@@ -66,12 +70,12 @@ namespace Altv_Roleplay.Handler
                 if (charId <= 0) return;
                 if (!ServerHotels.ExistHotelApartment(hotelId, apartmentId)) { HUDHandler.SendNotification(player, 3, 2500, "Ein unerwarteter Fehler ist aufgetreten [HOTEL-001]."); return; }
                 if (!ServerHotels.HasCharacterAnApartment(charId)) { HUDHandler.SendNotification(player, 3, 2500, $"Du besitzt hier kein Zimmer."); return; }
-                if (ServerHotels.GetApartmentOwner(hotelId, apartmentId) != charId) { HUDHandler.SendNotification(player, 3, 2500, $"Du besitzt hier kein Zimmer."); return; }
+                if(ServerHotels.GetApartmentOwner(hotelId, apartmentId) != charId) { HUDHandler.SendNotification(player, 3, 2500, $"Du besitzt hier kein Zimmer."); return; }
                 var hotel = ServerHotels.ServerHotelsApartments_.FirstOrDefault(x => x.hotelId == hotelId && x.id == apartmentId);
                 if (hotel == null) return;
                 if (hotel.isLocked) HUDHandler.SendNotification(player, 1, 2500, $"Du hast dein Zimmer aufgeschlossen");
                 else HUDHandler.SendNotification(player, 1, 2500, $"Du hast dein Zimmer abgeschlossen");
-                hotel.isLocked = !hotel.isLocked;
+                hotel.isLocked = !hotel.isLocked;     
             }
             catch (Exception e)
             {
@@ -87,12 +91,12 @@ namespace Altv_Roleplay.Handler
                 if (player == null || !player.Exists || hotelId <= 0 || apartmentId <= 0) return;
                 int charId = User.GetPlayerOnline(player);
                 if (charId <= 0) return;
-                if (!ServerHotels.ExistHotelApartment(hotelId, apartmentId)) { HUDHandler.SendNotification(player, 3, 2500, "Ein unerwarteter Fehler ist aufgetreten [HOTEL-001]."); return; }
-                if (ServerHotels.GetApartmentOwner(hotelId, apartmentId) <= 0) { HUDHandler.SendNotification(player, 3, 2500, "Fehler: Dieses Zimmer ist nicht vermietet."); return; }
+                if (!ServerHotels.ExistHotelApartment(hotelId, apartmentId)) { HUDHandler.SendNotification(player, 3, 2500, "Ein unerwarteter Fehler ist aufgetreten [HOTEL-001]."); return; }               
+                if(ServerHotels.GetApartmentOwner(hotelId, apartmentId) <= 0) { HUDHandler.SendNotification(player, 3, 2500, "Fehler: Dieses Zimmer ist nicht vermietet."); return; }
                 var hotel = ServerHotels.ServerHotelsApartments_.FirstOrDefault(x => x.hotelId == hotelId && x.id == apartmentId);
                 if (hotel == null) return;
                 if (!player.Position.IsInRange(ServerHotels.GetHotelPosition(hotelId, apartmentId), 3f)) return;
-                if (hotel.isLocked) { HUDHandler.SendNotification(player, 3, 2500, "Fehler: Das Zimmer ist abgeschlossen."); return; }
+                if(hotel.isLocked) { HUDHandler.SendNotification(player, 3, 2500, "Fehler: Das Zimmer ist abgeschlossen."); return; }
                 if (!ServerHouses.ExistInteriorId(hotel.interiorId)) return;
                 player.Position = ServerHouses.GetInteriorExitPosition(hotel.interiorId);
                 player.Dimension = 5000 + apartmentId;
@@ -152,7 +156,7 @@ namespace Altv_Roleplay.Handler
         {
             try
             {
-                if (player == null || !player.Exists || apartmentId <= 0 || itemName == "" || itemName == "undefined" || itemAmount <= 0 || fromContainer == "none" || fromContainer == "") return;
+                if (player == null || !player.Exists || apartmentId <= 0 ||itemName == "" || itemName == "undefined" || itemAmount <= 0 || fromContainer == "none" || fromContainer == "") return;
                 int cCharId = User.GetPlayerOnline(player);
                 if (cCharId <= 0) return;
                 if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 2500, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
@@ -160,8 +164,7 @@ namespace Altv_Roleplay.Handler
                 if (CharactersInventory.GetCharacterItemAmount(cCharId, itemName, fromContainer) < itemAmount) { HUDHandler.SendNotification(player, 3, 2500, "Fehler: Du hast nicht genügend Gegenstände davon dabei."); return; }
                 if (CharactersInventory.IsItemActive(player, itemName)) { HUDHandler.SendNotification(player, 3, 2500, "Fehler: Ausgerüstete Gegenstände können nicht umgelagert werden."); return; }
                 float itemWeight = ServerItems.GetItemWeight(itemName) * itemAmount;
-                if (ServerHotels.GetHotelStorageItemWeight(apartmentId) >= 20f || (ServerHotels.GetHotelStorageItemWeight(apartmentId) + itemWeight) >= 20f)
-                {
+                if(ServerHotels.GetHotelStorageItemWeight(apartmentId) >= 20f || (ServerHotels.GetHotelStorageItemWeight(apartmentId) + itemWeight) >= 20f) {
                     HUDHandler.SendNotification(player, 3, 2500, "Fehler: Soviel passt in das Lager nicht rein (maximal 15kg Lagerplatz).");
                     return;
                 }
@@ -185,12 +188,12 @@ namespace Altv_Roleplay.Handler
                 int charId = User.GetPlayerOnline(player);
                 if (charId <= 0) return;
                 if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 2500, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
-                if (!ServerHotels.ExistServerHotelStorageItem(apartmentId, itemName)) { HUDHandler.SendNotification(player, 3, 2500, "Fehler: Der Gegenstand existiert im Lager nicht."); return; }
+                if(!ServerHotels.ExistServerHotelStorageItem(apartmentId, itemName)) { HUDHandler.SendNotification(player, 3, 2500, "Fehler: Der Gegenstand existiert im Lager nicht."); return; }
                 if (ServerHotels.GetServerHotelStorageItemAmount(apartmentId, itemName) < itemAmount) { HUDHandler.SendNotification(player, 3, 2500, "Fehler: Soviele Gegenstände sind nicht im Lager."); return; }
                 float itemWeight = ServerItems.GetItemWeight(itemName) * itemAmount;
                 float invWeight = CharactersInventory.GetCharacterItemWeight(charId, "inventory");
                 float backpackWeight = CharactersInventory.GetCharacterItemWeight(charId, "backpack");
-                if (invWeight + itemWeight > 5f && backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId))) { HUDHandler.SendNotification(player, 3, 2500, $"Du hast nicht genug Platz in deinen Taschen."); return; }
+                if (invWeight + itemWeight > 15f && backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId))) { HUDHandler.SendNotification(player, 3, 2500, $"Du hast nicht genug Platz in deinen Taschen."); return; }
                 ServerHotels.RemoveServerHotelStorageItemAmount(apartmentId, itemName, itemAmount);
                 //LoggingService.NewFactionLog(factionId, charId, 0, "storage", $"{Characters.GetCharacterName(charId)} ({charId}) hat den Gegenstand '{itemName} ({amount}x)' aus seinem Spind entnommen."); // ToDo: Hotel Log
                 if (itemName.Contains("Bargeld"))
@@ -223,7 +226,7 @@ namespace Altv_Roleplay.Handler
                     CharactersInventory.AddCharacterItem(charId, itemName, itemAmount, "schluessel");
                     return;
                 }
-                else if (invWeight + itemWeight <= 5f)
+                else if (invWeight + itemWeight <= 15f)
                 {
                     HUDHandler.SendNotification(player, 1, 2500, $"Du hast ({itemAmount}x) {itemName}aus dem Schrank genommen.");
                     CharactersInventory.AddCharacterItem(charId, itemName, itemAmount, "inventory");

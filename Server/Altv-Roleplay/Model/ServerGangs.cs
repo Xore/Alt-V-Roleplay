@@ -1,9 +1,16 @@
 ﻿using AltV.Net;
+using AltV.Net.Data;
+using AltV.Net.Elements.Entities;
+using Altv_Roleplay.Handler;
 using Altv_Roleplay.models;
+using Altv_Roleplay.Utils;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Altv_Roleplay.Model
 {
@@ -260,7 +267,7 @@ namespace Altv_Roleplay.Model
                 var gangMemberData = ServerGangMembers_.FirstOrDefault(x => x.charId == charId);
                 if (gangMemberData != null)
                 {
-                    gangMemberData.rank = newRank;
+                gangMemberData.rank = newRank;
                     using (gtaContext db = new gtaContext())
                     {
                         db.Server_Gang_Members.Update(gangMemberData);

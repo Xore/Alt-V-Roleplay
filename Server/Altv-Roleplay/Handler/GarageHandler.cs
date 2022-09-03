@@ -9,7 +9,10 @@ using Altv_Roleplay.Utils;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Altv_Roleplay.Handler
 {
@@ -48,13 +51,12 @@ namespace Altv_Roleplay.Handler
                     {
                         inString = GetGarageParkInString(player, garageSlots, charId, garageId, false, "Zivilist", charFaction); //Array von Fahrzeugen die um die Garage rum zum Einparken stehen
                         outString = GetGarageParkOutString(player, garageId, charId, false, "Zivilist");
-                    }
-                    else
+                    } else
                     {
                         inString = GetGarageParkInString(player, garageSlots, charId, garageId, true, factionCut, charFaction);
                         outString = GetGarageParkOutString(player, garageId, charId, true, factionCut);
                     }
-
+                    
                     player.EmitLocked("Client:Garage:OpenGarage", garageId, garageName, inString, outString);
                     return;
                 }
@@ -65,7 +67,7 @@ namespace Altv_Roleplay.Handler
 
 
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 Alt.Log($"{e}");
             }
@@ -75,13 +77,13 @@ namespace Altv_Roleplay.Handler
         {
             if (player == null || !player.Exists || !garageSlots.Any() || garageId == 0 || charId == 0) return "undefined";
             List<IVehicle> vehicles = null;
-            if (isFaction == false) { vehicles = Alt.GetAllVehicles().Where(x => x != null && x.Exists && x.HasVehicleId() && x.GetVehicleId() > 0 && x.Position.IsInRange(player.Position, 50f)).ToList(); }
-            else if (isFaction == true) { vehicles = Alt.GetAllVehicles().Where(x => x != null && x.Exists && x.HasVehicleId() && x.GetVehicleId() > 0 && x.Position.IsInRange(player.Position, 50f) && ServerVehicles.GetVehicleFactionId(x) == factionId && x.NumberplateText.Contains(factionShort)).ToList(); }
+            if (isFaction == false) { vehicles = Alt.GetAllVehicles().Where(x => x != null && x.Exists && x.HasVehicleId() && x.GetVehicleId() > 0 && x.Position.IsInRange(player.Position, 50f)).ToList(); } 
+            else if(isFaction == true) { vehicles = Alt.GetAllVehicles().Where(x => x != null && x.Exists && x.HasVehicleId() && x.GetVehicleId() > 0 && x.Position.IsInRange(player.Position, 50f) && ServerVehicles.GetVehicleFactionId(x) == factionId && x.NumberplateText.Contains(factionShort)).ToList(); }
             int garageType = ServerGarages.GetGarageType(garageId);
             if (garageType == -1) return "undefined";
             dynamic array = new JArray() as dynamic;
             dynamic entry = new JObject();
-            foreach (var veh in vehicles)
+            foreach(var veh in vehicles)
             {
                 bool hasKey = false,
                     isOwner = ServerVehicles.GetVehicleOwner(veh) == charId;
@@ -130,7 +132,7 @@ namespace Altv_Roleplay.Handler
 
                 return array.ToString();
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 Alt.Log($"{e}");
             }
@@ -145,15 +147,10 @@ namespace Altv_Roleplay.Handler
                 int charId = User.GetPlayerOnline(player);
                 if (charId <= 0) return;
                 var vehicle = Alt.GetAllVehicles().ToList().FirstOrDefault(x => x.GetVehicleId() == (long)vehID);
-                var garageType = ServerGarages.GetGarageType(garageid);
-                var vehClass = ServerVehicles.VehicleClass(vehID);
                 if (action == "storage")
                 {
                     //Fahrzeug einparken
                     if (vehicle == null) return;
-
-                    if (vehClass != garageType) { HUDHandler.SendNotification(player, 3, 2500, $"Dieses Fahrzeug kannst du hier nicht Einparken!"); return; }
-
                     if (!vehicle.Position.IsInRange(player.Position, 50f)) return;
                     ServerVehicles.SetVehicleInGarage(vehicle, true, garageid);
                     HUDHandler.SendNotification(player, 2, 2500, $"Fahrzeug erfolgreich eingeparkt.");

@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text;
 
 namespace Altv_Roleplay.models
 {
@@ -49,9 +51,7 @@ namespace Altv_Roleplay.models
         public int jailTime { get; set; }
         public int wallpaper { get; set; }
         public string pedName { get; set; }
-        public int isAnimalPed { get; set; }  
-        public float alcLvl { get; set; } 
-        public string drug { get; set; }
+        public int isAnimalPed { get; set; }
 
         [NotMapped]
         public bool isPhoneFlyModeActivated { get; set; } = false; //Flugmodus

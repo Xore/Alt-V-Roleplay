@@ -10,7 +10,6 @@ namespace Altv_Roleplay.Model
     {
         public static List<Server_Vehicle_Shops> ServerVehicleShops_ = new List<Server_Vehicle_Shops>();
         public static List<Server_Vehicle_Shops_Items> ServerVehicleShopsItems_ = new List<Server_Vehicle_Shops_Items>();
-        public static List<Server_All_Vehicles> ServerAllVehicles_ = new List<Server_All_Vehicles>();
 
         public static string GetVehicleShopItems(int vehShopId)
         {
@@ -58,7 +57,7 @@ namespace Altv_Roleplay.Model
         {
             Position pos = new Position(0, 0, 0);
             var shop = ServerVehicleShops_.FirstOrDefault(x => x.id == shopId);
-            if (shop != null) { pos = new Position(shop.parkOutX, shop.parkOutY, shop.parkOutZ); }
+            if(shop != null) { pos = new Position(shop.parkOutX, shop.parkOutY, shop.parkOutZ); }
             return pos;
         }
 
@@ -66,7 +65,7 @@ namespace Altv_Roleplay.Model
         {
             Rotation rot = new Rotation(0, 0, 0);
             var shop = ServerVehicleShops_.FirstOrDefault(x => x.id == shopId);
-            if (shop != null) { rot = new Rotation(shop.parkOutRotX, shop.parkOutRotY, shop.parkOutRotZ); }
+            if(shop != null) { rot = new Rotation(shop.parkOutRotX, shop.parkOutRotY, shop.parkOutRotZ); }
             return rot;
         }
     }

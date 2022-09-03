@@ -897,7 +897,6 @@ body.light-mode .video-bg:before {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    width: calc(100% + 20px);
 }
 
 .app-card {
@@ -911,6 +910,8 @@ body.light-mode .video-bg:before {
     padding: 20px;
     cursor: pointer;
     transition: 0.3s ease;
+    margin-left: auto;
+    margin-bottom: 2px;
 }
 
 .app-card:hover {
@@ -1434,7 +1435,6 @@ main {
   cursor: pointer;
 }
 .form__input {
-  width: 350px;
   height: 40px;
   margin: 4px 0;
   padding-left: 25px;

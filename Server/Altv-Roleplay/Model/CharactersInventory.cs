@@ -5,6 +5,8 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Altv_Roleplay.Model
 {
@@ -434,7 +436,7 @@ namespace Altv_Roleplay.Model
                 int charId = User.GetPlayerOnline(player);
                 if (charId <= 0 || itemName == "") return false;
                 itemName = ServerItems.ReturnNormalItemName(itemName);
-                if (itemName == "Rucksack" && Characters.GetCharacterBackpack(charId) == 31 || itemName == "Tasche" && Characters.GetCharacterBackpack(charId) == 45 || itemName == "EMT-Rucksack" && Characters.GetCharacterBackpack(charId) == 45/*TODO*/)
+                if (itemName == "Rucksack" && Characters.GetCharacterBackpack(charId) == 31 || itemName == "Tasche" && Characters.GetCharacterBackpack(charId) == 45)
                 {
                     return true;
                 }

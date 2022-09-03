@@ -32,15 +32,15 @@ subMenu.ItemSelect.on((item) => {
         game.setPedComponentVariation(alt.Player.local.scriptID, 3, 30, 0, 0); //Torso
         game.setPedComponentVariation(alt.Player.local.scriptID, 4, 31, 0, 0); //Leg
         game.setPedComponentVariation(alt.Player.local.scriptID, 6, 25, 0, 0); //Shoe
-        game.setPedComponentVariation(alt.Player.local.scriptID, 8, 185, 0, 0); //Undershirt
-        game.setPedComponentVariation(alt.Player.local.scriptID, 9, 61, 0, 0); //Body Armor
+        game.setPedComponentVariation(alt.Player.local.scriptID, 8, 185, 2, 0); //Undershirt
+        game.setPedComponentVariation(alt.Player.local.scriptID, 9, 63, 0, 0); //Body Armor
         game.setPedComponentVariation(alt.Player.local.scriptID, 11, 385, 0, 0); //Tops
     } else if (item.Text == 'Uniform 2 -M-') {
         game.setPedComponentVariation(alt.Player.local.scriptID, 3, 96, 0, 0); //Torso
         game.setPedComponentVariation(alt.Player.local.scriptID, 4, 31, 0, 0); //Leg
         game.setPedComponentVariation(alt.Player.local.scriptID, 6, 25, 0, 0); //Shoe
         game.setPedComponentVariation(alt.Player.local.scriptID, 8, 185, 2, 0); //Undershirt
-        game.setPedComponentVariation(alt.Player.local.scriptID, 9, 61, 0, 0); //Body Armor
+        game.setPedComponentVariation(alt.Player.local.scriptID, 9, 63, 0, 0); //Body Armor
         game.setPedComponentVariation(alt.Player.local.scriptID, 11, 386, 0, 0); //Tops
     } else if (item.Text == 'Zivil 1 -M-') {
         game.setPedComponentVariation(alt.Player.local.scriptID, 7, 125, 0, 0); //Accessorie
@@ -52,7 +52,7 @@ subMenu.ItemSelect.on((item) => {
         game.setPedComponentVariation(alt.Player.local.scriptID, 6, 25, 0, 0); //Shoe
         game.setPedComponentVariation(alt.Player.local.scriptID, 7, 155, 0, 0); //Accessorie
         game.setPedComponentVariation(alt.Player.local.scriptID, 8, 191, 0, 0); //Undershirt
-        game.setPedComponentVariation(alt.Player.local.scriptID, 9, 58, 0, 0); //Body Armor
+        game.setPedComponentVariation(alt.Player.local.scriptID, 9, 59, 0, 0); //Body Armor
         game.setPedComponentVariation(alt.Player.local.scriptID, 11, 336, 3, 0); //Tops
         game.setPedPropIndex(alt.Player.local.scriptID, 0, 156, 0, false); //Hats
     }
@@ -98,7 +98,7 @@ subMenu2.ItemSelect.on((item) => {
         game.setPedComponentVariation(alt.Player.local.scriptID, 4, 30, 0, 0); //Leg
         game.setPedComponentVariation(alt.Player.local.scriptID, 6, 25, 0, 0); //Shoe
         game.setPedComponentVariation(alt.Player.local.scriptID, 7, 124, 0, 0); //Accessorie
-        game.setPedComponentVariation(alt.Player.local.scriptID, 8, 224, 0, 0); //Undershirt
+        game.setPedComponentVariation(alt.Player.local.scriptID, 8, 223, 0, 0); //Undershirt
         game.setPedComponentVariation(alt.Player.local.scriptID, 9, 58, 0, 0); //Body Armor
         game.setPedComponentVariation(alt.Player.local.scriptID, 11, 351, 3, 0); //Tops
         game.setPedPropIndex(alt.Player.local.scriptID, 0, 155, 0, false); //Hats

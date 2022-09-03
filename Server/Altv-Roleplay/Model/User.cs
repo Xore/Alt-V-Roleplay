@@ -5,30 +5,31 @@ using Altv_Roleplay.models;
 using Altv_Roleplay.Utils;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Altv_Roleplay.Model
 {
     class User
     {
         public static List<Accounts> Player = new List<Accounts>();
-        public static void CreatePlayerAccount(IPlayer player, string username, string email, string password)
+        public static void CreatePlayerAccount(IPlayer player, string username)
         {
             if (player == null || !player.Exists) return;
 
             var PlayerData = new Accounts
             {
                 playerName = username,
-                Email = email,
-                socialClub = player.SocialClubId,
-                password = BCrypt.Net.BCrypt.HashPassword(password),
+                //Email = email,
+                //password = BCrypt.Net.BCrypt.HashPassword(password), 
                 hardwareId = 0,
                 Online = 0,
-                whitelisted = false, //CHANGE ME TO FALSE
-                whitelistTime = 0,
+                whitelisted = false,
                 ban = false,
                 banReason = "",
-                adminLevel = 0, //CHANGE ME TO 0
+                adminLevel = 0,
                 ip = player.Ip
             };
 
@@ -78,7 +79,7 @@ namespace Altv_Roleplay.Model
         {
             var pl = Player.FirstOrDefault(p => p.playerName == playerName);
 
-            if (pl != null)
+            if(pl != null)
             {
                 return pl.whitelisted;
             }
@@ -101,9 +102,9 @@ namespace Altv_Roleplay.Model
         public static bool IsPlayerBanned(IPlayer player)
         {
             if (player == null || !player.Exists) return false;
-            var pl = Player.FirstOrDefault(p => p.hardwareId == player.HardwareIdHash);
+            var pl = Player.FirstOrDefault(p =>  p.hardwareId == player.HardwareIdHash);
 
-            if (pl != null)
+            if(pl != null)
             {
                 return pl.ban;
             }
@@ -129,9 +130,9 @@ namespace Altv_Roleplay.Model
         public static string GetPlayerBanReason(IPlayer player)
         {
             if (player == null || !player.Exists) return "";
-            var pl = Player.FirstOrDefault(p => p.hardwareId == player.HardwareIdHash);
-
-            if (pl != null)
+            var pl = Player.FirstOrDefault(p =>  p.hardwareId == player.HardwareIdHash);
+           
+            if(pl != null)
             {
                 return pl.banReason;
             }
@@ -142,7 +143,7 @@ namespace Altv_Roleplay.Model
         public static int GetPlayerAccountId(IPlayer player)
         {
             if (player == null || !player.Exists) return 0;
-            var pl = Player.FirstOrDefault(p => p.hardwareId == player.HardwareIdHash);
+            var pl = Player.FirstOrDefault(p =>  p.hardwareId == player.HardwareIdHash);
 
             if (pl != null)
             {
@@ -200,14 +201,14 @@ namespace Altv_Roleplay.Model
             try
             {
                 if (player == null || !player.Exists) return 0;
-                var pl = Player.FirstOrDefault(p => p.hardwareId == player.HardwareIdHash);
+                var pl = Player.FirstOrDefault(p =>  p.hardwareId == player.HardwareIdHash);
                 if (pl != null)
                 {
                     return pl.Online;
                 }
                 return 0;
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 Alt.Log($"{e}");
                 return 0;
@@ -232,8 +233,8 @@ namespace Altv_Roleplay.Model
         public static ulong GetPlayerHardwareID(IPlayer player)
         {
             if (player == null || !player.Exists) return 0;
-            var pl = Player.FirstOrDefault(p => p.hardwareId == player.HardwareIdHash);
-            if (pl != null)
+            var pl = Player.FirstOrDefault(p =>  p.hardwareId == player.HardwareIdHash);
+            if(pl != null)
             {
                 return pl.hardwareId;
             }
@@ -241,10 +242,10 @@ namespace Altv_Roleplay.Model
             return 0;
         }
 
-        public static void SetPlayerHardwareID(IPlayer player)
+        public static void SetPlayerHardwareID(IPlayer player, string username)
         {
             if (player == null || !player.Exists) return;
-            var pl = Player.FirstOrDefault(p => p.socialClub == player.SocialClubId);
+            var pl = Player.FirstOrDefault(p => p.playerName == username);
             if (pl != null)
             {
                 pl.hardwareId = player.HardwareIdHash;
@@ -277,7 +278,7 @@ namespace Altv_Roleplay.Model
             if (player == null || !player.Exists) return;
             player.SetCharacterMetaId(Convert.ToUInt64(charId));
 
-            var pl = Player.FirstOrDefault(p => p.hardwareId == player.HardwareIdHash);
+            var pl = Player.FirstOrDefault(p =>  p.hardwareId == player.HardwareIdHash);
 
             if (pl != null)
             {
@@ -297,13 +298,13 @@ namespace Altv_Roleplay.Model
                     Alt.Log($"{e}");
                 }
             }
-        }
-
+        }     
+        
         public static void SetPlayerBanned(IPlayer player, bool state, string reason)
         {
             if (player == null || !player.Exists) return;
-            var pl = Player.FirstOrDefault(p => p.hardwareId == player.HardwareIdHash);
-            if (pl != null)
+            var pl = Player.FirstOrDefault(p =>  p.hardwareId == player.HardwareIdHash);
+            if(pl != null)
             {
                 pl.ban = state;
                 pl.banReason = reason;
@@ -316,7 +317,7 @@ namespace Altv_Roleplay.Model
                         db.SaveChanges();
                     }
                 }
-                catch (Exception e)
+                catch(Exception e)
                 {
                     Alt.Log($"{e}");
                 }
@@ -329,7 +330,7 @@ namespace Altv_Roleplay.Model
             {
                 if (playerId <= 0) return;
                 var pl = Player.FirstOrDefault(x => x.playerid == playerId);
-                if (pl != null)
+                if(pl != null)
                 {
                     pl.ban = state;
                     pl.banReason = reason;
@@ -367,7 +368,7 @@ namespace Altv_Roleplay.Model
             {
                 if (playerId <= 0) return;
                 var pl = Player.FirstOrDefault(x => x.playerid == playerId);
-                if (pl != null)
+                if(pl != null)
                 {
                     pl.whitelisted = state;
                     using (gtaContext db = new gtaContext())
@@ -383,44 +384,13 @@ namespace Altv_Roleplay.Model
             }
         }
 
-        public static void IncreaseWhitelistTime(int playerId, int whitelistTime)
-        {
-            try
-            {
-                if (playerId <= 0) return;
-                var pl = Player.FirstOrDefault(x => x.playerid == playerId);
-                if (pl != null)
-                {
-                    pl.whitelistTime += 15;
-                    using (gtaContext db = new gtaContext())
-                    {
-                        db.Accounts.Update(pl);
-                        db.SaveChanges();
-                    }
-                }
-            }
-            catch (Exception e) { Alt.Log($"{e}"); }
-        }
-
-        public static int GetPlayerWhitelistTime(int playerId)
-        {
-            var pl = Player.FirstOrDefault(p => p.playerid == playerId);
-
-            if (pl != null)
-            {
-                return pl.whitelistTime;
-            }
-
-            return 0;
-        }
-
         public static void SetPlayerAdminLevel(int playerId, int adminLevel)
         {
             try
             {
                 if (playerId <= 0) return;
                 var pl = Player.FirstOrDefault(p => p.playerid == playerId);
-                if (pl != null)
+                if(pl != null)
                 {
                     pl.adminLevel = adminLevel;
                     using (gtaContext db = new gtaContext())
@@ -434,80 +404,6 @@ namespace Altv_Roleplay.Model
             {
                 Alt.Log($"{e}");
             }
-        }
-
-        public static string GetPlayerPassword(string playerName)
-        {
-            var pl = Player.FirstOrDefault(p => p.playerName == playerName);
-
-            if (pl != null)
-            {
-                return pl.password;
-            }
-
-            return "JKODSAJKOSADJIASDJI";
-        }
-
-        public static ulong GetPlayerSocialclubId(string playerName)
-        {
-            var pl = Player.FirstOrDefault(p => p.playerName == playerName);
-
-            if (pl != null)
-            {
-                return pl.socialClub;
-            }
-            return 0;
-        }
-
-        public static void SetPlayerSocialID(IPlayer player)
-        {
-            if (player == null || !player.Exists) return;
-            var pl = Player.FirstOrDefault(p => p.hardwareId == player.HardwareIdHash);
-            if (pl != null)
-            {
-                pl.socialClub = player.SocialClubId;
-
-                using (gtaContext db = new gtaContext())
-                {
-                    db.Accounts.Update(pl);
-                    db.SaveChanges();
-                }
-            }
-        }
-
-        public static bool ExistPlayerEmail(string email)
-        {
-            var pl = Player.FirstOrDefault(p => p.Email == email);
-
-            if (pl != null)
-            {
-                return true;
-            }
-
-            return false;
-        }
-
-        public static bool ExistPlayerSocialClub(IPlayer player)
-        {
-            var pl = Player.FirstOrDefault(p => p.socialClub == player.SocialClubId);
-
-            if (pl != null)
-            {
-                return true;
-            }
-
-            return false;
-        }
-
-        public static ulong GetPlayerSocialclubIdbyAccId(int accId)
-        {
-            var pl = Player.FirstOrDefault(p => p.playerid == accId);
-
-            if (pl != null)
-            {
-                return pl.socialClub;
-            }
-            return 0;
         }
     }
 }

@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace Altv_Roleplay.Model
 {
@@ -30,12 +31,11 @@ namespace Altv_Roleplay.Model
                     x.animFlag,
                     x.animDict,
                     x.duration,
-                    x.category
                 }).ToList();
                 var itemCount = (int)items.Count;
                 var iterations = Math.Floor((decimal)(itemCount / 20));
                 var rest = itemCount % 20;
-                for (var i = 0; i < iterations; i++)
+                for(var i = 0; i < iterations; i++)
                 {
                     var skip = i * 20;
                     player.EmitLocked("Client:Animations:setupItems", JsonConvert.SerializeObject(items.Skip(skip).Take(20).ToList()));
@@ -43,7 +43,7 @@ namespace Altv_Roleplay.Model
 
                 if (rest != 0) player.EmitLocked("Client:Animations:setupItems", JsonConvert.SerializeObject(items.Skip((int)iterations * 20).ToList()));
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 Alt.Log($"{e}");
             }

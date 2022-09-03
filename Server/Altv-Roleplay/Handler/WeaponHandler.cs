@@ -3,6 +3,8 @@ using AltV.Net.Elements.Entities;
 using AltV.Net.Enums;
 using Altv_Roleplay.Model;
 using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Altv_Roleplay.Handler
 {
@@ -93,13 +95,6 @@ namespace Altv_Roleplay.Handler
                         normalWName = "Karabiner";
                         ammoWName = "Karabiner Munition";
                         wHash = (WeaponModel)0x83BF0278;
-                        break;
-                    case "KarabinerMKII":
-                    case "KarabinerMKII Munition":
-                        wType = "Primary";
-                        normalWName = "KarabinerMKII";
-                        ammoWName = "KarabinerMKII Munition";
-                        wHash = (WeaponModel)0xFAD1F1C9;
                         break;
                     case "SMG":
                     case "SMG Munition":
@@ -218,37 +213,26 @@ namespace Altv_Roleplay.Handler
                         wHash = (WeaponModel)0x440E4788;
                         break;
                 }
-                if (wName == "Extended-Clip")
+                if (wName == "Silencer")
+                {
+                    SetWeaponComponents(player, "Silencer");
+                }
+                else if (wName == "Mounted-Scope")
+                {
+                    SetWeaponComponents(player, "Mounted-Scope");
+                }
+                else if (wName == "Compensator")
+                {
+                    SetWeaponComponents(player, "Compensator");
+                }
+                else if (wName == "Extended-Clip")
                 {
                     SetWeaponComponents(player, "Extended-Clip");
                 }
-                else if (wName == "Flashlight")
+
+                else if (wName == "Bushstroke-Camo")
                 {
-                    SetWeaponComponents(player, "Flashlight");
-                }
-                else if (wName == "Scope")
-                {
-                    SetWeaponComponents(player, "Scope");
-                }
-                else if (wName == "Suppressor")
-                {
-                    SetWeaponComponents(player, "Suppressor");
-                }
-                else if (wName == "Grip")
-                {
-                    SetWeaponComponents(player, "Grip");
-                }
-                else if (wName == "LUXUS")
-                {
-                    SetWeaponComponents(player, "LUXUS");
-                }
-                else if (wName == "Holographic-Sight")
-                {
-                    SetWeaponComponents(player, "Holographic-Sight");
-                }
-                else if (wName == "Small-Scope")
-                {
-                    SetWeaponComponents(player, "Small-Scope");
+                    SetWeaponComponents(player, "Bushstroke-Camo");
                 }
 
                 if (type == "Weapon")
@@ -504,84 +488,40 @@ namespace Altv_Roleplay.Handler
             if (player == null || !player.Exists) return;
             switch (wName)
             {
+                case "Karabiner":
+                    player.AddWeaponComponent(WeaponModel.CarbineRifle, 0x7BC4CDDC); //Flashlight
+                    player.AddWeaponComponent(WeaponModel.CarbineRifle, 0xA0D89C42); //Scope
+                    player.AddWeaponComponent(WeaponModel.CarbineRifle, 0xC164F53); //Grip
+                    break;
+                case "PistolMKII":
+                    player.AddWeaponComponent(WeaponModel.PistolMkII, 0x85FEA109); //Ammo
+                    player.AddWeaponComponent(WeaponModel.PistolMkII, 0x43FD595B); //Flashlight
+                    break;
+                case "SMGMKII":
+                    player.AddWeaponComponent(WeaponModel.SMGMkII, 0x9FDB5652); // Holographic
+                    player.AddWeaponComponent(WeaponModel.SMGMkII, 0xC867A07B); // Tactical Muzzle Brake
+                    player.AddWeaponComponent(WeaponModel.SMGMkII, 0xA564D78B); // Heavy Barrel
+                    break;
+                case "Silencer":
+                    player.AddWeaponComponent(WeaponModel.SMGMkII, 0xC304849A); // Silencer
+                    player.AddWeaponComponent(WeaponModel.PistolMkII, 0x65EA7EBB); // Silencer
+                    break;
+                case "Bushstroke-Camo":
+                    player.AddWeaponComponent(WeaponModel.SMGMkII, 0x3815A945); // Camo
+                    player.AddWeaponComponent(WeaponModel.PistolMkII, 0x15F7A390); // Camo
+                    break;
                 case "Extended-Clip":
-                    player.AddWeaponComponent(WeaponModel.PistolMkII, 0x5ED6C128);
-                    player.AddWeaponComponent(WeaponModel.SMGMkII, 0xB9835B2E);
-                    player.AddWeaponComponent(WeaponModel.Pistol, 0xED265A1C);
-                    player.AddWeaponComponent(WeaponModel.CombatPistol, 0xD67B4F2D);
-                    player.AddWeaponComponent(WeaponModel.CombatPDW, 0x334A5203);
-                    player.AddWeaponComponent(WeaponModel.SMG, 0x350966FB);
-                    player.AddWeaponComponent(WeaponModel.CarbineRifle, 0x91109691);
-                    player.AddWeaponComponent(WeaponModel.CarbineRifleMkII, 0x5DD5DBD5);
-                    player.AddWeaponComponent(WeaponModel.SNSPistol, 0x7B0033B3);
-                    player.AddWeaponComponent(WeaponModel.Pistol50, 0xD9D3AC92);
-                    player.AddWeaponComponent(WeaponModel.MicroSMG, 0x10E6BA2B);
-                    player.AddWeaponComponent(WeaponModel.AssaultRifle, 0xB1214F9B);
-                    player.AddWeaponComponent(WeaponModel.HeavyPistol, 0x64F9C62B);
-                    player.AddWeaponComponent(WeaponModel.GusenbergSweeper, 0xEAC8C270);
-                    player.AddWeaponComponent(WeaponModel.CompactRifle, 0x59FF9BF8);
+                    player.AddWeaponComponent(WeaponModel.SMGMkII, 0xB9835B2E); // Clip
+                    player.AddWeaponComponent(WeaponModel.PistolMkII, 0x5ED6C128); // Clip
+                    player.AddWeaponComponent(WeaponModel.PistolMkII, 0x85FEA109); //Ammo
+                    player.AddWeaponComponent(WeaponModel.SMGMkII, 0x3A1BD6FA); //Ammo
                     break;
-                case "Flashlight":
-                    player.AddWeaponComponent(WeaponModel.PistolMkII, 0x43FD595B);
-                    player.AddWeaponComponent(WeaponModel.SMGMkII, 0x7BC4CDDC);
-                    player.AddWeaponComponent(WeaponModel.Pistol, 0x359B7AAE);
-                    player.AddWeaponComponent(WeaponModel.CombatPistol, 0x359B7AAE);
-                    player.AddWeaponComponent(WeaponModel.CombatPDW, 0x7BC4CDDC);
-                    player.AddWeaponComponent(WeaponModel.SMG, 0x7BC4CDDC);
-                    player.AddWeaponComponent(WeaponModel.CarbineRifle, 0x7BC4CDDC);
-                    player.AddWeaponComponent(WeaponModel.CarbineRifleMkII, 0x7BC4CDDC);
-                    player.AddWeaponComponent(WeaponModel.Pistol50, 0x359B7AAE);
-                    player.AddWeaponComponent(WeaponModel.MicroSMG, 0x359B7AAE);
-                    player.AddWeaponComponent(WeaponModel.AssaultRifle, 0x7BC4CDDC);
-                    player.AddWeaponComponent(WeaponModel.PumpShotgun, 0x7BC4CDDC);
-                    player.AddWeaponComponent(WeaponModel.HeavyPistol, 0x359B7AAE);
+                case "Compensator":
+                    player.AddWeaponComponent(WeaponModel.PistolMkII, 0x21E34793); // Comp
                     break;
-                case "Scope":
-                    player.AddWeaponComponent(WeaponModel.SMGMkII, 0xE502AB6B);
-                    player.AddWeaponComponent(WeaponModel.CombatPDW, 0xAA2C45B4);
-                    player.AddWeaponComponent(WeaponModel.SMG, 0x3CC6BA57);
-                    player.AddWeaponComponent(WeaponModel.CarbineRifle, 0xA0D89C42);
-                    player.AddWeaponComponent(WeaponModel.CarbineRifleMkII, 0x49B2945);
-                    player.AddWeaponComponent(WeaponModel.MicroSMG, 0x9D2FBF29);
-                    player.AddWeaponComponent(WeaponModel.AssaultRifle, 0x9D2FBF29);
-                    break;
-                case "Suppressor":
-                    player.AddWeaponComponent(WeaponModel.PistolMkII, 0x65EA7EBB);
-                    player.AddWeaponComponent(WeaponModel.SMGMkII, 0xC304849A);
-                    player.AddWeaponComponent(WeaponModel.Pistol, 0x65EA7EBB);
-                    player.AddWeaponComponent(WeaponModel.CombatPistol, 0xC304849A);
-                    player.AddWeaponComponent(WeaponModel.SMG, 0xC304849A);
-                    player.AddWeaponComponent(WeaponModel.CarbineRifle, 0x837445AA);
-                    player.AddWeaponComponent(WeaponModel.CarbineRifleMkII, 0x837445AA);
-                    player.AddWeaponComponent(WeaponModel.Pistol50, 0xA73D4664);
-                    player.AddWeaponComponent(WeaponModel.MicroSMG, 0xA73D4664);
-                    player.AddWeaponComponent(WeaponModel.AssaultRifle, 0xA73D4664);
-                    player.AddWeaponComponent(WeaponModel.PumpShotgun, 0xE608B35E);
-                    player.AddWeaponComponent(WeaponModel.HeavyPistol, 0xC304849A);
-                    break;
-                case "Grip":
-                    player.AddWeaponComponent(WeaponModel.CombatPDW, 0xC164F53);
-                    player.AddWeaponComponent(WeaponModel.CarbineRifle, 0xC164F53);
-                    player.AddWeaponComponent(WeaponModel.CarbineRifleMkII, 0x9D65907A);
-                    player.AddWeaponComponent(WeaponModel.AssaultRifle, 0xC164F53);
-                    break;
-                case "LUXUS":
-                    player.AddWeaponComponent(WeaponModel.Pistol, 0xD7391086);
-                    player.AddWeaponComponent(WeaponModel.CombatPistol, 0xC6654D72);
-                    player.AddWeaponComponent(WeaponModel.SMG, 0x27872C90);
-                    player.AddWeaponComponent(WeaponModel.SNSPistol, 0x8033ECAF);
-                    player.AddWeaponComponent(WeaponModel.Pistol50, 0x77B8AB2F);
-                    player.AddWeaponComponent(WeaponModel.HeavyRevolver, 0x16EE3040);
-                    player.AddWeaponComponent(WeaponModel.AssaultRifle, 0x4EAD7533);
-                    player.AddWeaponComponent(WeaponModel.HeavyPistol, 0x7A6A7B7B);
-                    break;
-                case "Holographic-Sight":
-                    player.AddWeaponComponent(WeaponModel.SMGMkII, 0x9FDB5652);
-                    player.AddWeaponComponent(WeaponModel.CarbineRifleMkII, 0x420FD713);
-                    break;
-                case "Small-Scope":
-                    player.AddWeaponComponent(WeaponModel.SMGMkII, 0xE502AB6B);
-                    player.AddWeaponComponent(WeaponModel.CarbineRifleMkII, 0x49B2945);
+                case "Mounted-Scope":
+                    player.AddWeaponComponent(WeaponModel.SMGMkII, 0x9FDB5652); // Scope
+                    player.AddWeaponComponent(WeaponModel.PistolMkII, 0x8ED4BB70); // Scope
                     break;
             }
         }
@@ -604,7 +544,6 @@ namespace Altv_Roleplay.Handler
                 case "Leuchtpistole": wHash = WeaponModel.FlareGun; break;
                 case "Combat-PDW": wHash = WeaponModel.CombatPDW; break;
                 case "Karabiner": wHash = WeaponModel.CarbineRifle; break;
-                case "KarabinerMKII": wHash = WeaponModel.CarbineRifleMkII; break;
                 case "SMG": wHash = WeaponModel.SMG; break;
                 case "Micro-SMG": wHash = WeaponModel.MicroSMG; break;
                 case "Assault-Rifle": wHash = WeaponModel.AssaultRifle; break;

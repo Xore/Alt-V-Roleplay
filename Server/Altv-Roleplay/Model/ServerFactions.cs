@@ -1,5 +1,6 @@
 ﻿using AltV.Net;
 using AltV.Net.Data;
+using AltV.Net.Elements.Entities;
 using Altv_Roleplay.Handler;
 using Altv_Roleplay.models;
 using Altv_Roleplay.Utils;
@@ -8,6 +9,8 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Altv_Roleplay.Model
 {
@@ -846,16 +849,6 @@ namespace Altv_Roleplay.Model
                 Alt.Log($"{e}");
             }
             return false;
-        }
-        public static string GetServerFactionInfos()
-        {
-            var items = ServerFactions_.Where(x => x.id > 0).Select(x => new
-            {
-                x.factionName,
-                x.phoneNumber,
-            }).ToList();
-
-            return JsonConvert.SerializeObject(items);
         }
     }
 }

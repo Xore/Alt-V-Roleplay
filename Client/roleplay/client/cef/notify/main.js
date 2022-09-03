@@ -4,7 +4,7 @@ function noticska(_text, _type, _time, _layout) {
         text: _text,
         type: _type,
         timeout: _time,
-        layout: 'bottomCenter',
+        layout: _layout,
         progressBar: true
 
     }).show();

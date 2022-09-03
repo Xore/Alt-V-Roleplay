@@ -56,9 +56,9 @@ namespace Altv_Roleplay.Model
             {
                 if (charId <= 0) return false;
                 var licData = CharactersLicenses_.FirstOrDefault(x => x.charId == charId);
-                if (licData != null)
+                if(licData != null)
                 {
-                    switch (lic)
+                    switch(lic)
                     {
                         case "pkw": return licData.PKW;
                         case "lkw": return licData.LKW;
@@ -84,7 +84,7 @@ namespace Altv_Roleplay.Model
             {
                 if (licShort == "") return "None";
                 var licData = ServerLicenses_.FirstOrDefault(x => x.licCut == licShort);
-                if (licData != null)
+                if(licData != null)
                 {
                     return licData.licName;
                 }
@@ -103,7 +103,7 @@ namespace Altv_Roleplay.Model
             {
                 if (licShort == "") return 0;
                 var licData = ServerLicenses_.FirstOrDefault(x => x.licCut == licShort);
-                if (licData != null)
+                if(licData != null)
                 {
                     return licData.licPrice;
                 }
@@ -121,91 +121,18 @@ namespace Altv_Roleplay.Model
             {
                 if (charId <= 0 || lic == "") return;
                 var licData = CharactersLicenses_.FirstOrDefault(x => x.charId == charId);
-                if (licData != null)
+                if(licData != null)
                 {
-                    switch (lic)
+                    switch(lic)
                     {
-                        case "pkw": 
-                            if (CharactersInventory.ExistCharacterItem(charId, $"Fuehrerschein {Characters.GetCharacterName(charId)}", "brieftasche"))
-                            {
-                                // nothing
-                            }
-                            else
-                            {
-                                CharactersInventory.AddCharacterItem(charId, $"Fuehrerschein {Characters.GetCharacterName(charId)}", 1, "brieftasche");
-                            }
-                            licData.PKW = valid;
-                            break;
-                        case "lkw":
-                            if (CharactersInventory.ExistCharacterItem(charId, $"Fuehrerschein {Characters.GetCharacterName(charId)}", "brieftasche"))
-                            {
-                                // nothing
-                            }
-                            else
-                            {
-                                CharactersInventory.AddCharacterItem(charId, $"Fuehrerschein {Characters.GetCharacterName(charId)}", 1, "brieftasche");
-                            }
-                            licData.LKW = valid; 
-                            break;
-                        case "bike":
-                            if (CharactersInventory.ExistCharacterItem(charId, $"Fuehrerschein {Characters.GetCharacterName(charId)}", "brieftasche"))
-                            {
-                                // nothing
-                            }
-                            else
-                            {
-                                CharactersInventory.AddCharacterItem(charId, $"Fuehrerschein {Characters.GetCharacterName(charId)}", 1, "brieftasche");
-                            }
-                            licData.Bike = valid; 
-                            break;
-                        case "boat":
-                            if (CharactersInventory.ExistCharacterItem(charId, $"Fuehrerschein {Characters.GetCharacterName(charId)}", "brieftasche"))
-                            {
-                                // nothing
-                            }
-                            else
-                            {
-                                CharactersInventory.AddCharacterItem(charId, $"Fuehrerschein {Characters.GetCharacterName(charId)}", 1, "brieftasche");
-                            }
-                            licData.Boat = valid; 
-                            break;
-                        case "fly":
-                            if (CharactersInventory.ExistCharacterItem(charId, $"Fuehrerschein {Characters.GetCharacterName(charId)}", "brieftasche"))
-                            {
-                                // nothing
-                            }
-                            else
-                            {
-                                CharactersInventory.AddCharacterItem(charId, $"Fuehrerschein {Characters.GetCharacterName(charId)}", 1, "brieftasche");
-                            }
-                            licData.Fly = valid; 
-                            break;
-                        case "helicopter":
-                            if (CharactersInventory.ExistCharacterItem(charId, $"Fuehrerschein {Characters.GetCharacterName(charId)}", "brieftasche"))
-                            {
-                                // nothing
-                            }
-                            else
-                            {
-                                CharactersInventory.AddCharacterItem(charId, $"Fuehrerschein {Characters.GetCharacterName(charId)}", 1, "brieftasche");
-                            }
-                            licData.Helicopter = valid; 
-                            break;
-                        case "passengertransport":
-                            if (CharactersInventory.ExistCharacterItem(charId, $"Fuehrerschein {Characters.GetCharacterName(charId)}", "brieftasche"))
-                            {
-                                // nothing
-                            }
-                            else
-                            {
-                                CharactersInventory.AddCharacterItem(charId, $"Fuehrerschein {Characters.GetCharacterName(charId)}", 1, "brieftasche");
-                            }
-                            licData.PassengerTransport = valid; 
-                            break;
-                        case "weaponlicense": 
-                            licData.weaponlicense = valid;
-                            CharactersInventory.AddCharacterItem(charId, $"Waffenschein {Characters.GetCharacterName(charId)}", 1, "brieftasche");
-                            break;
+                        case "pkw": licData.PKW = valid; break;
+                        case "lkw": licData.LKW = valid; break;
+                        case "bike": licData.Bike = valid; break;
+                        case "boat": licData.Boat = valid; break;
+                        case "fly": licData.Fly = valid; break;
+                        case "helicopter": licData.Helicopter = valid; break;
+                        case "passengertransport": licData.PassengerTransport = valid; break;
+                        case "weaponlicense": licData.weaponlicense = valid; break;
                     }
 
                     using (gtaContext db = new gtaContext())
@@ -229,25 +156,25 @@ namespace Altv_Roleplay.Model
             {
                 x.charId,
                 x.PKW,
-                pkwName = "C",
+                pkwName = "PKW-Führerschein",
                 PKWPrice = GetLicensePrice("pkw"),
                 x.LKW,
-                lkwName = "B",
+                lkwName = "LKW-Führerschein",
                 LKWPrice = GetLicensePrice("lkw"),
                 x.Bike,
-                bikeName = "M",
+                bikeName = "Motorrad-Führerschein",
                 BikePrice = GetLicensePrice("bike"),
                 x.Boat,
-                boatName = "BL",
+                boatName = "Bootsschein",
                 BoatPrice = GetLicensePrice("boat"),
                 x.Fly,
-                flyName = "FL",
+                flyName = "Flugschein",
                 FlyPrice = GetLicensePrice("fly"),
                 x.Helicopter,
-                heliName = "HL",
+                heliName = "Helikopterschein",
                 HelicopterPrice = GetLicensePrice("helicopter"),
                 x.PassengerTransport,
-                passengerTransportName = "C-CDL",
+                passengerTransportName = "Personenbeförderungslizenz",
                 PassengerTransportPrice = GetLicensePrice("passengertransport"),
                 x.weaponlicense,
                 weaponlicenseName = "Waffen-Schein",
@@ -255,64 +182,6 @@ namespace Altv_Roleplay.Model
             }).ToList();
 
             return JsonConvert.SerializeObject(items);
-        }
-
-        public static string GetDriverLicenses(int charId)
-        {
-            try
-            {
-                if (charId <= 0) return "[]";
-                var items = CharactersLicenses_.Where(x => x.charId == charId).Select(x => new
-                {
-                    x.charId,
-                    charname = Characters.GetCharacterName(charId),
-                    birthdate = Characters.GetCharacterBirthdate(charId),
-                    x.PKW,
-                    pkwName = "C",
-                    x.LKW,
-                    lkwName = "B",
-                    x.Bike,
-                    bikeName = "M",
-                    x.Boat,
-                    boatName = "BL",
-                    x.Fly,
-                    flyName = "FL",
-                    x.Helicopter,
-                    heliName = "HL",
-                    x.PassengerTransport,
-                    passengerTransportName = "C-CDL",
-
-                }).ToList();
-                return JsonConvert.SerializeObject(items);
-            }
-            catch (Exception e)
-            {
-                Alt.Log($"{e}");
-                return "[]";
-            }
-        }
-
-        public static string GetWeaponLicense(int charId)
-        {
-            try
-            {
-                if (charId <= 0) return "[]";
-                var items = CharactersLicenses_.Where(x => x.charId == charId).Select(x => new
-                {
-                    x.charId,
-                    charname = Characters.GetCharacterName(charId),
-                    birthdate = Characters.GetCharacterBirthdate(charId),
-                    x.weaponlicense,
-                    weaponlicenseName = "Waffen-Schein",
-
-                }).ToList();
-                return JsonConvert.SerializeObject(items);
-            }
-            catch (Exception e)
-            {
-                Alt.Log($"{e}");
-                return "[]";
-            }
         }
 
         public static bool ExistServerLicense(string licShort)

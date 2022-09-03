@@ -1,10 +1,14 @@
 ﻿using AltV.Net;
 using AltV.Net.Async;
+using AltV.Net.Data;
 using AltV.Net.Elements.Entities;
 using Altv_Roleplay.Factories;
 using Altv_Roleplay.Model;
 using Altv_Roleplay.Utils;
 using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Altv_Roleplay.Handler
 {
@@ -23,11 +27,10 @@ namespace Altv_Roleplay.Handler
             try
             {
                 if (client == null || !client.Exists) return;
-                client.EmitLocked("Client:HUD:updateHUDPosInVeh", true);
-                client.EmitLocked("Client:SPEEDO:updateFuel", ServerVehicles.GetVehicleFuel(vehicle), ServerVehicles.GetVehicleKM(vehicle));
+                client.EmitLocked("Client:HUD:updateHUDPosInVeh", true, ServerVehicles.GetVehicleFuel(vehicle), ServerVehicles.GetVehicleKM(vehicle));
                 client.EmitLocked("Client:HUD:GetDistanceForVehicleKM");
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 Alt.Log($"{e}");
             }
@@ -47,8 +50,7 @@ namespace Altv_Roleplay.Handler
             }
         }
 
-        public static void SendInformationToVehicleHUD(IPlayer player)
-        {
+        public static void SendInformationToVehicleHUD(IPlayer player) {
             if (player == null || !player.Exists) return;
             IVehicle Veh = player.Vehicle;
             if (!Veh.Exists) return;
@@ -77,7 +79,7 @@ namespace Altv_Roleplay.Handler
                 if (client == null || !client.Exists) return;
                 client.EmitLocked("Client:HUD:sendNotification", type, duration, msg, delay);
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 Alt.Log($"{e}");
             }
@@ -96,7 +98,7 @@ namespace Altv_Roleplay.Handler
                 fKM = fKM + ServerVehicles.GetVehicleKM(player.Vehicle);
                 ServerVehicles.SetVehicleKM(player.Vehicle, fKM);
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 Alt.Log($"{e}");
             }

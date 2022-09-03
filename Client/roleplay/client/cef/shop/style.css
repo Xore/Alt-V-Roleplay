@@ -1,0 +1,378 @@
+@font-face {
+    font-family: 'PEL';
+    src: url('../utils/fonts/Poppins-ExtraLight.ttf') format('truetype');
+}
+
+body {
+    -webkit-user-select: none;
+    user-select: none;
+    background: none;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+div#shopHUD-BuySelect,
+div#shopHUD-SellSelect,
+div#shopHUD {
+    opacity: 0;
+    display: none;
+}
+
+div#shopManagerHUD {
+    opacity: 0;
+    display: none;
+}
+
+div#shopManagerHUD {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+}
+
+div#shopManagerHUD>div>p {
+    font-family: PEL;
+    color: #d2d2d2;
+    font-size: 24px;
+    background: #212121;
+    background: #000000c4;
+    padding: 4px;
+    border-bottom: 1px solid #ffffff;
+}
+
+div#shopManagerHUD>div.inventoryBox,
+div#shopManagerHUD>div.shopitemBox {
+    width: 450px;
+    padding: 0;
+    background: #000000c4;
+    text-align: center;
+    padding-bottom: 12px;
+    height: 485px;
+    margin: auto;
+    position: absolute;
+    top: 180px;
+}
+
+div#shopManagerHUD>div.shopCashBox {
+    width: 450px;
+    padding: 0;
+    background: #000000c4;
+    text-align: center;
+    padding-bottom: 12px;
+    height: 115px;
+    margin: auto;
+    position: absolute;
+    top: 60px;
+}
+
+div#shopManagerHUD>div.shopitemBox {
+    left: 455px;
+}
+
+div#shopHUD>span,
+div#shopManagerHUD>div.inventoryBox>span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: #a80000;
+    opacity: .6;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+}
+
+div#shopHUD>span:hover,
+div#shopManagerHUD>div.inventoryBox>span:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+div#shopManagerHUD>div.shopCashBox>span {
+    position: absolute;
+    left: 90%;
+    top: 51%;
+    color: green;
+    font-size: 40px;
+}
+
+div#shopManagerHUD>div.shopCashBox>span:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+div#shopHUD {
+    width: 550px;
+    padding: 0;
+    background: #000000c4;
+    text-align: center;
+    box-shadow: 1px 4px 22px rgba(25, 25, 25, 0.8) !important;
+    padding-bottom: 12px;
+    height: 566.4px;
+    margin: auto;
+    position: relative;
+    top: 212.4px;
+}
+
+div#shopHUD>p.title {
+    font-family: PEL;
+    color: #d2d2d2;
+    font-size: 24px;
+    background: #212121;
+    background: #000000c4;
+    padding: 4px;
+    border-bottom: 1px solid #ffffff;
+}
+
+div#shopHUD-BuySelect,
+div#shopHUD-SellSelect {
+    width: 100%;
+    padding: 10px 0px 0px 0px;
+    position: absolute;
+    text-align: center;
+    padding-bottom: 12px;
+    height: 75.5px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    bottom: 0px;
+}
+
+div#shopHUD-BuySelect>p,
+div#shopHUD-SellSelect>p {
+    color: #d2d2d2;
+    margin-bottom: 0 !important;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+    font-family: PEL;
+    font-size: 16px;
+    text-align: center;
+}
+
+div#shopHUD-BuySelect>button,
+div#shopHUD-SellSelect>button,
+div#shopManagerHUD>div>ul>li>button {
+    transition: all 0.3s ease-in-out;
+    filter: grayscale(0.6);
+    opacity: .6;
+}
+
+div#shopManagerHUD>div>ul>li>button {
+    background: #383838;
+    border: none;
+    padding: 0.2rem 0.75rem;
+}
+
+div#shopHUD-BuySelect>button:hover,
+div#shopHUD-SellSelect>button:hover,
+div#shopManagerHUD>div>ul>li>button:hover {
+    filter: grayscale(0);
+    opacity: .9;
+}
+
+div#shopManagerHUD>div>ul>li>button:hover {
+    background: #16793e;
+}
+
+div#shopHUD-BuySelect>input,
+div#shopHUD-SellSelect>input {
+    outline: none;
+    border: none !important;
+    width: 25%;
+    background: #212121;
+    text-align: center;
+    color: #ffffff;
+    font-family: PEL;
+    font-weight: bold;
+}
+
+div#shopManagerHUD>div>ul>li>input {
+    outline: none;
+    width: 90px;
+    background: #212121;
+    text-align: center;
+    color: #d2d2d2;
+    font-family: PEL;
+    border: 1px solid #0c0c0c !important;
+    font-size: 14px;
+}
+
+div#shopHUD>ul {
+    display: block;
+    margin-left: 8.85px;
+    position: relative;
+    height: 415px;
+    max-height: 415px;
+    overflow-y: scroll;
+}
+
+div#shopManagerHUD>div>ul {
+    display: block;
+    margin-left: 8px;
+    position: relative;
+    height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+div#shopHUD>ul>li {
+    padding: 1.25rem 1.25rem !important;
+    width: 245px;
+    height: 145px;
+    float: left;
+    margin-left: 8.85px;
+    margin-right: 8.85px;
+    background: #1d1d1d;
+    border: 1px solid #060606;
+    margin-top: 8.85px;
+    margin-bottom: 8.85px;
+    padding-bottom: 0px !important;
+    transition: all 0.3s ease-in-out;
+    opacity: .7;
+}
+
+div#shopManagerHUD>div>ul>li {
+    padding: 1.25rem 1.25rem !important;
+    width: 215px;
+    float: left;
+    margin-left: 8.85px;
+    margin-right: 8.85px;
+    background: #1d1d1d;
+    border: 1px solid #060606;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+    opacity: .7;
+}
+
+div#shopHUD>ul>li:hover {
+    cursor: pointer;
+    background: #2d8a52;
+    opacity: 1;
+}
+
+div#shopHUD>ul>li>img {
+    width: 60px;
+    padding-top: 20px;
+}
+
+div#shopManagerHUD>div>ul>li>img {
+    width: 46px;
+}
+
+div#shopHUD>ul>li>span,
+div#shopHUD>ul>li>span.price,
+div#shopManagerHUD>div>ul>li>span {
+    color: #d2d2d2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: PEL;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-top: 2px;
+    background: #238244;
+    padding-right: 6px;
+    padding-bottom: 1px;
+    border: 1px solid #000000cc;
+    border-top: none;
+    border-left: none;
+    text-align: center;
+}
+
+div#shopManagerHUD>div>ul>li>span.price,
+div#shopHUD>ul>li>span.price {
+    right: 0 !important;
+    left: unset;
+    background: #235682;
+}
+
+div#shopManagerHUD>div>ul>li>p,
+div#shopHUD>ul>li>p {
+    color: #ffffff;
+    font-family: PEL;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(136, 136, 136, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6d6d6d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(85, 85, 85);
+}
+
+
+/* Slider */
+
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    background: #1d1d1ddb;
+    outline: none;
+    opacity: 0.6;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4c7aaf;
+    cursor: pointer;
+}
+
+hr {
+    border: none;
+}
+
+.CashBox {
+    background: transparent;
+    border: none;
+    color: green;
+    font-family: 'PEL';
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    left: 1%;
+    top: 50%;
+}
+
+.payOutButton {
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    border: none;
+    color: green;
+    position: absolute;
+    left: 85%;
+    top: 50%;
+    font-size: 45px;
+}

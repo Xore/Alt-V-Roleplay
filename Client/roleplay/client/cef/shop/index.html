@@ -3,8 +3,7 @@
     <meta charset="utf-8">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../utils/bootstrap.min.css">
-    <link rel="stylesheet" href="ShopManager.css">
-    <link rel="stylesheet" href="ShopMain.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../utils/toastr.min.css">
     <link rel="stylesheet" href="../utils/mdb/css/mdb-sass.css">
     <script type="text/javascript" src="../utils/colorpicker.js"></script>
@@ -15,15 +14,10 @@
     <!-- Shop-HUD -->
     <div id="shopHUD">
         <span onclick="closeShopCef();"><i class="fas fa-times"></i></span>
-        <span id="shopCEFBox-RobButton" class="robShop" style="left: 505px;"><i class="fas fa-exclamation-triangle"></i></span>
+        <span id="shopCEFBox-RobButton" class="robShop" style="left: 95%;"><i class="fas fa-exclamation-triangle"></i></span>
         <p id="shopHUD-Title"  class="title">EINKAUFSLADEN</p>
         <ul class="list-group" id="shopHUD-List">
-
-        <li class='list-group-item' onclick='openBuyItemSelect(`" + items[i].itemName + "`);'><span>1000$</span>
-            <span id='shopHUD-PriceTag' class='price'>1000x</span>
-            <img src='../utils/img/inventory/Wasser.png' class='img-fluid'><p>WasserWasserWasserWasser</p>
-        </li>
-
+        <li class='list-group-item' onclick='openBuyItemSelect(`" + items[i].itemName + "`);'><span>1000$</span><span id='shopHUD-PriceTag' class='price'>1000x</span><img src='../utils/img/inventory/" + items[i].itemName + ".png' class='img-fluid'><p>itemName</p></li>
         </ul>
         <div id="shopHUD-BuySelect">
             <p>ANZAHL EINGEBEN</p>
@@ -38,39 +32,19 @@
     </div>
 
     <div id="shopManagerHUD">
-        <div class="shopCashBox">
-            <p style="border-top-left-radius: 35px;">VERWALTUNG</p>
-            <hr>
-            <input id="cashBox" class="CashBox" type="text" spellcheck="false" value="100 $" disabled><br>
-            <span id="shopCEFBox-PayoutButton" class="payOutButton">AUSZAHLEN</span>
-            <hr>
-            <span id="shopCEFBox-CloseShop1" class="payOutButton">Shop Schliessen</span><br>
-            <span id="shopCEFBox-OpenShop" class="payOutButton">Shop Öffnen</span>
-        </div>
         <div class="inventoryBox">
             <span onclick="closeShopManagerCef();"><i class="fas fa-times"></i></span>
             <p>DEIN INVENTAR</p>
-            <ul class="list-group" id="shopManagerHUD-inventoryList">
-                <li class='list-group-item'>
-                    <span>1000x</span>
-                    <p>Wasser</p>
-                    <input class='item' type='number' placeholder='Anzahl'>
-                    <button onclick='transferShopManagerItem("inventory", "` + inventoryItems[i].itemName + `", this);' type='button' class='btn btn-success'><i class='fas fa-angle-double-right'></i></button>
-                </li>
-            </ul>
+            <ul class="list-group" id="shopManagerHUD-inventoryList"></ul>
         </div>
         <div class="shopitemBox">
-            <p style="border-top-right-radius: 35px;">SHOP INVENTAR</p>
-            <ul class="list-group" id="shopManagerHUD-shopList">
-                <li class='list-group-item'>
-                    <span>1000x</span>
-                    <span class='price'>1000$</span>
-                    <p>Wasser</p><button onclick='transferShopManagerItem("shop", "` + shopItems[i].itemName + `", this);' type='button' class='btn btn-success'><i class='fas fa-angle-double-left'></i></button>
-                    <input class='item' type='number' placeholder='Anzahl'>
-                    <hr><button onclick='setShopManagerItemPrice("` + shopItems[i].itemName + `", this);' type='button' class='btn btn-success'><i class='fas fa-dollar-sign'></i></button>
-                    <input class='price' type='number' placeholder='Preis'>
-                </li> 
-            </ul>
+            <p>SHOP INVENTAR</p>
+            <ul class="list-group" id="shopManagerHUD-shopList"></ul>
+        </div>
+        <div class="shopCashBox">
+            <p>KASSE</p>
+            <input id="cashBox" class="CashBox" type="text" spellcheck="false" value="100" disabled><br>
+            <span id="shopCEFBox-PayoutButton"><i class="fas fa-sign-out-alt"></i></span>
         </div>
     </div>
 
@@ -164,10 +138,8 @@
         shopCash = JSON.parse(shopCash);
         let inventoryHTML = "",
             shopItemsHTML = "";
-            
+
         $("#shopCEFBox-PayoutButton").attr("onclick", `payOut(${shopId});`);
-        $("#shopCEFBox-CloseShop1").attr("onclick", `closeShop1(${shopId});`);
-        $("#shopCEFBox-OpenShop").attr("onclick", `openShop1(${shopId});`);
 
         for (var i in shopItems) {
             shopItemsHTML += `<li class='list-group-item'><span>${shopItems[i].itemAmount}x</span><span class='price'>${shopItems[i].itemPrice}$</span><p>${shopItems[i].itemName}</p><button onclick='transferShopManagerItem("shop", "` + shopItems[i].itemName + `", this);' type='button' class='btn btn-success'><i class='fas fa-angle-double-left'></i></button><input class='item' type='number' placeholder='Anzahl'>` +
@@ -178,7 +150,7 @@
             inventoryHTML += `<li class='list-group-item'><span>${inventoryItems[i].itemAmount}x</span><p>${inventoryItems[i].itemName}</p><input class='item' type='number' placeholder='Anzahl'><button onclick='transferShopManagerItem("inventory", "` + inventoryItems[i].itemName + `", this);' type='button' class='btn btn-success'><i class='fas fa-angle-double-right'></i></button></li>`;
         }
 
-        $("#cashBox").val(shopCash + ` $`);
+        $("#cashBox").val(shopCash + `$`);
         $("#shopManagerHUD-inventoryList").html(inventoryHTML);
         $("#shopManagerHUD-shopList").html(shopItemsHTML);
         $("#shopManagerHUD").fadeTo(250, 1, function() {
@@ -249,17 +221,6 @@
         alt.emit("Client:Shop:PayOut", shopId);
         closeShopManagerCef();
     }
-
-    function closeShop1(shopId) {
-        alt.emit("Client:Shop:CloseShop1", shopId);
-        closeShopManagerCef();
-    }
-
-    function openShop1(shopId) {
-        alt.emit("Client:Shop:OpenShop1", shopId);
-        closeShopManagerCef();
-    }
-
 </script>
 <script type="text/javascript">
     //Alt On Events

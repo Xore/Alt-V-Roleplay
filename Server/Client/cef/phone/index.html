@@ -1,0 +1,2461 @@
+﻿<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../utils/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../utils/toastr.min.css">
+    <link rel="stylesheet" href="mdb-sass.css">
+    <script type="text/javascript" src="../utils/colorpicker.js"></script>
+    <script type="text/javascript" src="viewport.js"></script>
+    <title>PHONE</title>
+</head>
+
+<body>
+    <div class="phone scss-mdb" id="Smartphone-Box" data-phonenumber="">
+        <div class="image-based full-phone layer1">
+            <div></div>
+        </div>
+        <div id="phoneBackgroundImage" class="image-based full-phone layer2">
+        </div>
+        <div class="in-phone">
+            <div id="phone-banner" class="bg-success text-center"></div>
+            <div id="phone-notif" class="text-center">
+                <div id="phone-notif-app"></div>
+                <div id="phone-notif-content"></div>
+            </div>
+            <div id="phone-header">
+                <div id="phone-connection-str" class="float-left phone-header-text">
+                    5G 
+                </div>
+                <div class="float-right phone-header-text">
+                    <div id="phone-nodisturb" class="phone-inline d-none">
+                        <i class="fad fa-volume-slash"></i>
+                    </div>
+                    <div id="phone-connection-svg" class="phone-inline">
+                    </div>
+                    <div id="phone-min-time" class="phone-inline">
+                        NaN
+                    </div>
+                </div>
+            </div>
+            <div id="phone-footer">
+                <div class="text-center">
+                    <button tabIndex="-1" id="phone-home" type="button" class="btn btn-outline-white" onclick="phoneForceToHome()">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="phone-screen-home" class="in-phone">
+            <div id="phone-clock" class="text-center">
+            <a style="pointer-events: none" class="weatherwidget-io" href="https://forecast7.com/de/40d42n3d70/madrid/" data-label_1="LOS SANTOS" data-label_2="WETTER" data-mode="Current" data-theme="original" data-basecolor="rgba(255, 255, 255, 0)" >LOS SANTOS WETTER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+            </div>
+            <div id="phone-appspace" style="text-align:center;">
+            <img src="../utils/img/phone/apps/call.png" width="60" height="60" style="margin-top:15px;margin-left:5px;" id="phone-app-call">
+            <img src="../utils/img/phone/apps/sms.png" width="60" height="60" style="margin-top:15px;margin-left:5px;" id="phone-app-sms">
+            <img src="../utils/img/phone/apps/contacts.png" width="60" height="60" style="margin-top:15px;margin-left:5px;" id="phone-app-address">
+            <img src="../utils/img/phone/apps/verlauf.png" width="60" height="60" style="margin-top:15px;margin-left:5px;" id="phone-app-Verlauf">
+            <hr>
+            <button class="menubutton" type="button" id="phone-app-mainmenu">•••</button>
+            </div>
+        </div>
+        <div id="phone-screen-mainmenu" class="cloudy-knoxville-gradient in-phone">
+            <div class="phone-header-markdown phone-grey-color-header"></div>
+            <div class="in-screen-content phone-scaleable" style="height: 100px;">
+                <h1 class="text-center text-white">Apps</h1>
+                <div class="text-center">
+                <img src="../utils/img/phone/apps/funk.png" width="60" height="60" style="margin-top:15px;margin-left:5px;" id="phone-app-radio">
+                <img src="../utils/img/phone/apps/settings.png" width="60" height="60" style="margin-top:15px;margin-left:5px;" id="phone-app-settings">
+                <img src="../utils/img/phone/apps/trevor.png" width="60" height="60" style="margin-top:15px;margin-left:5px;" id="phone-app-trevor">
+                <img src="../utils/img/phone/apps/dispatch.png" width="60" height="60" style="margin-top:15px;margin-left:5px;" id="phone-app-dispatch">
+                <img src="../utils/img/phone/apps/pdapp.png" width="60" height="60" style="margin-top:15px;margin-left:5px;" id="phone-app-police">
+                <!--<img src="../utils/img/phone/apps/pdapp.png" width="60" height="60" style="margin-top:15px;margin-left:5px;" id="phone-app-business">-->
+                </div>
+            </div>
+        </div>
+        <div id="phone-screen-call" class="image-based in-phone">
+            <div class="phone-header-markdown"></div>
+            <div class="in-screen-content">
+                <h1 class="text-center text-white">Anrufen</h1>
+                <div class="input-group">
+                    <input type="text" id="phone-call-input" style="background-color:transparent;color:white;" class="form-control"></input>
+                </div>
+                <table class="phone-dial-table text-center">
+                    <tbody>
+                        <tr class="phone-dial-row">
+                            <td> <button onclick="phoneDialAdd(1)" type="button" style="color:white;" class="btn btn-dial">1</button></td>
+                            <td> <button onclick="phoneDialAdd(2)" type="button" style="color:white;" class="btn btn-dial">2</button></td>
+                            <td> <button onclick="phoneDialAdd(3)" type="button" style="color:white;" class="btn btn-dial">3</button></td>
+                        </tr>
+                        <tr class="phone-dial-row">
+                            <td> <button onclick="phoneDialAdd(4)" type="button" style="color:white;" class="btn btn-dial">4</button></td>
+                            <td> <button onclick="phoneDialAdd(5)" type="button" style="color:white;" class="btn btn-dial">5</button></td>
+                            <td> <button onclick="phoneDialAdd(6)" type="button" style="color:white;" class="btn btn-dial">6</button></td>
+                        </tr>
+                        <tr class="phone-dial-row">
+                            <td> <button onclick="phoneDialAdd(7)" type="button" style="color:white;" class="btn btn-dial">7</button></td>
+                            <td> <button onclick="phoneDialAdd(8)" type="button" style="color:white;" class="btn btn-dial">8</button></td>
+                            <td> <button onclick="phoneDialAdd(9)" type="button" style="color:white;" class="btn btn-dial">9</button></td>
+                        </tr>
+                        <tr class="phone-dial-row">
+                            <td> <button tabIndex="-1" id="phone-call-submit" type="button" style="color:green;" class="btn btn-dial"><i class="fas fa-phone"></i></button></td>
+                            <td> <button onclick="phoneDialAdd(0)" type="button" style="color:white;" class="btn btn-dial">0</button></td>
+                            <td> <button onclick="phoneDialDelete()" type="button" style="color:red;" class="btn btn-dial"><i class="fas fa-times"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="phone-screen-calling" class="cloudy-knoxville-gradient in-phone text-center">
+            <div class="phone-header-markdown phone-grey-color-header"></div>
+            <div class="in-screen-content">
+                <h2 data-target="" id="phone-calling-display"></h2>
+                <p id="phone-calling-activetime"></p>
+                <button tabIndex="-1" onclick="phoneAcceptCall()" id="phoneAcceptCall" class="btn btn-outline-success phone-calling-button">
+                    <i class="fas fa-phone fa-3x"></i>
+                </button>
+                <button tabIndex="-1" onclick="phoneHangUp()" id="phoneHangUp" class="btn btn-outline-danger phone-calling-button">
+                    <i class="fas fa-phone-slash fa-3x"></i>
+                </button>
+            </div>
+        </div>
+        <!--#######-->
+        
+        <div id="phone-screen-business" class="cloudy-knoxville-gradient in-phone">
+            <div class="phone-header-markdown phone-grey-color-header"></div>
+            <div id="phone-business-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" id="phone-business-home">
+                        <div class="sunny-morning-gradient text-center border border-dark shadow py-3">
+                            <h2 id="titelamk">Business</h2>
+                        </div>
+                        <div class="phone-grey-color-header border border-dark w-100 p-2 d-flex shadow">
+                            <div class="btn btn-rounded sunny-morning-gradient border border-dark m-auto" onClick="phonebusinessRefresh()">
+                                <i id="phone-business-sync" class="fas fa-sync-alt"></i>
+                            </div>
+                        </div>
+                        <div class="pseudo-box">
+                            <div id="phone-business-list">
+                                <div class="phone-business-item waves-effect" data-businessid="' + globalContactsArray[i].contactId + '" data-phonenumber="' + globalContactsArray[i].contactNumber + '" onclick="phoneOpenbusiness(' + globalContactsArray[i].contactId + ')">
+                                    <div class="phone-business-nickname">Max Mustermann</div>
+                                    <div class="phone-business-rank">Chief of Police</div>
+                                    <div class="phone-business-phonenumber">12345666</div></div>
+                                <div class="phone-business-item waves-effect" data-businessid="' + globalContactsArray[i].contactId + '" data-phonenumber="' + globalContactsArray[i].contactNumber + '" onclick="phoneOpenbusiness(' + globalContactsArray[i].contactId + ')">
+                                    <div class="phone-business-nickname">Millie Mustermann</div>
+                                    <div class="phone-business-rank">Deputy chief</div>
+                                    <div class="phone-business-phonenumber">12345777</div></div>
+                                <div class="phone-business-item waves-effect" data-businessid="' + globalContactsArray[i].contactId + '" data-phonenumber="' + globalContactsArray[i].contactNumber + '" onclick="phoneOpenbusiness(' + globalContactsArray[i].contactId + ')">
+                                    <div class="phone-business-nickname">Stefan Mustermann</div>
+                                    <div class="phone-business-rank">Commander</div>
+                                    <div class="phone-business-phonenumber">12345888</div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="phone-business-view" data-id>
+                        <div class="sunny-morning-gradient text-center border border-dark shadow py-3">
+                            <h2 id="phone-business-name"></h2>
+                        </div>
+                        <div class="phone-grey-color-header border border-dark w-100 p-2 d-flex shadow">
+                            <div class="btn btn-rounded sunny-morning-gradient border border-dark my-auto" onClick="$('#phone-business-carousel').carousel(0)">
+                                <i class="fas fa-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="text-center pt-3 phone-scaleable">
+                            <div class="phone-business-pre-number">
+                                Telefonnummer
+                                <div id="phone-business-number" data-target class="phone-number-disp"></div>
+                            </div>
+                        </div>
+                        <div class="row px-3">
+                            <div class="btn btn-rounded sunny-morning-gradient border border-dark mx-auto" onClick="phoneCallbusiness()">
+                                <i class="fas fa-phone fa-2x"></i>
+                            </div>
+                            <div class="btn btn-rounded sunny-morning-gradient border border-dark mx-auto" onClick="phoneMessagebusiness()">
+                                <i class="fas fa-envelope fa-2x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="phone-screen-sms" class="cloudy-knoxville-gradient in-phone">
+            <div class="phone-header-markdown phone-sms-color-header">
+
+            </div>
+            <div id="phone-screen-sms-home">
+                <div id="phone-screen-sms-header">
+                    <div id="phone-sms-header-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <div class="carousel-inner">
+                            <div id="phone-sms-header-main" class="carousel-item active phone-sms-color-bg">
+                                <div id="phone-screen-sms-header-upper">
+                                    <div id="phone-screen-sms-header-upper-text" class="mx-3">
+                                        <b>Whatsapp</b>
+                                    </div>
+                                    <div id="phone-screen-sms-header-upper-buttons">
+                                        <button id="phone-sms-home-settings" class="btn btn-rounded">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div id="phone-screen-sms-header-nav">
+                                    <li id="phone-sms-nav-chats" class="phone-sms-nav-item waves-effect waves-light phone-sms-nav-item-active">
+                                        Chats
+                                        <span id="phone-app-chat-alert" class="badge badge-pill badge-danger"></span>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="phone-sms-header-chat" class="carousel-item phone-sms-color-bg">
+                                <i class="fas fa-arrow-left mx-3" onClick="phoneCloseChat()"></i>
+                                <span id="phone-chat-disp-name" data-target="" class="mx-3">
+                                </span>
+                                <span id="phone-chat-call" class="mx-1">
+                                    <i class="fas fa-phone"></i>
+                                </span>
+                                <span id="phone-chat-delete" class="mx-1">
+                                    <i class="fas fa-trash-alt"></i>
+                                </span>
+                            </div>
+                            <div id="phone-sms-header-newchat" class="carousel-item phone-sms-color-bg">
+                                <i tabIndex="-1" class="fas fa-arrow-left mx-3" onClick="phoneCloseChat()"></i>
+                                <span class="phone-chat-header-text mx-3"> Neuen Chat starten </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="phone-sms-home-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <div class="carousel-inner">
+                        <div id="phone-sms-home" class="carousel-item phone-sms-largeoffset active">
+                            <div id="phone-sms-home-chats"> </div>
+                            <span id="phone-chat-start" tabIndex="-1" class="waves-effect" onClick="openNewChat()">
+                                <i class="far fa-comment-alt-plus"></i>
+                            </span>
+                        </div>
+                        <div id="phone-sms-chat" class="carousel-item image-based phone-sms-smalloffset">
+                            <div id="phone-sms-chat-window">
+                                <div id="phone-chat-display" class="phone-sms-scrollbar">
+                                </div>
+                                <div id="phone-chat-footer">
+                                    <div id="phone-chat-input-area">
+                                        <input id="phone-chat-input" placeholder="Nachricht.." type="text" class="form-control shadow"></input>
+                                        <div id="phone-sms-send" class="btn btn-rounded btn-outline-white shadow" onclick="phoneSendMessage()">
+                                            <i class="fas fa-paper-plane"></i>
+                                        </div>
+                                        <div id="phone-chat-emotes" class="dropup">
+                                            <span id="emote-toggler" data-toggle="dropdown"><i class="far fa-laugh"></i></span>
+                                            <div class="dropdown-menu">
+                                                <i class="far fa-smile emote" onclick="addChatEmote(':)')"></i>
+                                                <i class="far fa-laugh emote" onclick="addChatEmote(':D')"></i>
+                                                <i class="far fa-grin-wink emote" onclick="addChatEmote(';)')"></i>
+                                                <i class='far fa-kiss emote' onclick="addChatEmote(':*')"></i>
+                                                <i class='far fa-angry emote' onclick="addChatEmote(':angry:')"></i>
+                                                <i class='far fa-dizzy emote' onclick="addChatEmote(':dizzy:')"></i>
+                                                <i class='far fa-flushed emote' onclick="addChatEmote(':flushed:')"></i>
+                                                <i class='far fa-frown emote' onclick="addChatEmote(':frown:')"></i>
+                                                <i class='far fa-grin emote' onclick="addChatEmote(':grin:')"></i>
+                                                <i class='far fa-grin-hearts emote' onclick="addChatEmote(':love:')"></i>
+                                                <i class='far fa-tired emote' onclick="addChatEmote(':tired:')"></i>
+                                                <i class='far fa-sad-cry emote' onclick="addChatEmote(':cry:')"></i>
+                                                <i class='far fa-meh emote' onclick="addChatEmote(':meh:')"></i>
+                                                <i class='far fa-kiss-beam emote' onclick="addChatEmote(':kiss:')"></i>
+                                                <i class='far fa-surprise emote' onclick="addChatEmote(':surprise:')"></i>
+                                                <i class='fad fa-gem' style='--fa-primary-color: #1c8ad4; --fa-secondary-color: #25a1f5;' onclick="addChatEmote(':card:')"></i>
+                                                <i class='far fa-heart' style='color: #c90a0a' onclick="addChatEmote(':heart:')"></i>
+                                                <i class='far fa-thumbs-up' style='color: #0a33c9' onclick="addChatEmote(':like:')"></i>
+                                                <i class='far fa-thumbs-down' style='color: #0a33c9' onclick="addChatEmote(':dislike:')"></i>
+                                                <i class='far fa-ban' style='color: #ff0011' onclick="addChatEmote(':block:')"></i>
+                                                <i class='far fa-eye' style='color: #758aff' onclick="addChatEmote(':eye:')"></i>
+                                                <i class='fas fa-cannabis' style='color: #08c93c' onclick="addChatEmote(':weed:')"></i>
+                                                <i class='fal fa-hand-middle-finger' style='color: #d9b85d' onclick="addChatEmote(':middlefinger:')"></i>
+                                                <i class='fab fa-accessible-icon' style='color: #2a92e8' onclick="addChatEmote(':chair:')"></i>
+                                                <i class='fas fa-exclamation-triangle' style='color: #a80f0f' onclick="addChatEmote(':warn:')"></i>
+                                                <i class='far fa-lock' style='color: #ffcb21' onclick="addChatEmote(':lock:')"> </i>
+                                                <i class='fad fa-lock' style='--fa-primary-color: #ffcb21; --fa-secondary-color: #919191;' onclick="addChatEmote(':schloss:')"></i>
+                                                <i class='far fa-bat' style='color: #000000' onclick="addChatEmote(':bat:')"></i>
+                                                <i class='fal fa-dog' style='color: #755d3f' onclick="addChatEmote(':dog:')"></i>
+                                                <i class='far fa-dove' style='color: #2ba9bd' onclick="addChatEmote(':dove:')"></i>
+                                                <i class='far fa-frog' style='color: #086610' onclick="addChatEmote(':frog:')"></i>
+                                                <i class='far fa-monkey' style='color: #755d3f' onclick="addChatEmote(':monkey:')"></i>
+                                                <i class='fas fa-fish' style='color: #0a33c9' onclick="addChatEmote(':fish:')"></i>
+                                                <i class='far fa-pig' style='color: #eda4e5' onclick="addChatEmote(':pig:')"></i>
+                                                <i class='far fa-spider' style='color: #000000' onclick="addChatEmote(':spider:')"></i>
+                                                <i class='far fa-whale' style='color: #1476cc' onclick="addChatEmote(':whale:')"></i>
+                                                <i class='fad fa-turtle' style='--fa-primary-color: #448c41; --fa-secondary-color: #857058;' onclick="addChatEmote(':turtle:')"></i>
+                                                <i class='fal fa-ambulance' style='color: #a11216' onclick="addChatEmote(':medic:')"></i>
+                                                <i class='fal fa-pills' style='color: #a6a6a6' onclick="addChatEmote(':pills:')"></i>
+                                                <i class='fal fa-poop' style='color: #754e34' onclick="addChatEmote(':poop:')"></i>
+                                                <i class='fad fa-bed' style='--fa-primary-color: #754e34; --fa-secondary-color: #4625e8;' onclick="addChatEmote(':noah:')"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="phone-sms-newchat" class="carousel-item phone-sms-smalloffset">
+                            <div id="phone-screen-newchat">
+                                <div class="phone-messenger-row">
+                                    <input type="number" id="phone-input-new-chat" class="form-control" placeholder="Telefonnummer" onkeypress="return event.charCode >= 48 && event.charCode <= 57"></input>
+                                    <div id="phone-button-newchat" class="btn btn-rounded text-center" onclick="phoneNewChat(null)">
+                                        <i class="fas fa-plus"></i>
+                                    </div>
+                                </div>
+                                <div id="phone-messenger-contacts"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="phone-screen-address" class="cloudy-knoxville-gradient in-phone">
+            <div class="phone-header-markdown phone-grey-color-header"></div>
+            <div id="phone-address-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" id="phone-address-home">
+                        <div>
+                            <div class="contacts">Kontakte</div>
+                        </div>
+                        <div class="border border-dark w-100 p-2 d-flex shadow">
+                            <div class="m-auto" onClick="phoneNewAddress()">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="m-auto" onClick="phoneAddressRefresh()">
+                                <i id="phone-address-sync" class="fas fa-sync-alt"></i>
+                            </div>
+                        </div>
+                        <div class="pseudo-box">
+                            <div id="phone-address-list">
+                            <div class="phone-address-item waves-effect" data-addressid="1" data-phonenumber="123456" onclick="phoneOpenAddress()">
+                <div class="phone-address-nickname"> ContactNameContact</div>
+                <div class="phone-address-phonenumber"> 123456</div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="phone-address-view" data-id>
+                        <div class="text-center border border-dark shadow py-3">
+                            <div id="phone-address-name" class="contacts"></div>
+                        </div>
+                        <div class="phone-grey-color-header border border-dark w-100 p-2 d-flex shadow">
+                            <div class="border-dark my-auto" onClick="$('#phone-address-carousel').carousel(0)">
+                                <i class="fas fa-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="text-center pt-3 phone-scaleable">
+                            <div class="phone-address-pre-number">
+                                Telefonnummer
+                                <div id="phone-address-number" data-target class="phone-number-disp"></div>
+                            </div>
+                        </div>
+                        <div class="row px-3">
+                            <div class="border-dark mx-auto" onClick="phoneCallAddress()">
+                                <i class="fas fa-phone fa-2x"></i>
+                            </div>
+                            <div class="border-dark mx-auto" onClick="phoneMessageAddress()">
+                                <i class="fas fa-envelope fa-2x"></i>
+                            </div>
+                            <div class="border-dark mx-auto" onClick="phoneEditAddress()">
+                                <i class="fas fa-pencil-alt fa-2x"></i>
+                            </div>
+                            <div class="border-dark mx-auto" onClick="phoneDeleteAddress()">
+                                <i class="fas fa-trash-alt fa-2x"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="phone-address-addOrEdit" data-target="">
+                        <div class="text-center border border-dark shadow py-3">
+                            <h2 id="phone-address-aoe-header"></h2>
+                        </div>
+                        <div class="phone-grey-color-header border border-dark w-100 p-2 d-flex shadow">
+                            <div class="border-dark mx-auto" onClick="$('#phone-address-carousel').carousel(0)">
+                                <i class="fas fa-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="text-center pt-3 phone-scaleable">
+                            <div class="container">
+                                <div class="md-form form-lg">
+                                    <input type="text" id="phone-address-aoe-name" class="form-control form-control-lg">
+                                    <label id="phone-address-aoe-namelabel" for="phone-address-aoe-name">Name</label>
+                                </div>
+
+                                <div class="md-form form-lg">
+                                    <input type="text" id="phone-address-aoe-number" class="form-control form-control-lg" style="color:white;">
+                                    <label id="phone-address-aoe-numlabel" for="phone-address-aoe-number">Telefonnummer</label>
+                                </div>
+                            </div>
+                            <div class="border-dark m-auto" onClick="phoneAddressSubmit()">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="phone-screen-Verlauf" class="cloudy-knoxville-gradient in-phone">
+            <div class="phone-header-markdown phone-grey-color-header"></div>
+            <div id="phone-Verlauf-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" id="phone-Verlauf-home">
+                        <div class="text-center border border-dark shadow py-3">
+                            <h2 id="titelamk">Anrufverlauf</h2>
+                        </div>
+                        <div class="phone-grey-color-header border border-dark w-100 p-2 d-flex shadow">
+                            
+                            <div class="m-auto" onClick="phoneVerlaufRefresh()">
+                                <i id="phone-Verlauf-sync" class="fas fa-sync-alt"></i>
+                            </div>
+                            
+                        </div>
+                        <div class="pseudo-box">
+                            <div id="phone-Verlauf-list">
+                                <div class="phone-Verlauf-item-green waves-effect" data-Verlaufid="' + globalContactsArray3[i].contactId + '" data-phonenumber="' + globalContactsArray3[i].contactNumber + '" onclick="phoneOpenVerlauf(' + globalContactsArray3[i].contactId + ')">
+                                   <div class="phone-Verlauf-phonenumber">12345666</div>
+                                   <br><div class="phone-Verlauf-nickname">12.07.2020 18:39</div></div>
+                                   <div style="float: right; margin-top: -47px; margin-right: 25px; font-size: 25px;"><i class="fas fa-phone-square"></i></div>
+                                <div class="phone-Verlauf-item-red waves-effect" data-Verlaufid="' + globalContactsArray3[i].contactId + '" data-phonenumber="' + globalContactsArray3[i].contactNumber + '" onclick="phoneOpenVerlauf(' + globalContactsArray3[i].contactId + ')">
+                                   <div class="phone-Verlauf-phonenumber">12345777</div>
+                                   <br><div class="phone-Verlauf-nickname">12.07.2020 18:39</div></div>
+                                   <div style="float: right; margin-top: -47px; margin-right: 25px; font-size: 25px;"><i class="fas fa-phone-square-alt"></i></div>
+                                <div class="phone-Verlauf-item-green waves-effect" data-Verlaufid="' + globalContactsArray3[i].contactId + '" data-phonenumber="' + globalContactsArray3[i].contactNumber + '" onclick="phoneOpenVerlauf(' + globalContactsArray3[i].contactId + ')">
+                                   <div class="phone-Verlauf-phonenumber">12345888</div>
+                                   <br><div class="phone-Verlauf-nickname">12-07-2021T18:39:30.4121211+02:00</div></div>
+                                   <div style="float: right; margin-top: -47px; margin-right: 25px; font-size: 25px;"><i class="fas fa-phone-square"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="phone-Verlauf-view" data-id>
+                        <div class="text-center border border-dark shadow py-3">
+                            <h2 id="phone-Verlauf-name"></h2>
+                        </div>
+                        <div class="phone-grey-color-header border border-dark w-100 p-2 d-flex shadow">
+                            <div class="my-auto" onClick="$('#phone-Verlauf-carousel').carousel(0)">
+                                <i class="fas fa-arrow-left"></i>
+                            </div>
+                        </div>
+                        <div class="text-center pt-3 phone-scaleable">
+                            <div class="phone-Verlauf-pre-number" style="color:white;">
+                                Telefonnummer
+                                <div id="phone-Verlauf-number" data-target class="phone-number-disp"></div>
+                            </div>
+                        </div>
+                        <div class="row px-3">
+                            <div class="mx-auto" onClick="phoneCallVerlauf()" style="color:white;">
+                                <i class="fas fa-phone fa-2x"></i>
+                            </div>
+                            <div class="mx-auto" onClick="phoneMessageVerlauf()" style="color:white;">
+                                <i class="fas fa-envelope fa-2x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="phone-screen-police" class="cloudy-knoxville-gradient in-phone">
+            <div class="phone-header-markdown phone-blue-color-header"></div>
+            <div id="phone-police-main" class="text-center text-white h-95">
+                <div id="phone-police-main-head" class="background-police-gradient">
+                    <img src="../utils/img/phone/lspd.png" width="230" height="230">
+                    <h3>LSPD-Intranet</h3>
+                </div>
+                <div id="phone-police-main-footer" class="background-police">
+                    <div class="input-group">
+                        <input id="police-app-query-input" type="text" class="form-control" placeholder="Personensuche">
+                        <div class="input-group-append" onclick="policeAppQuery()">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        </div>
+                    </div>
+                    <div class="btn btn-outline-white" onclick="requestPoliceAppMostWanteds()">Most wanted</div>
+                </div>
+            </div>
+            <div id="phone-police-querylist" class="h-95">
+                <div class="phone-police-overlay">
+                    <div id="phone-police-querylist-subhead">
+                        <div id="police-querylist-header">Fehler</div>
+                    </div>
+                    <div class="phone-police-return btn background-police text-white" onclick="policeAppToHome()"><i class="fas fa-arrow-left"></i></div>
+                </div>
+                <div id="phone-police-querylist-head">
+                    <div class="background-police text-center text-white p-2">Personensuche</div>
+                </div>
+                <div id="phone-police-querylist-main"></div>
+            </div>
+            <div id="phone-police-wanteds">
+                <div class="phone-police-overlay">
+                    <div class="phone-police-return btn background-police text-white" onclick="policeAppToQuerylist()"><i class="fas fa-arrow-left"></i></div>
+                    <div class="phone-police-addwanted btn background-police text-white" onclick="policeAppAddWanted()"><i class="fas fa-plus"></i></div>
+                </div>
+                <div id="phone-police-wanteds-header" class="background-police text-center text-white p-2">FEHLER</div>
+                <div id="phone-police-wanteds-display">
+                    <div id="phone-police-wanteds-total" data-ticketfine data-jailtime>
+                        Fehler
+                    </div>
+                    <div id="phone-police-wanteds-list"></div>
+                </div>
+            </div>
+            <div id="phone-police-addwanteds">
+                <div class="phone-police-overlay">
+                    <div class="phone-police-return btn background-police text-white" onclick="policeAppToWanteds()"><i class="fas fa-arrow-left"></i></div>
+                    <div class="phone-police-addwanted btn background-police text-white" onclick="policeAppSaveWanted()"><i class="fas fa-save"></i></div>
+                </div>
+                <div id="phone-police-addwanteds-header" class="background-police text-center text-white p-2">Akte anlegen</div>
+                <div id="phone-police-addwanteds-content">
+                    <div>
+                        <div class="text-center">Vergebene Akten:</div>
+                        <input id="phone-police-addwanteds-json" type="hidden" value="" />
+                        <div id="phone-police-addwanteds-active">
+                            <div class="text-center text-muted">keine</div>
+                        </div>
+                    </div>
+                    <div id="phone-police-addwanteds-stgb">
+                        <button class="btn btn-elegant" type="button" data-toggle="collapse" data-target="#stgb1">
+                            Straßenverkehr
+                        </button>
+                        <div class="collapse" id="stgb1"></div>
+                        <button class="btn btn-elegant" type="button" data-toggle="collapse" data-target="#stgb2">
+                            Geschwindigkeitsbegrenzung
+                        </button>
+                        <div class="collapse" id="stgb2"></div>
+                        <button class="btn btn-elegant" type="button" data-toggle="collapse" data-target="#stgb3">
+                            Fahrerlaubnis
+                        </button>
+                        <div class="collapse" id="stgb3"></div>
+                        <button class="btn btn-elegant" type="button" data-toggle="collapse" data-target="#stgb4">
+                            Luftverkehr
+                        </button>
+                        <div class="collapse" id="stgb4"></div>
+                        <button class="btn btn-elegant" type="button" data-toggle="collapse" data-target="#stgb5">
+                            Wirtschaftskriminalität
+                        </button>
+                        <div class="collapse" id="stgb5"></div>
+                        <button class="btn btn-elegant" type="button" data-toggle="collapse" data-target="#stgb6">
+                            Körperliche Unversehrtheit
+                        </button>
+                        <div class="collapse" id="stgb6"></div>
+                        <button class="btn btn-elegant" type="button" data-toggle="collapse" data-target="#stgb7">
+                            Waffendelikte
+                        </button>
+                        <div class="collapse" id="stgb7"></div>
+                        <button class="btn btn-elegant" type="button" data-toggle="collapse" data-target="#stgb8">
+                            Staatliche Vergehen
+                        </button>
+                        <div class="collapse" id="stgb8"></div>
+                        <button class="btn btn-elegant" type="button" data-toggle="collapse" data-target="#stgb9">
+                            Sonstige Delikte
+                        </button>
+                        <div class="collapse" id="stgb9"></div>
+                        <button class="btn btn-elegant" type="button" data-toggle="collapse" data-target="#stgb10">
+                            Drogenbesitz
+                        </button>
+                        <div class="collapse" id="stgb10"></div>
+                        <button class="btn btn-elegant" type="button" data-toggle="collapse" data-target="#stgb11">
+                            Gewerbeordnung
+                        </button>
+                        <div class="collapse" id="stgb11"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="phone-police-mostwanted" class="h-95">
+                <div class="phone-police-overlay">
+                    <div class="phone-police-return btn background-police text-white" onclick="policeAppToHome()"><i class="fas fa-arrow-left"></i></div>
+                </div>
+                <div id="phone-police-mostwanted-head">
+                    <div class="background-police text-center text-white p-2">Most Wanted</div>
+                </div>
+                <div id="phone-police-mostwanted-main"></div>
+            </div>
+        </div>
+        <div id="phone-screen-radio" class="cloudy-knoxville-gradient in-phone">
+            <div class="phone-header-markdown phone-grey-color-header"></div>
+            <div id="phone-radio-frequency-frame">
+                <input id="phone-radio-frequency-slider" oninput="phoneSyncRadioFrequencyWith('slider')" list="freqTickmarks" type="range" />
+                <datalist id="freqTickmarks"></datalist>
+            </div>
+            <div class="freq-tuning">
+                <div class="input-group">
+                    <input id="phone-radio-frequency-number" tabindex="-1" class="form-control" type="number" oninput="phoneSyncRadioFrequencyWith('number')" placeholder="Frequenz">
+                    <div class="input-group-append">
+                        <span class="input-group-text">MHz</span>
+                    </div>
+                </div>
+                <div id="phone-radio-frequency-diode" class="diode"></div>
+            </div>
+            <div class="phone-switch d-inline">
+                <label class="switch switch-flat align-middle mx-auto">
+                    <input class="switch-input" type="checkbox" name="switch-group" id="phone-radio-switch" onchange="phoneSwapRadio()" value="1"/>
+                    <span class="switch-label" data-on="An" data-off="Aus"></span> 
+                    <span class="switch-handle"></span> 
+                </label>
+            </div>
+        </div>
+        <div id="phone-screen-settings" class="cloudy-knoxville-gradient in-phone">
+            <div class="phone-header-markdown phone-grey-color-header"></div>
+            <div class="in-screen-content phone-scaleable" style="height: 100px;">
+                <div class="text-center">
+                    <div class="d-inline form-group">
+                        <label for="phone-flightmode-switch align-middle d-inline" style="color:white;"> Flugmodus </label>
+                        <div class="phone-switch d-inline">
+                            <label class="switch switch-flat align-middle mx-auto">
+                                <input class="switch-input" type="checkbox" name="switch-group" id="phone-flightmode-switch" onchange="phoneSwapFlightmode()" value="1">
+                                <span class="switch-label" data-on="An" data-off="Aus"></span> 
+                                <span class="switch-handle"></span> 
+                            </label>
+                        </div>
+                    </div>
+                    <hr style="margin-top: 5px; margin-bottom: 5px;">
+                    <div class="d-inline form-group">
+                        <label for="phone-nodisturb-switch align-middle d-inline" style="color:white;"> Nicht-Stören-Modus </label>
+                        <div class="phone-switch d-inline">
+                            <label class="switch switch-flat align-middle mx-auto">
+                                <input class="switch-input" type="checkbox" name="switch-group" id="phone-nodisturb-switch" onchange="phoneSwapNodisturb()" value="1">
+                                <span class="switch-label" data-on="An" data-off="Aus"></span> 
+                                <span class="switch-handle"></span> 
+                            </label>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="d-inline form-group">
+                        <label for="phone-background-switch align-middle d-inline" style="color:white;"> Hintergrund </label><br>
+                        <div class="vertical-menu">
+                         <a onclick="changePhoneBackground(1)" style="color:white;">Color-Fade</a>
+                         <a onclick="changePhoneBackground(2)" style="color:white;">Sunset</a>
+                         <a onclick="changePhoneBackground(3)" style="color:white;">Color-Fade 2</a>
+                         <a onclick="changePhoneBackground(4)" style="color:white;">Skyline</a>
+                         <a onclick="changePhoneBackground(5)" style="color:white;">Wings</a>
+                         <a onclick="changePhoneBackground(6)" style="color:white;">Circle</a>
+                         <a onclick="changePhoneBackground(7)" style="color:white;">Space</a>
+                         <a onclick="changePhoneBackground(8)" style="color:white;">Triangle</a>
+                         <a onclick="changePhoneBackground(9)" style="color:white;">Hexa-Colors</a>
+                         <a onclick="changePhoneBackground(10)" style="color:white;">Mountain</a>
+                         <a onclick="changePhoneBackground(11)" style="color:white;">GOD</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div style="color:white;">
+                        Telefonnummer:<br>
+                        <span id="phone-settings-number" class="phone-number-disp" data-number="1">1</span>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div id="phone-screen-dispatch" class="cloudy-knoxville-gradient in-phone">
+            <div class="phone-header-markdown phone-grey-color-header"></div>
+            <div class="in-screen-content phone-scaleable" style="height: 100px;">
+                <div class="text-center">
+                    <hr style="margin-top: 5px; margin-bottom: 5px;">
+                    <hr>
+                    <div class="d-inline form-group">
+                        <label for="phone-background-switch align-middle d-inline" style="color:red;"> NOTRUF </label><br>
+                        <div class="vertical-menu">
+                         <a onclick="SendDispatchToFaction(2);" style="color:white;">LSPD</a>
+                         <a onclick="SendDispatchToFaction(3);" style="color:white;">LSFD</a>
+                         <a onclick="SendDispatchToFaction(4);" style="color:white;">ACLS</a>
+                         <a onclick="SendDispatchToFaction(16);" style="color:white;">Downtown Cab.Co</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div style="color:white;">
+                        Nachricht<br>
+                        <textarea style="height:150px;max-height:150px;background-color:#363636;color:white;" maxlength="64" id="dispatchTextField" spellcheck="false" type="text" placeholder="Nachricht eingeben..." onkeypress="return event.charCode != 59 && event.charCode != 61"></textarea>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div id="phone-screen-trevor" class="cloudy-knoxville-gradient in-phone">
+            <div class="phone-header-markdown phone-grey-color-header"></div>
+            <div class="in-screen-content phone-scaleable" style="height: 100px;">
+            </div>
+               <embed type="text/html" src="../utils/img/phone/apps/trevor_jump/index.html" style="height:700px;padding-bottom:125px;">
+        </div>
+        <div class="image-based full-phone layer3"></div>
+        <div class="image-based full-phone layer4"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="../utils/bootstrap.min.js"></script>
+    <script src="../utils/mdb/js/mdb.min.js"></script>
+    <script src="../utils/anime.min.js"></script>
+    <script src="../utils/toastr.js"></script>
+    <script defer src="../utils/fontawesome/js/all.js"></script>
+</body>
+
+<script>
+    var type = 1,
+        targetMessageUser,
+        userPhoneNumber = "1",
+        phoneAudioOnce = null,
+        phoneAudioLoop = null,
+        allowChatKeyUp = false,
+        selectedChatId = 0,
+        latestCall = null,
+        latestAlert = null,
+        LSPDIntranetSelectedPerson = null,
+        LSPDIntranetLastQuery = null,
+        RadioFreqMin = 100000, // 450000
+        RadioFreqMax = 1000000, // 495000
+        RadioFreqSteps = 10,
+        RadioMarkSteps = 1000,
+        RadioFreqSpacing = 6, //px
+        RadioLabelSteps = 5000,
+        RadioEnabled = false,
+        RadioTimeout = null,
+        RadioAudioLoop = null,
+        activeRadioFreq = null,
+        permittedFrequencies = [200];
+
+    $(document).ready(function() {
+        alt.emit("Client:HUD:cefIsReady");
+        setTimeout(function() {
+        }, 1000);
+        $(".layer2").css("background-image", 'url("../utils/img/phone/bg/wallpaper6.png")');
+        $("#phone-screen-call").css("background-image", 'url("../utils/img/phone/bg/wallpaper6.png")');
+    });
+
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
+
+    $('.nav-tabs > li > a').click(function() {
+        $('.nav-tabs > li.active').removeClass('active');
+        $(this).parent().parent().addClass('active');
+    });
+
+    window.addEventListener("keyup", event => {
+        if (allowChatKeyUp) {
+            if (event.keyCode == 13) {
+                phoneSendMessage();
+            }
+        }
+    });
+
+    function ShowNotification(notificationtype, message, time) {
+        toastr.options.progressBar = true;
+        switch (notificationtype) {
+            case 0:
+                break;
+            case 1:
+                //Info Notification
+                toastr.info(message, "", {
+                    timeOut: time
+                });
+                break;
+            case 2:
+                //Success Notification
+                toastr.success(message, "", {
+                    timeOut: time
+                });
+                break;
+            case 3:
+                //Warning Notification
+                toastr.warning(message, "", {
+                    timeOut: time
+                });
+                break;
+            case 4:
+                //Error Notification
+                toastr.error(message, "", {
+                    timeOut: time
+                });
+                break;
+        }
+    }
+
+    function togglePhone(shouldBeVisible) {
+        if (shouldBeVisible) {
+            $("#Smartphone-Box").animate({
+                'margin-bottom': '0vw'
+            }, 800);
+            if (selectedChatId != 0) {
+                allowChatKeyUp = true;
+            }
+        } else {
+            let phoneMargin = getViewportPhoneMarginBot()
+            $("#Smartphone-Box").animate({
+                'margin-bottom': `${phoneMargin}px`
+            }, 800);
+            allowChatKeyUp = false;
+        }
+    }
+
+
+    function activatePhone(shouldBeVisible) {
+        if (shouldBeVisible) {
+            $("#Smartphone-Box").fadeTo(500, 1, function() {
+                $("#Smartphone-Box").show();
+                phoneForceToHome();
+                phoneAddressRefresh();
+                phoneVerlaufRefresh();
+                phonebusinessRefresh();
+            });
+        } else {
+            $("#Smartphone-Box").fadeTo(500, 0, function() {
+                $("#Smartphone-Box").hide();
+                allowChatKeyUp = false;
+                phoneForceToHome();
+                phoneVerlaufRefresh();
+                phonebusinessRefresh();
+            });
+        }
+    }
+
+    function updatePhoneNumber(number) {
+        let settingsdisplay = document.getElementById("phone-settings-number");
+        settingsdisplay.innerHTML = number;
+        settingsdisplay.dataset.number = number;
+        userPhoneNumber = `${number}`;
+    }
+
+    $("#phone-app-call").click(function() {
+        $("#phone-screen-home").hide();
+        if (phoneActiveCall != null) {
+            phoneShowCalling();
+        } else {
+            $("#phone-screen-call").show();
+        }
+    });
+    $("#phone-app-sms").click(function() {
+        $("#phone-screen-sms").show();
+        loadMessagesMain();
+    });
+    $("#phone-app-Verlauf").click(function() {
+        $("#phone-screen-Verlauf").show();
+    });
+    $("#phone-app-address").click(function() {
+        $("#phone-screen-address").show();
+    });
+    $("#phone-app-business").click(function() {
+        $("#phone-screen-business").show();
+    });
+
+    function ShowLSPDIntranetApp(shouldBeVisible, serverWanteds) {
+        if (!shouldBeVisible || shouldBeVisible == undefined) {
+            $("#phone-app-police").hide();
+            return;
+        }
+
+        let wantedHtmlCat1 = "",
+            wantedHtmlCat2 = "",
+            wantedHtmlCat3 = "",
+            wantedHtmlCat4 = "",
+            wantedHtmlCat5 = "",
+            wantedHtmlCat6 = "",
+            wantedHtmlCat7 = "",
+            wantedHtmlCat8 = "",
+            wantedHtmlCat9 = "",
+            wantedHtmlCat10 = "",
+            wantedHtmlCat11 = "";
+        serverWanteds = JSON.parse(serverWanteds);
+
+        for (var i in serverWanteds) {
+            if (serverWanteds[i].category == 1) wantedHtmlCat1 += "<button class='btn' onclick='phonePoliceAddParagraph(" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + ");' data-wantedid='" + serverWanteds[i].wantedId + "' data-jailtime='" + serverWanteds[i].jailtime + "' data-ticketfine='" + serverWanteds[i].ticketfine + "' data-paragraph='" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + "'><div class='badge badge-pill badge-dark'>§" + serverWanteds[i].category + " Abs. " + serverWanteds[i].paragraph + "</div> " + serverWanteds[i].wantedName + "</button>";
+            else if (serverWanteds[i].category == 2) wantedHtmlCat2 += "<button class='btn' onclick='phonePoliceAddParagraph(" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + ");' data-wantedid='" + serverWanteds[i].wantedId + "' data-jailtime='" + serverWanteds[i].jailtime + "' data-ticketfine='" + serverWanteds[i].ticketfine + "' data-paragraph='" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + "'><div class='badge badge-pill badge-dark'>§" + serverWanteds[i].category + " Abs. " + serverWanteds[i].paragraph + "</div> " + serverWanteds[i].wantedName + "</button>";
+            else if (serverWanteds[i].category == 3) wantedHtmlCat3 += "<button class='btn' onclick='phonePoliceAddParagraph(" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + ");' data-wantedid='" + serverWanteds[i].wantedId + "' data-jailtime='" + serverWanteds[i].jailtime + "' data-ticketfine='" + serverWanteds[i].ticketfine + "' data-paragraph='" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + "'><div class='badge badge-pill badge-dark'>§" + serverWanteds[i].category + " Abs. " + serverWanteds[i].paragraph + "</div> " + serverWanteds[i].wantedName + "</button>";
+            else if (serverWanteds[i].category == 4) wantedHtmlCat4 += "<button class='btn' onclick='phonePoliceAddParagraph(" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + ");' data-wantedid='" + serverWanteds[i].wantedId + "' data-jailtime='" + serverWanteds[i].jailtime + "' data-ticketfine='" + serverWanteds[i].ticketfine + "' data-paragraph='" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + "'><div class='badge badge-pill badge-dark'>§" + serverWanteds[i].category + " Abs. " + serverWanteds[i].paragraph + "</div> " + serverWanteds[i].wantedName + "</button>";
+            else if (serverWanteds[i].category == 5) wantedHtmlCat5 += "<button class='btn' onclick='phonePoliceAddParagraph(" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + ");' data-wantedid='" + serverWanteds[i].wantedId + "' data-jailtime='" + serverWanteds[i].jailtime + "' data-ticketfine='" + serverWanteds[i].ticketfine + "' data-paragraph='" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + "'><div class='badge badge-pill badge-dark'>§" + serverWanteds[i].category + " Abs. " + serverWanteds[i].paragraph + "</div> " + serverWanteds[i].wantedName + "</button>";
+            else if (serverWanteds[i].category == 6) wantedHtmlCat6 += "<button class='btn' onclick='phonePoliceAddParagraph(" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + ");' data-wantedid='" + serverWanteds[i].wantedId + "' data-jailtime='" + serverWanteds[i].jailtime + "' data-ticketfine='" + serverWanteds[i].ticketfine + "' data-paragraph='" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + "'><div class='badge badge-pill badge-dark'>§" + serverWanteds[i].category + " Abs. " + serverWanteds[i].paragraph + "</div> " + serverWanteds[i].wantedName + "</button>";
+            else if (serverWanteds[i].category == 7) wantedHtmlCat7 += "<button class='btn' onclick='phonePoliceAddParagraph(" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + ");' data-wantedid='" + serverWanteds[i].wantedId + "' data-jailtime='" + serverWanteds[i].jailtime + "' data-ticketfine='" + serverWanteds[i].ticketfine + "' data-paragraph='" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + "'><div class='badge badge-pill badge-dark'>§" + serverWanteds[i].category + " Abs. " + serverWanteds[i].paragraph + "</div> " + serverWanteds[i].wantedName + "</button>";
+            else if (serverWanteds[i].category == 8) wantedHtmlCat8 += "<button class='btn' onclick='phonePoliceAddParagraph(" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + ");' data-wantedid='" + serverWanteds[i].wantedId + "' data-jailtime='" + serverWanteds[i].jailtime + "' data-ticketfine='" + serverWanteds[i].ticketfine + "' data-paragraph='" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + "'><div class='badge badge-pill badge-dark'>§" + serverWanteds[i].category + " Abs. " + serverWanteds[i].paragraph + "</div> " + serverWanteds[i].wantedName + "</button>";
+            else if (serverWanteds[i].category == 9) wantedHtmlCat9 += "<button class='btn' onclick='phonePoliceAddParagraph(" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + ");' data-wantedid='" + serverWanteds[i].wantedId + "' data-jailtime='" + serverWanteds[i].jailtime + "' data-ticketfine='" + serverWanteds[i].ticketfine + "' data-paragraph='" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + "'><div class='badge badge-pill badge-dark'>§" + serverWanteds[i].category + " Abs. " + serverWanteds[i].paragraph + "</div> " + serverWanteds[i].wantedName + "</button>";
+            else if (serverWanteds[i].category == 10) wantedHtmlCat10 += "<button class='btn' onclick='phonePoliceAddParagraph(" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + ");' data-wantedid='" + serverWanteds[i].wantedId + "' data-jailtime='" + serverWanteds[i].jailtime + "' data-ticketfine='" + serverWanteds[i].ticketfine + "' data-paragraph='" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + "'><div class='badge badge-pill badge-dark'>§" + serverWanteds[i].category + " Abs. " + serverWanteds[i].paragraph + "</div> " + serverWanteds[i].wantedName + "</button>";
+            else if (serverWanteds[i].category == 11) wantedHtmlCat11 += "<button class='btn' onclick='phonePoliceAddParagraph(" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + ");' data-wantedid='" + serverWanteds[i].wantedId + "' data-jailtime='" + serverWanteds[i].jailtime + "' data-ticketfine='" + serverWanteds[i].ticketfine + "' data-paragraph='" + serverWanteds[i].category + "." + serverWanteds[i].paragraph + "'><div class='badge badge-pill badge-dark'>§" + serverWanteds[i].category + " Abs. " + serverWanteds[i].paragraph + "</div> " + serverWanteds[i].wantedName + "</button>";
+        }
+
+        $("#stgb1").html(wantedHtmlCat1);
+        $("#stgb2").html(wantedHtmlCat2);
+        $("#stgb3").html(wantedHtmlCat3);
+        $("#stgb4").html(wantedHtmlCat4);
+        $("#stgb5").html(wantedHtmlCat5);
+        $("#stgb6").html(wantedHtmlCat6);
+        $("#stgb7").html(wantedHtmlCat7);
+        $("#stgb8").html(wantedHtmlCat8);
+        $("#stgb9").html(wantedHtmlCat9);
+        $("#stgb10").html(wantedHtmlCat10);
+        $("#stgb11").html(wantedHtmlCat11);
+        $("#phone-app-police").show();
+    }
+
+    $("#phone-app-police").click(function() {
+        $("#phone-screen-police").show();
+    });
+
+    $("#phone-app-settings").click(function() {
+        $("#phone-screen-settings").show();
+        updatePhoneNumber(userPhoneNumber);
+    });
+
+    $("#phone-app-dispatch").click(function() {
+        $("#phone-screen-dispatch").show();
+        updatePhoneNumber(userPhoneNumber);
+    });
+
+    $("#phone-app-mainmenu").click(function() {
+        $("#phone-screen-mainmenu").show();
+        updatePhoneNumber(userPhoneNumber);
+    });
+
+    $("#phone-app-trevor").click(function() {
+        $("#phone-screen-trevor").show();
+        updatePhoneNumber(userPhoneNumber);
+    });
+
+    $("#phone-app-radio").click(function() {
+        $("#phone-screen-radio").show();
+    });
+
+    function phoneForceToHome() {
+        selectedChatId = 0;
+        allowChatKeyUp = false;
+        $("#phone-screen-call").hide();
+        $("#phone-screen-calling").hide();
+        $("#phone-screen-sms").hide();
+        $("#phone-screen-address").hide();
+        $("#phone-screen-police").hide();
+        $("#phone-screen-Verlauf").hide();
+        $("#phone-screen-radio").hide();
+        $("#phone-screen-settings").hide();
+        $("#phone-screen-dispatch").hide();
+        $("#phone-screen-mainmenu").hide();
+        $("#phone-screen-trevor").hide();
+        $("#phone-screen-business").hide();
+        $("#phone-screen-home").show();
+        $('#phone-sms-home-carousel').carousel(0);
+        $('#phone-sms-header-carousel').carousel(0);
+        if (phoneActiveCall != null) {
+            $("#phone-banner").slideDown("slow");
+        }
+    }
+
+    $("#phone-banner").click(function() {
+        phoneShowCalling();
+        selectedChatId = 0;
+    });
+
+    $("#phone-sms-nav-chats").click(function() {
+        $("#phone-sms-nav-chats").addClass("phone-sms-nav-item-active");
+        $('#phone-sms-home-carousel').carousel(0);
+    });
+
+    function forceChatViewToBottom() {
+        let display = document.getElementById("phone-chat-display");
+        let scrollheight = display.scrollHeight;
+        display.scrollTop = scrollheight - display.offsetHeight;
+    }
+
+    function phoneNewChat(target) {
+        if (target == null) {
+            target = document.getElementById("phone-input-new-chat");
+            let targetVal = target.value;
+            target.value = "";
+            target = targetVal;
+        }
+        if (isNaN(parseInt(target)) != true) {
+            globalChatsArray = [];
+            alt.emit("Client:Smartphone:createNewChat", target);
+            $('#phone-sms-home-carousel').carousel(0);
+            $('#phone-sms-header-carousel').carousel(0);
+        }
+    }
+
+    function phoneOpenChat(chatId, targetNumber) {
+        loadTextMessages(chatId);
+        document.getElementById('phone-chat-disp-name').dataset.target = targetNumber;
+
+        document.getElementById("phone-chat-disp-name").innerHTML = getNameOrNumber(targetNumber);
+        $('#phone-sms-home-carousel').carousel(1);
+        $('#phone-sms-header-carousel').carousel(1);
+        allowChatKeyUp = true;
+        clearChatAlerts(chatId);
+        selectedChatId = chatId;
+    }
+
+    function forceOpenChat(chatId, targetNumber) {
+        phoneForceToHome();
+        $("#phone-screen-sms").show();
+        loadMessagesMain();
+        phoneOpenChat(chatId, targetNumber);
+    }
+
+    function phoneCloseChat() {
+        $("#phone-sms-nav-chats").addClass("phone-sms-nav-item-active");
+        $('#phone-sms-home-carousel').carousel(0);
+        $('#phone-sms-header-carousel').carousel(0);
+        allowChatKeyUp = false;
+        selectedChatId = 0;
+    }
+
+    function clearChatAlerts(id) {
+        let chatFull = document.getElementById("phone-sms-home-chats").querySelectorAll("div[data-chatid='" + id + "']");
+        [].forEach.call(chatFull, function(chat) {
+            [].forEach.call(chat.querySelectorAll(".phone-app-chat-alert"), function(alertdiv) {
+                alertdiv.innerHTML = "";
+            });
+        });
+        checkChatAlerts();
+    };
+
+    function checkChatAlerts() {
+        let alertsAll = document.getElementById("phone-sms-home-chats").querySelectorAll(".phone-app-chat-alert");
+        let alertsTotal = 0;
+        [].forEach.call(alertsAll, function(alert) {
+            if (isNaN(parseInt(alert.innerHTML)) != true) {
+                alertsTotal = alertsTotal + parseInt(alert.innerHTML);
+            }
+        });
+        if (alertsTotal == 0) {
+            alertsTotal = "";
+        }
+    }
+
+    function openNewChat() {
+        $("#phone-sms-nav-chats").addClass("phone-sms-nav-item-active");
+        $('#phone-sms-home-carousel').carousel(2);
+        $('#phone-sms-header-carousel').carousel(2);
+    }
+
+    function phoneSendMessage() {
+        if (phoneFlightmode) {
+            showPhoneNotification("Kein Netz", "error", null, "error");
+        } else {
+            let text = document.getElementById("phone-chat-input").value;
+            toString(text);
+            if (text !== "" && selectedChatId != 0) {
+                playPhoneAudio("../utils/sounds/phone/msg_send.wav");
+                let encodedText = encodeText(text);
+                document.getElementById("phone-chat-input").value = null;
+                var now = new Date();
+                let unix = Math.round(now.getTime() / 1000);
+                targetMessageUser = document.getElementById('phone-chat-disp-name').dataset.target;
+                globalChatMessagesArray = [];
+                alt.emit("Client:Smartphone:sendChatMessage", selectedChatId, userPhoneNumber, targetMessageUser, unix, encodedText);
+            }
+        }
+    }
+
+function isEmptyOrSpaces(str) {
+        return str === null || str.match(/^ *$/) !== null;
+    }
+function SendDispatchToFaction(factionId) {
+        if (factionId <= 0 || factionId == undefined) return;
+        var msg = $("#dispatchTextField").val();
+        if (!isEmptyOrSpaces(msg)) {
+            if (msg.length <= 64) {
+                $("#phone-screen-home").show();
+                $("#dispatchTextField").html(``);
+                alt.emit("Client:Tablet:sendDispatchToFaction", factionId, msg);
+            } else {
+                showPhoneNotification("Die Nachricht darf nicht länger als 64 Zeichen sein.", "error", null, "error");
+            }
+        } else {
+                showPhoneNotification("Die Nachricht darf nicht leer sein", "error", null, "error");
+        }
+    }
+
+    function encodeText(text) {
+        let encodedMessage = "";
+        let encodeIndex = 0;
+        while (encodeIndex < text.length) {
+            if (encodeIndex > 0) {
+                encodedMessage += " ";
+            }
+            encodedMessage += text.charCodeAt(encodeIndex);
+            encodeIndex++;
+        }
+        return encodedMessage;
+    }
+
+    function phoneDecodeText(encodedText) {
+        let decodedArray;
+        let decodedMessage = "";
+        decodedArray = encodedText.split(" ");
+        decodedArray.forEach(function(ascii) {
+            decodedMessage += "&#" + ascii + ";"
+        });
+        decodedMessage = replaceEmotes(decodedMessage);
+        if (decodedMessage.search("&") == -1) {
+            decodedMessage = "<span data-emote='true'>" + decodedMessage + "</span>";
+        }
+        return decodedMessage;
+    }
+
+    function phoneDecodePre(encodedText) {
+        let decodedArray,
+            decodedMessage = "",
+            decodeIndex = 0,
+            criticalNumber = 25;
+        decodedArray = encodedText.split(" ");
+        decodedArray.forEach(function(ascii) {
+            if (decodeIndex < criticalNumber) {
+                decodedMessage += "&#" + ascii + ";";
+            } else if (decodeIndex == criticalNumber) {
+                decodedMessage += "...";
+            }
+            decodeIndex++;
+        });
+        decodedMessage = replaceEmotes(decodedMessage);
+        return decodedMessage;
+    }
+
+    function replaceEmotes(s) {
+        /* TBD move to arrays */
+        s = s.replace(/&#58;&#41;/g, "<i class='far fa-smile emote'></i>"); /*:)*/
+        s = s.replace(/&#58;&#68;/g, "<i class='far fa-laugh emote'></i>"); /*:D*/
+        s = s.replace(/&#40;&#58;/g, "<i class='far fa-smile emote'></i>"); /*(:*/
+        s = s.replace(/&#59;&#41;/g, "<i class='far fa-grin-wink emote'></i>"); /*;)*/
+        s = s.replace(/&#60;&#51;/g, "<i class='far fa-heart' style='color: #c90a0a'></i>"); /*<3*/
+        s = s.replace(/&#58;&#42;/g, "<i class='far fa-kiss emote'></i>"); /*:**/
+        s = s.replace(/&#21325;/g, "<i class='fad fa-angel' style='--fa-primary-color: lightgrey; --fa-secondary-color: orange;'></i>");
+        s = s.replace(/&#21328;/g, "<i class='fad fa-angel' style='--fa-primary-color: lightgrey; --fa-secondary-color: orange;'></i>");
+        s = s.replace(/&#58;&#119;&#101;&#101;&#100;&#58;/g, "<i class='fas fa-cannabis' style='color: #08c93c'></i>"); /*weed*/
+        s = s.replace(/&#58;&#109;&#105;&#100;&#100;&#108;&#101;&#102;&#105;&#110;&#103;&#101;&#114;&#58;/g, "<i class='fal fa-hand-middle-finger' style='color: #d9b85d'></i>"); /*middlefinger*/
+        s = s.replace(/&#58;&#99;&#104;&#97;&#105;&#114;&#58;/g, "<i class='fab fa-accessible-icon' style='color: #2a92e8'></i>"); /*chair*/
+        s = s.replace(/&#58;&#119;&#97;&#114;&#110;&#58;/g, "<i class='fas fa-exclamation-triangle' style='color: #a80f0f'></i>"); /*warn*/
+        s = s.replace(/&#58;&#97;&#110;&#103;&#114;&#121;&#58;/g, "<i class='far fa-angry emote'></i>"); /*angry*/
+        s = s.replace(/&#58;&#100;&#105;&#122;&#122;&#121;&#58;/g, "<i class='far fa-dizzy emote'></i>"); /*dizzy*/
+        s = s.replace(/&#58;&#102;&#108;&#117;&#115;&#104;&#101;&#100;&#58;/g, "<i class='far fa-flushed emote'></i>"); /*flushed*/
+        s = s.replace(/&#58;&#102;&#114;&#111;&#119;&#110;&#58;/g, "<i class='far fa-frown emote'></i>"); /*frown*/
+        s = s.replace(/&#58;&#103;&#114;&#105;&#110;&#58;/g, "<i class='far fa-grin emote'></i>"); /*grin*/
+        s = s.replace(/&#58;&#108;&#111;&#118;&#101;&#58;/g, "<i class='far fa-grin-hearts emote'></i>"); /*love*/
+        s = s.replace(/&#58;&#116;&#105;&#114;&#101;&#100;&#58;/g, "<i class='far fa-tired emote'></i>"); /*tired*/
+        s = s.replace(/&#58;&#115;&#109;&#105;&#108;&#101;&#58;/g, "<i class='far fa-smile emote'></i>"); /*smile*/
+        s = s.replace(/&#58;&#99;&#114;&#121;&#58;/g, "<i class='far fa-sad-cry emote'></i>"); /*cry*/
+        s = s.replace(/&#58;&#109;&#101;&#104;&#58;/g, "<i class='far fa-meh emote'></i>"); /*meh*/
+        s = s.replace(/&#58;&#107;&#105;&#115;&#115;&#58;/g, "<i class='far fa-kiss-beam emote'></i>"); /*kiss*/
+        s = s.replace(/&#58;&#115;&#117;&#114;&#112;&#114;&#105;&#115;&#101;&#58;/g, "<i class='far fa-surprise emote'></i>"); /*surprise*/
+        s = s.replace(/&#58;&#111;/g, "<i class='far fa-surprise emote'></i>"); /*:o*/
+        s = s.replace(/&#58;&#99;&#97;&#114;&#100;&#58;/g, "<i class='fad fa-gem' style='--fa-primary-color: #1c8ad4; --fa-secondary-color: #25a1f5;'></i>"); /*card*/
+        s = s.replace(/&#58;&#104;&#101;&#97;&#114;&#116;&#58;/g, "<i class='far fa-heart' style='color: #c90a0a'></i>"); /*heart*/
+        s = s.replace(/&#58;&#108;&#105;&#107;&#101;&#58;/g, "<i class='far fa-thumbs-up' style='color: #0a33c9'></i>"); /*like*/
+        s = s.replace(/&#58;&#100;&#105;&#115;&#108;&#105;&#107;&#101;&#58;/g, "<i class='far fa-thumbs-down' style='color: #0a33c9'></i>"); /*dislike*/
+        s = s.replace(/&#58;&#98;&#108;&#111;&#99;&#107;&#58;/g, "<i class='far fa-ban' style='color: #ff0011'></i>"); /*block*/
+        s = s.replace(/&#58;&#101;&#121;&#101;&#58;/g, "<i class='far fa-eye' style='color: #758aff'></i>"); /*eye*/
+        s = s.replace(/&#58;&#108;&#111;&#99;&#107;&#58;/g, "<i class='far fa-lock' style='color: #ffcb21'></i>"); /*lock*/
+        s = s.replace(/&#58;&#115;&#99;&#104;&#108;&#111;&#115;&#115;&#58;/g, "<i class='fad fa-lock' style='--fa-primary-color: #ffcb21; --fa-secondary-color: #919191;'></i>"); /*schloss*/
+        s = s.replace(/&#58;&#98;&#97;&#116;&#58;/g, "<i class='far fa-bat' style='color: #000000'></i>"); /*bat*/
+        s = s.replace(/&#58;&#100;&#111;&#103;&#58;/g, "<i class='fal fa-dog' style='color: #755d3f'></i>"); /*dog*/
+        s = s.replace(/&#58;&#100;&#111;&#118;&#101;&#58;/g, "<i class='far fa-dove' style='color: #2ba9bd'></i>"); /*dove*/
+        s = s.replace(/&#58;&#102;&#114;&#111;&#103;&#58;/g, "<i class='far fa-frog' style='color: #086610'></i>"); /*frog*/
+        s = s.replace(/&#58;&#109;&#111;&#110;&#107;&#101;&#121;&#58;/g, "<i class='far fa-monkey' style='color: #755d3f'></i>"); /*monkey*/
+        s = s.replace(/&#58;&#102;&#105;&#115;&#104;&#58;/g, "<i class='fas fa-fish' style='color: #0a33c9'></i>"); /*fish*/
+        s = s.replace(/&#58;&#112;&#105;&#103;&#58;/g, "<i class='far fa-pig' style='color: #eda4e5'></i>"); /*pig*/
+        s = s.replace(/&#58;&#115;&#112;&#105;&#100;&#101;&#114;&#58;/g, "<i class='far fa-spider' style='color: #000000'></i>"); /*spider*/
+        s = s.replace(/&#58;&#119;&#104;&#97;&#108;&#101;&#58;/g, "<i class='far fa-whale' style='color: #1476cc'></i>"); /*whale*/
+        s = s.replace(/&#58;&#116;&#117;&#114;&#116;&#108;&#101;&#58;/g, "<i class='fad fa-turtle' style='--fa-primary-color: #448c41; --fa-secondary-color: #857058;'></i>"); /*turtle*/
+        s = s.replace(/&#58;&#109;&#101;&#100;&#105;&#99;&#58;/g, "<i class='fal fa-ambulance' style='color: #a11216'></i>"); /*medic*/
+        s = s.replace(/&#58;&#112;&#105;&#108;&#108;&#115;&#58;/g, "<i class='fal fa-pills' style='color: #a6a6a6'></i>"); /*pills*/
+        s = s.replace(/&#58;&#112;&#111;&#111;&#112;&#58;/g, "<i class='fal fa-poop' style='color: #754e34'></i>"); /*poop*/
+        s = s.replace(/&#58;&#110;&#111;&#97;&#104;&#58;/g, "<i class='fad fa-bed' style='--fa-primary-color: #754e34; --fa-secondary-color: #4625e8;'></i>"); /*noah*/
+        s = s.replace(/&#58;&#115;&#108;&#101;&#101;&#112;&#58;/g, "<i class='fad fa-bed' style='--fa-primary-color: #754e34; --fa-secondary-color: #4625e8;'></i>"); /*sleep*/
+        return s;
+    }
+
+    function addChatEmote(str) {
+        document.getElementById("phone-chat-input").value += str;
+    }
+
+    $('#phone-chat-emotes .dropdown-menu').on('click', function(event) {
+        event.stopPropagation();
+    });
+
+    let globalChatsArray = [],
+        globalChatMessagesArray = [],
+        globalContactsArray = [];
+
+    function SmartphoneAddChatJSONs(items) {
+        items = JSON.parse(items);
+        for (var i in items) {
+            globalChatsArray.push(items[i]);
+        }
+    }
+
+    function SmartphoneSetAllChats() {
+        let html = "";
+        if (phoneFlightmode) {
+            html += "<div id='phone-chat-main-info' class='text-center'" +
+                "<p>Messenger kann derzeit keine Verbindung zum Server herstellen</p>" +
+                "<span><i class='fas fa-spinner fa-3x fa-spin'></i></span>" +
+                "</div>";
+        } else {
+            let chatTo = "",
+                unixToLatestVal = "";
+            for (var i in globalChatsArray) {
+                if (globalChatsArray[i].to == userPhoneNumber) chatTo = globalChatsArray[i].from;
+                else chatTo = globalChatsArray[i].to;
+
+                if (globalChatsArray[i].unix == 0 || globalChatsArray[i].unix == undefined || globalChatsArray[i].unix == "") unixToLatestVal = '<span class="badge badge-success text-white"><i class="fas fa-plus"></i></span>';
+                else unixToLatestVal = unixToLatest(globalChatsArray[i].unix, null);
+
+                html += '<div class="phone-sms-chat-pre waves-effect" data-chatid="' + chatTo + '" onClick="phoneOpenChat(' + globalChatsArray[i].chatId + ', ' + chatTo + ');">' +
+                    '<div class="phone-sms-chat-pre-upper">' +
+                    '<div class="phone-sms-chat-pre-name">' +
+                    getNameOrNumber(chatTo) +
+                    '</div><div class="phone-sms-chat-pre-time" data-value="' + globalChatsArray[i].unix + '">' + unixToLatestVal + '</div></div>' +
+                    '<div class="phone-sms-chat-pre-lower">' +
+                    '<div class="phone-sms-chat-pre-text">';
+                if (globalChatsArray[i].text == undefined || globalChatsArray[i].text == "" || globalChatsArray[i].text == " ") {
+                    html += "Dieser Chat ist leer.";
+                } else {
+                    html += phoneDecodePre(globalChatsArray[i].text);
+                }
+                html += '</div><div class="phone-sms-chat-pre-alert"><span class="badge badge-pill badge-danger phone-app-chat-alert"></span></div></div>' +
+                    '</div><hr class="phone-sms-chat-divider"/>';
+            }
+
+            if (html == "" || html == "[]") {
+                html = "";
+                html += "<div id='phone-chat-main-info' class='text-center'" +
+                    "<p>Keine Nachrichten gefunden...</p>" +
+                    "</div>";
+            }
+        }
+        $("#phone-sms-home-chats").html(html);
+    }
+
+    function loadMessagesMain() {
+        globalChatsArray = [];
+        alt.emit("Client:Smartphone:requestChats");
+    }
+
+    function SmartphoneSetAllMessages() {
+        let html = "",
+            floatTyp = "",
+            date,
+            lastDate;
+        for (var i in globalChatMessagesArray) {
+            if (globalChatMessagesArray[i].from == userPhoneNumber) floatTyp = "me";
+            else floatTyp = "other";
+            date = new Date(globalChatMessagesArray[i].unix * 1000);
+            date = Math.floor(date.getTime() / (1000 * 60 * 60 * 24));
+            if (date != lastDate) {
+                html += `<div class="phone-chat-info-sm">${unixToLatest(globalChatMessagesArray[i].unix, "day")}</div>`;
+            }
+            lastDate = date;
+            html += '<div class="phone-chat-box phone-chat-' + floatTyp + '">' +
+                phoneDecodeText(globalChatMessagesArray[i].text) + '<span class="phone-chat-time" data-unix=' + globalChatMessagesArray[i].unix + '>' + unixToTime(globalChatMessagesArray[i].unix) + '</span></div>';
+        }
+
+        if (html == "" || html == "[]") html = '<div class="phone-chat-info">Dieser Chat ist noch leer. Brich doch das Eis und sag Hallo!</div>';
+
+        $("#phone-chat-display").html(html);
+        parseEmotes();
+        forceChatViewToBottom();
+        globalChatsArray = [];
+    }
+    function SmartphoneAddMessageJSONs(items) {
+        items = JSON.parse(items);
+        for (var i in items) {
+            globalChatMessagesArray.push(items[i]);
+        }
+    }
+    function loadTextMessages(chatId) {
+        globalChatMessagesArray = [];
+        alt.emit("Client:Smartphone:requestChatMessages", chatId);
+    }
+    function phoneOpenAddress(id) {
+        updateAddressWindow(id);
+        $("#phone-address-carousel").carousel(1);
+    }
+    function phoneOpenbusiness(id) {
+        updatebusinessWindow(id);
+        $("#phone-business-carousel").carousel(1);
+    }
+    function phoneCallbusiness() {
+        phoneCall(getTargetAddressNumber2());
+    }
+    function phoneMessagebusiness() {
+        $("#phone-screen-business").hide();
+        $("#phone-screen-sms").show();
+        phoneNewChat(getTargetAddressNumber2());
+    }
+    function SmartphoneAddbusinessJSONs(items) {
+        items = JSON.parse(items);
+        for (var i in items) {
+            globalContactsArray2.push(items[i]);
+        }
+    }
+    function SmartphoneSetAllbusiness() {
+        let html = "";
+        for (var i in globalContactsArray2) {
+            html += '<div class="phone-business-item waves-effect" data-businessid="' + globalContactsArray2[i].charId + '" data-phonenumber="' + globalContactsArray2[i].phone + '" onclick="phoneOpenbusiness(' + globalContactsArray2[i].charId + ')">' +
+                '<div class="phone-business-nickname">' + globalContactsArray2[i].charname + '</div>' +
+                '<div class="phone-business-rank">' + globalContactsArray2[i].rankname + '</div>' +
+                '<div class="phone-business-phonenumber">' + globalContactsArray2[i].phone + '</div></div>';
+        }
+        globalContactsArray2 = [];
+        $("#phone-business-list").html(html);
+        phoneSmsSyncbusiness();
+    }
+    function phonebusinessRefresh() {
+        globalContactsArray2 = [];
+        alt.emit("Client:Smartphone:requestPhonebusiness");
+    }
+    function updatebusinessWindow(id) {
+        let json = getbusinessData(id, null);
+        $("#phone-business-number").html(json.number);
+        document.getElementById("phone-business-number").dataset.target = json.number;
+        $("#phone-business-name").html(json.name);
+        document.getElementById("phone-business-view").dataset.id = json.id;
+    }
+    function getbusinessData(id, number) {
+        let nodelist,
+            name = null;
+        if (id == null) {
+            nodelist = document.getElementById("phone-business-list").querySelectorAll("div[data-phonenumber='" + number + "']");
+            [].forEach.call(nodelist, function(node) {
+                id = node.dataset.businessid;
+            });
+        }
+        nodelist = document.getElementById("phone-business-list").querySelectorAll("div[data-businessid='" + id + "']");
+        [].forEach.call(nodelist, function(node) {
+            [].forEach.call(node.querySelectorAll("div"), function(div) {
+                if (div.classList.contains("phone-business-nickname")) {
+                    name = div.innerHTML;
+                } else if (div.classList.contains("phone-business-phonenumber")) {
+                    number = div.innerHTML;
+                }
+            });
+        });
+        return {
+            "id": id,
+            "name": name,
+            "number": number
+        };
+    }
+    function phoneOpenVerlauf(id) {
+        updateVerlaufWindow(id);
+        $("#phone-Verlauf-carousel").carousel(1);
+    }
+    function getTargetAddressNumber() {
+        return document.getElementById("phone-address-number").dataset.target;
+    }
+    function getTargetAddressNumber3() {
+        return document.getElementById("phone-Verlauf-number").dataset.target;
+    }
+    function getTargetAddressNumber2() {
+        return document.getElementById("phone-business-number").dataset.target;
+    }
+    function phoneNewAddress() {
+        $("#phone-address-carousel").carousel(2);
+        document.getElementById("phone-address-addOrEdit").dataset.target = null;
+        document.getElementById("phone-address-aoe-header").innerHTML = "Neuer Kontakt";
+        document.getElementById("phone-address-aoe-name").value = null;
+        document.getElementById("phone-address-aoe-number").value = null;
+        document.getElementById("phone-address-aoe-namelabel").classList.remove("active");
+        document.getElementById("phone-address-aoe-numlabel").classList.remove("active");
+    }
+    function phoneCallAddress() {
+        phoneCall(getTargetAddressNumber());
+    }
+    function phoneCallVerlauf() {
+        phoneCall(getTargetAddressNumber3());
+    }
+    function phoneCallVerlauf() {
+        phoneCall(getTargetAddressNumber3());
+    }
+    function phoneMessageAddress() {
+        $("#phone-screen-address").hide();
+        $("#phone-screen-sms").show();
+        phoneNewChat(getTargetAddressNumber());
+    }
+    function phoneMessageVerlauf() {
+        $("#phone-screen-Verlauf").hide();
+        $("#phone-screen-sms").show();
+        phoneNewChat(getTargetAddressNumber3());
+    }
+    function phoneEditAddress() {
+        $("#phone-address-carousel").carousel(2);
+        let json = getAddressData(document.getElementById("phone-address-view").dataset.id, null);
+        document.getElementById("phone-address-aoe-header").innerHTML = "Kontakt bearbeiten";
+        document.getElementById("phone-address-aoe-name").value = json.name;
+        document.getElementById("phone-address-aoe-number").value = json.number;
+        document.getElementById("phone-address-addOrEdit").dataset.target = json.id;
+        document.getElementById("phone-address-aoe-namelabel").classList.add("active");
+        document.getElementById("phone-address-aoe-numlabel").classList.add("active");
+    }
+    function SmartphoneAddContactJSONs(items) {
+        items = JSON.parse(items);
+        for (var i in items) {
+            globalContactsArray.push(items[i]);
+        }
+    }
+    function SmartphoneAddVerlaufJSONs(items) {
+        items = JSON.parse(items);
+        for (var i in items) {
+            globalContactsArray3.push(items[i]);
+        }
+    }
+    function SmartphoneSetAllContacts() {
+        let html = "";
+        for (var i in globalContactsArray) {
+            html += '<div class="phone-address-item waves-effect" data-addressid="' + globalContactsArray[i].contactId + '" data-phonenumber="' + globalContactsArray[i].contactNumber + '" onclick="phoneOpenAddress(' + globalContactsArray[i].contactId + ')">' +
+                '<div class="phone-address-nickname">' + globalContactsArray[i].contactName + '</div>' +
+                '<div class="phone-address-phonenumber">' + globalContactsArray[i].contactNumber + '</div></div>';
+        }
+        globalContactsArray = [];
+        $("#phone-address-list").html(html);
+        phoneSmsSyncAddresses();
+    }
+    function SmartphoneSetAllVerlauf() {
+        let html = "";
+        for (var i in globalContactsArray3) {
+            
+            if (globalContactsArray3[i].phoneNumber == userPhoneNumber){
+                html += '<div class="phone-Verlauf-item-red waves-effect" data-Verlaufid="' + globalContactsArray3[i].charId + '" data-phonenumber="' + globalContactsArray3[i].anotherNumber + '" onclick="phoneOpenVerlauf(' + globalContactsArray3[i].charId + ')">' +
+                '<div class="phone-Verlauf-phonenumber">' + globalContactsArray3[i].anotherNumber + '</div>' +
+                '<br><div class="phone-Verlauf-nickname">' + globalContactsArray3[i].date + '</div></div>' +
+                '<div style="float: right; margin-top: -47px; margin-right: 25px; font-size: 25px;"><i class="fas fa-phone-square-alt"></i></div>';
+            } else if (globalContactsArray3[i].anotherNumber == userPhoneNumber) {
+                html += '<div class="phone-Verlauf-item-green waves-effect" data-Verlaufid="' + globalContactsArray3[i].charId + '" data-phonenumber="' + globalContactsArray3[i].phoneNumber + '" onclick="phoneOpenVerlauf(' + globalContactsArray3[i].charId + ')">' +
+                '<div class="phone-Verlauf-phonenumber">' + globalContactsArray3[i].phoneNumber + '</div>' +
+                '<br><div class="phone-Verlauf-nickname">' + globalContactsArray3[i].date + '</div></div>' +
+                '<div style="float: right; margin-top: -47px; margin-right: 25px; font-size: 25px;"><i class="fas fa-phone-square"></i></div>';
+            }
+            //if (globalContactsArray3[i].anotherNumber == userPhoneNumber)
+        }
+        globalContactsArray3 = [];
+        $("#phone-Verlauf-list").html(html);
+        phoneSmsSyncVerlauf();
+    }
+    function phoneAddressRefresh() {
+        globalContactsArray = [];
+        alt.emit("Client:Smartphone:requestPhoneContacts");
+    }
+    function phoneVerlaufRefresh() {
+        globalContactsArray3 = [];
+        alt.emit("Client:Smartphone:requestPhoneVerlauf");
+    }
+    function phoneDeleteAddress() {
+        let id = document.getElementById("phone-address-view").dataset.id;
+        if (id <= 0) return;
+        alt.emit("Client:Smartphone:deleteContact", id);
+        $("#phone-address-carousel").carousel(0);
+    }
+    function phoneAddressSubmit() {
+        let name = document.getElementById("phone-address-aoe-name").value,
+            number = parseInt(document.getElementById("phone-address-aoe-number").value),
+            id = document.getElementById("phone-address-addOrEdit").dataset.target;
+        if (id == null || id == "null") {
+            if (name != "" && number != "NaN") {
+                alt.emit("Client:Smartphone:addNewContact", name, number);
+            } else {
+                showPhoneNotification("Der Kontakt konnte nicht erstellt werden", "address", null, "error");
+            }
+            $("#phone-address-carousel").carousel(0);
+        } else {
+            if (name != "" && number != "NaN") {
+                alt.emit("Client:Smartphone:editContact", id, name, number);
+            } else {
+                showPhoneNotification("Der Kontakt konnte nicht erstellt werden", "address", null, "error");
+            }
+            $("#phone-address-carousel").carousel(0);
+        }
+        document.getElementById("phone-address-aoe-name").value = null;
+        document.getElementById("phone-address-aoe-number").value = null;
+    }
+    function phoneSmsSyncAddresses() {
+        let nodelist = document.getElementById("phone-address-list").querySelectorAll('.phone-address-item'),
+            id,
+            json,
+            html = "";
+        [].forEach.call(nodelist, function(node) {
+            id = node.dataset.addressid;
+            json = getAddressData(id, null);
+            html += '<div class="phone-messenger-row waves-effect" onClick="phoneNewChat(' + json.number + ')">' + json.name + '</div>';
+        });
+        document.getElementById("phone-messenger-contacts").innerHTML = html;
+    }
+    function phoneSmsSyncVerlauf() {
+        let nodelist = document.getElementById("phone-Verlauf-list").querySelectorAll('.phone-Verlauf-item'),
+            id,
+            json,
+            html = "";
+        [].forEach.call(nodelist, function(node) {
+            id = node.dataset.addressid;
+            json = getVerlaufData(id, null);
+            html += '<div class="phone-messenger-row waves-effect" onClick="phoneNewChat(' + json.number + ')">' + json.name + '</div>';
+        });
+        document.getElementById("phone-messenger-contacts").innerHTML = html;
+    }
+    function updateAddressWindow(id) {
+        let json = getAddressData(id, null);
+        $("#phone-address-number").html(json.number);
+        document.getElementById("phone-address-number").dataset.target = json.number;
+        $("#phone-address-name").html(json.name);
+        document.getElementById("phone-address-view").dataset.id = json.id;
+    }
+    function updateVerlaufWindow(id) {
+        let json = getVerlaufData(id, null);
+        $("#phone-Verlauf-number").html(json.number);
+        document.getElementById("phone-Verlauf-number").dataset.target = json.number;
+        $("#phone-Verlauf-name").html(json.name);
+        document.getElementById("phone-Verlauf-view").dataset.id = json.id;
+    }
+    function getNameOrNumber(number) {
+        let address = getAddressData(null, number);
+        if (address.name == null) {
+            return number;
+        } else {
+            return address.name;
+        }
+    }
+    function policeAppQuery() {
+        let input = document.getElementById("police-app-query-input"),
+            query = input.value;
+        LSPDIntranetLastQuery = query;
+        input.value = "";
+        alt.emit("Client:Smartphone:SearchLSPDIntranetPeople", `${query}`);
+    }
+    function SetLSPDIntranetSearchedPeople(searchedPersonsJSON) {
+        let html = "";
+        searchedPersonsJSON = JSON.parse(searchedPersonsJSON);
+        $("#police-querylist-header").html("<b>" + searchedPersonsJSON.length + "</b> Ergebnisse für <b>\"" + LSPDIntranetLastQuery + "\"");
+        for (var i in searchedPersonsJSON) {
+            html += "<button class='btn btn-elegant' data-charid='" + searchedPersonsJSON[i].charId + "' data-charname='" + searchedPersonsJSON[i].charname + "' onclick='policeAppOpenWanteds(" + searchedPersonsJSON[i].charId + ", `" + searchedPersonsJSON[i].charname + "`);'>" + searchedPersonsJSON[i].charname + "</button>";
+        }
+
+        $("#phone-police-querylist-main").html(html);
+        policeAppToQuerylist();
+    }
+    function policeAppToHome() {
+        $("#phone-police-main").show();
+        $("#phone-police-querylist").hide();
+        $("#phone-police-wanteds").hide();
+        $("#phone-police-mostwanted").hide();
+        $("#phone-police-addwanteds").hide();
+    }
+    function policeAppToQuerylist() {
+        $("#phone-police-main").hide();
+        $("#phone-police-querylist").show();
+        $("#phone-police-wanteds").hide();
+        $("#phone-police-mostwanted").hide();
+        $("#phone-police-addwanteds").hide();
+    }
+    function policeAppOpenWanteds(charId, charname) {
+        $("#phone-police-querylist").hide();
+        $("#phone-police-mostwanted").hide();
+        $("#phone-police-wanteds").show();
+        LSPDIntranetSelectedPerson = charId;
+        $("#phone-police-wanteds-header").html(`${charname}`);
+        alt.emit("Client:Smartphone:requestLSPDIntranetPersonWanteds", charId)
+    }
+    function requestPoliceAppMostWanteds() {
+        alt.emit("Client:Smartphone:requestPoliceAppMostWanteds");
+    }
+    function setPoliceAppMostWanteds(mostWantedJSON) {
+        let html = "";
+        mostWantedJSON = JSON.parse(mostWantedJSON);
+
+        for (var i in mostWantedJSON) {
+            html += "<button class='btn btn-elegant' onclick='locateMostWanted(`" + mostWantedJSON[i].posX + "`, `" + mostWantedJSON[i].posY + "`)'><div class='d-inline'><i class='fas fa-map-marker-alt'></i></div> " + mostWantedJSON[i].description + "</button>"
+        }
+
+        $("#phone-police-mostwanted-main").html(html);
+        policeAppToMostwanted();
+    }
+    function locateMostWanted(posX, posY) {
+        alt.emit("Client:Smartphone:locateMostWanted", posX, posY);
+    }
+    function policeAppToMostwanted() {
+        $("#phone-police-main").hide();
+        $("#phone-police-querylist").hide();
+        $("#phone-police-wanteds").hide();
+        $("#phone-police-mostwanted").show();
+        $("#phone-police-addwanteds").hide();
+    }
+    function setLSPDIntranetPersonWanteds(wantedJSON) {
+        let currentJailtime = 0,
+            currentTicketfine = 0;
+        wantedJSON = JSON.parse(wantedJSON);
+        $("#phone-police-wanteds-list").html("");
+        if (wantedJSON.length <= 0) {
+            $("#phone-police-wanteds-list").html("<div class='wanted-entry btn'>Für diesen Bürger liegen keine Delikte vor.</div>");
+            return;
+        }
+        for (var i in wantedJSON) {
+            parseWanteds(wantedJSON[i].id, wantedJSON[i].wantedId, wantedJSON[i].givenString);
+            currentJailtime = currentJailtime + getJailTimeFor(wantedJSON[i].wantedId);
+            currentTicketfine = currentTicketfine + getTicketfineFor(wantedJSON[i].wantedId);
+        }
+        $("#phone-police-wanteds-total").data("ticketfine", currentTicketfine);
+        $("#phone-police-wanteds-total").data("jailtime", currentJailtime);
+        syncPenalty();
+    }
+    function syncPenalty() {
+        let currentTicketfine = $("#phone-police-wanteds-total").data("ticketfine"),
+            currentJailtime = $("#phone-police-wanteds-total").data("jailtime");
+        $("#phone-police-wanteds-total").html("<b>Ticketstrafen:</b> " + currentTicketfine + "$ <b>Hafteinheiten:</b> " + currentJailtime);
+    }
+    function getJailTimeFor(wantedid) {
+        let nodelist = document.getElementById("phone-police-addwanteds-stgb").querySelectorAll("button[data-wantedid='" + wantedid + "']"),
+            jailtime;
+        [].forEach.call(nodelist, function(node) {
+            jailtime = parseInt(node.dataset.jailtime);
+        });
+        return jailtime;
+    }
+    function getTicketfineFor(wantedid) {
+        let nodelist = document.getElementById("phone-police-addwanteds-stgb").querySelectorAll("button[data-wantedid='" + wantedid + "']"),
+            ticketfine;
+        [].forEach.call(nodelist, function(node) {
+            ticketfine = parseInt(node.dataset.ticketfine);
+        });
+        return ticketfine;
+    }
+    function parseWanteds(dbid, wantedid, string) {
+        let html,
+            nodelist = document.getElementById("phone-police-addwanteds-stgb").querySelectorAll("button[data-wantedid='" + wantedid + "']");
+        [].forEach.call(nodelist, function(node) {
+            html = '<div class="wanted-entry btn" data-toggle="tooltip" data-entry="' + dbid + '" data-placement="bottom" title="Erstellt am ' + string + '">' + node.innerHTML +
+                '<span class="close" onclick="policeAppDeleteWanted(' + dbid + ', ' + LSPDIntranetSelectedPerson + ')"><i class="far fa-times-circle"></i></span>' +
+                '</div>';
+        });
+        $("#phone-police-wanteds-list").append(html);
+    }
+    function policeAppAddWanted() {
+        $("#phone-police-wanteds").hide();
+        $("#phone-police-addwanteds").show();
+    }
+    function policeAppToWanteds() {
+        $("#phone-police-addwanteds").hide();
+        $("#phone-police-wanteds").show();
+    }
+    function phonePoliceAddParagraph(value) {
+        let input = document.getElementById("phone-police-addwanteds-json"),
+            array = [];
+        input.value != "" ? array = JSON.parse(input.value) : array;
+        if (array.includes(value)) {
+            array.splice(array.indexOf(value), 1);
+        } else {
+            array.push(value);
+        }
+        input.value = JSON.stringify(array);
+        getParagraphDescriptions(array);
+    }
+    function getParagraphDescriptions(array) {
+        let html = "",
+            nodelist,
+            target = document.getElementById("phone-police-addwanteds-active");
+        if (array.length != 0) {
+            array.forEach(function(paragraph) {
+                nodelist = document.getElementById("phone-police-addwanteds-stgb").querySelectorAll("button[data-paragraph='" + paragraph + "']");
+                [].forEach.call(nodelist, function(node) {
+                    html += "<button class='btn' onclick='phonePoliceAddParagraph(" + paragraph + ")'>" + node.innerHTML + "</button>";
+                });
+            });
+        } else {
+            html = "<div class='text-center text-muted'>keine</div>";
+        }
+        target.innerHTML = html;
+    }
+    function policeAppSaveWanted() {
+        let value = document.getElementById("phone-police-addwanteds-json").value,
+            array = JSON.parse(value),
+            ids = [],
+            nodelist;
+        if (array.length != 0) {
+            array.forEach(function(paragraph) {
+                nodelist = document.getElementById("phone-police-addwanteds-stgb").querySelectorAll("button[data-paragraph='" + paragraph + "']");
+                [].forEach.call(nodelist, function(node) {
+                    ids.push(node.dataset.wantedid);
+                });
+            });
+        }
+        ids = JSON.stringify(ids);
+        if (LSPDIntranetSelectedPerson == null) return;
+        alt.emit("Client:Smartphone:GiveLSPDIntranetWanteds", LSPDIntranetSelectedPerson, ids);
+        policeAppToWanteds();
+        policeAppClearWanteds();
+    }
+    function policeAppClearWanteds() {
+        let array = [];
+        document.getElementById("phone-police-addwanteds-json").value = array;
+        getParagraphDescriptions(array);
+        $('#phone-police-addwanteds-stgb').children(".collapse").collapse("hide");
+    }
+    function policeAppDeleteWanted(id, charid) {
+        alt.emit("Client:Smartphone:DeleteLSPDIntranetWanted", id, charid);
+        let currentJailtime = getJailTimeFor(id),
+            currentTicketfine = getTicketfineFor(id);
+        currentTicketfine = parseInt($("#phone-police-wanteds-total").data("ticketfine")) - currentTicketfine;
+        currentJailtime = parseInt($("#phone-police-wanteds-total").data("jailtime")) - currentJailtime;
+        $("#phone-police-wanteds-total").data("ticketfine", currentTicketfine);
+        $("#phone-police-wanteds-total").data("jailtime", currentJailtime);
+        syncPenalty();
+    }
+    function getAddressData(id, number) {
+        let nodelist,
+            name = null;
+        if (id == null) {
+            nodelist = document.getElementById("phone-address-list").querySelectorAll("div[data-phonenumber='" + number + "']");
+            [].forEach.call(nodelist, function(node) {
+                id = node.dataset.addressid;
+            });
+        }
+        nodelist = document.getElementById("phone-address-list").querySelectorAll("div[data-addressid='" + id + "']");
+        [].forEach.call(nodelist, function(node) {
+            [].forEach.call(node.querySelectorAll("div"), function(div) {
+                if (div.classList.contains("phone-address-nickname")) {
+                    name = div.innerHTML;
+                } else if (div.classList.contains("phone-address-phonenumber")) {
+                    number = div.innerHTML;
+                }
+            });
+        });
+        return {
+            "id": id,
+            "name": name,
+            "number": number
+        };
+    }
+    function getVerlaufData(id, number) {
+        let nodelist,
+            name = null;
+        if (id == null) {
+            nodelist = document.getElementById("phone-Verlauf-list").querySelectorAll("div[data-phonenumber='" + number + "']");
+            [].forEach.call(nodelist, function(node) {
+                id = node.dataset.Verlaufid;
+            });
+        }
+        nodelist = document.getElementById("phone-Verlauf-list").querySelectorAll("div[data-Verlaufid='" + id + "']");
+        [].forEach.call(nodelist, function(node) {
+            [].forEach.call(node.querySelectorAll("div"), function(div) {
+                if (div.classList.contains("phone-Verlauf-nickname")) {
+                    name = div.innerHTML;
+                } else if (div.classList.contains("phone-Verlauf-phonenumber")) {
+                    number = div.innerHTML;
+                }
+            });
+        });
+        return {
+            "id": id,
+            "number": number
+        };
+    }
+    function unixToLatest(unix, type) {
+        unix = unix * 1000;
+        let date = new Date(unix),
+            today = new Date(),
+            str,
+            dateDay = date.getDate(),
+            dateMonth = date.getMonth(),
+            todayDay = today.getDate(),
+            todayMonth = today.getMonth();
+
+        if (dateDay == todayDay && dateMonth == todayMonth) {
+            if (type == null) {
+                unix = unix / 1000;
+                str = unixToTime(unix);
+            } else if (type == "day") {
+                str = "Heute";
+            }
+        } else {
+            date.setHours(0);
+            date.setMinutes(0);
+            date.setSeconds(0);
+            today.setHours(0);
+            today.setMinutes(0);
+            today.setSeconds(0);
+            today.setMilliseconds(0);
+
+            let unixDate = date.getTime();
+            let unixToday = today.getTime();
+            let diffdays = (unixToday - unixDate) / (1000 * 60 * 60 * 24);
+
+            if (diffdays == 1) {
+                str = "Gestern";
+            } else {
+                dateMonth++;
+                str = checkTime(dateDay) + "." + checkTime(dateMonth) + ".";
+            }
+        }
+        return (str);
+    }
+    function unixToTime(unix) {
+        let date = new Date(unix * 1000);
+        hour = checkTime(date.getHours()),
+            minute = checkTime(date.getMinutes());
+        let str = hour + ":" + minute;
+        return (str);
+    }
+    function SmartphoneReceiveTextMessage(chatId, phoneNumber, text) {
+        loadMessagesMain();
+        if (chatId != selectedChatId) {
+            let address = getNameOrNumber(phoneNumber),
+                str = `${address}: ${phoneDecodePre(text)}`;
+            showPhoneNotification(str, "sms", "" + "forceOpenChat(" + chatId + ", " + phoneNumber + ");", "sms");
+            [].forEach.call(document.getElementById("phone-sms-home-chats").querySelectorAll("div[data-chatid='" + chatId + "']"), function(chat) {
+                [].forEach.call(chat.querySelectorAll(".phone-app-chat-alert"), function(alertdiv) {
+                    alertdiv.innerHTML == 0 ? alertdiv.innerHTML = 1 : alertdiv.innerHTML = parseInt(alertdiv.innerHTML) + 1;
+                });
+            });
+            checkChatAlerts();
+            return;
+        } else if (chatId == selectedChatId) {
+            playPhoneAudio("../utils/sounds/phone/msg_get_silent.mp3");
+        }
+        loadTextMessages(chatId);
+    }
+    var phoneFlightmode = true;
+    function phoneSwapFlightmode() {
+        var value = document.getElementById("phone-flightmode-switch").checked;
+        if (value == true) {
+            phoneFlightmodeOn(true);
+        } else {
+            phoneFlightmodeOff(true);
+        }
+    }
+    function phoneSwapDarkmode() {
+        var value = document.getElementById("phone-darkmode-switch").checked;
+        if (value == true) {
+            $(".layer2").css("background-image", 'url("../utils/img/phone/darkmode.png")');
+            $("#phone-screen-call").css("background-image", 'url("../utils/img/phone/darkmode.png")');
+        } else {
+            $(".layer2").css("background-image", 'url("../utils/img/phone/brightmode.png")');
+            $("#phone-screen-call").css("background-image", 'url("../utils/img/phone/brightmode.png")');
+        }
+    }
+    function changePhoneBackground(wallpaperId) {
+        $(".Wallpaper1Setting").css("border-style", 'none');
+        $(".Wallpaper1Setting").css("border-color", '#ff0000');
+        $(".Wallpaper2Setting").css("border-style", 'none');
+        $(".Wallpaper2Setting").css("border-color", '#ff0000');
+        $(".Wallpaper3Setting").css("border-style", 'none');
+        $(".Wallpaper3Setting").css("border-color", '#ff0000');
+        $(".Wallpaper4Setting").css("border-style", 'none');
+        $(".Wallpaper4Setting").css("border-color", '#ff0000');
+        $(".Wallpaper5Setting").css("border-style", 'none');
+        $(".Wallpaper5Setting").css("border-color", '#ff0000');
+        $(".Wallpaper6Setting").css("border-style", 'none');
+        $(".Wallpaper6Setting").css("border-color", '#ff0000');
+        $(".Wallpaper7Setting").css("border-style", 'none');
+        $(".Wallpaper7Setting").css("border-color", '#ff0000');
+        $(".Wallpaper8Setting").css("border-style", 'none');
+        $(".Wallpaper8Setting").css("border-color", '#ff0000');
+        $(".Wallpaper9Setting").css("border-style", 'none');
+        $(".Wallpaper9Setting").css("border-color", '#ff0000');
+        $(".Wallpaper10Setting").css("border-style", 'none');
+        $(".Wallpaper10Setting").css("border-color", '#ff0000');
+        $(`.Wallpaper${wallpaperId}Setting`).css("border-style", 'solid');
+        $(".layer2").css("background-image", `url("../utils/img/phone/bg/wallpaper${wallpaperId}.png")`);
+        $("#phone-screen-call").css("background-image", `url("../utils/img/phone/bg/wallpaper${wallpaperId}.png")`);
+        showPhoneNotification("Hintergrund wurde erfolgreich geändert", "hintergrund", null, "hintergrund");
+        alt.emit("Client:Smartphone:setWallpaperId", wallpaperId);
+    }
+    function phoneFlightmodeOn(shouldBeSave) {
+        clearTimeout(activePhoneFlightmodeTimeout);
+        document.getElementById("phone-connection-str").innerHTML = "Flugmodus";
+        document.getElementById("phone-connection-svg").innerHTML = "<i class=\"fad fa-signal-slash\"></i>";
+        if (phoneFlightmode != true) {
+            phoneFlightmode = true;
+            if (RadioEnabled == true) {
+                phoneRadioLeaveFrequency();
+                playRadioAudio();
+            }
+            phoneHangUp();
+            if (shouldBeSave) alt.emit("Client:Smartphone:setFlyModeEnabled", true);
+        }
+    }
+    let activePhoneFlightmodeTimeout = null;
+    function phoneFlightmodeOff(shouldBeSave) {
+        document.getElementById("phone-connection-str").innerHTML = "Verbinden.. <i class=\"fas fa-spinner fa-spin\"></i>";
+        document.getElementById("phone-connection-svg").innerHTML = "<i class=\"fad fa-ban\"></i>";
+        activePhoneFlightmodeTimeout = setTimeout(function() {
+            document.getElementById("phone-connection-str").innerHTML = "5G";
+            document.getElementById("phone-connection-svg").innerHTML = "<i class=\"fad fa-signal-1\"></i>";
+            phoneFlightmode = false;
+            swapPhoneFrequency();
+            if (shouldBeSave) alt.emit("Client:Smartphone:setFlyModeEnabled", false);
+            activePhoneFlightmodeTimeout = setTimeout(function() {
+                document.getElementById("phone-connection-svg").innerHTML = "<i class=\"fad fa-signal-2\"></i>";
+                activePhoneFlightmodeTimeout = setTimeout(function() {
+                    document.getElementById("phone-connection-svg").innerHTML = "<i class=\"fas fa-signal\"></i>";
+                    activePhoneFlightmodeTimeout = null;
+                }, Math.random() * 30000);
+            }, Math.random() * 7000);
+        }, Math.random() * 20000);
+    }
+    var phoneNodisturb = false;
+    function phoneSwapNodisturb() {
+        let value = document.getElementById("phone-nodisturb-switch").checked;
+        if (value == true) {
+            phoneNodisturbOn();
+        } else {
+            phoneNodisturbOff();
+        }
+    }
+    function phoneNodisturbOn() {
+        phoneNodisturb = true;
+        $("#phone-nodisturb").removeClass("d-none");
+    }
+    function phoneNodisturbOff() {
+        phoneNodisturb = false;
+        $("#phone-nodisturb").addClass("d-none");
+    }
+    function phoneShowCalling() {
+        selectedChatId = 0;
+        $("#phone-screen-calling").show();
+        $("#phone-banner").slideUp();
+        $('#phone-sms-home-carousel').carousel(0);
+        $('#phone-sms-header-carousel').carousel(0);
+    }
+    function phoneDialDelete() {
+        document.getElementById("phone-call-input").value = null;
+    }
+    function phoneDialAdd(value) {
+        document.getElementById("phone-call-input").value += value;
+    }
+    var phoneActiveCall;
+    var PhoneCallTimer;
+    $("#phone-call-submit").click(function() {
+        var number = document.getElementById("phone-call-input").value;
+        phoneCall(number);
+    });
+    $("#phone-chat-call").click(function() {
+        var number = document.getElementById("phone-chat-disp-name").dataset.target;
+        phoneCall(number);
+    });
+    $("#phone-chat-delete").click(function() {
+        alt.emit("Client:Smartphone:deleteChat", selectedChatId);
+        $('#phone-sms-home-carousel').carousel(0);
+        $('#phone-sms-header-carousel').carousel(0);
+        selectedChatId = 0;
+        allowChatKeyUp = false;
+    });
+    function phoneReceiveCall(number) {
+        if (phoneActiveCall == null) {
+            latestCall != null ? clearTimeout(latestCall) : latestCall;
+            $("#phoneAcceptCall").show();
+            allowChatKeyUp = false;
+            if (isNaN(parseInt(number)) != true) {
+                phoneActiveCall = parseInt(number);
+                phoneParseCall(phoneActiveCall);
+                let display = document.getElementById("phone-calling-display"),
+                    activetime = document.getElementById("phone-calling-activetime"),
+                    banner = document.getElementById("phone-banner"),
+                    address = getAddressData(null, phoneActiveCall);
+                startPhoneAudioLoop("../utils/sounds/phone/ring.wav");
+                if (address.name == null) {
+                    display.innerHTML = phoneActiveCall;
+                    banner.innerHTML = "Eingehender Anruf " + phoneActiveCall;
+                } else {
+                    display.innerHTML = address.name;
+                    banner.innerHTML = "Eingehender Anruf von " + address.name;
+                }
+                activetime.innerHTML = "Eingehender Anruf";
+                $("#phone-screen-calling").show();
+                selectedChatId = 0;
+                $('#phone-sms-home-carousel').carousel(0);
+                $('#phone-sms-header-carousel').carousel(0);
+            }
+        }
+    }
+    function toggleRadio(shouldBeActivated) {
+        if (shouldBeActivated == true && RadioEnabled == false) {
+            RadioEnabled = true;
+            swapPhoneFrequency();
+        } else if (shouldBeActivated == false && RadioEnabled == true) {
+            RadioEnabled = false;
+            phoneRadioLeaveFrequency();
+            clearTimeout(RadioTimeout);
+            stopRadioAudioLoop();
+        }
+    }
+    function phoneRadioJoinFrequency() {
+        value = parseInt(document.getElementById("phone-radio-frequency-slider").value);
+        if (parseFloat(value / 1000) == document.getElementById("phone-radio-frequency-number").value) {
+            console.log("Funkfrequenz")
+            console.log(value + " kHz");
+            activeRadioFreq = value;
+            joinFrequency(value);
+            value = parseFloat(value / 1000);
+            console.log(value + " MHz");
+            stopRadioAudioLoop();
+            // playPhoneAudio("../utils/sounds/phone/radio_join.wav"); RAUSGENOMMEN DA SALTYCHAT NUN SELBST EINEN SOUND MACHT
+            document.getElementById("phone-radio-frequency-diode").classList.add("active");
+        } else {
+            value = parseFloat(document.getElementById("phone-radio-frequency-number").value).toFixed(2) * 1000;
+            let floored = Math.floor(value / 1000);
+            if (permittedFrequencies.includes(floored)) {
+                console.log("Funkfrequenz")
+                console.log(value + " kHz");
+                activeRadioFreq = value;
+                joinFrequency(value);
+                value = parseFloat(value / 1000);
+                console.log(value + " MHz");
+                stopRadioAudioLoop();
+                // playPhoneAudio("../utils/sounds/phone/radio_join.wav"); RAUSGENOMMEN DA SALTYCHAT NUN SELBST EINEN SOUND MACHT
+                document.getElementById("phone-radio-frequency-diode").classList.add("active");
+            }
+        }
+    }
+    function joinFrequency(frequence) {
+        alt.emit("Client:Smartphone:joinRadioFrequence", `${frequence}`);
+    }
+    function leaveFrequency() {
+        alt.emit("Client:Smartphone:leaveRadioFrequence");
+    }
+    function phoneRadioLeaveFrequency() {
+        document.getElementById("phone-radio-frequency-diode").classList.remove("active");
+        leaveFrequency();
+        activeRadioFreq = null;
+    }
+    function phoneSwapRadio() {
+        var value = document.getElementById("phone-radio-switch").checked;
+        if (value == true) {
+            toggleRadio(true);
+            document.getElementById("phone-connection-str").innerHTML = "5G | <i color=\"green\" class=\"fas fa-broadcast-tower\"></i>";
+        } else {
+            toggleRadio(false);
+            document.getElementById("phone-connection-str").innerHTML = "5G";
+        }
+        document.getElementById("phone-radio-frequency-number").blur();
+        document.getElementById("phone-radio-switch").blur();
+    }
+    function stopRadioAudioLoop() {
+        if (RadioAudioLoop != null) {
+            setTimeout(function() {
+                RadioAudioLoop.pause();
+                RadioAudioLoop.loop = false;
+                RadioAudioLoop = null;
+            }, 100);
+        }
+    }
+    function phoneChangeRadioLimits(min, max) {
+        if (activeRadioFreq < min || activeRadioFreq > max) {
+            phoneRadioLeaveFrequency();
+            playRadioAudio();
+        }
+        RadioFreqMin = min;
+        RadioFreqMax = max;
+        phoneGenerateRadioSlider();
+    }
+    function phoneGenerateRadioSlider() {
+        let slider = document.getElementById("phone-radio-frequency-slider"),
+            datalist = document.getElementById("freqTickmarks"),
+            html = "",
+            totalFreq,
+            deployFreq = 0,
+            htmlFreq,
+            dispLabel;
+        slider.max = RadioFreqMax;
+        slider.min = RadioFreqMin;
+        slider.step = RadioFreqSteps;
+        totalFreq = parseInt((RadioFreqMax - RadioFreqMin) / RadioFreqSteps);
+        slider.style.width = (RadioFreqSpacing * (RadioFreqSteps / RadioMarkSteps)) * totalFreq + "px";
+        datalist.style.width = (RadioFreqSpacing * (RadioFreqSteps / RadioMarkSteps)) * (totalFreq + 1) + 15 + "px";
+        if (totalFreq > 0) {
+            while (deployFreq <= totalFreq) {
+                htmlFreq = RadioFreqMin + (deployFreq * RadioFreqSteps);
+                if (htmlFreq % RadioLabelSteps == 0) {
+                    dispLabel = parseFloat(htmlFreq / 1000);
+                    html += "<option value='" + htmlFreq + "' label='" + dispLabel + "'>" + dispLabel + "</option>";
+                } else {
+                    if (htmlFreq % RadioMarkSteps == 0) {
+                        html += "<option value='" + htmlFreq + "'></option>";
+                    }
+                }
+                deployFreq++;
+            }
+        }
+        document.getElementById("freqTickmarks").innerHTML = html;
+    }
+    function swapPhoneFrequency() {
+        if (RadioEnabled == true) {
+            playRadioAudio();
+            phoneRadioLeaveFrequency();
+            if (phoneFlightmode == false) {
+                RadioTimeout != null ? clearTimeout(RadioTimeout) : RadioTimeout;
+                RadioTimeout = setTimeout(function() {
+                    RadioTimeout = null;
+                    phoneRadioJoinFrequency();
+                }, Math.random() * 3000 + 2000);
+            }
+        }
+    }
+    function playRadioAudio() {
+        if (RadioAudioLoop == null) {
+            RadioAudioLoop = new Audio("../utils/sounds/phone/radio_noise.wav");
+            RadioAudioLoop.loop = true;
+            RadioAudioLoop.play();
+        }
+    }
+    function phoneSyncRadioFrequencyWith(type) {
+        let slider = document.getElementById("phone-radio-frequency-slider"),
+            number = document.getElementById("phone-radio-frequency-number"),
+            frame = document.getElementById("phone-radio-frequency-frame");
+        if (type == "slider") {
+            value = parseFloat(slider.value / 1000).toFixed(2);
+            number.value = value;
+        } else if (type == "number") {
+            value = parseFloat(number.value).toFixed(2);
+            value = value * 1000;
+            slider.value = value;
+            frame.scrollLeft = 32 - 0.5 * frame.offsetWidth + (((value - RadioFreqMin) / (RadioFreqMax - RadioFreqMin)) * slider.offsetWidth);
+        }
+        swapPhoneFrequency()
+    }
+    phoneGenerateRadioSlider();
+    function phoneAcceptCall() {
+        let callto = phoneParseCall(null);
+        phoneActiveCall = callto;
+        selectedChatId = 0;
+        alt.emit("Client:Smartphone:acceptCall");
+    }
+    function playAnimation(animDict, animName, animFlag, animDuration) {
+        if (animDict == undefined || animName == undefined || animFlag == undefined || animDuration == undefined) return;
+        alt.emit("Client:Animation:playAnimation", animDict, animName, parseInt(animFlag), parseInt(animDuration));
+    }
+    function ShowPhoneCallError(errno) {
+        stopPhoneAudioLoop();
+        let msg,
+            banner = document.getElementById("phone-banner");
+        switch (errno) {
+            case 1:
+                msg = "Kein Anschluss unter dieser Nummer.";
+                playPhoneAudio("../utils/sounds/phone/busy.wav");
+                banner.innerHTML = "Nummer nicht vorhanden";
+                break;
+            case 2:
+                msg = "Der Angerufene Teilnehmer ist nicht erreichbar.";
+                banner.innerHTML = "Nicht erreichbar";
+                playPhoneAudio("../utils/sounds/phone/busy.wav");
+                break;
+            case 3:
+                msg = "Besetzt";
+                banner.innerHTML = "Besetzt";
+                playPhoneAudio("../utils/sounds/phone/busy.wav");
+                break;
+            case 4:
+                msg = "Anruf beendet";
+                banner.innerHTML = "Anruf beendet";
+                break;
+        }
+        $("#phoneAcceptCall").hide();
+        phoneActiveCall = null;
+        phoneStopTimer();
+        latestCall != null ? clearTimeout(latestCall) : latestCall;
+        document.getElementById("phone-calling-activetime").innerHTML = msg;
+        latestCall = setTimeout(() => {
+            $("#phone-screen-calling").hide();
+            $("#phone-banner").slideUp();
+        }, 5000);
+    }
+    function phoneParseCall(number) {
+        let display = document.getElementById("phone-calling-display");
+        if (number == null) {
+            return display.dataset.target;
+        } else {
+            display.dataset.target = number;
+        }
+    }
+    function phoneCall(number) {
+        if (phoneActiveCall == null) {
+            if (phoneFlightmode) {
+                showPhoneNotification("Kein Netz", "error", null, "error");
+            } else {
+                latestCall != null ? clearTimeout(latestCall) : latestCall;
+                $("#phoneAcceptCall").hide();
+                allowChatKeyUp = false;
+                if (isNaN(parseInt(number)) != true) {
+                    startPhoneAudioLoop("../utils/sounds/phone/dial.wav");
+                    phoneActiveCall = parseInt(number);
+                    phoneParseCall(phoneActiveCall);
+                    $("#phone-screen-call").hide();
+                    let display = document.getElementById("phone-calling-display"),
+                        activetime = document.getElementById("phone-calling-activetime"),
+                        banner = document.getElementById("phone-banner");
+                    getNameOrNumber(phoneActiveCall);
+                    display.innerHTML = getNameOrNumber(phoneActiveCall);
+                    banner.innerHTML = "W&auml;hle " + getNameOrNumber(phoneActiveCall);
+                    activetime.innerHTML = "W&auml;hlen...";
+                    $("#phone-screen-calling").show();
+                    $("#phone-screen-home").show();
+                    alt.emit("Client:Smartphone:tryCall", number);
+                }
+            }
+        }
+    }
+    function showPhoneCallActive(shownNumber) {
+        stopPhoneAudio();
+        stopPhoneAudioLoop();
+        $("#phoneAcceptCall").hide();
+        let activetime = document.getElementById("phone-calling-activetime"),
+            banner = document.getElementById("phone-banner"),
+            PhoneCallSeconds = 0,
+            PhoneCallMinutes = 0,
+            PhoneDispSeconds = 0,
+            PhoneDispMinutes = 0;
+        activetime.innerHTML = "00:00";
+        PhoneCallTimer = setInterval(function() {
+            PhoneCallSeconds++;
+            if (PhoneCallSeconds % 60 < 10) {
+                if (PhoneCallSeconds % 60 == 0) {
+                    PhoneCallMinutes = PhoneCallSeconds / 60;
+                    if (PhoneCallMinutes < 10) {
+                        PhoneDispMinutes = "0" + PhoneCallMinutes;
+                    } else {
+                        PhoneDispMinutes = PhoneCallMinutes;
+                    }
+                } else if (PhoneCallSeconds == 1) {
+                    PhoneDispMinutes = "00";
+                }
+                PhoneDispSeconds = "0" + PhoneCallSeconds % 60;
+            } else {
+                PhoneDispSeconds = PhoneCallSeconds % 60;
+            }
+            activetime.innerHTML = PhoneDispMinutes + ":" + PhoneDispSeconds;
+        }, 1000);
+        banner.innerHTMl = "Verbunden mit " + getNameOrNumber(shownNumber);
+    };
+    function phoneStopTimer() {
+        clearInterval(PhoneCallTimer);
+    }
+    function phoneHangUp() {
+        $("#phone-screen-calling").hide();
+        $("#phone-banner").slideUp();
+        phoneStopTimer();
+        stopPhoneAudioLoop();
+        phoneActiveCall = null;
+        alt.emit("Client:Smartphone:denyCall");
+    }
+    setInterval(function() {
+        streamTime();
+    }, 5000);
+    function checkTime(i) {
+        return (i < 10) ? "0" + i : i;
+    }
+    function parseEmotes() {
+        let emoteElements = document.querySelectorAll("span[data-emote='true']");
+        [].forEach.call(emoteElements, function(emote) {
+            emote.classList.add("fa-3x");
+        });
+    }
+    streamTime();
+    function streamTime() {
+        let today = new Date(),
+            month = today.getMonth(),
+            weekday = today.getDay(),
+            day = today.getDate(),
+            hour = checkTime(today.getHours()),
+            minute = checkTime(today.getMinutes());
+        switch (weekday) {
+            case 0:
+                weekday = "Sonntag";
+                break;
+            case 1:
+                weekday = "Montag";
+                break;
+            case 2:
+                weekday = "Dienstag";
+                break;
+            case 3:
+                weekday = "Mittwoch";
+                break;
+            case 4:
+                weekday = "Donnerstag";
+                break;
+            case 5:
+                weekday = "Freitag";
+                break;
+            case 6:
+                weekday = "Samstag";
+        }
+        switch (month) {
+            case 0:
+                month = "Januar";
+                break;
+            case 1:
+                month = "Februar";
+                break;
+            case 2:
+                month = "M&auml;rz";
+                break;
+            case 3:
+                month = "April";
+                break;
+            case 4:
+                month = "Mai";
+                break;
+            case 5:
+                month = "Juni";
+                break;
+            case 6:
+                month = "Juli";
+                break;
+            case 7:
+                month = "August";
+                break;
+            case 8:
+                month = "September";
+                break;
+            case 9:
+                month = "Oktober";
+                break;
+            case 10:
+                month = "November";
+                break;
+            case 11:
+                month = "Dezember";
+                break;
+        }
+        let time = hour + ":" + minute,
+            date = weekday + ", " + day + ". " + month;
+        document.getElementById("phone-min-time").innerHTML = time;
+    }
+    function showPhoneNotification(message, app, fn, sound) {
+        let notificationBox = $("#phone-notif"),
+            notificationContent = $("#phone-notif-content"),
+            notificationApp = $("#phone-notif-app"),
+            svg,
+            path;
+        latestAlert != null ? clearTimeout(latestAlert) : latestAlert;
+        switch (app) {
+            case "sms":
+                svg = "<i class='fas fa-sms fa-2x text-success'></i>";
+                break;
+            case "address":
+                svg = "<i class='far fa-address-book fa-2x'></i>"
+                break;
+            case "error":
+                svg = "<i class='far fa-exclamation-triangle fa-2x text-warning'></i>";
+                break;
+            case "hintergrund":
+                svg = "<i class='far fa-window-restore fa-2x text-warning'></i>";
+                break;
+            default:
+                svg = "";
+                break;
+        }
+        switch (sound) {
+            case "sms":
+                path = "../utils/sounds/phone/msg_get_2.wav";
+                break;
+            case "error":
+                path = "../utils/sounds/phone/msg_get_1.wav";
+                break;
+            default:
+                path = null;
+                break;
+        }
+        if (phoneNodisturb == false) {
+            if (fn != null) {
+                notificationBox.attr('onclick', '');
+                notificationBox.attr('onclick', `${fn}`);
+            }
+            notificationContent.html(message);
+            notificationApp.html(svg);
+            if (path != null) {
+                playPhoneAudio(path);
+            }
+            notificationBox.slideDown();
+            latestAlert = setTimeout(function() {
+                notificationBox.slideUp();
+                latestAlert = null;
+            }, 5000);
+        }
+    }
+    function startPhoneAudioLoop(path) {
+        if (phoneNodisturb == false) {
+            phoneAudioLoop = new Audio(path);
+            phoneAudioLoop.loop = true;
+            phoneAudioLoop.play();
+        }
+    }
+    function stopPhoneAudioLoop() {
+        if (phoneAudioLoop != null) {
+            phoneAudioLoop.pause();
+            phoneAudioLoop.loop = false;
+            phoneAudioLoop = null;
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function playPhoneAudio(path) {
+        if (phoneNodisturb == false) {
+            phoneAudioOnce = new Audio(path);
+            phoneAudioOnce.play();
+        }
+    }
+    function stopPhoneAudio() {
+        if (phoneAudioOnce != null) {
+            phoneAudioOnce.pause();
+            phoneAudioOnce = null;
+            return true;
+        } else {
+            return false;
+        }
+    }
+    checkChatAlerts();
+    phoneFlightmodeOff(true);
+</script>
+<script type="text/javascript">
+    /* Smartphone Alt Ons */
+    alt.on("CEF:Smartphone:equipPhone", (isEquipped, phoneNumber, isFlyModeEnabled, wallpaperId) => {
+        activatePhone(isEquipped);
+        updatePhoneNumber(phoneNumber);
+        if (isFlyModeEnabled) phoneFlightmodeOn(false);
+        else phoneFlightmodeOff(false);
+        $(`.Wallpaper${wallpaperId}Setting`).css("border-style", 'solid');
+        $(".layer2").css("background-image", `url("../utils/img/phone/bg/wallpaper${wallpaperId}.png")`);
+        $("#phone-screen-call").css("background-image", `url("../utils/img/phone/bg/wallpaper${wallpaperId}.png")`);
+    });
+    alt.on("CEF:Smartphone:togglePhone", (shouldBeVisible) => {
+        togglePhone(shouldBeVisible);
+    });
+    alt.on("CEF:Smartphone:showPhoneReceiveCall", (number) => {
+        phoneReceiveCall(number);
+    });
+    alt.on("CEF:Smartphone:showPhoneCallActive", (number) => {
+        showPhoneCallActive(number);
+    });
+    alt.on("CEF:Smartphone:addChatJSON", (chats) => {
+        SmartphoneAddChatJSONs(chats);
+    });
+    alt.on("CEF:Smartphone:setAllChats", () => {
+        SmartphoneSetAllChats();
+    });
+    alt.on("CEF:Smartphone:addMessageJSON", (msg) => {
+        SmartphoneAddMessageJSONs(msg);
+    });
+    alt.on("CEF:Smartphone:setAllMessages", () => {
+        SmartphoneSetAllMessages();
+    });
+    alt.on("CEF:Smartphone:recieveNewMessage", (chatId, phoneNumber, message) => {
+        SmartphoneReceiveTextMessage(chatId, phoneNumber, message);
+    });
+    alt.on("CEF:Smartphone:ShowPhoneCallError", (errorId) => {
+        ShowPhoneCallError(errorId);
+    });
+    alt.on("CEF:Smartphone:addContactJSON", (json) => {
+        SmartphoneAddContactJSONs(json);
+    });
+    alt.on("CEF:Smartphone:setAllContacts", () => {
+        SmartphoneSetAllContacts();
+    });
+    alt.on("CEF:Smartphone:addVerlaufJSON", (json) => {
+        SmartphoneAddVerlaufJSONs(json);
+    });
+    alt.on("CEF:Smartphone:setAllVerlauf", () => {
+        SmartphoneSetAllVerlauf();
+    });
+    alt.on("CEF:Smartphone:showNotification", (message, app, fn, sound) => {
+        showPhoneNotification(message, app, fn, sound)
+    });
+    alt.on("CEF:Smartphone:ShowLSPDIntranetApp", (shouldBeVisible, serverWanteds) => {
+        ShowLSPDIntranetApp(shouldBeVisible, serverWanteds);
+    });
+    alt.on("CEF:Smartphone:SetLSPDIntranetSearchedPeople", (searchedPersonJSON) => {
+        SetLSPDIntranetSearchedPeople(searchedPersonJSON);
+    });
+    alt.on("CEF:Smartphone:setLSPDIntranetPersonWanteds", (json) => {
+        setLSPDIntranetPersonWanteds(json);
+    });
+    alt.on("CEF:Smartphone:setPoliceAppMostWanteds", (mostWanteds) => {
+        setPoliceAppMostWanteds(mostWanteds);
+    });
+</script>
+</html>

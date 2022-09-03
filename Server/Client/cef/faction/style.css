@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'PEL';
+    src: url('../utils/fonts/Poppins-ExtraLight.ttf') format('truetype');
+}
+
+@keyframes flickerAnimationn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 0.95;
+        transform: translateX(0%);
+    }
+}
+
+h4 {
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    color: rgba(255, 255, 255, 0.80);
+    outline: none;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+body {
+    -webkit-user-select: none;
+    user-select: none;
+    background: none;
+    /*background: url(../utils/img/bg2.jpg);*/
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+/*SCROLLBAR*/
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #888;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6d6d6d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(85, 85, 85);
+}
+
+
+/*SCROLLBAR-END*/
+
+
+/*LSPD*/
+
+div#LSPDCarCEFBox {
+    opacity: 0;
+}
+
+div#LSPDCarCEFBox {
+    display: none;
+}
+
+div#LSPDGearCEFBox {
+    opacity: 0;
+}
+
+div#LSPDGearCEFBox {
+    display: none;
+}
+
+div#LSPDCarCEFBox,
+div#LSPDGearCEFBox {
+    width: 650px;
+    height: 425px;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background: linear-gradient( 0deg, rgb(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+div#LSPDCarCEFBox>p.title,
+div#LSPDGearCEFBox>p.title {
+    font-size: 20px;
+    font-family: PEL;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background-color: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2px;
+}
+
+div#LSPDCarCEFBox>p.description,
+div#LSPDGearCEFBox>p.description {
+    color: #d2d2d2;
+    font-size: 14px;
+    font-family: PEL;
+}
+
+div#LSPDCarCEFBox>ul.list-group,
+div#LSPDGearCEFBox>ul.list-group {
+    background: transparent;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+div#LSPDCarCEFBox>ul.list-group::-webkit-scrollbar,
+div#LSPDGearCEFBox>ul.list-group::-webkit-scrollbar {
+    display: none;
+}
+
+div#LSPDCarCEFBox>ul.list-group>li.list-group-item,
+div#LSPDGearCEFBox>ul.list-group>li.list-group-item {
+    background: rgba(0, 0, 0, 0.267);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    padding-top: 25px;
+    transition: all 0.3s;
+    filter: grayscale(1);
+}
+
+div#LSPDCarCEFBox>ul.list-group>li.list-group-item:hover,
+div#LSPDGearCEFBox>ul.list-group>li.list-group-item:hover {
+    cursor: pointer;
+    filter: grayscale(0);
+}
+
+div#LSPDCarCEFBox>ul.list-group>li.list-group-item>p.title,
+div#LSPDGearCEFBox>ul.list-group>li.list-group-item>p.title {
+    background-image: linear-gradient(to right, #36E969, #36E969);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: PEL;
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-bottom: -40;
+}
+
+div#LSPDGearCEFBox>ul.list-group>li.list-group-item>p.desc {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: -40;
+}
+
+div#LSPDCarCEFBox>ul.list-group>li.list-group-item>p.veh,
+div#LSPDGearCEFBox>ul.list-group>li.list-group-item>p.veh {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+div#LSPDCarCEFBox>p.closebtn,
+div#LSPDGearCEFBox>p.closebtn {
+    display: table;
+    color: red;
+    text-align: left;
+    position: absolute;
+    margin-left: -25px;
+    margin-top: -20px;
+    padding-left: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 14px;
+    transition: all 0.5s ease-in-out;
+    font-size: 14px;
+}
+
+
+/*LSPD-END*/

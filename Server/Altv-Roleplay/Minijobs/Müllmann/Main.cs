@@ -8,8 +8,10 @@ using Altv_Roleplay.Model;
 using Altv_Roleplay.models;
 using Altv_Roleplay.Utils;
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Altv_Roleplay.Minijobs.Müllmann
@@ -239,8 +241,7 @@ namespace Altv_Roleplay.Minijobs.Müllmann
                         if (veh == null || !veh.Exists) continue;
                         if (veh.Position.IsInRange(Constants.Positions.Minijob_Müllmann_VehOutPos, 5f)) { HUDHandler.SendNotification(player, 3, 2500, "Der Ausparkpunkt ist belegt."); return; }
                     }
-                    int serialNumber = new Random().Next(1, 10000);
-                    ServerVehicles.CreateVehicle(3039269212, charId, 2, 0, false, 0, Constants.Positions.Minijob_Müllmann_VehOutPos, Constants.Positions.Minijob_Müllmann_VehOutRot, $"MM-{charId}", 255, 255, 255, 0, serialNumber);
+                    ServerVehicles.CreateVehicle(3039269212, charId, 2, 0, false, 0, Constants.Positions.Minijob_Müllmann_VehOutPos, Constants.Positions.Minijob_Müllmann_VehOutRot, $"MM-{charId}", 255, 255, 255);
                     var generatorId = new Random();
                     int routeId = generatorId.Next(1, Model.GetMinijobGarbageMaxRoutes());
                     player.SetPlayerCurrentMinijob("Müllmann");

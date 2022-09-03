@@ -14,6 +14,5 @@ namespace Altv_Roleplay.models
         public string animName { get; set; }
         public int animFlag { get; set; }
         public int duration { get; set; }
-        public int category { get; set; }
     }
 }

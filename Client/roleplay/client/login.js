@@ -223,15 +223,21 @@ alt.on('connectionComplete', () => {
     alt.setStat('stealth_ability', 100);
 });
 
+function loadIPL(iplName) {
+    alt.requestIpl(iplName);
+}
+
 function loadallIPLsAndInteriors() {
     // CASINO
     alt.requestIpl('vw_casino_penthouse');
-    alt.requestIpl('hei_dlc_windows_casino');
-    alt.requestIpl('vw_casino_carpark');
-    alt.requestIpl('vw_casino_garage');
     alt.requestIpl('vw_casino_main');
+    alt.requestIpl('vw_casino_carpark');
+    alt.requestIpl('vw_dlc_casino_door');
+    alt.requestIpl('vw_casino_door');
     alt.requestIpl('hei_dlc_windows_casino');
     alt.requestIpl('hei_dlc_casino_door');
+    alt.requestIpl('hei_dlc_casino_aircon');
+    alt.requestIpl('vw_casino_garage');
 
     // CLOSE OPEN DOORS
     game.doorControl(3687927243, -1149.709, -1521.088, 10.78267, true, 0.0, 50.0, 0.0); // VESPUCCI HOUSE
@@ -246,6 +252,18 @@ function loadallIPLsAndInteriors() {
     game.doorControl(308207762, 7.518359, 539.5268, 176.17764, true, 0.0, 50.0, 0.0); // FRANKLIN'S NEW HOUSE
     game.doorControl(1145337974, 1273.8154, -1720.6969, 54.92143, true, 0.0, 50.0, 0.0); // LESTER'S HOUSE
     game.doorControl(132154435, 1972.769, 3815.366, 33.663258, true, 0.0, 50.0, 0.0); // TREVOR'S HOUSE
+    game.doorControl(1504256620, 1395.97, 1141.87, 113.87, true, 0.0, 50.0, 0.0); // Rancho
+    game.doorControl(262671971, 1395.97, 1141.20, 113.95, true, 0.0, 50.0, 0.0); // Rancho
+    game.doorControl(4242392177, 1408.14, 1165.46, 113.90, true, 0.0, 50.0, 0.0); // Rancho
+    game.doorControl(3262795659, 1408.14, 1164.23, 113.80, true, 0.0, 50.0, 0.0); // Rancho
+    game.doorControl(4242392177, 1408.14, 1160.72, 113.90, true, 0.0, 50.0, 0.0); // Rancho
+    game.doorControl(3262795659, 1408.13, 1159.44, 113.77, true, 0.0, 50.0, 0.0); // Rancho
+    game.doorControl(3262795659, 1390.44, 1161.74, 113.86, true, 0.0, 50.0, 0.0); // Rancho
+    game.doorControl(4242392177, 1390.45, 1162.88, 113.85, true, 0.0, 50.0, 0.0); // Rancho
+    game.doorControl(3262795659, 1390.69, 1131.59, 113.67, true, 0.0, 50.0, 0.0); // Rancho
+    game.doorControl(4242392177, 1390.69, 1132.70, 113.77, true, 0.0, 50.0, 0.0); // Rancho
+    game.doorControl(3262795659, 1401.12, 1128.33, 113.68, true, 0.0, 50.0, 0.0); // Rancho
+    game.doorControl(4242392177, 1399.89, 1128.34, 113.93, true, 0.0, 50.0, 0.0); // Rancho
 
     // REQUEST
     //apartments
@@ -344,11 +362,10 @@ function loadallIPLsAndInteriors() {
     alt.requestIpl('lr_cs6_08_grave_closed');
     alt.requestIpl('methtrailer_grp1');
     alt.requestIpl('bkr_bi_hw1_13_int');
-    //Pillbox Hill Hospital
-    alt.requestIpl("rc12b_default");
-    alt.requestIpl("rc12b_hospitalinterior");
-    alt.requestIpl("rc12b_hospitalinterior_lod");
-    alt.requestIpl("rc12b_destroyed");
+    alt.requestIpl("rc12b_default"); //Pillbox Hill Hospital
+    alt.requestIpl("rc12b_hospitalinterior"); //Pillbox Hill Hospital
+    alt.requestIpl("rc12b_hospitalinterior_lod"); //Pillbox Hill Hospital
+    alt.requestIpl("rc12b_destroyed"); //Pillbox Hill Hospital
 
     alt.requestIpl('BH1_47_JoshHse_UnBurnt');
     alt.requestIpl('bh1_47_joshhse_unburnt_lod');
@@ -394,182 +411,77 @@ function loadallIPLsAndInteriors() {
     // REMOVE
     alt.removeIpl('CS3_07_MPGates');
 
-    //Security DLC
-    alt.requestIpl('sf_int_placement_sec_interior_7_dlc_warehouse_sec_milo_')
-    alt.requestIpl('sf_int_placement_sec_interior_0_dlc_office_sec_milo_')
-    alt.requestIpl('sf_int_placement_sec_interior_1_dlc_studio_sec_milo_')
-    alt.requestIpl('sf_int_placement_sec_interior_2_dlc_garage_sec_milo_')
-    alt.requestIpl('sf_plaque_kt1_08')
-    alt.requestIpl('sf_plaque_kt1_05')
-    alt.requestIpl('sf_plaque_hw1_08')
-    alt.requestIpl('sf_plaque_bh1_05')
-    alt.requestIpl('sf_phones')
-    alt.requestIpl('sf_musicrooftop')
-    alt.requestIpl('sf_mansionroof')
-    alt.requestIpl('sf_franklin')
-    alt.requestIpl('sf_billboards')
-    alt.requestIpl('sf_heli_crater')
-    alt.requestIpl('sf_yacht_02_int')
-    alt.requestIpl('sf_yacht_02')
-    alt.requestIpl('sf_yacht_01_int')
-    alt.requestIpl('sf_yacht_01')
-    alt.requestIpl('sf_fixeroffice_kt1_08')
-    alt.requestIpl('sf_fixeroffice_kt1_05')
-    alt.requestIpl('sf_fixeroffice_hw1_08')
-    alt.requestIpl('sf_fixeroffice_bh1_05')
-    alt.requestIpl('sf_dlc_fixer_hanger_door')
-
-    //COKE-LAB
-    let CocaineInteriorID = game.getInteriorAtCoords(1093.6, -3196.6, -38.99841);
-    if (game.isValidInterior(CocaineInteriorID)) {
-        alt.requestIpl('bkr_biker_interior_placement_interior_4_biker_dlc_int_ware03_milo');
-        game.activateInteriorEntitySet(CocaineInteriorID, "set_up");
-        game.activateInteriorEntitySet(CocaineInteriorID, "equipment_upgrade");
-        game.activateInteriorEntitySet(CocaineInteriorID, "coke_press_upgrade");
-        game.activateInteriorEntitySet(CocaineInteriorID, "production_upgrade");
-        game.activateInteriorEntitySet(CocaineInteriorID, "table_equipment_upgrade");
-        game.activateInteriorEntitySet(CocaineInteriorID, "security_high");
-        game.activateInteriorEntitySet(CocaineInteriorID, "coke_cut_04");
-        game.activateInteriorEntitySet(CocaineInteriorID, "coke_cut_05");
-        game.refreshInterior(CocaineInteriorID);
-    }
-    //WEED-LAB
-    let WeedInteriorID = game.getInteriorAtCoords(1051.491, -3196.536, -39.14842);
-    if (game.isValidInterior(WeedInteriorID)) {
-        alt.requestIpl('bkr_biker_interior_placement_interior_3_biker_dlc_int_ware02_milo');
-        game.activateInteriorEntitySet(WeedInteriorID, "weed_upgrade_equip");
-        game.activateInteriorEntitySet(WeedInteriorID, "weed_security_upgrade");
-        game.activateInteriorEntitySet(WeedInteriorID, "light_growtha_stage23_upgrade");
-        game.activateInteriorEntitySet(WeedInteriorID, "weed_hosea");
-        game.activateInteriorEntitySet(WeedInteriorID, "light_growthb_stage23_upgrade");
-        game.activateInteriorEntitySet(WeedInteriorID, "weed_hoseb");
-        game.activateInteriorEntitySet(WeedInteriorID, "light_growthc_stage23_upgrade");
-        game.activateInteriorEntitySet(WeedInteriorID, "weed_hosec");
-        game.activateInteriorEntitySet(WeedInteriorID, "light_growthd_stage23_upgrade");
-        game.activateInteriorEntitySet(WeedInteriorID, "weed_hosed");
-        game.activateInteriorEntitySet(WeedInteriorID, "light_growthe_stage23_upgrade");
-        game.activateInteriorEntitySet(WeedInteriorID, "weed_hosee");
-        game.activateInteriorEntitySet(WeedInteriorID, "light_growthf_stage23_upgrade");
-        game.activateInteriorEntitySet(WeedInteriorID, "weed_hosef");
-        game.activateInteriorEntitySet(WeedInteriorID, "light_growthg_stage23_upgrade");
-        game.activateInteriorEntitySet(WeedInteriorID, "weed_hoseg");
-        game.activateInteriorEntitySet(WeedInteriorID, "light_growthh_stage23_upgrade");
-        game.activateInteriorEntitySet(WeedInteriorID, "weed_hoseh");
-        game.activateInteriorEntitySet(WeedInteriorID, "light_growthi_stage23_upgrade");
-        game.activateInteriorEntitySet(WeedInteriorID, "weed_hosei");
-        game.activateInteriorEntitySet(WeedInteriorID, "weed_set_up");
-        game.activateInteriorEntitySet(WeedInteriorID, "weed_drying");
-        game.activateInteriorEntitySet(WeedInteriorID, "weed_chairs");
-        game.activateInteriorEntitySet(WeedInteriorID, "weed_production");
-        game.refreshInterior(WeedInteriorID);
-    }
-
-    //METH-LAB
-    let MethInteriorID = game.getInteriorAtCoords(1009.5, -3196.6, -38.99682);
-    if (game.isValidInterior(MethInteriorID)) {
-        alt.requestIpl('bkr_biker_interior_placement_interior_2_biker_dlc_int_ware01_milo');
-        game.activateInteriorEntitySet(MethInteriorID, "meth_lab_setup");
-        game.activateInteriorEntitySet(MethInteriorID, "meth_lab_upgrade");
-        game.activateInteriorEntitySet(MethInteriorID, "meth_lab_security_high");
-        game.activateInteriorEntitySet(MethInteriorID, "meth_lab_production");
-        game.refreshInterior(MethInteriorID);
-    }
-
-    //BikerDocumentForgery
-    let BikerDocumentForgery = game.getInteriorAtCoords(1165, -3196.6, -39.01306);
-    if (game.isValidInterior(BikerDocumentForgery)) {
-        alt.requestIpl('bkr_biker_interior_placement_interior_6_biker_dlc_int_ware05_milo');
-        game.activateInteriorEntitySet(BikerDocumentForgery, "interior_upgrade");
-        game.activateInteriorEntitySet(BikerDocumentForgery, "equipment_upgrade");
-        game.activateInteriorEntitySet(BikerDocumentForgery, "security_high");
-        game.activateInteriorEntitySet(BikerDocumentForgery, "chair01");
-        game.activateInteriorEntitySet(BikerDocumentForgery, "chair02");
-        game.activateInteriorEntitySet(BikerDocumentForgery, "chair03");
-        game.activateInteriorEntitySet(BikerDocumentForgery, "chair04");
-        game.activateInteriorEntitySet(BikerDocumentForgery, "chair05");
-        game.activateInteriorEntitySet(BikerDocumentForgery, "chair06");
-        game.activateInteriorEntitySet(BikerDocumentForgery, "chair07");
-        game.activateInteriorEntitySet(BikerDocumentForgery, "production");
-        game.activateInteriorEntitySet(BikerDocumentForgery, "set_up");
-        game.activateInteriorEntitySet(BikerDocumentForgery, "clutter");
-        game.refreshInterior(BikerDocumentForgery);
-    }
-
-    //ClubHaus1
-    let ClubHaus1 = game.getInteriorAtCoords(1107.04, -3157.399, -37.51859);
-    if (game.isValidInterior(ClubHaus1)) {
-        alt.requestIpl('bkr_biker_interior_placement_interior_0_biker_dlc_int_01_milo');
-        game.activateInteriorEntitySet(ClubHaus1, "walls_02");
-        game.activateInteriorEntitySet(ClubHaus1, "furnishings_02");
-        game.activateInteriorEntitySet(ClubHaus1, "decorative_02");
-        game.activateInteriorEntitySet(ClubHaus1, "mural_07");
-        game.activateInteriorEntitySet(ClubHaus1, "no_gun_locker");
-        game.activateInteriorEntitySet(ClubHaus1, "mod_booth");
-        game.activateInteriorEntitySet(ClubHaus1, "id_stash1");
-        game.activateInteriorEntitySet(ClubHaus1, "id_stash2");
-        game.activateInteriorEntitySet(ClubHaus1, "id_stash3");
-        game.refreshInterior(ClubHaus1);
-    }
-
-    //ClubHaus2
-    let ClubHaus2 = game.getInteriorAtCoords(998.4809, -3164.711, -38.90733);
-    if (game.isValidInterior(ClubHaus2)) {
-        alt.requestIpl('bkr_biker_interior_placement_interior_1_biker_dlc_int_02_milo');
-        game.activateInteriorEntitySet(ClubHaus2, "walls_01");
-        game.activateInteriorEntitySet(ClubHaus2, "lower_walls_default");
-        game.activateInteriorEntitySet(ClubHaus2, "furnishings_01");
-        game.activateInteriorEntitySet(ClubHaus2, "decorative_02");
-        game.activateInteriorEntitySet(ClubHaus2, "mural_09");
-        game.activateInteriorEntitySet(ClubHaus2, "gun_locker");
-        game.activateInteriorEntitySet(ClubHaus2, "mod_booth");
-        game.refreshInterior(ClubHaus2);
-    }
-
-    //Doomsday
-    let Doomsday = game.getInteriorAtCoords(345.00000000, 4842.00000000, -60.00000000);
-    if (game.isValidInterior(Doomsday)) {
-        alt.requestIpl('xm_x17dlc_int_placement_interior_33_x17dlc_int_02_milo_');
-        game.activateInteriorEntitySet(Doomsday, "set_int_02_decal_01");
-        game.activateInteriorEntitySet(Doomsday, "set_int_02_shell");
-        game.activateInteriorEntitySet(Doomsday, "set_int_02_lounge3");
-        game.activateInteriorEntitySet(Doomsday, "set_int_02_sleep3");
-        game.activateInteriorEntitySet(Doomsday, "set_int_02_security");
-        game.activateInteriorEntitySet(Doomsday, "set_int_02_cannon");
-        game.activateInteriorEntitySet(Doomsday, "Set_Int_02_outfit_serverfarm");
-        game.activateInteriorEntitySet(Doomsday, "Set_Int_02_outfit_iaa");
-        game.activateInteriorEntitySet(Doomsday, "set_int_02_trophy_iaa");
-        game.activateInteriorEntitySet(Doomsday, "set_int_02_trophy_sub");
-        game.refreshInterior(Doomsday);
-    }
-
-    //CasPent
-    let CasPent = game.getInteriorAtCoords(976.636, 70.295, 115.164);
-    if (game.isValidInterior(CasPent)) {
-        alt.requestIpl('vw_casino_penthouse');
-        game.activateInteriorEntitySet(CasPent, "Set_Pent_Tint_Shell");
-        game.activateInteriorEntitySet(CasPent, "Set_Pent_Pattern_01");
-        game.activateInteriorEntitySet(CasPent, "Set_Pent_Spa_Bar_Open");
-        game.activateInteriorEntitySet(CasPent, "Set_Pent_Media_Bar_Open");
-        game.activateInteriorEntitySet(CasPent, "Set_Pent_Dealer");
-        game.activateInteriorEntitySet(CasPent, "Set_Pent_Arcade_Modern");
-        game.activateInteriorEntitySet(CasPent, "Set_Pent_Bar_Clutter");
-        game.activateInteriorEntitySet(CasPent, "Set_Pent_Clutter_01");
-        game.activateInteriorEntitySet(CasPent, "Set_Pent_Clutter_02");
-        game.activateInteriorEntitySet(CasPent, "Set_Pent_Clutter_03");
-        game.activateInteriorEntitySet(CasPent, "set_pent_bar_party_1");
-        game.refreshInterior(CasPent);
-    }
-
-    //YACHT
-    alt.requestIpl("apa_yacht_grp12_3");
-    alt.requestIpl("apa_yacht_grp12_3_int");
-    alt.requestIpl("apa_yacht_grp12_3_lod");
+    //COCAINE-LAB
     alt.removeIpl("apa_yacht_grp12_1");
     alt.removeIpl("apa_yacht_grp12_1_int");
     alt.removeIpl("apa_yacht_grp12_1_lod");
     alt.removeIpl("apa_yacht_grp12_2");
     alt.removeIpl("apa_yacht_grp12_2_int");
     alt.removeIpl("apa_yacht_grp12_2_lod");
+    alt.requestIpl("apa_yacht_grp12_3");
+    alt.requestIpl("apa_yacht_grp12_3_int");
+    alt.requestIpl("apa_yacht_grp12_3_lod");
+    alt.removeIpl("apa_ch2_superyacht");
+
+    //STORAGE
+    let StorageInteriorID = game.getInteriorAtCoords(1093.6, -3196.6, -38.99841);
+    if (game.isValidInterior(StorageInteriorID)) {
+        game.activateInteriorEntitySet(StorageInteriorID, "security_high");
+        game.activateInteriorEntitySet(StorageInteriorID, "production_upgrade");
+        game.activateInteriorEntitySet(StorageInteriorID, "equipment_upgrade");
+        game.refreshInterior(StorageInteriorID);
+    }
+
+    //COKE-LAB
+    let CocaineInteriorID = game.getInteriorAtCoords(1094.988, -3101.776, -39.00363);
+    if (game.isValidInterior(CocaineInteriorID)) {
+        game.activateInteriorEntitySet(CocaineInteriorID, "security_high");
+        game.activateInteriorEntitySet(CocaineInteriorID, "equipment_basic");
+        game.activateInteriorEntitySet(CocaineInteriorID, "equipment_upgrade");
+        game.activateInteriorEntitySet(CocaineInteriorID, "production_upgrade");
+        game.activateInteriorEntitySet(CocaineInteriorID, "table_equipment_upgrade");
+        game.activateInteriorEntitySet(CocaineInteriorID, "coke_press_upgrade");
+        game.activateInteriorEntitySet(CocaineInteriorID, "coke_cut_01");
+        game.activateInteriorEntitySet(CocaineInteriorID, "coke_cut_02");
+        game.activateInteriorEntitySet(CocaineInteriorID, "coke_cut_03");
+        game.activateInteriorEntitySet(CocaineInteriorID, "coke_cut_04");
+        game.activateInteriorEntitySet(CocaineInteriorID, "coke_cut_05");
+        game.refreshInterior(CocaineInteriorID);
+    }
+
+    //METH-LAB
+    alt.requestIpl("bkr_biker_interior_placement_interior_2_biker_dlc_int_ware01_milo");
+    let MethInteriorID = game.getInteriorAtCoords(1009.5, -3196.6, -38.99682);
+    if (game.isValidInterior(MethInteriorID)) {
+        game.activateInteriorEntitySet(MethInteriorID, "meth_lab_security_high");
+        game.activateInteriorEntitySet(MethInteriorID, "meth_lab_upgrade");
+        game.refreshInterior(MethInteriorID);
+    }
+
+    //BUNKER
+    let BunkerInteriorID = game.getInteriorAtCoords(899.5518, -3246.038, -98.04907);
+    if (game.isValidInterior(BunkerInteriorID)) {
+        game.activateInteriorEntitySet(BunkerInteriorID, "Bunker_Style_C");
+        game.activateInteriorEntitySet(BunkerInteriorID, "upgrade_bunker_set");
+        game.activateInteriorEntitySet(BunkerInteriorID, "security_upgrade");
+        game.activateInteriorEntitySet(BunkerInteriorID, "Office_Upgrade_set");
+        game.activateInteriorEntitySet(BunkerInteriorID, "gun_wall_blocker");
+        game.activateInteriorEntitySet(BunkerInteriorID, "gun_range_lights");
+        game.activateInteriorEntitySet(BunkerInteriorID, "gun_locker_upgrade");
+        game.activateInteriorEntitySet(BunkerInteriorID, "Gun_schematic_set");
+        game.refreshInterior(BunkerInteriorID);
+    }
+
+    //YACHT
+    alt.removeIpl("apa_yacht_grp12_1");
+    alt.removeIpl("apa_yacht_grp12_1_int");
+    alt.removeIpl("apa_yacht_grp12_1_lod");
+    alt.removeIpl("apa_yacht_grp12_2");
+    alt.removeIpl("apa_yacht_grp12_2_int");
+    alt.removeIpl("apa_yacht_grp12_2_lod");
+    alt.requestIpl("apa_yacht_grp12_3");
+    alt.requestIpl("apa_yacht_grp12_3_int");
+    alt.requestIpl("apa_yacht_grp12_3_lod");
     alt.removeIpl("apa_ch2_superyacht");
     alt.removeIpl('smboat');
     alt.removeIpl('smboat_lod');
@@ -585,6 +497,72 @@ function loadallIPLsAndInteriors() {
         game.refreshInterior(YachtInteriorID);
     }
 
+    var nightClubGalaxyIntId = game.getInteriorAtCoords(345.4899597168, 294.95315551758, 98.191421508789); //Galaxy Nightclub
+    //120834 Galaxy InteriorId
+    game.pinInteriorInMemory(nightClubGalaxyIntId);
+    game.activateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_security_upgrade"); //Galaxy Nightclub
+    game.activateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_equipment_setup"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_Style01"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_Style02"); //Galaxy Nightclub
+    game.activateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_Style03"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_style01_podium"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_style02_podium"); //Galaxy Nightclub
+    game.activateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_style03_podium"); //Galaxy Nightclub
+    game.activateInteriorEntitySet(nightClubGalaxyIntId, "int01_ba_lights_screen"); //Galaxy Nightclub
+    game.activateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_Screen"); //Galaxy Nightclub
+    game.activateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_bar_content"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_booze_01"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_booze_02"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_booze_03"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_dj01"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_dj02"); //Galaxy Nightclub
+    game.activateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_dj03"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_dj04"); //Galaxy Nightclub
+    game.activateInteriorEntitySet(nightClubGalaxyIntId, "DJ_01_Lights_01"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "DJ_01_Lights_02"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "DJ_01_Lights_03"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "DJ_01_Lights_04"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "DJ_02_Lights_01"); //Galaxy Nightclub
+    game.activateInteriorEntitySet(nightClubGalaxyIntId, "DJ_02_Lights_02"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "DJ_02_Lights_03"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "DJ_02_Lights_04"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "DJ_03_Lights_01"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "DJ_03_Lights_02"); //Galaxy Nightclub
+    game.activateInteriorEntitySet(nightClubGalaxyIntId, "DJ_03_Lights_03"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "DJ_03_Lights_04"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "DJ_04_Lights_01"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "DJ_04_Lights_02"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "DJ_04_Lights_03"); //Galaxy Nightclub
+    game.activateInteriorEntitySet(nightClubGalaxyIntId, "DJ_04_Lights_04"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "light_rigs_off"); //Galaxy Nightclub
+    game.activateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_lightgrid_01"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_Clutter"); //Galaxy Nightclub
+    game.activateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_equipment_upgrade"); //Galaxy Nightclub
+    game.activateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_clubname_01"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_clubname_02"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_clubname_03"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_clubname_04"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_clubname_05"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_clubname_06"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_clubname_07"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_clubname_08"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_clubname_09"); //Galaxy Nightclub
+    game.activateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_dry_ice"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_deliverytruck"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_trophy04"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_trophy05"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_trophy07"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_trophy09"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_trophy08"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_trophy11"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_trophy10"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_trophy03"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_trophy01"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_trophy02"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_trad_lights"); //Galaxy Nightclub
+    game.deactivateInteriorEntitySet(nightClubGalaxyIntId, "Int01_ba_Worklamps"); //Galaxy Nightclub
+    game.refreshInterior(nightClubGalaxyIntId); //Galaxy Nightclub
+
     let TunerInteriorID = game.getInteriorAtCoords(810.46170000, -962.07540000, 25.30295000);
     if (game.isValidInterior(TunerInteriorID)) {
 
@@ -593,13 +571,13 @@ function loadallIPLsAndInteriors() {
         game.setInteriorEntitySetColor(TunerInteriorID, "entity_set_style_7", 9);
         game.setInteriorEntitySetColor(TunerInteriorID, "entity_set_style_7", 9);
 
-        game.activateInteriorEntitySet(TunerInteriorID, "entity_set_style_1"); // Default Design
+        game.deactivateInteriorEntitySet(TunerInteriorID, "entity_set_style_1"); // Default Design
         game.deactivateInteriorEntitySet(TunerInteriorID, "entity_set_style_2"); // White Design
         game.deactivateInteriorEntitySet(TunerInteriorID, "entity_set_style_3"); // Dark Design
         game.deactivateInteriorEntitySet(TunerInteriorID, "entity_set_style_4"); // Concrete Design
         game.deactivateInteriorEntitySet(TunerInteriorID, "entity_set_style_5"); // Home Design
         game.deactivateInteriorEntitySet(TunerInteriorID, "entity_set_style_6"); // Street Design
-        game.deactivateInteriorEntitySet(TunerInteriorID, "entity_set_style_7"); // Japan Design
+        game.activateInteriorEntitySet(TunerInteriorID, "entity_set_style_7"); // Japan Design
         game.deactivateInteriorEntitySet(TunerInteriorID, "entity_set_style_8"); // Color Design
         game.deactivateInteriorEntitySet(TunerInteriorID, "entity_set_style_9"); // Race Design
 

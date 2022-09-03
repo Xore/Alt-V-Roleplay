@@ -1,4 +1,8 @@
-﻿using AltV.Net;
+﻿using System;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using AltV.Net;
 using AltV.Net.Async;
 using AltV.Net.Data;
 using AltV.Net.Elements.Entities;
@@ -6,9 +10,7 @@ using Altv_Roleplay.Factories;
 using Altv_Roleplay.Model;
 using Altv_Roleplay.models;
 using Altv_Roleplay.Utils;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Altv_Roleplay.Handler
 {
@@ -25,6 +27,12 @@ namespace Altv_Roleplay.Handler
 
                 if (charId <= 0) return;
 
+                /*if (shop.type == 1) //ToDo if shop type 1 then stock unlimited weeeeeeeeeeeee
+                { 
+                    HUDHandler.SendNotification(player, 3, 2500, "Kein Zugriff [1]"); 
+                    return; 
+                }*/
+
                 if (shop.faction > 0 && shop.faction != 0)
                 {
                     if (!ServerFactions.IsCharacterInAnyFaction(charId))
@@ -39,22 +47,10 @@ namespace Altv_Roleplay.Handler
                     }
                 }
 
-                if (shop.closed == 1)
-                {
-                    HUDHandler.SendNotification(player, 3, 2500, $"Sorry wir haben Geschlossen!");
-                    return;
-                }
-
-                if (shop.stateClosed == 1)
-                {
-                    HUDHandler.SendNotification(player, 3, 2500, $"Sorry unser Shop wurde Zwangs Geschlossen!");
-                    return;
-                }
-
                 if (shop.neededLicense != "None" && !CharactersLicenses.HasCharacterLicense(charId, shop.neededLicense))
                 {
                     HUDHandler.SendNotification(player, 3, 2500, $"Du hast hier keinen Zugriff drauf.");
-                    allowed = false;
+                        allowed = false;
                     return;
                 }
 
@@ -99,9 +95,9 @@ namespace Altv_Roleplay.Handler
 
 
                 if (ServerShops.GetShopItemAmount(shopId, itemName) < itemAmount) { HUDHandler.SendNotification(player, 3, 2500, $"Soviele Gegenstände hat der Shop nicht auf Lager."); return; }
-                if (invWeight + itemWeight > 5f && backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId))) { HUDHandler.SendNotification(player, 3, 2500, $"Du hast nicht genug Platz in deinen Taschen."); return; }
+                if (invWeight + itemWeight > 15f && backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId))) { HUDHandler.SendNotification(player, 3, 2500, $"Du hast nicht genug Platz in deinen Taschen."); return; }
 
-                if (invWeight + itemWeight <= 5f)
+                if (invWeight + itemWeight <= 15f)
                 {
                     if (!CharactersInventory.ExistCharacterItem(charId, "Bargeld", "brieftasche") || CharactersInventory.GetCharacterItemAmount(charId, "Bargeld", "brieftasche") < itemPrice)
                     {
@@ -232,14 +228,6 @@ namespace Altv_Roleplay.Handler
                 if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 2500, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
                 int charId = User.GetPlayerOnline(player);
                 if (charId <= 0) return;
-
-                int shopClosed = ServerShops.GetShopStateClosed(shopId);
-                if (shopClosed == 1)
-                {
-                    HUDHandler.SendNotification(player, 3, 2500, $"Dein Shop wurde Zwangs Geschlossen! Wende dich an die Justiz");
-                    return;
-                }
-
                 await HelperEvents.ClientEvent_setCefStatus(player, true);
                 string shopItems = ServerShops.GetShopItems(shopId);
                 string inventoryItems = CharactersInventory.CharacterInventoryItems(charId);
@@ -323,7 +311,7 @@ namespace Altv_Roleplay.Handler
                 float itemWeight = ServerItems.GetItemWeight(itemName) * itemAmount;
                 float invWeight = CharactersInventory.GetCharacterItemWeight(charId, "inventory");
                 float backpackWeight = CharactersInventory.GetCharacterItemWeight(charId, "backpack");
-                if (invWeight + itemWeight > 5f && backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId))) { HUDHandler.SendNotification(player, 3, 2500, $"Du hast nicht genug Platz in deinen Taschen."); return; }
+                if (invWeight + itemWeight > 15f && backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId))) { HUDHandler.SendNotification(player, 3, 2500, $"Du hast nicht genug Platz in deinen Taschen."); return; }
                 ServerShops.RemoveShopItemAmount(shopId, itemName, itemAmount);
                 if (itemName.Contains("Bargeld"))
                 {
@@ -355,7 +343,7 @@ namespace Altv_Roleplay.Handler
                     CharactersInventory.AddCharacterItem(charId, itemName, itemAmount, "schluessel");
                     return;
                 }
-                else if (invWeight + itemWeight <= 5f)
+                else if (invWeight + itemWeight <= 15f)
                 {
                     HUDHandler.SendNotification(player, 1, 2500, $"Du hast {itemAmount}x {itemName} aus dem Shop-Lager genommen.");
                     CharactersInventory.AddCharacterItem(charId, itemName, itemAmount, "inventory");
@@ -385,55 +373,14 @@ namespace Altv_Roleplay.Handler
                 if (charid == 0) return;
                 var shopMoney = ServerShops.GetShopBankMoney(shopId);
 
+                // egal trotzdem bleibt des amk willst maybe hoch kommen kurz= xDomm doch runter amk
                 if (shopMoney <= 0) { HUDHandler.SendNotification(player, 3, 2500, "Soviel Geld ist nicht in der Kasse."); return; }
 
                 ServerShops.SetShopBankMoney(shopId, shopMoney - shopMoney);
                 CharactersInventory.AddCharacterItem(charid, "Bargeld", shopMoney, "brieftasche");
-                HUDHandler.SendNotification(player, 2, 2500, $"Du hast erfolgreich {shopMoney}$ vom Konto abgebucht.");
+                HUDHandler.SendNotification(player, 2, 2500, $"Du hast erfolgreich {shopMoney}$ vom Fraktionskonto abgebucht.");
                 return;
-
-            }
-            catch (Exception e)
-            {
-                Alt.Log($"{e}");
-            }
-        }
-
-        [AsyncClientEvent("Server:Shop:CloseShop1")] //To-Do
-        public void CloseShop1(IPlayer player, int shopId)
-        {
-            try
-            {
-                if (player == null || !player.Exists || shopId <= 0) return;
-                int charid = User.GetPlayerOnline(player);
-                if (charid == 0) return;
-
-                ServerShops.SetShopClosed(shopId);
-
-                HUDHandler.SendNotification(player, 2, 2500, $"Shop wurde Geschlossen.");
-                return;
-
-            }
-            catch (Exception e)
-            {
-                Alt.Log($"{e}");
-            }
-        }
-
-        [AsyncClientEvent("Server:Shop:OpenShop1")] //To-Do
-        public void OpenShop1(IPlayer player, int shopId)
-        {
-            try
-            {
-                if (player == null || !player.Exists || shopId <= 0) return;
-                int charid = User.GetPlayerOnline(player);
-                if (charid == 0) return;
-
-                ServerShops.SetShopOpen(shopId);
-
-                HUDHandler.SendNotification(player, 2, 2500, $"Shop wurde Geöffnet.");
-                return;
-
+                
             }
             catch (Exception e)
             {
@@ -548,7 +495,6 @@ namespace Altv_Roleplay.Handler
             {
                 if (player == null || !player.Exists || shopid <= 0 || hash == "") return;
                 long fHash = Convert.ToInt64(hash);
-                int vehClass = ServerVehicles.VehicleClass(fHash);
                 int charId = User.GetPlayerOnline(player);
                 if (charId == 0 || fHash == 0) return;
                 int Price = ServerVehicleShops.GetVehicleShopPrice(shopid, fHash);
@@ -558,91 +504,61 @@ namespace Altv_Roleplay.Handler
                 foreach (IVehicle veh in Alt.GetAllVehicles().ToList()) { if (veh.Position.IsInRange(ParkOut, 2f)) { PlaceFree = false; break; } }
                 if (!PlaceFree) { HUDHandler.SendNotification(player, 3, 2500, $"Der Ausladepunkt ist belegt."); return; }
                 int rnd = new Random().Next(100000, 999999);
-                int serialNumber = new Random().Next(1, 10000);
                 if (ServerVehicles.ExistServerVehiclePlate($"LS{rnd}")) { BuyVehicle(player, shopid, hash); return; }
                 if (!CharactersInventory.ExistCharacterItem(charId, "Bargeld", "brieftasche") || CharactersInventory.GetCharacterItemAmount(charId, "Bargeld", "brieftasche") < Price) { HUDHandler.SendNotification(player, 3, 2500, $"Du hast nicht genügend Bargeld dabei ({Price}$)."); return; }
                 CharactersInventory.RemoveCharacterItemAmount(charId, "Bargeld", Price, "brieftasche");
                 if (shopid == 1)
                 {
-                    ServerVehicles.CreateVehicle(fHash, charId, 0, 2, false, 8, ParkOut, RotOut, $"LSPD", 255, 255, 255, vehClass, serialNumber);
+                    ServerVehicles.CreateVehicle(fHash, charId, 0, 2, false, 8, ParkOut, RotOut, $"LSPD", 255, 255, 255);
                 }
                 else if (shopid == 2)
                 {
-                    ServerVehicles.CreateVehicle(fHash, charId, 0, 2, false, 9, ParkOut, RotOut, $"LSPD", 255, 255, 255, vehClass, serialNumber);
+                    ServerVehicles.CreateVehicle(fHash, charId, 0, 2, false, 9, ParkOut, RotOut, $"LSPD", 255, 255, 255);
                 }
                 else if (shopid == 4)
                 {
-                    ServerVehicles.CreateVehicle(fHash, charId, 0, 3, false, 16, ParkOut, RotOut, $"LSFD", 255, 255, 255, vehClass, serialNumber);
+                    ServerVehicles.CreateVehicle(fHash, charId, 0, 3, false, 16, ParkOut, RotOut, $"LSFD", 255, 255, 255);
                 }
                 else if (shopid == 5)
                 {
-                    ServerVehicles.CreateVehicle(fHash, charId, 0, 3, false, 21, ParkOut, RotOut, $"LSFD", 255, 255, 255, vehClass, serialNumber);
+                    ServerVehicles.CreateVehicle(fHash, charId, 0, 3, false, 21, ParkOut, RotOut, $"LSFD", 255, 255, 255);
                 }
                 else if (shopid == 6)
                 {
-                    ServerVehicles.CreateVehicle(fHash, charId, 0, 14, false, 17, ParkOut, RotOut, $"BENNYS", 255, 255, 255, vehClass, serialNumber);
+                    ServerVehicles.CreateVehicle(fHash, charId, 0, 14, false, 17, ParkOut, RotOut, $"BENNYS", 255, 255, 255);
                 }
                 else if (shopid == 3)
                 {
-                    ServerVehicles.CreateVehicle(fHash, charId, 0, 2, false, 99, ParkOut, RotOut, $"LSPD", 255, 255, 255, vehClass, serialNumber);
+                    ServerVehicles.CreateVehicle(fHash, charId, 0, 2, false, 99, ParkOut, RotOut, $"LSPD", 255, 255, 255);
                 }
                 else if (shopid == 33)
                 {
-                    ServerVehicles.CreateVehicle(fHash, charId, 0, 13, false, 21, ParkOut, RotOut, $"STARS", 255, 255, 255, vehClass, serialNumber);
+                    ServerVehicles.CreateVehicle(fHash, charId, 0, 13, false, 21, ParkOut, RotOut, $"STARS", 255, 255, 255);
                     CharactersInventory.AddCharacterItem(charId, $"Fahrzeugschluessel STARS", 2, "schluessel");
                 }
                 else if (shopid == 37)
                 {
-                    ServerVehicles.CreateVehicle(fHash, charId, 0, 4, false, 3, ParkOut, RotOut, $"ACLS", 168, 133, 50, vehClass, serialNumber);
+                    ServerVehicles.CreateVehicle(fHash, charId, 0, 4, false, 3, ParkOut, RotOut, $"ACLS", 168, 133, 50);
                 }
                 else if (shopid == 38)
                 {
-                    ServerVehicles.CreateVehicle(fHash, charId, 0, 16, false, 3, ParkOut, RotOut, $"DCC", 168, 133, 50, vehClass, serialNumber);
+                    ServerVehicles.CreateVehicle(fHash, charId, 0, 16, false, 3, ParkOut, RotOut, $"DCC", 168, 133, 50);
                     CharactersInventory.AddCharacterItem(charId, $"Fahrzeugschluessel DCC", 2, "schluessel");
                 }
                 else if (shopid == 40)
                 {
-                    ServerVehicles.CreateVehicle(fHash, charId, 0, 12, false, 22, ParkOut, RotOut, $"FIB", 0, 0, 0, vehClass, serialNumber);
+                    ServerVehicles.CreateVehicle(fHash, charId, 0, 12, false, 22, ParkOut, RotOut, $"FIB", 0, 0, 0);
                 }
                 else
                 {
-                    ServerVehicles.CreateVehicle(fHash, charId, 0, 0, false, 1, ParkOut, RotOut, $"LS{rnd}", 255, 255, 255, vehClass, serialNumber);
+                    ServerVehicles.CreateVehicle(fHash, charId, 0, 0, false, 1, ParkOut, RotOut, $"LS{rnd}", 255, 255, 255);
                     CharactersInventory.AddCharacterItem(charId, $"Fahrzeugschluessel LS{rnd}", 2, "schluessel");
-                    //CharactersInventory.AddCharacterItem(charId, $"Fahrzeugpapiere {serialNumber}", 2, "brieftasche");
                 }
                 HUDHandler.SendNotification(player, 2, 2500, $"Fahrzeug erfolgreich gekauft.");
             }
             catch (Exception e)
             {
                 Alt.Log($"{e}");
-            }
-        }
-
-        internal static async void OpenVehicleShopManager(IPlayer player, string shopname, int shopId)
-        {
-            try
-            {
-                if (player == null || !player.Exists || shopId <= 0) return;
-                if (player.HasPlayerHandcuffs() || player.HasPlayerRopeCuffs()) { HUDHandler.SendNotification(player, 3, 2500, "Wie willst du das mit Handschellen/Fesseln machen?"); return; }
-                int charId = User.GetPlayerOnline(player);
-                if (charId <= 0) return;
-
-                int shopClosed = ServerShops.GetShopStateClosed(shopId);
-                if (shopClosed == 1)
-                {
-                    HUDHandler.SendNotification(player, 3, 2500, $"Dein Shop wurde Zwangs Geschlossen! Wende dich an die Justiz");
-                    return;
-                }
-
-                await HelperEvents.ClientEvent_setCefStatus(player, true);
-                string shopItems = ServerShops.GetShopItems(shopId);
-                string inventoryItems = CharactersInventory.CharacterInventoryItems(charId);
-                int shopCash = ServerShops.GetShopBankMoney(shopId);
-                Global.mGlobal.VirtualAPI.TriggerClientEventSafe(player, "Client:Shop:openShopManager", shopId, inventoryItems, shopItems, shopCash);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"{e}");
             }
         }
         #endregion

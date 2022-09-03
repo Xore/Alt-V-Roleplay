@@ -1,14 +1,18 @@
-﻿using AltV.Net;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using AltV.Net;
 using AltV.Net.Async;
 using AltV.Net.Elements.Entities;
 using Altv_Roleplay.Factories;
 using Altv_Roleplay.Model;
 using Altv_Roleplay.Utils;
 using Newtonsoft.Json;
-using System;
-using System.Diagnostics;
-using System.Linq;
-using System.Text.RegularExpressions;
+using System.Globalization;
 
 namespace Altv_Roleplay.Handler
 {
@@ -111,7 +115,7 @@ namespace Altv_Roleplay.Handler
                 float invWeight = CharactersInventory.GetCharacterItemWeight(charId, "inventory");
                 float backpackWeight = CharactersInventory.GetCharacterItemWeight(charId, "backpack");
                 float schluesselWeight = CharactersInventory.GetCharacterItemWeight(charId, "schluessel");
-                if (invWeight + itemWeight > 5f && backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId))) { HUDHandler.SendNotification(player, 3, 2500, $"Du hast nicht genug Platz in deinen Taschen."); return; }
+                if (invWeight + itemWeight > 15f && backpackWeight + itemWeight > Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(charId))) { HUDHandler.SendNotification(player, 3, 2500, $"Du hast nicht genug Platz in deinen Taschen."); return; }
 
                 if (type == "trunk")
                 {
@@ -162,7 +166,7 @@ namespace Altv_Roleplay.Handler
                     //Alt.Log($"{charId} - VehicleTrunkTakeItem brieftasche benötigte {stopwatch.Elapsed.Milliseconds}ms");
                     return;
                 }
-                else if (invWeight + itemWeight <= 5f)
+                else if (invWeight + itemWeight <= 15f)
                 {
                     HUDHandler.SendNotification(player, 1, 2500, $"Du hast ({itemAmount}x) {itemName} aus dem Fahrzeug genommen.");
                     CharactersInventory.AddCharacterItem(charId, itemName, itemAmount, "inventory");
@@ -214,6 +218,7 @@ namespace Altv_Roleplay.Handler
             }
         }
 
+
         internal static void OpenLicensingCEF(IPlayer player)
         {
             try
@@ -221,9 +226,9 @@ namespace Altv_Roleplay.Handler
                 if (player == null || !player.Exists) return;
                 int charId = User.GetPlayerOnline(player);
                 if (charId <= 0) return;
-                if (!player.Position.IsInRange(Constants.Positions.VehicleLicensing_Position, 3f)) { HUDHandler.SendNotification(player, 4, 5000, "Fehler: Du hast dich zu weit entfernt."); return; }
+                if (!player.Position.IsInRange(Constants.Positions.VehicleLicensing_Position, 3f)) { HUDHandler.SendNotification(player, 3, 2500, "Du hast dich zu weit entfernt."); return; }
 
-                var vehicleList = Alt.GetAllVehicles().Where(x => x.GetVehicleId() > 0 && x.Position.IsInRange(Constants.Positions.VehicleLicensing_VehPosition, 10f) && ServerVehicles.GetVehicleOwner(x) == charId).Select(x => new
+                var vehicleList = Alt.GetAllVehicles().Where(x => x.GetVehicleId() > 0 && x.Position.IsInRange(Constants.Positions.VehicleLicensing_VehPosition, 10f) && ServerVehicles.GetVehicleOwner(x) == charId || CharactersInventory.ExistCharacterItem(charId, "Fahrzeugschluessel " + x.NumberplateText, "schluessel")).Select(x => new // <- ToDo
                 {
                     vehId = x.GetVehicleId(),
                     ownerId = ServerVehicles.GetVehicleOwner(x),
@@ -233,14 +238,13 @@ namespace Altv_Roleplay.Handler
 
                 if (vehicleList.Count <= 0) { HUDHandler.SendNotification(player, 3, 2500, "Keines deiner Fahrzeuge steht auf der markierten Stelle."); return; }
                 player.EmitLocked("Client:VehicleLicensing:openCEF", JsonConvert.SerializeObject(vehicleList));
-                Alt.Log($"{JsonConvert.SerializeObject(vehicleList)}");
+                //Alt.Log($"{JsonConvert.SerializeObject(vehicleList)}");
             }
             catch (Exception e)
             {
                 Alt.Log($"{e}");
             }
         }
-
 
         internal static void OpenKeyCEF(IPlayer player)
         {
@@ -330,7 +334,7 @@ namespace Altv_Roleplay.Handler
                 {
                     HUDHandler.SendNotification(player, 3, 2500, "Kennzeichen von Fraktionsfahrzeugen kann man nicht ändern"); return;
                 }
-                if (vehPlate.Contains("STARS"))
+                if (vehPlate.Contains("WALKERS"))
                 {
                     HUDHandler.SendNotification(player, 3, 2500, "Kennzeichen von Fraktionsfahrzeugen kann man nicht ändern"); return;
                 }
@@ -344,7 +348,7 @@ namespace Altv_Roleplay.Handler
                 }
                 if (action == "anmelden")
                 {
-                    var notAllowedStrings = new[] { "LSPD", "DOJ", "LSFD", "ACLS", "LSF", "FIB", "LSF-", "LSPD-", "DOJ-", "LSFD-", "ACLS-", "FIB-", "LS", "LS-", "EL-", "MM-", "PL-", "SWAT", "S.W.A.T", "SWAT-", "NOOSE", "N.O.O.S.E", "STARS", "STARS-", "STARS", "STARS-", "BENNYS", "DCC", "DCC-", "-DCC" };
+                    var notAllowedStrings = new[] { "LSPD", "DOJ", "LSFD", "ACLS", "LSF", "FIB", "LSF-", "LSPD-", "DOJ-", "LSFD-", "ACLS-", "FIB-", "LS", "LS-", "EL-", "MM-", "PL-", "SWAT", "S.W.A.T", "SWAT-", "NOOSE", "N.O.O.S.E", "WP", "WP-", "WALKERS", "WALKERS-", "BENNYS", "DCC", "DCC-", "-DCC" };
                     newPlate = newPlate.Replace(" ", "-");
                     if (ServerVehicles.ExistServerVehiclePlate(newPlate)) { HUDHandler.SendNotification(player, 3, 2500, "Dieses Nummernschild ist bereits vorhanden."); return; }
                     bool stringIsValid = Regex.IsMatch(newPlate, @"[a-zA-Z0-9-]$");
@@ -434,7 +438,7 @@ namespace Altv_Roleplay.Handler
                 var vehPlate = vehicle.NumberplateText;
                 var hash = ServerVehicles.GetVehicleHashById(vehId);
                 if (vehicle == null || !vehicle.Exists) { HUDHandler.SendNotification(player, 3, 2500, "Ein unerwarteter Fehler ist aufgetreten."); return; }
-                if (ServerVehicles.GetVehicleOwner(vehicle) != charId) { HUDHandler.SendNotification(player, 3, 2500, "Dieses Fahrzeug gehört nicht dir."); return; }
+                if(ServerVehicles.GetVehicleOwner(vehicle) != charId) { HUDHandler.SendNotification(player, 3, 2500, "Dieses Fahrzeug gehört nicht dir."); return; }
                 if (!vehicle.Position.IsInRange(Constants.Positions.VehicleSell_VehPosition, 5f)) { HUDHandler.SendNotification(player, 3, 2500, "Das Fahrzeug steht nicht auf dem Parkplatz."); return; }
                 if (!ServerVehicles.GetVehicleLockState(vehicle)) { HUDHandler.SendNotification(player, 3, 2500, "Das Fahrzeug muss zugeschlossen sein."); return; }
                 if (ServerVehicles.GetVehicleOwnerById(vehId) != charId) { HUDHandler.SendNotification(player, 3, 2500, "Dieses Fahrzeug gehört nicht dir."); return; }
@@ -449,7 +453,7 @@ namespace Altv_Roleplay.Handler
                     ServerVehicles.RemoveVehiclePermanently(vehicle);
                     HUDHandler.SendNotification(player, 2, 2500, $"Du hast das Fahrzeug '{ServerVehicles.GetVehicleNameOnHash(vehicle.Model)}' für 50% des Kaufpreises Verkauft.");
                 }
-                catch (Exception e)
+                catch(Exception e)
                 {
                     Alt.Log($"{e}");
 
@@ -582,13 +586,6 @@ namespace Altv_Roleplay.Handler
             {
                 Alt.Log($"{e}");
             }
-        }
-        public static void Freeze(IVehicle veh, bool freeze)
-        {
-            if (!veh.Exists)
-                return;
-
-            veh.SetSyncedMetaData("IsFreezed", freeze);
         }
     }
 }

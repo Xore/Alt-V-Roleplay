@@ -30,7 +30,5 @@ namespace Altv_Roleplay.models
         public string plate { get; set; }
         public DateTime lastUsage { get; set; }
         public DateTime buyDate { get; set; }
-        public int vehClass { get; set; } //0 Auto - 1 Boot - 2 Flugzeug - 3 Helikopter
-        public int serial { get; set; }
     }
 }

@@ -1,12 +1,14 @@
 ﻿using AltV.Net;
 using AltV.Net.Async;
 using AltV.Net.Data;
+using AltV.Net.Elements.Entities;
 using Altv_Roleplay.Factories;
 using Altv_Roleplay.Model;
 using Altv_Roleplay.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Altv_Roleplay.Handler
@@ -39,7 +41,7 @@ namespace Altv_Roleplay.Handler
                 if (player == null || !player.Exists || player.CharacterId <= 0) return;
                 if (player.Position.IsInRange(bankRobPosition, 2f))
                 {
-                    if (isBankOpened == false) { HUDHandler.SendNotification(player, 1, 2500, "Der Tresor ist verschlossen, öffne diesen erst mit einem Schweissbrenner."); return; }
+                    if (isBankOpened == false) { HUDHandler.SendNotification(player, 1, 2500, "Der Tresor ist verschlossen, öffne diesen erst mit einem Schweißbrenner."); return; }
                     player.Position = bankExitPosition;
                 }
                 else if (player.Position.IsInRange(bankExitPosition, 2f))
@@ -60,7 +62,7 @@ namespace Altv_Roleplay.Handler
                 if (bankRobPosGold.isPickedUp) { HUDHandler.SendNotification(player, 1, 2500, "Dieses Fach wurde bereits leer geräumt oder ist verschlossen."); return; }
                 int randomAnzahl = new Random().Next(45, 65);
                 float weight = ServerItems.GetItemWeight("Goldbarren") * randomAnzahl;
-                if (CharactersInventory.GetCharacterItemWeight(player.CharacterId, "inventory") + weight <= 5f)
+                if (CharactersInventory.GetCharacterItemWeight(player.CharacterId, "inventory") + weight <= 15f)
                     CharactersInventory.AddCharacterItem(player.CharacterId, "Goldbarren", randomAnzahl, "inventory");
                 else if (CharactersInventory.GetCharacterItemWeight(player.CharacterId, "backpack") + weight <= Characters.GetCharacterBackpackSize(Characters.GetCharacterBackpack(player.CharacterId)))
                     CharactersInventory.AddCharacterItem(player.CharacterId, "Goldbarren", randomAnzahl, "backpack");
@@ -82,11 +84,11 @@ namespace Altv_Roleplay.Handler
                 if (player == null || !player.Exists || player.CharacterId <= 0) return;
                 if (ServerFactions.GetFactionDutyMemberCount(2) + ServerFactions.GetFactionDutyMemberCount(12) < 10)
                 {
-                    HUDHandler.SendNotification(player, 1, 2500, "Es sind nicht genug Beamte im Dienst.");
-                    return;
+                   HUDHandler.SendNotification(player, 1, 2500, "Es sind nicht genug Beamte im Dienst.");
+                   return;
                 }
                 if (isBankOpened || isBankCurrentlyRobbing) { HUDHandler.SendNotification(player, 1, 2500, "Der Tresor wird bereits aufgeschweißt oder ist bereits offen."); return; }
-                if (!CharactersInventory.ExistCharacterItem((int)player.GetCharacterMetaId(), "Schweissbrenner", "inventory") && !CharactersInventory.ExistCharacterItem((int)player.GetCharacterMetaId(), "Schweissbrenner", "backpack")) { HUDHandler.SendNotification(player, 1, 2500, "Du hast nicht das benötigte Item."); return; }
+                if (!CharactersInventory.ExistCharacterItem((int)player.GetCharacterMetaId(), "Schweißbrenner", "inventory") && !CharactersInventory.ExistCharacterItem((int)player.GetCharacterMetaId(), "Schweißbrenner", "backpack")) { HUDHandler.SendNotification(player, 1, 2500, "Du hast nicht das benötigte Item."); return; }
                 isBankCurrentlyRobbing = true;
                 HUDHandler.SendProgress(player, "Du schweißt den Tresor auf...", "alert", 100000);
                 player.EmitLocked("Client:Inventory:PlayAnimation", "amb@world_human_welding@male@idle_a", "idle_a", 600000, 1, false);
@@ -112,7 +114,7 @@ namespace Altv_Roleplay.Handler
                     goldPos.isPickedUp = false;
 
                 player.EmitLocked("Client:Inventory:StopAnimation");
-                CharactersInventory.RemoveCharacterItemAmount2((int)player.GetCharacterMetaId(), "Schweissbrenner", 1);
+                CharactersInventory.RemoveCharacterItemAmount2((int)player.GetCharacterMetaId(), "Schweißbrenner", 1);
                 HUDHandler.SendNotification(player, 1, 2500, "Der Tresor ist offen, gehe hinein, du hast 5 Minuten Zeit.");
                 await Task.Delay(300000); //reset bank
                 foreach (var goldPos in bankPickUpPositions)
@@ -310,7 +312,7 @@ namespace Altv_Roleplay.Handler
         public Position position { get; set; }
         public bool isPickedUp { get; set; } = false;
     }
-
+    
     public partial class LSPDPickUpPosition
     {
         public Position position { get; set; }

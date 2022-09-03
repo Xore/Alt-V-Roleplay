@@ -36,7 +36,6 @@ alt.onServer("Client:Garage:OpenGarage", (garageId, garagename, garageInArray, g
         alt.toggleGameControls(false);
         garageBrowser.focus();
         GarageCefOpened = true;
-        game.triggerScreenblurFadeIn(5); //TODO
     }
 });
 
@@ -60,6 +59,5 @@ let closeGarageCEF = function() {
         alt.showCursor(false);
         alt.toggleGameControls(true);
         garageBrowser.unfocus();
-        game.triggerScreenblurFadeOut(5); //TODO
     }
 }

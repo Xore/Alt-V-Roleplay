@@ -3,6 +3,8 @@ using Altv_Roleplay.models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Altv_Roleplay.Model
 {
@@ -15,7 +17,7 @@ namespace Altv_Roleplay.Model
             try
             {
                 var entry = CharactersTattoos_.FirstOrDefault(x => x.charId == charId && x.tattooId == tatooId);
-                if (entry == null) return;
+                if (entry == null) return;                    
                 CharactersTattoos_.Remove(entry);
 
                 using (var db = new gtaContext())

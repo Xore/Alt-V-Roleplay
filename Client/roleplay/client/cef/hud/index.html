@@ -5,113 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../utils/bootstrap.min.css">
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../utils/toastr.min.css">
     <link rel="stylesheet" href="../utils/mdb/css/mdb-sass.css">
-    <!-- JQUERY -->
-    <script src="../utils/jquery-3.4.1.min.js"></script>
-    <script src="../utils/jquery-ui.min.js"></script>
-    <!-- MAIN -->
-    <script src="js/script.js"></script>
+    <script type="text/javascript" src="../utils/colorpicker.js"></script>
+    <script type="text/javascript" src="viewport.js"></script>
     <title>HUD</title>
 </head>
-
 <body>
 
-    <h2 id="start"></h2>
-
+<h2 id="start"></h2>
+    <!-- VEH-HUD -->
+    <div id="vehud">
+        <div id="fuel">
+            <div id="fuelbar" class="fuelbar"> Liter</div>
+            <div id="fuelicon"><i class="fas fa-gas-pump"></i></div>
+            <div id="fuelline">
+                <div id="fuelsubline"></div>
+            </div>
+        </div>
+        <div id="kmh">
+            <div id="kmhbar"></div>
+            <div id="kmhicon"><i class="fas fa-tachometer"></i></div>
+            <div class="kmhtext"> km/h</div>
+        </div>
+        <div id="km">
+            <div id="kmbar" class="kmbar"> KM</div>
+            <div id="kmicon"><i class="fas fa-digital-tachograph"></i></div>
+            <div id="kmline">
+                <div id="kmsubline"></div>
+            </div>
+        </div>
+    </div>
     <!-- HUD -->
     <div ID="hud">
         <div id="money">
             <div id="moneybar">10000000 $</div>
-            <div id="moneyicon"><i class="fas fa-wallet"></i></div>
-        </div>
-        <div id="thirst">
-            <div id="thirstbar">50%</div>
-            <div id="thirsticon"><i class="fas fa-tint"></i></div>
-        </div>
-        <div id="food">
-            <div id="foodbar">50%</div>
-            <div id="foodicon"><i class="fa fa-utensils"></i></div>
-        </div>
-        <div id="mic">
-            <div id="micbar"></div>
-            <div id="micicon"><i class="fas fa-microphone"></i></div>
-        </div>
-        <div id="health">
-            <div id="healthbar">50%</div>
-            <div id="healthicon"><i class="fas fa-heartbeat"></i></div>
+            <div id="moneyicon"><i class="fas fa-money-bill-wave"></i></div>
         </div>
     </div>
-
+    <div id="thirst">
+        <div id="thirstbar"></div>
+        <div id="thirsticon"><i class="fa fa-tint"></i></div>
+        <div id="thirstline">
+            <div id="thirstsubline"></div>
+        </div>
+    </div>
+    <div id="food">
+        <div id="foodbar"></div>
+        <div id="foodicon"><i class="fa fa-utensils"></i></div>
+        <div id="foodline">
+            <div id="foodsubline"></div>
+        </div>
+    </div>
+    <div id="mic">
+        <div id="micbar"></div>
+        <div id="micicon"><i class="fas fa-microphone"></i></div>
+        <div id="micline">
+            <div id="micsubline"></div>
+        </div>
+    </div>
+    <div id="health">
+        <div id="healthbar"></div>
+        <div id="healthicon"><i class="fas fa-heartbeat"></i></div>
+        <div id="healthline">
+            <div id="healthsubline"></div>
+        </div>
+    </div>
     </div>
     <p id="locationtext">Strassenname fehlerhaft</p>
 
     <ul id="InteractionMenu-List"></ul>
 
     <div id="identityCardApplyForm">
-        <div class="contract2">
-            <div class="container d-flex justify-content-center align-items-center">
-                <div class="card contract2-card">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-center">
-                            <span id="title" style="font-size: 25px; font-family: MingLiu;">Antrag:
-                                Personalausweis</span>
-                        </div>
-                        <hr>
-                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Damit sie sich legal in
-                            San Andreas aufhalten können ist ein Personalausweis erforderlich.</p>
-                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Diesen können sie hier
-                            beantragen jedoch benötigen wir noch einige Informationen von ihnen.</p>
-                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Die Haupt Informationen
-                            über sie, wurden uns bereits von dem Amt für Einreise übermittelt, Tragen sie dort unten nur
-                            ihren Geburtsort ein.</p>
-                        Name:
-                        <div class="inputgroup">
-                            <input id="identityCardApplyFormCharname" type="text" maxlength="32"
-                                placeholder="Vor- und Nachname" spellcheck="false" value="Hans Parker" disabled
-                                style="border:none;border-bottom:1px solid black;outline:none;background: transparent;">
-                        </div>
-                        Geschlecht:
-                        <div class="inputgroup">
-                            <input id="identityCardApplyFormGender" type="text" maxlength="32" placeholder="Geschlecht"
-                                spellcheck="false" value="Männlich" disabled
-                                style="border:none;border-bottom:1px solid black;outline:none;background: transparent;">
-                        </div>
-                        Addresse:
-                        <div class="inputgroup">
-                            <input id="identityCardApplyFormAdress" type="text" maxlength="32" placeholder="Adresse"
-                                spellcheck="false" value="Strawberry Avenue 91" disabled
-                                style="border:none;border-bottom:1px solid black;outline:none;background: transparent;">
-                        </div>
-                        Geburtsdatum:
-                        <div class="inputgroup">
-                            <input id="identityCardApplyFormBirthdate" type="text" maxlength="32"
-                                placeholder="Geburtsdatum" spellcheck="false" value="01. Januar 1992" disabled
-                                style="border:none;border-bottom:1px solid black;outline:none;background: transparent;">
-                        </div>
-                        Geburtsort:
-                        <div class="inputgroup" style="font-family: DB;">
-                            <input id="identityCardApplyFormBirthplace" type="text" maxlength="32" placeholder=" "
-                                spellcheck="false"
-                                style="border:none;border-bottom:1px solid black;outline:none;background: transparent;">
-                        </div>
-
-                        <div class="fixed-bottom d-flex justify-content-center" style="margin-bottom: 20px;">
-                            <button
-                                style="font-size: 20px; font-family: MingLiu; border-bottom:none; border-top:none; border-right:none; border-left:none; outline: none; background-color:#fff;"
-                                type="button" onclick="SendIdentityCardApplyForm();">Unterschreiben</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <p class="title">EINREISEFORMULAR</p>
+        <p class="description">Damit du dich legal in San Andreas aufhalten kannst ist ein Personalausweis erforderlich, diesen kannst du hier beantragen jedoch benötigen wir noch einige Informationen von dir.</p>
+        <hr>
+        <div class="inputgroup">
+            <div class="icon"><i class="fas fa-user"></i></div>
+            <input id="identityCardApplyFormCharname" type="text" maxlength="32" placeholder="Vor- und Nachname" spellcheck="false" value="Hans Parker" disabled>
         </div>
+        <div class="inputgroup">
+            <div class="icon"><i class="fas fa-venus-mars"></i></div>
+            <input id="identityCardApplyFormGender" type="text" maxlength="32" placeholder="Geschlecht" spellcheck="false" value="Männlich" disabled>
+        </div>
+        <div class="inputgroup">
+            <div class="icon" style="padding-right: 16px; padding-left: 16px"><i class="fas fa-map-marker-alt icon"></i></div>
+            <input id="identityCardApplyFormAdress" type="text" maxlength="32" placeholder="Adresse" spellcheck="false" value="Strawberry Avenue 91" disabled>
+        </div>
+        <div class="inputgroup">
+            <div class="icon" style="padding-right: 16px; padding-left: 16px"><i class="far fa-calendar-alt"></i></div>
+            <input id="identityCardApplyFormBirthdate" type="text" maxlength="32" placeholder="Geburtsdatum" spellcheck="false" value="01. Januar 1992" disabled>
+        </div>
+        <div class="inputgroup">
+            <div class="icon" style="padding-right: 15px; padding-left: 14px"><i class="far fa-map"></i></div>
+            <input id="identityCardApplyFormBirthplace" type="text" maxlength="32" placeholder="Geburtsort eintragen.." spellcheck="false">
+        </div>
+        <img id="sendIdentityCardApplyForm" src="../utils/img/penwrite.png" onclick="SendIdentityCardApplyForm();">
     </div>
 
     <div id="VehicleFuelstationCEFBox">
         <p class="closebtn" onclick="closeFuelstationCEF();"><i class="fas fa-times"></i></p>
         <p class="title">TANKSTELLE</p>
+        <hr>
         <div class="container">
             <p class="subtitle">Name der Tankstelle:
                 <font id="VehicleFuelstationCEFBox-stationName">Fehler</font>
@@ -124,101 +120,96 @@
         <div class="container">
             <p class="title">LITER ANZAHL AUSWÄHLEN</p>
             <form oninput="numerisch.value=auswertung.value">
-                <input id="VehicleFuelStationCEFBox-LiterSlider" oninput="VehicleFuelStationCEFBoxCalculatePrices();"
-                    type="range" name="auswertung" min="1" max="100" value="1"><output name="numerisch"
-                    id="VehicleFuelStationCEFBox-Out" class="numberfield">1</output>
+                <input id="VehicleFuelStationCEFBox-LiterSlider" oninput="VehicleFuelStationCEFBoxCalculatePrices();" type="range" name="auswertung" min="1" max="59" value="1"><output name="numerisch" id="VehicleFuelStationCEFBox-Out" class="numberfield">1</output>
             </form>
-            <ul id="VehicleFuelstationCEFBox-List" class="list-group">
-
-            </ul>
+            <ul id="VehicleFuelstationCEFBox-List" class="list-group"></ul>
         </div>
     </div>
 
     <div id="GivePlayerBillCEFBox">
-        <div class="contract3">
-            <div class="container d-flex justify-content-center align-items-center">
-                <div class="card contract3-card">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-center">
-                            <span id="title" style="font-size: 25px; font-family: MingLiu;">Rechnung</span>
-                        </div>
-                        <hr>
-                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;"> </p>
-                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;"> </p>
-                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;"> </p>
-
-                        <div class="container" style="border-bottom: 2px solid #ffffff0a;">
-                            <p>Betrag</p>
-                            <input id="GivePlayerBillCEFBox-AmountInput" type="number" spellcheck="false"
-                                onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-                        </div>
-                        <div class="container" style="padding-top: 15px;">
-                            <p>Begründung</p>
-                            <textarea style="height:120px;max-height: 120px;min-height: 120px;"
-                                id="GivePlayerBillCEFBox-ReasonInput" cols="40" rows="5"></textarea>
-                        </div>
-
-                        <div class="fixed-bottom d-flex justify-content-center" style="margin-bottom: 20px;">
-                            <button
-                                style="font-size: 20px; font-family: MingLiu; border-bottom:none; border-top:none; border-right:none; border-left:none; outline: none; background-color:#fff;"
-                                type="button" onclick="SendIdentityCardApplyForm();">Ausstellen</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <p class="closebtn" onclick="closeGivePlayerBillCEFBox();"><i class="fas fa-times"></i></p>
+        <p class="title">RECHNUNG AUSSTELLEN</p>
+        <hr>
+        <div class="container" style="border-bottom: 2px solid #ffffff0a;">
+            <p>Betrag</p>
+            <input id="GivePlayerBillCEFBox-AmountInput" type="number" spellcheck="false" placeholder="Betrag eingeben.." onkeypress="return event.charCode >= 48 && event.charCode <= 57">
         </div>
+        <div class="container" style="padding-top: 15px;">
+            <p>Begründung</p>
+            <input style="width: 75%;" id="GivePlayerBillCEFBox-ReasonInput" type="text" spellcheck="false" maxlength="32" placeholder="Grund eingeben..">
+        </div>
+        <button id="GivePlayerBillCEFBox-FinishBtn" type="btn" class="btn">Rechnung ausstellen</button>
     </div>
 
     <div id="RecievePlayerBillCEFBox">
-        <div class="contract4">
-            <div class="container d-flex justify-content-center align-items-center">
-                <div class="card contract4-card">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-center">
-                            <span id="title" style="font-size: 25px; font-family: MingLiu;">Rechnung</span>
-                        </div>
-                        <hr>
-                        <p class="text-justify" style="font-size: 15px; font-family: MingLiu;">Sie sind Verpflichtet
-                            diese Rechnung zu Zahlen insofern sie von einem Legitimen Unternehmen Ausgestellt wurde.
-                            Dazu gehören Sämtliche Staatliche Unternehmen (LSPD, EMS, DoJ etc.) sowie auch Offiziell
-                            Eingetragene Firmen und Privat Unternehmen.
-                        </p>
-                        <p class="text-justify" style="font-size: 15px; font-family: MingLiu;">Sollte es sich hierbei um
-                            keine Legitime Rechnung (Fälschung etc.) Handeln, kontaktieren sie die Justiz.</p>
-                        <p class="text-justify" style="font-size: 15px; font-family: MingLiu;"> </p>
-                        <p class="text-justify" style="font-size: 15px; font-family: MingLiu;">Sollte es eine Legitime
-                            Rechnung sein sind sie Verpflichtet diese zu Zahlen, sollten Sie die Rechnung nicht Bezahlen
-                            kann dies Rechtliche Folgen haben.</p>
-                        <p class="text-justify" style="font-size: 15px; font-family: MingLiu;">Sollten sie die Rechnung
-                            aus Finanziellen Gründen nicht Zahlen können müssen Sie das dem Aussteller der Rechnung
-                            mitteilen.</p>
-                        <hr>
-                        <div class="container" style="border-bottom: 2px solid #ffffff0a;">
-                            <p>Fraktions- / Unternehmensname</p>
-                            <input style="width: 75%;" id="RecievePlayerBillCEFBox-NameInput" type="text"
-                                spellcheck="false" maxlength="64" disabled>
-                        </div>
-                        <div class="container" style="padding-top: 15px; border-bottom: 2px solid #ffffff0a;">
-                            <p>Begründung</p>
-                            <input style="width: 75%;" id="RecievePlayerBillCEFBox-ReasonInput" type="text"
-                                spellcheck="false" maxlength="32" disabled>
-                        </div>
-                        <div class="container" style="padding-top: 15px">
-                            <p>Betrag</p>
-                            <input id="RecievePlayerBillCEFBox-AmountInput" type="number" spellcheck="false" disabled>
-                        </div>
-                        <hr>
-                        <div class="fixed-bottom d-flex justify-content-center" style="margin-bottom: 20px;">
-                            <button onclick="RecievePlayerBillCEFBoxAction(`bar`);" type="btn"
-                                class="btn">Barzahlung</button>
-                            <button onclick="RecievePlayerBillCEFBoxAction(`bank`);" type="btn"
-                                class="btn">Bankzahlung</button>
-                            <button onclick="RecievePlayerBillCEFBoxAction(`decline`);" type="btn"
-                                class="btn">Ablehnen</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <p class="title">RECHNUNG ERHALTEN</p>
+        <hr>
+        <div class="container" style="border-bottom: 2px solid #ffffff0a;">
+            <p>Fraktions- / Unternehmensname</p>
+            <input style="width: 75%;" id="RecievePlayerBillCEFBox-NameInput" type="text" spellcheck="false" maxlength="64" disabled>
+        </div>
+        <div class="container" style="padding-top: 15px; border-bottom: 2px solid #ffffff0a;">
+            <p>Begründung</p>
+            <input style="width: 75%;" id="RecievePlayerBillCEFBox-ReasonInput" type="text" spellcheck="false" maxlength="32" disabled>
+        </div>
+        <div class="container" style="padding-top: 15px">
+            <p>Betrag</p>
+            <input id="RecievePlayerBillCEFBox-AmountInput" type="number" spellcheck="false" disabled>
+        </div>
+        <hr>
+        <button onclick="RecievePlayerBillCEFBoxAction(`bar`);" type="btn" class="btn">Barzahlung</button>
+        <button onclick="RecievePlayerBillCEFBoxAction(`bank`);" type="btn" class="btn">Bankzahlung</button>
+        <button onclick="RecievePlayerBillCEFBoxAction(`decline`);" type="btn" class="btn">Ablehnen</button>
+    </div>
+
+    <div id="FactionStorageCEFBox">
+        <p class="closebtn" onclick="closeFactionStorageCEFBox();"><i class="fas fa-times"></i></p>
+        <p id="FactionStorageCEFBox-SpindTitle" class="title">LAGER</p>
+        <hr>
+        <div class="container" style="border-bottom: 2px solid #ffffff17; margin-bottom: 15px;">
+            <p class="title">DEIN INVENTAR</p>
+            <ul class="list-group" id="FactionStorageCEFBox-InventoryList"></ul>
+        </div>
+        <div class="container">
+            <p class="title">LAGER</p>
+            <ul class="list-group" id="FactionStorageCEFBox-StorageList"></ul>
+        </div>
+    </div>
+
+    <div id="GangStorageCEFBox">
+        <p class="closebtn" onclick="closeGangStorageCEFBox();"><i class="fas fa-times"></i></p>
+        <p id="GangStorageCEFBox-SpindTitle" class="title">LAGER</p>
+        <hr>
+        <div class="container" style="border-bottom: 2px solid #ffffff17; margin-bottom: 15px;">
+            <p class="title">DEIN INVENTAR</p>
+            <ul class="list-group" id="GangStorageCEFBox-InventoryList"></ul>
+        </div>
+        <div class="container">
+            <p class="title">LAGER</p>
+            <ul class="list-group" id="GangStorageCEFBox-StorageList"></ul>
+        </div>
+    </div>
+
+    <div id="VehicleTrunkCEFBox">
+        <p class="closebtn" tabindex="-1" onclick="closeVehicleTrunkCEFBox();"><i class="fas fa-times"></i></p>
+        <p id="VehicleTrunkCEFBox-Title" class="title">FAHRZEUG LAGER</p>
+        <hr>
+        <div class="container" style="border-bottom: 2px solid #ffffff17; margin-bottom: 15px;">
+            <p class="title">DEIN INVENTAR</p>
+            <ul class="list-group" id="VehicleTrunkCEFBox-InventoryList"></ul>
+        </div>
+        <div class="container">
+            <p id="VehicleTrunkCEFBox-SubTitle" class="title">KOFFERRAUM</p>
+            <ul class="list-group" id="VehicleTrunkCEFBox-StorageList"></ul>
+        </div>
+    </div>
+
+    <div id="PlayerSearchInventoryCEFBox">
+        <p class="closebtn" onclick="closePlayerSearchCEFBox();"><i class="fas fa-times"></i></p>
+        <p class="title">SPIELER DURCHSUCHEN</p>
+        <hr>
+        <div class="container">
+            <ul id="PlayerSearchInventoryCEFBox-List" class="list-group"></ul>
         </div>
     </div>
 
@@ -228,47 +219,21 @@
         <p class="description">Wähle unten eins der Fahrzeuge aus, die du anmelden möchtest.
             <br><b>Leerzeichen müssen durch einen Bindestrich ( - ) ersetzt werden.</b></p>
         <p class="warndescription"><b>Das Kennzeichen darf KEINE Sonderzeichen außer ( - ) enthalten!</b></p>
-        <img src="assets/plate.png">
-        <input id='PlateText' type='text' spellcheck='false' maxlength='8' placeholder='TEXT'>
         <hr>
-        <ul id="VehicleLicensingCEFBox-List" class="list-group">
-            <li class='list-group-item'>
-                <div class='container left'>
-                    <p class='title'>FAHRZEUGNAME</p>
-                    <p class='name'>vehName</p>
-                </div>
-                <div class='container mid'>
-                    <p class='title'>KENNZEICHEN</p>
-                    <p class='name'>vehPlate</p>
-                </div>
-                <div class='container right'>
-                    <p class='title'>FAHRZEUG ANMELDEN?</p>
-                    <button type='button'
-                        onclick='VehicleLicensingCEFAction(`anmelden`, " + vehArray[i].vehId + ", `" + vehArray[i].vehPlate + "`, this);'
-                        class='btn btn-sm btn-anmelden'><i class='fas fa-check'></i></button>
-                    <button type='button'
-                        onclick='VehicleLicensingCEFAction(`abmelden`, " + vehArray[i].vehId + ", `" + vehArray[i].vehPlate + "`, this);'
-                        class='btn btn-sm btn-abmelden'><i class='fas fa-times'></i></button>
-                </div>
-            </li>
-        </ul>
+        <ul id="VehicleLicensingCEFBox-List" class="list-group"></ul>
     </div>
-
     <div id="VehicleKeyCEFBox">
         <p class="closebtn" onclick="closeVehicleKeyCEFBox();"><i class="fas fa-times"></i></p>
         <p class="title">SCHLÜSSELDIENST</p>
-        <p class="description">Hier kannst du für deine Fahrzeuge die Schlüssel nachmachen.<br>Das Fahrzeug muss auf der
-            Markierung stehen.<br></b>
+        <p class="description">Hier kannst du für deine Fahrzeuge die Schlüssel nachmachen.<br>Das Fahrzeug muss auf der Markierung stehen.<br></b>
         </p>
         <hr>
         <ul id="VehicleKeyCEFBox-List" class="list-group"></ul>
     </div>
-
     <div id="VehicleSellCEFBox">
         <p class="closebtn" onclick="closeVehicleSellCEFBox();"><i class="fas fa-times"></i></p>
         <p class="title">KFZ-ANKAUF</p>
-        <p class="description">Hier kannst du deine Fahrzeuge für 50% Des Kaufpreises Verkaufen.<br>Das Fahrzeug
-            muss auf der Markierung stehen.<br></b>
+        <p class="description">Hier kannst du für deine Fahrzeuge für 50% Des Kaufpreises Verkaufen.<br>Das Fahrzeug muss auf der Markierung stehen.<br></b>
         </p>
         <hr>
         <ul id="VehicleSellCEFBox-List" class="list-group"></ul>
@@ -277,8 +242,7 @@
     <div id="HotelManageCEFBox">
         <p class="closebtn" onclick="closeHotelManageCEFBox();"><i class="fas fa-times"></i></p>
         <p id="HotelManageCEFBox-HotelName" class="title">Hotel: Fehler</p>
-        <p class="description">Miete dir ein Apartment zu günstigen Konditionen.<br> Nach Ablauf der Mietdauer wird dein
-            Zimmer automatisch gekündigt.</p>
+        <p class="description">Miete dir ein Apartment zu günstigen Konditionen.<br> Nach Ablauf der Mietdauer wird dein Zimmer automatisch gekündigt.</p>
         <hr>
         <ul id="HotelManageCEFBox-ApartmentList" class="list-group"></ul>
     </div>
@@ -286,8 +250,7 @@
     <div id="HouseEntranceCEFBox">
         <p class="closebtn" onclick="closeHouseEntranceCEFBox();"><i class="fas fa-times"></i></p>
         <p id="HouseEntranceCEFBox-HouseName" class="title">Boulevard Del Perro 13a</p>
-        <p class="description">Kaufe, betrete oder miete dieses Haus.<br>Ob die Möglichkeiten bestehen und weitere Infos
-            findest du weiter unten.</p>
+        <p class="description">Kaufe, betrete oder miete dieses Haus.<br>Ob die Möglichkeiten bestehen und weitere Infos findest du weiter unten.</p>
         <hr id="HouseEntranceCEFBox-Cut">
         <div id="HouseEntranceCEFBox-List"></div>
     </div>
@@ -297,7 +260,9 @@
         <p class="title">Einwohnermeldeamt</p>
         <p class="description">Besitzt du ein Haus? Falls ja wähle dieses hier aus um dieses als Wohnsitz zu wählen.</p>
         <hr>
-        <ul id="TownHallHouseSelector-List" class="list-group"></ul>
+        <ul id="TownHallHouseSelector-List" class="list-group">
+        <li class='list-group-item'><span>${houseArray[i].street}</span><button type='button' onclick='HouseSelectorSelectHouse(${houseArray[i].id});' class='btn btn-sm btn-success'><i class='fas fa-check'></i></button><button type='button' onclick='HouseSelectorSellHouse(${houseArray[i].id});' class='btn btn-sm btn-danger'><i class='fas fa-dollar-sign'></i></button>
+        </ul>
     </div>
 
     <div id="HouseManageCEFBox">
@@ -317,50 +282,39 @@
         <div class="tab-content">
             <div id="verwaltung" class="tab-pane fade">
                 <h3>Verwaltung</h3>
-                <p>Lege fest ob du Mieter zulassen möchtest oder nicht.<br>Falls ja, bestimmte zusätzlich einen
-                    Mietpreis welcher täglich erhoben wird.</p>
+                <p>Lege fest ob du Mieter zulassen möchtest oder nicht.<br>Falls ja, bestimmte zusätzlich einen Mietpreis welcher täglich erhoben wird.</p>
 
                 <div class="container">
                     <p class="title">Mietpreis setzen</p>
-                    <input id="HouseManageCEFBox-rentPriceInput" type="number"
-                        onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-                    <button id="HouseManageCEFBox-setRentPriceBtn" type="button" class="btn btn-sm btn-danger"><i
-                            class="fa fa-check"></i></button>
+                    <input id="HouseManageCEFBox-rentPriceInput" type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    <button id="HouseManageCEFBox-setRentPriceBtn" type="button" class="btn btn-sm btn-danger"><i class="fa fa-check"></i></button>
                 </div>
                 <div class="container">
                     <p class="title">Mieter zulassen?</p>
-                    <button id="HouseManageCEFBox-AllowRentersBtn" type="button"
-                        class="btn btn-sm btn-success">JA</button>
-                    <button id="HouseManageCEFBox-DenyRentersBtn" type="button"
-                        class="btn btn-sm btn-danger">NEIN</button>
+                    <button id="HouseManageCEFBox-AllowRentersBtn" type="button" class="btn btn-sm btn-success">JA</button>
+                    <button id="HouseManageCEFBox-DenyRentersBtn" type="button" class="btn btn-sm btn-danger">NEIN</button>
                 </div>
             </div>
             <div id="mieter" class="tab-pane fade">
                 <h3>Mieter verwalten</h3>
-                <p>Eine Übersicht aller aktuell eingemieteten Personen.<br>Falls nicht erwünscht kannst du diese
-                    kündigen.</p>
+                <p>Eine Übersicht aller aktuell eingemieteten Personen.<br>Falls nicht erwünscht kannst du diese kündigen.</p>
                 <ul id="HouseManageCEFBox-RenterList" class="list-group"></ul>
             </div>
             <div id="upgrades" class="tab-pane fade">
                 <h3>Haus ausbauen</h3>
-                <p>Baue dein Haus aus und erhalte Zugriff auf neue Features.<br>Die Gebühren werden von deinem
-                    Hauptkonto abgebucht.</p>
+                <p>Baue dein Haus aus und erhalte Zugriff auf neue Features.<br>Die Gebühren werden von deinem Hauptkonto abgebucht.</p>
                 <ul id="HouseManageCEFBox-UpgradeList" class="list-group"></ul>
             </div>
             <div id="bank" class="tab-pane fade">
                 <h3>Tresor verwalten</h3>
-                <p>Solltest du über einen ausgebauten Tresor verfügen,<br>kannst du hier auf deinen Tresor Geld ein- &
-                    auszahlen.</p>
+                <p>Solltest du über einen ausgebauten Tresor verfügen,<br>kannst du hier auf deinen Tresor Geld ein- & auszahlen.</p>
                 <div class="container">
                     <p class="title">Tresorstand:
                         <font id="HouseManageCEFBox-TresorAmount">0$</font>
                     </p>
-                    <input id="HouseManageCEFBox-TresorInput" type="number"
-                        onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-                    <button id="HouseManageCEFBox-TresorDepositBtn" style="padding: 4px 8px 4px 8px" type="button"
-                        class="btn btn-sm btn-success">EINZAHLEN</button>
-                    <button id="HouseManageCEFBox-TresorWithdrawBtn" type="button"
-                        class="btn btn-sm btn-danger">AUSZAHLEN</button>
+                    <input id="HouseManageCEFBox-TresorInput" type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    <button id="HouseManageCEFBox-TresorDepositBtn" style="padding: 4px 8px 4px 8px" type="button" class="btn btn-sm btn-success">EINZAHLEN</button>
+                    <button id="HouseManageCEFBox-TresorWithdrawBtn" type="button" class="btn btn-sm btn-danger">AUSZAHLEN</button>
                 </div>
             </div>
         </div>
@@ -376,8 +330,7 @@
     <div id="Minijob-BusDriverCEFBox">
         <p class="closebtn" onclick="closeMinijobBusDriverCEFBox();"><i class="fas fa-times"></i></p>
         <p class="title">MINIJOB: BUSFAHRER</p>
-        <p class="description">Als Busfahrer versorgst du den Stadtverkehr.<br>Jede Linie hat einen anderen Verdienst
-            und eine andere Dauer.</p>
+        <p class="description">Als Busfahrer versorgst du den Stadtverkehr.<br>Jede Linie hat einen anderen Verdienst und eine andere Dauer.</p>
         <div id="Minijob-BusDriverCEFBox-List"></div>
     </div>
 
@@ -400,6 +353,107 @@
             </li>
         </ul>
     </div>
+    <div id="bankFactionATMForm">
+        <span class="closeBankManageForm" onclick="BankFactionATMFormDestroyCEF();"><i class="fas fa-times"></i></span>
+        <p id="bankFactionATMForm-Title" class="title">FRAKTIONSBANK</p>
+        <p class="description">Ihr aktueller Fraktionsstand: <b><font id="bankFactionATMForm-CurBalance" style="color:green;">250000</font>$</b>.<br> Nachfolgend können Sie über Ihr Fraktionskonto verfügen.</p>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <p class="description"><b>GELD EINZAHLEN</b></p>
+                <input id="bankFactionATMForm-DepositInput" placeholder="Betrag eingeben.." value="0" type="number" maxlength="6" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                <p id="bankFactionATMForm-DepositBtn" class="payin">EINZAHLEN</p>
+            </li>
+            <li class="list-group-item">
+                <p class="description"><b>GELD AUSZAHLEN</b></p>
+                <input id="bankFactionATMForm-WithdrawInput" placeholder="Betrag eingeben.." value="0" type="number" maxlength="6" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                <p id="bankFactionATMForm-WithdrawBtn" class="payout">AUSZAHLEN</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="bankAccountManageForm">
+        <span class="closeBankManageForm" onclick="BankAccountManageFormDestroyCEF();"><i class="fas fa-times"></i></span>
+        <p class="title">BANKSCHALTER</p>
+        <p class="description">Willkommen in unserer Bankfiliale.<br> Nachfolgend können Sie ein Konto erstellen oder ihr bisheriges Konto verwalten.</p>
+        <hr>
+        <ul id="bankAccountManageFormList" class="list-group"></ul>
+    </div>
+
+    <div id="bankATMbox">
+        <span id="bankATMbox-CloseBankCEF" onclick="BankATMdestroyCEF();"><img src="../utils/img/cancel.png" style="width: 25px; height: 25px"></span>
+        <p class="title">BANKAUTOMAT</p>
+        <p id="bankATMboxDescriptionTitle" class="description">Um weitere Aktionen durchführen zu können geben Sie bitte Ihre Geheimzahl ein.<br>Geben Sie Ihre Geheimzahl zu oft falsch ein wird Ihre Karte gesperrt.</p>
+        <hr>
+        <div id="bankATMbox-PinArea">
+            <!-- PIN Bereich -->
+            <input id="bankATMBox-PinInput" type="password" maxlength="4" placeholder="PIN eingeben.." onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
+            <button type="btn" class="btn" id="bankATMBox-PinInput-Button">BESTÄTIGEN</button>
+        </div>
+        <div id="bankATMbox-OverviewArea">
+            <!-- //Uebersicht -->
+            <ul class="list-group">
+                <li class="list-group-item" onclick="BankATMshowSite('bankATMbox-DepositArea');">
+                    <img src="../utils/img/payin.png" style="width: 46px">
+                    <p class="title">Einzahlung</p>
+                </li>
+                <li class="list-group-item" onclick="BankATMshowSite('bankATMbox-WithDrawArea');">
+                    <img src="../utils/img/payout.png" style="width: 46px">
+                    <p class="title">Auszahlung</p>
+                </li>
+                <li class="list-group-item" onclick="BankATMshowSite('bankATMbox-DoMoneyTransfer');">
+                    <img src="../utils/img/moneytransfer.png" style="width: 46px">
+                    <p class="title">&Uuml;berweisung</p>
+                </li>
+                <li class="list-group-item" onclick="BankATMshowSite('bankATMbox-ViewTransactionArea');">
+                    <img src="../utils/img/bankpaper.png" style="width: 46px">
+                    <p class="title">Kontoaktivitäten</p>
+                </li>
+            </ul>
+        </div>
+        <div id="bankATMbox-WithDrawArea">
+            <!-- Auszahl Bereich -->
+            <p class="title">Aktueller Kontostand</p>
+            <input id="bankATMBox-WithdrawBalanceInput" type="text" placeholder="Aktueller Kontostand.." spellcheck="false" value="0$" disabled><br>
+            <hr>
+            <p class="title">Auszuzahlender Betrag</p>
+            <input id="bankATMBox-WithdrawInput" type="number" placeholder="Betrag eingeben.." spellcheck="false" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
+            <button type="btn" class="btn" id="bankATMBox-WithdrawArea-Button">BESTÄTIGEN</button>
+        </div>
+        <div id="bankATMbox-DepositArea">
+            <!-- Einzahl Bereich -->
+            <p class="title">Aktueller Kontostand</p>
+            <input id="bankATMBox-DepositBalanceInput" type="text" placeholder="Aktueller Kontostand.." spellcheck="false" value="0$" disabled><br>
+            <hr>
+            <p class="title">Einzuzahlender Betrag</p>
+            <input id="bankATMBox-DepositInput" type="number" placeholder="Betrag eingeben.." spellcheck="false" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
+            <button type="btn" class="btn" id="bankATMBox-DepositArea-Button">BESTÄTIGEN</button>
+        </div>
+        <div id="bankATMbox-ViewTransactionArea">
+            <!-- Kontoauszuege  -->
+            <ul id="bankATMbox-ViewTransactionArea-List" class="list-group"></ul>
+        </div>
+        <div id="bankATMbox-DoMoneyTransfer">
+            <!-- Ueberweisung tätigen -->
+            <p class="title">Aktueller Kontostand</p>
+            <input id="bankATMBox-MoneyTransferBalanceInput" type="text" placeholder="Aktueller Kontostand.." spellcheck="false" value="0$" disabled><br>
+            <hr>
+            <p class="title">Kontonummer des Empfängers</p>
+            <input id="bankATMBox-MoneyTransferTargetInput" type="number" placeholder="Kontonummer eingeben.." spellcheck="false" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
+            <hr>
+            <p class="title">Gewünschter Betrag</p>
+            <input id="bankATMBox-MoneytransferInput" type="number" placeholder="Betrag eingeben.." spellcheck="false" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
+            <button type="btn" class="btn" id="bankATMBox-DoMoneyTransfer-Button">BESTÄTIGEN</button>
+        </div>
+    </div>
+
+    <div id="shopCEFBox">
+        <!-- 24/7 Shops -->
+        <span class="closeBankManageForm" onclick="shopCEFBoxDestroy();"><i class="fas fa-times"></i></span>
+        <span id="shopCEFBox-RobButton" class="robShop"><i class="fas fa-exclamation-triangle"></i></span>
+        <p id="shopCEFBox-Title" class="title" style="color: #fff; font-family: PEL; letter-spacing: 2px;">EINKAUFSLADEN</p>
+        <hr>
+        <ul id="shopCEFBox-List" class="list-group"></ul>
+    </div>
 
     <div id="barberCEFBox">
         <!-- Friseur HUD -->
@@ -415,9 +469,7 @@
                     <p>Haare</p>
                     <div class="nose-pegel">
                         <form oninput="numerisch.value=auswertung.value">
-                            <input id="BarberHairVariation" oninput="BarberChangeHair(0);" type="range"
-                                name="auswertung" min="0" step="1" max="150" value="0" class="slider"><output
-                                name="numerisch" id="BarberHairVariationOutput" class="numberfield">0</output>
+                            <input id="BarberHairVariation" oninput="BarberChangeHair(0);" type="range" name="auswertung" min="0" step="1" max="150" value="0" class="slider"><output name="numerisch" id="BarberHairVariationOutput" class="numberfield">0</output>
                         </form>
                     </div>
                 </div>
@@ -425,9 +477,7 @@
                     <p>Haarfarbe (primär)</p>
                     <div class="nose-pegel">
                         <form oninput="numerisch.value=auswertung.value">
-                            <input id="BarberHairColor1" oninput="BarberChangeHair(1);" type="range" name="auswertung"
-                                min="0" step="1" max="63" value="0" class="slider"><output name="numerisch"
-                                id="BarberHairColor1Output" class="numberfield">0</output>
+                            <input id="BarberHairColor1" oninput="BarberChangeHair(1);" type="range" name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output name="numerisch" id="BarberHairColor1Output" class="numberfield">0</output>
                         </form>
                     </div>
                 </div>
@@ -435,9 +485,7 @@
                     <p>Haarfarbe (sekundär)</p>
                     <div class="nose-pegel">
                         <form oninput="numerisch.value=auswertung.value">
-                            <input id="BarberHairColor2" oninput="BarberChangeHair(2);" type="range" name="auswertung"
-                                min="0" step="1" max="63" value="0" class="slider"><output name="numerisch"
-                                id="BarberHairColor2Output" class="numberfield">0</output>
+                            <input id="BarberHairColor2" oninput="BarberChangeHair(2);" type="range" name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output name="numerisch" id="BarberHairColor2Output" class="numberfield">0</output>
                         </form>
                     </div>
                 </div>
@@ -453,9 +501,7 @@
                     <p>Variation</p>
                     <div class="nose-pegel">
                         <form oninput="numerisch.value=auswertung.value">
-                            <input id="BarberEyebrowsVariation" oninput="BarberChangeHair(5);" type="range"
-                                name="auswertung" min="-1" step="1" max="30" value="-1" class="slider"><output
-                                name="numerisch" id="BarberEyebrowsVariationOutput" class="numberfield">0</output>
+                            <input id="BarberEyebrowsVariation" oninput="BarberChangeHair(5);" type="range" name="auswertung" min="-1" step="1" max="30" value="-1" class="slider"><output name="numerisch" id="BarberEyebrowsVariationOutput" class="numberfield">0</output>
                         </form>
                     </div>
                 </div>
@@ -463,9 +509,7 @@
                     <p>Farbe</p>
                     <div class="nose-pegel">
                         <form oninput="numerisch.value=auswertung.value">
-                            <input id="BarberEyebrowsColor" oninput="BarberChangeHair(6);" type="range"
-                                name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output
-                                name="numerisch" id="BarberEyebrowsColorOutput" class="numberfield">0</output>
+                            <input id="BarberEyebrowsColor" oninput="BarberChangeHair(6);" type="range" name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output name="numerisch" id="BarberEyebrowsColorOutput" class="numberfield">0</output>
                         </form>
                     </div>
                 </div>
@@ -481,9 +525,7 @@
                     <p>Variation</p>
                     <div class="nose-pegel">
                         <form oninput="numerisch.value=auswertung.value">
-                            <input id="BarberBeardVariation" oninput="BarberChangeHair(3);" type="range"
-                                name="auswertung" min="-1" step="1" max="30" value="-1" class="slider"><output
-                                name="numerisch" id="BarberBeardVariationOutput" class="numberfield">0</output>
+                            <input id="BarberBeardVariation" oninput="BarberChangeHair(3);" type="range" name="auswertung" min="-1" step="1" max="30" value="-1" class="slider"><output name="numerisch" id="BarberBeardVariationOutput" class="numberfield">0</output>
                         </form>
                     </div>
                 </div>
@@ -491,9 +533,7 @@
                     <p>Farbe</p>
                     <div class="nose-pegel">
                         <form oninput="numerisch.value=auswertung.value">
-                            <input id="BarberBeardColor" oninput="BarberChangeHair(4);" type="range" name="auswertung"
-                                min="0" step="1" max="63" value="0" class="slider"><output name="numerisch"
-                                id="BarberBeardColorOutput" class="numberfield">0</output>
+                            <input id="BarberBeardColor" oninput="BarberChangeHair(4);" type="range" name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output name="numerisch" id="BarberBeardColorOutput" class="numberfield">0</output>
                         </form>
                     </div>
                 </div>
@@ -509,9 +549,7 @@
                     <p>MakeUp Variation</p>
                     <div class="nose-pegel">
                         <form oninput="numerisch.value=auswertung.value">
-                            <input id="BarberMakeupVariation" oninput="BarberChangeHair(7);" type="range"
-                                name="auswertung" min="-1" step="1" max="71" value="-1" class="slider"><output
-                                name="numerisch" id="BarberMakeupVariationOutput" class="numberfield">0</output>
+                            <input id="BarberMakeupVariation" oninput="BarberChangeHair(7);" type="range" name="auswertung" min="-1" step="1" max="71" value="-1" class="slider"><output name="numerisch" id="BarberMakeupVariationOutput" class="numberfield">0</output>
                         </form>
                     </div>
                 </div>
@@ -519,9 +557,7 @@
                     <p>MakeUp Sichtbarkeit</p>
                     <div class="nose-pegel">
                         <form oninput="numerisch.value=auswertung.value">
-                            <input id="BarberMakeupAlpha" oninput="BarberChangeHair(8);" type="range" name="auswertung"
-                                min="0" step="1" max="1" value="1" class="slider"><output name="numerisch"
-                                id="BarberMakeupAlphaOutput" class="numberfield">0</output>
+                            <input id="BarberMakeupAlpha" oninput="BarberChangeHair(8);" type="range" name="auswertung" min="0" step="1" max="1" value="1" class="slider"><output name="numerisch" id="BarberMakeupAlphaOutput" class="numberfield">0</output>
                         </form>
                     </div>
                 </div>
@@ -529,9 +565,7 @@
                     <p>Lippenstift</p>
                     <div class="nose-pegel">
                         <form oninput="numerisch.value=auswertung.value">
-                            <input id="BarberLipstickVariation" oninput="BarberChangeHair(9);" type="range"
-                                name="auswertung" min="-1" step="1" max="9" value="-1" class="slider"><output
-                                name="numerisch" id="BarberLipstickVariationOutput" class="numberfield">0</output>
+                            <input id="BarberLipstickVariation" oninput="BarberChangeHair(9);" type="range" name="auswertung" min="-1" step="1" max="9" value="-1" class="slider"><output name="numerisch" id="BarberLipstickVariationOutput" class="numberfield">0</output>
                         </form>
                     </div>
                 </div>
@@ -539,9 +573,7 @@
                     <p>Lippenstift Farbe</p>
                     <div class="nose-pegel">
                         <form oninput="numerisch.value=auswertung.value">
-                            <input id="BarberLipstickColor" oninput="BarberChangeHair(10);" type="range"
-                                name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output
-                                name="numerisch" id="BarberLipstickColorOutput" class="numberfield">0</output>
+                            <input id="BarberLipstickColor" oninput="BarberChangeHair(10);" type="range" name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output name="numerisch" id="BarberLipstickColorOutput" class="numberfield">0</output>
                         </form>
                     </div>
                 </div>
@@ -549,9 +581,7 @@
                     <p>Wangenröte</p>
                     <div class="nose-pegel">
                         <form oninput="numerisch.value=auswertung.value">
-                            <input id="BarberWangenBlushVariation" oninput="BarberChangeHair(11);" type="range"
-                                name="auswertung" min="-1" step="1" max="6" value="-1" class="slider"><output
-                                name="numerisch" id="BarberWangenBlushVariationOutput" class="numberfield">0</output>
+                            <input id="BarberWangenBlushVariation" oninput="BarberChangeHair(11);" type="range" name="auswertung" min="-1" step="1" max="6" value="-1" class="slider"><output name="numerisch" id="BarberWangenBlushVariationOutput" class="numberfield">0</output>
                         </form>
                     </div>
                 </div>
@@ -559,121 +589,157 @@
                     <p>Wangenröte Farbe</p>
                     <div class="nose-pegel">
                         <form oninput="numerisch.value=auswertung.value">
-                            <input id="BarberWangenBlushColor" oninput="BarberChangeHair(12);" type="range"
-                                name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output
-                                name="numerisch" id="BarberWangenBlushColorOutput" class="numberfield">0</output>
+                            <input id="BarberWangenBlushColor" oninput="BarberChangeHair(12);" type="range" name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output name="numerisch" id="BarberWangenBlushColorOutput" class="numberfield">0</output>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-        <button type="button" id="BarberBuyButton" onclick="BarberBuyHairStyles();" class="btn btn-success">Bezahlen
-            (50$)</button>
+        <button type="button" id="BarberBuyButton" onclick="BarberBuyHairStyles();" class="btn btn-success">Bezahlen (50$)</button>
     </div>
 
     <div id="VehicleShopCEFBox">
         <p class="closebtn" onclick="CloseVehicleShopCEF();"><i class="fas fa-times"></i></p>
         <p id="VehicleShopCEFBox-title">Fahrzeugshop: Morningwood</p>
         <hr>
-        <input class="VehSearch" type="text" id="VehSearch" placeholder="Suchen..." onkeyup="VehSearch()"/>
         <ul id="VehicleShopCEFBox-StoreList" class="list-group"></ul>
     </div>
-    <script>
-        function VehSearch() {
-            var input, filter, ul, li, a, i, txtValue;
-            input = document.getElementById("VehSearch");
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("VehicleShopCEFBox-StoreList");
-            li = ul.getElementsByTagName("li");
-            for (i = 0; i < li.length; i++) {
-                a = li[i].getElementsByTagName("span")[0];
-                txtValue = a.textContent || a.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
-                } else {
-                    li[i].style.display = "none";
-                }
-            }
-        }
-        </script>
+    <!--PERSO-->
+    <div id="UserIdCard">
+        <span id="UserIdCard-name">Vorname Nachname</span>
+        <span id="UserIdCard-address">Addresse</span>
+        <span id="UserIdCard-birthdate">18.02.2019</span>
+        <span id="UserIdCard-citizenid">999</span>
+        <span id="UserIdCard-signature">Übel Die Unterschrift</span>
+        <span id="UserIdCard-county">Los Santos</span>
+    </div>
+    <!--LSPD-CARD-->
+    <div id="PoliceCard">
+        <span id="PoliceCard-name">Maximilian von Mustermann</span>
+        <span id="PoliceCard-rankname">Co. Chief of Emergency</span>
+        <span id="PoliceCard-serviceNumber">22</span>
+        <span id="PoliceCard-citizenid">999</span>
+        <span id="PoliceCard-signature">Übel Die Unterschrift</span>
+    </div>
+    <!--FIB-CARD-->
+    <div id="FIBCard">
+        <span id="FIBCard-name">Maximilian von Mustermann</span>
+        <span id="FIBCard-rankname">Co. Chief of Emergency</span>
+        <span id="FIBCard-serviceNumber">22</span>
+        <span id="FIBCard-citizenid">999</span>
+        <span id="FIBCard-signature">Übel Die Unterschrift</span>
+    </div>
+    
+    <div id="Deathscreen-Box">
+        <video style="width: 100%; height: 100%;" id="deathvideo" muted loop autoplay>
+        </video>
+    </div>
+
+    <!-- #Hudlist in Arbeit -->
+    <div id="pseudo-box-hudlist">
+        <div id="HUDlist-Box" data-target class="scss-mdb rounded">
+            <div id="HUDlist-labelbox">
+                <div>
+                    <div id="HUDlist-label">
+                        Kleiderschrank
+                    </div>
+                </div>
+            </div>
+            <div id="HUDlist-carousel" class="carousel" data-ride="carousel" data-interval="false" data-keyboard="false">
+                <div class="carousel-inner">
+                    <div id="HUDlist-home" class="carousel-item active">
+                        <ul class="list-group">
+                            <li tabindex='0'>Schließen</li>
+                            <li tabindex='0' data-target="Top">Oberbekleidung</li>
+                            <li tabindex='0' data-target="Undershirt">Unterbekleidung</li>
+                            <li tabindex='0' data-target="Torso">Körper</li>
+                            <li tabindex='0' data-target="Leg">Hosen</li>
+                            <li tabindex='0' data-target="Feet">Schuhe</li>
+                            <li tabindex='0' data-target="Hat">Kopfbedeckung</li>
+                            <li tabindex='0' data-target="Mask">Masken</li>
+                            <li tabindex='0' data-target="Glass">Brillen</li>
+                            <li tabindex='0' data-target="Earring">Ohrringe</li>
+                            <li tabindex='0' data-target="Watch">Uhren</li>
+                            <li tabindex='0' data-target="Bracelet">Arm</li>
+                            <li tabindex='0' data-target="Necklace">Accessories</li>
+                            <li tabindex='0' data-target="Decal">Decals</li>
+                            <li tabindex="0" data-target="Armor">Armor</li>
+                        </ul>
+                    </div>
+                    <div id="HUDlist-clothes" class="carousel-item">
+                        <ul id="HUDlist-clothesList" class="list-group"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 
     <div id="ProcessingBox">
         <div class="ProcessingBoxUpperPart">
-            <div class="circlediv ProcessingBocCloseBtn" onclick="closeProcessingMenuCEF();"><i
-                    class="fa fa-times-circle"></i></div>
+            <div class="circlediv ProcessingBocCloseBtn" onclick="closeProcessingMenuCEF();"><i class="fa fa-times-circle"></i></div>
             <p class="ProcessingBoxTitle">Verarbeitung</p>
         </div>
         <div class="ProcessingBoxZutaten">
             <div id="ProcessingBoxNeededItems">
-                
+
             </div>
             <i class='fas fa-arrow-down'></i>
             <div id="ProcessingBoxProducedItem">
-                
+
             </div>
         </div>
         <div id="ProcessingBoxMainfraim">
 
         </div>
         <div id="ProcessingBoxButtonBoxes">
-            
         </div>
     </div>
+
+
 
     <div id="changeVehOwnerHUD">
+        <!--<p onclick="closeChangeVehOwnerHUD();" class="closebtn"><i class="fas fa-times"></i></p>
+        <p class="title">Fahrzeug überschreiben</p>
+        <div class="billUnderlineBody"></div>
+        <p id="changeVehOwnerHUD-desc" class="desc">Gebe die Spieler ID vom neuen Besitzer ein, der dein Fahrzeug erhalten soll.</p>
+        <input id="changeVehOwnerHUD-value" type="number" spellcheck="false" max="9999999" min="1" maxlength="999999" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+        <button type="button" onclick="changeVehOwner();">Überschreiben</button>-->
         <div class="contract1">
-            <div class="container d-flex justify-content-center align-items-center">
-                <div class="card contract1-card">
-                    <p onclick="closeChangeVehOwnerHUD();" class="closebtn"><i class="fas fa-times"></i></p>
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-center">
-                            <span id="title" style="font-size: 25px; font-family: MingLiu;">Fahrzeugverkaufs
-                                Vertrag</span>
-                        </div>
-                        <hr>
-                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Wichtig, vorab zu wissen
-                        </p>
-                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Mit dem Kaufvertrag
-                            vermeiden Sie Rechtsstreitigkeiten und sichern sich das Vertrauen des Käufers.</p>
-                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Lesen Sie auf dieser
-                            Seite die wichtigsten Hinweise zum Verkaufsprozess.</p>
-                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Das Fahrzeug wird so
-                            Verkauft wie es ist und Der Verkäufer übernimmt keine Garantie für den Zustand des Autos.
-                        </p>
-                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Der Verkäufer stellt dem
-                            Käufer alle Schlüssel zur Verfügung.</p>
-                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Sollte das nicht
-                            Passieren können Rechtliche Schritte eingeleitet werden.</p>
-                        <p id="changeVehOwnerHUD-desc" style="font-size: 17px; font-family: MingLiu;"
-                            class="text-justify">Fahrzeug:</p>
-                        <div class="fixed-bottom row d-flex justify-content-center" style="margin-bottom: 100px;">
-                            <div class="col col-md-4" style="width: 220px;">
-                                <label class="d-flex justify-content-center"
-                                    style="font-size: 15px; margin-top: 5px; font-family: MingLiu;">Ausweis Nr. des
-                                    Käufers</label>
-                                <input
-                                    style="font-family: DB; border-bottom: 1px solid #2f3037; border-top:none; border-right:none; border-left:none; outline: none;"
-                                    id="changeVehOwnerHUD-value" type="number" spellcheck="false" max="9999999" min="1"
-                                    maxlength="999999" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-                            </div>
-                            <div class="col col-md-4" style="width: 220px;"></div>
-                        </div>
-
-                        <div class="fixed-bottom d-flex justify-content-center" style="margin-bottom: 20px;">
-                            <button
-                                style="font-size: 20px; font-family: MingLiu; border-bottom:none; border-top:none; border-right:none; border-left:none; outline: none; background-color:#fff;"
-                                type="button" onclick="changeVehOwner();">Überschreiben</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+			<div class="container d-flex justify-content-center align-items-center">
+				<div class="card contract1-card">
+				<p onclick="closeChangeVehOwnerHUD();" class="closebtn"><i class="fas fa-times"></i></p>
+					<div class="card-body p-4">
+						<div class="d-flex justify-content-center">
+							<span id="title" style="font-size: 25px; font-family: MingLiu;">Fahrzeugverkaufs Vertrag</span>
+						</div>
+						<hr>
+                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Wichtig, vorab zu wissen</p>
+						<p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Mit dem Kaufvertrag vermeiden Sie Rechtsstreitigkeiten und sichern sich das Vertrauen des Käufers.</p>
+						<p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Lesen Sie auf dieser Seite die wichtigsten Hinweise zum Verkaufsprozess.</p>
+						<p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Das Fahrzeug wird so Verkauft wie es ist und Der Verkäufer übernimmt keine Garantie für den Zustand des Autos.</p>
+						<p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Der Verkäufer stellt dem Käufer alle Schlüssel zur Verfügung.</p>
+						<p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Sollte das nicht Passieren können Rechtliche Schritte eingeleitet werden.</p>
+						<p id="changeVehOwnerHUD-desc" style="font-size: 17px; font-family: MingLiu;" class="text-justify">Fahrzeug:</p>
+						<div class="fixed-bottom row d-flex justify-content-center" style="margin-bottom: 100px;">
+							<div class="col col-md-4" style="width: 220px;">
+								<label class="d-flex justify-content-center" style="font-size: 15px; margin-top: 5px; font-family: MingLiu;">Ausweis Nr. des Käufers</label>
+                                <input style="font-family: DB; border-bottom: 1px solid #2f3037; border-top:none; border-right:none; border-left:none; outline: none;" id="changeVehOwnerHUD-value" type="number" spellcheck="false" max="9999999" min="1" maxlength="999999" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+							</div>
+							<div class="col col-md-4" style="width: 220px;"></div>
+						</div>
+                        
+						<div class="fixed-bottom d-flex justify-content-center" style="margin-bottom: 20px;">
+                            <button style="font-size: 20px; font-family: MingLiu; border-bottom:none; border-top:none; border-right:none; border-left:none; outline: none; background-color:#fff;" type="button" onclick="changeVehOwner();">Überschreiben</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
     </div>
 
-    <div id="RotationHUD" class="slidecontainer"
-        style="text-align: center; position: relative; height: 100%; width: 100%;">
-        <input style="position: relative; top: 90%; width: 20%;" type="range" min="1" max="360" value="180"
-            class="slider" oninput="rotatePlayer(this)">
+    <div id="RotationHUD" class="slidecontainer" style="text-align: center; position: relative; height: 100%; width: 100%;">
+        <input style="position: relative; top: 90%; width: 20%;" type="range" min="1" max="360" value="180" class="slider" oninput="rotatePlayer(this)">
     </div>
 
     <div id="TattooShopHUD">
@@ -711,6 +777,8 @@
         </ul>
         <ul class="list-group" id="TattooShopHUD-TattooList"></ul>
     </div>
+    <script src="../utils/jquery-3.4.1.min.js"></script>
+    <script src="../utils/jquery-ui.min.js"></script>
     <script src="../utils/popper.min.js"></script>
     <script src="../utils/bootstrap.min.js"></script>
     <script src="../utils/mdb/js/mdb.min.js"></script>
@@ -719,6 +787,2446 @@
     <script defer src="../utils/fontawesome/js/all.js"></script>
 </body>
 
+<script>
+    var type = 1,
+        radius = '18em',
+        start = -90,
+        globalInteractMenuAction = "close",
+        globalAnimationMenuAction = "close",
+        globalInteractMenuType = "none",
+        selectedBank = "None",
+        globalPlayerBillType = undefined,
+        globalPlayerBilltargetCharId = undefined,
+        globalRecievePlayerBillType = undefined,
+        globalRecievePlayerBillFactionCompanyId = undefined,
+        globalRecievePlayerBillAmount = undefined,
+        globalRecievePlayerBillReason = undefined,
+        globalRecievePlayerBillFactionName = undefined,
+        globalRecievePlayerBillGivenCharacterId = undefined,
+        playerHasLowHealth = false,
+        curATMPin = undefined,
+        curATMAccountNumber = undefined,
+        curVehShopId = undefined,
+        curATMzoneName = undefined,
+        isPersoIdentityCardInUse = false,
+        isPoliceCardInUse = false,
+        isFIBCardInUse = false,
+        isPersoServiceCardInUse = false,
+        globalFuelstationBenzinPrice = undefined,
+        globalFuelstationDieselPrice = undefined,
+        globalFuelstationStromPrice = undefined,
+        globalFuelstationKerosinPrice = undefined,
+        globalShopId = undefined,
+        globalFactionATMfactionid = undefined,
+        allowHudlistScroll,
+        hudlistActiveListID,
+        hudlistTargetElement,
+        hudlistLastElement,
+        targetMessageUser,
+        allowChatKeyUp = false,
+        selectedChatId = 0,
+        globalFactionATMtype = undefined,
+        globalBarberHeadoverlaysData = undefined,
+        globalBarberHeadoverlaysOpacityData = undefined,
+        globalBarberHeadoverlaysColorData = undefined,
+        globalBarberheadoverlaysarray = [globalBarberHeadoverlaysData, globalBarberHeadoverlaysOpacityData, globalBarberHeadoverlaysColorData];
 
+    $(document).ready(function() {
+        alt.emit("Client:HUD:cefIsReady");
+        setTimeout(function() {
+            $("#drinkbox").fadeTo(1000, 1, function() {});
+            //$("#voicebox").css("background", "#36b1468a");
+            $("#voicebox").fadeTo(1000, 1, function() {});
+            $(".money").fadeTo(500, 1, function() {});
+        }, 1000);
+    });
+
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
+
+    $('.nav-tabs > li > a').click(function() {
+        $('.nav-tabs > li.active').removeClass('active');
+        $(this).parent().parent().addClass('active');
+    });
+    window.addEventListener("keydown", event => {
+        if (allowHudlistScroll) {
+            if (event.keyCode == 37) {
+                hudlistCycleLeft();
+            }
+            if (event.keyCode == 38) {
+                hudlistCycleUp();
+            }
+            if (event.keyCode == 39 || event.keyCode == 13) {
+                hudlistCycleRight();
+            }
+            if (event.keyCode == 40) {
+                hudlistCycleDown();
+            }
+        }
+    });
+    // Money HUD
+    function updateMoneyHUD(currentMoney) {
+        $("#moneybar").html(`${numberWithCommas(currentMoney)} $`);
+    }
+
+    function updateHealth(health) {
+        document.getElementById("healthsubline").style.width = health + "%";
+    }
+
+    function numberWithCommas(x) {
+        let numberwithComma = x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return numberwithComma.replace(/,/g, '.');
+    }
+function closeChangeVehOwnerHUD() {
+        $("#changeVehOwnerHUD").fadeTo(250, 0, function() {
+            $("#changeVehOwnerHUD").hide();
+            $("#changeVehOwnerHUD-value").val('');
+            alt.emit("Client:Vehicle:closeChangeVehOwnerHUD");
+        });
+    }
+
+function showChangeOwnerHUD(vehName) {
+        $("changeVehOwnerHUD-desc").html(`Fahrzeug: '${vehName}'`);
+        $("#changeVehOwnerHUD").fadeTo(100, 1, function() {
+            $("#changeVehOwnerHUD").show();
+        });
+    }
+
+    function showChangeOwnerHUD(vehName) {
+        $("changeVehOwnerHUD-desc").html(`Fahrzeug: '${vehName}'`);
+        $("#changeVehOwnerHUD").fadeTo(100, 1, function() {
+            $("#changeVehOwnerHUD").show();
+        });
+    }
+
+    function changeVehOwner() {
+        let value = $("#changeVehOwnerHUD-value").val();
+        if (value == undefined || value.length <= 0) return;
+        alt.emit("Client:Vehicle:changeVehOwner", value);
+        closeChangeVehOwnerHUD();
+    }
+    // Rotation HUD
+    function rotatePlayer(htmlElem) {
+        let value = $(htmlElem).val();
+        alt.emit("Client:Utilities:setRotation", value);
+    }
+
+    //Tattoo HUD
+    let tattooShopId = undefined,
+        globalTattooArray = [],
+        ownTattoos = [];
+
+    function SetTattooShopItems(array) {
+        array = JSON.parse(array);
+        for (var i in array) globalTattooArray.push(array[i]);
+    }
+
+    function openTattooHUD(shopId, ownTattoosJSON) {
+        tattooShopId = shopId;
+        ownTattoosJSON = JSON.parse(ownTattoosJSON);
+        for (var i in ownTattoosJSON) ownTattoos.push(ownTattoosJSON[i]);
+
+        $("#TattooShopHUD-TattooList").hide();
+        $("#TattooShopHUD-TattooList").html("");
+        $("#TattooShopHUD-HomeList").show();
+        $("#TattooShopHUD").fadeTo(250, 1, function() {
+            $("#TattooShopHUD").show();
+            $("#RotationHUD").fadeTo(1, 1, function() {
+                $("#RotationHUD").hide();
+            });
+        });
+    }
+
+    function closeTattooShopCef() {
+        alt.emit("Client:TattooShop:closeShop");
+        $("#TattooShopHUD").fadeTo(250, 0, function() {
+            $("#TattooShopHUD").hide();
+            $("#RotationHUD").fadeTo(1, 0, function() {
+                $("#RotationHUD").hide();
+            });
+            $("#TattooShopHUD-TattooList").hide();
+            $("#TattooShopHUD-TattooList").html("");
+            $("#TattooShopHUD-HomeList").show();
+            tattooShopId = undefined;
+            ownTattoos = [];
+        });
+    }
+
+    function openTattooCategory(category) {
+        let html = "";
+        for (var i in globalTattooArray) {
+            if (globalTattooArray[i].part != category) continue;
+            html += "<li class='list-group-item'><span>" + globalTattooArray[i].name + "</span><span>" + globalTattooArray[i].price + "$</span><button onclick='previewTattoo(`" + globalTattooArray[i].nameHash + "`, `" + globalTattooArray[i].collection + "`);' class='blue btn btn-success'><i class='far fa-eye'></i></button><button onclick='buyTattoo(" + globalTattooArray[i].id + ");' class='btn btn-success'><i class='fas fa-dollar-sign'></i></button></li>";
+        }
+
+        if (category == "ownTattoos") {
+            for (var i in ownTattoos)
+                html += "<li class='list-group-item'><span>" + ownTattoos[i].name + "</span><span></span><button onclick='deleteTattoo(" + ownTattoos[i].tattooId + ");' class='btn btn-danger'><i class='fas fa-times'></i></button></li>";
+        }
+
+        $("#TattooShopHUD-TattooList").html(html);
+        $("#TattooShopHUD-HomeList").hide();
+        $("#TattooShopHUD-TattooList").show();
+    }
+
+    function deleteTattoo(id) {
+        if (id <= 0 || id == undefined) return;
+        alt.emit("Client:TattooShop:deleteTattoo", id);
+        closeTattooShopCef();
+    }
+
+    function buyTattoo(id) {
+        if (id <= 0 || id == undefined || tattooShopId <= 0 || tattooShopId == undefined) return;
+        alt.emit("Client:TattooShop:buyTattoo", tattooShopId, id);
+        closeTattooShopCef();
+    }
+
+    function previewTattoo(hash, collection) {
+        if (hash == undefined || collection == undefined) return;
+        alt.emit("Client:TattooShop:previewTattoo", hash, collection);
+    }
+
+    function ShowNotification(notificationtype, message, time) {
+        toastr.options.progressBar = true;
+        switch (notificationtype) {
+            case 0:
+                break;
+            case 1:
+                //Info Notification
+                toastr.info(message, "", {
+                    timeOut: time
+                });
+                break;
+            case 2:
+                //Success Notification
+                toastr.success(message, "", {
+                    timeOut: time
+                });
+                break;
+            case 3:
+                //Warning Notification
+                toastr.warning(message, "", {
+                    timeOut: time
+                });
+                break;
+            case 4:
+                //Error Notification
+                toastr.error(message, "", {
+                    timeOut: time
+                });
+                break;
+        }
+    }
+
+    let neededItemLet, producedItemLet, neededItemAmountLet, produceditemAmountLet, durationLet, neededItemTWOLet, neededItemTHREELet, neededItemTWOAmountLet, neededItemTHREEAmountLet = "";
+
+    function FarmingCreateCEF(neededItem, producedItem, neededItemAmount, producedItemAmount, duration, neededItemTWO, neededItemTHREE, neededItemTWOAmount, neededItemTHREEAmount) {
+        $("#ProcessingBox").fadeTo(1000, 1, function() {});
+
+        document.getElementById("ProcessingBoxButtonBoxes").innerHTML = `     <!--<hr class="ProcessingBoxLinie">-->
+        <div class="ProcessingBoxIconBox ProcessingBoxHammerBox">
+        <a onclick="startProcessing()"><img class="ProcessingIMG ProcessingBoxHammer" src="../utils/img/hammer.png"></a>
+        </div> `;
+
+        if (neededItemTWO != "none") {
+            if (neededItemTHREE == "none") {
+                document.getElementById("ProcessingBoxNeededItems").innerHTML = `    <div class="ProcessingBoxNeededItem ProcessingBoxNeededItemOne">
+            ${neededItemAmount}
+            <img class="ProcessingBoxNeededItemIMG" src="../utils/img/${neededItem}.png">
+            </div>
+            <div class="ProcessingBoxNeededItem ProcessingBoxNeededItemTwo">
+            ${neededItemTWOAmount}
+            <img class="ProcessingBoxNeededItemIMG" src="../utils/img/${neededItemTWO}.png">
+            </div>
+            `;
+            } else {
+                document.getElementById("ProcessingBoxNeededItems").innerHTML = `    <div class="ProcessingBoxNeededItem ProcessingBoxNeededItemOne">
+            ${neededItemAmount}
+            <img class="ProcessingBoxNeededItemIMG" src="../utils/img/${neededItem}.png">
+            </div>
+            <div class="ProcessingBoxNeededItem ProcessingBoxNeededItemTwo">
+            ${neededItemTWOAmount}
+            <img class="ProcessingBoxNeededItemIMG" src="../utils/img/${neededItemTWO}.png">
+            </div>
+            <div class="ProcessingBoxNeededItem ProcessingBoxNeededItemThree">
+            ${neededItemTHREEAmount}
+            <img class="ProcessingBoxNeededItemIMG" src="../utils/img/${neededItemTHREE}.png">
+            </div>
+            `;
+            }
+        } else {
+            document.getElementById("ProcessingBoxNeededItems").innerHTML = `    <div class="ProcessingBoxNeededItem ProcessingBoxNeededItemOne">
+         ${neededItemAmount}
+         <img class="ProcessingBoxNeededItemIMG" src="../utils/img/${neededItem}.png">
+          </div>
+         `;
+
+        }
+        document.getElementById("ProcessingBoxProducedItem").innerHTML = `    <div class="ProcessingBoxNeededItem ProcessingBoxProducedItem">
+        ${producedItemAmount}
+        <img class="ProcessingBoxNeededItemIMG" src="../utils/img/${producedItem}.png">
+        </div>
+         `;
+        neededItemLet = neededItem;
+        producedItemLet = producedItem;
+        neededItemAmountLet = neededItemAmount;
+        produceditemAmountLet = producedItemAmount;
+        durationLet = duration;
+        neededItemTWOLet = neededItemTWO;
+        neededItemTHREELet = neededItemTHREE;
+        neededItemTWOAmountLet = neededItemTWOAmount;
+        neededItemTHREEAmountLet = neededItemTHREEAmount;
+    }
+
+    function startProcessing() {
+        alt.emit("Client:Farming:StartProcessing", neededItemLet, producedItemLet, neededItemAmountLet, produceditemAmountLet, durationLet, neededItemTWOLet, neededItemTHREELet, neededItemTWOAmountLet, neededItemTHREEAmountLet);
+        closeProcessingMenuCEF();
+    }
+
+    function closeProcessingMenuCEF() {
+        $("#ProcessingBox").fadeOut(100, function() {
+            $("#ProcessingBox").hide();
+            alt.emit("Client:Farming:closeCEF");
+        });
+    }
+
+
+    function SetPlayerHUDInVehicle(state, fuel, km) {
+        $("#locationbox").hide();
+        $("#locationtext").hide();
+        $("#kmhtext").hide();
+        $("#fuelbar").hide();
+        $("#kmbar").hide();
+
+        if (state == false) {
+            document.getElementById("vehud").style.visibility = "hidden";
+            anime({
+                targets: '#vehbox',
+                left: 50
+            });
+        } else {
+            anime({
+                targets: '#vehbox',
+                left: 330
+            });
+            $("#kmhtext").html(`0 km/h`);
+            $("#kmbar").html(`${km} KM`);
+            $("#fuelbar").html(`${fuel} Liter`);
+            $("#locationbox").fadeTo(1, 1, function() {});
+            $("#locationtext").fadeTo(1, 1, function() {});
+            $("#kmhtext").fadeTo(1, 1, function() {});
+            $("#fuelbar").fadeTo(1, 1, function() {});
+            $("#kmbar").fadeTo(1, 1, function() {});
+            document.getElementById("vehud").style.visibility = "visible";
+        }
+    }
+
+    function SetPlayerHUDVehicleSpeed(speed) {
+        document.getElementsByClassName('kmhtext')[0].innerHTML = speed + " km/h";
+    }
+
+    function SetPlayerHUDVehicleInfos(fuel, km) {
+        document.getElementsByClassName('fuelbar')[0].innerHTML = fuel + " Liter";
+        //document.getElementById('fuelbar')[0].innerHTML = fuel + " Liter";
+        //document.getElementById('kmbar')[0].innerHTML = km + " KM";
+        document.getElementsByClassName('kmbar')[0].innerHTML = km + " KM";
+    }
+
+    function updateVoiceHUD(state) {
+        $("#voicemic").attr("src", "../utils/img/micmute.png");
+        switch (state) {
+            case 0:
+                document.getElementById("micsubline").style.width = "0%";
+                break;
+            case 3:
+                document.getElementById("micsubline").style.width = "35%";
+                break;
+            case 8:
+                document.getElementById("micsubline").style.width = "50%";
+                break;
+            case 15:
+                document.getElementById("micsubline").style.width = "75%";
+                break;
+            case 32:
+                document.getElementById("micsubline").style.width = "100%";
+                break;
+        }
+    }
+
+    function updateSpeakState(state) {
+        if (state) {
+            $("#micicon").css("color", "rgb(47, 120, 255)");
+        } else {
+            $("#micicon").css("color", "rgb(255, 255, 255)");
+        }
+    }
+
+    function updateDesireHUD(food, thirst) {
+        document.getElementById("foodsubline").style.width = food + "%";
+        document.getElementById("thirstsubline").style.width = thirst + "%";
+    }
+
+    function updateStreetLocation(loc) {
+        $("#locationtext").html(loc);
+    }
+
+    /* Interaktionsmenü Zeug */
+    var interactItems = null;
+
+    function toggleInterActionMenu(state, type, itemArray) {
+        var interactHTML = itemArray;
+        if (state == true) {
+            globalInteractMenuType = type;
+            $("#InteractionMenu-List").html(interactHTML);
+            interactItems = $("li.interactitem");
+
+            interactItems.mouseleave(function() {
+                globalInteractMenuAction = "close";
+                $("#InteractionMenu-SelectedTitle").html("Schließen");
+            });
+
+            interactItems.mouseenter(function() {
+                globalInteractMenuAction = $(this).attr('data-action');
+                interactString = $(this).attr('data-actionstring');
+                $("#InteractionMenu-SelectedTitle").html($(this).attr('data-actionstring'));
+            });
+            $("#InteractionMenu-List").show();
+
+            transformInteractMenuItems();
+        } else {
+            $("#InteractionMenu-List").hide();
+        }
+    }
+
+    function toggleInterActionMenuAnimation(state, itemArray) {
+        var interactHTML = itemArray;
+        if (state == true) {
+            $("#InteractionMenu-List").html(interactHTML);
+            interactItems = $("li.interactitem");
+
+            interactItems.mouseleave(function() {
+                globalAnimationMenuAction = "close";
+                $("#InteractionMenu-SelectedTitle").html("Schließen");
+            });
+
+            interactItems.mouseenter(function() {
+                globalAnimationMenuAction = $(this).attr('data-action');
+                interactString = $(this).attr('data-actionstring');
+                $("#InteractionMenu-SelectedTitle").html($(this).attr('data-actionstring'));
+            });
+            $("#InteractionMenu-List").show();
+
+            transformInteractMenuItems();
+        } else {
+            $("#InteractionMenu-List").hide();
+        }
+    }
+
+    function toggleInterActionMenuAnimationPage2(state, itemArray) {
+        var interactHTML = itemArray;
+        if (state == true) {
+            $("#InteractionMenu-List").html(interactHTML);
+            interactItems = $("li.interactitem");
+
+            interactItems.mouseleave(function() {
+                globalAnimationMenuAction = "close";
+                $("#InteractionMenu-SelectedTitle").html("Schließen");
+            });
+
+            interactItems.mouseenter(function() {
+                globalAnimationMenuAction = $(this).attr('data-action');
+                interactString = $(this).attr('data-actionstring');
+                $("#InteractionMenu-SelectedTitle").html($(this).attr('data-actionstring'));
+            });
+            $("#InteractionMenu-List").show();
+
+            transformInteractMenuItems();
+        } else {
+            $("#InteractionMenu-List").hide();
+        }
+    }
+
+    function toggleInterActionMenuAnimationPage3(state, itemArray) {
+        var interactHTML = itemArray;
+        if (state == true) {
+            $("#InteractionMenu-List").html(interactHTML);
+            interactItems = $("li.interactitem");
+
+            interactItems.mouseleave(function() {
+                globalAnimationMenuAction = "close";
+                $("#InteractionMenu-SelectedTitle").html("Schließen");
+            });
+
+            interactItems.mouseenter(function() {
+                globalAnimationMenuAction = $(this).attr('data-action');
+                interactString = $(this).attr('data-actionstring');
+                $("#InteractionMenu-SelectedTitle").html($(this).attr('data-actionstring'));
+            });
+            $("#InteractionMenu-List").show();
+
+            transformInteractMenuItems();
+        } else {
+            $("#InteractionMenu-List").hide();
+        }
+    }
+
+    function toggleClothesRadialMenu(state, itemArray) {
+        var interactHTML = itemArray;
+        if (state == true) {
+            $("#InteractionMenu-List").html(interactHTML);
+            interactItems = $("li.interactitem");
+
+            interactItems.mouseleave(function() {
+                globalAnimationMenuAction = "close";
+                $("#InteractionMenu-SelectedTitle").html("Schließen");
+            });
+
+            interactItems.mouseenter(function() {
+                globalAnimationMenuAction = $(this).attr('data-action');
+                interactString = $(this).attr('data-actionstring');
+                $("#InteractionMenu-SelectedTitle").html($(this).attr('data-actionstring'));
+            });
+            $("#InteractionMenu-List").show();
+
+            transformInteractMenuItems();
+        } else {
+            $("#InteractionMenu-List").hide();
+        }
+    }
+
+    function transformInteractMenuItems() {
+        //Items richtig im Kreis anordnen  
+        var $items = $('li.interactitem:not(:first-child)'),
+            numberOfItems = (type === 1) ? $items.length : $items.length - 1,
+            slice = 360 * type / numberOfItems;
+
+        $items.each(function(i) {
+            var $self = $(this),
+                rotate = slice * i + start,
+                rotateReverse = rotate * -1;
+
+            $self.css({
+                'transform': 'rotate(' + rotate + 'deg) translate(' + radius + ') rotate(' + rotateReverse + 'deg)'
+            });
+        });
+    }
+
+    function CreateIdentityCardApplyForm(charname, gender, adress, birthdate) {
+        $("#identityCardApplyFormCharname").val(charname);
+        if (gender == true || gender == "true") {
+            gender = "Weiblich";
+        } else if (gender == false || gender == "false") {
+            gender = "Männlich";
+        }
+        $("#identityCardApplyFormGender").val(gender);
+        $("#identityCardApplyFormAdress").val(adress);
+        $("#identityCardApplyFormBirthdate").val(birthdate);
+        $("#identityCardApplyForm").fadeTo(1000, 1, function() {});
+    }
+
+    function SendIdentityCardApplyForm() {
+        var birthplace = $("#identityCardApplyFormBirthplace").val().replace(/^\s+|\s+$/g, "");
+        if (birthplace.length <= 0) {
+            return;
+        }
+
+        alt.emit("Client:HUD:sendIdentityCardApplyForm", birthplace);
+        $("#identityCardApplyForm").fadeTo(1000, 0, function() {
+            $("#identityCardApplyForm").hide();
+        });
+    }
+
+    function createBankAccountManageForm(bankArray, curBank) {
+        var bankFormHTML = "";
+        var bankAccountCount = 0;
+        bankArray = JSON.parse(bankArray);
+        for (var i in bankArray) {
+            bankFormHTML += `<li class='list-group-item'><p class='title'>Konto Nr.: ${bankArray[i].accountNumber}</p><p class='floatleft'>Kontostand:</p><p class='floatright'>${bankArray[i].money}$</p><p class='floatleft'>Gründungsort:</p><p class='floatright'>${bankArray[i].createZone}</p>` +
+                "<button class='btn btn-primary' onclick='BankAccountManageFormAction(`generatepin`, " + bankArray[i].accountNumber + ");'>Pin Ändern</button>";
+
+            if (bankArray[i].closed === true) {
+                bankFormHTML += "<button class='btn btn-primary' onclick='BankAccountManageFormAction(`lock`, " + bankArray[i].accountNumber + ");'>Konto Entsperren</button>";
+            } else {
+                bankFormHTML += "<button class='btn btn-primary' onclick='BankAccountManageFormAction(`lock`, " + bankArray[i].accountNumber + ");'>Konto Sperren</button>";
+            }
+
+            if (bankArray[i].mainAccount === true) {
+                bankFormHTML += "<button class='btn btn-primary' onclick='BankAccountManageFormAction(`setMain`, " + bankArray[i].accountNumber + ");'>Hauptkonto</button>";
+                bankAccountCount++;
+            } else {
+                bankFormHTML += "<button class='btn btn-primary' onclick='BankAccountManageFormAction(`setMain`, " + bankArray[i].accountNumber + ");'>Hauptkonto</button>";
+                bankAccountCount++;
+            }
+            bankFormHTML += "<button class='btn btn-primary' onclick='BankAccountManageFormAction(`copycard`, " + bankArray[i].accountNumber + ");'>Neue Karte Beantragen</button>";
+            bankFormHTML += "</li>";
+        }
+
+        if (bankAccountCount < 2) {
+            bankFormHTML += "<li class='list-group-item new' onclick='BankAccountManageFormCreateNewAccount()'><p class='title'>Neues Konto</p><i class='fas fa-plus'></i></li>";
+        }
+        selectedBank = curBank;
+        $("#bankAccountManageFormList").html(bankFormHTML);
+        $("#bankAccountManageForm").fadeTo(1000, 1, function() {});
+    }
+
+    function BankAccountManageFormDestroyCEF() {
+        $("#bankAccountManageForm").fadeOut(500, function() {
+            $("#bankAccountManageForm").hide();
+        });
+        alt.emit('Client:Bank:BankAccountdestroyCEF');
+    }
+
+    $("#bankFactionATMForm-DepositBtn").click(function() {
+        var selectedAmount = $("#bankFactionATMForm-DepositInput").val();
+        if (selectedAmount < 1 || selectedAmount == "" || globalFactionATMfactionid == undefined || globalFactionATMfactionid == 0 || globalFactionATMfactionid == "0") return;
+        if (globalFactionATMtype == undefined || globalFactionATMtype == 0 || globalFactionATMtype == "") return;
+        alt.emit("Client:FactionBank:DepositMoney", globalFactionATMtype, globalFactionATMfactionid, selectedAmount);
+        BankFactionATMFormDestroyCEF();
+    });
+
+    $("#bankFactionATMForm-WithdrawBtn").click(function() {
+        var selectedAmount = $("#bankFactionATMForm-WithdrawInput").val();
+        if (selectedAmount < 1 || selectedAmount == "" || globalFactionATMfactionid == undefined || globalFactionATMfactionid == 0 || globalFactionATMfactionid == "0") return;
+        if (globalFactionATMtype == undefined || globalFactionATMtype == 0 || globalFactionATMtype == "") return;
+        alt.emit("Client:FactionBank:WithdrawMoney", globalFactionATMtype, globalFactionATMfactionid, selectedAmount);
+        BankFactionATMFormDestroyCEF();
+    });
+
+
+    function BankFactionATMFormDestroyCEF() {
+        $("#bankFactionATMForm").fadeOut(500, function() {
+            globalFactionATMfactionid = undefined;
+            globalFactionATMtype = undefined;
+            $("#bankFactionATMForm").hide();
+        });
+        alt.emit("Client:FactionBank:destroyCEF");
+    }
+
+    function BankAccountManageFormCreateNewAccount() {
+        if (selectedBank == "None") return;
+        alt.emit("Client:Bank:BankAccountCreateNewAccount", selectedBank);
+        $("#bankAccountManageForm").hide();
+    }
+
+    function BankAccountManageFormAction(action, accountNumber) {
+        alt.emit("Client:Bank:BankAccountAction", action, `${accountNumber}`);
+        $("#bankAccountManageForm").hide();
+    }
+
+    function BankATMcreateCEF(PIN, accountNumber) {
+        curATMPin = PIN;
+        curATMAccountNumber = accountNumber;
+        BankATMshowSite("bankATMbox-PinArea");
+        $("#bankATMbox").fadeTo(1000, 1, function() {});
+    }
+
+    function BankATMdestroyCEF() {
+        $("#bankATMbox").fadeOut(500, function() {
+            $("#bankATMbox").hide();
+        });
+        alt.emit("Client:ATM:BankATMdestroyCEF");
+    }
+
+    $("#bankATMBox-PinInput-Button").click(function() {
+        var inputPin = $("#bankATMBox-PinInput").val();
+        if (curATMPin == inputPin) {
+            alt.emit("Client:ATM:TryPin", "reset", curATMAccountNumber);
+            BankATMshowSite("bankATMbox-OverviewArea");
+        } else {
+            alt.emit("Client:ATM:TryPin", "increase", curATMAccountNumber);
+        }
+    });
+
+    $("#bankATMBox-DepositArea-Button").click(function() {
+        var selectedAmount = $("#bankATMBox-DepositInput").val();
+        if (selectedAmount < 1 || selectedAmount == "") return;
+        alt.emit("Client:ATM:DepositMoney", curATMAccountNumber, selectedAmount, curATMzoneName);
+        BankATMshowSite("bankATMbox-OverviewArea");
+    });
+
+    $("#bankATMBox-WithdrawArea-Button").click(function() {
+        var selectedAmount = $("#bankATMBox-WithdrawInput").val();
+        if (selectedAmount < 1 || selectedAmount == "") return;
+        alt.emit("Client:ATM:WithdrawMoney", curATMAccountNumber, selectedAmount, curATMzoneName);
+        BankATMshowSite("bankATMbox-OverviewArea");
+    });
+
+    $("#bankATMBox-DoMoneyTransfer-Button").click(function() {
+        var targetAccount = $("#bankATMBox-MoneyTransferTargetInput").val();
+        var selectedAmount = $("#bankATMBox-MoneytransferInput").val();
+        if (selectedAmount < 1 || selectedAmount == "" || targetAccount == 0 || targetAccount == "") return;
+        alt.emit("Client:ATM:TransferMoney", curATMAccountNumber, targetAccount, selectedAmount, curATMzoneName);
+        BankATMshowSite("bankATMbox-OverviewArea");
+    });
+
+    function BankATMshowSite(site) {
+        $("#bankATMbox-PinArea").hide();
+        $("#bankATMbox-WithDrawArea").hide();
+        $("#bankATMbox-DepositArea").hide();
+        $("#bankATMbox-ViewTransactionArea").hide();
+        $("#bankATMbox-OverviewArea").hide();
+        $("#bankATMbox-DoMoneyTransfer").hide();
+        $(`#${site}`).fadeTo(500, 1, function() {
+            $(`#${site}`).show();
+        });
+
+        if (site == "bankATMbox-PinArea") {
+            $("#bankATMboxDescriptionTitle").html("Um weitere Aktionen durchführen zu können geben Sie bitte Ihre Geheimzahl ein.<br>Geben Sie Ihre Geheimzahl zu oft falsch ein wird Ihre Karte gesperrt.");
+        } else if (site == "bankATMbox-OverviewArea") {
+            $("#bankATMboxDescriptionTitle").html("Wählen Sie eine der unten aufgelisteten Möglichkeiten aus.");
+            alt.emit("Client:ATM:requestBankData", curATMAccountNumber);
+        }
+    }
+
+    function BankATMSetRequestedData(curBalance, bankPaperArray) {
+        bankPaperArray = JSON.parse(bankPaperArray);
+        let bankPaperHTML = "";
+
+        for (var i in bankPaperArray) {
+            if (bankPaperArray[i].Type == "Einzahlung") {
+                bankPaperHTML += "<div class='card text-white green'>";
+            } else if (bankPaperArray[i].Type == "Auszahlung") {
+                bankPaperHTML += "<div class='card text-white red'>";
+            } else if (bankPaperArray[i].Type == "Eingehende Überweisung" || bankPaperArray[i].Type == "Ausgehende Überweisung") {
+                bankPaperHTML += "<div class='card text-white blue'>";
+            }
+
+            bankPaperHTML += `<div class='card-header'>Aktivität vom ${bankPaperArray[i].Date} ${bankPaperArray[i].Time} Uhr</div>` +
+                `<div class='card-body'><h6 class='card-title'>${bankPaperArray[i].Type}</h6><p class='card-text'>`;
+
+            if (bankPaperArray[i].Type == "Einzahlung" || bankPaperArray[i].Type == "Auszahlung") {
+                bankPaperHTML += `<b>Standort: </b>${bankPaperArray[i].zoneName}<br>` +
+                    `<b>Betrag: </b>${bankPaperArray[i].moneyAmount}$<br>`;
+            } else if (bankPaperArray[i].Type == "Ausgehende Überweisung") {
+                bankPaperHTML += `<b>Absender: </b>${bankPaperArray[i].accountNumber}<br>` +
+                    `<b>Empfänger: </b>${bankPaperArray[i].ToOrFrom}<br>` +
+                    `<b>Standort: </b>${bankPaperArray[i].zoneName}<br>` +
+                    `<b>Betrag: </b>${bankPaperArray[i].moneyAmount}$<br>`;
+            } else if (bankPaperArray[i].Type == "Eingehende Überweisung") {
+                bankPaperHTML += `<b>Absender: </b>${bankPaperArray[i].ToOrFrom}<br>` +
+                    `<b>Empfänger: </b>${bankPaperArray[i].accountNumber}<br>` +
+                    `<b>Standort: </b>${bankPaperArray[i].zoneName}<br>` +
+                    `<b>Betrag: </b>${bankPaperArray[i].moneyAmount}$<br>`;
+            }
+            bankPaperHTML += `</p></div></div>`;
+        }
+
+        $("#bankATMBox-WithdrawBalanceInput").val(`${curBalance}$`);
+        $("#bankATMBox-DepositBalanceInput").val(`${curBalance}$`);
+        $("#bankATMBox-MoneyTransferBalanceInput").val(`${curBalance}$`);
+        $("#bankATMbox-ViewTransactionArea-List").html(bankPaperHTML);
+    }
+
+    function shopCEFBoxDestroy() {
+        $("#shopCEFBox").fadeOut(500, function() {
+            $("#shopCEFBox").hide();
+            alt.emit("Client:Shop:destroyShopCEF");
+        });
+    }
+
+    function shopCEFBuyItem(htmlelem, itemname, itemmaxamount, isOnlySelling) {
+        var listitem = $(htmlelem).parent();
+        var listItemInput = $(listitem).find("input").val();
+        if (itemname == "" || itemname == undefined || itemname == null) return;
+        if (isOnlySelling == false) {
+            if (itemmaxamount == 0) {
+                ShowNotification(3, `Der Shop hat den ausgewählten Gegenstand nicht mehr auf Lager.`, 5000);
+                return;
+            }
+            if (listItemInput > itemmaxamount) {
+                ShowNotification(3, `Du kannst nur maximal ${itemmaxamount} Gegenstände davon erwerben (deine Auswahl: ${listItemInput})!`, 5000);
+                return;
+            }
+
+            alt.emit("Client:Shop:buyItem", globalShopId, listItemInput, itemname);
+        } else if (isOnlySelling == true) {
+            if (listItemInput > itemmaxamount) {
+                ShowNotification(3, `Du kannst nur maximal ${itemmaxamount} verkaufen da du nicht mehr dabei hast.`, 5000);
+                return;
+            }
+            alt.emit("Client:Shop:sellItem", globalShopId, listItemInput, itemname);
+        }
+        shopCEFBoxDestroy();
+    }
+
+    function shopCEFBoxCreateCEF(itemArray, shopId, isOnlySelling) {
+        itemArray = JSON.parse(itemArray);
+        let shopCefHTML = "";
+        globalShopId = shopId;
+
+        for (var i in itemArray) {
+            shopCefHTML += "<li class='list-group-item'>" +
+                `<img src='../utils/img/inventory/${itemArray[i].itempic}'><p class='name'>${itemArray[i].itemname}</p><hr><p class='price'>${itemArray[i].itemprice}$</p><hr>` +
+                `<input type='number' value='1' placeholder='Anzahl' spellcheck='false' onkeypress='return event.charCode >= 48 && event.charCode <= 57'>` +
+                "<button type='button' class='btn' onclick='shopCEFBuyItem(this, `" + itemArray[i].itemname + "`, " + itemArray[i].itemmaxamount + ", " + isOnlySelling + ");'><i class='fas fa-shopping-basket'></i></button></li>";
+        }
+
+        if (isOnlySelling == false) {
+            $("#shopCEFBox-Title").html(`EINKAUFSLADEN`);
+            $("#shopCEFBox-RobButton").show();
+            $("#shopCEFBox-RobButton").attr("onclick", `robShop(${shopId});`);
+        } else if (isOnlySelling == true) {
+            $("#shopCEFBox-RobButton").attr("onclick", "");
+            $("#shopCEFBox-RobButton").hide();
+            $("#shopCEFBox-Title").html(`GEGENSTÄNDE VERKAUFEN`);
+        }
+        $("#shopCEFBox-List").html(shopCefHTML);
+        $("#shopCEFBox").fadeTo(1000, 1, function() {});
+    }
+
+    function robShop(shopId) {
+        alt.emit("Client:Shop:robShop", shopId);
+        shopCEFBoxDestroy();
+    }
+
+    function BarberChangeHair(id) {
+        switch (id) {
+            case 0:
+                globalBarberheadoverlaysarray[0][13] = document.getElementById("BarberHairVariation").value;
+                if (document.getElementById("BarberHairVariation").value == "23") {
+                    globalBarberheadoverlaysarray[0][13] = 22;
+                }
+                break;
+            case 1:
+                globalBarberheadoverlaysarray[2][13] = document.getElementById("BarberHairColor1").value;
+                break;
+            case 2:
+                globalBarberheadoverlaysarray[1][13] = document.getElementById("BarberHairColor2").value;
+                break;
+            case 3:
+                globalBarberheadoverlaysarray[0][1] = document.getElementById("BarberBeardVariation").value;
+                break;
+            case 4:
+                globalBarberheadoverlaysarray[2][1] = document.getElementById("BarberBeardColor").value;
+                break;
+            case 5:
+                globalBarberheadoverlaysarray[0][2] = document.getElementById("BarberEyebrowsVariation").value;
+                break;
+            case 6:
+                globalBarberheadoverlaysarray[2][2] = document.getElementById("BarberEyebrowsColor").value;
+                break;
+            case 7:
+                globalBarberheadoverlaysarray[0][4] = document.getElementById("BarberMakeupVariation").value;
+                break;
+            case 8:
+                globalBarberheadoverlaysarray[1][4] = document.getElementById("BarberMakeupAlpha").value;
+                break;
+            case 9:
+                globalBarberheadoverlaysarray[0][8] = document.getElementById("BarberLipstickVariation").value;
+                break;
+            case 10:
+                globalBarberheadoverlaysarray[2][8] = document.getElementById("BarberLipstickColor").value;
+                break;
+            case 11:
+                globalBarberheadoverlaysarray[0][5] = document.getElementById("BarberWangenBlushVariation").value;
+                break;
+            case 12:
+                globalBarberheadoverlaysarray[2][5] = document.getElementById("BarberWangenBlushColor").value;
+                break;
+        }
+        alt.emit("Client:Barber:UpdateHeadOverlays", JSON.stringify(globalBarberheadoverlaysarray));
+    }
+
+    function ChangeHead(id, index) {
+        switch (id) {
+            case 0:
+                headblendsdata[0] = fatherVar.value;
+                if (fatherVar.value == "0") {
+                    headblendsdata[0] = 0;
+                } else if (fatherVar.value == "1") {
+                    headblendsdata[0] = 1;
+                } else if (fatherVar.value == "2") {
+                    headblendsdata[0] = 2;
+                } else if (fatherVar.value == "3") {
+                    headblendsdata[0] = 3;
+                } else if (fatherVar.value == "4") {
+                    headblendsdata[0] = 4;
+                } else if (fatherVar.value == "5") {
+                    headblendsdata[0] = 5;
+                } else if (fatherVar.value == "6") {
+                    headblendsdata[0] = 6;
+                } else if (fatherVar.value == "7") {
+                    headblendsdata[0] = 7;
+                } else if (fatherVar.value == "8") {
+                    headblendsdata[0] = 8;
+                } else if (fatherVar.value == "9") {
+                    headblendsdata[0] = 9;
+                } else if (fatherVar.value == "10") {
+                    headblendsdata[0] = 10;
+                } else if (fatherVar.value == "11") {
+                    headblendsdata[0] = 11;
+                } else if (fatherVar.value == "12") {
+                    headblendsdata[0] = 12;
+                } else if (fatherVar.value == "13") {
+                    headblendsdata[0] = 13;
+                } else if (fatherVar.value == "14") {
+                    headblendsdata[0] = 14;
+                } else if (fatherVar.value == "15") {
+                    headblendsdata[0] = 15;
+                } else if (fatherVar.value == "16") {
+                    headblendsdata[0] = 16;
+                } else if (fatherVar.value == "17") {
+                    headblendsdata[0] = 17;
+                } else if (fatherVar.value == "18") {
+                    headblendsdata[0] = 18;
+                } else if (fatherVar.value == "19") {
+                    headblendsdata[0] = 19;
+                } else if (fatherVar.value == "20") {
+                    headblendsdata[0] = 20;
+                } else if (fatherVar.value == "21") {
+                    headblendsdata[0] = 42;
+                } else if (fatherVar.value == "22") {
+                    headblendsdata[0] = 43;
+                } else if (fatherVar.value == "23") {
+                    headblendsdata[0] = 44;
+                }
+                break;
+            case 1:
+                headblendsdata[1] = motherVar.value + 21;
+                if (motherVar.value == "0") {
+                    headblendsdata[1] = 21;
+                } else if (motherVar.value == "1") {
+                    headblendsdata[1] = 22;
+                } else if (motherVar.value == "2") {
+                    headblendsdata[1] = 23;
+                } else if (motherVar.value == "3") {
+                    headblendsdata[1] = 24;
+                } else if (motherVar.value == "4") {
+                    headblendsdata[1] = 25;
+                } else if (motherVar.value == "5") {
+                    headblendsdata[1] = 26;
+                } else if (motherVar.value == "6") {
+                    headblendsdata[1] = 27;
+                } else if (motherVar.value == "7") {
+                    headblendsdata[1] = 28;
+                } else if (motherVar.value == "8") {
+                    headblendsdata[1] = 29;
+                } else if (motherVar.value == "9") {
+                    headblendsdata[1] = 30;
+                } else if (motherVar.value == "10") {
+                    headblendsdata[1] = 31;
+                } else if (motherVar.value == "11") {
+                    headblendsdata[1] = 32;
+                } else if (motherVar.value == "12") {
+                    headblendsdata[1] = 33;
+                } else if (motherVar.value == "13") {
+                    headblendsdata[1] = 34;
+                } else if (motherVar.value == "14") {
+                    headblendsdata[1] = 35;
+                } else if (motherVar.value == "15") {
+                    headblendsdata[1] = 37;
+                } else if (motherVar.value == "16") {
+                    headblendsdata[1] = 38;
+                } else if (motherVar.value == "17") {
+                    headblendsdata[1] = 40;
+                } else if (motherVar.value == "18") {
+                    headblendsdata[1] = 41;
+                } else if (motherVar.value == "19") {
+                    headblendsdata[1] = 45;
+                }
+                break;
+            case 2:
+                headblendsdata[3] = document.getElementById("FatherMotherMix").value;
+                break;
+            case 3:
+                headoverlaysarray[1][5] = document.getElementById("WangenBlushAlpha").value;
+                break;
+            case 4:
+                headoverlaysarray[0][5] = document.getElementById("WangenBlushVariation").value;
+                break;
+            case 5:
+                headoverlaysarray[2][5] = document.getElementById("WangenBlushColor").value;
+                break;
+            case 6:
+                headoverlaysarray[1][4] = document.getElementById("MakeupAlpha").value;
+                break;
+            case 7:
+                headoverlaysarray[0][4] = document.getElementById("MakeupVariation").value;
+                break;
+            case 8:
+                headoverlaysarray[1][8] = document.getElementById("LipstickAlpha").value;
+                break;
+            case 9:
+                headoverlaysarray[0][8] = document.getElementById("LipstickVariation").value;
+                break;
+            case 10:
+                headoverlaysarray[2][8] = document.getElementById("LipstickColor").value;
+                break;
+            case 11:
+                headoverlaysarray[1][0] = document.getElementById("BlemishesAlpha").value;
+                break;
+            case 12:
+                headoverlaysarray[0][0] = document.getElementById("BlemishesIndex").value;
+                break;
+            case 13:
+                headoverlaysarray[1][3] = document.getElementById("AgeingAlpha").value;
+                break;
+            case 14:
+                headoverlaysarray[0][3] = document.getElementById("AgeingVariation").value;
+                break;
+            case 15:
+                headoverlaysarray[1][6] = document.getElementById("ComplexionAlpha").value;
+                break;
+            case 16:
+                headoverlaysarray[0][6] = document.getElementById("ComplexionIndex").value;
+                break;
+            case 17:
+                headoverlaysarray[1][7] = document.getElementById("SunDamageAlpha").value;
+                break;
+            case 18:
+                headoverlaysarray[0][7] = document.getElementById("SunDamageIndex").value;
+                break;
+            case 19:
+                headoverlaysarray[1][9] = document.getElementById("MolesAlpha").value;
+                break;
+            case 20:
+                headoverlaysarray[0][9] = document.getElementById("MolesIndex").value;
+                break;
+            case 21:
+                headblendsdata[5] = fatherSkinVar.value;
+                if (fatherSkinVar.value == "0") {
+                    headblendsdata[5] = 0;
+                } else if (fatherSkinVar.value == "1") {
+                    headblendsdata[5] = 1;
+                } else if (fatherSkinVar.value == "2") {
+                    headblendsdata[5] = 2;
+                } else if (fatherSkinVar.value == "3") {
+                    headblendsdata[5] = 3;
+                } else if (fatherSkinVar.value == "4") {
+                    headblendsdata[5] = 4;
+                } else if (fatherSkinVar.value == "5") {
+                    headblendsdata[5] = 5;
+                } else if (fatherSkinVar.value == "6") {
+                    headblendsdata[5] = 6;
+                } else if (fatherSkinVar.value == "7") {
+                    headblendsdata[5] = 7;
+                } else if (fatherSkinVar.value == "8") {
+                    headblendsdata[5] = 8;
+                } else if (fatherSkinVar.value == "9") {
+                    headblendsdata[5] = 9;
+                } else if (fatherSkinVar.value == "10") {
+                    headblendsdata[5] = 10;
+                } else if (fatherSkinVar.value == "11") {
+                    headblendsdata[5] = 11;
+                } else if (fatherSkinVar.value == "12") {
+                    headblendsdata[5] = 12;
+                } else if (fatherSkinVar.value == "13") {
+                    headblendsdata[5] = 13;
+                } else if (fatherSkinVar.value == "14") {
+                    headblendsdata[5] = 14;
+                } else if (fatherSkinVar.value == "15") {
+                    headblendsdata[5] = 15;
+                } else if (fatherSkinVar.value == "16") {
+                    headblendsdata[5] = 16;
+                } else if (fatherSkinVar.value == "17") {
+                    headblendsdata[5] = 17;
+                } else if (fatherSkinVar.value == "18") {
+                    headblendsdata[5] = 18;
+                } else if (fatherSkinVar.value == "19") {
+                    headblendsdata[5] = 19;
+                } else if (fatherSkinVar.value == "20") {
+                    headblendsdata[5] = 20;
+                } else if (fatherSkinVar.value == "21") {
+                    headblendsdata[5] = 42;
+                } else if (fatherSkinVar.value == "22") {
+                    headblendsdata[5] = 43;
+                } else if (fatherSkinVar.value == "23") {
+                    headblendsdata[5] = 44;
+                }
+                break;
+            case 22:
+                headblendsdata[2] = motherSkinVar.value;
+                if (motherSkinVar.value == "0") {
+                    headblendsdata[2] = 21;
+                } else if (motherSkinVar.value == "1") {
+                    headblendsdata[2] = 22;
+                } else if (motherSkinVar.value == "2") {
+                    headblendsdata[2] = 23;
+                } else if (motherSkinVar.value == "3") {
+                    headblendsdata[2] = 24;
+                } else if (motherSkinVar.value == "4") {
+                    headblendsdata[2] = 25;
+                } else if (motherSkinVar.value == "5") {
+                    headblendsdata[2] = 26;
+                } else if (motherSkinVar.value == "6") {
+                    headblendsdata[2] = 27;
+                } else if (motherSkinVar.value == "7") {
+                    headblendsdata[2] = 28;
+                } else if (motherSkinVar.value == "8") {
+                    headblendsdata[2] = 29;
+                } else if (motherSkinVar.value == "9") {
+                    headblendsdata[2] = 30;
+                } else if (motherSkinVar.value == "10") {
+                    headblendsdata[2] = 31;
+                } else if (motherSkinVar.value == "11") {
+                    headblendsdata[2] = 32;
+                } else if (motherSkinVar.value == "12") {
+                    headblendsdata[2] = 33;
+                } else if (motherSkinVar.value == "13") {
+                    headblendsdata[2] = 34;
+                } else if (motherSkinVar.value == "14") {
+                    headblendsdata[2] = 35;
+                } else if (motherSkinVar.value == "15") {
+                    headblendsdata[2] = 37;
+                } else if (motherSkinVar.value == "16") {
+                    headblendsdata[2] = 38;
+                } else if (motherSkinVar.value == "17") {
+                    headblendsdata[2] = 40;
+                } else if (motherSkinVar.value == "18") {
+                    headblendsdata[2] = 41;
+                } else if (motherSkinVar.value == "19") {
+                    headblendsdata[2] = 45;
+                }
+                break;
+            case 23:
+                headblendsdata[4] = document.getElementById("FatherMotherSkinMix").value;
+                break;
+            case 24:
+                headoverlaysarray[0][14] = document.getElementById("EyesColor").value;
+                break;
+        }
+
+        alt.emit('Client:Charcreator:UpdateHeadOverlays', JSON.stringify(headoverlaysarray));
+        alt.emit('Client:Charcreator:UpdateHeadBlends', JSON.stringify(headblendsdata));
+    }
+
+    function BarberBuyHairStyles() {
+        $("#BarberBuyButton").prop("disabled", true);
+        alt.emit("Client:Barber:finishBarber", JSON.stringify(globalBarberheadoverlaysarray));
+        barberCEFBoxdestroy();
+        setTimeout(() => {
+            $("#BarberBuyButton").prop("disabled", false);
+        }, 2500);
+    }
+
+    function CloseBarberCEF() {
+        alt.emit("Client:Barber:RequestCurrentSkin");
+        barberCEFBoxdestroy();
+    }
+
+    function barberCEFBoxdestroy() {
+        $("#barberCEFBox").fadeOut(500, function() {
+            $("#barberCEFBox").hide();
+        });
+        alt.emit("Client:Barber:destroyBarberCEF");
+    }
+
+    function clickdropBarber(current) {
+        $(".dropdown-selector").prop("checked", false);
+        $(current).prop("checked", true);
+    }
+
+    function SetVehicleShopCEFListContent(shopid, shopname, itemarray) {
+        var vehshophtml = "",
+            itemarray = JSON.parse(itemarray);
+
+        for (var i in itemarray) {
+            vehshophtml += `<li class='list-group-item'><img src='../utils/img/vehicles/${itemarray[i].hash}.png'><span><b>Fahrzeugname: </b>${itemarray[i].name}</span><br><span><b>Hersteller: </b>${itemarray[i].manufactor}</span><br>` +
+                `<span><b>Treibstoff: </b>${itemarray[i].fueltype}</span><br><span><b>Tankgröße: </b>${itemarray[i].maxfuel} Liter</span><br><span><b>Kofferraum: </b>${itemarray[i].trunkcapacity}kg</span><br>` +
+                `<span><b>Sitzplätze: </b>${itemarray[i].seats}</span><br><span><b>Preis: </b>${itemarray[i].price}$</span>` +
+                "<span class='buybtn' onclick='VehicleShopCEFBuyItem(`" + itemarray[i].hash + "`);'><i class='fas fa-dollar-sign'></i></span></li>";
+        }
+
+        $("#VehicleShopCEFBox-title").html(`${shopname}`);
+        $("#VehicleShopCEFBox-StoreList").html(vehshophtml);
+        $("#VehicleShopCEFBox").fadeTo(1000, 1, function() {});
+    }
+
+    function VehicleShopCEFBuyItem(hash) {
+        alt.emit("Client:VehicleShop:BuyVehicle", curVehShopId, hash);
+        CloseVehicleShopCEF();
+    }
+
+    function CloseVehicleShopCEF() {
+        $("#VehicleShopCEFBox").fadeOut(500, function() {
+            $("#VehicleShopCEFBox").hide();
+            curVehShopId = undefined;
+        });
+        alt.emit("Client:VehicleShop:destroyVehicleShopCEF");
+    }
+
+    var globalHotelApartmentsArray = [];
+
+    function setHotelApartmentsItems(array) {
+        array = JSON.parse(array);
+        for (var i in array) {
+            globalHotelApartmentsArray.push(array[i]);
+        }
+    }
+
+    function openHotelRentCEF(hotelname) {
+        var hotelHTML = "";
+        for (var i in globalHotelApartmentsArray) {
+            hotelHTML += `<li class='list-group-item'><p class='title'>Zimmer ${globalHotelApartmentsArray[i].apartmentId}</p>`;
+
+            if (globalHotelApartmentsArray[i].ownerId >= 1) {
+                hotelHTML += `<p class='rentstate'><i class='fas fa-bed'></i>Mietstatus: <font style='color: #e83838'>Belegt</font></p>` +
+                    `<p class='rentstate'><i class='fas fa-user'></i>Mieter: <font>${globalHotelApartmentsArray[i].ownerName}</font></p>`;
+            } else {
+                hotelHTML += `<p class='rentstate'><i class='fas fa-bed'></i>Mietstatus: <font style='color: #38e876'>Frei</font></p>` +
+                    `<p class='rentstate'><i class='fas fa-user'></i>Mieter: <font>-/-</font></p>`;
+            }
+
+            hotelHTML += `<p class='rentstate'><i class='far fa-clock'></i>Mietdauer: <font>${globalHotelApartmentsArray[i].maxRentHours} Std.</font></p>` +
+                `<p class='rentstate'><i class='fas fa-dollar-sign'></i>Mietpreis: <font>${globalHotelApartmentsArray[i].rentPrice}$</font></p>` +
+                `<button type='button' class='btn btn-sm btn-danger' onclick='LockHotel("${globalHotelApartmentsArray[i].hotelId}", "${globalHotelApartmentsArray[i].apartmentId}");'><i class='fas fa-lock'></i></button>` +
+                `<button type='button' class='btn btn-sm btn-danger' onclick='RentHotel("${globalHotelApartmentsArray[i].hotelId}", "${globalHotelApartmentsArray[i].apartmentId}");'><i class='fas fa-dollar-sign'></i></button>` +
+                `<button type='button' class='btn btn-sm btn-danger' onclick='EnterHotel("${globalHotelApartmentsArray[i].hotelId}", "${globalHotelApartmentsArray[i].apartmentId}");'><i class='fas fa-sign-in-alt'></i></button></li>`;
+        }
+        $("#HotelManageCEFBox-ApartmentList").html(hotelHTML);
+        $("#HotelManageCEFBox-HotelName").html(`Hotel: ${hotelname}`);
+        $("#HotelManageCEFBox").fadeTo(1000, 1, function() {});
+    }
+
+    function EnterHotel(hotelId, apartmentId) {
+        if (hotelId <= 0 || apartmentId <= 0) return;
+        closeHotelManageCEFBox();
+        alt.emit("Client:Hotel:EnterHotel", hotelId, apartmentId);
+    }
+
+    function RentHotel(hotelId, apartmentId) {
+        if (hotelId <= 0 || apartmentId <= 0) return;
+        closeHotelManageCEFBox();
+        alt.emit("Client:Hotel:RentHotel", hotelId, apartmentId);
+    }
+
+    function LockHotel(hotelId, apartmentId) {
+        if (hotelId <= 0 || apartmentId <= 0) return;
+        closeHotelManageCEFBox();
+        alt.emit("Client:Hotel:LockHotel", hotelId, apartmentId);
+    }
+
+    function closeHotelManageCEFBox() {
+        $("#HotelManageCEFBox").fadeOut(500, function() {
+            $("#HotelManageCEFBox").hide();
+            alt.emit("Client:Hotel:destroyCEF");
+        });
+        globalHotelApartmentsArray = [];
+    }
+
+    function openHouseManageCEF(houseInfoArray, renterArray) {
+        var renterHTML = "",
+            upgradeHTML = "",
+            houseInfoArray = JSON.parse(houseInfoArray),
+            renterArray = JSON.parse(renterArray),
+            houseId = 0;
+
+        for (var i in houseInfoArray) {
+            houseId = houseInfoArray[i].id;
+            if (houseId <= 0 || houseId == undefined) continue;
+            if (houseInfoArray[i].ownerId <= 0) continue;
+            $("#HouseManageCEFBox-TresorInput").val('');
+            $("#HouseManageCEFBox-TresorInput").attr('placeholder', `${houseInfoArray[i].money}`);
+            $("#HouseManageCEFBox-rentPriceInput").val('');
+            $("#HouseManageCEFBox-rentPriceInput").attr('placeholder', `${houseInfoArray[i].rentPrice}`);
+            $('#HouseManageCEFBox-setRentPriceBtn').removeAttr('onClick');
+            $('#HouseManageCEFBox-AllowRentersBtn').removeAttr('onClick');
+            $('#HouseManageCEFBox-DenyRentersBtn').removeAttr('onClick');
+            $('#HouseManageCEFBox-TresorDepositBtn').removeAttr('onClick');
+            $('#HouseManageCEFBox-TresorWithdrawBtn').removeAttr('onClick');
+            $('#HouseManageCEFBox-setRentPriceBtn').attr('onClick', `HouseManageSetNewRentPrice(${houseInfoArray[i].id}, ${houseInfoArray[i].rentPrice});`);
+            $('#HouseManageCEFBox-AllowRentersBtn').attr('onClick', `HouseManageSetRentState(${houseInfoArray[i].id}, 'true');`);
+            $('#HouseManageCEFBox-DenyRentersBtn').attr('onClick', `HouseManageSetRentState(${houseInfoArray[i].id}, 'false');`);
+            $('#HouseManageCEFBox-TresorDepositBtn').attr('onClick', `HouseManageTresorAction(${houseInfoArray[i].id}, 'deposit');`);
+            $('#HouseManageCEFBox-TresorWithdrawBtn').attr('onClick', `HouseManageTresorAction(${houseInfoArray[i].id}, 'withdraw');`);
+            $("#HouseManageCEFBox-TresorAmount").html(`${houseInfoArray[i].money}$`);
+            if (houseInfoArray[i].hasStorage) {
+                upgradeHTML += `<li class='list-group-item'><p>Lagerraum - 1500$</p></li>`;
+            } else {
+                upgradeHTML += `<li class='list-group-item'><p>Lagerraum - 1500$</p><button type='button' onclick='HouseManageBuyUpgrade(${houseInfoArray[i].id}, "storage");' class='btn btn-sm btn-success'><i class='fas fa-dollar-sign'></i></button></li>`;
+            }
+
+            if (houseInfoArray[i].hasAlarm) {
+                upgradeHTML += `<li class='list-group-item'><p>Alarmanlage - 500$</p></li>`;
+            } else {
+                upgradeHTML += `<li class='list-group-item'><p>Alarmanlage - 500$</p><button type='button' onclick='HouseManageBuyUpgrade(${houseInfoArray[i].id}, "alarm");' class='btn btn-sm btn-success'><i class='fas fa-dollar-sign'></i></button></li>`;
+            }
+
+            if (houseInfoArray[i].hasBank) {
+                upgradeHTML += `<li class='list-group-item'><p>Tresor - 250$</p></li>`;
+            } else {
+                upgradeHTML += `<li class='list-group-item'><p>Tresor - 250$</p><button type='button' onclick='HouseManageBuyUpgrade(${houseInfoArray[i].id}, "bank");' class='btn btn-sm btn-success'><i class='fas fa-dollar-sign'></i></button></li>`;
+            }
+        }
+
+        for (var i in renterArray) {
+            if (renterArray[i].charId <= 0 || renterArray[i].charId == undefined) continue;
+            renterHTML += `<li class='list-group-item'><p>${renterArray[i].renterName}</p><button type='button' onclick='HouseManageRemoveRenter(${houseId}, ${renterArray[i].charId});' class='btn btn-sm btn-danger'><i class='fas fa-times'></i></button></li>`;
+        }
+
+        $("#HouseManageCEFBox-RenterList").html(renterHTML);
+        $("#HouseManageCEFBox-UpgradeList").html(upgradeHTML);
+        $("#HouseManageCEFBox").fadeTo(1000, 1, function() {});
+    }
+
+    function HouseManageTresorAction(houseId, action) {
+        if (houseId <= 0 || houseId == undefined) return;
+        if (action != "withdraw" && action != "deposit") return;
+        var inputVal = $("#HouseManageCEFBox-TresorInput").val();
+        if (inputVal == undefined || inputVal <= 0) return;
+        closeHouseManageCEFBox();
+        alt.emit("Client:HouseManage:TresorAction", houseId, action, inputVal);
+    }
+
+    function HouseManageBuyUpgrade(houseId, upgrade) {
+        if (houseId <= 0) return;
+        if (upgrade != "alarm" && upgrade != "storage" && upgrade != "bank") return;
+        closeHouseManageCEFBox();
+        alt.emit("Client:HouseManage:BuyUpgrade", houseId, upgrade);
+    }
+
+    function HouseManageRemoveRenter(houseId, renterId) {
+        if (houseId <= 0 || houseId == undefined || renterId <= 0 || renterId == undefined) return;
+        closeHouseManageCEFBox();
+        alt.emit("Client:HouseManage:RemoveRenter", houseId, renterId);
+    }
+
+    function HouseManageSetRentState(houseId, rentState) {
+        if (houseId <= 0 || houseId == undefined || rentState == undefined) return;
+        closeHouseManageCEFBox();
+        alt.emit("Client:HouseManage:setRentState", houseId, rentState);
+    }
+
+    function HouseManageSetNewRentPrice(houseId, currentPrice) {
+        if (houseId <= 0 || houseId == undefined) return;
+        var inputVal = $("#HouseManageCEFBox-rentPriceInput").val();
+        if (inputVal <= 0 || inputVal == undefined || inputVal == currentPrice) return;
+        closeHouseManageCEFBox();
+        alt.emit("Client:HouseManage:setRentPrice", houseId, inputVal);
+    }
+
+    function closeHouseManageCEFBox() {
+        $("#HouseManageCEFBox").fadeOut(500, function() {
+            $("#HouseManageCEFBox").hide();
+            alt.emit("Client:HouseManage:destroyCEF");
+        });
+    }
+
+    function openHouseEntranceCEF(charId, houseInfoArray, isRentedIn) {
+        var houseHTML = "",
+            houseInfoArray = JSON.parse(houseInfoArray);
+
+        for (var i in houseInfoArray) {
+            var color = "red";
+            var isRentable = "nicht mietbar";
+            $("#HouseEntranceCEFBox-Cut").removeClass("green");
+            $("#HouseEntranceCEFBox-HouseName").removeClass("green");
+            if (houseInfoArray[i].isRentable == true) {
+                isRentable = "mietbar";
+            }
+            if (houseInfoArray[i].ownerId <= 0) {
+                color = "green";
+                houseHTML += "<div class='container'><p class='green'>Eigentümer: <font>Kein Besitzer</font></p></div>";
+                $("#HouseEntranceCEFBox-Cut").addClass("green");
+                $("#HouseEntranceCEFBox-HouseName").addClass("green");
+            } else {
+                houseHTML += `<div class='container'><p class='red'>Eigentümer: <font>${houseInfoArray[i].ownerName}</font></p></div>`;
+            }
+
+            houseHTML += `<div class='container'><p class='${color}'>Aktuelle Mieter: <font>${houseInfoArray[i].renterCount}</font></p></div>` +
+                `<div class='container'><p class='${color}'>Maximale Mieter: <font>${houseInfoArray[i].maxRenters}</font></p></div>` +
+                `<div class='container'><p class='${color}'>Mietpreis: <font>${houseInfoArray[i].rentPrice}$</font></p></div>` +
+                `<div class='container'><p class='${color}'>Mietstatus: <font>${isRentable}</font></p></div>` +
+                `<div class='container'><p class='${color}'>Kaufpreis: <font>${houseInfoArray[i].price}$</font></p></div>`;
+
+
+            if (houseInfoArray[i].ownerId <= 0) {
+                houseHTML += `<button type="button" onclick='HouseEntranceBuyHouse(${houseInfoArray[i].id});' class="btn btn-sm btn-danger green">Kaufen</button>`;
+            }
+
+            if (houseInfoArray[i].isRentable && !isRentedIn) {
+                houseHTML += `<button type="button" onclick='HouseEntranceRentHouse(${houseInfoArray[i].id});' class="btn btn-sm btn-danger">Einmieten</button>`;
+            }
+
+            if (isRentedIn) {
+                houseHTML += `<button type="button" onclick='HouseEntranceUnrentHouse(${houseInfoArray[i].id});' class="btn btn-sm btn-danger">Ausmieten</button>`;
+            }
+
+            if (!houseInfoArray[i].isLocked) {
+                houseHTML += `<button type="button" onclick='HouseEntranceEnterHouse(${houseInfoArray[i].id});' class="btn btn-sm btn-danger">Betreten</button>`;
+            }
+
+            $("#HouseEntranceCEFBox-HouseName").html(`${houseInfoArray[i].street}`);
+        }
+
+        $("#HouseEntranceCEFBox-List").html(houseHTML);
+        $("#HouseEntranceCEFBox").fadeTo(1000, 1, function() {});
+    }
+
+    function HouseEntranceUnrentHouse(houseId) {
+        if (houseId <= 0) return;
+        closeHouseEntranceCEFBox();
+        alt.emit("Client:HouseEntrance:UnrentHouse", houseId);
+    }
+
+    function HouseEntranceRentHouse(houseId) {
+        if (houseId <= 0) return;
+        closeHouseEntranceCEFBox();
+        alt.emit("Client:HouseEntrance:RentHouse", houseId);
+    }
+
+    function HouseEntranceBuyHouse(houseId) {
+        if (houseId <= 0) return;
+        closeHouseEntranceCEFBox();
+        alt.emit("Client:HouseEntrance:BuyHouse", houseId);
+    }
+
+    function HouseEntranceEnterHouse(houseId) {
+        if (houseId <= 0) return;
+        closeHouseEntranceCEFBox();
+        alt.emit("Client:HouseEntrance:EnterHouse", houseId);
+    }
+
+    function closeHouseEntranceCEFBox() {
+        $("#HouseEntranceCEFBox").fadeOut(500, function() {
+            $("#HouseEntranceCEFBox").hide();
+            alt.emit("Client:HouseEntrance:destroyCEF");
+        });
+    }
+
+    function closeTownHallHouseSelector() {
+        $("#TownhallHouseSelectorBox").fadeOut(500, function() {
+            $("#TownhallHouseSelectorBox").hide();
+            alt.emit("Client:Townhall:destroyHouseSelector");
+        });
+    }
+
+    function openTownhallHouseSelector(houseArray) {
+        var html = "",
+            houseArray = JSON.parse(houseArray);
+
+        for (var i in houseArray) {
+            html += `<li class='list-group-item'><span>${houseArray[i].street}</span><button type='button' onclick='HouseSelectorSelectHouse(${houseArray[i].id});' class='btn btn-sm btn-success'><i class='fas fa-check'></i></button><button type='button' onclick='HouseSelectorSellHouse(${houseArray[i].id});' class='btn btn-sm btn-danger'><i class='fas fa-dollar-sign'></i></button>`;
+        }
+
+        $("#TownHallHouseSelector-List").html(html);
+        $("#TownhallHouseSelectorBox").fadeTo(1000, 1, function() {});
+    }
+
+    function HouseSelectorSelectHouse(houseId) {
+        if (houseId <= 0 || houseId == undefined) return;
+        closeTownHallHouseSelector();
+        alt.emit("Client:House:setMainHouse", houseId);
+    }
+
+    function HouseSelectorSellHouse(houseId) {
+        if (houseId <= 0 || houseId == undefined) return;
+        closeTownHallHouseSelector();
+        alt.emit("Client:House:SellHouse", houseId);
+    }
+
+    function isEmptyOrSpaces(str) {
+        return str === null || str.match(/^ *$/) !== null;
+    }
+
+    function SetFuelstationListContent(fuelStationId, stationName, owner, maxFuelAmount, availableLiter, fuelArray, vehID) {
+        var fuelstationHTML = "",
+            fuelArray = JSON.parse(fuelArray),
+            maxFuelAmount = parseInt(maxFuelAmount);
+
+        for (var i in fuelArray) {
+            if (fuelArray[i].fueltype == "Benzin") {
+                globalFuelstationBenzinPrice = fuelArray[i].fuelPrice;
+            } else if (fuelArray[i].fueltype == "Diesel") {
+                globalFuelstationDieselPrice = fuelArray[i].fuelPrice;
+            } else if (fuelArray[i].fueltype == "Strom") {
+                globalFuelstationStromPrice = fuelArray[i].fuelPrice;
+            } else if (fuelArray[i].fueltype == "Kerosin") {
+                globalFuelstationKerosinPrice = fuelArray[i].fuelPrice;
+            }
+
+            fuelstationHTML += "<li class='list-group-item' onclick='VehicleFuelStationFuelVehicle(" + vehID + ", " + fuelStationId + ", `" + fuelArray[i].fueltype + "`);'>" +
+                `<img src='../utils/img/vehfuel.png'><p id='VehicleFuelStationCEFBox-${fuelArray[i].fueltype}Price'>${fuelArray[i].fueltype} tanken</p></li>`;
+        }
+
+        $("#VehicleFuelstationCEFBox-List").html(fuelstationHTML);
+        $("#VehicleFuelstationCEFBox-stationName").html(`${stationName}`);
+        //$("#VehicleFuelstationCEFBox-ownerName").html(`${owner}`);
+        $("#VehicleFuelstationCEFBox-availableLiter").html(`${availableLiter} Liter`);
+        $("#VehicleFuelStationCEFBox-Out").html(`1`);
+        $("#VehicleFuelStationCEFBox-LiterSlider").val(`1`);
+        $("#VehicleFuelStationCEFBox-LiterSlider").attr({
+            "max": maxFuelAmount,
+            "min": 1
+        });
+        $("#VehicleFuelstationCEFBox").fadeTo(1000, 1, function() {});
+    }
+
+    function VehicleFuelStationFuelVehicle(vehID, fuelStationId, fueltype) {
+        if (fuelStationId == 0 || fuelStationId == undefined || fueltype == "" || fueltype == undefined || fueltype == "undefined" || vehID == 0 || vehID == undefined || vehID == "undefined") return;
+        var selectedLiterAmount = $("#VehicleFuelStationCEFBox-LiterSlider").val();
+        var selectedLiterPrice = 0;
+        if (fueltype == "Benzin") {
+            selectedLiterPrice = globalFuelstationBenzinPrice;
+        } else if (fueltype == "Diesel") {
+            selectedLiterPrice = globalFuelstationDieselPrice;
+        } else if (fueltype == "Strom") {
+            selectedLiterPrice = globalFuelstationStromPrice;
+        } else if (fueltype == "Kerosin") {
+            selectedLiterPrice = globalFuelstationKerosinPrice;
+        }
+
+        alt.emit("Client:FuelStation:FuelVehicleAction", vehID, fuelStationId, fueltype, selectedLiterAmount, selectedLiterPrice);
+        closeFuelstationCEF();
+    }
+
+    function VehicleFuelStationCEFBoxCalculatePrices() {
+        var selectedLiterAmount = $("#VehicleFuelStationCEFBox-LiterSlider").val(),
+            benzinPrice = selectedLiterAmount * globalFuelstationBenzinPrice,
+            dieselPrice = selectedLiterAmount * globalFuelstationDieselPrice,
+            stromPrice = selectedLiterAmount * globalFuelstationStromPrice,
+            kerosinPrice = selectedLiterAmount * globalFuelstationKerosinPrice;
+
+        if ($("#VehicleFuelStationCEFBox-BenzinPrice").length > 0) {
+            $("#VehicleFuelStationCEFBox-BenzinPrice").html(`BENZIN TANKEN <br>(${benzinPrice}$)`);
+        }
+
+        if ($("#VehicleFuelStationCEFBox-DieselPrice").length > 0) {
+            $("#VehicleFuelStationCEFBox-DieselPrice").html(`DIESEL TANKEN <br>(${dieselPrice}$)`);
+        }
+
+        if ($("#VehicleFuelStationCEFBox-StromPrice").length > 0) {
+            $("#VehicleFuelStationCEFBox-StromPrice").html(`STROM TANKEN <br>(${stromPrice}$)`);
+        }
+
+        if ($("#VehicleFuelStationCEFBox-KerosinPrice").length > 0) {
+            $("#VehicleFuelStationCEFBox-KerosinPrice").html(`KEROSIN TANKEN <br>(${kerosinPrice}$)`);
+        }
+    }
+
+    function closeFuelstationCEF() {
+        $("#VehicleFuelstationCEFBox").fadeOut(250, function() {});
+        alt.emit("Client:FuelStation:destroyCEF");
+    }
+
+    $("#GivePlayerBillCEFBox-FinishBtn").click(function() {
+        if (globalPlayerBillType != "faction" && globalPlayerBillType != "company" && globalPlayerBillType != "sellcar") return;
+        if (globalPlayerBillType == undefined || globalPlayerBillType == null) return;
+        if (globalPlayerBilltargetCharId == undefined || globalPlayerBilltargetCharId == null || globalPlayerBilltargetCharId <= 0) return;
+        var selectedMoneyAmount = $("#GivePlayerBillCEFBox-AmountInput").val();
+        var selectedReason = $("#GivePlayerBillCEFBox-ReasonInput").val().replace(/^\s+|\s+$/g, "");
+        if (selectedReason.length <= 0) {
+            return;
+        }
+        if (selectedMoneyAmount < 1 || selectedMoneyAmount == "") return;
+
+        alt.emit("Client:GivePlayerBill:giveBill", globalPlayerBillType, globalPlayerBilltargetCharId, selectedReason, selectedMoneyAmount);
+        closeGivePlayerBillCEFBox();
+    });
+
+    function closeGivePlayerBillCEFBox() {
+        globalPlayerBillType = undefined;
+        globalPlayerBilltargetCharId = undefined;
+        $("#GivePlayerBillCEFBox").fadeOut(250, function() {});
+        alt.emit("Client:GivePlayerBill:destroyCEF");
+    }
+
+    function RecievePlayerBillCEFBoxAction(action) {
+        if (action != "bar" && action != "bank" && action != "decline") return;
+        if (globalRecievePlayerBillType == undefined) return;
+        if (globalRecievePlayerBillType != "faction" && globalRecievePlayerBillType != "company" && globalRecievePlayerBillType != "sellcar") return;
+        if (globalRecievePlayerBillFactionCompanyId == undefined || globalRecievePlayerBillFactionCompanyId <= 0) return;
+        if (globalRecievePlayerBillAmount == undefined || globalRecievePlayerBillAmount <= 0) return;
+        if (globalRecievePlayerBillReason == undefined || globalRecievePlayerBillReason == "") return;
+        if (globalRecievePlayerBillFactionName == undefined || globalRecievePlayerBillFactionName == "") return;
+        if (globalRecievePlayerBillGivenCharacterId == undefined || globalRecievePlayerBillGivenCharacterId <= 0) return;
+        alt.emit("Client:PlayerBill:BillAction", action, globalRecievePlayerBillType, globalRecievePlayerBillFactionCompanyId, globalRecievePlayerBillAmount, globalRecievePlayerBillReason, globalRecievePlayerBillGivenCharacterId);
+        closeReviecePlayerBillCEFBox();
+    }
+
+    function closeReviecePlayerBillCEFBox() {
+        globalRecievePlayerBillType = undefined;
+        globalRecievePlayerBillFactionCompanyId = undefined;
+        globalRecievePlayerBillAmount = undefined;
+        globalRecievePlayerBillReason = undefined;
+        globalRecievePlayerBillFactionName = undefined;
+        globalRecievePlayerBillGivenCharacterId = undefined;
+        $("#RecievePlayerBillCEFBox").fadeOut(250, function() {});
+        alt.emit("Client:RecievePlayerBill:destroyCEF");
+    }
+
+    function closeFactionStorageCEFBox() {
+        $("#FactionStorageCEFBox").fadeOut(250, function() {});
+        alt.emit("Client:FactionStorage:destroyCEF");
+    }
+
+    function closeGangStorageCEFBox() {
+        $("#GangStorageCEFBox").fadeOut(250, function() {});
+        alt.emit("Client:GangStorage:destroyCEF");
+    }
+
+    function SetFactionStorageCEFBoxContent(charId, factionId, type, invArray, storageArray) {
+        var invHTML = "",
+            storageHTML = "",
+            invArray = JSON.parse(invArray),
+            storageArray = JSON.parse(storageArray);
+
+        for (var i in invArray) {
+            invHTML += `<li class='list-group-item'><img src='../utils/img/inventory/${invArray[i].itemPicName}'><p class='name'><b>${invArray[i].itemName} (${invArray[i].itemAmount}x)</b></p><input type='number' placeholder='Anzahl' onkeypress='return event.charCode >= 48 && event.charCode <= 57'>` +
+                "<button onclick='FactionStorageCEFAction(`storage`, " + factionId + ", " + charId + ", `" + type + "`, `" + invArray[i].itemLocation + "`, `" + invArray[i].itemName + "`, this);' type='button' class='btn btn-sm btn-primary'><i class='fas fa-check'></i></button></li>";
+        }
+
+        for (var i in storageArray) {
+            storageHTML += `<li class='list-group-item'><img src='../utils/img/inventory/${storageArray[i].itemPicName}'><p class='name'><b>${storageArray[i].itemName} (${storageArray[i].amount}x)</b></p><input type='number' placeholder='Anzahl' onkeypress='return event.charCode >= 48 && event.charCode <= 57'>` +
+                "<button onclick='FactionStorageCEFAction(`take`, " + factionId + ", " + charId + ", `" + type + "`, `none`, `" + storageArray[i].itemName + "`, this);' type='button' class='btn btn-sm btn-primary'><i class='fas fa-check'></i></button></li>";
+        }
+
+        if (type == "faction") {
+            $("#FactionStorageCEFBox-SpindTitle").html(`LAGER`);
+        } else if (type == "hotel") {
+            $("#FactionStorageCEFBox-SpindTitle").html(`LAGER`);
+        } else if (type == "house") {
+            $("#FactionStorageCEFBox-SpindTitle").html(`LAGER`);
+        }
+        $("#FactionStorageCEFBox-InventoryList").html(invHTML);
+        $("#FactionStorageCEFBox-StorageList").html(storageHTML);
+        $("#FactionStorageCEFBox").fadeTo(1000, 1, function() {});
+    }
+
+    function SetGangStorageCEFBoxContent(charId, gangId, type, invArray, storageArray) {
+        var invHTML = "",
+            storageHTML = "",
+            invArray = JSON.parse(invArray),
+            storageArray = JSON.parse(storageArray);
+
+        for (var i in invArray) {
+            invHTML += `<li class='list-group-item'><img src='../utils/img/inventory/${invArray[i].itemPicName}'><p class='name'><b>${invArray[i].itemName} (${invArray[i].itemAmount}x)</b></p><input type='number' placeholder='Anzahl' onkeypress='return event.charCode >= 48 && event.charCode <= 57'>` +
+                "<button onclick='GangStorageCEFAction(`storage`, " + gangId + ", " + charId + ", `" + type + "`, `" + invArray[i].itemLocation + "`, `" + invArray[i].itemName + "`, this);' type='button' class='btn btn-sm btn-primary'><i class='fas fa-check'></i></button></li>";
+        }
+
+        for (var i in storageArray) {
+            storageHTML += `<li class='list-group-item'><img src='../utils/img/inventory/${storageArray[i].itemPicName}'><p class='name'><b>${storageArray[i].itemName} (${storageArray[i].amount}x)</b></p><input type='number' placeholder='Anzahl' onkeypress='return event.charCode >= 48 && event.charCode <= 57'>` +
+                "<button onclick='GangStorageCEFAction(`take`, " + gangId + ", " + charId + ", `" + type + "`, `none`, `" + storageArray[i].itemName + "`, this);' type='button' class='btn btn-sm btn-primary'><i class='fas fa-check'></i></button></li>";
+        }
+
+        if (type == "gang") {
+            $("#GangStorageCEFBox-SpindTitle").html(`LAGER`);
+        } 
+        $("#GangStorageCEFBox-InventoryList").html(invHTML);
+        $("#GangStorageCEFBox-StorageList").html(storageHTML);
+        $("#GangStorageCEFBox").fadeTo(1000, 1, function() {});
+    }
+
+    function FactionStorageCEFAction(action, factionId, charId, type, fromContainer, itemName, htmlElem) {
+        if (factionId <= 0 || charId <= 0 || type == null || type == undefined || type == "" || htmlElem == null || itemName == undefined || itemName == "" || htmlElem == undefined) return;
+        if (action != "take" && action != "storage") return;
+        if (type != "hotel" && type != "faction" && type != "house") return;
+        var inputElem = $(htmlElem).parent().find("input");
+        var inputVal = $(inputElem).val();
+        if (inputVal == "" || inputVal == "" || inputVal < 1) return;
+        if (action == "storage" && fromContainer == undefined || action == "storage" && fromContainer == "none") return;
+        alt.emit("Client:FactionStorage:FactionStorageAction", action, factionId, charId, type, itemName, inputVal, fromContainer);
+        closeFactionStorageCEFBox();
+    }
+
+    function GangStorageCEFAction(action, gangId, charId, type, fromContainer, itemName, htmlElem) {
+        if (gangId <= 0 || charId <= 0 || type == null || type == undefined || type == "" || htmlElem == null || itemName == undefined || itemName == "" || htmlElem == undefined) return;
+        if (action != "take" && action != "storage") return;
+        if (type != "gang") return;
+        var inputElem = $(htmlElem).parent().find("input");
+        var inputVal = $(inputElem).val();
+        if (inputVal == "" || inputVal == "" || inputVal < 1) return;
+        if (action == "storage" && fromContainer == undefined || action == "storage" && fromContainer == "none") return;
+        alt.emit("Client:GangStorage:GangStorageAction", action, gangId, charId, type, itemName, inputVal, fromContainer);
+        closeGangStorageCEFBox();
+    }
+
+    function SetVehicleTrunkCEFBoxContent(charId, vehId, type, invArray, storageArray, currentweight, maxweight) {
+        var invHTML = "",
+            storageHTML = "",
+            invArray = JSON.parse(invArray),
+            storageArray = JSON.parse(storageArray);
+
+        for (var i in invArray) {
+            invHTML += `<li class='list-group-item'><img src='../utils/img/inventory/${invArray[i].itemPicName}'><p class='name'><b>${invArray[i].itemName} (${invArray[i].itemAmount}x)</b></p><input type='number' placeholder='Anzahl' onkeypress='return event.charCode >= 48 && event.charCode <= 57'>` +
+                "<button onclick='VehicleTrunkCEFAction(`storage`, " + vehId + ", " + charId + ", `" + invArray[i].itemLocation + "`, `" + invArray[i].itemName + "`, `" + type + "`,this);' type='button' class='btn btn-sm btn-primary'><i class='fas fa-check'></i></button></li>";
+        }
+
+        for (var i in storageArray) {
+            storageHTML += `<li class='list-group-item'><img src='../utils/img/inventory/${storageArray[i].itemPicName}'><p class='name'><b>${storageArray[i].itemName} (${storageArray[i].itemAmount}x)</b></p><input type='number' placeholder='Anzahl' onkeypress='return event.charCode >= 48 && event.charCode <= 57'>` +
+                "<button onclick='VehicleTrunkCEFAction(`take`, " + vehId + ", " + charId + ", `none`, `" + storageArray[i].itemName + "`, `" + type + "`, this);' type='button' class='btn btn-sm btn-primary'><i class='fas fa-check'></i></button></li>";
+        }
+
+        var title, subtitle = "FAHRZEUGLAGER";
+        if (type == "trunk") {
+            title = "KOFFERRAUM";
+            subtitle = `KOFFERRAUM (${currentweight.toFixed(2)}/${maxweight}kg)`
+        } else if (type == "glovebox") {
+            title = "HANDSCHUHFACH";
+            subtitle = `HANDSCHUHFACH (${currentweight}/${maxweight} kg)`
+        }
+
+        $("#VehicleTrunkCEFBox-SubTitle").html(subtitle);
+        $("#VehicleTrunkCEFBox-Title").html(title);
+        $("#VehicleTrunkCEFBox-InventoryList").html(invHTML);
+        $("#VehicleTrunkCEFBox-StorageList").html(storageHTML);
+        $("#VehicleTrunkCEFBox").fadeTo(1000, 1, function() {});
+    }
+
+    function VehicleTrunkCEFAction(action, vehId, charId, fromContainer, itemName, type, htmlElem) {
+        if (vehId <= 0 || charId <= 0 || htmlElem == null || htmlElem == undefined || itemName == undefined || itemName == "" || fromContainer == "" || type == undefined || type == null) return;
+        if (action != "take" && action != "storage") return;
+        if (type != "trunk" && type != "glovebox") return;
+        var inputElem = $(htmlElem).parent().find("input");
+        var inputVal = $(inputElem).val();
+        if (inputVal == "" || inputVal < 1) return;
+        if (action == "storage" && fromContainer == undefined || action == "storage" && fromContainer == "none") return;
+        alt.emit("Client:VehicleTrunk:VehicleTrunkAction", action, vehId, charId, itemName, inputVal, fromContainer, type);
+        closeVehicleTrunkCEFBox();
+    }
+
+    function closeVehicleTrunkCEFBox() {
+        $("#VehicleTrunkCEFBox").fadeOut(0, function() {});
+        alt.emit("Client:VehicleTrunk:destroyCEF");
+    }
+
+    function SetPlayerSearchInventoryCEFBoxContent(targetCharId, invArray) {
+        var searchHTML = "",
+            invArray = JSON.parse(invArray);
+
+        for (var i in invArray) {
+            searchHTML += `<li class='list-group-item'><img src='../utils/img/inventory/${invArray[i].itemPicName}'><p class='name'><b>${invArray[i].itemName} (${invArray[i].itemAmount}x)</b></p><input type='number' placeholder='Anzahl' onkeypress='return event.charCode >= 48 && event.charCode <= 57' value='1'>` +
+                "<button onclick='PlayerSearchCEFAction(" + targetCharId + ", `" + invArray[i].itemName + "`, `" + invArray[i].itemLocation + "`, this);' type='button' class='btn btn-sm btn-primary'><i class='fas fa-times'></i></button></li>";
+        }
+
+        $("#PlayerSearchInventoryCEFBox-List").html(searchHTML);
+        $("#PlayerSearchInventoryCEFBox").fadeTo(1000, 1, function() {});
+    }
+
+    function PlayerSearchCEFAction(targetCharId, itemName, itemLocation, htmlElem) {
+        if (targetCharId <= 0 || itemName == undefined || itemName == "" || htmlElem == null || htmlElem == undefined || itemLocation == undefined || itemLocation == "") return;
+        var inputElem = $(htmlElem).parent().find("input");
+        var inputVal = $(inputElem).val();
+        if (inputVal == "" || inputVal < 1) return;
+        closePlayerSearchCEFBox();
+        alt.emit("Client:PlayerSearch:TakeItem", targetCharId, itemName, itemLocation, inputVal);
+    }
+
+    function closePlayerSearchCEFBox() {
+        $("#PlayerSearchInventoryCEFBox").fadeOut(250, function() {
+            alt.emit("Client:PlayerSearch:destroyCEF");
+        });
+    }
+
+
+    function SetVehicleLicensingCEFBoxContent(vehArray) {
+        var licenseHTML = "",
+            vehArray = JSON.parse(vehArray);
+
+        for (var i in vehArray) {
+            licenseHTML += `<li class='list-group-item'><div class='container left'><p class='title'>FAHRZEUGNAME</p><p class='name'>${vehArray[i].vehName}</p></div>` +
+                `<div class='container mid'><p class='title'>KENNZEICHEN</p><p class='name'>${vehArray[i].vehPlate}</p></div>` +
+                `<div class='container right'><p class='title'>FAHRZEUG ANMELDEN?</p><input type='text' spellcheck='false' maxlength='8'>` +
+                "<button type='button' onclick='VehicleLicensingCEFAction(`anmelden`, " + vehArray[i].vehId + ", `" + vehArray[i].vehPlate + "`, this);' class='btn btn-sm btn-anmelden'><i class='fas fa-check'></i></button>" +
+                "<button type='button' onclick='VehicleLicensingCEFAction(`abmelden`, " + vehArray[i].vehId + ", `" + vehArray[i].vehPlate + "`, this);' class='btn btn-sm btn-abmelden'><i class='fas fa-times'></i></button></div></li>";
+        }
+
+        $("#VehicleLicensingCEFBox-List").html(licenseHTML);
+        $("#VehicleLicensingCEFBox").fadeTo(1000, 1, function() {});
+    }
+
+    function SetVehicleKeyCEFBoxContent(vehArray) {
+        var licenseHTML = "",
+            vehArray = JSON.parse(vehArray);
+
+        for (var i in vehArray) {
+            licenseHTML += `<li class='list-group-item'><div class='container left'><p class='title'>FAHRZEUGNAME</p><p class='name'>${vehArray[i].vehName}</p></div>` +
+                `<div class='container mid'><p class='title'>KENNZEICHEN</p><p class='name'>${vehArray[i].vehPlate}</p></div>` +
+                `<div class='container right'><p class='title'></p>` +
+                "<button type='button' onclick='VehicleKeyCEFAction(`remake`, " + vehArray[i].vehId + ", `" + vehArray[i].vehPlate + "`, this);' class='btn btn-sm btn-anmelden'>Schlüssel Nachmachen (250$)</i></button>";
+        }
+
+        $("#VehicleKeyCEFBox-List").html(licenseHTML);
+        $("#VehicleKeyCEFBox").fadeTo(1000, 1, function() {});
+    }
+
+    function SetVehicleSellCEFBoxContent(vehArray) {
+        var licenseHTML = "",
+            vehArray = JSON.parse(vehArray);
+
+        for (var i in vehArray) {
+            licenseHTML += `<li class='list-group-item'><div class='container left'><p class='title'>FAHRZEUGNAME</p><p class='name'>${vehArray[i].vehName}</p></div>` +
+                `<div class='container mid'><p class='title'>KENNZEICHEN</p><p class='name'>${vehArray[i].vehPlate}</p></div>` +
+                `<div class='container right'><p class='title'></p>` +
+                "<button type='button' onclick='VehicleSellCEFAction(`verkaufen`, " + vehArray[i].vehId + ", this);' class='btn btn-sm btn-anmelden'>Fahrzeug Verkaufen</i></button>";
+        }
+
+        $("#VehicleSellCEFBox-List").html(licenseHTML);
+        $("#VehicleSellCEFBox").fadeTo(1000, 1, function() {});
+    }
+
+    function VehicleLicensingCEFAction(action, vehId, vehPlate, htmlElem) {
+        if (vehId <= 0 || vehPlate == "" || htmlElem == undefined || vehPlate == undefined || vehId == undefined || action == undefined || action == "") return;
+        if (action != "anmelden" && action != "abmelden") return;
+        var inputElem = $(htmlElem).parent().find("input");
+        var inputVal = $(inputElem).val().replace(/^\s+|\s+$/g, "");
+        closeVehicleLicensingCEFBox();
+        if (action == "anmelden") {
+            if (inputVal == "" || inputVal.length <= 0) return;
+            var newPlate = inputVal.replace(" ", "-");
+            alt.emit("Client:VehicleLicensing:LicensingAction", action, vehId, vehPlate, newPlate.toUpperCase());
+        } else if (action == "abmelden") {
+            alt.emit("Client:VehicleLicensing:LicensingAction", action, vehId, vehPlate, "");
+        }
+    }
+
+    function VehicleKeyCEFAction(action, vehId, vehPlate, charId, itemName, itemAmount, htmlElem) {
+        if (vehId <= 0 || vehPlate == "" || vehPlate == undefined || vehId == undefined) {
+            return;
+        }
+        alt.emit("Client:VehicleKey:KeyAction", "remake", vehId, vehPlate);
+    }
+
+    function VehicleSellCEFAction(action, vehId, charId, htmlElem) {
+        if (vehId <= 0 || vehId == undefined) {
+            return;
+        }
+        alt.emit("Client:VehicleSell:SellAction", "verkaufen", vehId);
+    }
+
+    function closeVehicleLicensingCEFBox() {
+        $("#VehicleLicensingCEFBox").fadeOut(250, function() {
+            alt.emit("Client:VehicleLicensing:destroyCEF");
+        });
+    }
+
+    function closeVehicleKeyCEFBox() {
+        $("#VehicleKeyCEFBox").fadeOut(250, function() {
+            alt.emit("Client:VehicleKey:destroyCEF");
+        });
+    }
+
+    function closeVehicleSellCEFBox() {
+        $("#VehicleSellCEFBox").fadeOut(250, function() {
+            alt.emit("Client:VehicleSell:destroyCEF");
+        });
+    }
+
+    function SetGivePlayerLicenseCEFContent(targetCharId, licArray) {
+        var licHTML = "",
+            licArray = JSON.parse(licArray);
+
+        for (var i in licArray) {
+            if (!licArray[i].PKW) {
+                licHTML += `<li class='list-group-item' onclick='GivePlayerLicenseCEFAction(${targetCharId}, "pkw");'><img src='../utils/img/inventory/Führerschein_Klasse_B.png'><p>PKW Führerschein (${licArray[i].PKWPrice}$)</p></li>`;
+            }
+
+            if (!licArray[i].LKW) {
+                licHTML += `<li class='list-group-item' onclick='GivePlayerLicenseCEFAction(${targetCharId}, "lkw");'><img src='../utils/img/inventory/Führerschein_Klasse_C.png'><p>LKW Führerschein (${licArray[i].LKWPrice}$)</p></li>`;
+            }
+
+            if (!licArray[i].Bike) {
+                licHTML += `<li class='list-group-item'onclick='GivePlayerLicenseCEFAction(${targetCharId}, "bike");'><img src='../utils/img/inventory/Führerschein_Klasse_A.png'><p>Motorrad Führerschein (${licArray[i].BikePrice}$)</p></li>`;
+            }
+
+            if (!licArray[i].Boat) {
+                licHTML += `<li class='list-group-item' onclick='GivePlayerLicenseCEFAction(${targetCharId}, "boat");'><img src='../utils/img/inventory/Bootsschein.png'><p>Bootsschein (${licArray[i].BoatPrice}$)</p></li>`;
+            }
+
+            if (!licArray[i].Fly) {
+                licHTML += `<li class='list-group-item' onclick='GivePlayerLicenseCEFAction(${targetCharId}, "fly");'><img src='../utils/img/inventory/Bootsschein.png'><p>Flugschein (${licArray[i].FlyPrice}$)</p></li>`;
+            }
+
+            if (!licArray[i].Helicopter) {
+                licHTML += `<li class='list-group-item' onclick='GivePlayerLicenseCEFAction(${targetCharId}, "helicopter");'><img src='../utils/img/inventory/Helikopterschein.png'><p>Helikopterschein (${licArray[i].HelicopterPrice}$)</p></li>`;
+            }
+
+            if (!licArray[i].PassengerTransport) {
+                licHTML += `<li class='list-group-item' onclick='GivePlayerLicenseCEFAction(${targetCharId}, "passengertransport");'><img src='../utils/img/inventory/Personenbeförderungsschein.png'><p>Personenbeförderungsschein (${licArray[i].PassengerTransportPrice}$)</p></li>`;
+            }
+
+            if (!licArray[i].weaponlicense) {
+                licHTML += `<li class='list-group-item' onclick='GivePlayerLicenseCEFAction(${targetCharId}, "weaponlicense");'><img src='../utils/img/inventory/Personenbeförderungsschein.png'><p>Waffenschein (${licArray[i].weaponlicensePrice}$)</p></li>`;
+            }
+        }
+
+        $("#GivePlayerLicenseCEFBox-List").html(licHTML);
+        $("#GivePlayerLicenseCEFBox").fadeTo(1000, 1, function() {});
+    }
+
+    function GivePlayerLicenseCEFAction(targetCharId, licname) {
+        if (targetCharId <= 0 || licname.length <= 0 || licname == "") return;
+        closeGivePlayerLicenseCEFBox();
+        alt.emit("Client:GivePlayerLicense:GiveLicense", targetCharId, licname);
+    }
+
+    function closeGivePlayerLicenseCEFBox() {
+        $("#GivePlayerLicenseCEFBox").fadeOut(250, function() {
+            alt.emit("Client:GivePlayerLicense:destroyCEF");
+        });
+    }
+
+    function MinijobPilotCEFSelectJob(level) {
+        if (level <= 0) return;
+        closeMinijobPilotCEFBox();
+        alt.emit("Client:MinijobPilot:SelectJob", level);
+    }
+
+    function closeMinijobPilotCEFBox() {
+        $("#Minijob-PilotCEFBox").fadeOut(50, function() {
+            alt.emit("Client:MinijobPilot:destroyCEF");
+        });
+    }
+
+    function SetMinijobBusDriverListContent(routeArray) {
+        var busHTML = "",
+            routeArray = JSON.parse(routeArray);
+
+        for (var i in routeArray) {
+            busHTML += `<div class='container' onclick='MinijobBusDriverStartRoute(${routeArray[i].routeId});'><img src='../utils/img/vehicles/${routeArray[i].hash}.png'><p class='title'>${routeArray[i].routeName}</p><p class='subtitle'>Geschätzte Fahrtdauer: <font>${routeArray[i].neededTime}</font></p>` +
+                `<p class='subtitle'>Entlohnung: <font>${routeArray[i].paycheck}$</font></p></div>`;
+        }
+        $("#Minijob-BusDriverCEFBox-List").html(busHTML);
+        $("#Minijob-BusDriverCEFBox").fadeTo(1000, 1, function() {});
+    }
+
+    function MinijobBusDriverStartRoute(routeId) {
+        if (routeId <= 0) return;
+        closeMinijobBusDriverCEFBox();
+        alt.emit("Client:MinijobBusdriver:StartJob", routeId);
+    }
+
+    function closeMinijobBusDriverCEFBox() {
+        $("#Minijob-BusDriverCEFBox").fadeOut(50, function() {
+            alt.emit("Client:MinijobBusdriver:destroyCEF");
+        });
+    }
+
+    function openDeathscreenCEF() {
+        $("#Deathscreen-Box").fadeTo(100, 1, function() {});
+    }
+
+    function closeDeathscreen() {
+        $("#Deathscreen-Box").fadeOut(50, function() {
+            alt.emit("Client:Deathscreen:destroyCEF");
+        });
+    }
+
+    function unixToLatest(unix, type) {
+        unix = unix * 1000;
+        let date = new Date(unix),
+            today = new Date(),
+            str,
+            dateDay = date.getDate(),
+            dateMonth = date.getMonth(),
+            todayDay = today.getDate(),
+            todayMonth = today.getMonth();
+
+        if (dateDay == todayDay && dateMonth == todayMonth) {
+            if (type == null) {
+                unix = unix / 1000;
+                str = unixToTime(unix);
+            } else if (type == "day") {
+                str = "Heute";
+            }
+        } else {
+            date.setHours(0);
+            date.setMinutes(0);
+            date.setSeconds(0);
+            today.setHours(0);
+            today.setMinutes(0);
+            today.setSeconds(0);
+            today.setMilliseconds(0);
+
+            let unixDate = date.getTime();
+            let unixToday = today.getTime();
+            let diffdays = (unixToday - unixDate) / (1000 * 60 * 60 * 24);
+
+            if (diffdays == 1) {
+                str = "Gestern";
+            } else {
+                dateMonth++;
+                str = checkTime(dateDay) + "." + checkTime(dateMonth) + ".";
+            }
+        }
+        return (str);
+    }
+
+    function unixToTime(unix) {
+        let date = new Date(unix * 1000);
+        hour = checkTime(date.getHours()),
+            minute = checkTime(date.getMinutes());
+        let str = hour + ":" + minute;
+        return (str);
+    }
+
+    function showIdentityCard(infoArray) {
+        if (isPersoIdentityCardInUse || infoArray == "[]" || infoArray == undefined) return;
+        isPersoIdentityCardInUse = true;
+
+        var persoHTML = "",
+            infoArray = JSON.parse(infoArray),
+            colorCode = "#fff";
+
+        for (var i in infoArray) {
+            if (type == "perso") {
+                $("#UserIdCard-name").html(`${infoArray[i].charname}`);
+                $("#UserIdCard-address").html(`${infoArray[i].address}`);
+                $("#UserIdCard-birthdate").html(`${infoArray[i].birthdate}`);
+                $("#UserIdCard-citizenid").html(`${infoArray[i].citizenid}`);
+                $("#UserIdCard-signature").html(`${infoArray[i].charname}`);
+                $("#UserIdCard-joinInfo").html(`Los Santos`);
+
+                $(function() {
+                    $("#UserIdCard").show();
+                    setTimeout(() => {
+                        $("#UserIdCard").hide(1000);
+                        isPersoIdentityCardInUse = false;
+                    }, 8000);
+                });
+            }
+        }
+    }
+
+    function showPoliceId(infoArray) {
+        if (isPoliceCardInUse || infoArray == "[]" || infoArray == undefined) return;
+        isPoliceCardInUse = true;
+
+        var policeHTML = "",
+            infoArray = JSON.parse(infoArray),
+            colorCode = "#fff";
+
+        for (var i in infoArray) 
+        {
+            $("#PoliceCard-name").html(`${infoArray[i].charname}`);
+            $("#PoliceCard-rankname").html(`${infoArray[i].rankname}`);
+            $("#PoliceCard-serviceNumber").html(`${infoArray[i].servicenumber}`);
+            $("#PoliceCard-citizenid").html(`${infoArray[i].citizenid}`);
+            $("#PoliceCard-signature").html(`${infoArray[i].charname}`);
+
+            $(function() {
+                $("#PoliceCard").show();
+                setTimeout(() => {
+                    $("#PoliceCard").hide(1000);
+                    isPoliceCardInUse = false;
+                }, 8000);
+            });
+        }
+    }
+
+    function showFIBId(infoArray) {
+        if (isFIBCardInUse || infoArray == "[]" || infoArray == undefined) return;
+        isFIBCardInUse = true;
+
+        var fibHTML = "",
+            infoArray = JSON.parse(infoArray),
+            colorCode = "#fff";
+
+        for (var i in infoArray) 
+        {
+            $("#FIBCard-name").html(`${infoArray[i].charname}`);
+            $("#FIBCard-rankname").html(`${infoArray[i].rankname}`);
+            $("#FIBCard-serviceNumber").html(`${infoArray[i].servicenumber}`);
+            $("#FIBCard-citizenid").html(`${infoArray[i].citizenid}`);
+            $("#FIBCard-signature").html(`${infoArray[i].charname}`);
+
+            $(function() {
+                $("#FIBCard").show();
+                setTimeout(() => {
+                    $("#FIBCard").hide(1000);
+                    isFIBCardInUse = false;
+                }, 8000);
+            });
+        }
+    }
+
+    function playAnimation(animDict, animName, animFlag, animDuration) {
+        if (animDict == undefined || animName == undefined || animFlag == undefined || animDuration == undefined) return;
+        alt.emit("Client:Animation:playAnimation", animDict, animName, parseInt(animFlag), parseInt(animDuration));
+    }
+</script>
+<script type="text/javascript">
+    //Sounds
+
+    alt.on("CEF:Sound:PlayOnce", (path) => {
+        playAudio(path);
+    });
+
+    // MONEY
+    alt.on("CEF:HUD:updateMoney", (money) => {
+        updateMoneyHUD(money);
+    });
+
+    alt.on("CEF:HUD:updateHealth", (health) => {
+        updateHealth(health);
+    });
+
+    //Alt On Events
+
+    alt.on("CEF:Farming:createCEF", (neededItem, producedItem, neededItemAmount, producedItemAmount, duration, neededItemTWO, neededItemTHREE, neededItemTWOAmount, neededItemTHREEAmount) => {
+        FarmingCreateCEF(neededItem, producedItem, neededItemAmount, producedItemAmount, duration, neededItemTWO, neededItemTHREE, neededItemTWOAmount, neededItemTHREEAmount);
+    });
+
+    alt.on("CEF:HUD:sendNotification", (type, time, message) => {
+        ShowNotification(type, message, time);
+    });
+
+    alt.on("CEF:HUD:updateStreetLocation", (loc) => {
+        updateStreetLocation(loc);
+    });
+
+    alt.on("CEF:HUD:updateDesireHUD", (food, drink) => {
+        updateDesireHUD(food, drink);
+    });
+
+    alt.on("CEF:HUD:updateSpeakState", (state) => {
+        updateSpeakState(state);
+    });
+
+    alt.on("CEF:HUD:updateHUDVoice", (state) => {
+        updateVoiceHUD(state);
+    });
+
+    alt.on("CEF:HUD:updateHUDPosInVeh", (state, fuel, km) => {
+        SetPlayerHUDInVehicle(state, fuel.toFixed(2), km.toFixed(2));
+    });
+
+    alt.on("CEF:HUD:SetPlayerHUDVehicleSpeed", (speed) => {
+        SetPlayerHUDVehicleSpeed(speed.toFixed(0));
+    });
+
+    alt.on("CEF:HUD:SetPlayerHUDVehicleInfos", (fuel, km) => {
+        SetPlayerHUDVehicleInfos(fuel.toFixed(2), km.toFixed(2));
+    });
+
+    alt.on("CEF:HUD:createIdentityCardApplyForm", (charname, gender, adress, birthdate) => {
+        CreateIdentityCardApplyForm(charname, gender, adress, birthdate);
+    });
+
+    alt.on("CEF:Bank:createBankAccountManageForm", (bankArray, curBank) => {
+        createBankAccountManageForm(bankArray, curBank);
+    });
+
+    alt.on("CEF:ATM:BankATMcreateCEF", (pin, accNumber, zoneName) => {
+        BankATMcreateCEF(pin, accNumber);
+        curATMzoneName = zoneName;
+    });
+
+    alt.on("CEF:ATM:BankATMSetRequestedData", (curBalance, paperArray) => {
+        BankATMSetRequestedData(curBalance, paperArray);
+    });
+
+    alt.on("CEF:ATM:BankATMdestroyCEF", () => {
+        BankATMdestroyCEF();
+    });
+
+    alt.on("CEF:Shop:shopCEFBoxCreateCEF", (itemArray, shopId, isOnlySelling) => {
+        shopCEFBoxCreateCEF(itemArray, shopId, isOnlySelling);
+    });
+
+    alt.on("CEF:General:hideAllCEFs", (hideCursor) => {
+        $("#bankAccountManageForm").fadeOut(500, function() {
+            $("#bankAccountManageForm").hide();
+        });
+
+        $("#identityCardApplyForm").fadeOut(300, 0, function() {
+            $("#identityCardApplyForm").hide();
+        });
+
+        $("#shopCEFBox").fadeOut(500, function() {
+            $("#shopCEFBox").hide();
+        });
+
+        $("#bankATMbox").fadeOut(500, function() {
+            $("#bankATMbox").hide();
+        });
+
+        $("#barberCEFBox").fadeOut(500, function() {
+            $("#barberCEFBox").hide();
+        });
+
+        $("#VehicleShopCEFBox").fadeOut(500, function() {
+            $("#VehicleShopCEFBox").hide();
+            curVehShopId = undefined;
+        });
+
+        $("#VehicleFuelstationCEFBox").fadeOut(250, function() {
+            $("#VehicleFuelstationCEFBox").hide();
+        });
+
+        $("#bankFactionATMForm").fadeOut(500, function() {
+            globalFactionATMfactionid = undefined;
+            globalFactionATMtype = undefined;
+            $("#bankFactionATMForm").hide();
+        });
+
+        globalPlayerBillType = undefined;
+        globalPlayerBilltargetCharId = undefined;
+        $("#GivePlayerBillCEFBox").fadeOut(250, function() {
+            $("#GivePlayerBillCEFBox").hide();
+        });
+
+        globalRecievePlayerBillType = undefined;
+        globalRecievePlayerBillFactionCompanyId = undefined;
+        globalRecievePlayerBillAmount = undefined;
+        globalRecievePlayerBillReason = undefined;
+        globalRecievePlayerBillFactionName = undefined;
+        globalRecievePlayerBillGivenCharacterId = undefined;
+        $("#RecievePlayerBillCEFBox").fadeOut(250, function() {
+            $("#RecievePlayerBillCEFBox").hide();
+        });
+        $("#FactionStorageCEFBox").fadeOut(250, function() {
+            $("#FactionStorageCEFBox").hide();
+        });
+        $("#GangStorageCEFBox").fadeOut(250, function() {
+            $("#GangStorageCEFBox").hide();
+        });
+        $("#VehicleTrunkCEFBox").fadeOut(250, function() {
+            $("#VehicleTrunkCEFBox").hide();
+        });
+
+        $("#PlayerSearchInventoryCEFBox").fadeOut(250, function() {
+            $("#PlayerSearchInventoryCEFBox").hide();
+        });
+
+        $("#GivePlayerLicenseCEFBox").fadeOut(250, function() {
+            $("#GivePlayerLicenseCEFBox").hide();
+        });
+
+        $("#Minijob-PilotCEFBox").fadeOut(50, function() {
+            $("#Minijob-PilotCEFBox").hide();
+        });
+
+        $("#Minijob-BusDriverCEFBox").fadeOut(50, function() {
+            $("#Minijob-BusDriverCEFBox").hide();
+        });
+
+        globalHotelApartmentsArray = [];
+        $("#HotelManageCEFBox").fadeOut(500, function() {
+            $("#HotelManageCEFBox").hide();
+        });
+        $("#HouseEntranceCEFBox").fadeOut(500, function() {
+            $("#HouseEntranceCEFBox").hide();
+        });
+        $("#HouseManageCEFBox").fadeOut(500, function() {
+            $("#HouseManageCEFBox").hide();
+        });
+        $("#TownhallHouseSelectorBox").fadeOut(500, function() {
+            $("#TownhallHouseSelectorBox").hide();
+        });
+    });
+
+    alt.on("CEF:Barber:barberCEFBoxCreateCEF", (headoverlaysarray) => {
+        headoverlaysarray = JSON.parse(headoverlaysarray);
+        globalBarberHeadoverlaysData = headoverlaysarray[0];
+        globalBarberHeadoverlaysOpacityData = headoverlaysarray[1];
+        globalBarberHeadoverlaysColorData = headoverlaysarray[2];
+        globalBarberheadoverlaysarray = [globalBarberHeadoverlaysData, globalBarberHeadoverlaysOpacityData, globalBarberHeadoverlaysColorData];
+
+        //Daten werden visuell eingetragen
+        document.getElementById("BarberHairVariation").value = globalBarberheadoverlaysarray[0][13];
+        document.getElementById("BarberHairVariationOutput").innerHTML = globalBarberheadoverlaysarray[0][13];
+        document.getElementById("BarberHairColor1").value = globalBarberheadoverlaysarray[2][13];
+        document.getElementById("BarberHairColor1Output").innerHTML = globalBarberheadoverlaysarray[2][13];
+        document.getElementById("BarberHairColor2").value = globalBarberheadoverlaysarray[1][13];
+        document.getElementById("BarberHairColor2Output").innerHTML = globalBarberheadoverlaysarray[1][13];
+        document.getElementById("BarberEyebrowsVariation").value = globalBarberheadoverlaysarray[0][2];
+        document.getElementById("BarberEyebrowsVariationOutput").innerHTML = globalBarberheadoverlaysarray[0][2];
+        document.getElementById("BarberEyebrowsColor").value = globalBarberheadoverlaysarray[2][2];
+        document.getElementById("BarberEyebrowsColorOutput").innerHTML = globalBarberheadoverlaysarray[2][2];
+        document.getElementById("BarberBeardVariation").value = globalBarberheadoverlaysarray[0][1];
+        document.getElementById("BarberBeardVariationOutput").innerHTML = globalBarberheadoverlaysarray[0][1];
+        document.getElementById("BarberBeardColor").value = globalBarberheadoverlaysarray[2][1];
+        document.getElementById("BarberBeardColorOutput").innerHTML = globalBarberheadoverlaysarray[2][1];
+        document.getElementById("BarberMakeupVariation").value = globalBarberheadoverlaysarray[0][4];
+        document.getElementById("BarberMakeupVariationOutput").innerHTML = globalBarberheadoverlaysarray[0][4];
+        document.getElementById("BarberMakeupAlpha").value = globalBarberheadoverlaysarray[1][4];
+        document.getElementById("BarberMakeupAlphaOutput").innerHTML = globalBarberheadoverlaysarray[1][4];
+        document.getElementById("BarberLipstickVariation").value = globalBarberheadoverlaysarray[0][8];
+        document.getElementById("BarberLipstickVariationOutput").innerHTML = globalBarberheadoverlaysarray[0][8];
+        document.getElementById("BarberLipstickColor").value = globalBarberheadoverlaysarray[2][8];
+        document.getElementById("BarberLipstickColorOutput").innerHTML = globalBarberheadoverlaysarray[2][8];
+        document.getElementById("BarberWangenBlushVariation").value = globalBarberheadoverlaysarray[0][5];
+        document.getElementById("BarberWangenBlushVariationOutput").innerHTML = globalBarberheadoverlaysarray[0][5];
+        document.getElementById("BarberWangenBlushColor").value = globalBarberheadoverlaysarray[2][5];
+        document.getElementById("BarberWangenBlushColorOutput").innerHTML = globalBarberheadoverlaysarray[2][5];
+        $("#barberCEFBox").fadeTo(500, 1, function() {});
+    });
+
+    alt.on("CEF:InteractionMenu:toggleInteractionMenu", (state, type, itemArray) => {
+        toggleInterActionMenu(state, type, itemArray);
+    });
+
+    alt.on("CEF:AnimationMenu:toggleInteractionMenu", (state, itemArray) => {
+        toggleInterActionMenuAnimation(state, itemArray);
+    });
+
+    alt.on("CEF:AnimationMenuPage2:toggleInteractionMenu", (state, itemArray) => {
+        toggleInterActionMenuAnimationPage2(state, itemArray);
+    });
+
+    alt.on("CEF:AnimationMenuPage3:toggleInteractionMenu", (state, itemArray) => {
+        toggleInterActionMenuAnimationPage3(state, itemArray);
+    });
+
+    alt.on("CEF:ClothesRadial:toggleInteractionMenu", (state, itemArray) => {
+        toggleClothesRadialMenu(state, itemArray);
+    });
+
+    alt.on("CEF:ClothesRadial:requestAction", () => {
+        alt.emit("Client:ClothesRadial:giveRequestedAction", globalAnimationMenuAction);
+    });
+
+    alt.on("CEF:InteractionMenu:requestAction", () => {
+        alt.emit("Client:InteractionMenu:giveRequestedAction", globalInteractMenuType, globalInteractMenuAction);
+    });
+
+    alt.on("CEF:AnimationMenu:requestAction", () => {
+        alt.emit("Client:AnimationMenu:giveRequestedAction", globalAnimationMenuAction);
+    });
+
+    alt.on("CEF:AnimationMenuPage2:requestAction", () => {
+        alt.emit("Client:AnimationMenuPage2:giveRequestedAction", globalAnimationMenuAction);
+    });
+
+    alt.on("CEF:AnimationMenuPage3:requestAction", () => {
+        alt.emit("Client:AnimationMenuPage3:giveRequestedAction", globalAnimationMenuAction);
+    });
+
+    alt.on("CEF:VehicleShop:SetListContent", (shopid, shopname, itemarray) => {
+        SetVehicleShopCEFListContent(shopid, shopname, itemarray);
+        curVehShopId = shopid;
+    });
+
+    alt.on("CEF:FuelStation:OpenCEF", (fuelStationId, stationName, owner, maxFuel, availableLiter, fuelArray, vehID) => {
+        SetFuelstationListContent(fuelStationId, stationName, owner, maxFuel, availableLiter, fuelArray, vehID);
+    });
+
+    alt.on("CEF:Hotel:openCEF", (hotelname) => {
+        openHotelRentCEF(hotelname);
+    });
+
+    alt.on("CEF:Hotel:setApartmentItems", (array) => {
+        setHotelApartmentsItems(array);
+    });
+
+    alt.on("CEF:HouseEntrance:openCEF", (charId, houseArray, isRentedIn) => {
+        openHouseEntranceCEF(charId, houseArray, isRentedIn);
+    });
+
+    alt.on("CEF:FactionBank:createCEF", (type, factionId, factionBalance) => {
+        globalFactionATMfactionid = factionId;
+        globalFactionATMtype = type;
+        if (type == "faction") {
+            $("#bankFactionATMForm-Title").html(`FRAKTIONSBANK`);
+        } else if (type == "company") {
+            $("#bankFactionATMForm-Title").html(`UNTERNEHMENSKONTO`);
+        }
+        $("#bankFactionATMForm-CurBalance").html(`${factionBalance}`);
+        $("#bankFactionATMForm").fadeTo(1000, 1, function() {});
+    });
+
+    alt.on("CEF:GivePlayerBill:openCEF", (type, targetCharId) => {
+        globalPlayerBillType = type;
+        globalPlayerBilltargetCharId = targetCharId;
+        $("#GivePlayerBillCEFBox-AmountInput").val("");
+        $("#GivePlayerBillCEFBox-ReasonInput").val("");
+        $("#GivePlayerBillCEFBox").fadeTo(1000, 1, function() {});
+    });
+
+    alt.on("CEF:RecievePlayerBill:openCEF", (type, factionCompanyId, moneyAmount, reason, factionCompanyName, charId) => {
+        globalRecievePlayerBillType = type;
+        globalRecievePlayerBillFactionCompanyId = factionCompanyId;
+        globalRecievePlayerBillAmount = moneyAmount;
+        globalRecievePlayerBillReason = reason;
+        globalRecievePlayerBillFactionName = factionCompanyName;
+        globalRecievePlayerBillGivenCharacterId = charId;
+        $("#RecievePlayerBillCEFBox-NameInput").val(`${factionCompanyName} (${factionCompanyId})`);
+        $("#RecievePlayerBillCEFBox-AmountInput").val(`${moneyAmount}`);
+        $("#RecievePlayerBillCEFBox-ReasonInput").val(`${reason}`);
+        $("#RecievePlayerBillCEFBox").fadeTo(1000, 1, function() {});
+    });
+
+    alt.on("CEF:FactionStorage:openCEF", (charId, factionId, type, invArray, storageArray) => {
+        SetFactionStorageCEFBoxContent(charId, factionId, type, invArray, storageArray);
+    });
+
+    alt.on("CEF:GangStorage:openCEF", (charId, gangId, type, invArray, storageArray) => {
+        SetGangStorageCEFBoxContent(charId, gangId, type, invArray, storageArray);
+    });
+
+    alt.on("CEF:VehicleTrunk:openCEF", (charId, vehID, type, invArray, storageArray, currentweight, maxweight) => {
+        SetVehicleTrunkCEFBoxContent(charId, vehID, type, invArray, storageArray, currentweight, maxweight);
+    });
+
+    alt.on("CEF:PlayerSearch:openCEF", (targetCharId, invArray) => {
+        SetPlayerSearchInventoryCEFBoxContent(targetCharId, invArray);
+    });
+
+    alt.on("CEF:VehicleLicensing:openCEF", (vehArray) => {
+        SetVehicleLicensingCEFBoxContent(vehArray);
+    });
+
+    alt.on("CEF:VehicleKey:openCEF", (vehArray) => {
+        SetVehicleKeyCEFBoxContent(vehArray);
+    });
+
+    alt.on("CEF:VehicleSell:openCEF", (vehArray) => {
+        SetVehicleSellCEFBoxContent(vehArray);
+    });
+
+    alt.on("CEF:GivePlayerLicense:SetGivePlayerLicenseCEFContent", (targetCharId, licArray) => {
+        SetGivePlayerLicenseCEFContent(targetCharId, licArray);
+    });
+
+    alt.on("CEF:MinijobBusdriver:openCEF", (routeArray) => {
+        SetMinijobBusDriverListContent(routeArray);
+    });
+
+    alt.on("CEF:MinijobPilot:openCEF", () => {
+        $("#Minijob-PilotCEFBox").fadeTo(250, 1, function() {});
+    });
+
+    alt.on("CEF:Deathscreen:openCEF", () => {
+        openDeathscreenCEF();
+    });
+
+    alt.on("CEF:Deathscreen:closeCEF", () => {
+        closeDeathscreen();
+    });
+
+    alt.on("CEF:HouseManage:openCEF", (houseInfoArray, renterArray) => {
+        openHouseManageCEF(houseInfoArray, renterArray);
+    });
+
+    alt.on("CEF:IdentityCard:showIdentityCard", (infoArray) => {
+        showIdentityCard(infoArray);
+    });
+
+    alt.on("CEF:IdentityCard:showPoliceId", (infoArray) => {
+        showPoliceId(infoArray);
+    });
+
+    alt.on("CEF:Townhall:openHouseSelector", (houseArray) => {
+        openTownhallHouseSelector(houseArray);
+    });
+
+    alt.on("CEF:Animations:setupItems", (array) => {
+        setAnimationMenuItems(array);
+    });
+
+    alt.on("CEF:Animations:setupAnimationMenu", (favoriteArray) => {
+        setupAnimationMenu(favoriteArray);
+    });
+
+    alt.on("CEF:Animations:hideAnimationMenu", () => {
+        hideAnimationMenu();
+    });
+
+    //Tattoo Shop
+    alt.on("CEF:TattooShop:openShop", (shopId, ownTattoosJSON) => {
+        openTattooHUD(shopId, ownTattoosJSON);
+    });
+
+    alt.on("CEF:TattooShop:sendItemsToClient", (array) => {
+        SetTattooShopItems(array);
+    });
+    
+    alt.on("CEF:Vehicle:showChangeOwnerHUD", (vehName) => {
+        showChangeOwnerHUD(vehName);
+    });
+	
+</script>
 
 </html>

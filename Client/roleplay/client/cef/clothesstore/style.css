@@ -56,8 +56,7 @@
     width: 50vh;
     height: 98vh;
     margin-top: 4.5vh;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.425), rgba(86, 0, 121, 0.329));
-    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.356);
 }
 
 #clothesstore-title {
@@ -300,8 +299,7 @@ p {
 #clothesstore-texture-menu {
     width: 40vh;
     height: 12vh;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.425), rgba(86, 0, 121, 0.329));
-    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.356);
     position: absolute;
     margin-left: 51vh;
     margin-top: -98vh;
@@ -316,6 +314,7 @@ p {
 }
 
 .clothesstore-texture-menu-maindiv {
+    background: rgba(37, 37, 37, 0.15);
     margin: auto;
     width: 40vh;
     height: 8vh;
@@ -363,37 +362,4 @@ p {
 #clothesstore-texture-maxinputvalue {
     position: absolute;
     margin-left: 2.8vh;
-}
-
-
-/* Slider */
-
-.slidecontainer {
-    width: 100%;
-}
-
-.slidecontainer>.slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 15px;
-    border-radius: 5px;
-    background: #1d1d1ddb;
-    outline: none;
-    opacity: 0.6;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-}
-
-.slidecontainer>.slider:hover {
-    opacity: 1;
-}
-
-.slidecontainer>.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    background: purple;
-    cursor: pointer;
-    border-radius: 100px;
 }

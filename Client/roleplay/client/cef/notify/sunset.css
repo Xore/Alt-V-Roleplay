@@ -6,7 +6,7 @@
 .noty_theme__sunset.noty_bar {
     margin: 4px 0;
     overflow: hidden;
-    border-radius: 35px;
+    border-radius: 2px;
     position: relative;
     font-family: PEL;
     font-weight: bold;
@@ -17,7 +17,6 @@
     font-family: PEL;
     font-weight: bold;
     text-align: center;
-    color: black;
 }
 
 .noty_theme__sunset.noty_bar .noty_buttons {
@@ -26,7 +25,7 @@
 
 .noty_theme__sunset.noty_type__alert,
 .noty_theme__sunset.noty_type__notification {
-    background-color: rgb(0 0 0 / 36%);
+    background-color: rgba(0, 0, 0, 0.185);
     color: #fff;
 }
 
