@@ -1,0 +1,2315 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.models.AccountsCharacters
+  commentId: T:Altv_Roleplay.models.AccountsCharacters
+  id: AccountsCharacters
+  parent: Altv_Roleplay.models
+  children:
+  - Altv_Roleplay.models.AccountsCharacters.accountId
+  - Altv_Roleplay.models.AccountsCharacters.accState
+  - Altv_Roleplay.models.AccountsCharacters.address
+  - Altv_Roleplay.models.AccountsCharacters.armor
+  - Altv_Roleplay.models.AccountsCharacters.birthdate
+  - Altv_Roleplay.models.AccountsCharacters.birthplace
+  - Altv_Roleplay.models.AccountsCharacters.charId
+  - Altv_Roleplay.models.AccountsCharacters.charname
+  - Altv_Roleplay.models.AccountsCharacters.currentFunkFrequence
+  - Altv_Roleplay.models.AccountsCharacters.CurrentlyRecieveCaller
+  - Altv_Roleplay.models.AccountsCharacters.death
+  - Altv_Roleplay.models.AccountsCharacters.fastFarmTime
+  - Altv_Roleplay.models.AccountsCharacters.firstJoin
+  - Altv_Roleplay.models.AccountsCharacters.firstJoinTimestamp
+  - Altv_Roleplay.models.AccountsCharacters.firstSpawnPlace
+  - Altv_Roleplay.models.AccountsCharacters.gender
+  - Altv_Roleplay.models.AccountsCharacters.health
+  - Altv_Roleplay.models.AccountsCharacters.hunger
+  - Altv_Roleplay.models.AccountsCharacters.isAnimalPed
+  - Altv_Roleplay.models.AccountsCharacters.isCrime
+  - Altv_Roleplay.models.AccountsCharacters.isFastFarm
+  - Altv_Roleplay.models.AccountsCharacters.isInJail
+  - Altv_Roleplay.models.AccountsCharacters.isPhoneEquipped
+  - Altv_Roleplay.models.AccountsCharacters.isPhoneFlyModeActivated
+  - Altv_Roleplay.models.AccountsCharacters.isUnconscious
+  - Altv_Roleplay.models.AccountsCharacters.jailTime
+  - Altv_Roleplay.models.AccountsCharacters.job
+  - Altv_Roleplay.models.AccountsCharacters.jobHourCounter
+  - Altv_Roleplay.models.AccountsCharacters.lastJobPaycheck
+  - Altv_Roleplay.models.AccountsCharacters.lastLogin
+  - Altv_Roleplay.models.AccountsCharacters.paydayTime
+  - Altv_Roleplay.models.AccountsCharacters.pedName
+  - Altv_Roleplay.models.AccountsCharacters.phonenumber
+  - Altv_Roleplay.models.AccountsCharacters.playtimeHours
+  - Altv_Roleplay.models.AccountsCharacters.targetNumber
+  - Altv_Roleplay.models.AccountsCharacters.thirst
+  - Altv_Roleplay.models.AccountsCharacters.unconsciousTime
+  - Altv_Roleplay.models.AccountsCharacters.wallpaper
+  - Altv_Roleplay.models.AccountsCharacters.weapon_Fist
+  - Altv_Roleplay.models.AccountsCharacters.weapon_Fist_Ammo
+  - Altv_Roleplay.models.AccountsCharacters.weapon_Primary
+  - Altv_Roleplay.models.AccountsCharacters.weapon_Primary_Ammo
+  - Altv_Roleplay.models.AccountsCharacters.weapon_Secondary
+  - Altv_Roleplay.models.AccountsCharacters.weapon_Secondary_Ammo
+  - Altv_Roleplay.models.AccountsCharacters.weapon_Secondary2
+  - Altv_Roleplay.models.AccountsCharacters.weapon_Secondary2_Ammo
+  langs:
+  - csharp
+  - vb
+  name: AccountsCharacters
+  nameWithType: AccountsCharacters
+  fullName: Altv_Roleplay.models.AccountsCharacters
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: AccountsCharacters
+    path: models/AccountsCharacters.cs
+    startLine: 8
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public class AccountsCharacters
+    content.vb: Public Class AccountsCharacters
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.models.AccountsCharacters.charId
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.charId
+  id: charId
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: charId
+  nameWithType: AccountsCharacters.charId
+  fullName: Altv_Roleplay.models.AccountsCharacters.charId
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: charId
+    path: models/AccountsCharacters.cs
+    startLine: 10
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int charId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property charId As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.charId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.accountId
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.accountId
+  id: accountId
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: accountId
+  nameWithType: AccountsCharacters.accountId
+  fullName: Altv_Roleplay.models.AccountsCharacters.accountId
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: accountId
+    path: models/AccountsCharacters.cs
+    startLine: 13
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int accountId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property accountId As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.accountId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.charname
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.charname
+  id: charname
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: charname
+  nameWithType: AccountsCharacters.charname
+  fullName: Altv_Roleplay.models.AccountsCharacters.charname
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: charname
+    path: models/AccountsCharacters.cs
+    startLine: 14
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string charname { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property charname As String
+  overload: Altv_Roleplay.models.AccountsCharacters.charname*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.death
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.death
+  id: death
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: death
+  nameWithType: AccountsCharacters.death
+  fullName: Altv_Roleplay.models.AccountsCharacters.death
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: death
+    path: models/AccountsCharacters.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public bool death { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property death As Boolean
+  overload: Altv_Roleplay.models.AccountsCharacters.death*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.accState
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.accState
+  id: accState
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: accState
+  nameWithType: AccountsCharacters.accState
+  fullName: Altv_Roleplay.models.AccountsCharacters.accState
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: accState
+    path: models/AccountsCharacters.cs
+    startLine: 16
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int accState { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property accState As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.accState*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.firstJoin
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.firstJoin
+  id: firstJoin
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: firstJoin
+  nameWithType: AccountsCharacters.firstJoin
+  fullName: Altv_Roleplay.models.AccountsCharacters.firstJoin
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: firstJoin
+    path: models/AccountsCharacters.cs
+    startLine: 17
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public bool firstJoin { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property firstJoin As Boolean
+  overload: Altv_Roleplay.models.AccountsCharacters.firstJoin*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.firstSpawnPlace
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.firstSpawnPlace
+  id: firstSpawnPlace
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: firstSpawnPlace
+  nameWithType: AccountsCharacters.firstSpawnPlace
+  fullName: Altv_Roleplay.models.AccountsCharacters.firstSpawnPlace
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: firstSpawnPlace
+    path: models/AccountsCharacters.cs
+    startLine: 18
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string firstSpawnPlace { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property firstSpawnPlace As String
+  overload: Altv_Roleplay.models.AccountsCharacters.firstSpawnPlace*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.firstJoinTimestamp
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.firstJoinTimestamp
+  id: firstJoinTimestamp
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: firstJoinTimestamp
+  nameWithType: AccountsCharacters.firstJoinTimestamp
+  fullName: Altv_Roleplay.models.AccountsCharacters.firstJoinTimestamp
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: firstJoinTimestamp
+    path: models/AccountsCharacters.cs
+    startLine: 19
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public DateTime firstJoinTimestamp { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property firstJoinTimestamp As Date
+  overload: Altv_Roleplay.models.AccountsCharacters.firstJoinTimestamp*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.gender
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.gender
+  id: gender
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: gender
+  nameWithType: AccountsCharacters.gender
+  fullName: Altv_Roleplay.models.AccountsCharacters.gender
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: gender
+    path: models/AccountsCharacters.cs
+    startLine: 20
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public bool gender { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property gender As Boolean
+  overload: Altv_Roleplay.models.AccountsCharacters.gender*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.birthdate
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.birthdate
+  id: birthdate
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: birthdate
+  nameWithType: AccountsCharacters.birthdate
+  fullName: Altv_Roleplay.models.AccountsCharacters.birthdate
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: birthdate
+    path: models/AccountsCharacters.cs
+    startLine: 21
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string birthdate { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property birthdate As String
+  overload: Altv_Roleplay.models.AccountsCharacters.birthdate*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.birthplace
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.birthplace
+  id: birthplace
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: birthplace
+  nameWithType: AccountsCharacters.birthplace
+  fullName: Altv_Roleplay.models.AccountsCharacters.birthplace
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: birthplace
+    path: models/AccountsCharacters.cs
+    startLine: 22
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string birthplace { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property birthplace As String
+  overload: Altv_Roleplay.models.AccountsCharacters.birthplace*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.health
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.health
+  id: health
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: health
+  nameWithType: AccountsCharacters.health
+  fullName: Altv_Roleplay.models.AccountsCharacters.health
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: health
+    path: models/AccountsCharacters.cs
+    startLine: 23
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int health { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property health As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.health*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.armor
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.armor
+  id: armor
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: armor
+  nameWithType: AccountsCharacters.armor
+  fullName: Altv_Roleplay.models.AccountsCharacters.armor
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: armor
+    path: models/AccountsCharacters.cs
+    startLine: 24
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int armor { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property armor As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.armor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.hunger
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.hunger
+  id: hunger
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: hunger
+  nameWithType: AccountsCharacters.hunger
+  fullName: Altv_Roleplay.models.AccountsCharacters.hunger
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: hunger
+    path: models/AccountsCharacters.cs
+    startLine: 25
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int hunger { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property hunger As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.hunger*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.thirst
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.thirst
+  id: thirst
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: thirst
+  nameWithType: AccountsCharacters.thirst
+  fullName: Altv_Roleplay.models.AccountsCharacters.thirst
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: thirst
+    path: models/AccountsCharacters.cs
+    startLine: 26
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int thirst { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property thirst As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.thirst*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.address
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.address
+  id: address
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: address
+  nameWithType: AccountsCharacters.address
+  fullName: Altv_Roleplay.models.AccountsCharacters.address
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: address
+    path: models/AccountsCharacters.cs
+    startLine: 27
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string address { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property address As String
+  overload: Altv_Roleplay.models.AccountsCharacters.address*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.phonenumber
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.phonenumber
+  id: phonenumber
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: phonenumber
+  nameWithType: AccountsCharacters.phonenumber
+  fullName: Altv_Roleplay.models.AccountsCharacters.phonenumber
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: phonenumber
+    path: models/AccountsCharacters.cs
+    startLine: 28
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int phonenumber { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property phonenumber As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.phonenumber*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.isCrime
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.isCrime
+  id: isCrime
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: isCrime
+  nameWithType: AccountsCharacters.isCrime
+  fullName: Altv_Roleplay.models.AccountsCharacters.isCrime
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: isCrime
+    path: models/AccountsCharacters.cs
+    startLine: 29
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public bool isCrime { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property isCrime As Boolean
+  overload: Altv_Roleplay.models.AccountsCharacters.isCrime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.paydayTime
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.paydayTime
+  id: paydayTime
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: paydayTime
+  nameWithType: AccountsCharacters.paydayTime
+  fullName: Altv_Roleplay.models.AccountsCharacters.paydayTime
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: paydayTime
+    path: models/AccountsCharacters.cs
+    startLine: 30
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int paydayTime { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property paydayTime As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.paydayTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.job
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.job
+  id: job
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: job
+  nameWithType: AccountsCharacters.job
+  fullName: Altv_Roleplay.models.AccountsCharacters.job
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: job
+    path: models/AccountsCharacters.cs
+    startLine: 31
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string job { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property job As String
+  overload: Altv_Roleplay.models.AccountsCharacters.job*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.jobHourCounter
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.jobHourCounter
+  id: jobHourCounter
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: jobHourCounter
+  nameWithType: AccountsCharacters.jobHourCounter
+  fullName: Altv_Roleplay.models.AccountsCharacters.jobHourCounter
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: jobHourCounter
+    path: models/AccountsCharacters.cs
+    startLine: 32
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int jobHourCounter { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property jobHourCounter As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.jobHourCounter*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.lastJobPaycheck
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.lastJobPaycheck
+  id: lastJobPaycheck
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: lastJobPaycheck
+  nameWithType: AccountsCharacters.lastJobPaycheck
+  fullName: Altv_Roleplay.models.AccountsCharacters.lastJobPaycheck
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: lastJobPaycheck
+    path: models/AccountsCharacters.cs
+    startLine: 33
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public DateTime lastJobPaycheck { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property lastJobPaycheck As Date
+  overload: Altv_Roleplay.models.AccountsCharacters.lastJobPaycheck*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.weapon_Primary
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.weapon_Primary
+  id: weapon_Primary
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: weapon_Primary
+  nameWithType: AccountsCharacters.weapon_Primary
+  fullName: Altv_Roleplay.models.AccountsCharacters.weapon_Primary
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: weapon_Primary
+    path: models/AccountsCharacters.cs
+    startLine: 34
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string weapon_Primary { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property weapon_Primary As String
+  overload: Altv_Roleplay.models.AccountsCharacters.weapon_Primary*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.weapon_Primary_Ammo
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.weapon_Primary_Ammo
+  id: weapon_Primary_Ammo
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: weapon_Primary_Ammo
+  nameWithType: AccountsCharacters.weapon_Primary_Ammo
+  fullName: Altv_Roleplay.models.AccountsCharacters.weapon_Primary_Ammo
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: weapon_Primary_Ammo
+    path: models/AccountsCharacters.cs
+    startLine: 35
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int weapon_Primary_Ammo { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property weapon_Primary_Ammo As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.weapon_Primary_Ammo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.weapon_Secondary
+  id: weapon_Secondary
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: weapon_Secondary
+  nameWithType: AccountsCharacters.weapon_Secondary
+  fullName: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: weapon_Secondary
+    path: models/AccountsCharacters.cs
+    startLine: 36
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string weapon_Secondary { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property weapon_Secondary As String
+  overload: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary_Ammo
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.weapon_Secondary_Ammo
+  id: weapon_Secondary_Ammo
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: weapon_Secondary_Ammo
+  nameWithType: AccountsCharacters.weapon_Secondary_Ammo
+  fullName: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary_Ammo
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: weapon_Secondary_Ammo
+    path: models/AccountsCharacters.cs
+    startLine: 37
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int weapon_Secondary_Ammo { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property weapon_Secondary_Ammo As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary_Ammo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary2
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.weapon_Secondary2
+  id: weapon_Secondary2
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: weapon_Secondary2
+  nameWithType: AccountsCharacters.weapon_Secondary2
+  fullName: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary2
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: weapon_Secondary2
+    path: models/AccountsCharacters.cs
+    startLine: 38
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string weapon_Secondary2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property weapon_Secondary2 As String
+  overload: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary2_Ammo
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.weapon_Secondary2_Ammo
+  id: weapon_Secondary2_Ammo
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: weapon_Secondary2_Ammo
+  nameWithType: AccountsCharacters.weapon_Secondary2_Ammo
+  fullName: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary2_Ammo
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: weapon_Secondary2_Ammo
+    path: models/AccountsCharacters.cs
+    startLine: 39
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int weapon_Secondary2_Ammo { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property weapon_Secondary2_Ammo As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary2_Ammo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.weapon_Fist
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.weapon_Fist
+  id: weapon_Fist
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: weapon_Fist
+  nameWithType: AccountsCharacters.weapon_Fist
+  fullName: Altv_Roleplay.models.AccountsCharacters.weapon_Fist
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: weapon_Fist
+    path: models/AccountsCharacters.cs
+    startLine: 40
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string weapon_Fist { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property weapon_Fist As String
+  overload: Altv_Roleplay.models.AccountsCharacters.weapon_Fist*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.weapon_Fist_Ammo
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.weapon_Fist_Ammo
+  id: weapon_Fist_Ammo
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: weapon_Fist_Ammo
+  nameWithType: AccountsCharacters.weapon_Fist_Ammo
+  fullName: Altv_Roleplay.models.AccountsCharacters.weapon_Fist_Ammo
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: weapon_Fist_Ammo
+    path: models/AccountsCharacters.cs
+    startLine: 41
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int weapon_Fist_Ammo { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property weapon_Fist_Ammo As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.weapon_Fist_Ammo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.isUnconscious
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.isUnconscious
+  id: isUnconscious
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: isUnconscious
+  nameWithType: AccountsCharacters.isUnconscious
+  fullName: Altv_Roleplay.models.AccountsCharacters.isUnconscious
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: isUnconscious
+    path: models/AccountsCharacters.cs
+    startLine: 42
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public bool isUnconscious { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property isUnconscious As Boolean
+  overload: Altv_Roleplay.models.AccountsCharacters.isUnconscious*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.unconsciousTime
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.unconsciousTime
+  id: unconsciousTime
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: unconsciousTime
+  nameWithType: AccountsCharacters.unconsciousTime
+  fullName: Altv_Roleplay.models.AccountsCharacters.unconsciousTime
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: unconsciousTime
+    path: models/AccountsCharacters.cs
+    startLine: 43
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int unconsciousTime { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property unconsciousTime As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.unconsciousTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.isFastFarm
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.isFastFarm
+  id: isFastFarm
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: isFastFarm
+  nameWithType: AccountsCharacters.isFastFarm
+  fullName: Altv_Roleplay.models.AccountsCharacters.isFastFarm
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: isFastFarm
+    path: models/AccountsCharacters.cs
+    startLine: 44
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public bool isFastFarm { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property isFastFarm As Boolean
+  overload: Altv_Roleplay.models.AccountsCharacters.isFastFarm*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.fastFarmTime
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.fastFarmTime
+  id: fastFarmTime
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: fastFarmTime
+  nameWithType: AccountsCharacters.fastFarmTime
+  fullName: Altv_Roleplay.models.AccountsCharacters.fastFarmTime
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: fastFarmTime
+    path: models/AccountsCharacters.cs
+    startLine: 45
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int fastFarmTime { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property fastFarmTime As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.fastFarmTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.lastLogin
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.lastLogin
+  id: lastLogin
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: lastLogin
+  nameWithType: AccountsCharacters.lastLogin
+  fullName: Altv_Roleplay.models.AccountsCharacters.lastLogin
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: lastLogin
+    path: models/AccountsCharacters.cs
+    startLine: 46
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public DateTime lastLogin { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property lastLogin As Date
+  overload: Altv_Roleplay.models.AccountsCharacters.lastLogin*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.isPhoneEquipped
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.isPhoneEquipped
+  id: isPhoneEquipped
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: isPhoneEquipped
+  nameWithType: AccountsCharacters.isPhoneEquipped
+  fullName: Altv_Roleplay.models.AccountsCharacters.isPhoneEquipped
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: isPhoneEquipped
+    path: models/AccountsCharacters.cs
+    startLine: 47
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public bool isPhoneEquipped { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property isPhoneEquipped As Boolean
+  overload: Altv_Roleplay.models.AccountsCharacters.isPhoneEquipped*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.playtimeHours
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.playtimeHours
+  id: playtimeHours
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: playtimeHours
+  nameWithType: AccountsCharacters.playtimeHours
+  fullName: Altv_Roleplay.models.AccountsCharacters.playtimeHours
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: playtimeHours
+    path: models/AccountsCharacters.cs
+    startLine: 48
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int playtimeHours { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property playtimeHours As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.playtimeHours*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.isInJail
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.isInJail
+  id: isInJail
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: isInJail
+  nameWithType: AccountsCharacters.isInJail
+  fullName: Altv_Roleplay.models.AccountsCharacters.isInJail
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: isInJail
+    path: models/AccountsCharacters.cs
+    startLine: 49
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public bool isInJail { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property isInJail As Boolean
+  overload: Altv_Roleplay.models.AccountsCharacters.isInJail*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.jailTime
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.jailTime
+  id: jailTime
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: jailTime
+  nameWithType: AccountsCharacters.jailTime
+  fullName: Altv_Roleplay.models.AccountsCharacters.jailTime
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: jailTime
+    path: models/AccountsCharacters.cs
+    startLine: 50
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int jailTime { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property jailTime As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.jailTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.wallpaper
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.wallpaper
+  id: wallpaper
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: wallpaper
+  nameWithType: AccountsCharacters.wallpaper
+  fullName: Altv_Roleplay.models.AccountsCharacters.wallpaper
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: wallpaper
+    path: models/AccountsCharacters.cs
+    startLine: 51
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int wallpaper { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property wallpaper As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.wallpaper*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.pedName
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.pedName
+  id: pedName
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: pedName
+  nameWithType: AccountsCharacters.pedName
+  fullName: Altv_Roleplay.models.AccountsCharacters.pedName
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: pedName
+    path: models/AccountsCharacters.cs
+    startLine: 52
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string pedName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property pedName As String
+  overload: Altv_Roleplay.models.AccountsCharacters.pedName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.isAnimalPed
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.isAnimalPed
+  id: isAnimalPed
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: isAnimalPed
+  nameWithType: AccountsCharacters.isAnimalPed
+  fullName: Altv_Roleplay.models.AccountsCharacters.isAnimalPed
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: isAnimalPed
+    path: models/AccountsCharacters.cs
+    startLine: 53
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int isAnimalPed { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property isAnimalPed As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.isAnimalPed*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.isPhoneFlyModeActivated
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.isPhoneFlyModeActivated
+  id: isPhoneFlyModeActivated
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: isPhoneFlyModeActivated
+  nameWithType: AccountsCharacters.isPhoneFlyModeActivated
+  fullName: Altv_Roleplay.models.AccountsCharacters.isPhoneFlyModeActivated
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: isPhoneFlyModeActivated
+    path: models/AccountsCharacters.cs
+    startLine: 55
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [NotMapped]
+
+      public bool isPhoneFlyModeActivated { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <NotMapped>
+
+      Public Property isPhoneFlyModeActivated As Boolean
+  overload: Altv_Roleplay.models.AccountsCharacters.isPhoneFlyModeActivated*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.targetNumber
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.targetNumber
+  id: targetNumber
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: targetNumber
+  nameWithType: AccountsCharacters.targetNumber
+  fullName: Altv_Roleplay.models.AccountsCharacters.targetNumber
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: targetNumber
+    path: models/AccountsCharacters.cs
+    startLine: 58
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [NotMapped]
+
+      public int targetNumber { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <NotMapped>
+
+      Public Property targetNumber As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.targetNumber*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.CurrentlyRecieveCaller
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.CurrentlyRecieveCaller
+  id: CurrentlyRecieveCaller
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: CurrentlyRecieveCaller
+  nameWithType: AccountsCharacters.CurrentlyRecieveCaller
+  fullName: Altv_Roleplay.models.AccountsCharacters.CurrentlyRecieveCaller
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CurrentlyRecieveCaller
+    path: models/AccountsCharacters.cs
+    startLine: 61
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [NotMapped]
+
+      public int CurrentlyRecieveCaller { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <NotMapped>
+
+      Public Property CurrentlyRecieveCaller As Integer
+  overload: Altv_Roleplay.models.AccountsCharacters.CurrentlyRecieveCaller*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.AccountsCharacters.currentFunkFrequence
+  commentId: P:Altv_Roleplay.models.AccountsCharacters.currentFunkFrequence
+  id: currentFunkFrequence
+  parent: Altv_Roleplay.models.AccountsCharacters
+  langs:
+  - csharp
+  - vb
+  name: currentFunkFrequence
+  nameWithType: AccountsCharacters.currentFunkFrequence
+  fullName: Altv_Roleplay.models.AccountsCharacters.currentFunkFrequence
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/AccountsCharacters.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: currentFunkFrequence
+    path: models/AccountsCharacters.cs
+    startLine: 64
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [NotMapped]
+
+      public string currentFunkFrequence { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <NotMapped>
+
+      Public Property currentFunkFrequence As String
+  overload: Altv_Roleplay.models.AccountsCharacters.currentFunkFrequence*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.models
+  commentId: N:Altv_Roleplay.models
+  name: Altv_Roleplay.models
+  nameWithType: Altv_Roleplay.models
+  fullName: Altv_Roleplay.models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.models.AccountsCharacters.charId*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.charId
+  name: charId
+  nameWithType: AccountsCharacters.charId
+  fullName: Altv_Roleplay.models.AccountsCharacters.charId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.models.AccountsCharacters.accountId*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.accountId
+  name: accountId
+  nameWithType: AccountsCharacters.accountId
+  fullName: Altv_Roleplay.models.AccountsCharacters.accountId
+- uid: Altv_Roleplay.models.AccountsCharacters.charname*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.charname
+  name: charname
+  nameWithType: AccountsCharacters.charname
+  fullName: Altv_Roleplay.models.AccountsCharacters.charname
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Altv_Roleplay.models.AccountsCharacters.death*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.death
+  name: death
+  nameWithType: AccountsCharacters.death
+  fullName: Altv_Roleplay.models.AccountsCharacters.death
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Altv_Roleplay.models.AccountsCharacters.accState*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.accState
+  name: accState
+  nameWithType: AccountsCharacters.accState
+  fullName: Altv_Roleplay.models.AccountsCharacters.accState
+- uid: Altv_Roleplay.models.AccountsCharacters.firstJoin*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.firstJoin
+  name: firstJoin
+  nameWithType: AccountsCharacters.firstJoin
+  fullName: Altv_Roleplay.models.AccountsCharacters.firstJoin
+- uid: Altv_Roleplay.models.AccountsCharacters.firstSpawnPlace*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.firstSpawnPlace
+  name: firstSpawnPlace
+  nameWithType: AccountsCharacters.firstSpawnPlace
+  fullName: Altv_Roleplay.models.AccountsCharacters.firstSpawnPlace
+- uid: Altv_Roleplay.models.AccountsCharacters.firstJoinTimestamp*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.firstJoinTimestamp
+  name: firstJoinTimestamp
+  nameWithType: AccountsCharacters.firstJoinTimestamp
+  fullName: Altv_Roleplay.models.AccountsCharacters.firstJoinTimestamp
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: Altv_Roleplay.models.AccountsCharacters.gender*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.gender
+  name: gender
+  nameWithType: AccountsCharacters.gender
+  fullName: Altv_Roleplay.models.AccountsCharacters.gender
+- uid: Altv_Roleplay.models.AccountsCharacters.birthdate*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.birthdate
+  name: birthdate
+  nameWithType: AccountsCharacters.birthdate
+  fullName: Altv_Roleplay.models.AccountsCharacters.birthdate
+- uid: Altv_Roleplay.models.AccountsCharacters.birthplace*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.birthplace
+  name: birthplace
+  nameWithType: AccountsCharacters.birthplace
+  fullName: Altv_Roleplay.models.AccountsCharacters.birthplace
+- uid: Altv_Roleplay.models.AccountsCharacters.health*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.health
+  name: health
+  nameWithType: AccountsCharacters.health
+  fullName: Altv_Roleplay.models.AccountsCharacters.health
+- uid: Altv_Roleplay.models.AccountsCharacters.armor*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.armor
+  name: armor
+  nameWithType: AccountsCharacters.armor
+  fullName: Altv_Roleplay.models.AccountsCharacters.armor
+- uid: Altv_Roleplay.models.AccountsCharacters.hunger*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.hunger
+  name: hunger
+  nameWithType: AccountsCharacters.hunger
+  fullName: Altv_Roleplay.models.AccountsCharacters.hunger
+- uid: Altv_Roleplay.models.AccountsCharacters.thirst*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.thirst
+  name: thirst
+  nameWithType: AccountsCharacters.thirst
+  fullName: Altv_Roleplay.models.AccountsCharacters.thirst
+- uid: Altv_Roleplay.models.AccountsCharacters.address*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.address
+  name: address
+  nameWithType: AccountsCharacters.address
+  fullName: Altv_Roleplay.models.AccountsCharacters.address
+- uid: Altv_Roleplay.models.AccountsCharacters.phonenumber*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.phonenumber
+  name: phonenumber
+  nameWithType: AccountsCharacters.phonenumber
+  fullName: Altv_Roleplay.models.AccountsCharacters.phonenumber
+- uid: Altv_Roleplay.models.AccountsCharacters.isCrime*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.isCrime
+  name: isCrime
+  nameWithType: AccountsCharacters.isCrime
+  fullName: Altv_Roleplay.models.AccountsCharacters.isCrime
+- uid: Altv_Roleplay.models.AccountsCharacters.paydayTime*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.paydayTime
+  name: paydayTime
+  nameWithType: AccountsCharacters.paydayTime
+  fullName: Altv_Roleplay.models.AccountsCharacters.paydayTime
+- uid: Altv_Roleplay.models.AccountsCharacters.job*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.job
+  name: job
+  nameWithType: AccountsCharacters.job
+  fullName: Altv_Roleplay.models.AccountsCharacters.job
+- uid: Altv_Roleplay.models.AccountsCharacters.jobHourCounter*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.jobHourCounter
+  name: jobHourCounter
+  nameWithType: AccountsCharacters.jobHourCounter
+  fullName: Altv_Roleplay.models.AccountsCharacters.jobHourCounter
+- uid: Altv_Roleplay.models.AccountsCharacters.lastJobPaycheck*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.lastJobPaycheck
+  name: lastJobPaycheck
+  nameWithType: AccountsCharacters.lastJobPaycheck
+  fullName: Altv_Roleplay.models.AccountsCharacters.lastJobPaycheck
+- uid: Altv_Roleplay.models.AccountsCharacters.weapon_Primary*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.weapon_Primary
+  name: weapon_Primary
+  nameWithType: AccountsCharacters.weapon_Primary
+  fullName: Altv_Roleplay.models.AccountsCharacters.weapon_Primary
+- uid: Altv_Roleplay.models.AccountsCharacters.weapon_Primary_Ammo*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.weapon_Primary_Ammo
+  name: weapon_Primary_Ammo
+  nameWithType: AccountsCharacters.weapon_Primary_Ammo
+  fullName: Altv_Roleplay.models.AccountsCharacters.weapon_Primary_Ammo
+- uid: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.weapon_Secondary
+  name: weapon_Secondary
+  nameWithType: AccountsCharacters.weapon_Secondary
+  fullName: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary
+- uid: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary_Ammo*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.weapon_Secondary_Ammo
+  name: weapon_Secondary_Ammo
+  nameWithType: AccountsCharacters.weapon_Secondary_Ammo
+  fullName: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary_Ammo
+- uid: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary2*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.weapon_Secondary2
+  name: weapon_Secondary2
+  nameWithType: AccountsCharacters.weapon_Secondary2
+  fullName: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary2
+- uid: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary2_Ammo*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.weapon_Secondary2_Ammo
+  name: weapon_Secondary2_Ammo
+  nameWithType: AccountsCharacters.weapon_Secondary2_Ammo
+  fullName: Altv_Roleplay.models.AccountsCharacters.weapon_Secondary2_Ammo
+- uid: Altv_Roleplay.models.AccountsCharacters.weapon_Fist*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.weapon_Fist
+  name: weapon_Fist
+  nameWithType: AccountsCharacters.weapon_Fist
+  fullName: Altv_Roleplay.models.AccountsCharacters.weapon_Fist
+- uid: Altv_Roleplay.models.AccountsCharacters.weapon_Fist_Ammo*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.weapon_Fist_Ammo
+  name: weapon_Fist_Ammo
+  nameWithType: AccountsCharacters.weapon_Fist_Ammo
+  fullName: Altv_Roleplay.models.AccountsCharacters.weapon_Fist_Ammo
+- uid: Altv_Roleplay.models.AccountsCharacters.isUnconscious*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.isUnconscious
+  name: isUnconscious
+  nameWithType: AccountsCharacters.isUnconscious
+  fullName: Altv_Roleplay.models.AccountsCharacters.isUnconscious
+- uid: Altv_Roleplay.models.AccountsCharacters.unconsciousTime*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.unconsciousTime
+  name: unconsciousTime
+  nameWithType: AccountsCharacters.unconsciousTime
+  fullName: Altv_Roleplay.models.AccountsCharacters.unconsciousTime
+- uid: Altv_Roleplay.models.AccountsCharacters.isFastFarm*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.isFastFarm
+  name: isFastFarm
+  nameWithType: AccountsCharacters.isFastFarm
+  fullName: Altv_Roleplay.models.AccountsCharacters.isFastFarm
+- uid: Altv_Roleplay.models.AccountsCharacters.fastFarmTime*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.fastFarmTime
+  name: fastFarmTime
+  nameWithType: AccountsCharacters.fastFarmTime
+  fullName: Altv_Roleplay.models.AccountsCharacters.fastFarmTime
+- uid: Altv_Roleplay.models.AccountsCharacters.lastLogin*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.lastLogin
+  name: lastLogin
+  nameWithType: AccountsCharacters.lastLogin
+  fullName: Altv_Roleplay.models.AccountsCharacters.lastLogin
+- uid: Altv_Roleplay.models.AccountsCharacters.isPhoneEquipped*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.isPhoneEquipped
+  name: isPhoneEquipped
+  nameWithType: AccountsCharacters.isPhoneEquipped
+  fullName: Altv_Roleplay.models.AccountsCharacters.isPhoneEquipped
+- uid: Altv_Roleplay.models.AccountsCharacters.playtimeHours*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.playtimeHours
+  name: playtimeHours
+  nameWithType: AccountsCharacters.playtimeHours
+  fullName: Altv_Roleplay.models.AccountsCharacters.playtimeHours
+- uid: Altv_Roleplay.models.AccountsCharacters.isInJail*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.isInJail
+  name: isInJail
+  nameWithType: AccountsCharacters.isInJail
+  fullName: Altv_Roleplay.models.AccountsCharacters.isInJail
+- uid: Altv_Roleplay.models.AccountsCharacters.jailTime*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.jailTime
+  name: jailTime
+  nameWithType: AccountsCharacters.jailTime
+  fullName: Altv_Roleplay.models.AccountsCharacters.jailTime
+- uid: Altv_Roleplay.models.AccountsCharacters.wallpaper*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.wallpaper
+  name: wallpaper
+  nameWithType: AccountsCharacters.wallpaper
+  fullName: Altv_Roleplay.models.AccountsCharacters.wallpaper
+- uid: Altv_Roleplay.models.AccountsCharacters.pedName*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.pedName
+  name: pedName
+  nameWithType: AccountsCharacters.pedName
+  fullName: Altv_Roleplay.models.AccountsCharacters.pedName
+- uid: Altv_Roleplay.models.AccountsCharacters.isAnimalPed*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.isAnimalPed
+  name: isAnimalPed
+  nameWithType: AccountsCharacters.isAnimalPed
+  fullName: Altv_Roleplay.models.AccountsCharacters.isAnimalPed
+- uid: Altv_Roleplay.models.AccountsCharacters.isPhoneFlyModeActivated*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.isPhoneFlyModeActivated
+  name: isPhoneFlyModeActivated
+  nameWithType: AccountsCharacters.isPhoneFlyModeActivated
+  fullName: Altv_Roleplay.models.AccountsCharacters.isPhoneFlyModeActivated
+- uid: Altv_Roleplay.models.AccountsCharacters.targetNumber*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.targetNumber
+  name: targetNumber
+  nameWithType: AccountsCharacters.targetNumber
+  fullName: Altv_Roleplay.models.AccountsCharacters.targetNumber
+- uid: Altv_Roleplay.models.AccountsCharacters.CurrentlyRecieveCaller*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.CurrentlyRecieveCaller
+  name: CurrentlyRecieveCaller
+  nameWithType: AccountsCharacters.CurrentlyRecieveCaller
+  fullName: Altv_Roleplay.models.AccountsCharacters.CurrentlyRecieveCaller
+- uid: Altv_Roleplay.models.AccountsCharacters.currentFunkFrequence*
+  commentId: Overload:Altv_Roleplay.models.AccountsCharacters.currentFunkFrequence
+  name: currentFunkFrequence
+  nameWithType: AccountsCharacters.currentFunkFrequence
+  fullName: Altv_Roleplay.models.AccountsCharacters.currentFunkFrequence

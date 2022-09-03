@@ -1,0 +1,2538 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.Factories.ClassicColshape
+  commentId: T:Altv_Roleplay.Factories.ClassicColshape
+  id: ClassicColshape
+  parent: Altv_Roleplay.Factories
+  children:
+  - Altv_Roleplay.Factories.ClassicColshape.#ctor(AltV.Net.IServer,System.IntPtr)
+  - Altv_Roleplay.Factories.ClassicColshape.CarDealerVehName
+  - Altv_Roleplay.Factories.ClassicColshape.CarDealerVehPrice
+  - Altv_Roleplay.Factories.ClassicColshape.ColshapeId
+  - Altv_Roleplay.Factories.ClassicColshape.ColshapeName
+  - Altv_Roleplay.Factories.ClassicColshape.IsInRange(Altv_Roleplay.Factories.ClassicPlayer)
+  - Altv_Roleplay.Factories.ClassicColshape.Radius
+  langs:
+  - csharp
+  - vb
+  name: ClassicColshape
+  nameWithType: ClassicColshape
+  fullName: Altv_Roleplay.Factories.ClassicColshape
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Factories/ClassicColshape.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: ClassicColshape
+    path: Factories/ClassicColshape.cs
+    startLine: 8
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Factories
+  syntax:
+    content: 'public class ClassicColshape : ColShape, IInternalBaseObject, IColShape, IWorldObject, IBaseObject'
+    content.vb: >-
+      Public Class ClassicColshape
+          Inherits ColShape
+          Implements IInternalBaseObject, IColShape, IWorldObject, IBaseObject
+  inheritance:
+  - System.Object
+  - AltV.Net.Elements.Entities.BaseObject
+  - AltV.Net.Elements.Entities.WorldObject
+  - AltV.Net.Elements.Entities.ColShape
+  implements:
+  - AltV.Net.Elements.Entities.IColShape
+  - AltV.Net.Elements.Entities.IWorldObject
+  - AltV.Net.Elements.Entities.IBaseObject
+  inheritedMembers:
+  - AltV.Net.Elements.Entities.ColShape.GetMetaData(System.String,AltV.Net.Elements.Args.MValueConst@)
+  - AltV.Net.Elements.Entities.ColShape.SetMetaData(System.String,AltV.Net.Elements.Args.MValueConst@)
+  - AltV.Net.Elements.Entities.ColShape.HasMetaData(System.String)
+  - AltV.Net.Elements.Entities.ColShape.DeleteMetaData(System.String)
+  - AltV.Net.Elements.Entities.ColShape.IsEntityIn(AltV.Net.Elements.Entities.IEntity)
+  - AltV.Net.Elements.Entities.ColShape.IsPlayerIn(AltV.Net.Elements.Entities.IPlayer)
+  - AltV.Net.Elements.Entities.ColShape.IsVehicleIn(AltV.Net.Elements.Entities.IVehicle)
+  - AltV.Net.Elements.Entities.ColShape.Remove
+  - AltV.Net.Elements.Entities.ColShape.InternalAddRef
+  - AltV.Net.Elements.Entities.ColShape.InternalRemoveRef
+  - AltV.Net.Elements.Entities.ColShape.Position
+  - AltV.Net.Elements.Entities.ColShape.Dimension
+  - AltV.Net.Elements.Entities.ColShape.IsPlayersOnly
+  - AltV.Net.Elements.Entities.ColShape.ColShapeType
+  - AltV.Net.Elements.Entities.WorldObject.CheckIfEntityExists
+  - AltV.Net.Elements.Entities.BaseObject.Server
+  - AltV.Net.Elements.Entities.BaseObject.SetMetaData(System.String,System.Object)
+  - AltV.Net.Elements.Entities.BaseObject.GetMetaData(System.String,System.Int32@)
+  - AltV.Net.Elements.Entities.BaseObject.GetMetaData(System.String,System.UInt32@)
+  - AltV.Net.Elements.Entities.BaseObject.GetMetaData(System.String,System.Single@)
+  - AltV.Net.Elements.Entities.BaseObject.GetMetaData``1(System.String,{T}@)
+  - AltV.Net.Elements.Entities.BaseObject.SetData(System.String,System.Object)
+  - AltV.Net.Elements.Entities.BaseObject.GetData``1(System.String,{T}@)
+  - AltV.Net.Elements.Entities.BaseObject.GetAllDataKeys
+  - AltV.Net.Elements.Entities.BaseObject.HasData(System.String)
+  - AltV.Net.Elements.Entities.BaseObject.DeleteData(System.String)
+  - AltV.Net.Elements.Entities.BaseObject.ClearData
+  - AltV.Net.Elements.Entities.BaseObject.CheckIfCallIsValid(System.String)
+  - AltV.Net.Elements.Entities.BaseObject.GetHashCode
+  - AltV.Net.Elements.Entities.BaseObject.Equals(System.Object)
+  - AltV.Net.Elements.Entities.BaseObject.OnRemove
+  - AltV.Net.Elements.Entities.BaseObject.AddRef
+  - AltV.Net.Elements.Entities.BaseObject.RemoveRef
+  - AltV.Net.Elements.Entities.BaseObject.NativePointer
+  - AltV.Net.Elements.Entities.BaseObject.Exists
+  - AltV.Net.Elements.Entities.BaseObject.Type
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - AltV.Net.Elements.Entities.IColShape.Altv_Roleplay.Utils.Extensions.SetColShapeName(System.String)
+  - AltV.Net.Elements.Entities.IColShape.Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice
+  - AltV.Net.Elements.Entities.IColShape.Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName
+  - AltV.Net.Elements.Entities.IColShape.Altv_Roleplay.Utils.Extensions.GetColShapeName
+  - AltV.Net.Elements.Entities.IColShape.Altv_Roleplay.Utils.Extensions.SetColShapeId(System.Int64)
+  - AltV.Net.Elements.Entities.IColShape.Altv_Roleplay.Utils.Extensions.GetColShapeId
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.Factories.ClassicColshape.ColshapeId
+  commentId: P:Altv_Roleplay.Factories.ClassicColshape.ColshapeId
+  id: ColshapeId
+  parent: Altv_Roleplay.Factories.ClassicColshape
+  langs:
+  - csharp
+  - vb
+  name: ColshapeId
+  nameWithType: ClassicColshape.ColshapeId
+  fullName: Altv_Roleplay.Factories.ClassicColshape.ColshapeId
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Factories/ClassicColshape.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: ColshapeId
+    path: Factories/ClassicColshape.cs
+    startLine: 10
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Factories
+  syntax:
+    content: public int ColshapeId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ColshapeId As Integer
+  overload: Altv_Roleplay.Factories.ClassicColshape.ColshapeId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Factories.ClassicColshape.ColshapeName
+  commentId: P:Altv_Roleplay.Factories.ClassicColshape.ColshapeName
+  id: ColshapeName
+  parent: Altv_Roleplay.Factories.ClassicColshape
+  langs:
+  - csharp
+  - vb
+  name: ColshapeName
+  nameWithType: ClassicColshape.ColshapeName
+  fullName: Altv_Roleplay.Factories.ClassicColshape.ColshapeName
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Factories/ClassicColshape.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: ColshapeName
+    path: Factories/ClassicColshape.cs
+    startLine: 11
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Factories
+  syntax:
+    content: public string ColshapeName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ColshapeName As String
+  overload: Altv_Roleplay.Factories.ClassicColshape.ColshapeName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Factories.ClassicColshape.CarDealerVehName
+  commentId: P:Altv_Roleplay.Factories.ClassicColshape.CarDealerVehName
+  id: CarDealerVehName
+  parent: Altv_Roleplay.Factories.ClassicColshape
+  langs:
+  - csharp
+  - vb
+  name: CarDealerVehName
+  nameWithType: ClassicColshape.CarDealerVehName
+  fullName: Altv_Roleplay.Factories.ClassicColshape.CarDealerVehName
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Factories/ClassicColshape.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CarDealerVehName
+    path: Factories/ClassicColshape.cs
+    startLine: 12
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Factories
+  syntax:
+    content: public string CarDealerVehName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CarDealerVehName As String
+  overload: Altv_Roleplay.Factories.ClassicColshape.CarDealerVehName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Factories.ClassicColshape.CarDealerVehPrice
+  commentId: P:Altv_Roleplay.Factories.ClassicColshape.CarDealerVehPrice
+  id: CarDealerVehPrice
+  parent: Altv_Roleplay.Factories.ClassicColshape
+  langs:
+  - csharp
+  - vb
+  name: CarDealerVehPrice
+  nameWithType: ClassicColshape.CarDealerVehPrice
+  fullName: Altv_Roleplay.Factories.ClassicColshape.CarDealerVehPrice
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Factories/ClassicColshape.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CarDealerVehPrice
+    path: Factories/ClassicColshape.cs
+    startLine: 13
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Factories
+  syntax:
+    content: public long CarDealerVehPrice { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property CarDealerVehPrice As Long
+  overload: Altv_Roleplay.Factories.ClassicColshape.CarDealerVehPrice*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Factories.ClassicColshape.Radius
+  commentId: P:Altv_Roleplay.Factories.ClassicColshape.Radius
+  id: Radius
+  parent: Altv_Roleplay.Factories.ClassicColshape
+  langs:
+  - csharp
+  - vb
+  name: Radius
+  nameWithType: ClassicColshape.Radius
+  fullName: Altv_Roleplay.Factories.ClassicColshape.Radius
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Factories/ClassicColshape.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Radius
+    path: Factories/ClassicColshape.cs
+    startLine: 14
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Factories
+  syntax:
+    content: public float Radius { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Radius As Single
+  overload: Altv_Roleplay.Factories.ClassicColshape.Radius*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Factories.ClassicColshape.#ctor(AltV.Net.IServer,System.IntPtr)
+  commentId: M:Altv_Roleplay.Factories.ClassicColshape.#ctor(AltV.Net.IServer,System.IntPtr)
+  id: '#ctor(AltV.Net.IServer,System.IntPtr)'
+  parent: Altv_Roleplay.Factories.ClassicColshape
+  langs:
+  - csharp
+  - vb
+  name: ClassicColshape(IServer, IntPtr)
+  nameWithType: ClassicColshape.ClassicColshape(IServer, IntPtr)
+  fullName: Altv_Roleplay.Factories.ClassicColshape.ClassicColshape(AltV.Net.IServer, System.IntPtr)
+  type: Constructor
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Factories/ClassicColshape.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: .ctor
+    path: Factories/ClassicColshape.cs
+    startLine: 17
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Factories
+  syntax:
+    content: public ClassicColshape(IServer server, IntPtr nativePointer)
+    parameters:
+    - id: server
+      type: AltV.Net.IServer
+    - id: nativePointer
+      type: System.IntPtr
+    content.vb: Public Sub New(server As IServer, nativePointer As IntPtr)
+  overload: Altv_Roleplay.Factories.ClassicColshape.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Factories.ClassicColshape.IsInRange(Altv_Roleplay.Factories.ClassicPlayer)
+  commentId: M:Altv_Roleplay.Factories.ClassicColshape.IsInRange(Altv_Roleplay.Factories.ClassicPlayer)
+  id: IsInRange(Altv_Roleplay.Factories.ClassicPlayer)
+  parent: Altv_Roleplay.Factories.ClassicColshape
+  langs:
+  - csharp
+  - vb
+  name: IsInRange(ClassicPlayer)
+  nameWithType: ClassicColshape.IsInRange(ClassicPlayer)
+  fullName: Altv_Roleplay.Factories.ClassicColshape.IsInRange(Altv_Roleplay.Factories.ClassicPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Factories/ClassicColshape.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: IsInRange
+    path: Factories/ClassicColshape.cs
+    startLine: 22
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Factories
+  syntax:
+    content: public bool IsInRange(ClassicPlayer player)
+    parameters:
+    - id: player
+      type: Altv_Roleplay.Factories.ClassicPlayer
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsInRange(player As ClassicPlayer) As Boolean
+  overload: Altv_Roleplay.Factories.ClassicColshape.IsInRange*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.Factories
+  commentId: N:Altv_Roleplay.Factories
+  name: Altv_Roleplay.Factories
+  nameWithType: Altv_Roleplay.Factories
+  fullName: Altv_Roleplay.Factories
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AltV.Net.Elements.Entities.BaseObject
+  commentId: T:AltV.Net.Elements.Entities.BaseObject
+  parent: AltV.Net.Elements.Entities
+  isExternal: true
+  name: BaseObject
+  nameWithType: BaseObject
+  fullName: AltV.Net.Elements.Entities.BaseObject
+- uid: AltV.Net.Elements.Entities.WorldObject
+  commentId: T:AltV.Net.Elements.Entities.WorldObject
+  parent: AltV.Net.Elements.Entities
+  isExternal: true
+  name: WorldObject
+  nameWithType: WorldObject
+  fullName: AltV.Net.Elements.Entities.WorldObject
+- uid: AltV.Net.Elements.Entities.ColShape
+  commentId: T:AltV.Net.Elements.Entities.ColShape
+  parent: AltV.Net.Elements.Entities
+  isExternal: true
+  name: ColShape
+  nameWithType: ColShape
+  fullName: AltV.Net.Elements.Entities.ColShape
+- uid: AltV.Net.Elements.Entities.IColShape
+  commentId: T:AltV.Net.Elements.Entities.IColShape
+  parent: AltV.Net.Elements.Entities
+  isExternal: true
+  name: IColShape
+  nameWithType: IColShape
+  fullName: AltV.Net.Elements.Entities.IColShape
+- uid: AltV.Net.Elements.Entities.IWorldObject
+  commentId: T:AltV.Net.Elements.Entities.IWorldObject
+  parent: AltV.Net.Elements.Entities
+  isExternal: true
+  name: IWorldObject
+  nameWithType: IWorldObject
+  fullName: AltV.Net.Elements.Entities.IWorldObject
+- uid: AltV.Net.Elements.Entities.IBaseObject
+  commentId: T:AltV.Net.Elements.Entities.IBaseObject
+  parent: AltV.Net.Elements.Entities
+  isExternal: true
+  name: IBaseObject
+  nameWithType: IBaseObject
+  fullName: AltV.Net.Elements.Entities.IBaseObject
+- uid: AltV.Net.Elements.Entities.ColShape.GetMetaData(System.String,AltV.Net.Elements.Args.MValueConst@)
+  commentId: M:AltV.Net.Elements.Entities.ColShape.GetMetaData(System.String,AltV.Net.Elements.Args.MValueConst@)
+  parent: AltV.Net.Elements.Entities.ColShape
+  isExternal: true
+  name: GetMetaData(String, MValueConst)
+  nameWithType: ColShape.GetMetaData(String, MValueConst)
+  fullName: AltV.Net.Elements.Entities.ColShape.GetMetaData(System.String, AltV.Net.Elements.Args.MValueConst)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.ColShape.GetMetaData(System.String,AltV.Net.Elements.Args.MValueConst@)
+    name: GetMetaData
+    nameWithType: ColShape.GetMetaData
+    fullName: AltV.Net.Elements.Entities.ColShape.GetMetaData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.Elements.Args.MValueConst
+    name: MValueConst
+    nameWithType: MValueConst
+    fullName: AltV.Net.Elements.Args.MValueConst
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.ColShape.GetMetaData(System.String,AltV.Net.Elements.Args.MValueConst@)
+    name: GetMetaData
+    nameWithType: ColShape.GetMetaData
+    fullName: AltV.Net.Elements.Entities.ColShape.GetMetaData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.Elements.Args.MValueConst
+    name: MValueConst
+    nameWithType: MValueConst
+    fullName: AltV.Net.Elements.Args.MValueConst
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.ColShape.SetMetaData(System.String,AltV.Net.Elements.Args.MValueConst@)
+  commentId: M:AltV.Net.Elements.Entities.ColShape.SetMetaData(System.String,AltV.Net.Elements.Args.MValueConst@)
+  parent: AltV.Net.Elements.Entities.ColShape
+  isExternal: true
+  name: SetMetaData(String, MValueConst)
+  nameWithType: ColShape.SetMetaData(String, MValueConst)
+  fullName: AltV.Net.Elements.Entities.ColShape.SetMetaData(System.String, AltV.Net.Elements.Args.MValueConst)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.ColShape.SetMetaData(System.String,AltV.Net.Elements.Args.MValueConst@)
+    name: SetMetaData
+    nameWithType: ColShape.SetMetaData
+    fullName: AltV.Net.Elements.Entities.ColShape.SetMetaData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.Elements.Args.MValueConst
+    name: MValueConst
+    nameWithType: MValueConst
+    fullName: AltV.Net.Elements.Args.MValueConst
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.ColShape.SetMetaData(System.String,AltV.Net.Elements.Args.MValueConst@)
+    name: SetMetaData
+    nameWithType: ColShape.SetMetaData
+    fullName: AltV.Net.Elements.Entities.ColShape.SetMetaData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.Elements.Args.MValueConst
+    name: MValueConst
+    nameWithType: MValueConst
+    fullName: AltV.Net.Elements.Args.MValueConst
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.ColShape.HasMetaData(System.String)
+  commentId: M:AltV.Net.Elements.Entities.ColShape.HasMetaData(System.String)
+  parent: AltV.Net.Elements.Entities.ColShape
+  isExternal: true
+  name: HasMetaData(String)
+  nameWithType: ColShape.HasMetaData(String)
+  fullName: AltV.Net.Elements.Entities.ColShape.HasMetaData(System.String)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.ColShape.HasMetaData(System.String)
+    name: HasMetaData
+    nameWithType: ColShape.HasMetaData
+    fullName: AltV.Net.Elements.Entities.ColShape.HasMetaData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.ColShape.HasMetaData(System.String)
+    name: HasMetaData
+    nameWithType: ColShape.HasMetaData
+    fullName: AltV.Net.Elements.Entities.ColShape.HasMetaData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.ColShape.DeleteMetaData(System.String)
+  commentId: M:AltV.Net.Elements.Entities.ColShape.DeleteMetaData(System.String)
+  parent: AltV.Net.Elements.Entities.ColShape
+  isExternal: true
+  name: DeleteMetaData(String)
+  nameWithType: ColShape.DeleteMetaData(String)
+  fullName: AltV.Net.Elements.Entities.ColShape.DeleteMetaData(System.String)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.ColShape.DeleteMetaData(System.String)
+    name: DeleteMetaData
+    nameWithType: ColShape.DeleteMetaData
+    fullName: AltV.Net.Elements.Entities.ColShape.DeleteMetaData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.ColShape.DeleteMetaData(System.String)
+    name: DeleteMetaData
+    nameWithType: ColShape.DeleteMetaData
+    fullName: AltV.Net.Elements.Entities.ColShape.DeleteMetaData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.ColShape.IsEntityIn(AltV.Net.Elements.Entities.IEntity)
+  commentId: M:AltV.Net.Elements.Entities.ColShape.IsEntityIn(AltV.Net.Elements.Entities.IEntity)
+  parent: AltV.Net.Elements.Entities.ColShape
+  isExternal: true
+  name: IsEntityIn(IEntity)
+  nameWithType: ColShape.IsEntityIn(IEntity)
+  fullName: AltV.Net.Elements.Entities.ColShape.IsEntityIn(AltV.Net.Elements.Entities.IEntity)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.ColShape.IsEntityIn(AltV.Net.Elements.Entities.IEntity)
+    name: IsEntityIn
+    nameWithType: ColShape.IsEntityIn
+    fullName: AltV.Net.Elements.Entities.ColShape.IsEntityIn
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.Elements.Entities.IEntity
+    name: IEntity
+    nameWithType: IEntity
+    fullName: AltV.Net.Elements.Entities.IEntity
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.ColShape.IsEntityIn(AltV.Net.Elements.Entities.IEntity)
+    name: IsEntityIn
+    nameWithType: ColShape.IsEntityIn
+    fullName: AltV.Net.Elements.Entities.ColShape.IsEntityIn
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.Elements.Entities.IEntity
+    name: IEntity
+    nameWithType: IEntity
+    fullName: AltV.Net.Elements.Entities.IEntity
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.ColShape.IsPlayerIn(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:AltV.Net.Elements.Entities.ColShape.IsPlayerIn(AltV.Net.Elements.Entities.IPlayer)
+  parent: AltV.Net.Elements.Entities.ColShape
+  isExternal: true
+  name: IsPlayerIn(IPlayer)
+  nameWithType: ColShape.IsPlayerIn(IPlayer)
+  fullName: AltV.Net.Elements.Entities.ColShape.IsPlayerIn(AltV.Net.Elements.Entities.IPlayer)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.ColShape.IsPlayerIn(AltV.Net.Elements.Entities.IPlayer)
+    name: IsPlayerIn
+    nameWithType: ColShape.IsPlayerIn
+    fullName: AltV.Net.Elements.Entities.ColShape.IsPlayerIn
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.Elements.Entities.IPlayer
+    name: IPlayer
+    nameWithType: IPlayer
+    fullName: AltV.Net.Elements.Entities.IPlayer
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.ColShape.IsPlayerIn(AltV.Net.Elements.Entities.IPlayer)
+    name: IsPlayerIn
+    nameWithType: ColShape.IsPlayerIn
+    fullName: AltV.Net.Elements.Entities.ColShape.IsPlayerIn
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.Elements.Entities.IPlayer
+    name: IPlayer
+    nameWithType: IPlayer
+    fullName: AltV.Net.Elements.Entities.IPlayer
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.ColShape.IsVehicleIn(AltV.Net.Elements.Entities.IVehicle)
+  commentId: M:AltV.Net.Elements.Entities.ColShape.IsVehicleIn(AltV.Net.Elements.Entities.IVehicle)
+  parent: AltV.Net.Elements.Entities.ColShape
+  isExternal: true
+  name: IsVehicleIn(IVehicle)
+  nameWithType: ColShape.IsVehicleIn(IVehicle)
+  fullName: AltV.Net.Elements.Entities.ColShape.IsVehicleIn(AltV.Net.Elements.Entities.IVehicle)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.ColShape.IsVehicleIn(AltV.Net.Elements.Entities.IVehicle)
+    name: IsVehicleIn
+    nameWithType: ColShape.IsVehicleIn
+    fullName: AltV.Net.Elements.Entities.ColShape.IsVehicleIn
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.Elements.Entities.IVehicle
+    name: IVehicle
+    nameWithType: IVehicle
+    fullName: AltV.Net.Elements.Entities.IVehicle
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.ColShape.IsVehicleIn(AltV.Net.Elements.Entities.IVehicle)
+    name: IsVehicleIn
+    nameWithType: ColShape.IsVehicleIn
+    fullName: AltV.Net.Elements.Entities.ColShape.IsVehicleIn
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.Elements.Entities.IVehicle
+    name: IVehicle
+    nameWithType: IVehicle
+    fullName: AltV.Net.Elements.Entities.IVehicle
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.ColShape.Remove
+  commentId: M:AltV.Net.Elements.Entities.ColShape.Remove
+  parent: AltV.Net.Elements.Entities.ColShape
+  isExternal: true
+  name: Remove()
+  nameWithType: ColShape.Remove()
+  fullName: AltV.Net.Elements.Entities.ColShape.Remove()
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.ColShape.Remove
+    name: Remove
+    nameWithType: ColShape.Remove
+    fullName: AltV.Net.Elements.Entities.ColShape.Remove
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.ColShape.Remove
+    name: Remove
+    nameWithType: ColShape.Remove
+    fullName: AltV.Net.Elements.Entities.ColShape.Remove
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.ColShape.InternalAddRef
+  commentId: M:AltV.Net.Elements.Entities.ColShape.InternalAddRef
+  parent: AltV.Net.Elements.Entities.ColShape
+  isExternal: true
+  name: InternalAddRef()
+  nameWithType: ColShape.InternalAddRef()
+  fullName: AltV.Net.Elements.Entities.ColShape.InternalAddRef()
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.ColShape.InternalAddRef
+    name: InternalAddRef
+    nameWithType: ColShape.InternalAddRef
+    fullName: AltV.Net.Elements.Entities.ColShape.InternalAddRef
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.ColShape.InternalAddRef
+    name: InternalAddRef
+    nameWithType: ColShape.InternalAddRef
+    fullName: AltV.Net.Elements.Entities.ColShape.InternalAddRef
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.ColShape.InternalRemoveRef
+  commentId: M:AltV.Net.Elements.Entities.ColShape.InternalRemoveRef
+  parent: AltV.Net.Elements.Entities.ColShape
+  isExternal: true
+  name: InternalRemoveRef()
+  nameWithType: ColShape.InternalRemoveRef()
+  fullName: AltV.Net.Elements.Entities.ColShape.InternalRemoveRef()
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.ColShape.InternalRemoveRef
+    name: InternalRemoveRef
+    nameWithType: ColShape.InternalRemoveRef
+    fullName: AltV.Net.Elements.Entities.ColShape.InternalRemoveRef
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.ColShape.InternalRemoveRef
+    name: InternalRemoveRef
+    nameWithType: ColShape.InternalRemoveRef
+    fullName: AltV.Net.Elements.Entities.ColShape.InternalRemoveRef
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.ColShape.Position
+  commentId: P:AltV.Net.Elements.Entities.ColShape.Position
+  parent: AltV.Net.Elements.Entities.ColShape
+  isExternal: true
+  name: Position
+  nameWithType: ColShape.Position
+  fullName: AltV.Net.Elements.Entities.ColShape.Position
+- uid: AltV.Net.Elements.Entities.ColShape.Dimension
+  commentId: P:AltV.Net.Elements.Entities.ColShape.Dimension
+  parent: AltV.Net.Elements.Entities.ColShape
+  isExternal: true
+  name: Dimension
+  nameWithType: ColShape.Dimension
+  fullName: AltV.Net.Elements.Entities.ColShape.Dimension
+- uid: AltV.Net.Elements.Entities.ColShape.IsPlayersOnly
+  commentId: P:AltV.Net.Elements.Entities.ColShape.IsPlayersOnly
+  parent: AltV.Net.Elements.Entities.ColShape
+  isExternal: true
+  name: IsPlayersOnly
+  nameWithType: ColShape.IsPlayersOnly
+  fullName: AltV.Net.Elements.Entities.ColShape.IsPlayersOnly
+- uid: AltV.Net.Elements.Entities.ColShape.ColShapeType
+  commentId: P:AltV.Net.Elements.Entities.ColShape.ColShapeType
+  parent: AltV.Net.Elements.Entities.ColShape
+  isExternal: true
+  name: ColShapeType
+  nameWithType: ColShape.ColShapeType
+  fullName: AltV.Net.Elements.Entities.ColShape.ColShapeType
+- uid: AltV.Net.Elements.Entities.WorldObject.CheckIfEntityExists
+  commentId: M:AltV.Net.Elements.Entities.WorldObject.CheckIfEntityExists
+  parent: AltV.Net.Elements.Entities.WorldObject
+  isExternal: true
+  name: CheckIfEntityExists()
+  nameWithType: WorldObject.CheckIfEntityExists()
+  fullName: AltV.Net.Elements.Entities.WorldObject.CheckIfEntityExists()
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.WorldObject.CheckIfEntityExists
+    name: CheckIfEntityExists
+    nameWithType: WorldObject.CheckIfEntityExists
+    fullName: AltV.Net.Elements.Entities.WorldObject.CheckIfEntityExists
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.WorldObject.CheckIfEntityExists
+    name: CheckIfEntityExists
+    nameWithType: WorldObject.CheckIfEntityExists
+    fullName: AltV.Net.Elements.Entities.WorldObject.CheckIfEntityExists
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.Server
+  commentId: F:AltV.Net.Elements.Entities.BaseObject.Server
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: Server
+  nameWithType: BaseObject.Server
+  fullName: AltV.Net.Elements.Entities.BaseObject.Server
+- uid: AltV.Net.Elements.Entities.BaseObject.SetMetaData(System.String,System.Object)
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.SetMetaData(System.String,System.Object)
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: SetMetaData(String, Object)
+  nameWithType: BaseObject.SetMetaData(String, Object)
+  fullName: AltV.Net.Elements.Entities.BaseObject.SetMetaData(System.String, System.Object)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.SetMetaData(System.String,System.Object)
+    name: SetMetaData
+    nameWithType: BaseObject.SetMetaData
+    fullName: AltV.Net.Elements.Entities.BaseObject.SetMetaData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.SetMetaData(System.String,System.Object)
+    name: SetMetaData
+    nameWithType: BaseObject.SetMetaData
+    fullName: AltV.Net.Elements.Entities.BaseObject.SetMetaData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.GetMetaData(System.String,System.Int32@)
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.GetMetaData(System.String,System.Int32@)
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: GetMetaData(String, Int32)
+  nameWithType: BaseObject.GetMetaData(String, Int32)
+  fullName: AltV.Net.Elements.Entities.BaseObject.GetMetaData(System.String, System.Int32)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.GetMetaData(System.String,System.Int32@)
+    name: GetMetaData
+    nameWithType: BaseObject.GetMetaData
+    fullName: AltV.Net.Elements.Entities.BaseObject.GetMetaData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.GetMetaData(System.String,System.Int32@)
+    name: GetMetaData
+    nameWithType: BaseObject.GetMetaData
+    fullName: AltV.Net.Elements.Entities.BaseObject.GetMetaData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.GetMetaData(System.String,System.UInt32@)
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.GetMetaData(System.String,System.UInt32@)
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: GetMetaData(String, UInt32)
+  nameWithType: BaseObject.GetMetaData(String, UInt32)
+  fullName: AltV.Net.Elements.Entities.BaseObject.GetMetaData(System.String, System.UInt32)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.GetMetaData(System.String,System.UInt32@)
+    name: GetMetaData
+    nameWithType: BaseObject.GetMetaData
+    fullName: AltV.Net.Elements.Entities.BaseObject.GetMetaData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.GetMetaData(System.String,System.UInt32@)
+    name: GetMetaData
+    nameWithType: BaseObject.GetMetaData
+    fullName: AltV.Net.Elements.Entities.BaseObject.GetMetaData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.GetMetaData(System.String,System.Single@)
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.GetMetaData(System.String,System.Single@)
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: GetMetaData(String, Single)
+  nameWithType: BaseObject.GetMetaData(String, Single)
+  fullName: AltV.Net.Elements.Entities.BaseObject.GetMetaData(System.String, System.Single)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.GetMetaData(System.String,System.Single@)
+    name: GetMetaData
+    nameWithType: BaseObject.GetMetaData
+    fullName: AltV.Net.Elements.Entities.BaseObject.GetMetaData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.GetMetaData(System.String,System.Single@)
+    name: GetMetaData
+    nameWithType: BaseObject.GetMetaData
+    fullName: AltV.Net.Elements.Entities.BaseObject.GetMetaData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.GetMetaData``1(System.String,{T}@)
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.GetMetaData``1(System.String,``0@)
+  parent: AltV.Net.Elements.Entities.BaseObject
+  definition: AltV.Net.Elements.Entities.BaseObject.GetMetaData``1(System.String,``0@)
+  name: GetMetaData<T>(String, T)
+  nameWithType: BaseObject.GetMetaData<T>(String, T)
+  fullName: AltV.Net.Elements.Entities.BaseObject.GetMetaData<T>(System.String, T)
+  nameWithType.vb: BaseObject.GetMetaData(Of T)(String, T)
+  fullName.vb: AltV.Net.Elements.Entities.BaseObject.GetMetaData(Of T)(System.String, T)
+  name.vb: GetMetaData(Of T)(String, T)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.GetMetaData``1(System.String,``0@)
+    name: GetMetaData<T>
+    nameWithType: BaseObject.GetMetaData<T>
+    fullName: AltV.Net.Elements.Entities.BaseObject.GetMetaData<T>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.GetMetaData``1(System.String,``0@)
+    name: GetMetaData(Of T)
+    nameWithType: BaseObject.GetMetaData(Of T)
+    fullName: AltV.Net.Elements.Entities.BaseObject.GetMetaData(Of T)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.SetData(System.String,System.Object)
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.SetData(System.String,System.Object)
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: SetData(String, Object)
+  nameWithType: BaseObject.SetData(String, Object)
+  fullName: AltV.Net.Elements.Entities.BaseObject.SetData(System.String, System.Object)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.SetData(System.String,System.Object)
+    name: SetData
+    nameWithType: BaseObject.SetData
+    fullName: AltV.Net.Elements.Entities.BaseObject.SetData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.SetData(System.String,System.Object)
+    name: SetData
+    nameWithType: BaseObject.SetData
+    fullName: AltV.Net.Elements.Entities.BaseObject.SetData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.GetData``1(System.String,{T}@)
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.GetData``1(System.String,``0@)
+  parent: AltV.Net.Elements.Entities.BaseObject
+  definition: AltV.Net.Elements.Entities.BaseObject.GetData``1(System.String,``0@)
+  name: GetData<T>(String, T)
+  nameWithType: BaseObject.GetData<T>(String, T)
+  fullName: AltV.Net.Elements.Entities.BaseObject.GetData<T>(System.String, T)
+  nameWithType.vb: BaseObject.GetData(Of T)(String, T)
+  fullName.vb: AltV.Net.Elements.Entities.BaseObject.GetData(Of T)(System.String, T)
+  name.vb: GetData(Of T)(String, T)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.GetData``1(System.String,``0@)
+    name: GetData<T>
+    nameWithType: BaseObject.GetData<T>
+    fullName: AltV.Net.Elements.Entities.BaseObject.GetData<T>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.GetData``1(System.String,``0@)
+    name: GetData(Of T)
+    nameWithType: BaseObject.GetData(Of T)
+    fullName: AltV.Net.Elements.Entities.BaseObject.GetData(Of T)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.GetAllDataKeys
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.GetAllDataKeys
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: GetAllDataKeys()
+  nameWithType: BaseObject.GetAllDataKeys()
+  fullName: AltV.Net.Elements.Entities.BaseObject.GetAllDataKeys()
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.GetAllDataKeys
+    name: GetAllDataKeys
+    nameWithType: BaseObject.GetAllDataKeys
+    fullName: AltV.Net.Elements.Entities.BaseObject.GetAllDataKeys
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.GetAllDataKeys
+    name: GetAllDataKeys
+    nameWithType: BaseObject.GetAllDataKeys
+    fullName: AltV.Net.Elements.Entities.BaseObject.GetAllDataKeys
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.HasData(System.String)
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.HasData(System.String)
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: HasData(String)
+  nameWithType: BaseObject.HasData(String)
+  fullName: AltV.Net.Elements.Entities.BaseObject.HasData(System.String)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.HasData(System.String)
+    name: HasData
+    nameWithType: BaseObject.HasData
+    fullName: AltV.Net.Elements.Entities.BaseObject.HasData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.HasData(System.String)
+    name: HasData
+    nameWithType: BaseObject.HasData
+    fullName: AltV.Net.Elements.Entities.BaseObject.HasData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.DeleteData(System.String)
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.DeleteData(System.String)
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: DeleteData(String)
+  nameWithType: BaseObject.DeleteData(String)
+  fullName: AltV.Net.Elements.Entities.BaseObject.DeleteData(System.String)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.DeleteData(System.String)
+    name: DeleteData
+    nameWithType: BaseObject.DeleteData
+    fullName: AltV.Net.Elements.Entities.BaseObject.DeleteData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.DeleteData(System.String)
+    name: DeleteData
+    nameWithType: BaseObject.DeleteData
+    fullName: AltV.Net.Elements.Entities.BaseObject.DeleteData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.ClearData
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.ClearData
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: ClearData()
+  nameWithType: BaseObject.ClearData()
+  fullName: AltV.Net.Elements.Entities.BaseObject.ClearData()
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.ClearData
+    name: ClearData
+    nameWithType: BaseObject.ClearData
+    fullName: AltV.Net.Elements.Entities.BaseObject.ClearData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.ClearData
+    name: ClearData
+    nameWithType: BaseObject.ClearData
+    fullName: AltV.Net.Elements.Entities.BaseObject.ClearData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.CheckIfCallIsValid(System.String)
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.CheckIfCallIsValid(System.String)
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: CheckIfCallIsValid(String)
+  nameWithType: BaseObject.CheckIfCallIsValid(String)
+  fullName: AltV.Net.Elements.Entities.BaseObject.CheckIfCallIsValid(System.String)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.CheckIfCallIsValid(System.String)
+    name: CheckIfCallIsValid
+    nameWithType: BaseObject.CheckIfCallIsValid
+    fullName: AltV.Net.Elements.Entities.BaseObject.CheckIfCallIsValid
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.CheckIfCallIsValid(System.String)
+    name: CheckIfCallIsValid
+    nameWithType: BaseObject.CheckIfCallIsValid
+    fullName: AltV.Net.Elements.Entities.BaseObject.CheckIfCallIsValid
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.GetHashCode
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.GetHashCode
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: BaseObject.GetHashCode()
+  fullName: AltV.Net.Elements.Entities.BaseObject.GetHashCode()
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.GetHashCode
+    name: GetHashCode
+    nameWithType: BaseObject.GetHashCode
+    fullName: AltV.Net.Elements.Entities.BaseObject.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.GetHashCode
+    name: GetHashCode
+    nameWithType: BaseObject.GetHashCode
+    fullName: AltV.Net.Elements.Entities.BaseObject.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.Equals(System.Object)
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.Equals(System.Object)
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: BaseObject.Equals(Object)
+  fullName: AltV.Net.Elements.Entities.BaseObject.Equals(System.Object)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.Equals(System.Object)
+    name: Equals
+    nameWithType: BaseObject.Equals
+    fullName: AltV.Net.Elements.Entities.BaseObject.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.Equals(System.Object)
+    name: Equals
+    nameWithType: BaseObject.Equals
+    fullName: AltV.Net.Elements.Entities.BaseObject.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.OnRemove
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.OnRemove
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: OnRemove()
+  nameWithType: BaseObject.OnRemove()
+  fullName: AltV.Net.Elements.Entities.BaseObject.OnRemove()
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.OnRemove
+    name: OnRemove
+    nameWithType: BaseObject.OnRemove
+    fullName: AltV.Net.Elements.Entities.BaseObject.OnRemove
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.OnRemove
+    name: OnRemove
+    nameWithType: BaseObject.OnRemove
+    fullName: AltV.Net.Elements.Entities.BaseObject.OnRemove
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.AddRef
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.AddRef
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: AddRef()
+  nameWithType: BaseObject.AddRef()
+  fullName: AltV.Net.Elements.Entities.BaseObject.AddRef()
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.AddRef
+    name: AddRef
+    nameWithType: BaseObject.AddRef
+    fullName: AltV.Net.Elements.Entities.BaseObject.AddRef
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.AddRef
+    name: AddRef
+    nameWithType: BaseObject.AddRef
+    fullName: AltV.Net.Elements.Entities.BaseObject.AddRef
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.RemoveRef
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.RemoveRef
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: RemoveRef()
+  nameWithType: BaseObject.RemoveRef()
+  fullName: AltV.Net.Elements.Entities.BaseObject.RemoveRef()
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.RemoveRef
+    name: RemoveRef
+    nameWithType: BaseObject.RemoveRef
+    fullName: AltV.Net.Elements.Entities.BaseObject.RemoveRef
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.RemoveRef
+    name: RemoveRef
+    nameWithType: BaseObject.RemoveRef
+    fullName: AltV.Net.Elements.Entities.BaseObject.RemoveRef
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.NativePointer
+  commentId: P:AltV.Net.Elements.Entities.BaseObject.NativePointer
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: NativePointer
+  nameWithType: BaseObject.NativePointer
+  fullName: AltV.Net.Elements.Entities.BaseObject.NativePointer
+- uid: AltV.Net.Elements.Entities.BaseObject.Exists
+  commentId: P:AltV.Net.Elements.Entities.BaseObject.Exists
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: Exists
+  nameWithType: BaseObject.Exists
+  fullName: AltV.Net.Elements.Entities.BaseObject.Exists
+- uid: AltV.Net.Elements.Entities.BaseObject.Type
+  commentId: P:AltV.Net.Elements.Entities.BaseObject.Type
+  parent: AltV.Net.Elements.Entities.BaseObject
+  isExternal: true
+  name: Type
+  nameWithType: BaseObject.Type
+  fullName: AltV.Net.Elements.Entities.BaseObject.Type
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.IColShape.Altv_Roleplay.Utils.Extensions.SetColShapeName(System.String)
+  commentId: M:Altv_Roleplay.Utils.Extensions.SetColShapeName(AltV.Net.Elements.Entities.IColShape,System.String)
+  parent: Altv_Roleplay.Utils.Extensions
+  definition: Altv_Roleplay.Utils.Extensions.SetColShapeName(AltV.Net.Elements.Entities.IColShape,System.String)
+  name: SetColShapeName(String)
+  nameWithType: Extensions.SetColShapeName(String)
+  fullName: Altv_Roleplay.Utils.Extensions.SetColShapeName(System.String)
+  spec.csharp:
+  - uid: Altv_Roleplay.Utils.Extensions.SetColShapeName(System.String)
+    name: SetColShapeName
+    nameWithType: Extensions.SetColShapeName
+    fullName: Altv_Roleplay.Utils.Extensions.SetColShapeName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Altv_Roleplay.Utils.Extensions.SetColShapeName(System.String)
+    name: SetColShapeName
+    nameWithType: Extensions.SetColShapeName
+    fullName: Altv_Roleplay.Utils.Extensions.SetColShapeName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.IColShape.Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice(AltV.Net.Elements.Entities.IColShape)
+  parent: Altv_Roleplay.Utils.Extensions
+  definition: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice(AltV.Net.Elements.Entities.IColShape)
+  name: GetColshapeCarDealerVehPrice()
+  nameWithType: Extensions.GetColshapeCarDealerVehPrice()
+  fullName: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice()
+  spec.csharp:
+  - uid: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice
+    name: GetColshapeCarDealerVehPrice
+    nameWithType: Extensions.GetColshapeCarDealerVehPrice
+    fullName: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice
+    name: GetColshapeCarDealerVehPrice
+    nameWithType: Extensions.GetColshapeCarDealerVehPrice
+    fullName: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.IColShape.Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName(AltV.Net.Elements.Entities.IColShape)
+  parent: Altv_Roleplay.Utils.Extensions
+  definition: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName(AltV.Net.Elements.Entities.IColShape)
+  name: GetColshapeCarDealerVehName()
+  nameWithType: Extensions.GetColshapeCarDealerVehName()
+  fullName: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName()
+  spec.csharp:
+  - uid: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName
+    name: GetColshapeCarDealerVehName
+    nameWithType: Extensions.GetColshapeCarDealerVehName
+    fullName: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName
+    name: GetColshapeCarDealerVehName
+    nameWithType: Extensions.GetColshapeCarDealerVehName
+    fullName: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.IColShape.Altv_Roleplay.Utils.Extensions.GetColShapeName
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetColShapeName(AltV.Net.Elements.Entities.IColShape)
+  parent: Altv_Roleplay.Utils.Extensions
+  definition: Altv_Roleplay.Utils.Extensions.GetColShapeName(AltV.Net.Elements.Entities.IColShape)
+  name: GetColShapeName()
+  nameWithType: Extensions.GetColShapeName()
+  fullName: Altv_Roleplay.Utils.Extensions.GetColShapeName()
+  spec.csharp:
+  - uid: Altv_Roleplay.Utils.Extensions.GetColShapeName
+    name: GetColShapeName
+    nameWithType: Extensions.GetColShapeName
+    fullName: Altv_Roleplay.Utils.Extensions.GetColShapeName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Altv_Roleplay.Utils.Extensions.GetColShapeName
+    name: GetColShapeName
+    nameWithType: Extensions.GetColShapeName
+    fullName: Altv_Roleplay.Utils.Extensions.GetColShapeName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.IColShape.Altv_Roleplay.Utils.Extensions.SetColShapeId(System.Int64)
+  commentId: M:Altv_Roleplay.Utils.Extensions.SetColShapeId(AltV.Net.Elements.Entities.IColShape,System.Int64)
+  parent: Altv_Roleplay.Utils.Extensions
+  definition: Altv_Roleplay.Utils.Extensions.SetColShapeId(AltV.Net.Elements.Entities.IColShape,System.Int64)
+  name: SetColShapeId(Int64)
+  nameWithType: Extensions.SetColShapeId(Int64)
+  fullName: Altv_Roleplay.Utils.Extensions.SetColShapeId(System.Int64)
+  spec.csharp:
+  - uid: Altv_Roleplay.Utils.Extensions.SetColShapeId(System.Int64)
+    name: SetColShapeId
+    nameWithType: Extensions.SetColShapeId
+    fullName: Altv_Roleplay.Utils.Extensions.SetColShapeId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Altv_Roleplay.Utils.Extensions.SetColShapeId(System.Int64)
+    name: SetColShapeId
+    nameWithType: Extensions.SetColShapeId
+    fullName: Altv_Roleplay.Utils.Extensions.SetColShapeId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.IColShape.Altv_Roleplay.Utils.Extensions.GetColShapeId
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetColShapeId(AltV.Net.Elements.Entities.IColShape)
+  parent: Altv_Roleplay.Utils.Extensions
+  definition: Altv_Roleplay.Utils.Extensions.GetColShapeId(AltV.Net.Elements.Entities.IColShape)
+  name: GetColShapeId()
+  nameWithType: Extensions.GetColShapeId()
+  fullName: Altv_Roleplay.Utils.Extensions.GetColShapeId()
+  spec.csharp:
+  - uid: Altv_Roleplay.Utils.Extensions.GetColShapeId
+    name: GetColShapeId
+    nameWithType: Extensions.GetColShapeId
+    fullName: Altv_Roleplay.Utils.Extensions.GetColShapeId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Altv_Roleplay.Utils.Extensions.GetColShapeId
+    name: GetColShapeId
+    nameWithType: Extensions.GetColShapeId
+    fullName: Altv_Roleplay.Utils.Extensions.GetColShapeId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AltV.Net.Elements.Entities
+  commentId: N:AltV.Net.Elements.Entities
+  isExternal: true
+  name: AltV.Net.Elements.Entities
+  nameWithType: AltV.Net.Elements.Entities
+  fullName: AltV.Net.Elements.Entities
+- uid: AltV.Net.Elements.Entities.BaseObject.GetMetaData``1(System.String,``0@)
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.GetMetaData``1(System.String,``0@)
+  isExternal: true
+  name: GetMetaData<T>(String, T)
+  nameWithType: BaseObject.GetMetaData<T>(String, T)
+  fullName: AltV.Net.Elements.Entities.BaseObject.GetMetaData<T>(System.String, T)
+  nameWithType.vb: BaseObject.GetMetaData(Of T)(String, T)
+  fullName.vb: AltV.Net.Elements.Entities.BaseObject.GetMetaData(Of T)(System.String, T)
+  name.vb: GetMetaData(Of T)(String, T)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.GetMetaData``1(System.String,``0@)
+    name: GetMetaData<T>
+    nameWithType: BaseObject.GetMetaData<T>
+    fullName: AltV.Net.Elements.Entities.BaseObject.GetMetaData<T>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.GetMetaData``1(System.String,``0@)
+    name: GetMetaData(Of T)
+    nameWithType: BaseObject.GetMetaData(Of T)
+    fullName: AltV.Net.Elements.Entities.BaseObject.GetMetaData(Of T)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities.BaseObject.GetData``1(System.String,``0@)
+  commentId: M:AltV.Net.Elements.Entities.BaseObject.GetData``1(System.String,``0@)
+  isExternal: true
+  name: GetData<T>(String, T)
+  nameWithType: BaseObject.GetData<T>(String, T)
+  fullName: AltV.Net.Elements.Entities.BaseObject.GetData<T>(System.String, T)
+  nameWithType.vb: BaseObject.GetData(Of T)(String, T)
+  fullName.vb: AltV.Net.Elements.Entities.BaseObject.GetData(Of T)(System.String, T)
+  name.vb: GetData(Of T)(String, T)
+  spec.csharp:
+  - uid: AltV.Net.Elements.Entities.BaseObject.GetData``1(System.String,``0@)
+    name: GetData<T>
+    nameWithType: BaseObject.GetData<T>
+    fullName: AltV.Net.Elements.Entities.BaseObject.GetData<T>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Elements.Entities.BaseObject.GetData``1(System.String,``0@)
+    name: GetData(Of T)
+    nameWithType: BaseObject.GetData(Of T)
+    fullName: AltV.Net.Elements.Entities.BaseObject.GetData(Of T)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.Utils.Extensions.SetColShapeName(AltV.Net.Elements.Entities.IColShape,System.String)
+  commentId: M:Altv_Roleplay.Utils.Extensions.SetColShapeName(AltV.Net.Elements.Entities.IColShape,System.String)
+  isExternal: true
+  name: SetColShapeName(IColShape, String)
+  nameWithType: Extensions.SetColShapeName(IColShape, String)
+  fullName: Altv_Roleplay.Utils.Extensions.SetColShapeName(AltV.Net.Elements.Entities.IColShape, System.String)
+  spec.csharp:
+  - uid: Altv_Roleplay.Utils.Extensions.SetColShapeName(AltV.Net.Elements.Entities.IColShape,System.String)
+    name: SetColShapeName
+    nameWithType: Extensions.SetColShapeName
+    fullName: Altv_Roleplay.Utils.Extensions.SetColShapeName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Altv_Roleplay.Utils.Extensions.SetColShapeName(AltV.Net.Elements.Entities.IColShape,System.String)
+    name: SetColShapeName
+    nameWithType: Extensions.SetColShapeName
+    fullName: Altv_Roleplay.Utils.Extensions.SetColShapeName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.Utils.Extensions
+  commentId: T:Altv_Roleplay.Utils.Extensions
+  parent: Altv_Roleplay.Utils
+  name: Extensions
+  nameWithType: Extensions
+  fullName: Altv_Roleplay.Utils.Extensions
+- uid: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice(AltV.Net.Elements.Entities.IColShape)
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice(AltV.Net.Elements.Entities.IColShape)
+  isExternal: true
+  name: GetColshapeCarDealerVehPrice(IColShape)
+  nameWithType: Extensions.GetColshapeCarDealerVehPrice(IColShape)
+  fullName: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice(AltV.Net.Elements.Entities.IColShape)
+  spec.csharp:
+  - uid: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice(AltV.Net.Elements.Entities.IColShape)
+    name: GetColshapeCarDealerVehPrice
+    nameWithType: Extensions.GetColshapeCarDealerVehPrice
+    fullName: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice(AltV.Net.Elements.Entities.IColShape)
+    name: GetColshapeCarDealerVehPrice
+    nameWithType: Extensions.GetColshapeCarDealerVehPrice
+    fullName: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName(AltV.Net.Elements.Entities.IColShape)
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName(AltV.Net.Elements.Entities.IColShape)
+  isExternal: true
+  name: GetColshapeCarDealerVehName(IColShape)
+  nameWithType: Extensions.GetColshapeCarDealerVehName(IColShape)
+  fullName: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName(AltV.Net.Elements.Entities.IColShape)
+  spec.csharp:
+  - uid: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName(AltV.Net.Elements.Entities.IColShape)
+    name: GetColshapeCarDealerVehName
+    nameWithType: Extensions.GetColshapeCarDealerVehName
+    fullName: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName(AltV.Net.Elements.Entities.IColShape)
+    name: GetColshapeCarDealerVehName
+    nameWithType: Extensions.GetColshapeCarDealerVehName
+    fullName: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.Utils.Extensions.GetColShapeName(AltV.Net.Elements.Entities.IColShape)
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetColShapeName(AltV.Net.Elements.Entities.IColShape)
+  isExternal: true
+  name: GetColShapeName(IColShape)
+  nameWithType: Extensions.GetColShapeName(IColShape)
+  fullName: Altv_Roleplay.Utils.Extensions.GetColShapeName(AltV.Net.Elements.Entities.IColShape)
+  spec.csharp:
+  - uid: Altv_Roleplay.Utils.Extensions.GetColShapeName(AltV.Net.Elements.Entities.IColShape)
+    name: GetColShapeName
+    nameWithType: Extensions.GetColShapeName
+    fullName: Altv_Roleplay.Utils.Extensions.GetColShapeName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Altv_Roleplay.Utils.Extensions.GetColShapeName(AltV.Net.Elements.Entities.IColShape)
+    name: GetColShapeName
+    nameWithType: Extensions.GetColShapeName
+    fullName: Altv_Roleplay.Utils.Extensions.GetColShapeName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.Utils.Extensions.SetColShapeId(AltV.Net.Elements.Entities.IColShape,System.Int64)
+  commentId: M:Altv_Roleplay.Utils.Extensions.SetColShapeId(AltV.Net.Elements.Entities.IColShape,System.Int64)
+  isExternal: true
+  name: SetColShapeId(IColShape, Int64)
+  nameWithType: Extensions.SetColShapeId(IColShape, Int64)
+  fullName: Altv_Roleplay.Utils.Extensions.SetColShapeId(AltV.Net.Elements.Entities.IColShape, System.Int64)
+  spec.csharp:
+  - uid: Altv_Roleplay.Utils.Extensions.SetColShapeId(AltV.Net.Elements.Entities.IColShape,System.Int64)
+    name: SetColShapeId
+    nameWithType: Extensions.SetColShapeId
+    fullName: Altv_Roleplay.Utils.Extensions.SetColShapeId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Altv_Roleplay.Utils.Extensions.SetColShapeId(AltV.Net.Elements.Entities.IColShape,System.Int64)
+    name: SetColShapeId
+    nameWithType: Extensions.SetColShapeId
+    fullName: Altv_Roleplay.Utils.Extensions.SetColShapeId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.Utils.Extensions.GetColShapeId(AltV.Net.Elements.Entities.IColShape)
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetColShapeId(AltV.Net.Elements.Entities.IColShape)
+  isExternal: true
+  name: GetColShapeId(IColShape)
+  nameWithType: Extensions.GetColShapeId(IColShape)
+  fullName: Altv_Roleplay.Utils.Extensions.GetColShapeId(AltV.Net.Elements.Entities.IColShape)
+  spec.csharp:
+  - uid: Altv_Roleplay.Utils.Extensions.GetColShapeId(AltV.Net.Elements.Entities.IColShape)
+    name: GetColShapeId
+    nameWithType: Extensions.GetColShapeId
+    fullName: Altv_Roleplay.Utils.Extensions.GetColShapeId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Altv_Roleplay.Utils.Extensions.GetColShapeId(AltV.Net.Elements.Entities.IColShape)
+    name: GetColShapeId
+    nameWithType: Extensions.GetColShapeId
+    fullName: Altv_Roleplay.Utils.Extensions.GetColShapeId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.Utils
+  commentId: N:Altv_Roleplay.Utils
+  name: Altv_Roleplay.Utils
+  nameWithType: Altv_Roleplay.Utils
+  fullName: Altv_Roleplay.Utils
+- uid: Altv_Roleplay.Factories.ClassicColshape.ColshapeId*
+  commentId: Overload:Altv_Roleplay.Factories.ClassicColshape.ColshapeId
+  name: ColshapeId
+  nameWithType: ClassicColshape.ColshapeId
+  fullName: Altv_Roleplay.Factories.ClassicColshape.ColshapeId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.Factories.ClassicColshape.ColshapeName*
+  commentId: Overload:Altv_Roleplay.Factories.ClassicColshape.ColshapeName
+  name: ColshapeName
+  nameWithType: ClassicColshape.ColshapeName
+  fullName: Altv_Roleplay.Factories.ClassicColshape.ColshapeName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Altv_Roleplay.Factories.ClassicColshape.CarDealerVehName*
+  commentId: Overload:Altv_Roleplay.Factories.ClassicColshape.CarDealerVehName
+  name: CarDealerVehName
+  nameWithType: ClassicColshape.CarDealerVehName
+  fullName: Altv_Roleplay.Factories.ClassicColshape.CarDealerVehName
+- uid: Altv_Roleplay.Factories.ClassicColshape.CarDealerVehPrice*
+  commentId: Overload:Altv_Roleplay.Factories.ClassicColshape.CarDealerVehPrice
+  name: CarDealerVehPrice
+  nameWithType: ClassicColshape.CarDealerVehPrice
+  fullName: Altv_Roleplay.Factories.ClassicColshape.CarDealerVehPrice
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: Altv_Roleplay.Factories.ClassicColshape.Radius*
+  commentId: Overload:Altv_Roleplay.Factories.ClassicColshape.Radius
+  name: Radius
+  nameWithType: ClassicColshape.Radius
+  fullName: Altv_Roleplay.Factories.ClassicColshape.Radius
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Altv_Roleplay.Factories.ClassicColshape.#ctor*
+  commentId: Overload:Altv_Roleplay.Factories.ClassicColshape.#ctor
+  name: ClassicColshape
+  nameWithType: ClassicColshape.ClassicColshape
+  fullName: Altv_Roleplay.Factories.ClassicColshape.ClassicColshape
+- uid: AltV.Net.IServer
+  commentId: T:AltV.Net.IServer
+  parent: AltV.Net
+  isExternal: true
+  name: IServer
+  nameWithType: IServer
+  fullName: AltV.Net.IServer
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  name: IntPtr
+  nameWithType: IntPtr
+  fullName: System.IntPtr
+- uid: AltV.Net
+  commentId: N:AltV.Net
+  isExternal: true
+  name: AltV.Net
+  nameWithType: AltV.Net
+  fullName: AltV.Net
+- uid: Altv_Roleplay.Factories.ClassicColshape.IsInRange*
+  commentId: Overload:Altv_Roleplay.Factories.ClassicColshape.IsInRange
+  name: IsInRange
+  nameWithType: ClassicColshape.IsInRange
+  fullName: Altv_Roleplay.Factories.ClassicColshape.IsInRange
+- uid: Altv_Roleplay.Factories.ClassicPlayer
+  commentId: T:Altv_Roleplay.Factories.ClassicPlayer
+  parent: Altv_Roleplay.Factories
+  name: ClassicPlayer
+  nameWithType: ClassicPlayer
+  fullName: Altv_Roleplay.Factories.ClassicPlayer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

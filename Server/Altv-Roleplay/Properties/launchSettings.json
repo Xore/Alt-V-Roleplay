@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Altv-Roleplay": {
+      "commandName": "Executable",
+      "executablePath": "D:\\Progs\\AltV\\NXT-ALTV\\SERVER-ASSETS\\AltV-DEV\\altv-server.exe",
+      "workingDirectory": "D:\\Progs\\AltV\\NXT-ALTV\\SERVER-ASSETS\\AltV-DEV",
+      "sqlDebugging": true
+    }
+  }
+}

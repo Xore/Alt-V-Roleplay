@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.FactionCars.LSPD
+  commentId: N:Altv_Roleplay.FactionCars.LSPD
+  id: Altv_Roleplay.FactionCars.LSPD
+  children:
+  - Altv_Roleplay.FactionCars.LSPD.Cars
+  - Altv_Roleplay.FactionCars.LSPD.Gear
+  langs:
+  - csharp
+  - vb
+  name: Altv_Roleplay.FactionCars.LSPD
+  nameWithType: Altv_Roleplay.FactionCars.LSPD
+  fullName: Altv_Roleplay.FactionCars.LSPD
+  type: Namespace
+  assemblies:
+  - NightOut-Gaming
+references:
+- uid: Altv_Roleplay.FactionCars.LSPD.Cars
+  commentId: T:Altv_Roleplay.FactionCars.LSPD.Cars
+  name: Cars
+  nameWithType: Cars
+  fullName: Altv_Roleplay.FactionCars.LSPD.Cars
+- uid: Altv_Roleplay.FactionCars.LSPD.Gear
+  commentId: T:Altv_Roleplay.FactionCars.LSPD.Gear
+  name: Gear
+  nameWithType: Gear
+  fullName: Altv_Roleplay.FactionCars.LSPD.Gear

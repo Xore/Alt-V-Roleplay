@@ -1,0 +1,207 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../utils/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../utils/toastr.min.css">
+    <link rel="stylesheet" href="../utils/mdb/css/mdb-sass.css">
+    <script type="text/javascript" src="../utils/colorpicker.js"></script>
+</head>
+
+<body>
+    <!-- Storage HUD -->
+    <div id="storageHUD">
+        <div class="storagebar">LAGER
+                <button onclick="closeStorageCef();" class="closebtn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="storageHUD">
+            <div class="headerBody">
+                <p class="title">Inventar</p>
+                <div class="underscoreBody"></div>
+            </div>
+            <ul class="list-group" id="storageHUD-InvList">
+
+            </ul>
+            <div class="footerBody">
+                <input id="storageHUDinvAmount" class="inputs" type="number" value="1" placeholder="1">
+                <button class="putinBtn" onclick="switchItemToStorage()"><i class="fas fa-check"></i> EINLAGERN</button>
+            </div>
+        </div>
+        <div class="storageHUD2">
+            <div class="headerBody">
+                <p class="title">Lager</p>
+                <div class="underscoreBody"></div>
+            </div>
+            <ul class="list-group" id="storageHUD-storageList">
+            
+            </ul>
+            <div class="footerBody">
+                <input id="storageHUDstorageAmount" class="inputs" type="number" value="1" placeholder="1">
+                <button class="putinBtn" onclick="switchItemToInventoryFromStorage();"><i class="fas fa-check"></i> AUSLAGERN</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="../utils/bootstrap.min.js"></script>
+    <script src="../utils/mdb/js/mdb.min.js"></script>
+    <script src="../utils/anime.min.js"></script>
+    <script src="../utils/toastr.js"></script>
+    <script defer src="../utils/fontawesome/js/all.js"></script>
+</body>
+
+<script>
+    // Storage HUD
+    let $activeStorageInvItem = undefined,
+        $activeStorageStorageItem = undefined,
+        $storageType = undefined,
+        $storageIdentifierId = undefined;
+
+    function openStorageHUD(storageType, storageIdentifierId, invItems, storageItems) {
+        $activeStorageInvItem = undefined;
+        $activeStorageStorageItem = undefined;
+        $storageType = storageType;
+        $storageIdentifierId = storageIdentifierId;
+        invItems = JSON.parse(invItems);
+        storageItems = JSON.parse(storageItems);
+        let invHTML = "",
+            storageHTML = "";
+
+        for (var i in invItems) {
+            //console.log(`../utils/img/${invItems[i].itemPicName}`)
+            invHTML += `<li class='list-group-item storageInvitem' tabindex='-1' onclick='selectStorageItemInv(this, "` + invItems[i].itemName + `");'><p>${invItems[i].itemName}</p><p>${invItems[i].itemAmount}x</p></li>`;
+        }
+        
+
+        for (var i in storageItems){
+            //console.log(`../utils/img/${invItems[i].itemPicName}`)
+            storageHTML += `<li class='list-group-item storageStorageItem' tabindex='-1' onclick='selectStorageItemStorage(this, "` + storageItems[i].itemName + `");'><p>${storageItems[i].itemName}</p><p>${storageItems[i].itemAmount}x</p></li>`;
+        }
+        $("#storageHUD-InvList").html(invHTML);
+        $("#storageHUD-storageList").html(storageHTML);
+        $("#storageHUD").css("display", "flex");
+        $('#storageHUD-InvList, #storageHUD-storageList').each(function() {
+            $(this).find('li').sort(function(a, b) {
+                return $(a).text() < $(b).text() ? -1 : 1;
+            }).appendTo(this);
+        })
+
+        $("#storageHUD").fadeTo(250, 1, function() {
+            $("#storageHUD").show();
+        });
+    }
+
+    function selectStorageItemInv(html, itemname) {
+        if (html == undefined || itemname.length <= 0) return;
+        $("li.storageInvitem").removeClass("actives");
+        $(html).addClass("actives");
+        $activeStorageInvItem = itemname;
+    }
+
+    function selectStorageItemStorage(html, itemname) {
+        if (html == undefined || itemname.length <= 0) return;
+        $("li.storageStorageItem").removeClass("actives");
+        $(html).addClass("actives");
+        $activeStorageStorageItem = itemname;
+    }
+
+    function switchItemToStorage() {
+        if ($activeStorageInvItem == undefined || $storageType == undefined || $storageIdentifierId == undefined) return;
+        let amount = $("#storageHUDinvAmount").val();
+        if (amount <= 0) return;
+        alt.emit("Client:Storage:switchItemToStorage", $storageType, $storageIdentifierId, $activeStorageInvItem, amount);
+        closeStorageCef();
+    }
+
+    function switchItemToInventoryFromStorage() {
+        if ($activeStorageStorageItem == undefined || $storageType == undefined || $storageIdentifierId == undefined) return;
+        let amount = $("#storageHUDstorageAmount").val();
+        if (amount <= 0) return;
+        alt.emit("Client:Storage:switchItemToInventory", $storageType, $storageIdentifierId, $activeStorageStorageItem, amount);
+        closeStorageCef();
+    }
+
+    function closeStorageCef() {
+        $activeStorageInvItem = undefined;
+        $activeStorageStorageItem = undefined;
+        $storageType = undefined;
+        $storageIdentifierId = undefined;
+        alt.emit("Client:Storage:destroy");
+        $("#storageHUD").fadeTo(250, 0, function() {
+            $("#storageHUD").css("display", "none");
+            $("#storageHUD").hide();
+            $("li.storageStorageItem").removeClass("actives");
+            $("li.storageInvitem").removeClass("actives");
+            $("#storageHUDstorageAmount").val('1');
+            $("#storageHUDinvAmount").val('1');
+        });
+    }
+
+    function selectItemInv(html, itemname) {
+        if (html == undefined || itemname.length <= 0) return;
+        $("li.invitem").removeClass("actives");
+        $(html).addClass("actives");
+        $activeInvItem = itemname;
+    }
+
+    function selectItemLabor(html, itemname) {
+        if (html == undefined || itemname.length <= 0) return;
+        $("li.laboritem").removeClass("actives");
+        $(html).addClass("actives");
+        $activeLaborItem = itemname;
+    }
+
+    function switchItemToInventory() {
+        if ($activeLaborItem == undefined) return;
+        let amount = $("#laborAmount").val();
+        if (amount <= 0) return;
+        alt.emit("Client:Labor:switchItemToInventory", $activeLaborItem, amount);
+        closeLaborCef();
+    }
+
+    function switchItemToLabor() {
+        if ($activeInvItem == undefined) return;
+        let amount = $("#invAmount").val();
+        if (amount <= 0) return;
+        alt.emit("Client:Labor:switchItemToLabor", $activeInvItem, amount);
+        closeLaborCef();
+    }
+
+    /*function closeLaborCef() {
+        $activeLaborItem = undefined;
+        $activeInvItem = undefined;
+        alt.emit("Client:Labor:destroy");
+        $("#laborHUD").fadeTo(250, 0, function() {
+            $("#laborHUD").css("display", "none");
+            $("#laborHUD").hide();
+            $("li.laboritem").removeClass("actives");
+            $("li.invitem").removeClass("actives");
+            $("#laborAmount").val('1');
+            $("#invAmount").val('1');
+        });
+    }*/
+
+    function numberWithCommas(x) {
+        let numberwithComma = x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return numberwithComma.replace(/,/g, '.');
+    }
+</script>
+<script type="text/javascript">
+    if ('alt' in window) {
+        /*alt.on("CEF:Labor:openLabor", (invItems, laborItems) => {
+            openLaborHud(invItems, laborItems);
+        });*/
+
+        alt.on("CEF:Storage:openStorage", (type, id, invitems, storageitems) => {
+            openStorageHUD(type, id, invitems, storageitems);
+        });
+    }
+</script>
+
+</html>

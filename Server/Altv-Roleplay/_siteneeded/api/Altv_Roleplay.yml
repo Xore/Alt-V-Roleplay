@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay
+  commentId: N:Altv_Roleplay
+  id: Altv_Roleplay
+  children:
+  - Altv_Roleplay.Main
+  langs:
+  - csharp
+  - vb
+  name: Altv_Roleplay
+  nameWithType: Altv_Roleplay
+  fullName: Altv_Roleplay
+  type: Namespace
+  assemblies:
+  - NightOut-Gaming
+references:
+- uid: Altv_Roleplay.Main
+  commentId: T:Altv_Roleplay.Main
+  name: Main
+  nameWithType: Main
+  fullName: Altv_Roleplay.Main

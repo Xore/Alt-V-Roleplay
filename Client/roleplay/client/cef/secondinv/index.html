@@ -1,0 +1,114 @@
+﻿<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../utils/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/faction.css">
+    <link rel="stylesheet" href="css/gang.css">
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/vehicle.css">
+    <script src="../utils/jquery-3.4.1.min.js"></script>
+    <script src="../utils/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <title>Second_Inventory</title>
+</head>
+
+<body>
+    <div id="FactionStorage">
+        <div id="InventoryBox">
+            <div class="headContainer float-top">
+                <p class="closebtn" onclick="closeFactionStorageCEFBox();"><i class="fas fa-times"></i></p>
+                <span id="InventoryBoxTitle" class="active">INVENTAR</span>
+            </div>
+    
+            <div class="ContentArea">
+                <ul id="InventoryBoxItems" class="list-group">
+
+                </ul>
+            </div>
+        </div>
+
+        <div id="FactionBox">
+            <div class="headContainer float-top">
+                <span id="FactionBoxTitle" class="active">LAGER</span>
+            </div>
+            <div class="ContentArea">
+                <ul id="FactionBoxItems" class="list-group">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="GangStorage">
+        <div id="GangInventoryBox">
+            <div class="headContainer float-top">
+                <p class="closebtn" onclick="closeGangStorageCEFBox();"><i class="fas fa-times"></i></p>
+                <span id="GangInventoryBoxTitle" class="active">INVENTAR</span>
+            </div>
+    
+            <div class="ContentArea">
+                <ul id="GangInventoryBoxItems" class="list-group">
+
+                </ul>
+            </div>
+        </div>
+
+        <div id="GangBox">
+            <div class="headContainer float-top">
+                <span id="GangBoxTitle" class="active">STASH</span>
+            </div>
+            <div class="ContentArea">
+                <ul id="GangBoxItems" class="list-group">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="VehicleTrunkCEFBox">
+        <div id="VehicleInventoryBox">
+            <div class="headContainer float-top">
+                <p class="closebtn" onclick="closeVehicleTrunkCEFBox();"><i class="fas fa-times"></i></p>
+                <span id="VehicleInventoryBoxTitle" class="active">INVENTAR</span>
+            </div>
+    
+            <div class="ContentArea">
+                <ul id="VehicleInventoryBoxItems" class="list-group">
+    
+                </ul>
+            </div>
+        </div>
+    
+        <div id="VehicleTrunkBox">
+            <div class="headContainer float-top">
+                <span id="VehicleTrunkBoxTitle" class="active">KOFFERRAUM</span>
+            </div>
+            <div class="ContentArea">
+                <ul id="VehicleTrunkBoxItems" class="list-group">
+    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="PlayerSearchInventoryCEFBox">
+        <p class="closebtn" onclick="closePlayerSearchCEFBox();"><i class="fas fa-times"></i></p>
+        <p class="title">SPIELER DURCHSUCHEN</p>
+        <hr>
+        <div class="container">
+            <ul id="PlayerSearchInventoryCEFBox-List" class="list-group"></ul>
+        </div>
+    </div>
+
+    <script src="../utils/popper.min.js"></script>
+    <script src="../utils/bootstrap.min.js"></script>
+    <script src="../utils/mdb/js/mdb.min.js"></script>
+    <script src="../utils/anime.min.js"></script>
+    <script src="../utils/toastr.js"></script>
+    <script defer src="../utils/fontawesome/js/all.js"></script>
+</body>
+</html>

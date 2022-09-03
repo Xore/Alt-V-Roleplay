@@ -1,0 +1,1014 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.models.Server_Shops
+  commentId: T:Altv_Roleplay.models.Server_Shops
+  id: Server_Shops
+  parent: Altv_Roleplay.models
+  children:
+  - Altv_Roleplay.models.Server_Shops.faction
+  - Altv_Roleplay.models.Server_Shops.isBlipVisible
+  - Altv_Roleplay.models.Server_Shops.isOnlySelling
+  - Altv_Roleplay.models.Server_Shops.isRobbedNow
+  - Altv_Roleplay.models.Server_Shops.name
+  - Altv_Roleplay.models.Server_Shops.neededLicense
+  - Altv_Roleplay.models.Server_Shops.pedModel
+  - Altv_Roleplay.models.Server_Shops.pedRot
+  - Altv_Roleplay.models.Server_Shops.pedX
+  - Altv_Roleplay.models.Server_Shops.pedY
+  - Altv_Roleplay.models.Server_Shops.pedZ
+  - Altv_Roleplay.models.Server_Shops.posX
+  - Altv_Roleplay.models.Server_Shops.posY
+  - Altv_Roleplay.models.Server_Shops.posZ
+  - Altv_Roleplay.models.Server_Shops.shopId
+  langs:
+  - csharp
+  - vb
+  name: Server_Shops
+  nameWithType: Server_Shops
+  fullName: Altv_Roleplay.models.Server_Shops
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Shops.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Server_Shops
+    path: models/Server_Shops.cs
+    startLine: 5
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public class Server_Shops
+    content.vb: Public Class Server_Shops
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.models.Server_Shops.shopId
+  commentId: P:Altv_Roleplay.models.Server_Shops.shopId
+  id: shopId
+  parent: Altv_Roleplay.models.Server_Shops
+  langs:
+  - csharp
+  - vb
+  name: shopId
+  nameWithType: Server_Shops.shopId
+  fullName: Altv_Roleplay.models.Server_Shops.shopId
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Shops.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: shopId
+    path: models/Server_Shops.cs
+    startLine: 7
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int shopId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property shopId As Integer
+  overload: Altv_Roleplay.models.Server_Shops.shopId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Shops.name
+  commentId: P:Altv_Roleplay.models.Server_Shops.name
+  id: name
+  parent: Altv_Roleplay.models.Server_Shops
+  langs:
+  - csharp
+  - vb
+  name: name
+  nameWithType: Server_Shops.name
+  fullName: Altv_Roleplay.models.Server_Shops.name
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Shops.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: name
+    path: models/Server_Shops.cs
+    startLine: 11
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property name As String
+  overload: Altv_Roleplay.models.Server_Shops.name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Shops.posX
+  commentId: P:Altv_Roleplay.models.Server_Shops.posX
+  id: posX
+  parent: Altv_Roleplay.models.Server_Shops
+  langs:
+  - csharp
+  - vb
+  name: posX
+  nameWithType: Server_Shops.posX
+  fullName: Altv_Roleplay.models.Server_Shops.posX
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Shops.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: posX
+    path: models/Server_Shops.cs
+    startLine: 12
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float posX { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property posX As Single
+  overload: Altv_Roleplay.models.Server_Shops.posX*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Shops.posY
+  commentId: P:Altv_Roleplay.models.Server_Shops.posY
+  id: posY
+  parent: Altv_Roleplay.models.Server_Shops
+  langs:
+  - csharp
+  - vb
+  name: posY
+  nameWithType: Server_Shops.posY
+  fullName: Altv_Roleplay.models.Server_Shops.posY
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Shops.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: posY
+    path: models/Server_Shops.cs
+    startLine: 13
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float posY { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property posY As Single
+  overload: Altv_Roleplay.models.Server_Shops.posY*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Shops.posZ
+  commentId: P:Altv_Roleplay.models.Server_Shops.posZ
+  id: posZ
+  parent: Altv_Roleplay.models.Server_Shops
+  langs:
+  - csharp
+  - vb
+  name: posZ
+  nameWithType: Server_Shops.posZ
+  fullName: Altv_Roleplay.models.Server_Shops.posZ
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Shops.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: posZ
+    path: models/Server_Shops.cs
+    startLine: 14
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float posZ { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property posZ As Single
+  overload: Altv_Roleplay.models.Server_Shops.posZ*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Shops.pedX
+  commentId: P:Altv_Roleplay.models.Server_Shops.pedX
+  id: pedX
+  parent: Altv_Roleplay.models.Server_Shops
+  langs:
+  - csharp
+  - vb
+  name: pedX
+  nameWithType: Server_Shops.pedX
+  fullName: Altv_Roleplay.models.Server_Shops.pedX
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Shops.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: pedX
+    path: models/Server_Shops.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float pedX { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property pedX As Single
+  overload: Altv_Roleplay.models.Server_Shops.pedX*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Shops.pedY
+  commentId: P:Altv_Roleplay.models.Server_Shops.pedY
+  id: pedY
+  parent: Altv_Roleplay.models.Server_Shops
+  langs:
+  - csharp
+  - vb
+  name: pedY
+  nameWithType: Server_Shops.pedY
+  fullName: Altv_Roleplay.models.Server_Shops.pedY
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Shops.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: pedY
+    path: models/Server_Shops.cs
+    startLine: 16
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float pedY { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property pedY As Single
+  overload: Altv_Roleplay.models.Server_Shops.pedY*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Shops.pedZ
+  commentId: P:Altv_Roleplay.models.Server_Shops.pedZ
+  id: pedZ
+  parent: Altv_Roleplay.models.Server_Shops
+  langs:
+  - csharp
+  - vb
+  name: pedZ
+  nameWithType: Server_Shops.pedZ
+  fullName: Altv_Roleplay.models.Server_Shops.pedZ
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Shops.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: pedZ
+    path: models/Server_Shops.cs
+    startLine: 17
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float pedZ { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property pedZ As Single
+  overload: Altv_Roleplay.models.Server_Shops.pedZ*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Shops.pedRot
+  commentId: P:Altv_Roleplay.models.Server_Shops.pedRot
+  id: pedRot
+  parent: Altv_Roleplay.models.Server_Shops
+  langs:
+  - csharp
+  - vb
+  name: pedRot
+  nameWithType: Server_Shops.pedRot
+  fullName: Altv_Roleplay.models.Server_Shops.pedRot
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Shops.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: pedRot
+    path: models/Server_Shops.cs
+    startLine: 18
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float pedRot { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property pedRot As Single
+  overload: Altv_Roleplay.models.Server_Shops.pedRot*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Shops.pedModel
+  commentId: P:Altv_Roleplay.models.Server_Shops.pedModel
+  id: pedModel
+  parent: Altv_Roleplay.models.Server_Shops
+  langs:
+  - csharp
+  - vb
+  name: pedModel
+  nameWithType: Server_Shops.pedModel
+  fullName: Altv_Roleplay.models.Server_Shops.pedModel
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Shops.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: pedModel
+    path: models/Server_Shops.cs
+    startLine: 19
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string pedModel { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property pedModel As String
+  overload: Altv_Roleplay.models.Server_Shops.pedModel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Shops.neededLicense
+  commentId: P:Altv_Roleplay.models.Server_Shops.neededLicense
+  id: neededLicense
+  parent: Altv_Roleplay.models.Server_Shops
+  langs:
+  - csharp
+  - vb
+  name: neededLicense
+  nameWithType: Server_Shops.neededLicense
+  fullName: Altv_Roleplay.models.Server_Shops.neededLicense
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Shops.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: neededLicense
+    path: models/Server_Shops.cs
+    startLine: 20
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string neededLicense { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property neededLicense As String
+  overload: Altv_Roleplay.models.Server_Shops.neededLicense*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Shops.isOnlySelling
+  commentId: P:Altv_Roleplay.models.Server_Shops.isOnlySelling
+  id: isOnlySelling
+  parent: Altv_Roleplay.models.Server_Shops
+  langs:
+  - csharp
+  - vb
+  name: isOnlySelling
+  nameWithType: Server_Shops.isOnlySelling
+  fullName: Altv_Roleplay.models.Server_Shops.isOnlySelling
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Shops.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: isOnlySelling
+    path: models/Server_Shops.cs
+    startLine: 21
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public bool isOnlySelling { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property isOnlySelling As Boolean
+  overload: Altv_Roleplay.models.Server_Shops.isOnlySelling*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Shops.isBlipVisible
+  commentId: P:Altv_Roleplay.models.Server_Shops.isBlipVisible
+  id: isBlipVisible
+  parent: Altv_Roleplay.models.Server_Shops
+  langs:
+  - csharp
+  - vb
+  name: isBlipVisible
+  nameWithType: Server_Shops.isBlipVisible
+  fullName: Altv_Roleplay.models.Server_Shops.isBlipVisible
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Shops.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: isBlipVisible
+    path: models/Server_Shops.cs
+    startLine: 22
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public bool isBlipVisible { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property isBlipVisible As Boolean
+  overload: Altv_Roleplay.models.Server_Shops.isBlipVisible*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Shops.faction
+  commentId: P:Altv_Roleplay.models.Server_Shops.faction
+  id: faction
+  parent: Altv_Roleplay.models.Server_Shops
+  langs:
+  - csharp
+  - vb
+  name: faction
+  nameWithType: Server_Shops.faction
+  fullName: Altv_Roleplay.models.Server_Shops.faction
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Shops.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: faction
+    path: models/Server_Shops.cs
+    startLine: 23
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int faction { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property faction As Integer
+  overload: Altv_Roleplay.models.Server_Shops.faction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Shops.isRobbedNow
+  commentId: P:Altv_Roleplay.models.Server_Shops.isRobbedNow
+  id: isRobbedNow
+  parent: Altv_Roleplay.models.Server_Shops
+  langs:
+  - csharp
+  - vb
+  name: isRobbedNow
+  nameWithType: Server_Shops.isRobbedNow
+  fullName: Altv_Roleplay.models.Server_Shops.isRobbedNow
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Shops.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: isRobbedNow
+    path: models/Server_Shops.cs
+    startLine: 25
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [NotMapped]
+
+      public bool isRobbedNow { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <NotMapped>
+
+      Public Property isRobbedNow As Boolean
+  overload: Altv_Roleplay.models.Server_Shops.isRobbedNow*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.models
+  commentId: N:Altv_Roleplay.models
+  name: Altv_Roleplay.models
+  nameWithType: Altv_Roleplay.models
+  fullName: Altv_Roleplay.models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.models.Server_Shops.shopId*
+  commentId: Overload:Altv_Roleplay.models.Server_Shops.shopId
+  name: shopId
+  nameWithType: Server_Shops.shopId
+  fullName: Altv_Roleplay.models.Server_Shops.shopId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.models.Server_Shops.name*
+  commentId: Overload:Altv_Roleplay.models.Server_Shops.name
+  name: name
+  nameWithType: Server_Shops.name
+  fullName: Altv_Roleplay.models.Server_Shops.name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Altv_Roleplay.models.Server_Shops.posX*
+  commentId: Overload:Altv_Roleplay.models.Server_Shops.posX
+  name: posX
+  nameWithType: Server_Shops.posX
+  fullName: Altv_Roleplay.models.Server_Shops.posX
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Altv_Roleplay.models.Server_Shops.posY*
+  commentId: Overload:Altv_Roleplay.models.Server_Shops.posY
+  name: posY
+  nameWithType: Server_Shops.posY
+  fullName: Altv_Roleplay.models.Server_Shops.posY
+- uid: Altv_Roleplay.models.Server_Shops.posZ*
+  commentId: Overload:Altv_Roleplay.models.Server_Shops.posZ
+  name: posZ
+  nameWithType: Server_Shops.posZ
+  fullName: Altv_Roleplay.models.Server_Shops.posZ
+- uid: Altv_Roleplay.models.Server_Shops.pedX*
+  commentId: Overload:Altv_Roleplay.models.Server_Shops.pedX
+  name: pedX
+  nameWithType: Server_Shops.pedX
+  fullName: Altv_Roleplay.models.Server_Shops.pedX
+- uid: Altv_Roleplay.models.Server_Shops.pedY*
+  commentId: Overload:Altv_Roleplay.models.Server_Shops.pedY
+  name: pedY
+  nameWithType: Server_Shops.pedY
+  fullName: Altv_Roleplay.models.Server_Shops.pedY
+- uid: Altv_Roleplay.models.Server_Shops.pedZ*
+  commentId: Overload:Altv_Roleplay.models.Server_Shops.pedZ
+  name: pedZ
+  nameWithType: Server_Shops.pedZ
+  fullName: Altv_Roleplay.models.Server_Shops.pedZ
+- uid: Altv_Roleplay.models.Server_Shops.pedRot*
+  commentId: Overload:Altv_Roleplay.models.Server_Shops.pedRot
+  name: pedRot
+  nameWithType: Server_Shops.pedRot
+  fullName: Altv_Roleplay.models.Server_Shops.pedRot
+- uid: Altv_Roleplay.models.Server_Shops.pedModel*
+  commentId: Overload:Altv_Roleplay.models.Server_Shops.pedModel
+  name: pedModel
+  nameWithType: Server_Shops.pedModel
+  fullName: Altv_Roleplay.models.Server_Shops.pedModel
+- uid: Altv_Roleplay.models.Server_Shops.neededLicense*
+  commentId: Overload:Altv_Roleplay.models.Server_Shops.neededLicense
+  name: neededLicense
+  nameWithType: Server_Shops.neededLicense
+  fullName: Altv_Roleplay.models.Server_Shops.neededLicense
+- uid: Altv_Roleplay.models.Server_Shops.isOnlySelling*
+  commentId: Overload:Altv_Roleplay.models.Server_Shops.isOnlySelling
+  name: isOnlySelling
+  nameWithType: Server_Shops.isOnlySelling
+  fullName: Altv_Roleplay.models.Server_Shops.isOnlySelling
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Altv_Roleplay.models.Server_Shops.isBlipVisible*
+  commentId: Overload:Altv_Roleplay.models.Server_Shops.isBlipVisible
+  name: isBlipVisible
+  nameWithType: Server_Shops.isBlipVisible
+  fullName: Altv_Roleplay.models.Server_Shops.isBlipVisible
+- uid: Altv_Roleplay.models.Server_Shops.faction*
+  commentId: Overload:Altv_Roleplay.models.Server_Shops.faction
+  name: faction
+  nameWithType: Server_Shops.faction
+  fullName: Altv_Roleplay.models.Server_Shops.faction
+- uid: Altv_Roleplay.models.Server_Shops.isRobbedNow*
+  commentId: Overload:Altv_Roleplay.models.Server_Shops.isRobbedNow
+  name: isRobbedNow
+  nameWithType: Server_Shops.isRobbedNow
+  fullName: Altv_Roleplay.models.Server_Shops.isRobbedNow

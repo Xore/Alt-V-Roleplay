@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Varela Round';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../font/varela-round-v12-latin-regular.eot');
+    src: local('Varela Round Regular'), local('VarelaRound-Regular'), url('../font/varela-round-v12-latin-regular.eot?#iefix') format('embedded-opentype'), url('../font/varela-round-v12-latin-regular.woff2') format('woff2'), url('../font/varela-round-v12-latin-regular.woff') format('woff'), url('../font/varela-round-v12-latin-regular.ttf') format('truetype'), url('../font/varela-round-v12-latin-regular.svg#VarelaRound') format('svg');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 15.96px;
+}
+
+::selection {
+    background: transparent;
+}
+
+#speedometer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+    width: 275px;
+    height: 40px;
+    padding: 7.98px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.425), rgba(86, 0, 121, 0.329));
+    color: #FFF;
+    font-size: 15.96px;
+    display: flex;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow-y: hidden;
+}
+
+#speedometer>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 7.98px;
+}
+
+#speedometer>div:nth-child(1) {
+    width: 70%;
+}
+
+#speedometer>div:nth-child(2) {
+    width: 25%;
+    color: rgb(150, 150, 150);
+}
+
+#speedometer>div:nth-child(3) {
+    width: 5%;
+}
+
+#gearCurrent {
+    font-weight: bold;
+    font-size: 15.96px;
+    color: #FFF;
+    margin-right: 35px;
+}
+
+#gearNext {
+    margin-right: 35px;
+}
+
+#gearBefore {
+    margin-right: 35px;
+}
+
+#speed {
+    margin-left: 90px;
+    font-size: 23.94px;
+}
+
+#rpm {
+    margin-left: 120px;
+    width: 50%;
+    height: 7.98px;
+}
+
+#rpm>div {
+    background-color: green;
+    height: 100%;
+}
+
+#shift {
+    color: rgb(194, 45, 45);
+    font-size: 19px;
+    position: absolute;
+    margin-right: 15px;
+}
+
+#fuelbar {
+    font-size: 15.96px;
+    color: rgb(255, 255, 255);
+    width: 50px;
+    position: absolute;
+    right: 200px;
+    text-align: center;
+    padding-top: 7px;
+    display: flex;
+}
+
+#fuelicon {
+    font-size: 15.96px;
+    color: rgb(255, 255, 255);
+    width: 30px;
+    position: absolute;
+    right: 255px;
+    text-align: center;
+    padding-top: 7px;
+    display: flex;
+}

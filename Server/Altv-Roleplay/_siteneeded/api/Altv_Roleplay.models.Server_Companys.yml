@@ -1,0 +1,758 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.models.Server_Companys
+  commentId: T:Altv_Roleplay.models.Server_Companys
+  id: Server_Companys
+  parent: Altv_Roleplay.models
+  children:
+  - Altv_Roleplay.models.Server_Companys.companyMoney
+  - Altv_Roleplay.models.Server_Companys.companyName
+  - Altv_Roleplay.models.Server_Companys.companyOwnerId
+  - Altv_Roleplay.models.Server_Companys.createdTimestamp
+  - Altv_Roleplay.models.Server_Companys.givenLicense
+  - Altv_Roleplay.models.Server_Companys.id
+  - Altv_Roleplay.models.Server_Companys.posX
+  - Altv_Roleplay.models.Server_Companys.posY
+  - Altv_Roleplay.models.Server_Companys.posZ
+  langs:
+  - csharp
+  - vb
+  name: Server_Companys
+  nameWithType: Server_Companys
+  fullName: Altv_Roleplay.models.Server_Companys
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Companys.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Server_Companys
+    path: models/Server_Companys.cs
+    startLine: 6
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public class Server_Companys
+    content.vb: Public Class Server_Companys
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.models.Server_Companys.id
+  commentId: P:Altv_Roleplay.models.Server_Companys.id
+  id: id
+  parent: Altv_Roleplay.models.Server_Companys
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: Server_Companys.id
+  fullName: Altv_Roleplay.models.Server_Companys.id
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Companys.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: id
+    path: models/Server_Companys.cs
+    startLine: 8
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property id As Integer
+  overload: Altv_Roleplay.models.Server_Companys.id*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Companys.companyName
+  commentId: P:Altv_Roleplay.models.Server_Companys.companyName
+  id: companyName
+  parent: Altv_Roleplay.models.Server_Companys
+  langs:
+  - csharp
+  - vb
+  name: companyName
+  nameWithType: Server_Companys.companyName
+  fullName: Altv_Roleplay.models.Server_Companys.companyName
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Companys.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: companyName
+    path: models/Server_Companys.cs
+    startLine: 12
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string companyName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property companyName As String
+  overload: Altv_Roleplay.models.Server_Companys.companyName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Companys.companyOwnerId
+  commentId: P:Altv_Roleplay.models.Server_Companys.companyOwnerId
+  id: companyOwnerId
+  parent: Altv_Roleplay.models.Server_Companys
+  langs:
+  - csharp
+  - vb
+  name: companyOwnerId
+  nameWithType: Server_Companys.companyOwnerId
+  fullName: Altv_Roleplay.models.Server_Companys.companyOwnerId
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Companys.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: companyOwnerId
+    path: models/Server_Companys.cs
+    startLine: 13
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int companyOwnerId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property companyOwnerId As Integer
+  overload: Altv_Roleplay.models.Server_Companys.companyOwnerId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Companys.posX
+  commentId: P:Altv_Roleplay.models.Server_Companys.posX
+  id: posX
+  parent: Altv_Roleplay.models.Server_Companys
+  langs:
+  - csharp
+  - vb
+  name: posX
+  nameWithType: Server_Companys.posX
+  fullName: Altv_Roleplay.models.Server_Companys.posX
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Companys.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: posX
+    path: models/Server_Companys.cs
+    startLine: 14
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float posX { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property posX As Single
+  overload: Altv_Roleplay.models.Server_Companys.posX*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Companys.posY
+  commentId: P:Altv_Roleplay.models.Server_Companys.posY
+  id: posY
+  parent: Altv_Roleplay.models.Server_Companys
+  langs:
+  - csharp
+  - vb
+  name: posY
+  nameWithType: Server_Companys.posY
+  fullName: Altv_Roleplay.models.Server_Companys.posY
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Companys.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: posY
+    path: models/Server_Companys.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float posY { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property posY As Single
+  overload: Altv_Roleplay.models.Server_Companys.posY*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Companys.posZ
+  commentId: P:Altv_Roleplay.models.Server_Companys.posZ
+  id: posZ
+  parent: Altv_Roleplay.models.Server_Companys
+  langs:
+  - csharp
+  - vb
+  name: posZ
+  nameWithType: Server_Companys.posZ
+  fullName: Altv_Roleplay.models.Server_Companys.posZ
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Companys.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: posZ
+    path: models/Server_Companys.cs
+    startLine: 16
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float posZ { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property posZ As Single
+  overload: Altv_Roleplay.models.Server_Companys.posZ*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Companys.givenLicense
+  commentId: P:Altv_Roleplay.models.Server_Companys.givenLicense
+  id: givenLicense
+  parent: Altv_Roleplay.models.Server_Companys
+  langs:
+  - csharp
+  - vb
+  name: givenLicense
+  nameWithType: Server_Companys.givenLicense
+  fullName: Altv_Roleplay.models.Server_Companys.givenLicense
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Companys.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: givenLicense
+    path: models/Server_Companys.cs
+    startLine: 17
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string givenLicense { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property givenLicense As String
+  overload: Altv_Roleplay.models.Server_Companys.givenLicense*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Companys.createdTimestamp
+  commentId: P:Altv_Roleplay.models.Server_Companys.createdTimestamp
+  id: createdTimestamp
+  parent: Altv_Roleplay.models.Server_Companys
+  langs:
+  - csharp
+  - vb
+  name: createdTimestamp
+  nameWithType: Server_Companys.createdTimestamp
+  fullName: Altv_Roleplay.models.Server_Companys.createdTimestamp
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Companys.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: createdTimestamp
+    path: models/Server_Companys.cs
+    startLine: 18
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public DateTime createdTimestamp { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property createdTimestamp As Date
+  overload: Altv_Roleplay.models.Server_Companys.createdTimestamp*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Companys.companyMoney
+  commentId: P:Altv_Roleplay.models.Server_Companys.companyMoney
+  id: companyMoney
+  parent: Altv_Roleplay.models.Server_Companys
+  langs:
+  - csharp
+  - vb
+  name: companyMoney
+  nameWithType: Server_Companys.companyMoney
+  fullName: Altv_Roleplay.models.Server_Companys.companyMoney
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Companys.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: companyMoney
+    path: models/Server_Companys.cs
+    startLine: 19
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int companyMoney { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property companyMoney As Integer
+  overload: Altv_Roleplay.models.Server_Companys.companyMoney*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.models
+  commentId: N:Altv_Roleplay.models
+  name: Altv_Roleplay.models
+  nameWithType: Altv_Roleplay.models
+  fullName: Altv_Roleplay.models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.models.Server_Companys.id*
+  commentId: Overload:Altv_Roleplay.models.Server_Companys.id
+  name: id
+  nameWithType: Server_Companys.id
+  fullName: Altv_Roleplay.models.Server_Companys.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.models.Server_Companys.companyName*
+  commentId: Overload:Altv_Roleplay.models.Server_Companys.companyName
+  name: companyName
+  nameWithType: Server_Companys.companyName
+  fullName: Altv_Roleplay.models.Server_Companys.companyName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Altv_Roleplay.models.Server_Companys.companyOwnerId*
+  commentId: Overload:Altv_Roleplay.models.Server_Companys.companyOwnerId
+  name: companyOwnerId
+  nameWithType: Server_Companys.companyOwnerId
+  fullName: Altv_Roleplay.models.Server_Companys.companyOwnerId
+- uid: Altv_Roleplay.models.Server_Companys.posX*
+  commentId: Overload:Altv_Roleplay.models.Server_Companys.posX
+  name: posX
+  nameWithType: Server_Companys.posX
+  fullName: Altv_Roleplay.models.Server_Companys.posX
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Altv_Roleplay.models.Server_Companys.posY*
+  commentId: Overload:Altv_Roleplay.models.Server_Companys.posY
+  name: posY
+  nameWithType: Server_Companys.posY
+  fullName: Altv_Roleplay.models.Server_Companys.posY
+- uid: Altv_Roleplay.models.Server_Companys.posZ*
+  commentId: Overload:Altv_Roleplay.models.Server_Companys.posZ
+  name: posZ
+  nameWithType: Server_Companys.posZ
+  fullName: Altv_Roleplay.models.Server_Companys.posZ
+- uid: Altv_Roleplay.models.Server_Companys.givenLicense*
+  commentId: Overload:Altv_Roleplay.models.Server_Companys.givenLicense
+  name: givenLicense
+  nameWithType: Server_Companys.givenLicense
+  fullName: Altv_Roleplay.models.Server_Companys.givenLicense
+- uid: Altv_Roleplay.models.Server_Companys.createdTimestamp*
+  commentId: Overload:Altv_Roleplay.models.Server_Companys.createdTimestamp
+  name: createdTimestamp
+  nameWithType: Server_Companys.createdTimestamp
+  fullName: Altv_Roleplay.models.Server_Companys.createdTimestamp
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: Altv_Roleplay.models.Server_Companys.companyMoney*
+  commentId: Overload:Altv_Roleplay.models.Server_Companys.companyMoney
+  name: companyMoney
+  nameWithType: Server_Companys.companyMoney
+  fullName: Altv_Roleplay.models.Server_Companys.companyMoney

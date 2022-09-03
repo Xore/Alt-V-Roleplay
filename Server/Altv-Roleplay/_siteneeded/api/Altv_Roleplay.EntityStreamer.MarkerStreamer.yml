@@ -1,0 +1,965 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.EntityStreamer.MarkerStreamer
+  commentId: T:Altv_Roleplay.EntityStreamer.MarkerStreamer
+  id: MarkerStreamer
+  parent: Altv_Roleplay.EntityStreamer
+  children:
+  - Altv_Roleplay.EntityStreamer.MarkerStreamer.Create(Altv_Roleplay.EntityStreamer.MarkerTypes,System.Numerics.Vector3,System.Numerics.Vector3,System.Nullable{System.Numerics.Vector3},System.Nullable{System.Numerics.Vector3},System.Nullable{AltV.Net.Data.Rgba},System.Int32,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.Boolean},System.UInt32)
+  - Altv_Roleplay.EntityStreamer.MarkerStreamer.Delete(Altv_Roleplay.EntityStreamer.Marker)
+  - Altv_Roleplay.EntityStreamer.MarkerStreamer.Delete(System.UInt64)
+  - Altv_Roleplay.EntityStreamer.MarkerStreamer.DestroyAllDynamicMarkers
+  - Altv_Roleplay.EntityStreamer.MarkerStreamer.GetAllDynamicMarkers
+  - Altv_Roleplay.EntityStreamer.MarkerStreamer.GetMarker(System.UInt64)
+  langs:
+  - csharp
+  - vb
+  name: MarkerStreamer
+  nameWithType: MarkerStreamer
+  fullName: Altv_Roleplay.EntityStreamer.MarkerStreamer
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerStreamer
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 438
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public static class MarkerStreamer
+    content.vb: Public Module MarkerStreamer
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Altv_Roleplay.EntityStreamer.MarkerStreamer.Create(Altv_Roleplay.EntityStreamer.MarkerTypes,System.Numerics.Vector3,System.Numerics.Vector3,System.Nullable{System.Numerics.Vector3},System.Nullable{System.Numerics.Vector3},System.Nullable{AltV.Net.Data.Rgba},System.Int32,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.Boolean},System.UInt32)
+  commentId: M:Altv_Roleplay.EntityStreamer.MarkerStreamer.Create(Altv_Roleplay.EntityStreamer.MarkerTypes,System.Numerics.Vector3,System.Numerics.Vector3,System.Nullable{System.Numerics.Vector3},System.Nullable{System.Numerics.Vector3},System.Nullable{AltV.Net.Data.Rgba},System.Int32,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.Boolean},System.UInt32)
+  id: Create(Altv_Roleplay.EntityStreamer.MarkerTypes,System.Numerics.Vector3,System.Numerics.Vector3,System.Nullable{System.Numerics.Vector3},System.Nullable{System.Numerics.Vector3},System.Nullable{AltV.Net.Data.Rgba},System.Int32,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.Boolean},System.UInt32)
+  parent: Altv_Roleplay.EntityStreamer.MarkerStreamer
+  langs:
+  - csharp
+  - vb
+  name: Create(MarkerTypes, Vector3, Vector3, Nullable<Vector3>, Nullable<Vector3>, Nullable<Rgba>, Int32, Nullable<Boolean>, Nullable<Boolean>, Nullable<Boolean>, String, String, Nullable<Boolean>, UInt32)
+  nameWithType: MarkerStreamer.Create(MarkerTypes, Vector3, Vector3, Nullable<Vector3>, Nullable<Vector3>, Nullable<Rgba>, Int32, Nullable<Boolean>, Nullable<Boolean>, Nullable<Boolean>, String, String, Nullable<Boolean>, UInt32)
+  fullName: Altv_Roleplay.EntityStreamer.MarkerStreamer.Create(Altv_Roleplay.EntityStreamer.MarkerTypes, System.Numerics.Vector3, System.Numerics.Vector3, System.Nullable<System.Numerics.Vector3>, System.Nullable<System.Numerics.Vector3>, System.Nullable<AltV.Net.Data.Rgba>, System.Int32, System.Nullable<System.Boolean>, System.Nullable<System.Boolean>, System.Nullable<System.Boolean>, System.String, System.String, System.Nullable<System.Boolean>, System.UInt32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Create
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 458
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nCreate a new dynamic marker\n"
+  example: []
+  syntax:
+    content: public static Marker Create(MarkerTypes markerType, Vector3 position, Vector3 scale, Vector3? rotation = null, Vector3? direction = null, Rgba? color = null, int dimension = 0, bool? bobUpDown = false, bool? faceCamera = false, bool? rotate = false, string textureDict = null, string textureName = null, bool? drawOnEnter = false, uint streamRange = 100U)
+    parameters:
+    - id: markerType
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+      description: The type of marker to spawn.
+    - id: position
+      type: System.Numerics.Vector3
+      description: The position at which the marker should spawn at.
+    - id: scale
+      type: System.Numerics.Vector3
+      description: The scale of the marker.
+    - id: rotation
+      type: System.Nullable{System.Numerics.Vector3}
+      description: The rotation of the marker.
+    - id: direction
+      type: System.Nullable{System.Numerics.Vector3}
+      description: The direction of the marker.
+    - id: color
+      type: System.Nullable{AltV.Net.Data.Rgba}
+      description: The color of the marker.
+    - id: dimension
+      type: System.Int32
+      description: The dimension of the marker
+    - id: bobUpDown
+      type: System.Nullable{System.Boolean}
+      description: Whether the marker should bob up and down.
+    - id: faceCamera
+      type: System.Nullable{System.Boolean}
+      description: Whether the marker should face the entity&apos;s camera.
+    - id: rotate
+      type: System.Nullable{System.Boolean}
+      description: Whether the marker should rotate on the Y axis only.
+    - id: textureDict
+      type: System.String
+      description: An optional texture dictionary to apply to the marker.
+    - id: textureName
+      type: System.String
+      description: An optional texture name to apply to the marker.
+    - id: drawOnEnter
+      type: System.Nullable{System.Boolean}
+      description: Whether it should draw the marker onto an entity that intersects with it.
+    - id: streamRange
+      type: System.UInt32
+      description: Stream distance of the marker, default is 100.
+    return:
+      type: Altv_Roleplay.EntityStreamer.Marker
+      description: ''
+    content.vb: Public Shared Function Create(markerType As MarkerTypes, position As Vector3, scale As Vector3, rotation As Vector3? = Nothing, direction As Vector3? = Nothing, color As Rgba? = Nothing, dimension As Integer = 0, bobUpDown As Boolean? = False, faceCamera As Boolean? = False, rotate As Boolean? = False, textureDict As String = Nothing, textureName As String = Nothing, drawOnEnter As Boolean? = False, streamRange As UInteger = 100UI) As Marker
+  overload: Altv_Roleplay.EntityStreamer.MarkerStreamer.Create*
+  nameWithType.vb: MarkerStreamer.Create(MarkerTypes, Vector3, Vector3, Nullable(Of Vector3), Nullable(Of Vector3), Nullable(Of Rgba), Int32, Nullable(Of Boolean), Nullable(Of Boolean), Nullable(Of Boolean), String, String, Nullable(Of Boolean), UInt32)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Altv_Roleplay.EntityStreamer.MarkerStreamer.Create(Altv_Roleplay.EntityStreamer.MarkerTypes, System.Numerics.Vector3, System.Numerics.Vector3, System.Nullable(Of System.Numerics.Vector3), System.Nullable(Of System.Numerics.Vector3), System.Nullable(Of AltV.Net.Data.Rgba), System.Int32, System.Nullable(Of System.Boolean), System.Nullable(Of System.Boolean), System.Nullable(Of System.Boolean), System.String, System.String, System.Nullable(Of System.Boolean), System.UInt32)
+  name.vb: Create(MarkerTypes, Vector3, Vector3, Nullable(Of Vector3), Nullable(Of Vector3), Nullable(Of Rgba), Int32, Nullable(Of Boolean), Nullable(Of Boolean), Nullable(Of Boolean), String, String, Nullable(Of Boolean), UInt32)
+- uid: Altv_Roleplay.EntityStreamer.MarkerStreamer.Delete(System.UInt64)
+  commentId: M:Altv_Roleplay.EntityStreamer.MarkerStreamer.Delete(System.UInt64)
+  id: Delete(System.UInt64)
+  parent: Altv_Roleplay.EntityStreamer.MarkerStreamer
+  langs:
+  - csharp
+  - vb
+  name: Delete(UInt64)
+  nameWithType: MarkerStreamer.Delete(UInt64)
+  fullName: Altv_Roleplay.EntityStreamer.MarkerStreamer.Delete(System.UInt64)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Delete
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 488
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nDestroy a dynamic marker by it&apos;s ID.\n"
+  example: []
+  syntax:
+    content: public static bool Delete(ulong dynamicMarkerId)
+    parameters:
+    - id: dynamicMarkerId
+      type: System.UInt64
+      description: The ID of the marker.
+    return:
+      type: System.Boolean
+      description: True if successful, false otherwise.
+    content.vb: Public Shared Function Delete(dynamicMarkerId As ULong) As Boolean
+  overload: Altv_Roleplay.EntityStreamer.MarkerStreamer.Delete*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.EntityStreamer.MarkerStreamer.Delete(Altv_Roleplay.EntityStreamer.Marker)
+  commentId: M:Altv_Roleplay.EntityStreamer.MarkerStreamer.Delete(Altv_Roleplay.EntityStreamer.Marker)
+  id: Delete(Altv_Roleplay.EntityStreamer.Marker)
+  parent: Altv_Roleplay.EntityStreamer.MarkerStreamer
+  langs:
+  - csharp
+  - vb
+  name: Delete(Marker)
+  nameWithType: MarkerStreamer.Delete(Marker)
+  fullName: Altv_Roleplay.EntityStreamer.MarkerStreamer.Delete(Altv_Roleplay.EntityStreamer.Marker)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Delete
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 504
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nDestroy a dynamic marker.\n"
+  example: []
+  syntax:
+    content: public static void Delete(Marker marker)
+    parameters:
+    - id: marker
+      type: Altv_Roleplay.EntityStreamer.Marker
+      description: The marker instance to destroy.
+    content.vb: Public Shared Sub Delete(marker As Marker)
+  overload: Altv_Roleplay.EntityStreamer.MarkerStreamer.Delete*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.EntityStreamer.MarkerStreamer.GetMarker(System.UInt64)
+  commentId: M:Altv_Roleplay.EntityStreamer.MarkerStreamer.GetMarker(System.UInt64)
+  id: GetMarker(System.UInt64)
+  parent: Altv_Roleplay.EntityStreamer.MarkerStreamer
+  langs:
+  - csharp
+  - vb
+  name: GetMarker(UInt64)
+  nameWithType: MarkerStreamer.GetMarker(UInt64)
+  fullName: Altv_Roleplay.EntityStreamer.MarkerStreamer.GetMarker(System.UInt64)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetMarker
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 515
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nGet a dynamic marker by it&apos;s ID.\n"
+  example: []
+  syntax:
+    content: public static Marker GetMarker(ulong MarkerId)
+    parameters:
+    - id: MarkerId
+      type: System.UInt64
+    return:
+      type: Altv_Roleplay.EntityStreamer.Marker
+      description: The dynamic marker or null if not found.
+    content.vb: Public Shared Function GetMarker(MarkerId As ULong) As Marker
+  overload: Altv_Roleplay.EntityStreamer.MarkerStreamer.GetMarker*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.EntityStreamer.MarkerStreamer.DestroyAllDynamicMarkers
+  commentId: M:Altv_Roleplay.EntityStreamer.MarkerStreamer.DestroyAllDynamicMarkers
+  id: DestroyAllDynamicMarkers
+  parent: Altv_Roleplay.EntityStreamer.MarkerStreamer
+  langs:
+  - csharp
+  - vb
+  name: DestroyAllDynamicMarkers()
+  nameWithType: MarkerStreamer.DestroyAllDynamicMarkers()
+  fullName: Altv_Roleplay.EntityStreamer.MarkerStreamer.DestroyAllDynamicMarkers()
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: DestroyAllDynamicMarkers
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 532
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nDestroy all created dynamic markers.\n"
+  example: []
+  syntax:
+    content: public static void DestroyAllDynamicMarkers()
+    content.vb: Public Shared Sub DestroyAllDynamicMarkers
+  overload: Altv_Roleplay.EntityStreamer.MarkerStreamer.DestroyAllDynamicMarkers*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.EntityStreamer.MarkerStreamer.GetAllDynamicMarkers
+  commentId: M:Altv_Roleplay.EntityStreamer.MarkerStreamer.GetAllDynamicMarkers
+  id: GetAllDynamicMarkers
+  parent: Altv_Roleplay.EntityStreamer.MarkerStreamer
+  langs:
+  - csharp
+  - vb
+  name: GetAllDynamicMarkers()
+  nameWithType: MarkerStreamer.GetAllDynamicMarkers()
+  fullName: Altv_Roleplay.EntityStreamer.MarkerStreamer.GetAllDynamicMarkers()
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetAllDynamicMarkers
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 545
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nGet all created dynamic markers.\n"
+  example: []
+  syntax:
+    content: public static List<Marker> GetAllDynamicMarkers()
+    return:
+      type: System.Collections.Generic.List{Altv_Roleplay.EntityStreamer.Marker}
+      description: A list of dynamic markers.
+    content.vb: Public Shared Function GetAllDynamicMarkers As List(Of Marker)
+  overload: Altv_Roleplay.EntityStreamer.MarkerStreamer.GetAllDynamicMarkers*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Altv_Roleplay.EntityStreamer
+  commentId: N:Altv_Roleplay.EntityStreamer
+  name: Altv_Roleplay.EntityStreamer
+  nameWithType: Altv_Roleplay.EntityStreamer
+  fullName: Altv_Roleplay.EntityStreamer
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.EntityStreamer.MarkerStreamer.Create*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.MarkerStreamer.Create
+  name: Create
+  nameWithType: MarkerStreamer.Create
+  fullName: Altv_Roleplay.EntityStreamer.MarkerStreamer.Create
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes
+  commentId: T:Altv_Roleplay.EntityStreamer.MarkerTypes
+  parent: Altv_Roleplay.EntityStreamer
+  name: MarkerTypes
+  nameWithType: MarkerTypes
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes
+- uid: System.Numerics.Vector3
+  commentId: T:System.Numerics.Vector3
+  parent: System.Numerics
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: System.Numerics.Vector3
+- uid: System.Nullable{System.Numerics.Vector3}
+  commentId: T:System.Nullable{System.Numerics.Vector3}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Vector3>
+  nameWithType: Nullable<Vector3>
+  fullName: System.Nullable<System.Numerics.Vector3>
+  nameWithType.vb: Nullable(Of Vector3)
+  fullName.vb: System.Nullable(Of System.Numerics.Vector3)
+  name.vb: Nullable(Of Vector3)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: System.Numerics.Vector3
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: System.Numerics.Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable{AltV.Net.Data.Rgba}
+  commentId: T:System.Nullable{AltV.Net.Data.Rgba}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Rgba>
+  nameWithType: Nullable<Rgba>
+  fullName: System.Nullable<AltV.Net.Data.Rgba>
+  nameWithType.vb: Nullable(Of Rgba)
+  fullName.vb: System.Nullable(Of AltV.Net.Data.Rgba)
+  name.vb: Nullable(Of Rgba)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Data.Rgba
+    name: Rgba
+    nameWithType: Rgba
+    fullName: AltV.Net.Data.Rgba
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Data.Rgba
+    name: Rgba
+    nameWithType: Rgba
+    fullName: AltV.Net.Data.Rgba
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: Altv_Roleplay.EntityStreamer.Marker
+  commentId: T:Altv_Roleplay.EntityStreamer.Marker
+  parent: Altv_Roleplay.EntityStreamer
+  name: Marker
+  nameWithType: Marker
+  fullName: Altv_Roleplay.EntityStreamer.Marker
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.EntityStreamer.MarkerStreamer.Delete*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.MarkerStreamer.Delete
+  name: Delete
+  nameWithType: MarkerStreamer.Delete
+  fullName: Altv_Roleplay.EntityStreamer.MarkerStreamer.Delete
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Altv_Roleplay.EntityStreamer.MarkerStreamer.GetMarker*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.MarkerStreamer.GetMarker
+  name: GetMarker
+  nameWithType: MarkerStreamer.GetMarker
+  fullName: Altv_Roleplay.EntityStreamer.MarkerStreamer.GetMarker
+- uid: Altv_Roleplay.EntityStreamer.MarkerStreamer.DestroyAllDynamicMarkers*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.MarkerStreamer.DestroyAllDynamicMarkers
+  name: DestroyAllDynamicMarkers
+  nameWithType: MarkerStreamer.DestroyAllDynamicMarkers
+  fullName: Altv_Roleplay.EntityStreamer.MarkerStreamer.DestroyAllDynamicMarkers
+- uid: Altv_Roleplay.EntityStreamer.MarkerStreamer.GetAllDynamicMarkers*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.MarkerStreamer.GetAllDynamicMarkers
+  name: GetAllDynamicMarkers
+  nameWithType: MarkerStreamer.GetAllDynamicMarkers
+  fullName: Altv_Roleplay.EntityStreamer.MarkerStreamer.GetAllDynamicMarkers
+- uid: System.Collections.Generic.List{Altv_Roleplay.EntityStreamer.Marker}
+  commentId: T:System.Collections.Generic.List{Altv_Roleplay.EntityStreamer.Marker}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Marker>
+  nameWithType: List<Marker>
+  fullName: System.Collections.Generic.List<Altv_Roleplay.EntityStreamer.Marker>
+  nameWithType.vb: List(Of Marker)
+  fullName.vb: System.Collections.Generic.List(Of Altv_Roleplay.EntityStreamer.Marker)
+  name.vb: List(Of Marker)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Altv_Roleplay.EntityStreamer.Marker
+    name: Marker
+    nameWithType: Marker
+    fullName: Altv_Roleplay.EntityStreamer.Marker
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Altv_Roleplay.EntityStreamer.Marker
+    name: Marker
+    nameWithType: Marker
+    fullName: Altv_Roleplay.EntityStreamer.Marker
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

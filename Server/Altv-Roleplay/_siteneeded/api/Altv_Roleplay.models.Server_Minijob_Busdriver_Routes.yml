@@ -1,0 +1,710 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes
+  commentId: T:Altv_Roleplay.models.Server_Minijob_Busdriver_Routes
+  id: Server_Minijob_Busdriver_Routes
+  parent: Altv_Roleplay.models
+  children:
+  - Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.givenExp
+  - Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.hash
+  - Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.id
+  - Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.neededExp
+  - Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.neededTime
+  - Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.paycheck
+  - Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.routeId
+  - Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.routeName
+  langs:
+  - csharp
+  - vb
+  name: Server_Minijob_Busdriver_Routes
+  nameWithType: Server_Minijob_Busdriver_Routes
+  fullName: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Minijob_Busdriver_Routes.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Server_Minijob_Busdriver_Routes
+    path: models/Server_Minijob_Busdriver_Routes.cs
+    startLine: 5
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public class Server_Minijob_Busdriver_Routes
+    content.vb: Public Class Server_Minijob_Busdriver_Routes
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.id
+  commentId: P:Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.id
+  id: id
+  parent: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: Server_Minijob_Busdriver_Routes.id
+  fullName: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.id
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Minijob_Busdriver_Routes.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: id
+    path: models/Server_Minijob_Busdriver_Routes.cs
+    startLine: 7
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property id As Integer
+  overload: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.id*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.routeId
+  commentId: P:Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.routeId
+  id: routeId
+  parent: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes
+  langs:
+  - csharp
+  - vb
+  name: routeId
+  nameWithType: Server_Minijob_Busdriver_Routes.routeId
+  fullName: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.routeId
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Minijob_Busdriver_Routes.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: routeId
+    path: models/Server_Minijob_Busdriver_Routes.cs
+    startLine: 11
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int routeId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property routeId As Integer
+  overload: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.routeId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.routeName
+  commentId: P:Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.routeName
+  id: routeName
+  parent: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes
+  langs:
+  - csharp
+  - vb
+  name: routeName
+  nameWithType: Server_Minijob_Busdriver_Routes.routeName
+  fullName: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.routeName
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Minijob_Busdriver_Routes.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: routeName
+    path: models/Server_Minijob_Busdriver_Routes.cs
+    startLine: 12
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string routeName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property routeName As String
+  overload: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.routeName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.hash
+  commentId: P:Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.hash
+  id: hash
+  parent: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes
+  langs:
+  - csharp
+  - vb
+  name: hash
+  nameWithType: Server_Minijob_Busdriver_Routes.hash
+  fullName: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.hash
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Minijob_Busdriver_Routes.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: hash
+    path: models/Server_Minijob_Busdriver_Routes.cs
+    startLine: 13
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public long hash { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property hash As Long
+  overload: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.hash*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.neededExp
+  commentId: P:Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.neededExp
+  id: neededExp
+  parent: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes
+  langs:
+  - csharp
+  - vb
+  name: neededExp
+  nameWithType: Server_Minijob_Busdriver_Routes.neededExp
+  fullName: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.neededExp
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Minijob_Busdriver_Routes.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: neededExp
+    path: models/Server_Minijob_Busdriver_Routes.cs
+    startLine: 14
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int neededExp { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property neededExp As Integer
+  overload: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.neededExp*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.givenExp
+  commentId: P:Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.givenExp
+  id: givenExp
+  parent: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes
+  langs:
+  - csharp
+  - vb
+  name: givenExp
+  nameWithType: Server_Minijob_Busdriver_Routes.givenExp
+  fullName: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.givenExp
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Minijob_Busdriver_Routes.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: givenExp
+    path: models/Server_Minijob_Busdriver_Routes.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int givenExp { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property givenExp As Integer
+  overload: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.givenExp*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.paycheck
+  commentId: P:Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.paycheck
+  id: paycheck
+  parent: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes
+  langs:
+  - csharp
+  - vb
+  name: paycheck
+  nameWithType: Server_Minijob_Busdriver_Routes.paycheck
+  fullName: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.paycheck
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Minijob_Busdriver_Routes.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: paycheck
+    path: models/Server_Minijob_Busdriver_Routes.cs
+    startLine: 16
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int paycheck { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property paycheck As Integer
+  overload: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.paycheck*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.neededTime
+  commentId: P:Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.neededTime
+  id: neededTime
+  parent: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes
+  langs:
+  - csharp
+  - vb
+  name: neededTime
+  nameWithType: Server_Minijob_Busdriver_Routes.neededTime
+  fullName: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.neededTime
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Minijob_Busdriver_Routes.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: neededTime
+    path: models/Server_Minijob_Busdriver_Routes.cs
+    startLine: 17
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string neededTime { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property neededTime As String
+  overload: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.neededTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.models
+  commentId: N:Altv_Roleplay.models
+  name: Altv_Roleplay.models
+  nameWithType: Altv_Roleplay.models
+  fullName: Altv_Roleplay.models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.id*
+  commentId: Overload:Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.id
+  name: id
+  nameWithType: Server_Minijob_Busdriver_Routes.id
+  fullName: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.routeId*
+  commentId: Overload:Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.routeId
+  name: routeId
+  nameWithType: Server_Minijob_Busdriver_Routes.routeId
+  fullName: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.routeId
+- uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.routeName*
+  commentId: Overload:Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.routeName
+  name: routeName
+  nameWithType: Server_Minijob_Busdriver_Routes.routeName
+  fullName: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.routeName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.hash*
+  commentId: Overload:Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.hash
+  name: hash
+  nameWithType: Server_Minijob_Busdriver_Routes.hash
+  fullName: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.hash
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.neededExp*
+  commentId: Overload:Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.neededExp
+  name: neededExp
+  nameWithType: Server_Minijob_Busdriver_Routes.neededExp
+  fullName: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.neededExp
+- uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.givenExp*
+  commentId: Overload:Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.givenExp
+  name: givenExp
+  nameWithType: Server_Minijob_Busdriver_Routes.givenExp
+  fullName: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.givenExp
+- uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.paycheck*
+  commentId: Overload:Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.paycheck
+  name: paycheck
+  nameWithType: Server_Minijob_Busdriver_Routes.paycheck
+  fullName: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.paycheck
+- uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.neededTime*
+  commentId: Overload:Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.neededTime
+  name: neededTime
+  nameWithType: Server_Minijob_Busdriver_Routes.neededTime
+  fullName: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes.neededTime

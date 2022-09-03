@@ -1,0 +1,290 @@
+@font-face {
+    font-family: 'PEL';
+    src: url('../../utils/fonts/Poppins-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PM';
+    src: url('../../utils/fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PT';
+    src: url('../../utils/fonts/Poppins-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSR';
+    src: url('../../utils/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSL';
+    src: url('../../utils/fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DB';
+    src: url('../../utils/fonts/db.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSSB';
+    src: url('../../utils/fonts/OpenSans-Semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BNT';
+    src: url('../../utils/fonts/bnt.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "PricedownBL";
+    src: url('../../utils/fonts/pricedownbl.ttf') format('truetype');
+}
+
+@keyframes flickerAnimationn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 0.95;
+        transform: translateX(0%);
+    }
+}
+
+h4 {
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    color: rgba(255, 255, 255, 0.80);
+    outline: none;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+body {
+    -webkit-user-select: none;
+    user-select: none;
+    background: none;
+    /*background: url(../utils/img/bg2.jpg);*/
+    background-size: cover;
+    overflow: hidden;
+}
+
+div#GarageCEFBox>p.closebtn:hover {
+    cursor: pointer;
+    background: rgba(214, 28, 28, 0.72);
+    color: #fff;
+    opacity: 1;
+}
+
+
+/* GARAGE */
+
+div#GarageCEFBox {
+    opacity: 0;
+}
+
+div#GarageCEFBox {
+    display: none;
+}
+
+div#GarageCEFBox {
+    width: 600px;
+    padding: 35px;
+    top: 20%;
+    position: absolute;
+    z-index: 100;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.425), rgba(86, 0, 121, 0.329));
+    text-align: center;
+    padding-bottom: 0;
+    left: 20px;
+    border-radius: 35px;
+}
+
+div#GarageCEFBox>p#GarageCEFBOX-title {
+    display: table;
+    color: #d2d2d2;
+    text-align: center;
+    margin-left: 150px;
+    margin-top: -35px;
+    font-size: 0.95rem;
+    font-family: PT;
+    font-weight: bold;
+    padding-left: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 12px;
+}
+
+div#GarageCEFBox>img.Pic {
+    width: 150px;
+    height: 100px;
+    margin-top: -0.5rem;
+}
+
+div#GarageCEFBox>hr {
+    margin-top: 1.45px;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #00000063;
+    width: 600px;
+    margin-left: -35px;
+}
+
+div#GarageCEFBox>div.secbox {
+    background: rgb(0 0 0 / 29%);
+    margin-left: -35px;
+    margin-right: -35px;
+    margin-top: -16px;
+    z-index: 100;
+    padding: 15px;
+    padding-bottom: 5px;
+    display: flow-root;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+div#GarageCEFBox>div.secbox>p.title {
+    font-size: 1.25rem;
+    margin-bottom: 0.2rem;
+    color: #dedbdb;
+}
+
+div#GarageCEFBox>div.secbox>p.infotext {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-size: 0.9rem;
+    word-break: break-word;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList {
+    margin-bottom: 0.5rem;
+    display: flex;
+    float: left;
+    max-height: 350px;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item {
+    background: #31313170;
+    padding: 0 0;
+    text-align: left;
+    margin-left: 10px;
+    float: left;
+    margin-bottom: 10px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    filter: grayscale(0.3);
+    display: contents;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.vehname,
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.vehtank,
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.vehkz {
+    color: white;
+    font-family: OSL;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: none;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.vehname {
+    border-left: none;
+    float: left;
+    font-size: 20px;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.vehtank {
+    border-left: none;
+    float: left;
+    font-size: 20px;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>span.vehkz {
+    float: left;
+    border-right: none;
+    font-size: 20px;
+    border-bottom: 1px solid white;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item>img {
+    margin-left: 35px;
+    margin-bottom: 15px;
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item.green:hover {
+    background: rgba(40, 158, 99, 0.3);
+    filter: grayscale(0);
+}
+
+div#GarageCEFBox>div.secbox>ul#GarageCEFBox-VehList>li.list-group-item.red:hover {
+    background: rgba(152, 36, 36, 0.3);
+    filter: grayscale(0);
+}
+
+div#GarageCEFBox>p.closebtn {
+    display: table;
+    color: red;
+    text-align: left;
+    position: absolute;
+    margin-left: -35px;
+    margin-top: -34px;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 6px;
+    padding-right: 14px;
+    transition: all 0.5s ease-in-out;
+    font-size: 14px;
+}
+
+.parkin {
+    background-color: #00000000;
+    color: white;
+    border: 1px solid white;
+    float: right;
+    font-size: 20px;
+}
+
+.parkout {
+    background-color: #00000000;
+    color: white;
+    border: 1px solid white;
+    float: right;
+    font-size: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #888;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6d6d6d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(85, 85, 85);
+}

@@ -1,0 +1,12 @@
+{
+    "botsettings": {
+        "prefix": ".",
+        "talkedRecently": "3",
+        "token": "ODcwMjY2NDAzMDUwMTE5MTk4.YQKQvw.JMKCmJn9Yp97ay4mTl4TCJar-94"
+    },
+
+    "altvsettings": {
+        "altvapiurl": "https://api.altv.mp/server/",
+        "altvserverid": "8136421803e1c473a4b120bc79ca4fa5"
+    }
+}

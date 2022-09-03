@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'PEL';
+    src: url('../utils/fonts/Poppins-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PM';
+    src: url('../utils/fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PT';
+    src: url('../utils/fonts/Poppins-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSR';
+    src: url('../utils/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSL';
+    src: url('../utils/fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+body {
+    user-select: none;
+    display: flex;
+    background: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+}
+
+div.TabletBG {
+    position: absolute;
+    background: url("assets/img/tabletbg.png");
+    background-repeat: no-repeat;
+    background-size: 1150px 750px;
+    height: 760px;
+    width: 1150px;
+    z-index: 100;
+    display: none;
+}
+
+div.Tablet {
+    position: absolute;
+    z-index: 100;
+    height: 618px;
+    width: 1023px;
+    left: 64px;
+    top: 35px;
+}
+
+div.Tablet>div.Taskbar {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    border-bottom: 1px solid #0c0c0c59;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+div.Tablet>div.Taskbar>i.fas.fa-wifi,
+div.Tablet>div.Taskbar>i.far.fa-clock,
+div.Tablet>div.Taskbar>i.fas.fa-battery-three-quarters {
+    color: #d2d2d2;
+    font-size: 1rem;
+    padding-left: 10px;
+}
+
+div.Tablet>div.Taskbar>span#time {
+    color: #d2d2d2;
+    font-family: PT;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding-left: 10px;
+}
+
+div.Tablet>div.Tablet-UseableArea {
+    position: absolute;
+    height: 618px;
+    width: 1080px;
+    left: -29px;
+}
+
+div.TabletBG>button.btn-circle {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    padding: 0;
+    border-radius: 50%;
+}
+
+div.TabletBG>button.btn-circle i {
+    position: relative;
+    top: -1px;
+}
+
+div.TabletBG>button.btn-circle-sm {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 0.9rem;
+}
+
+div.TabletBG>button.btn-home {
+    position: absolute;
+    bottom: 19px;
+    right: 550px;
+    height: 15px;
+    width: 35px;
+    border-radius: 10%;
+    border-color: #949494;
+    color: #8e8b8b;
+}
+
+div.TabletBG>button.btn-home:hover {
+    background-color: #b8b8b869;
+    border-color: #ffffff;
+}
+
+div.TabletBG>button.btn-home:focus {
+    box-shadow: 0 0 0 0.2rem rgba(62, 70, 67, 0.25);
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area {
+    display: none;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Are>div#FactionManagerApp-Area-InviteNewMember {
+    display: none;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Are>div#FactionManagerApp-Area-ViewAllMembers {
+    display: none;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Are>div#FactionManagerApp-Area-RankManage {
+    display: none;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-Overview {
+    display: flex;
+    justify-content: center;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area {
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 21, 25, 0.658)!important;
+    border-bottom-left-radius: 41px;
+    border-bottom-right-radius: 41px;
+}
+
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-RankManage>div.box>ul.list-group,
+div.Tablet>div.Tablet-UseableArea>div#FactionManagerApp-Area>div#FactionManagerApp-Area-ViewAllMembers>div.box>ul.list-group {
+    background: rgba(0, 0, 0, 0.15);
+    margin-top: 2rem;
+    width: 100%;
+    left: 0px;
+    height: 280px;
+    position: relative;
+    border: 1px solid #00000066;
+    max-height: 285px;
+    overflow-y: auto;
+}
+

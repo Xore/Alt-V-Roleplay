@@ -1,0 +1,2242 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.Utils.Constants.Positions
+  commentId: T:Altv_Roleplay.Utils.Constants.Positions
+  id: Constants.Positions
+  parent: Altv_Roleplay.Utils
+  children:
+  - Altv_Roleplay.Utils.Constants.Positions.Arrest_Position
+  - Altv_Roleplay.Utils.Constants.Positions.AutoClubLosSantos_StoreVehPosition
+  - Altv_Roleplay.Utils.Constants.Positions.BennyPosition
+  - Altv_Roleplay.Utils.Constants.Positions.CarRental_StartPos
+  - Altv_Roleplay.Utils.Constants.Positions.CarRental_VehOutPos
+  - Altv_Roleplay.Utils.Constants.Positions.CarRental_VehOutRot
+  - Altv_Roleplay.Utils.Constants.Positions.Clothes_ACLS
+  - Altv_Roleplay.Utils.Constants.Positions.Clothes_Medic
+  - Altv_Roleplay.Utils.Constants.Positions.Clothes_Police
+  - Altv_Roleplay.Utils.Constants.Positions.dynasty8_pedPositionStorage
+  - Altv_Roleplay.Utils.Constants.Positions.dynasty8_pedRotationStorage
+  - Altv_Roleplay.Utils.Constants.Positions.dynasty8_positionStorage
+  - Altv_Roleplay.Utils.Constants.Positions.Empty
+  - Altv_Roleplay.Utils.Constants.Positions.Hotel_Apartment_ExitPos
+  - Altv_Roleplay.Utils.Constants.Positions.Hotel_Apartment_StoragePos
+  - Altv_Roleplay.Utils.Constants.Positions.IdentityCardApply
+  - Altv_Roleplay.Utils.Constants.Positions.LicensePoint
+  - Altv_Roleplay.Utils.Constants.Positions.LSPDCars_StartPos
+  - Altv_Roleplay.Utils.Constants.Positions.LSPDCars_VehOutPos
+  - Altv_Roleplay.Utils.Constants.Positions.LSPDCars_VehOutRot
+  - Altv_Roleplay.Utils.Constants.Positions.Minijob_Busdriver_StartPos
+  - Altv_Roleplay.Utils.Constants.Positions.Minijob_Busdriver_VehOutPos
+  - Altv_Roleplay.Utils.Constants.Positions.Minijob_Busdriver_VehOutRot
+  - Altv_Roleplay.Utils.Constants.Positions.Minijob_Elektrolieferant_VehOutPos
+  - Altv_Roleplay.Utils.Constants.Positions.Minijob_Elektrolieferant_VehOutRot
+  - Altv_Roleplay.Utils.Constants.Positions.Minijob_Elektrolieferent_StartPos
+  - Altv_Roleplay.Utils.Constants.Positions.Minijob_Müllmann_StartPos
+  - Altv_Roleplay.Utils.Constants.Positions.Minijob_Müllmann_VehOutPos
+  - Altv_Roleplay.Utils.Constants.Positions.Minijob_Müllmann_VehOutRot
+  - Altv_Roleplay.Utils.Constants.Positions.ProcessTest
+  - Altv_Roleplay.Utils.Constants.Positions.SpawnPos_Airport
+  - Altv_Roleplay.Utils.Constants.Positions.SpawnPos_Beach
+  - Altv_Roleplay.Utils.Constants.Positions.SpawnPos_PaletoBay
+  - Altv_Roleplay.Utils.Constants.Positions.SpawnPos_SandyShores
+  - Altv_Roleplay.Utils.Constants.Positions.SpawnRot_Airport
+  - Altv_Roleplay.Utils.Constants.Positions.SpawnRot_Beach
+  - Altv_Roleplay.Utils.Constants.Positions.SpawnRot_PaletoBay
+  - Altv_Roleplay.Utils.Constants.Positions.SpawnRot_SandyShores
+  - Altv_Roleplay.Utils.Constants.Positions.storage_ExitPosition
+  - Altv_Roleplay.Utils.Constants.Positions.storage_InvPosition
+  - Altv_Roleplay.Utils.Constants.Positions.storage_LSPDInvPosition
+  - Altv_Roleplay.Utils.Constants.Positions.TownhallHouseSelector
+  - Altv_Roleplay.Utils.Constants.Positions.VehicleKey_Position
+  - Altv_Roleplay.Utils.Constants.Positions.VehicleKey_VehPosition
+  - Altv_Roleplay.Utils.Constants.Positions.VehicleLicensing_Position
+  - Altv_Roleplay.Utils.Constants.Positions.VehicleLicensing_VehPosition
+  - Altv_Roleplay.Utils.Constants.Positions.VehicleSell_Position
+  - Altv_Roleplay.Utils.Constants.Positions.VehicleSell_VehPosition
+  - Altv_Roleplay.Utils.Constants.Positions.Waschstrasse
+  - Altv_Roleplay.Utils.Constants.Positions.Waschstrasse2
+  - Altv_Roleplay.Utils.Constants.Positions.WP_Position_01
+  - Altv_Roleplay.Utils.Constants.Positions.WP_Position_03
+  langs:
+  - csharp
+  - vb
+  name: Constants.Positions
+  nameWithType: Constants.Positions
+  fullName: Altv_Roleplay.Utils.Constants.Positions
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Positions
+    path: Utils/Constants.cs
+    startLine: 27
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static class Positions
+    content.vb: Public Module Positions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Altv_Roleplay.Utils.Constants.Positions.Empty
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.Empty
+  id: Empty
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: Empty
+  nameWithType: Constants.Positions.Empty
+  fullName: Altv_Roleplay.Utils.Constants.Positions.Empty
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Empty
+    path: Utils/Constants.cs
+    startLine: 29
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position Empty
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly Empty As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.IdentityCardApply
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.IdentityCardApply
+  id: IdentityCardApply
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: IdentityCardApply
+  nameWithType: Constants.Positions.IdentityCardApply
+  fullName: Altv_Roleplay.Utils.Constants.Positions.IdentityCardApply
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: IdentityCardApply
+    path: Utils/Constants.cs
+    startLine: 31
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position IdentityCardApply
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly IdentityCardApply As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.TownhallHouseSelector
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.TownhallHouseSelector
+  id: TownhallHouseSelector
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: TownhallHouseSelector
+  nameWithType: Constants.Positions.TownhallHouseSelector
+  fullName: Altv_Roleplay.Utils.Constants.Positions.TownhallHouseSelector
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: TownhallHouseSelector
+    path: Utils/Constants.cs
+    startLine: 32
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position TownhallHouseSelector
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly TownhallHouseSelector As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.VehicleLicensing_Position
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.VehicleLicensing_Position
+  id: VehicleLicensing_Position
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: VehicleLicensing_Position
+  nameWithType: Constants.Positions.VehicleLicensing_Position
+  fullName: Altv_Roleplay.Utils.Constants.Positions.VehicleLicensing_Position
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: VehicleLicensing_Position
+    path: Utils/Constants.cs
+    startLine: 34
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position VehicleLicensing_Position
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly VehicleLicensing_Position As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.VehicleLicensing_VehPosition
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.VehicleLicensing_VehPosition
+  id: VehicleLicensing_VehPosition
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: VehicleLicensing_VehPosition
+  nameWithType: Constants.Positions.VehicleLicensing_VehPosition
+  fullName: Altv_Roleplay.Utils.Constants.Positions.VehicleLicensing_VehPosition
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: VehicleLicensing_VehPosition
+    path: Utils/Constants.cs
+    startLine: 35
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position VehicleLicensing_VehPosition
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly VehicleLicensing_VehPosition As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.LicensePoint
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.LicensePoint
+  id: LicensePoint
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: LicensePoint
+  nameWithType: Constants.Positions.LicensePoint
+  fullName: Altv_Roleplay.Utils.Constants.Positions.LicensePoint
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: LicensePoint
+    path: Utils/Constants.cs
+    startLine: 36
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position LicensePoint
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly LicensePoint As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.VehicleKey_Position
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.VehicleKey_Position
+  id: VehicleKey_Position
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: VehicleKey_Position
+  nameWithType: Constants.Positions.VehicleKey_Position
+  fullName: Altv_Roleplay.Utils.Constants.Positions.VehicleKey_Position
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: VehicleKey_Position
+    path: Utils/Constants.cs
+    startLine: 38
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position VehicleKey_Position
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly VehicleKey_Position As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.VehicleKey_VehPosition
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.VehicleKey_VehPosition
+  id: VehicleKey_VehPosition
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: VehicleKey_VehPosition
+  nameWithType: Constants.Positions.VehicleKey_VehPosition
+  fullName: Altv_Roleplay.Utils.Constants.Positions.VehicleKey_VehPosition
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: VehicleKey_VehPosition
+    path: Utils/Constants.cs
+    startLine: 39
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position VehicleKey_VehPosition
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly VehicleKey_VehPosition As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.VehicleSell_Position
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.VehicleSell_Position
+  id: VehicleSell_Position
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: VehicleSell_Position
+  nameWithType: Constants.Positions.VehicleSell_Position
+  fullName: Altv_Roleplay.Utils.Constants.Positions.VehicleSell_Position
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: VehicleSell_Position
+    path: Utils/Constants.cs
+    startLine: 41
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position VehicleSell_Position
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly VehicleSell_Position As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.VehicleSell_VehPosition
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.VehicleSell_VehPosition
+  id: VehicleSell_VehPosition
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: VehicleSell_VehPosition
+  nameWithType: Constants.Positions.VehicleSell_VehPosition
+  fullName: Altv_Roleplay.Utils.Constants.Positions.VehicleSell_VehPosition
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: VehicleSell_VehPosition
+    path: Utils/Constants.cs
+    startLine: 42
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position VehicleSell_VehPosition
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly VehicleSell_VehPosition As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.AutoClubLosSantos_StoreVehPosition
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.AutoClubLosSantos_StoreVehPosition
+  id: AutoClubLosSantos_StoreVehPosition
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: AutoClubLosSantos_StoreVehPosition
+  nameWithType: Constants.Positions.AutoClubLosSantos_StoreVehPosition
+  fullName: Altv_Roleplay.Utils.Constants.Positions.AutoClubLosSantos_StoreVehPosition
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: AutoClubLosSantos_StoreVehPosition
+    path: Utils/Constants.cs
+    startLine: 44
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position AutoClubLosSantos_StoreVehPosition
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly AutoClubLosSantos_StoreVehPosition As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.BennyPosition
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.BennyPosition
+  id: BennyPosition
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: BennyPosition
+  nameWithType: Constants.Positions.BennyPosition
+  fullName: Altv_Roleplay.Utils.Constants.Positions.BennyPosition
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: BennyPosition
+    path: Utils/Constants.cs
+    startLine: 46
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position BennyPosition
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly BennyPosition As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.WP_Position_01
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.WP_Position_01
+  id: WP_Position_01
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: WP_Position_01
+  nameWithType: Constants.Positions.WP_Position_01
+  fullName: Altv_Roleplay.Utils.Constants.Positions.WP_Position_01
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: WP_Position_01
+    path: Utils/Constants.cs
+    startLine: 47
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position WP_Position_01
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly WP_Position_01 As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.WP_Position_03
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.WP_Position_03
+  id: WP_Position_03
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: WP_Position_03
+  nameWithType: Constants.Positions.WP_Position_03
+  fullName: Altv_Roleplay.Utils.Constants.Positions.WP_Position_03
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: WP_Position_03
+    path: Utils/Constants.cs
+    startLine: 48
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position WP_Position_03
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly WP_Position_03 As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.SpawnPos_Airport
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.SpawnPos_Airport
+  id: SpawnPos_Airport
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: SpawnPos_Airport
+  nameWithType: Constants.Positions.SpawnPos_Airport
+  fullName: Altv_Roleplay.Utils.Constants.Positions.SpawnPos_Airport
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SpawnPos_Airport
+    path: Utils/Constants.cs
+    startLine: 50
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position SpawnPos_Airport
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly SpawnPos_Airport As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.SpawnRot_Airport
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.SpawnRot_Airport
+  id: SpawnRot_Airport
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: SpawnRot_Airport
+  nameWithType: Constants.Positions.SpawnRot_Airport
+  fullName: Altv_Roleplay.Utils.Constants.Positions.SpawnRot_Airport
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SpawnRot_Airport
+    path: Utils/Constants.cs
+    startLine: 51
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Rotation SpawnRot_Airport
+    return:
+      type: AltV.Net.Data.Rotation
+    content.vb: Public Shared ReadOnly SpawnRot_Airport As Rotation
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.SpawnPos_Beach
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.SpawnPos_Beach
+  id: SpawnPos_Beach
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: SpawnPos_Beach
+  nameWithType: Constants.Positions.SpawnPos_Beach
+  fullName: Altv_Roleplay.Utils.Constants.Positions.SpawnPos_Beach
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SpawnPos_Beach
+    path: Utils/Constants.cs
+    startLine: 53
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position SpawnPos_Beach
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly SpawnPos_Beach As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.SpawnRot_Beach
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.SpawnRot_Beach
+  id: SpawnRot_Beach
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: SpawnRot_Beach
+  nameWithType: Constants.Positions.SpawnRot_Beach
+  fullName: Altv_Roleplay.Utils.Constants.Positions.SpawnRot_Beach
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SpawnRot_Beach
+    path: Utils/Constants.cs
+    startLine: 54
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Rotation SpawnRot_Beach
+    return:
+      type: AltV.Net.Data.Rotation
+    content.vb: Public Shared ReadOnly SpawnRot_Beach As Rotation
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.SpawnPos_SandyShores
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.SpawnPos_SandyShores
+  id: SpawnPos_SandyShores
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: SpawnPos_SandyShores
+  nameWithType: Constants.Positions.SpawnPos_SandyShores
+  fullName: Altv_Roleplay.Utils.Constants.Positions.SpawnPos_SandyShores
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SpawnPos_SandyShores
+    path: Utils/Constants.cs
+    startLine: 56
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position SpawnPos_SandyShores
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly SpawnPos_SandyShores As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.SpawnRot_SandyShores
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.SpawnRot_SandyShores
+  id: SpawnRot_SandyShores
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: SpawnRot_SandyShores
+  nameWithType: Constants.Positions.SpawnRot_SandyShores
+  fullName: Altv_Roleplay.Utils.Constants.Positions.SpawnRot_SandyShores
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SpawnRot_SandyShores
+    path: Utils/Constants.cs
+    startLine: 57
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Rotation SpawnRot_SandyShores
+    return:
+      type: AltV.Net.Data.Rotation
+    content.vb: Public Shared ReadOnly SpawnRot_SandyShores As Rotation
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.SpawnPos_PaletoBay
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.SpawnPos_PaletoBay
+  id: SpawnPos_PaletoBay
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: SpawnPos_PaletoBay
+  nameWithType: Constants.Positions.SpawnPos_PaletoBay
+  fullName: Altv_Roleplay.Utils.Constants.Positions.SpawnPos_PaletoBay
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SpawnPos_PaletoBay
+    path: Utils/Constants.cs
+    startLine: 59
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position SpawnPos_PaletoBay
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly SpawnPos_PaletoBay As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.SpawnRot_PaletoBay
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.SpawnRot_PaletoBay
+  id: SpawnRot_PaletoBay
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: SpawnRot_PaletoBay
+  nameWithType: Constants.Positions.SpawnRot_PaletoBay
+  fullName: Altv_Roleplay.Utils.Constants.Positions.SpawnRot_PaletoBay
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SpawnRot_PaletoBay
+    path: Utils/Constants.cs
+    startLine: 60
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Rotation SpawnRot_PaletoBay
+    return:
+      type: AltV.Net.Data.Rotation
+    content.vb: Public Shared ReadOnly SpawnRot_PaletoBay As Rotation
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.Minijob_Elektrolieferent_StartPos
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.Minijob_Elektrolieferent_StartPos
+  id: Minijob_Elektrolieferent_StartPos
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: Minijob_Elektrolieferent_StartPos
+  nameWithType: Constants.Positions.Minijob_Elektrolieferent_StartPos
+  fullName: Altv_Roleplay.Utils.Constants.Positions.Minijob_Elektrolieferent_StartPos
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Minijob_Elektrolieferent_StartPos
+    path: Utils/Constants.cs
+    startLine: 62
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position Minijob_Elektrolieferent_StartPos
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly Minijob_Elektrolieferent_StartPos As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.Minijob_Elektrolieferant_VehOutPos
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.Minijob_Elektrolieferant_VehOutPos
+  id: Minijob_Elektrolieferant_VehOutPos
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: Minijob_Elektrolieferant_VehOutPos
+  nameWithType: Constants.Positions.Minijob_Elektrolieferant_VehOutPos
+  fullName: Altv_Roleplay.Utils.Constants.Positions.Minijob_Elektrolieferant_VehOutPos
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Minijob_Elektrolieferant_VehOutPos
+    path: Utils/Constants.cs
+    startLine: 63
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position Minijob_Elektrolieferant_VehOutPos
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly Minijob_Elektrolieferant_VehOutPos As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.Minijob_Elektrolieferant_VehOutRot
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.Minijob_Elektrolieferant_VehOutRot
+  id: Minijob_Elektrolieferant_VehOutRot
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: Minijob_Elektrolieferant_VehOutRot
+  nameWithType: Constants.Positions.Minijob_Elektrolieferant_VehOutRot
+  fullName: Altv_Roleplay.Utils.Constants.Positions.Minijob_Elektrolieferant_VehOutRot
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Minijob_Elektrolieferant_VehOutRot
+    path: Utils/Constants.cs
+    startLine: 64
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Rotation Minijob_Elektrolieferant_VehOutRot
+    return:
+      type: AltV.Net.Data.Rotation
+    content.vb: Public Shared ReadOnly Minijob_Elektrolieferant_VehOutRot As Rotation
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.Minijob_Müllmann_StartPos
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.Minijob_Müllmann_StartPos
+  id: Minijob_Müllmann_StartPos
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: Minijob_Müllmann_StartPos
+  nameWithType: Constants.Positions.Minijob_Müllmann_StartPos
+  fullName: Altv_Roleplay.Utils.Constants.Positions.Minijob_Müllmann_StartPos
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Minijob_Müllmann_StartPos
+    path: Utils/Constants.cs
+    startLine: 66
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position Minijob_Müllmann_StartPos
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly Minijob_Müllmann_StartPos As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.Minijob_Müllmann_VehOutPos
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.Minijob_Müllmann_VehOutPos
+  id: Minijob_Müllmann_VehOutPos
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: Minijob_Müllmann_VehOutPos
+  nameWithType: Constants.Positions.Minijob_Müllmann_VehOutPos
+  fullName: Altv_Roleplay.Utils.Constants.Positions.Minijob_Müllmann_VehOutPos
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Minijob_Müllmann_VehOutPos
+    path: Utils/Constants.cs
+    startLine: 67
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position Minijob_Müllmann_VehOutPos
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly Minijob_Müllmann_VehOutPos As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.Minijob_Müllmann_VehOutRot
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.Minijob_Müllmann_VehOutRot
+  id: Minijob_Müllmann_VehOutRot
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: Minijob_Müllmann_VehOutRot
+  nameWithType: Constants.Positions.Minijob_Müllmann_VehOutRot
+  fullName: Altv_Roleplay.Utils.Constants.Positions.Minijob_Müllmann_VehOutRot
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Minijob_Müllmann_VehOutRot
+    path: Utils/Constants.cs
+    startLine: 68
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Rotation Minijob_Müllmann_VehOutRot
+    return:
+      type: AltV.Net.Data.Rotation
+    content.vb: Public Shared ReadOnly Minijob_Müllmann_VehOutRot As Rotation
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.Minijob_Busdriver_StartPos
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.Minijob_Busdriver_StartPos
+  id: Minijob_Busdriver_StartPos
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: Minijob_Busdriver_StartPos
+  nameWithType: Constants.Positions.Minijob_Busdriver_StartPos
+  fullName: Altv_Roleplay.Utils.Constants.Positions.Minijob_Busdriver_StartPos
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Minijob_Busdriver_StartPos
+    path: Utils/Constants.cs
+    startLine: 70
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position Minijob_Busdriver_StartPos
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly Minijob_Busdriver_StartPos As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.Minijob_Busdriver_VehOutPos
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.Minijob_Busdriver_VehOutPos
+  id: Minijob_Busdriver_VehOutPos
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: Minijob_Busdriver_VehOutPos
+  nameWithType: Constants.Positions.Minijob_Busdriver_VehOutPos
+  fullName: Altv_Roleplay.Utils.Constants.Positions.Minijob_Busdriver_VehOutPos
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Minijob_Busdriver_VehOutPos
+    path: Utils/Constants.cs
+    startLine: 71
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position Minijob_Busdriver_VehOutPos
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly Minijob_Busdriver_VehOutPos As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.Minijob_Busdriver_VehOutRot
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.Minijob_Busdriver_VehOutRot
+  id: Minijob_Busdriver_VehOutRot
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: Minijob_Busdriver_VehOutRot
+  nameWithType: Constants.Positions.Minijob_Busdriver_VehOutRot
+  fullName: Altv_Roleplay.Utils.Constants.Positions.Minijob_Busdriver_VehOutRot
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Minijob_Busdriver_VehOutRot
+    path: Utils/Constants.cs
+    startLine: 72
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Rotation Minijob_Busdriver_VehOutRot
+    return:
+      type: AltV.Net.Data.Rotation
+    content.vb: Public Shared ReadOnly Minijob_Busdriver_VehOutRot As Rotation
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.CarRental_StartPos
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.CarRental_StartPos
+  id: CarRental_StartPos
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: CarRental_StartPos
+  nameWithType: Constants.Positions.CarRental_StartPos
+  fullName: Altv_Roleplay.Utils.Constants.Positions.CarRental_StartPos
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CarRental_StartPos
+    path: Utils/Constants.cs
+    startLine: 75
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position CarRental_StartPos
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly CarRental_StartPos As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.CarRental_VehOutPos
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.CarRental_VehOutPos
+  id: CarRental_VehOutPos
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: CarRental_VehOutPos
+  nameWithType: Constants.Positions.CarRental_VehOutPos
+  fullName: Altv_Roleplay.Utils.Constants.Positions.CarRental_VehOutPos
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CarRental_VehOutPos
+    path: Utils/Constants.cs
+    startLine: 76
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position CarRental_VehOutPos
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly CarRental_VehOutPos As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.CarRental_VehOutRot
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.CarRental_VehOutRot
+  id: CarRental_VehOutRot
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: CarRental_VehOutRot
+  nameWithType: Constants.Positions.CarRental_VehOutRot
+  fullName: Altv_Roleplay.Utils.Constants.Positions.CarRental_VehOutRot
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CarRental_VehOutRot
+    path: Utils/Constants.cs
+    startLine: 77
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Rotation CarRental_VehOutRot
+    return:
+      type: AltV.Net.Data.Rotation
+    content.vb: Public Shared ReadOnly CarRental_VehOutRot As Rotation
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.LSPDCars_StartPos
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.LSPDCars_StartPos
+  id: LSPDCars_StartPos
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: LSPDCars_StartPos
+  nameWithType: Constants.Positions.LSPDCars_StartPos
+  fullName: Altv_Roleplay.Utils.Constants.Positions.LSPDCars_StartPos
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: LSPDCars_StartPos
+    path: Utils/Constants.cs
+    startLine: 80
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position LSPDCars_StartPos
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly LSPDCars_StartPos As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.LSPDCars_VehOutPos
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.LSPDCars_VehOutPos
+  id: LSPDCars_VehOutPos
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: LSPDCars_VehOutPos
+  nameWithType: Constants.Positions.LSPDCars_VehOutPos
+  fullName: Altv_Roleplay.Utils.Constants.Positions.LSPDCars_VehOutPos
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: LSPDCars_VehOutPos
+    path: Utils/Constants.cs
+    startLine: 81
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position LSPDCars_VehOutPos
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly LSPDCars_VehOutPos As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.LSPDCars_VehOutRot
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.LSPDCars_VehOutRot
+  id: LSPDCars_VehOutRot
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: LSPDCars_VehOutRot
+  nameWithType: Constants.Positions.LSPDCars_VehOutRot
+  fullName: Altv_Roleplay.Utils.Constants.Positions.LSPDCars_VehOutRot
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: LSPDCars_VehOutRot
+    path: Utils/Constants.cs
+    startLine: 82
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Rotation LSPDCars_VehOutRot
+    return:
+      type: AltV.Net.Data.Rotation
+    content.vb: Public Shared ReadOnly LSPDCars_VehOutRot As Rotation
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.Hotel_Apartment_ExitPos
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.Hotel_Apartment_ExitPos
+  id: Hotel_Apartment_ExitPos
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: Hotel_Apartment_ExitPos
+  nameWithType: Constants.Positions.Hotel_Apartment_ExitPos
+  fullName: Altv_Roleplay.Utils.Constants.Positions.Hotel_Apartment_ExitPos
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Hotel_Apartment_ExitPos
+    path: Utils/Constants.cs
+    startLine: 84
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position Hotel_Apartment_ExitPos
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly Hotel_Apartment_ExitPos As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.Hotel_Apartment_StoragePos
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.Hotel_Apartment_StoragePos
+  id: Hotel_Apartment_StoragePos
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: Hotel_Apartment_StoragePos
+  nameWithType: Constants.Positions.Hotel_Apartment_StoragePos
+  fullName: Altv_Roleplay.Utils.Constants.Positions.Hotel_Apartment_StoragePos
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Hotel_Apartment_StoragePos
+    path: Utils/Constants.cs
+    startLine: 85
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position Hotel_Apartment_StoragePos
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly Hotel_Apartment_StoragePos As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.Clothes_Police
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.Clothes_Police
+  id: Clothes_Police
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: Clothes_Police
+  nameWithType: Constants.Positions.Clothes_Police
+  fullName: Altv_Roleplay.Utils.Constants.Positions.Clothes_Police
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Clothes_Police
+    path: Utils/Constants.cs
+    startLine: 87
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position Clothes_Police
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly Clothes_Police As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.Clothes_Medic
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.Clothes_Medic
+  id: Clothes_Medic
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: Clothes_Medic
+  nameWithType: Constants.Positions.Clothes_Medic
+  fullName: Altv_Roleplay.Utils.Constants.Positions.Clothes_Medic
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Clothes_Medic
+    path: Utils/Constants.cs
+    startLine: 88
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position Clothes_Medic
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly Clothes_Medic As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.Clothes_ACLS
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.Clothes_ACLS
+  id: Clothes_ACLS
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: Clothes_ACLS
+  nameWithType: Constants.Positions.Clothes_ACLS
+  fullName: Altv_Roleplay.Utils.Constants.Positions.Clothes_ACLS
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Clothes_ACLS
+    path: Utils/Constants.cs
+    startLine: 89
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position Clothes_ACLS
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly Clothes_ACLS As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.ProcessTest
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.ProcessTest
+  id: ProcessTest
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: ProcessTest
+  nameWithType: Constants.Positions.ProcessTest
+  fullName: Altv_Roleplay.Utils.Constants.Positions.ProcessTest
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: ProcessTest
+    path: Utils/Constants.cs
+    startLine: 91
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position ProcessTest
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly ProcessTest As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.Arrest_Position
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.Arrest_Position
+  id: Arrest_Position
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: Arrest_Position
+  nameWithType: Constants.Positions.Arrest_Position
+  fullName: Altv_Roleplay.Utils.Constants.Positions.Arrest_Position
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Arrest_Position
+    path: Utils/Constants.cs
+    startLine: 92
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position Arrest_Position
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly Arrest_Position As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.Waschstrasse
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.Waschstrasse
+  id: Waschstrasse
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: Waschstrasse
+  nameWithType: Constants.Positions.Waschstrasse
+  fullName: Altv_Roleplay.Utils.Constants.Positions.Waschstrasse
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Waschstrasse
+    path: Utils/Constants.cs
+    startLine: 94
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position Waschstrasse
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly Waschstrasse As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.Waschstrasse2
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.Waschstrasse2
+  id: Waschstrasse2
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: Waschstrasse2
+  nameWithType: Constants.Positions.Waschstrasse2
+  fullName: Altv_Roleplay.Utils.Constants.Positions.Waschstrasse2
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Waschstrasse2
+    path: Utils/Constants.cs
+    startLine: 95
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position Waschstrasse2
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly Waschstrasse2 As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.storage_ExitPosition
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.storage_ExitPosition
+  id: storage_ExitPosition
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: storage_ExitPosition
+  nameWithType: Constants.Positions.storage_ExitPosition
+  fullName: Altv_Roleplay.Utils.Constants.Positions.storage_ExitPosition
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: storage_ExitPosition
+    path: Utils/Constants.cs
+    startLine: 97
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position storage_ExitPosition
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly storage_ExitPosition As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.storage_InvPosition
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.storage_InvPosition
+  id: storage_InvPosition
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: storage_InvPosition
+  nameWithType: Constants.Positions.storage_InvPosition
+  fullName: Altv_Roleplay.Utils.Constants.Positions.storage_InvPosition
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: storage_InvPosition
+    path: Utils/Constants.cs
+    startLine: 98
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position storage_InvPosition
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly storage_InvPosition As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.storage_LSPDInvPosition
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.storage_LSPDInvPosition
+  id: storage_LSPDInvPosition
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: storage_LSPDInvPosition
+  nameWithType: Constants.Positions.storage_LSPDInvPosition
+  fullName: Altv_Roleplay.Utils.Constants.Positions.storage_LSPDInvPosition
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: storage_LSPDInvPosition
+    path: Utils/Constants.cs
+    startLine: 99
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position storage_LSPDInvPosition
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly storage_LSPDInvPosition As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.dynasty8_pedPositionStorage
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.dynasty8_pedPositionStorage
+  id: dynasty8_pedPositionStorage
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: dynasty8_pedPositionStorage
+  nameWithType: Constants.Positions.dynasty8_pedPositionStorage
+  fullName: Altv_Roleplay.Utils.Constants.Positions.dynasty8_pedPositionStorage
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: dynasty8_pedPositionStorage
+    path: Utils/Constants.cs
+    startLine: 101
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position dynasty8_pedPositionStorage
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly dynasty8_pedPositionStorage As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.dynasty8_pedRotationStorage
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.dynasty8_pedRotationStorage
+  id: dynasty8_pedRotationStorage
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: dynasty8_pedRotationStorage
+  nameWithType: Constants.Positions.dynasty8_pedRotationStorage
+  fullName: Altv_Roleplay.Utils.Constants.Positions.dynasty8_pedRotationStorage
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: dynasty8_pedRotationStorage
+    path: Utils/Constants.cs
+    startLine: 102
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly float dynasty8_pedRotationStorage
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly dynasty8_pedRotationStorage As Single
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Altv_Roleplay.Utils.Constants.Positions.dynasty8_positionStorage
+  commentId: F:Altv_Roleplay.Utils.Constants.Positions.dynasty8_positionStorage
+  id: dynasty8_positionStorage
+  parent: Altv_Roleplay.Utils.Constants.Positions
+  langs:
+  - csharp
+  - vb
+  name: dynasty8_positionStorage
+  nameWithType: Constants.Positions.dynasty8_positionStorage
+  fullName: Altv_Roleplay.Utils.Constants.Positions.dynasty8_positionStorage
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Constants.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: dynasty8_positionStorage
+    path: Utils/Constants.cs
+    startLine: 103
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static readonly Position dynasty8_positionStorage
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Shared ReadOnly dynasty8_positionStorage As Position
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Altv_Roleplay.Utils
+  commentId: N:Altv_Roleplay.Utils
+  name: Altv_Roleplay.Utils
+  nameWithType: Altv_Roleplay.Utils
+  fullName: Altv_Roleplay.Utils
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AltV.Net.Data.Position
+  commentId: T:AltV.Net.Data.Position
+  parent: AltV.Net.Data
+  isExternal: true
+  name: Position
+  nameWithType: Position
+  fullName: AltV.Net.Data.Position
+- uid: AltV.Net.Data
+  commentId: N:AltV.Net.Data
+  isExternal: true
+  name: AltV.Net.Data
+  nameWithType: AltV.Net.Data
+  fullName: AltV.Net.Data
+- uid: AltV.Net.Data.Rotation
+  commentId: T:AltV.Net.Data.Rotation
+  parent: AltV.Net.Data
+  isExternal: true
+  name: Rotation
+  nameWithType: Rotation
+  fullName: AltV.Net.Data.Rotation
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single

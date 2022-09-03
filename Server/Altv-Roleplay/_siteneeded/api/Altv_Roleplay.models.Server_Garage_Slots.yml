@@ -1,0 +1,744 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.models.Server_Garage_Slots
+  commentId: T:Altv_Roleplay.models.Server_Garage_Slots
+  id: Server_Garage_Slots
+  parent: Altv_Roleplay.models
+  children:
+  - Altv_Roleplay.models.Server_Garage_Slots.garageId
+  - Altv_Roleplay.models.Server_Garage_Slots.id
+  - Altv_Roleplay.models.Server_Garage_Slots.parkId
+  - Altv_Roleplay.models.Server_Garage_Slots.posX
+  - Altv_Roleplay.models.Server_Garage_Slots.posY
+  - Altv_Roleplay.models.Server_Garage_Slots.posZ
+  - Altv_Roleplay.models.Server_Garage_Slots.rotX
+  - Altv_Roleplay.models.Server_Garage_Slots.rotY
+  - Altv_Roleplay.models.Server_Garage_Slots.rotZ
+  langs:
+  - csharp
+  - vb
+  name: Server_Garage_Slots
+  nameWithType: Server_Garage_Slots
+  fullName: Altv_Roleplay.models.Server_Garage_Slots
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Garage_Slots.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Server_Garage_Slots
+    path: models/Server_Garage_Slots.cs
+    startLine: 5
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public class Server_Garage_Slots
+    content.vb: Public Class Server_Garage_Slots
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.models.Server_Garage_Slots.id
+  commentId: P:Altv_Roleplay.models.Server_Garage_Slots.id
+  id: id
+  parent: Altv_Roleplay.models.Server_Garage_Slots
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: Server_Garage_Slots.id
+  fullName: Altv_Roleplay.models.Server_Garage_Slots.id
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Garage_Slots.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: id
+    path: models/Server_Garage_Slots.cs
+    startLine: 7
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property id As Integer
+  overload: Altv_Roleplay.models.Server_Garage_Slots.id*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Garage_Slots.garageId
+  commentId: P:Altv_Roleplay.models.Server_Garage_Slots.garageId
+  id: garageId
+  parent: Altv_Roleplay.models.Server_Garage_Slots
+  langs:
+  - csharp
+  - vb
+  name: garageId
+  nameWithType: Server_Garage_Slots.garageId
+  fullName: Altv_Roleplay.models.Server_Garage_Slots.garageId
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Garage_Slots.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: garageId
+    path: models/Server_Garage_Slots.cs
+    startLine: 11
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int garageId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property garageId As Integer
+  overload: Altv_Roleplay.models.Server_Garage_Slots.garageId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Garage_Slots.parkId
+  commentId: P:Altv_Roleplay.models.Server_Garage_Slots.parkId
+  id: parkId
+  parent: Altv_Roleplay.models.Server_Garage_Slots
+  langs:
+  - csharp
+  - vb
+  name: parkId
+  nameWithType: Server_Garage_Slots.parkId
+  fullName: Altv_Roleplay.models.Server_Garage_Slots.parkId
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Garage_Slots.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: parkId
+    path: models/Server_Garage_Slots.cs
+    startLine: 12
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int parkId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property parkId As Integer
+  overload: Altv_Roleplay.models.Server_Garage_Slots.parkId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Garage_Slots.posX
+  commentId: P:Altv_Roleplay.models.Server_Garage_Slots.posX
+  id: posX
+  parent: Altv_Roleplay.models.Server_Garage_Slots
+  langs:
+  - csharp
+  - vb
+  name: posX
+  nameWithType: Server_Garage_Slots.posX
+  fullName: Altv_Roleplay.models.Server_Garage_Slots.posX
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Garage_Slots.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: posX
+    path: models/Server_Garage_Slots.cs
+    startLine: 13
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float posX { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property posX As Single
+  overload: Altv_Roleplay.models.Server_Garage_Slots.posX*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Garage_Slots.posY
+  commentId: P:Altv_Roleplay.models.Server_Garage_Slots.posY
+  id: posY
+  parent: Altv_Roleplay.models.Server_Garage_Slots
+  langs:
+  - csharp
+  - vb
+  name: posY
+  nameWithType: Server_Garage_Slots.posY
+  fullName: Altv_Roleplay.models.Server_Garage_Slots.posY
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Garage_Slots.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: posY
+    path: models/Server_Garage_Slots.cs
+    startLine: 14
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float posY { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property posY As Single
+  overload: Altv_Roleplay.models.Server_Garage_Slots.posY*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Garage_Slots.posZ
+  commentId: P:Altv_Roleplay.models.Server_Garage_Slots.posZ
+  id: posZ
+  parent: Altv_Roleplay.models.Server_Garage_Slots
+  langs:
+  - csharp
+  - vb
+  name: posZ
+  nameWithType: Server_Garage_Slots.posZ
+  fullName: Altv_Roleplay.models.Server_Garage_Slots.posZ
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Garage_Slots.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: posZ
+    path: models/Server_Garage_Slots.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float posZ { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property posZ As Single
+  overload: Altv_Roleplay.models.Server_Garage_Slots.posZ*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Garage_Slots.rotX
+  commentId: P:Altv_Roleplay.models.Server_Garage_Slots.rotX
+  id: rotX
+  parent: Altv_Roleplay.models.Server_Garage_Slots
+  langs:
+  - csharp
+  - vb
+  name: rotX
+  nameWithType: Server_Garage_Slots.rotX
+  fullName: Altv_Roleplay.models.Server_Garage_Slots.rotX
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Garage_Slots.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: rotX
+    path: models/Server_Garage_Slots.cs
+    startLine: 16
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float rotX { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property rotX As Single
+  overload: Altv_Roleplay.models.Server_Garage_Slots.rotX*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Garage_Slots.rotY
+  commentId: P:Altv_Roleplay.models.Server_Garage_Slots.rotY
+  id: rotY
+  parent: Altv_Roleplay.models.Server_Garage_Slots
+  langs:
+  - csharp
+  - vb
+  name: rotY
+  nameWithType: Server_Garage_Slots.rotY
+  fullName: Altv_Roleplay.models.Server_Garage_Slots.rotY
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Garage_Slots.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: rotY
+    path: models/Server_Garage_Slots.cs
+    startLine: 17
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float rotY { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property rotY As Single
+  overload: Altv_Roleplay.models.Server_Garage_Slots.rotY*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Garage_Slots.rotZ
+  commentId: P:Altv_Roleplay.models.Server_Garage_Slots.rotZ
+  id: rotZ
+  parent: Altv_Roleplay.models.Server_Garage_Slots
+  langs:
+  - csharp
+  - vb
+  name: rotZ
+  nameWithType: Server_Garage_Slots.rotZ
+  fullName: Altv_Roleplay.models.Server_Garage_Slots.rotZ
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Garage_Slots.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: rotZ
+    path: models/Server_Garage_Slots.cs
+    startLine: 18
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float rotZ { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property rotZ As Single
+  overload: Altv_Roleplay.models.Server_Garage_Slots.rotZ*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.models
+  commentId: N:Altv_Roleplay.models
+  name: Altv_Roleplay.models
+  nameWithType: Altv_Roleplay.models
+  fullName: Altv_Roleplay.models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.models.Server_Garage_Slots.id*
+  commentId: Overload:Altv_Roleplay.models.Server_Garage_Slots.id
+  name: id
+  nameWithType: Server_Garage_Slots.id
+  fullName: Altv_Roleplay.models.Server_Garage_Slots.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.models.Server_Garage_Slots.garageId*
+  commentId: Overload:Altv_Roleplay.models.Server_Garage_Slots.garageId
+  name: garageId
+  nameWithType: Server_Garage_Slots.garageId
+  fullName: Altv_Roleplay.models.Server_Garage_Slots.garageId
+- uid: Altv_Roleplay.models.Server_Garage_Slots.parkId*
+  commentId: Overload:Altv_Roleplay.models.Server_Garage_Slots.parkId
+  name: parkId
+  nameWithType: Server_Garage_Slots.parkId
+  fullName: Altv_Roleplay.models.Server_Garage_Slots.parkId
+- uid: Altv_Roleplay.models.Server_Garage_Slots.posX*
+  commentId: Overload:Altv_Roleplay.models.Server_Garage_Slots.posX
+  name: posX
+  nameWithType: Server_Garage_Slots.posX
+  fullName: Altv_Roleplay.models.Server_Garage_Slots.posX
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Altv_Roleplay.models.Server_Garage_Slots.posY*
+  commentId: Overload:Altv_Roleplay.models.Server_Garage_Slots.posY
+  name: posY
+  nameWithType: Server_Garage_Slots.posY
+  fullName: Altv_Roleplay.models.Server_Garage_Slots.posY
+- uid: Altv_Roleplay.models.Server_Garage_Slots.posZ*
+  commentId: Overload:Altv_Roleplay.models.Server_Garage_Slots.posZ
+  name: posZ
+  nameWithType: Server_Garage_Slots.posZ
+  fullName: Altv_Roleplay.models.Server_Garage_Slots.posZ
+- uid: Altv_Roleplay.models.Server_Garage_Slots.rotX*
+  commentId: Overload:Altv_Roleplay.models.Server_Garage_Slots.rotX
+  name: rotX
+  nameWithType: Server_Garage_Slots.rotX
+  fullName: Altv_Roleplay.models.Server_Garage_Slots.rotX
+- uid: Altv_Roleplay.models.Server_Garage_Slots.rotY*
+  commentId: Overload:Altv_Roleplay.models.Server_Garage_Slots.rotY
+  name: rotY
+  nameWithType: Server_Garage_Slots.rotY
+  fullName: Altv_Roleplay.models.Server_Garage_Slots.rotY
+- uid: Altv_Roleplay.models.Server_Garage_Slots.rotZ*
+  commentId: Overload:Altv_Roleplay.models.Server_Garage_Slots.rotZ
+  name: rotZ
+  nameWithType: Server_Garage_Slots.rotZ
+  fullName: Altv_Roleplay.models.Server_Garage_Slots.rotZ

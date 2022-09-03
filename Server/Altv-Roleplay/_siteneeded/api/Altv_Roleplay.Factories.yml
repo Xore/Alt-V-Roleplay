@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.Factories
+  commentId: N:Altv_Roleplay.Factories
+  id: Altv_Roleplay.Factories
+  children:
+  - Altv_Roleplay.Factories.ClassicColshape
+  - Altv_Roleplay.Factories.ClassicPlayer
+  - Altv_Roleplay.Factories.ClassicVehicle
+  - Altv_Roleplay.Factories.ColshapeFactory
+  - Altv_Roleplay.Factories.VehicleFactory
+  langs:
+  - csharp
+  - vb
+  name: Altv_Roleplay.Factories
+  nameWithType: Altv_Roleplay.Factories
+  fullName: Altv_Roleplay.Factories
+  type: Namespace
+  assemblies:
+  - NightOut-Gaming
+references:
+- uid: Altv_Roleplay.Factories.ClassicColshape
+  commentId: T:Altv_Roleplay.Factories.ClassicColshape
+  parent: Altv_Roleplay.Factories
+  name: ClassicColshape
+  nameWithType: ClassicColshape
+  fullName: Altv_Roleplay.Factories.ClassicColshape
+- uid: Altv_Roleplay.Factories.ClassicPlayer
+  commentId: T:Altv_Roleplay.Factories.ClassicPlayer
+  parent: Altv_Roleplay.Factories
+  name: ClassicPlayer
+  nameWithType: ClassicPlayer
+  fullName: Altv_Roleplay.Factories.ClassicPlayer
+- uid: Altv_Roleplay.Factories.ClassicVehicle
+  commentId: T:Altv_Roleplay.Factories.ClassicVehicle
+  name: ClassicVehicle
+  nameWithType: ClassicVehicle
+  fullName: Altv_Roleplay.Factories.ClassicVehicle
+- uid: Altv_Roleplay.Factories.VehicleFactory
+  commentId: T:Altv_Roleplay.Factories.VehicleFactory
+  name: VehicleFactory
+  nameWithType: VehicleFactory
+  fullName: Altv_Roleplay.Factories.VehicleFactory
+- uid: Altv_Roleplay.Factories.ColshapeFactory
+  commentId: T:Altv_Roleplay.Factories.ColshapeFactory
+  name: ColshapeFactory
+  nameWithType: ColshapeFactory
+  fullName: Altv_Roleplay.Factories.ColshapeFactory
+- uid: Altv_Roleplay.Factories
+  commentId: N:Altv_Roleplay.Factories
+  name: Altv_Roleplay.Factories
+  nameWithType: Altv_Roleplay.Factories
+  fullName: Altv_Roleplay.Factories

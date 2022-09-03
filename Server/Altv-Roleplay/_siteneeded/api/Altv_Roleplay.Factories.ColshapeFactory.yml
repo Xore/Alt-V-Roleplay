@@ -1,0 +1,624 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.Factories.ColshapeFactory
+  commentId: T:Altv_Roleplay.Factories.ColshapeFactory
+  id: ColshapeFactory
+  parent: Altv_Roleplay.Factories
+  children:
+  - Altv_Roleplay.Factories.ColshapeFactory.Create(AltV.Net.IServer,System.IntPtr)
+  langs:
+  - csharp
+  - vb
+  name: ColshapeFactory
+  nameWithType: ColshapeFactory
+  fullName: Altv_Roleplay.Factories.ColshapeFactory
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Factories/Factories.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: ColshapeFactory
+    path: Factories/Factories.cs
+    startLine: 30
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Factories
+  syntax:
+    content: 'public class ColshapeFactory : IBaseObjectFactory<IColShape>'
+    content.vb: >-
+      Public Class ColshapeFactory
+          Implements IBaseObjectFactory(Of IColShape)
+  inheritance:
+  - System.Object
+  implements:
+  - AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IColShape}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.Factories.ColshapeFactory.Create(AltV.Net.IServer,System.IntPtr)
+  commentId: M:Altv_Roleplay.Factories.ColshapeFactory.Create(AltV.Net.IServer,System.IntPtr)
+  id: Create(AltV.Net.IServer,System.IntPtr)
+  parent: Altv_Roleplay.Factories.ColshapeFactory
+  langs:
+  - csharp
+  - vb
+  name: Create(IServer, IntPtr)
+  nameWithType: ColshapeFactory.Create(IServer, IntPtr)
+  fullName: Altv_Roleplay.Factories.ColshapeFactory.Create(AltV.Net.IServer, System.IntPtr)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Factories/Factories.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Create
+    path: Factories/Factories.cs
+    startLine: 32
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Factories
+  syntax:
+    content: public IColShape Create(IServer server, IntPtr entityPointer)
+    parameters:
+    - id: server
+      type: AltV.Net.IServer
+    - id: entityPointer
+      type: System.IntPtr
+    return:
+      type: AltV.Net.Elements.Entities.IColShape
+    content.vb: Public Function Create(server As IServer, entityPointer As IntPtr) As IColShape
+  overload: Altv_Roleplay.Factories.ColshapeFactory.Create*
+  implements:
+  - AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IColShape}.Create(AltV.Net.IServer,System.IntPtr)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.Factories
+  commentId: N:Altv_Roleplay.Factories
+  name: Altv_Roleplay.Factories
+  nameWithType: Altv_Roleplay.Factories
+  fullName: Altv_Roleplay.Factories
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IColShape}
+  commentId: T:AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IColShape}
+  parent: AltV.Net
+  definition: AltV.Net.IBaseObjectFactory`1
+  name: IBaseObjectFactory<IColShape>
+  nameWithType: IBaseObjectFactory<IColShape>
+  fullName: AltV.Net.IBaseObjectFactory<AltV.Net.Elements.Entities.IColShape>
+  nameWithType.vb: IBaseObjectFactory(Of IColShape)
+  fullName.vb: AltV.Net.IBaseObjectFactory(Of AltV.Net.Elements.Entities.IColShape)
+  name.vb: IBaseObjectFactory(Of IColShape)
+  spec.csharp:
+  - uid: AltV.Net.IBaseObjectFactory`1
+    name: IBaseObjectFactory
+    nameWithType: IBaseObjectFactory
+    fullName: AltV.Net.IBaseObjectFactory
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AltV.Net.IBaseObjectFactory`1
+    name: IBaseObjectFactory
+    nameWithType: IBaseObjectFactory
+    fullName: AltV.Net.IBaseObjectFactory
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AltV.Net.IBaseObjectFactory`1
+  commentId: T:AltV.Net.IBaseObjectFactory`1
+  isExternal: true
+  name: IBaseObjectFactory<TBaseObject>
+  nameWithType: IBaseObjectFactory<TBaseObject>
+  fullName: AltV.Net.IBaseObjectFactory<TBaseObject>
+  nameWithType.vb: IBaseObjectFactory(Of TBaseObject)
+  fullName.vb: AltV.Net.IBaseObjectFactory(Of TBaseObject)
+  name.vb: IBaseObjectFactory(Of TBaseObject)
+  spec.csharp:
+  - uid: AltV.Net.IBaseObjectFactory`1
+    name: IBaseObjectFactory
+    nameWithType: IBaseObjectFactory
+    fullName: AltV.Net.IBaseObjectFactory
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TBaseObject
+    nameWithType: TBaseObject
+    fullName: TBaseObject
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AltV.Net.IBaseObjectFactory`1
+    name: IBaseObjectFactory
+    nameWithType: IBaseObjectFactory
+    fullName: AltV.Net.IBaseObjectFactory
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TBaseObject
+    nameWithType: TBaseObject
+    fullName: TBaseObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net
+  commentId: N:AltV.Net
+  isExternal: true
+  name: AltV.Net
+  nameWithType: AltV.Net
+  fullName: AltV.Net
+- uid: Altv_Roleplay.Factories.ColshapeFactory.Create*
+  commentId: Overload:Altv_Roleplay.Factories.ColshapeFactory.Create
+  name: Create
+  nameWithType: ColshapeFactory.Create
+  fullName: Altv_Roleplay.Factories.ColshapeFactory.Create
+- uid: AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IColShape}.Create(AltV.Net.IServer,System.IntPtr)
+  commentId: M:AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IColShape}.Create(AltV.Net.IServer,System.IntPtr)
+  parent: AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IColShape}
+  definition: AltV.Net.IBaseObjectFactory`1.Create(AltV.Net.IServer,System.IntPtr)
+  name: Create(IServer, IntPtr)
+  nameWithType: IBaseObjectFactory<IColShape>.Create(IServer, IntPtr)
+  fullName: AltV.Net.IBaseObjectFactory<AltV.Net.Elements.Entities.IColShape>.Create(AltV.Net.IServer, System.IntPtr)
+  nameWithType.vb: IBaseObjectFactory(Of IColShape).Create(IServer, IntPtr)
+  fullName.vb: AltV.Net.IBaseObjectFactory(Of AltV.Net.Elements.Entities.IColShape).Create(AltV.Net.IServer, System.IntPtr)
+  spec.csharp:
+  - uid: AltV.Net.IBaseObjectFactory`1.Create(AltV.Net.IServer,System.IntPtr)
+    name: Create
+    nameWithType: IBaseObjectFactory<IColShape>.Create
+    fullName: AltV.Net.IBaseObjectFactory<AltV.Net.Elements.Entities.IColShape>.Create
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IServer
+    name: IServer
+    nameWithType: IServer
+    fullName: AltV.Net.IServer
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IntPtr
+    name: IntPtr
+    nameWithType: IntPtr
+    fullName: System.IntPtr
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.IBaseObjectFactory`1.Create(AltV.Net.IServer,System.IntPtr)
+    name: Create
+    nameWithType: IBaseObjectFactory(Of IColShape).Create
+    fullName: AltV.Net.IBaseObjectFactory(Of AltV.Net.Elements.Entities.IColShape).Create
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IServer
+    name: IServer
+    nameWithType: IServer
+    fullName: AltV.Net.IServer
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IntPtr
+    name: IntPtr
+    nameWithType: IntPtr
+    fullName: System.IntPtr
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.IServer
+  commentId: T:AltV.Net.IServer
+  parent: AltV.Net
+  isExternal: true
+  name: IServer
+  nameWithType: IServer
+  fullName: AltV.Net.IServer
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  name: IntPtr
+  nameWithType: IntPtr
+  fullName: System.IntPtr
+- uid: AltV.Net.Elements.Entities.IColShape
+  commentId: T:AltV.Net.Elements.Entities.IColShape
+  parent: AltV.Net.Elements.Entities
+  isExternal: true
+  name: IColShape
+  nameWithType: IColShape
+  fullName: AltV.Net.Elements.Entities.IColShape
+- uid: AltV.Net.IBaseObjectFactory`1.Create(AltV.Net.IServer,System.IntPtr)
+  commentId: M:AltV.Net.IBaseObjectFactory`1.Create(AltV.Net.IServer,System.IntPtr)
+  isExternal: true
+  name: Create(IServer, IntPtr)
+  nameWithType: IBaseObjectFactory<TBaseObject>.Create(IServer, IntPtr)
+  fullName: AltV.Net.IBaseObjectFactory<TBaseObject>.Create(AltV.Net.IServer, System.IntPtr)
+  nameWithType.vb: IBaseObjectFactory(Of TBaseObject).Create(IServer, IntPtr)
+  fullName.vb: AltV.Net.IBaseObjectFactory(Of TBaseObject).Create(AltV.Net.IServer, System.IntPtr)
+  spec.csharp:
+  - uid: AltV.Net.IBaseObjectFactory`1.Create(AltV.Net.IServer,System.IntPtr)
+    name: Create
+    nameWithType: IBaseObjectFactory<TBaseObject>.Create
+    fullName: AltV.Net.IBaseObjectFactory<TBaseObject>.Create
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IServer
+    name: IServer
+    nameWithType: IServer
+    fullName: AltV.Net.IServer
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IntPtr
+    name: IntPtr
+    nameWithType: IntPtr
+    fullName: System.IntPtr
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.IBaseObjectFactory`1.Create(AltV.Net.IServer,System.IntPtr)
+    name: Create
+    nameWithType: IBaseObjectFactory(Of TBaseObject).Create
+    fullName: AltV.Net.IBaseObjectFactory(Of TBaseObject).Create
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IServer
+    name: IServer
+    nameWithType: IServer
+    fullName: AltV.Net.IServer
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IntPtr
+    name: IntPtr
+    nameWithType: IntPtr
+    fullName: System.IntPtr
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Elements.Entities
+  commentId: N:AltV.Net.Elements.Entities
+  isExternal: true
+  name: AltV.Net.Elements.Entities
+  nameWithType: AltV.Net.Elements.Entities
+  fullName: AltV.Net.Elements.Entities

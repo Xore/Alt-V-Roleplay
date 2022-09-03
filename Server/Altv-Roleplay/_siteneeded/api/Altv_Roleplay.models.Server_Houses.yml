@@ -1,0 +1,1119 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.models.Server_Houses
+  commentId: T:Altv_Roleplay.models.Server_Houses
+  id: Server_Houses
+  parent: Altv_Roleplay.models
+  children:
+  - Altv_Roleplay.models.Server_Houses.entranceShape
+  - Altv_Roleplay.models.Server_Houses.entranceX
+  - Altv_Roleplay.models.Server_Houses.entranceY
+  - Altv_Roleplay.models.Server_Houses.entranceZ
+  - Altv_Roleplay.models.Server_Houses.hasAlarm
+  - Altv_Roleplay.models.Server_Houses.hasBank
+  - Altv_Roleplay.models.Server_Houses.hasStorage
+  - Altv_Roleplay.models.Server_Houses.id
+  - Altv_Roleplay.models.Server_Houses.interiorId
+  - Altv_Roleplay.models.Server_Houses.isLocked
+  - Altv_Roleplay.models.Server_Houses.isRentable
+  - Altv_Roleplay.models.Server_Houses.maxRenters
+  - Altv_Roleplay.models.Server_Houses.money
+  - Altv_Roleplay.models.Server_Houses.ownerId
+  - Altv_Roleplay.models.Server_Houses.price
+  - Altv_Roleplay.models.Server_Houses.rentPrice
+  - Altv_Roleplay.models.Server_Houses.street
+  langs:
+  - csharp
+  - vb
+  name: Server_Houses
+  nameWithType: Server_Houses
+  fullName: Altv_Roleplay.models.Server_Houses
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Houses.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Server_Houses
+    path: models/Server_Houses.cs
+    startLine: 6
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public class Server_Houses
+    content.vb: Public Class Server_Houses
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.models.Server_Houses.id
+  commentId: P:Altv_Roleplay.models.Server_Houses.id
+  id: id
+  parent: Altv_Roleplay.models.Server_Houses
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: Server_Houses.id
+  fullName: Altv_Roleplay.models.Server_Houses.id
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Houses.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: id
+    path: models/Server_Houses.cs
+    startLine: 8
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property id As Integer
+  overload: Altv_Roleplay.models.Server_Houses.id*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Houses.interiorId
+  commentId: P:Altv_Roleplay.models.Server_Houses.interiorId
+  id: interiorId
+  parent: Altv_Roleplay.models.Server_Houses
+  langs:
+  - csharp
+  - vb
+  name: interiorId
+  nameWithType: Server_Houses.interiorId
+  fullName: Altv_Roleplay.models.Server_Houses.interiorId
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Houses.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: interiorId
+    path: models/Server_Houses.cs
+    startLine: 12
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int interiorId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property interiorId As Integer
+  overload: Altv_Roleplay.models.Server_Houses.interiorId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Houses.ownerId
+  commentId: P:Altv_Roleplay.models.Server_Houses.ownerId
+  id: ownerId
+  parent: Altv_Roleplay.models.Server_Houses
+  langs:
+  - csharp
+  - vb
+  name: ownerId
+  nameWithType: Server_Houses.ownerId
+  fullName: Altv_Roleplay.models.Server_Houses.ownerId
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Houses.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: ownerId
+    path: models/Server_Houses.cs
+    startLine: 13
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int ownerId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ownerId As Integer
+  overload: Altv_Roleplay.models.Server_Houses.ownerId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Houses.street
+  commentId: P:Altv_Roleplay.models.Server_Houses.street
+  id: street
+  parent: Altv_Roleplay.models.Server_Houses
+  langs:
+  - csharp
+  - vb
+  name: street
+  nameWithType: Server_Houses.street
+  fullName: Altv_Roleplay.models.Server_Houses.street
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Houses.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: street
+    path: models/Server_Houses.cs
+    startLine: 14
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string street { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property street As String
+  overload: Altv_Roleplay.models.Server_Houses.street*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Houses.price
+  commentId: P:Altv_Roleplay.models.Server_Houses.price
+  id: price
+  parent: Altv_Roleplay.models.Server_Houses
+  langs:
+  - csharp
+  - vb
+  name: price
+  nameWithType: Server_Houses.price
+  fullName: Altv_Roleplay.models.Server_Houses.price
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Houses.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: price
+    path: models/Server_Houses.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int price { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property price As Integer
+  overload: Altv_Roleplay.models.Server_Houses.price*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Houses.maxRenters
+  commentId: P:Altv_Roleplay.models.Server_Houses.maxRenters
+  id: maxRenters
+  parent: Altv_Roleplay.models.Server_Houses
+  langs:
+  - csharp
+  - vb
+  name: maxRenters
+  nameWithType: Server_Houses.maxRenters
+  fullName: Altv_Roleplay.models.Server_Houses.maxRenters
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Houses.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: maxRenters
+    path: models/Server_Houses.cs
+    startLine: 16
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int maxRenters { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property maxRenters As Integer
+  overload: Altv_Roleplay.models.Server_Houses.maxRenters*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Houses.rentPrice
+  commentId: P:Altv_Roleplay.models.Server_Houses.rentPrice
+  id: rentPrice
+  parent: Altv_Roleplay.models.Server_Houses
+  langs:
+  - csharp
+  - vb
+  name: rentPrice
+  nameWithType: Server_Houses.rentPrice
+  fullName: Altv_Roleplay.models.Server_Houses.rentPrice
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Houses.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: rentPrice
+    path: models/Server_Houses.cs
+    startLine: 17
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int rentPrice { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property rentPrice As Integer
+  overload: Altv_Roleplay.models.Server_Houses.rentPrice*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Houses.isRentable
+  commentId: P:Altv_Roleplay.models.Server_Houses.isRentable
+  id: isRentable
+  parent: Altv_Roleplay.models.Server_Houses
+  langs:
+  - csharp
+  - vb
+  name: isRentable
+  nameWithType: Server_Houses.isRentable
+  fullName: Altv_Roleplay.models.Server_Houses.isRentable
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Houses.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: isRentable
+    path: models/Server_Houses.cs
+    startLine: 18
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public bool isRentable { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property isRentable As Boolean
+  overload: Altv_Roleplay.models.Server_Houses.isRentable*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Houses.hasStorage
+  commentId: P:Altv_Roleplay.models.Server_Houses.hasStorage
+  id: hasStorage
+  parent: Altv_Roleplay.models.Server_Houses
+  langs:
+  - csharp
+  - vb
+  name: hasStorage
+  nameWithType: Server_Houses.hasStorage
+  fullName: Altv_Roleplay.models.Server_Houses.hasStorage
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Houses.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: hasStorage
+    path: models/Server_Houses.cs
+    startLine: 19
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public bool hasStorage { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property hasStorage As Boolean
+  overload: Altv_Roleplay.models.Server_Houses.hasStorage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Houses.hasAlarm
+  commentId: P:Altv_Roleplay.models.Server_Houses.hasAlarm
+  id: hasAlarm
+  parent: Altv_Roleplay.models.Server_Houses
+  langs:
+  - csharp
+  - vb
+  name: hasAlarm
+  nameWithType: Server_Houses.hasAlarm
+  fullName: Altv_Roleplay.models.Server_Houses.hasAlarm
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Houses.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: hasAlarm
+    path: models/Server_Houses.cs
+    startLine: 20
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public bool hasAlarm { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property hasAlarm As Boolean
+  overload: Altv_Roleplay.models.Server_Houses.hasAlarm*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Houses.hasBank
+  commentId: P:Altv_Roleplay.models.Server_Houses.hasBank
+  id: hasBank
+  parent: Altv_Roleplay.models.Server_Houses
+  langs:
+  - csharp
+  - vb
+  name: hasBank
+  nameWithType: Server_Houses.hasBank
+  fullName: Altv_Roleplay.models.Server_Houses.hasBank
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Houses.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: hasBank
+    path: models/Server_Houses.cs
+    startLine: 21
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public bool hasBank { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property hasBank As Boolean
+  overload: Altv_Roleplay.models.Server_Houses.hasBank*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Houses.entranceX
+  commentId: P:Altv_Roleplay.models.Server_Houses.entranceX
+  id: entranceX
+  parent: Altv_Roleplay.models.Server_Houses
+  langs:
+  - csharp
+  - vb
+  name: entranceX
+  nameWithType: Server_Houses.entranceX
+  fullName: Altv_Roleplay.models.Server_Houses.entranceX
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Houses.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: entranceX
+    path: models/Server_Houses.cs
+    startLine: 22
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float entranceX { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property entranceX As Single
+  overload: Altv_Roleplay.models.Server_Houses.entranceX*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Houses.entranceY
+  commentId: P:Altv_Roleplay.models.Server_Houses.entranceY
+  id: entranceY
+  parent: Altv_Roleplay.models.Server_Houses
+  langs:
+  - csharp
+  - vb
+  name: entranceY
+  nameWithType: Server_Houses.entranceY
+  fullName: Altv_Roleplay.models.Server_Houses.entranceY
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Houses.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: entranceY
+    path: models/Server_Houses.cs
+    startLine: 23
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float entranceY { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property entranceY As Single
+  overload: Altv_Roleplay.models.Server_Houses.entranceY*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Houses.entranceZ
+  commentId: P:Altv_Roleplay.models.Server_Houses.entranceZ
+  id: entranceZ
+  parent: Altv_Roleplay.models.Server_Houses
+  langs:
+  - csharp
+  - vb
+  name: entranceZ
+  nameWithType: Server_Houses.entranceZ
+  fullName: Altv_Roleplay.models.Server_Houses.entranceZ
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Houses.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: entranceZ
+    path: models/Server_Houses.cs
+    startLine: 24
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float entranceZ { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property entranceZ As Single
+  overload: Altv_Roleplay.models.Server_Houses.entranceZ*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Houses.money
+  commentId: P:Altv_Roleplay.models.Server_Houses.money
+  id: money
+  parent: Altv_Roleplay.models.Server_Houses
+  langs:
+  - csharp
+  - vb
+  name: money
+  nameWithType: Server_Houses.money
+  fullName: Altv_Roleplay.models.Server_Houses.money
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Houses.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: money
+    path: models/Server_Houses.cs
+    startLine: 25
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int money { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property money As Integer
+  overload: Altv_Roleplay.models.Server_Houses.money*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Houses.isLocked
+  commentId: P:Altv_Roleplay.models.Server_Houses.isLocked
+  id: isLocked
+  parent: Altv_Roleplay.models.Server_Houses
+  langs:
+  - csharp
+  - vb
+  name: isLocked
+  nameWithType: Server_Houses.isLocked
+  fullName: Altv_Roleplay.models.Server_Houses.isLocked
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Houses.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: isLocked
+    path: models/Server_Houses.cs
+    startLine: 27
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [NotMapped]
+
+      public bool isLocked { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <NotMapped>
+
+      Public Property isLocked As Boolean
+  overload: Altv_Roleplay.models.Server_Houses.isLocked*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Houses.entranceShape
+  commentId: P:Altv_Roleplay.models.Server_Houses.entranceShape
+  id: entranceShape
+  parent: Altv_Roleplay.models.Server_Houses
+  langs:
+  - csharp
+  - vb
+  name: entranceShape
+  nameWithType: Server_Houses.entranceShape
+  fullName: Altv_Roleplay.models.Server_Houses.entranceShape
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Houses.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: entranceShape
+    path: models/Server_Houses.cs
+    startLine: 30
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [NotMapped]
+
+      public IColShape entranceShape { get; set; }
+    parameters: []
+    return:
+      type: AltV.Net.Elements.Entities.IColShape
+    content.vb: >-
+      <NotMapped>
+
+      Public Property entranceShape As IColShape
+  overload: Altv_Roleplay.models.Server_Houses.entranceShape*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.models
+  commentId: N:Altv_Roleplay.models
+  name: Altv_Roleplay.models
+  nameWithType: Altv_Roleplay.models
+  fullName: Altv_Roleplay.models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.models.Server_Houses.id*
+  commentId: Overload:Altv_Roleplay.models.Server_Houses.id
+  name: id
+  nameWithType: Server_Houses.id
+  fullName: Altv_Roleplay.models.Server_Houses.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.models.Server_Houses.interiorId*
+  commentId: Overload:Altv_Roleplay.models.Server_Houses.interiorId
+  name: interiorId
+  nameWithType: Server_Houses.interiorId
+  fullName: Altv_Roleplay.models.Server_Houses.interiorId
+- uid: Altv_Roleplay.models.Server_Houses.ownerId*
+  commentId: Overload:Altv_Roleplay.models.Server_Houses.ownerId
+  name: ownerId
+  nameWithType: Server_Houses.ownerId
+  fullName: Altv_Roleplay.models.Server_Houses.ownerId
+- uid: Altv_Roleplay.models.Server_Houses.street*
+  commentId: Overload:Altv_Roleplay.models.Server_Houses.street
+  name: street
+  nameWithType: Server_Houses.street
+  fullName: Altv_Roleplay.models.Server_Houses.street
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Altv_Roleplay.models.Server_Houses.price*
+  commentId: Overload:Altv_Roleplay.models.Server_Houses.price
+  name: price
+  nameWithType: Server_Houses.price
+  fullName: Altv_Roleplay.models.Server_Houses.price
+- uid: Altv_Roleplay.models.Server_Houses.maxRenters*
+  commentId: Overload:Altv_Roleplay.models.Server_Houses.maxRenters
+  name: maxRenters
+  nameWithType: Server_Houses.maxRenters
+  fullName: Altv_Roleplay.models.Server_Houses.maxRenters
+- uid: Altv_Roleplay.models.Server_Houses.rentPrice*
+  commentId: Overload:Altv_Roleplay.models.Server_Houses.rentPrice
+  name: rentPrice
+  nameWithType: Server_Houses.rentPrice
+  fullName: Altv_Roleplay.models.Server_Houses.rentPrice
+- uid: Altv_Roleplay.models.Server_Houses.isRentable*
+  commentId: Overload:Altv_Roleplay.models.Server_Houses.isRentable
+  name: isRentable
+  nameWithType: Server_Houses.isRentable
+  fullName: Altv_Roleplay.models.Server_Houses.isRentable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Altv_Roleplay.models.Server_Houses.hasStorage*
+  commentId: Overload:Altv_Roleplay.models.Server_Houses.hasStorage
+  name: hasStorage
+  nameWithType: Server_Houses.hasStorage
+  fullName: Altv_Roleplay.models.Server_Houses.hasStorage
+- uid: Altv_Roleplay.models.Server_Houses.hasAlarm*
+  commentId: Overload:Altv_Roleplay.models.Server_Houses.hasAlarm
+  name: hasAlarm
+  nameWithType: Server_Houses.hasAlarm
+  fullName: Altv_Roleplay.models.Server_Houses.hasAlarm
+- uid: Altv_Roleplay.models.Server_Houses.hasBank*
+  commentId: Overload:Altv_Roleplay.models.Server_Houses.hasBank
+  name: hasBank
+  nameWithType: Server_Houses.hasBank
+  fullName: Altv_Roleplay.models.Server_Houses.hasBank
+- uid: Altv_Roleplay.models.Server_Houses.entranceX*
+  commentId: Overload:Altv_Roleplay.models.Server_Houses.entranceX
+  name: entranceX
+  nameWithType: Server_Houses.entranceX
+  fullName: Altv_Roleplay.models.Server_Houses.entranceX
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Altv_Roleplay.models.Server_Houses.entranceY*
+  commentId: Overload:Altv_Roleplay.models.Server_Houses.entranceY
+  name: entranceY
+  nameWithType: Server_Houses.entranceY
+  fullName: Altv_Roleplay.models.Server_Houses.entranceY
+- uid: Altv_Roleplay.models.Server_Houses.entranceZ*
+  commentId: Overload:Altv_Roleplay.models.Server_Houses.entranceZ
+  name: entranceZ
+  nameWithType: Server_Houses.entranceZ
+  fullName: Altv_Roleplay.models.Server_Houses.entranceZ
+- uid: Altv_Roleplay.models.Server_Houses.money*
+  commentId: Overload:Altv_Roleplay.models.Server_Houses.money
+  name: money
+  nameWithType: Server_Houses.money
+  fullName: Altv_Roleplay.models.Server_Houses.money
+- uid: Altv_Roleplay.models.Server_Houses.isLocked*
+  commentId: Overload:Altv_Roleplay.models.Server_Houses.isLocked
+  name: isLocked
+  nameWithType: Server_Houses.isLocked
+  fullName: Altv_Roleplay.models.Server_Houses.isLocked
+- uid: Altv_Roleplay.models.Server_Houses.entranceShape*
+  commentId: Overload:Altv_Roleplay.models.Server_Houses.entranceShape
+  name: entranceShape
+  nameWithType: Server_Houses.entranceShape
+  fullName: Altv_Roleplay.models.Server_Houses.entranceShape
+- uid: AltV.Net.Elements.Entities.IColShape
+  commentId: T:AltV.Net.Elements.Entities.IColShape
+  parent: AltV.Net.Elements.Entities
+  isExternal: true
+  name: IColShape
+  nameWithType: IColShape
+  fullName: AltV.Net.Elements.Entities.IColShape
+- uid: AltV.Net.Elements.Entities
+  commentId: N:AltV.Net.Elements.Entities
+  isExternal: true
+  name: AltV.Net.Elements.Entities
+  nameWithType: AltV.Net.Elements.Entities
+  fullName: AltV.Net.Elements.Entities

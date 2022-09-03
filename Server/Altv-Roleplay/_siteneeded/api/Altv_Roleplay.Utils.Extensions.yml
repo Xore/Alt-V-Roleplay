@@ -1,0 +1,2230 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.Utils.Extensions
+  commentId: T:Altv_Roleplay.Utils.Extensions
+  id: Extensions
+  parent: Altv_Roleplay.Utils
+  children:
+  - Altv_Roleplay.Utils.Extensions.AdminLevel(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Utils.Extensions.GetCharacterMetaId(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName(AltV.Net.Elements.Entities.IColShape)
+  - Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice(AltV.Net.Elements.Entities.IColShape)
+  - Altv_Roleplay.Utils.Extensions.GetColShapeId(AltV.Net.Elements.Entities.IColShape)
+  - Altv_Roleplay.Utils.Extensions.GetColShapeName(AltV.Net.Elements.Entities.IColShape)
+  - Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijob(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobActionCount(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobRouteId(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobStep(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Utils.Extensions.GetPlayerFarmingActionMeta(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Utils.Extensions.getPositionInBackOfPosition(AltV.Net.Data.Position,System.Single,System.Single)
+  - Altv_Roleplay.Utils.Extensions.GetVehicleId(AltV.Net.Elements.Entities.IVehicle)
+  - Altv_Roleplay.Utils.Extensions.GetVehicleTrunkState(AltV.Net.Elements.Entities.IVehicle)
+  - Altv_Roleplay.Utils.Extensions.HasPlayerHandcuffs(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Utils.Extensions.HasPlayerRopeCuffs(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Utils.Extensions.HasVehicleId(AltV.Net.Elements.Entities.IVehicle)
+  - Altv_Roleplay.Utils.Extensions.IsCefOpen(Altv_Roleplay.Factories.ClassicPlayer)
+  - Altv_Roleplay.Utils.Extensions.IsInRange(AltV.Net.Data.Position,AltV.Net.Data.Position,System.Single)
+  - Altv_Roleplay.Utils.Extensions.IsPlayerFastFarm(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Utils.Extensions.IsPlayerUnconscious(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Utils.Extensions.IsPlayerUsingCrowbar(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Utils.Extensions.kickWithMessage(AltV.Net.Elements.Entities.IPlayer,System.String)
+  - Altv_Roleplay.Utils.Extensions.SetCharacterMetaId(AltV.Net.Elements.Entities.IPlayer,System.UInt64)
+  - Altv_Roleplay.Utils.Extensions.SetColShapeId(AltV.Net.Elements.Entities.IColShape,System.Int64)
+  - Altv_Roleplay.Utils.Extensions.SetColShapeName(AltV.Net.Elements.Entities.IColShape,System.String)
+  - Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijob(AltV.Net.Elements.Entities.IPlayer,System.String)
+  - Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobActionCount(AltV.Net.Elements.Entities.IPlayer,System.Int64)
+  - Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobRouteId(AltV.Net.Elements.Entities.IPlayer,System.Int64)
+  - Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobStep(AltV.Net.Elements.Entities.IPlayer,System.String)
+  - Altv_Roleplay.Utils.Extensions.SetPlayerFarmingActionMeta(AltV.Net.Elements.Entities.IPlayer,System.String)
+  - Altv_Roleplay.Utils.Extensions.SetPlayerIsCuffed(AltV.Net.Elements.Entities.IPlayer,System.String,System.Boolean)
+  - Altv_Roleplay.Utils.Extensions.SetPlayerIsFastFarm(AltV.Net.Elements.Entities.IPlayer,System.Boolean)
+  - Altv_Roleplay.Utils.Extensions.SetPlayerIsUnconscious(AltV.Net.Elements.Entities.IPlayer,System.Boolean)
+  - Altv_Roleplay.Utils.Extensions.SetPlayerUsingCrowbar(AltV.Net.Elements.Entities.IPlayer,System.Boolean)
+  - Altv_Roleplay.Utils.Extensions.SetVehicleId(AltV.Net.Elements.Entities.IVehicle,System.Int64)
+  - Altv_Roleplay.Utils.Extensions.SetVehicleTrunkState(AltV.Net.Elements.Entities.IVehicle,System.Boolean)
+  - Altv_Roleplay.Utils.Extensions.updateTattoos(Altv_Roleplay.Factories.ClassicPlayer)
+  langs:
+  - csharp
+  - vb
+  name: Extensions
+  nameWithType: Extensions
+  fullName: Altv_Roleplay.Utils.Extensions
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Extensions
+    path: Utils/Extensions.cs
+    startLine: 18
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static class Extensions
+    content.vb: Public Module Extensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Altv_Roleplay.Utils.Extensions.IsInRange(AltV.Net.Data.Position,AltV.Net.Data.Position,System.Single)
+  commentId: M:Altv_Roleplay.Utils.Extensions.IsInRange(AltV.Net.Data.Position,AltV.Net.Data.Position,System.Single)
+  id: IsInRange(AltV.Net.Data.Position,AltV.Net.Data.Position,System.Single)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: IsInRange(Position, Position, Single)
+  nameWithType: Extensions.IsInRange(Position, Position, Single)
+  fullName: Altv_Roleplay.Utils.Extensions.IsInRange(AltV.Net.Data.Position, AltV.Net.Data.Position, System.Single)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: IsInRange
+    path: Utils/Extensions.cs
+    startLine: 20
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static bool IsInRange(this Position currentPosition, Position otherPosition, float distance)
+    parameters:
+    - id: currentPosition
+      type: AltV.Net.Data.Position
+    - id: otherPosition
+      type: AltV.Net.Data.Position
+    - id: distance
+      type: System.Single
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function IsInRange(currentPosition As Position, otherPosition As Position, distance As Single) As Boolean
+  overload: Altv_Roleplay.Utils.Extensions.IsInRange*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.kickWithMessage(AltV.Net.Elements.Entities.IPlayer,System.String)
+  commentId: M:Altv_Roleplay.Utils.Extensions.kickWithMessage(AltV.Net.Elements.Entities.IPlayer,System.String)
+  id: kickWithMessage(AltV.Net.Elements.Entities.IPlayer,System.String)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: kickWithMessage(IPlayer, String)
+  nameWithType: Extensions.kickWithMessage(IPlayer, String)
+  fullName: Altv_Roleplay.Utils.Extensions.kickWithMessage(AltV.Net.Elements.Entities.IPlayer, System.String)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: kickWithMessage
+    path: Utils/Extensions.cs
+    startLine: 23
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static void kickWithMessage(this IPlayer player, string reason)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: reason
+      type: System.String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub kickWithMessage(player As IPlayer, reason As String)
+  overload: Altv_Roleplay.Utils.Extensions.kickWithMessage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.IsCefOpen(Altv_Roleplay.Factories.ClassicPlayer)
+  commentId: M:Altv_Roleplay.Utils.Extensions.IsCefOpen(Altv_Roleplay.Factories.ClassicPlayer)
+  id: IsCefOpen(Altv_Roleplay.Factories.ClassicPlayer)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: IsCefOpen(ClassicPlayer)
+  nameWithType: Extensions.IsCefOpen(ClassicPlayer)
+  fullName: Altv_Roleplay.Utils.Extensions.IsCefOpen(Altv_Roleplay.Factories.ClassicPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: IsCefOpen
+    path: Utils/Extensions.cs
+    startLine: 28
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static bool IsCefOpen(this ClassicPlayer player)
+    parameters:
+    - id: player
+      type: Altv_Roleplay.Factories.ClassicPlayer
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function IsCefOpen(player As ClassicPlayer) As Boolean
+  overload: Altv_Roleplay.Utils.Extensions.IsCefOpen*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.updateTattoos(Altv_Roleplay.Factories.ClassicPlayer)
+  commentId: M:Altv_Roleplay.Utils.Extensions.updateTattoos(Altv_Roleplay.Factories.ClassicPlayer)
+  id: updateTattoos(Altv_Roleplay.Factories.ClassicPlayer)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: updateTattoos(ClassicPlayer)
+  nameWithType: Extensions.updateTattoos(ClassicPlayer)
+  fullName: Altv_Roleplay.Utils.Extensions.updateTattoos(Altv_Roleplay.Factories.ClassicPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: updateTattoos
+    path: Utils/Extensions.cs
+    startLine: 35
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static void updateTattoos(this ClassicPlayer player)
+    parameters:
+    - id: player
+      type: Altv_Roleplay.Factories.ClassicPlayer
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub updateTattoos(player As ClassicPlayer)
+  overload: Altv_Roleplay.Utils.Extensions.updateTattoos*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.HasVehicleId(AltV.Net.Elements.Entities.IVehicle)
+  commentId: M:Altv_Roleplay.Utils.Extensions.HasVehicleId(AltV.Net.Elements.Entities.IVehicle)
+  id: HasVehicleId(AltV.Net.Elements.Entities.IVehicle)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: HasVehicleId(IVehicle)
+  nameWithType: Extensions.HasVehicleId(IVehicle)
+  fullName: Altv_Roleplay.Utils.Extensions.HasVehicleId(AltV.Net.Elements.Entities.IVehicle)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: HasVehicleId
+    path: Utils/Extensions.cs
+    startLine: 41
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static bool HasVehicleId(this IVehicle vehicle)
+    parameters:
+    - id: vehicle
+      type: AltV.Net.Elements.Entities.IVehicle
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function HasVehicleId(vehicle As IVehicle) As Boolean
+  overload: Altv_Roleplay.Utils.Extensions.HasVehicleId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.SetVehicleId(AltV.Net.Elements.Entities.IVehicle,System.Int64)
+  commentId: M:Altv_Roleplay.Utils.Extensions.SetVehicleId(AltV.Net.Elements.Entities.IVehicle,System.Int64)
+  id: SetVehicleId(AltV.Net.Elements.Entities.IVehicle,System.Int64)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: SetVehicleId(IVehicle, Int64)
+  nameWithType: Extensions.SetVehicleId(IVehicle, Int64)
+  fullName: Altv_Roleplay.Utils.Extensions.SetVehicleId(AltV.Net.Elements.Entities.IVehicle, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SetVehicleId
+    path: Utils/Extensions.cs
+    startLine: 48
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static void SetVehicleId(this IVehicle vehicle, long vehicleId)
+    parameters:
+    - id: vehicle
+      type: AltV.Net.Elements.Entities.IVehicle
+    - id: vehicleId
+      type: System.Int64
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetVehicleId(vehicle As IVehicle, vehicleId As Long)
+  overload: Altv_Roleplay.Utils.Extensions.SetVehicleId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.SetVehicleTrunkState(AltV.Net.Elements.Entities.IVehicle,System.Boolean)
+  commentId: M:Altv_Roleplay.Utils.Extensions.SetVehicleTrunkState(AltV.Net.Elements.Entities.IVehicle,System.Boolean)
+  id: SetVehicleTrunkState(AltV.Net.Elements.Entities.IVehicle,System.Boolean)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: SetVehicleTrunkState(IVehicle, Boolean)
+  nameWithType: Extensions.SetVehicleTrunkState(IVehicle, Boolean)
+  fullName: Altv_Roleplay.Utils.Extensions.SetVehicleTrunkState(AltV.Net.Elements.Entities.IVehicle, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SetVehicleTrunkState
+    path: Utils/Extensions.cs
+    startLine: 55
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static void SetVehicleTrunkState(this IVehicle vehicle, bool isOpen)
+    parameters:
+    - id: vehicle
+      type: AltV.Net.Elements.Entities.IVehicle
+    - id: isOpen
+      type: System.Boolean
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetVehicleTrunkState(vehicle As IVehicle, isOpen As Boolean)
+  overload: Altv_Roleplay.Utils.Extensions.SetVehicleTrunkState*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.GetVehicleTrunkState(AltV.Net.Elements.Entities.IVehicle)
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetVehicleTrunkState(AltV.Net.Elements.Entities.IVehicle)
+  id: GetVehicleTrunkState(AltV.Net.Elements.Entities.IVehicle)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: GetVehicleTrunkState(IVehicle)
+  nameWithType: Extensions.GetVehicleTrunkState(IVehicle)
+  fullName: Altv_Roleplay.Utils.Extensions.GetVehicleTrunkState(AltV.Net.Elements.Entities.IVehicle)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetVehicleTrunkState
+    path: Utils/Extensions.cs
+    startLine: 62
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static bool GetVehicleTrunkState(this IVehicle vehicle)
+    parameters:
+    - id: vehicle
+      type: AltV.Net.Elements.Entities.IVehicle
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetVehicleTrunkState(vehicle As IVehicle) As Boolean
+  overload: Altv_Roleplay.Utils.Extensions.GetVehicleTrunkState*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.GetVehicleId(AltV.Net.Elements.Entities.IVehicle)
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetVehicleId(AltV.Net.Elements.Entities.IVehicle)
+  id: GetVehicleId(AltV.Net.Elements.Entities.IVehicle)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: GetVehicleId(IVehicle)
+  nameWithType: Extensions.GetVehicleId(IVehicle)
+  fullName: Altv_Roleplay.Utils.Extensions.GetVehicleId(AltV.Net.Elements.Entities.IVehicle)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetVehicleId
+    path: Utils/Extensions.cs
+    startLine: 69
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static long GetVehicleId(this IVehicle vehicle)
+    parameters:
+    - id: vehicle
+      type: AltV.Net.Elements.Entities.IVehicle
+    return:
+      type: System.Int64
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetVehicleId(vehicle As IVehicle) As Long
+  overload: Altv_Roleplay.Utils.Extensions.GetVehicleId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.GetCharacterMetaId(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetCharacterMetaId(AltV.Net.Elements.Entities.IPlayer)
+  id: GetCharacterMetaId(AltV.Net.Elements.Entities.IPlayer)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: GetCharacterMetaId(IPlayer)
+  nameWithType: Extensions.GetCharacterMetaId(IPlayer)
+  fullName: Altv_Roleplay.Utils.Extensions.GetCharacterMetaId(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetCharacterMetaId
+    path: Utils/Extensions.cs
+    startLine: 76
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static ulong GetCharacterMetaId(this IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetCharacterMetaId(player As IPlayer) As ULong
+  overload: Altv_Roleplay.Utils.Extensions.GetCharacterMetaId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.SetCharacterMetaId(AltV.Net.Elements.Entities.IPlayer,System.UInt64)
+  commentId: M:Altv_Roleplay.Utils.Extensions.SetCharacterMetaId(AltV.Net.Elements.Entities.IPlayer,System.UInt64)
+  id: SetCharacterMetaId(AltV.Net.Elements.Entities.IPlayer,System.UInt64)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: SetCharacterMetaId(IPlayer, UInt64)
+  nameWithType: Extensions.SetCharacterMetaId(IPlayer, UInt64)
+  fullName: Altv_Roleplay.Utils.Extensions.SetCharacterMetaId(AltV.Net.Elements.Entities.IPlayer, System.UInt64)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SetCharacterMetaId
+    path: Utils/Extensions.cs
+    startLine: 83
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static void SetCharacterMetaId(this IPlayer player, ulong id)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: id
+      type: System.UInt64
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetCharacterMetaId(player As IPlayer, id As ULong)
+  overload: Altv_Roleplay.Utils.Extensions.SetCharacterMetaId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.SetColShapeName(AltV.Net.Elements.Entities.IColShape,System.String)
+  commentId: M:Altv_Roleplay.Utils.Extensions.SetColShapeName(AltV.Net.Elements.Entities.IColShape,System.String)
+  id: SetColShapeName(AltV.Net.Elements.Entities.IColShape,System.String)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: SetColShapeName(IColShape, String)
+  nameWithType: Extensions.SetColShapeName(IColShape, String)
+  fullName: Altv_Roleplay.Utils.Extensions.SetColShapeName(AltV.Net.Elements.Entities.IColShape, System.String)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SetColShapeName
+    path: Utils/Extensions.cs
+    startLine: 90
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static void SetColShapeName(this IColShape cols, string name)
+    parameters:
+    - id: cols
+      type: AltV.Net.Elements.Entities.IColShape
+    - id: name
+      type: System.String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetColShapeName(cols As IColShape, name As String)
+  overload: Altv_Roleplay.Utils.Extensions.SetColShapeName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice(AltV.Net.Elements.Entities.IColShape)
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice(AltV.Net.Elements.Entities.IColShape)
+  id: GetColshapeCarDealerVehPrice(AltV.Net.Elements.Entities.IColShape)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: GetColshapeCarDealerVehPrice(IColShape)
+  nameWithType: Extensions.GetColshapeCarDealerVehPrice(IColShape)
+  fullName: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice(AltV.Net.Elements.Entities.IColShape)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetColshapeCarDealerVehPrice
+    path: Utils/Extensions.cs
+    startLine: 97
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static long GetColshapeCarDealerVehPrice(this IColShape cols)
+    parameters:
+    - id: cols
+      type: AltV.Net.Elements.Entities.IColShape
+    return:
+      type: System.Int64
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetColshapeCarDealerVehPrice(cols As IColShape) As Long
+  overload: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName(AltV.Net.Elements.Entities.IColShape)
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName(AltV.Net.Elements.Entities.IColShape)
+  id: GetColshapeCarDealerVehName(AltV.Net.Elements.Entities.IColShape)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: GetColshapeCarDealerVehName(IColShape)
+  nameWithType: Extensions.GetColshapeCarDealerVehName(IColShape)
+  fullName: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName(AltV.Net.Elements.Entities.IColShape)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetColshapeCarDealerVehName
+    path: Utils/Extensions.cs
+    startLine: 104
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static string GetColshapeCarDealerVehName(this IColShape cols)
+    parameters:
+    - id: cols
+      type: AltV.Net.Elements.Entities.IColShape
+    return:
+      type: System.String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetColshapeCarDealerVehName(cols As IColShape) As String
+  overload: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.GetColShapeName(AltV.Net.Elements.Entities.IColShape)
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetColShapeName(AltV.Net.Elements.Entities.IColShape)
+  id: GetColShapeName(AltV.Net.Elements.Entities.IColShape)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: GetColShapeName(IColShape)
+  nameWithType: Extensions.GetColShapeName(IColShape)
+  fullName: Altv_Roleplay.Utils.Extensions.GetColShapeName(AltV.Net.Elements.Entities.IColShape)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetColShapeName
+    path: Utils/Extensions.cs
+    startLine: 111
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static string GetColShapeName(this IColShape cols)
+    parameters:
+    - id: cols
+      type: AltV.Net.Elements.Entities.IColShape
+    return:
+      type: System.String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetColShapeName(cols As IColShape) As String
+  overload: Altv_Roleplay.Utils.Extensions.GetColShapeName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.SetColShapeId(AltV.Net.Elements.Entities.IColShape,System.Int64)
+  commentId: M:Altv_Roleplay.Utils.Extensions.SetColShapeId(AltV.Net.Elements.Entities.IColShape,System.Int64)
+  id: SetColShapeId(AltV.Net.Elements.Entities.IColShape,System.Int64)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: SetColShapeId(IColShape, Int64)
+  nameWithType: Extensions.SetColShapeId(IColShape, Int64)
+  fullName: Altv_Roleplay.Utils.Extensions.SetColShapeId(AltV.Net.Elements.Entities.IColShape, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SetColShapeId
+    path: Utils/Extensions.cs
+    startLine: 118
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static void SetColShapeId(this IColShape cols, long id)
+    parameters:
+    - id: cols
+      type: AltV.Net.Elements.Entities.IColShape
+    - id: id
+      type: System.Int64
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetColShapeId(cols As IColShape, id As Long)
+  overload: Altv_Roleplay.Utils.Extensions.SetColShapeId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.GetColShapeId(AltV.Net.Elements.Entities.IColShape)
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetColShapeId(AltV.Net.Elements.Entities.IColShape)
+  id: GetColShapeId(AltV.Net.Elements.Entities.IColShape)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: GetColShapeId(IColShape)
+  nameWithType: Extensions.GetColShapeId(IColShape)
+  fullName: Altv_Roleplay.Utils.Extensions.GetColShapeId(AltV.Net.Elements.Entities.IColShape)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetColShapeId
+    path: Utils/Extensions.cs
+    startLine: 125
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static long GetColShapeId(this IColShape cols)
+    parameters:
+    - id: cols
+      type: AltV.Net.Elements.Entities.IColShape
+    return:
+      type: System.Int64
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetColShapeId(cols As IColShape) As Long
+  overload: Altv_Roleplay.Utils.Extensions.GetColShapeId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.GetPlayerFarmingActionMeta(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetPlayerFarmingActionMeta(AltV.Net.Elements.Entities.IPlayer)
+  id: GetPlayerFarmingActionMeta(AltV.Net.Elements.Entities.IPlayer)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: GetPlayerFarmingActionMeta(IPlayer)
+  nameWithType: Extensions.GetPlayerFarmingActionMeta(IPlayer)
+  fullName: Altv_Roleplay.Utils.Extensions.GetPlayerFarmingActionMeta(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetPlayerFarmingActionMeta
+    path: Utils/Extensions.cs
+    startLine: 132
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static string GetPlayerFarmingActionMeta(this IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    return:
+      type: System.String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetPlayerFarmingActionMeta(player As IPlayer) As String
+  overload: Altv_Roleplay.Utils.Extensions.GetPlayerFarmingActionMeta*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.SetPlayerFarmingActionMeta(AltV.Net.Elements.Entities.IPlayer,System.String)
+  commentId: M:Altv_Roleplay.Utils.Extensions.SetPlayerFarmingActionMeta(AltV.Net.Elements.Entities.IPlayer,System.String)
+  id: SetPlayerFarmingActionMeta(AltV.Net.Elements.Entities.IPlayer,System.String)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: SetPlayerFarmingActionMeta(IPlayer, String)
+  nameWithType: Extensions.SetPlayerFarmingActionMeta(IPlayer, String)
+  fullName: Altv_Roleplay.Utils.Extensions.SetPlayerFarmingActionMeta(AltV.Net.Elements.Entities.IPlayer, System.String)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SetPlayerFarmingActionMeta
+    path: Utils/Extensions.cs
+    startLine: 139
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static void SetPlayerFarmingActionMeta(this IPlayer player, string meta)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: meta
+      type: System.String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetPlayerFarmingActionMeta(player As IPlayer, meta As String)
+  overload: Altv_Roleplay.Utils.Extensions.SetPlayerFarmingActionMeta*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.SetPlayerIsCuffed(AltV.Net.Elements.Entities.IPlayer,System.String,System.Boolean)
+  commentId: M:Altv_Roleplay.Utils.Extensions.SetPlayerIsCuffed(AltV.Net.Elements.Entities.IPlayer,System.String,System.Boolean)
+  id: SetPlayerIsCuffed(AltV.Net.Elements.Entities.IPlayer,System.String,System.Boolean)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: SetPlayerIsCuffed(IPlayer, String, Boolean)
+  nameWithType: Extensions.SetPlayerIsCuffed(IPlayer, String, Boolean)
+  fullName: Altv_Roleplay.Utils.Extensions.SetPlayerIsCuffed(AltV.Net.Elements.Entities.IPlayer, System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SetPlayerIsCuffed
+    path: Utils/Extensions.cs
+    startLine: 146
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static void SetPlayerIsCuffed(this IPlayer player, string cuffType, bool isCuffed)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: cuffType
+      type: System.String
+    - id: isCuffed
+      type: System.Boolean
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetPlayerIsCuffed(player As IPlayer, cuffType As String, isCuffed As Boolean)
+  overload: Altv_Roleplay.Utils.Extensions.SetPlayerIsCuffed*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.SetPlayerUsingCrowbar(AltV.Net.Elements.Entities.IPlayer,System.Boolean)
+  commentId: M:Altv_Roleplay.Utils.Extensions.SetPlayerUsingCrowbar(AltV.Net.Elements.Entities.IPlayer,System.Boolean)
+  id: SetPlayerUsingCrowbar(AltV.Net.Elements.Entities.IPlayer,System.Boolean)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: SetPlayerUsingCrowbar(IPlayer, Boolean)
+  nameWithType: Extensions.SetPlayerUsingCrowbar(IPlayer, Boolean)
+  fullName: Altv_Roleplay.Utils.Extensions.SetPlayerUsingCrowbar(AltV.Net.Elements.Entities.IPlayer, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SetPlayerUsingCrowbar
+    path: Utils/Extensions.cs
+    startLine: 159
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static void SetPlayerUsingCrowbar(this IPlayer player, bool isUsing)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: isUsing
+      type: System.Boolean
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetPlayerUsingCrowbar(player As IPlayer, isUsing As Boolean)
+  overload: Altv_Roleplay.Utils.Extensions.SetPlayerUsingCrowbar*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.SetPlayerIsUnconscious(AltV.Net.Elements.Entities.IPlayer,System.Boolean)
+  commentId: M:Altv_Roleplay.Utils.Extensions.SetPlayerIsUnconscious(AltV.Net.Elements.Entities.IPlayer,System.Boolean)
+  id: SetPlayerIsUnconscious(AltV.Net.Elements.Entities.IPlayer,System.Boolean)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: SetPlayerIsUnconscious(IPlayer, Boolean)
+  nameWithType: Extensions.SetPlayerIsUnconscious(IPlayer, Boolean)
+  fullName: Altv_Roleplay.Utils.Extensions.SetPlayerIsUnconscious(AltV.Net.Elements.Entities.IPlayer, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SetPlayerIsUnconscious
+    path: Utils/Extensions.cs
+    startLine: 166
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static void SetPlayerIsUnconscious(this IPlayer player, bool isUnconscious)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: isUnconscious
+      type: System.Boolean
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetPlayerIsUnconscious(player As IPlayer, isUnconscious As Boolean)
+  overload: Altv_Roleplay.Utils.Extensions.SetPlayerIsUnconscious*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.IsPlayerUnconscious(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Utils.Extensions.IsPlayerUnconscious(AltV.Net.Elements.Entities.IPlayer)
+  id: IsPlayerUnconscious(AltV.Net.Elements.Entities.IPlayer)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: IsPlayerUnconscious(IPlayer)
+  nameWithType: Extensions.IsPlayerUnconscious(IPlayer)
+  fullName: Altv_Roleplay.Utils.Extensions.IsPlayerUnconscious(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: IsPlayerUnconscious
+    path: Utils/Extensions.cs
+    startLine: 173
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static bool IsPlayerUnconscious(this IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function IsPlayerUnconscious(player As IPlayer) As Boolean
+  overload: Altv_Roleplay.Utils.Extensions.IsPlayerUnconscious*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.SetPlayerIsFastFarm(AltV.Net.Elements.Entities.IPlayer,System.Boolean)
+  commentId: M:Altv_Roleplay.Utils.Extensions.SetPlayerIsFastFarm(AltV.Net.Elements.Entities.IPlayer,System.Boolean)
+  id: SetPlayerIsFastFarm(AltV.Net.Elements.Entities.IPlayer,System.Boolean)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: SetPlayerIsFastFarm(IPlayer, Boolean)
+  nameWithType: Extensions.SetPlayerIsFastFarm(IPlayer, Boolean)
+  fullName: Altv_Roleplay.Utils.Extensions.SetPlayerIsFastFarm(AltV.Net.Elements.Entities.IPlayer, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SetPlayerIsFastFarm
+    path: Utils/Extensions.cs
+    startLine: 180
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static void SetPlayerIsFastFarm(this IPlayer player, bool isFastFarm)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: isFastFarm
+      type: System.Boolean
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetPlayerIsFastFarm(player As IPlayer, isFastFarm As Boolean)
+  overload: Altv_Roleplay.Utils.Extensions.SetPlayerIsFastFarm*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.IsPlayerFastFarm(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Utils.Extensions.IsPlayerFastFarm(AltV.Net.Elements.Entities.IPlayer)
+  id: IsPlayerFastFarm(AltV.Net.Elements.Entities.IPlayer)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: IsPlayerFastFarm(IPlayer)
+  nameWithType: Extensions.IsPlayerFastFarm(IPlayer)
+  fullName: Altv_Roleplay.Utils.Extensions.IsPlayerFastFarm(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: IsPlayerFastFarm
+    path: Utils/Extensions.cs
+    startLine: 197
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static bool IsPlayerFastFarm(this IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function IsPlayerFastFarm(player As IPlayer) As Boolean
+  overload: Altv_Roleplay.Utils.Extensions.IsPlayerFastFarm*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.HasPlayerHandcuffs(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Utils.Extensions.HasPlayerHandcuffs(AltV.Net.Elements.Entities.IPlayer)
+  id: HasPlayerHandcuffs(AltV.Net.Elements.Entities.IPlayer)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: HasPlayerHandcuffs(IPlayer)
+  nameWithType: Extensions.HasPlayerHandcuffs(IPlayer)
+  fullName: Altv_Roleplay.Utils.Extensions.HasPlayerHandcuffs(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: HasPlayerHandcuffs
+    path: Utils/Extensions.cs
+    startLine: 204
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static bool HasPlayerHandcuffs(this IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function HasPlayerHandcuffs(player As IPlayer) As Boolean
+  overload: Altv_Roleplay.Utils.Extensions.HasPlayerHandcuffs*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.IsPlayerUsingCrowbar(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Utils.Extensions.IsPlayerUsingCrowbar(AltV.Net.Elements.Entities.IPlayer)
+  id: IsPlayerUsingCrowbar(AltV.Net.Elements.Entities.IPlayer)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: IsPlayerUsingCrowbar(IPlayer)
+  nameWithType: Extensions.IsPlayerUsingCrowbar(IPlayer)
+  fullName: Altv_Roleplay.Utils.Extensions.IsPlayerUsingCrowbar(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: IsPlayerUsingCrowbar
+    path: Utils/Extensions.cs
+    startLine: 210
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static bool IsPlayerUsingCrowbar(this IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function IsPlayerUsingCrowbar(player As IPlayer) As Boolean
+  overload: Altv_Roleplay.Utils.Extensions.IsPlayerUsingCrowbar*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.HasPlayerRopeCuffs(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Utils.Extensions.HasPlayerRopeCuffs(AltV.Net.Elements.Entities.IPlayer)
+  id: HasPlayerRopeCuffs(AltV.Net.Elements.Entities.IPlayer)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: HasPlayerRopeCuffs(IPlayer)
+  nameWithType: Extensions.HasPlayerRopeCuffs(IPlayer)
+  fullName: Altv_Roleplay.Utils.Extensions.HasPlayerRopeCuffs(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: HasPlayerRopeCuffs
+    path: Utils/Extensions.cs
+    startLine: 217
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static bool HasPlayerRopeCuffs(this IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function HasPlayerRopeCuffs(player As IPlayer) As Boolean
+  overload: Altv_Roleplay.Utils.Extensions.HasPlayerRopeCuffs*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.AdminLevel(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Utils.Extensions.AdminLevel(AltV.Net.Elements.Entities.IPlayer)
+  id: AdminLevel(AltV.Net.Elements.Entities.IPlayer)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: AdminLevel(IPlayer)
+  nameWithType: Extensions.AdminLevel(IPlayer)
+  fullName: Altv_Roleplay.Utils.Extensions.AdminLevel(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: AdminLevel
+    path: Utils/Extensions.cs
+    startLine: 223
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static int AdminLevel(this IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    return:
+      type: System.Int32
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AdminLevel(player As IPlayer) As Integer
+  overload: Altv_Roleplay.Utils.Extensions.AdminLevel*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijob(AltV.Net.Elements.Entities.IPlayer,System.String)
+  commentId: M:Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijob(AltV.Net.Elements.Entities.IPlayer,System.String)
+  id: SetPlayerCurrentMinijob(AltV.Net.Elements.Entities.IPlayer,System.String)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: SetPlayerCurrentMinijob(IPlayer, String)
+  nameWithType: Extensions.SetPlayerCurrentMinijob(IPlayer, String)
+  fullName: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijob(AltV.Net.Elements.Entities.IPlayer, System.String)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SetPlayerCurrentMinijob
+    path: Utils/Extensions.cs
+    startLine: 231
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static void SetPlayerCurrentMinijob(this IPlayer player, string minijobName)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: minijobName
+      type: System.String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetPlayerCurrentMinijob(player As IPlayer, minijobName As String)
+  overload: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijob*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijob(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijob(AltV.Net.Elements.Entities.IPlayer)
+  id: GetPlayerCurrentMinijob(AltV.Net.Elements.Entities.IPlayer)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: GetPlayerCurrentMinijob(IPlayer)
+  nameWithType: Extensions.GetPlayerCurrentMinijob(IPlayer)
+  fullName: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijob(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetPlayerCurrentMinijob
+    path: Utils/Extensions.cs
+    startLine: 238
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static string GetPlayerCurrentMinijob(this IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    return:
+      type: System.String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetPlayerCurrentMinijob(player As IPlayer) As String
+  overload: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijob*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobStep(AltV.Net.Elements.Entities.IPlayer,System.String)
+  commentId: M:Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobStep(AltV.Net.Elements.Entities.IPlayer,System.String)
+  id: SetPlayerCurrentMinijobStep(AltV.Net.Elements.Entities.IPlayer,System.String)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: SetPlayerCurrentMinijobStep(IPlayer, String)
+  nameWithType: Extensions.SetPlayerCurrentMinijobStep(IPlayer, String)
+  fullName: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobStep(AltV.Net.Elements.Entities.IPlayer, System.String)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SetPlayerCurrentMinijobStep
+    path: Utils/Extensions.cs
+    startLine: 245
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static void SetPlayerCurrentMinijobStep(this IPlayer player, string minijobStep)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: minijobStep
+      type: System.String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetPlayerCurrentMinijobStep(player As IPlayer, minijobStep As String)
+  overload: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobStep*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobStep(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobStep(AltV.Net.Elements.Entities.IPlayer)
+  id: GetPlayerCurrentMinijobStep(AltV.Net.Elements.Entities.IPlayer)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: GetPlayerCurrentMinijobStep(IPlayer)
+  nameWithType: Extensions.GetPlayerCurrentMinijobStep(IPlayer)
+  fullName: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobStep(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetPlayerCurrentMinijobStep
+    path: Utils/Extensions.cs
+    startLine: 252
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static string GetPlayerCurrentMinijobStep(this IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    return:
+      type: System.String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetPlayerCurrentMinijobStep(player As IPlayer) As String
+  overload: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobStep*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobActionCount(AltV.Net.Elements.Entities.IPlayer,System.Int64)
+  commentId: M:Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobActionCount(AltV.Net.Elements.Entities.IPlayer,System.Int64)
+  id: SetPlayerCurrentMinijobActionCount(AltV.Net.Elements.Entities.IPlayer,System.Int64)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: SetPlayerCurrentMinijobActionCount(IPlayer, Int64)
+  nameWithType: Extensions.SetPlayerCurrentMinijobActionCount(IPlayer, Int64)
+  fullName: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobActionCount(AltV.Net.Elements.Entities.IPlayer, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SetPlayerCurrentMinijobActionCount
+    path: Utils/Extensions.cs
+    startLine: 259
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static void SetPlayerCurrentMinijobActionCount(this IPlayer player, long count)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: count
+      type: System.Int64
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetPlayerCurrentMinijobActionCount(player As IPlayer, count As Long)
+  overload: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobActionCount*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobActionCount(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobActionCount(AltV.Net.Elements.Entities.IPlayer)
+  id: GetPlayerCurrentMinijobActionCount(AltV.Net.Elements.Entities.IPlayer)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: GetPlayerCurrentMinijobActionCount(IPlayer)
+  nameWithType: Extensions.GetPlayerCurrentMinijobActionCount(IPlayer)
+  fullName: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobActionCount(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetPlayerCurrentMinijobActionCount
+    path: Utils/Extensions.cs
+    startLine: 266
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static long GetPlayerCurrentMinijobActionCount(this IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    return:
+      type: System.Int64
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetPlayerCurrentMinijobActionCount(player As IPlayer) As Long
+  overload: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobActionCount*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobRouteId(AltV.Net.Elements.Entities.IPlayer,System.Int64)
+  commentId: M:Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobRouteId(AltV.Net.Elements.Entities.IPlayer,System.Int64)
+  id: SetPlayerCurrentMinijobRouteId(AltV.Net.Elements.Entities.IPlayer,System.Int64)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: SetPlayerCurrentMinijobRouteId(IPlayer, Int64)
+  nameWithType: Extensions.SetPlayerCurrentMinijobRouteId(IPlayer, Int64)
+  fullName: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobRouteId(AltV.Net.Elements.Entities.IPlayer, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SetPlayerCurrentMinijobRouteId
+    path: Utils/Extensions.cs
+    startLine: 274
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static void SetPlayerCurrentMinijobRouteId(this IPlayer player, long routeId)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: routeId
+      type: System.Int64
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetPlayerCurrentMinijobRouteId(player As IPlayer, routeId As Long)
+  overload: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobRouteId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobRouteId(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobRouteId(AltV.Net.Elements.Entities.IPlayer)
+  id: GetPlayerCurrentMinijobRouteId(AltV.Net.Elements.Entities.IPlayer)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: GetPlayerCurrentMinijobRouteId(IPlayer)
+  nameWithType: Extensions.GetPlayerCurrentMinijobRouteId(IPlayer)
+  fullName: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobRouteId(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetPlayerCurrentMinijobRouteId
+    path: Utils/Extensions.cs
+    startLine: 281
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static long GetPlayerCurrentMinijobRouteId(this IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    return:
+      type: System.Int64
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetPlayerCurrentMinijobRouteId(player As IPlayer) As Long
+  overload: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobRouteId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Utils.Extensions.getPositionInBackOfPosition(AltV.Net.Data.Position,System.Single,System.Single)
+  commentId: M:Altv_Roleplay.Utils.Extensions.getPositionInBackOfPosition(AltV.Net.Data.Position,System.Single,System.Single)
+  id: getPositionInBackOfPosition(AltV.Net.Data.Position,System.Single,System.Single)
+  isExtensionMethod: true
+  parent: Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: getPositionInBackOfPosition(Position, Single, Single)
+  nameWithType: Extensions.getPositionInBackOfPosition(Position, Single, Single)
+  fullName: Altv_Roleplay.Utils.Extensions.getPositionInBackOfPosition(AltV.Net.Data.Position, System.Single, System.Single)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Utils/Extensions.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: getPositionInBackOfPosition
+    path: Utils/Extensions.cs
+    startLine: 288
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Utils
+  syntax:
+    content: public static Position getPositionInBackOfPosition(this Position pos, float rotation, float distance)
+    parameters:
+    - id: pos
+      type: AltV.Net.Data.Position
+    - id: rotation
+      type: System.Single
+    - id: distance
+      type: System.Single
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function getPositionInBackOfPosition(pos As Position, rotation As Single, distance As Single) As Position
+  overload: Altv_Roleplay.Utils.Extensions.getPositionInBackOfPosition*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Altv_Roleplay.Utils
+  commentId: N:Altv_Roleplay.Utils
+  name: Altv_Roleplay.Utils
+  nameWithType: Altv_Roleplay.Utils
+  fullName: Altv_Roleplay.Utils
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.Utils.Extensions.IsInRange*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.IsInRange
+  name: IsInRange
+  nameWithType: Extensions.IsInRange
+  fullName: Altv_Roleplay.Utils.Extensions.IsInRange
+- uid: AltV.Net.Data.Position
+  commentId: T:AltV.Net.Data.Position
+  parent: AltV.Net.Data
+  isExternal: true
+  name: Position
+  nameWithType: Position
+  fullName: AltV.Net.Data.Position
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: AltV.Net.Data
+  commentId: N:AltV.Net.Data
+  isExternal: true
+  name: AltV.Net.Data
+  nameWithType: AltV.Net.Data
+  fullName: AltV.Net.Data
+- uid: Altv_Roleplay.Utils.Extensions.kickWithMessage*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.kickWithMessage
+  name: kickWithMessage
+  nameWithType: Extensions.kickWithMessage
+  fullName: Altv_Roleplay.Utils.Extensions.kickWithMessage
+- uid: AltV.Net.Elements.Entities.IPlayer
+  commentId: T:AltV.Net.Elements.Entities.IPlayer
+  parent: AltV.Net.Elements.Entities
+  isExternal: true
+  name: IPlayer
+  nameWithType: IPlayer
+  fullName: AltV.Net.Elements.Entities.IPlayer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AltV.Net.Elements.Entities
+  commentId: N:AltV.Net.Elements.Entities
+  isExternal: true
+  name: AltV.Net.Elements.Entities
+  nameWithType: AltV.Net.Elements.Entities
+  fullName: AltV.Net.Elements.Entities
+- uid: Altv_Roleplay.Utils.Extensions.IsCefOpen*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.IsCefOpen
+  name: IsCefOpen
+  nameWithType: Extensions.IsCefOpen
+  fullName: Altv_Roleplay.Utils.Extensions.IsCefOpen
+- uid: Altv_Roleplay.Factories.ClassicPlayer
+  commentId: T:Altv_Roleplay.Factories.ClassicPlayer
+  parent: Altv_Roleplay.Factories
+  name: ClassicPlayer
+  nameWithType: ClassicPlayer
+  fullName: Altv_Roleplay.Factories.ClassicPlayer
+- uid: Altv_Roleplay.Factories
+  commentId: N:Altv_Roleplay.Factories
+  name: Altv_Roleplay.Factories
+  nameWithType: Altv_Roleplay.Factories
+  fullName: Altv_Roleplay.Factories
+- uid: Altv_Roleplay.Utils.Extensions.updateTattoos*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.updateTattoos
+  name: updateTattoos
+  nameWithType: Extensions.updateTattoos
+  fullName: Altv_Roleplay.Utils.Extensions.updateTattoos
+- uid: Altv_Roleplay.Utils.Extensions.HasVehicleId*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.HasVehicleId
+  name: HasVehicleId
+  nameWithType: Extensions.HasVehicleId
+  fullName: Altv_Roleplay.Utils.Extensions.HasVehicleId
+- uid: AltV.Net.Elements.Entities.IVehicle
+  commentId: T:AltV.Net.Elements.Entities.IVehicle
+  parent: AltV.Net.Elements.Entities
+  isExternal: true
+  name: IVehicle
+  nameWithType: IVehicle
+  fullName: AltV.Net.Elements.Entities.IVehicle
+- uid: Altv_Roleplay.Utils.Extensions.SetVehicleId*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.SetVehicleId
+  name: SetVehicleId
+  nameWithType: Extensions.SetVehicleId
+  fullName: Altv_Roleplay.Utils.Extensions.SetVehicleId
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: Altv_Roleplay.Utils.Extensions.SetVehicleTrunkState*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.SetVehicleTrunkState
+  name: SetVehicleTrunkState
+  nameWithType: Extensions.SetVehicleTrunkState
+  fullName: Altv_Roleplay.Utils.Extensions.SetVehicleTrunkState
+- uid: Altv_Roleplay.Utils.Extensions.GetVehicleTrunkState*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.GetVehicleTrunkState
+  name: GetVehicleTrunkState
+  nameWithType: Extensions.GetVehicleTrunkState
+  fullName: Altv_Roleplay.Utils.Extensions.GetVehicleTrunkState
+- uid: Altv_Roleplay.Utils.Extensions.GetVehicleId*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.GetVehicleId
+  name: GetVehicleId
+  nameWithType: Extensions.GetVehicleId
+  fullName: Altv_Roleplay.Utils.Extensions.GetVehicleId
+- uid: Altv_Roleplay.Utils.Extensions.GetCharacterMetaId*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.GetCharacterMetaId
+  name: GetCharacterMetaId
+  nameWithType: Extensions.GetCharacterMetaId
+  fullName: Altv_Roleplay.Utils.Extensions.GetCharacterMetaId
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Altv_Roleplay.Utils.Extensions.SetCharacterMetaId*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.SetCharacterMetaId
+  name: SetCharacterMetaId
+  nameWithType: Extensions.SetCharacterMetaId
+  fullName: Altv_Roleplay.Utils.Extensions.SetCharacterMetaId
+- uid: Altv_Roleplay.Utils.Extensions.SetColShapeName*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.SetColShapeName
+  name: SetColShapeName
+  nameWithType: Extensions.SetColShapeName
+  fullName: Altv_Roleplay.Utils.Extensions.SetColShapeName
+- uid: AltV.Net.Elements.Entities.IColShape
+  commentId: T:AltV.Net.Elements.Entities.IColShape
+  parent: AltV.Net.Elements.Entities
+  isExternal: true
+  name: IColShape
+  nameWithType: IColShape
+  fullName: AltV.Net.Elements.Entities.IColShape
+- uid: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice
+  name: GetColshapeCarDealerVehPrice
+  nameWithType: Extensions.GetColshapeCarDealerVehPrice
+  fullName: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehPrice
+- uid: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName
+  name: GetColshapeCarDealerVehName
+  nameWithType: Extensions.GetColshapeCarDealerVehName
+  fullName: Altv_Roleplay.Utils.Extensions.GetColshapeCarDealerVehName
+- uid: Altv_Roleplay.Utils.Extensions.GetColShapeName*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.GetColShapeName
+  name: GetColShapeName
+  nameWithType: Extensions.GetColShapeName
+  fullName: Altv_Roleplay.Utils.Extensions.GetColShapeName
+- uid: Altv_Roleplay.Utils.Extensions.SetColShapeId*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.SetColShapeId
+  name: SetColShapeId
+  nameWithType: Extensions.SetColShapeId
+  fullName: Altv_Roleplay.Utils.Extensions.SetColShapeId
+- uid: Altv_Roleplay.Utils.Extensions.GetColShapeId*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.GetColShapeId
+  name: GetColShapeId
+  nameWithType: Extensions.GetColShapeId
+  fullName: Altv_Roleplay.Utils.Extensions.GetColShapeId
+- uid: Altv_Roleplay.Utils.Extensions.GetPlayerFarmingActionMeta*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.GetPlayerFarmingActionMeta
+  name: GetPlayerFarmingActionMeta
+  nameWithType: Extensions.GetPlayerFarmingActionMeta
+  fullName: Altv_Roleplay.Utils.Extensions.GetPlayerFarmingActionMeta
+- uid: Altv_Roleplay.Utils.Extensions.SetPlayerFarmingActionMeta*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.SetPlayerFarmingActionMeta
+  name: SetPlayerFarmingActionMeta
+  nameWithType: Extensions.SetPlayerFarmingActionMeta
+  fullName: Altv_Roleplay.Utils.Extensions.SetPlayerFarmingActionMeta
+- uid: Altv_Roleplay.Utils.Extensions.SetPlayerIsCuffed*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.SetPlayerIsCuffed
+  name: SetPlayerIsCuffed
+  nameWithType: Extensions.SetPlayerIsCuffed
+  fullName: Altv_Roleplay.Utils.Extensions.SetPlayerIsCuffed
+- uid: Altv_Roleplay.Utils.Extensions.SetPlayerUsingCrowbar*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.SetPlayerUsingCrowbar
+  name: SetPlayerUsingCrowbar
+  nameWithType: Extensions.SetPlayerUsingCrowbar
+  fullName: Altv_Roleplay.Utils.Extensions.SetPlayerUsingCrowbar
+- uid: Altv_Roleplay.Utils.Extensions.SetPlayerIsUnconscious*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.SetPlayerIsUnconscious
+  name: SetPlayerIsUnconscious
+  nameWithType: Extensions.SetPlayerIsUnconscious
+  fullName: Altv_Roleplay.Utils.Extensions.SetPlayerIsUnconscious
+- uid: Altv_Roleplay.Utils.Extensions.IsPlayerUnconscious*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.IsPlayerUnconscious
+  name: IsPlayerUnconscious
+  nameWithType: Extensions.IsPlayerUnconscious
+  fullName: Altv_Roleplay.Utils.Extensions.IsPlayerUnconscious
+- uid: Altv_Roleplay.Utils.Extensions.SetPlayerIsFastFarm*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.SetPlayerIsFastFarm
+  name: SetPlayerIsFastFarm
+  nameWithType: Extensions.SetPlayerIsFastFarm
+  fullName: Altv_Roleplay.Utils.Extensions.SetPlayerIsFastFarm
+- uid: Altv_Roleplay.Utils.Extensions.IsPlayerFastFarm*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.IsPlayerFastFarm
+  name: IsPlayerFastFarm
+  nameWithType: Extensions.IsPlayerFastFarm
+  fullName: Altv_Roleplay.Utils.Extensions.IsPlayerFastFarm
+- uid: Altv_Roleplay.Utils.Extensions.HasPlayerHandcuffs*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.HasPlayerHandcuffs
+  name: HasPlayerHandcuffs
+  nameWithType: Extensions.HasPlayerHandcuffs
+  fullName: Altv_Roleplay.Utils.Extensions.HasPlayerHandcuffs
+- uid: Altv_Roleplay.Utils.Extensions.IsPlayerUsingCrowbar*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.IsPlayerUsingCrowbar
+  name: IsPlayerUsingCrowbar
+  nameWithType: Extensions.IsPlayerUsingCrowbar
+  fullName: Altv_Roleplay.Utils.Extensions.IsPlayerUsingCrowbar
+- uid: Altv_Roleplay.Utils.Extensions.HasPlayerRopeCuffs*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.HasPlayerRopeCuffs
+  name: HasPlayerRopeCuffs
+  nameWithType: Extensions.HasPlayerRopeCuffs
+  fullName: Altv_Roleplay.Utils.Extensions.HasPlayerRopeCuffs
+- uid: Altv_Roleplay.Utils.Extensions.AdminLevel*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.AdminLevel
+  name: AdminLevel
+  nameWithType: Extensions.AdminLevel
+  fullName: Altv_Roleplay.Utils.Extensions.AdminLevel
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijob*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijob
+  name: SetPlayerCurrentMinijob
+  nameWithType: Extensions.SetPlayerCurrentMinijob
+  fullName: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijob
+- uid: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijob*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijob
+  name: GetPlayerCurrentMinijob
+  nameWithType: Extensions.GetPlayerCurrentMinijob
+  fullName: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijob
+- uid: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobStep*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobStep
+  name: SetPlayerCurrentMinijobStep
+  nameWithType: Extensions.SetPlayerCurrentMinijobStep
+  fullName: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobStep
+- uid: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobStep*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobStep
+  name: GetPlayerCurrentMinijobStep
+  nameWithType: Extensions.GetPlayerCurrentMinijobStep
+  fullName: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobStep
+- uid: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobActionCount*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobActionCount
+  name: SetPlayerCurrentMinijobActionCount
+  nameWithType: Extensions.SetPlayerCurrentMinijobActionCount
+  fullName: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobActionCount
+- uid: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobActionCount*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobActionCount
+  name: GetPlayerCurrentMinijobActionCount
+  nameWithType: Extensions.GetPlayerCurrentMinijobActionCount
+  fullName: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobActionCount
+- uid: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobRouteId*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobRouteId
+  name: SetPlayerCurrentMinijobRouteId
+  nameWithType: Extensions.SetPlayerCurrentMinijobRouteId
+  fullName: Altv_Roleplay.Utils.Extensions.SetPlayerCurrentMinijobRouteId
+- uid: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobRouteId*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobRouteId
+  name: GetPlayerCurrentMinijobRouteId
+  nameWithType: Extensions.GetPlayerCurrentMinijobRouteId
+  fullName: Altv_Roleplay.Utils.Extensions.GetPlayerCurrentMinijobRouteId
+- uid: Altv_Roleplay.Utils.Extensions.getPositionInBackOfPosition*
+  commentId: Overload:Altv_Roleplay.Utils.Extensions.getPositionInBackOfPosition
+  name: getPositionInBackOfPosition
+  nameWithType: Extensions.getPositionInBackOfPosition
+  fullName: Altv_Roleplay.Utils.Extensions.getPositionInBackOfPosition

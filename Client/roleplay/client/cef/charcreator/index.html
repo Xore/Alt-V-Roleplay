@@ -1,0 +1,684 @@
+﻿<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../utils/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../utils/bootstrap-datepicker3.css">
+    <script src="../utils/jquery-3.4.1.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <title>Charaktereditor</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="boxa">
+            <img class="Pic" src="Logo_no-bg.png">
+        </div>
+
+        <div class="box2">
+            <div id="SexArea">
+                <p class="title">WÄHLE DEIN GESCHLECHT</p>
+                <img id="femalegender" class="charsex g" src="../utils/img/girl.png">
+                <img id="malegender" class="charsex m" src="../utils/img/men.png">
+                <span class="chartitle left">WEIBLICH</span>
+                <span  class="chartitle right">MÄNNLICH</span>
+            </div>
+        </div>
+
+        <!-- <p class="info">Wähle dein Geschlecht aus um mit der Charaktererstellung fortzufahren. Beachte dass du dein Geschlecht im Nachhinein NICHT mehr ändern kannst.</p> -->
+    </div>
+    <input class="inputcustom" type="range" id="charrotationslider" val="180" min="0" max="360" oninput="changeSliderRot();">
+    <div class="charcreatorbox">
+        <div id="creatorarea">
+            <p class="title">ERSTELLE DEINEN CHARAKTER</p>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Kopfbehaarung
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Haare</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="HairVariation" oninput="ChangeHair(0, 'Hair');" type="range" name="auswertung" min="0" step="1" max="21" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Primärfarbe</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="HairColor1" oninput="ChangeHair(1, 'HairColor1');" type="range" name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Sekundärfarbe</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="HairColor2" oninput="ChangeHair(2, 'HairColor2');" type="range" name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Gesichtsbehaarung
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Bart</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="BeardVariation" oninput="ChangeHair(3, 'Beard');" type="range" name="auswertung" min="-1" step="1" max="30" value="-1" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Sichtbarkeit</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="BeardAlpha" oninput="ChangeHair(7, 'BeardAlpha');" type="range" name="auswertung" min="0" step="0.1" max="1" value="1" class="slider"><output name="numerisch" class="numberfield">1</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Farbe</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="BeardColor" oninput="ChangeHair(4, 'BeardColor');" type="range" name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Brustbehaarung
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Brusthaare</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="ChestHairVariation" oninput="ChangeHair(9, 'ChestHair');" type="range" name="auswertung" min="-1" step="1" max="16" value="-1" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Sichtbarkeit</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="ChestHairAlpha" oninput="ChangeHair(11, 'ChestHairAlpha');" type="range" name="auswertung" min="0" step="0.1" max="1" value="1" class="slider"><output name="numerisch" class="numberfield">1</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Farbe</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="ChestHairColor" oninput="ChangeHair(10, 'ChestHairColor');" type="range" name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Augenbehaarung
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Augenbrauen</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="EyebrowsVariation" oninput="ChangeHair(5, 'Eyebrows');" type="range" name="auswertung" min="-1" step="1" max="30" value="-1" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Sichtbarkeit</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="EyebrowsAlpha" oninput="ChangeHair(8, 'EyebrowsAlpha');" type="range" name="auswertung" min="0" step="0.1" max="1" value="1" class="slider"><output name="numerisch" class="numberfield">1</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Farbe</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="EyebrowsColor" oninput="ChangeHair(6, 'EyebrowsColor');" type="range" name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Augenbrauenhöhe</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="EyebrowsHeight" oninput="ChangeFace(1);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Augenbrauenbreite</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="EyebrowsWidth" oninput="ChangeFace(2);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Abstammung
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Vater</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="FatherVariation" oninput="ChangeHead(0, 'FatherVariation');" type="range" name="auswertung" min="0" step="1" max="23" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Mutter</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="MotherVariation" oninput="ChangeHead(1, 'MotherVariation');" type="range" name="auswertung" min="0" step="1" max="19" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Mischung / Mix</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="FatherMotherMix" oninput="ChangeHead(2, 'FatherMotherMix');" type="range" name="auswertung" min="0" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Alterung
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Alterung</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="AgeingVariation" oninput="ChangeHead(14, 'AgeingVariation');" type="range" name="auswertung" min="-1" step="1" max="14" value="-1" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Sichtbarkeit</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="AgeingAlpha" oninput="ChangeHead(13, 'AgeingAlpha');" type="range" name="auswertung" min="0" step="0.1" max="1" value="1" class="slider"><output name="numerisch" class="numberfield">1</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Hautfarbe
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Vaters Hautfarbe</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="FatherSkin" oninput="ChangeHead(21, 'FatherSkin');" type="range" name="auswertung" min="0" step="1" max="23" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Mutters Hautfarbe</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="MotherSkin" oninput="ChangeHead(22, 'MotherSkin');" type="range" name="auswertung" min="0" step="1" max="19" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Mischung / Mix</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="FatherMotherSkinMix" oninput="ChangeHead(23, 'FatherMotherSkinMix');" type="range" name="auswertung" min="0" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Augen
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Augengröße</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="EyesSize" oninput="ChangeFace(3);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Augenfarbe</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="EyesColor" oninput="ChangeHead(24, 'EyesColor');" type="range" name="auswertung" min="0" step="1" max="31" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Makeup</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="MakeupVariation" oninput="ChangeHead(7, 'MakeupVariation');" type="range" name="auswertung" min="-1" step="1" max="74" value="-1" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Makeup Sichtbarkeit</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="MakeupAlpha" oninput="ChangeHead(6, 'MakeupAlpha');" type="range" name="auswertung" min="0" step="0.1" max="1" value="1" class="slider"><output name="numerisch" class="numberfield">1</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Teint
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Teint</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="ComplexionIndex" oninput="ChangeHead(16, 'ComplexionIndex');" type="range" name="auswertung" min="-1" step="1" max="11" value="-1" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Sichtbarkeit</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="ComplexionAlpha" oninput="ChangeHead(15, 'ComplexionAlpha');" type="range" name="auswertung" min="0" step="0.1" max="1" value="1" class="slider"><output name="numerisch" class="numberfield">1</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Wangenröte
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Wangenröte</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="WangenBlushVariation" oninput="ChangeHead(4, 'WangenBlushVariation');" type="range" name="auswertung" min="-1" step="1" max="6" value="-1" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Farbe</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="WangenBlushColor" oninput="ChangeHead(5, 'WangenBlushColor');" type="range" name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Sichtbarkeit</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="WangenBlushAlpha" oninput="ChangeHead(3, 'WangenBlushAlpha');" type="range" name="auswertung" min="0" step="0.1" max="1" value="1" class="slider"><output name="numerisch" class="numberfield">1</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Gesichtsflecken
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Flecken</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="BlemishesIndex" oninput="ChangeHead(12, 'Blemishes');" type="range" name="auswertung" min="-1" step="1" max="23" value="-1" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Sichtbarkeit</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="BlemishesAlpha" oninput="ChangeHead(11, 'BlemishesAlpha');" type="range" name="auswertung" min="0" step="0.1" max="1" value="1" class="slider"><output name="numerisch" class="numberfield">1</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Leberflecken & Sommersprossen
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Variation</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="MolesIndex" oninput="ChangeHead(20, 'Moles');" type="range" name="auswertung" min="-1" step="1" max="17" value="-1" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Sichtbarkeit</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="MolesAlpha" oninput="ChangeHead(19, 'MolesAlpha');" type="range" name="auswertung" min="0" step="0.1" max="1" value="1" class="slider"><output name="numerisch" class="numberfield">1</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Sonnenschaden
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Sonnenschaden</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="SunDamageIndex" oninput="ChangeHead(18, 'SunDamage');" type="range" name="auswertung" min="-1" step="1" max="10" value="-1" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Sichtbarkeit</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="SunDamageAlpha" oninput="ChangeHead(17, 'SunDamageAlpha');" type="range" name="auswertung" min="0" step="0.1" max="1" value="1" class="slider"><output name="numerisch" class="numberfield">1</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Lippen
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Lippenstift</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="LipstickVariation" oninput="ChangeHead(9, 'LipstickVariation');" type="range" name="auswertung" min="-1" step="1" max="9" value="-1" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Farbe</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="LipstickColor" oninput="ChangeHead(10, 'LipstickColor');" type="range" name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Sichtbarkeit</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="LipstickAlpha" oninput="ChangeHead(8, 'LipstickAlpha');" type="range" name="auswertung" min="0" step="0.1" max="1" value="1" class="slider"><output name="numerisch" class="numberfield">1</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Lippenfülle</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="lipsfill" oninput="ChangeFace(4);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Kinn
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Form</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="chinShape" oninput="ChangeFace(5);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Position</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="chinPosition" oninput="ChangeFace(6);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Länge</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="chinLength" oninput="ChangeFace(7);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Breite</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="chinWidth" oninput="ChangeFace(8);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Kiefer
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Breite</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="jawWidth" oninput="ChangeFace(9);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Höhe</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="jawHeight" oninput="ChangeFace(10);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Wangen
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Knochen Höhe</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="cheekboneHeight" oninput="ChangeFace(11);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Knochen Breite</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="cheekboneWidth" oninput="ChangeFace(12);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Wangen Breite</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="cheeksWidth" oninput="ChangeFace(13);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Nacken
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Breite</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="neckWidth" oninput="ChangeFace(14);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+                <div class="dropdown-caption">
+                    <i class="fas fa-angle-double-right dropdown"></i> Nase
+                </div>
+                <div class="dropdown-content">
+                    <div class="subboxcontent">
+                        <p>Spitze</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="noseTip" oninput="ChangeFace(15);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Breite</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="noseWidth" oninput="ChangeFace(20);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Höhe</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="noseHeight" oninput="ChangeFace(16);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Länge</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="noseLength" oninput="ChangeFace(17);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Rücken</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="noseBridge" oninput="ChangeFace(18);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="subboxcontent">
+                        <p>Verschiebung</p>
+                        <div class="nose-pegel">
+                            <form oninput="numerisch.value=auswertung.value">
+                                <input id="noseShift" oninput="ChangeFace(19);" type="range" name="auswertung" min="-1" step="0.1" max="1" value="0" class="slider"><output name="numerisch" class="numberfield">0</output>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="charcreatorsecondbox">
+        <p class="title">WEITERE EINSTELLUNGEN</p>
+        <div class="dropdown">
+            <input onclick="clickdrop(this);" class="dropdown-selector" type="checkbox" />
+            <div class="dropdown-caption">
+                <i class="fas fa-angle-double-right dropdown"></i> Personalien deines Charakters
+            </div>
+            <div class="dropdown-content">
+                <div class="subboxcontent">
+                    <p>Vorname</p>
+                    <input id="vornameinput" maxlength="30" name="vornameinput" spellcheck="false" type="text" placeholder="Vorname eingeben..">
+                </div>
+                <div class="subboxcontent">
+                    <p>Nachname</p>
+                    <input id="nachnameinput" maxlength="30" name="nachnameinput" spellcheck="false" type="text" placeholder="Nachname eingeben..">
+                </div>
+                <div class="subboxcontent">
+                    <p>Geburtsdatum</p>
+                    <input id="birthday" maxlength="30" name="birthday" spellcheck="false" type="text" placeholder="dd.mm.yyyy">
+                </div>
+            </div>
+        </div>
+        <p id="charerror">Player Nicht geladen , bitte reconnecten</p>
+        <div class="finish">
+            <button class="btn donebtn" onclick="FinishCharCreator();">Erstellen</button>
+        </div>
+    </div>
+
+    <script src="../utils/popper.min.js"></script>
+    <script src="../utils/bootstrap.min.js"></script>
+    <script src="../utils/640357ffb4.js"></script>
+    <script src="../utils/bootstrap-datepicker.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,2405 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.Handler.Commands
+  commentId: T:Altv_Roleplay.Handler.Commands
+  id: Commands
+  parent: Altv_Roleplay.Handler
+  children:
+  - Altv_Roleplay.Handler.Commands.announceCMD(AltV.Net.Elements.Entities.IPlayer,System.String)
+  - Altv_Roleplay.Handler.Commands.cmd_BAn(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  - Altv_Roleplay.Handler.Commands.CMD_GetAccIdByName(AltV.Net.Elements.Entities.IPlayer,System.String)
+  - Altv_Roleplay.Handler.Commands.CMD_GetCarHash(AltV.Net.Elements.Entities.IPlayer,System.String)
+  - Altv_Roleplay.Handler.Commands.CMD_Giveadmin(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.Int32)
+  - Altv_Roleplay.Handler.Commands.cmd_KICK(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  - Altv_Roleplay.Handler.Commands.CMD_ParkALlVehs(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Handler.Commands.CMD_parkVehicle(AltV.Net.Elements.Entities.IPlayer,System.String)
+  - Altv_Roleplay.Handler.Commands.CMD_parkVehicleById(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  - Altv_Roleplay.Handler.Commands.CMD_RELOAD(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Handler.Commands.CMD_ResetHwIdById(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  - Altv_Roleplay.Handler.Commands.CMD_ResetHwIdByName(AltV.Net.Elements.Entities.IPlayer,System.String)
+  - Altv_Roleplay.Handler.Commands.CMD_ResetSocialById(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  - Altv_Roleplay.Handler.Commands.CMD_ResetSocialByName(AltV.Net.Elements.Entities.IPlayer,System.String)
+  - Altv_Roleplay.Handler.Commands.CMD_Retard(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Handler.Commands.CMD_Unban(Altv_Roleplay.Factories.ClassicPlayer,System.Int32)
+  - Altv_Roleplay.Handler.Commands.delcarCMD(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Handler.Commands.DeleteVehicleRange(AltV.Net.Elements.Entities.IPlayer,System.Single)
+  - Altv_Roleplay.Handler.Commands.FactionCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.Int32)
+  - Altv_Roleplay.Handler.Commands.FixVehicle(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Handler.Commands.GetHereCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  - Altv_Roleplay.Handler.Commands.GetHereCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.Int32,System.Int32,System.Int32)
+  - Altv_Roleplay.Handler.Commands.GiveItemCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  - Altv_Roleplay.Handler.Commands.GiveItemCMD(AltV.Net.Elements.Entities.IPlayer,System.String,System.Int32)
+  - Altv_Roleplay.Handler.Commands.GotoCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  - Altv_Roleplay.Handler.Commands.heyCMD(AltV.Net.Elements.Entities.IPlayer,System.String)
+  - Altv_Roleplay.Handler.Commands.Noti1CMD(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Handler.Commands.Noti2CMD(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Handler.Commands.PosCMD(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Handler.Commands.PowerCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  - Altv_Roleplay.Handler.Commands.rentcar(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Handler.Commands.ReviveTargetCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  - Altv_Roleplay.Handler.Commands.SetATMCmd(AltV.Net.Elements.Entities.IPlayer,System.String)
+  - Altv_Roleplay.Handler.Commands.setDimCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.Int32)
+  - Altv_Roleplay.Handler.Commands.Setstore7Cmd(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.String,System.Int32)
+  - Altv_Roleplay.Handler.Commands.SetstoreCmd(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.String)
+  - Altv_Roleplay.Handler.Commands.setVeh(Altv_Roleplay.Factories.ClassicPlayer,System.String,System.String)
+  - Altv_Roleplay.Handler.Commands.supportCMD(AltV.Net.Elements.Entities.IPlayer,System.String)
+  - Altv_Roleplay.Handler.Commands.TpPosCMD(AltV.Net.Elements.Entities.IPlayer,System.Single,System.Single,System.Single)
+  - Altv_Roleplay.Handler.Commands.VEH_RELOAD(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Handler.Commands.vehPos(AltV.Net.Elements.Entities.IPlayer)
+  - Altv_Roleplay.Handler.Commands.wCMD(AltV.Net.Elements.Entities.IPlayer,AltV.Net.Enums.WeaponModel)
+  langs:
+  - csharp
+  - vb
+  name: Commands
+  nameWithType: Commands
+  fullName: Altv_Roleplay.Handler.Commands
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Commands
+    path: Handler/Commands.cs
+    startLine: 21
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: 'public class Commands : IScript'
+    content.vb: >-
+      Public Class Commands
+          Implements IScript
+  inheritance:
+  - System.Object
+  implements:
+  - AltV.Net.IScript
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.Handler.Commands.Noti1CMD(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Handler.Commands.Noti1CMD(AltV.Net.Elements.Entities.IPlayer)
+  id: Noti1CMD(AltV.Net.Elements.Entities.IPlayer)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: Noti1CMD(IPlayer)
+  nameWithType: Commands.Noti1CMD(IPlayer)
+  fullName: Altv_Roleplay.Handler.Commands.Noti1CMD(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Noti1CMD
+    path: Handler/Commands.cs
+    startLine: 24
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("progress", false, null)]
+
+      public void Noti1CMD(IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    content.vb: >-
+      <Command("progress", False, Nothing)>
+
+      Public Sub Noti1CMD(player As IPlayer)
+  overload: Altv_Roleplay.Handler.Commands.Noti1CMD*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.Noti2CMD(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Handler.Commands.Noti2CMD(AltV.Net.Elements.Entities.IPlayer)
+  id: Noti2CMD(AltV.Net.Elements.Entities.IPlayer)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: Noti2CMD(IPlayer)
+  nameWithType: Commands.Noti2CMD(IPlayer)
+  fullName: Altv_Roleplay.Handler.Commands.Noti2CMD(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Noti2CMD
+    path: Handler/Commands.cs
+    startLine: 32
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("notif", false, null)]
+
+      public void Noti2CMD(IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    content.vb: >-
+      <Command("notif", False, Nothing)>
+
+      Public Sub Noti2CMD(player As IPlayer)
+  overload: Altv_Roleplay.Handler.Commands.Noti2CMD*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.CMD_Retard(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Handler.Commands.CMD_Retard(AltV.Net.Elements.Entities.IPlayer)
+  id: CMD_Retard(AltV.Net.Elements.Entities.IPlayer)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: CMD_Retard(IPlayer)
+  nameWithType: Commands.CMD_Retard(IPlayer)
+  fullName: Altv_Roleplay.Handler.Commands.CMD_Retard(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CMD_Retard
+    path: Handler/Commands.cs
+    startLine: 41
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("retard", false, null)]
+
+      public void CMD_Retard(IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    content.vb: >-
+      <Command("retard", False, Nothing)>
+
+      Public Sub CMD_Retard(player As IPlayer)
+  overload: Altv_Roleplay.Handler.Commands.CMD_Retard*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.CMD_ResetHwIdById(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  commentId: M:Altv_Roleplay.Handler.Commands.CMD_ResetHwIdById(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  id: CMD_ResetHwIdById(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: CMD_ResetHwIdById(IPlayer, Int32)
+  nameWithType: Commands.CMD_ResetHwIdById(IPlayer, Int32)
+  fullName: Altv_Roleplay.Handler.Commands.CMD_ResetHwIdById(AltV.Net.Elements.Entities.IPlayer, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CMD_ResetHwIdById
+    path: Handler/Commands.cs
+    startLine: 53
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("resethwidbyid", false, null)]
+
+      public void CMD_ResetHwIdById(IPlayer player, int accountId)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: accountId
+      type: System.Int32
+    content.vb: >-
+      <Command("resethwidbyid", False, Nothing)>
+
+      Public Sub CMD_ResetHwIdById(player As IPlayer, accountId As Integer)
+  overload: Altv_Roleplay.Handler.Commands.CMD_ResetHwIdById*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.CMD_ResetSocialById(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  commentId: M:Altv_Roleplay.Handler.Commands.CMD_ResetSocialById(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  id: CMD_ResetSocialById(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: CMD_ResetSocialById(IPlayer, Int32)
+  nameWithType: Commands.CMD_ResetSocialById(IPlayer, Int32)
+  fullName: Altv_Roleplay.Handler.Commands.CMD_ResetSocialById(AltV.Net.Elements.Entities.IPlayer, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CMD_ResetSocialById
+    path: Handler/Commands.cs
+    startLine: 71
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("resetsocialbyid", false, null)]
+
+      public void CMD_ResetSocialById(IPlayer player, int accountId)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: accountId
+      type: System.Int32
+    content.vb: >-
+      <Command("resetsocialbyid", False, Nothing)>
+
+      Public Sub CMD_ResetSocialById(player As IPlayer, accountId As Integer)
+  overload: Altv_Roleplay.Handler.Commands.CMD_ResetSocialById*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.CMD_ResetHwIdByName(AltV.Net.Elements.Entities.IPlayer,System.String)
+  commentId: M:Altv_Roleplay.Handler.Commands.CMD_ResetHwIdByName(AltV.Net.Elements.Entities.IPlayer,System.String)
+  id: CMD_ResetHwIdByName(AltV.Net.Elements.Entities.IPlayer,System.String)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: CMD_ResetHwIdByName(IPlayer, String)
+  nameWithType: Commands.CMD_ResetHwIdByName(IPlayer, String)
+  fullName: Altv_Roleplay.Handler.Commands.CMD_ResetHwIdByName(AltV.Net.Elements.Entities.IPlayer, System.String)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CMD_ResetHwIdByName
+    path: Handler/Commands.cs
+    startLine: 88
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("resethwidbyname", false, null)]
+
+      public void CMD_ResetHwIdByName(IPlayer player, string username)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: username
+      type: System.String
+    content.vb: >-
+      <Command("resethwidbyname", False, Nothing)>
+
+      Public Sub CMD_ResetHwIdByName(player As IPlayer, username As String)
+  overload: Altv_Roleplay.Handler.Commands.CMD_ResetHwIdByName*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.CMD_ResetSocialByName(AltV.Net.Elements.Entities.IPlayer,System.String)
+  commentId: M:Altv_Roleplay.Handler.Commands.CMD_ResetSocialByName(AltV.Net.Elements.Entities.IPlayer,System.String)
+  id: CMD_ResetSocialByName(AltV.Net.Elements.Entities.IPlayer,System.String)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: CMD_ResetSocialByName(IPlayer, String)
+  nameWithType: Commands.CMD_ResetSocialByName(IPlayer, String)
+  fullName: Altv_Roleplay.Handler.Commands.CMD_ResetSocialByName(AltV.Net.Elements.Entities.IPlayer, System.String)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CMD_ResetSocialByName
+    path: Handler/Commands.cs
+    startLine: 105
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("resetsocialbyname", false, null)]
+
+      public void CMD_ResetSocialByName(IPlayer player, string username)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: username
+      type: System.String
+    content.vb: >-
+      <Command("resetsocialbyname", False, Nothing)>
+
+      Public Sub CMD_ResetSocialByName(player As IPlayer, username As String)
+  overload: Altv_Roleplay.Handler.Commands.CMD_ResetSocialByName*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.CMD_GetAccIdByName(AltV.Net.Elements.Entities.IPlayer,System.String)
+  commentId: M:Altv_Roleplay.Handler.Commands.CMD_GetAccIdByName(AltV.Net.Elements.Entities.IPlayer,System.String)
+  id: CMD_GetAccIdByName(AltV.Net.Elements.Entities.IPlayer,System.String)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: CMD_GetAccIdByName(IPlayer, String)
+  nameWithType: Commands.CMD_GetAccIdByName(IPlayer, String)
+  fullName: Altv_Roleplay.Handler.Commands.CMD_GetAccIdByName(AltV.Net.Elements.Entities.IPlayer, System.String)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CMD_GetAccIdByName
+    path: Handler/Commands.cs
+    startLine: 123
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("getaccidbyname", false, null)]
+
+      public void CMD_GetAccIdByName(IPlayer player, string username)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: username
+      type: System.String
+    content.vb: >-
+      <Command("getaccidbyname", False, Nothing)>
+
+      Public Sub CMD_GetAccIdByName(player As IPlayer, username As String)
+  overload: Altv_Roleplay.Handler.Commands.CMD_GetAccIdByName*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.PosCMD(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Handler.Commands.PosCMD(AltV.Net.Elements.Entities.IPlayer)
+  id: PosCMD(AltV.Net.Elements.Entities.IPlayer)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: PosCMD(IPlayer)
+  nameWithType: Commands.PosCMD(IPlayer)
+  fullName: Altv_Roleplay.Handler.Commands.PosCMD(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: PosCMD
+    path: Handler/Commands.cs
+    startLine: 139
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("pos", false, null)]
+
+      public void PosCMD(IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    content.vb: >-
+      <Command("pos", False, Nothing)>
+
+      Public Sub PosCMD(player As IPlayer)
+  overload: Altv_Roleplay.Handler.Commands.PosCMD*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.cmd_KICK(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  commentId: M:Altv_Roleplay.Handler.Commands.cmd_KICK(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  id: cmd_KICK(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: cmd_KICK(IPlayer, Int32)
+  nameWithType: Commands.cmd_KICK(IPlayer, Int32)
+  fullName: Altv_Roleplay.Handler.Commands.cmd_KICK(AltV.Net.Elements.Entities.IPlayer, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: cmd_KICK
+    path: Handler/Commands.cs
+    startLine: 147
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("kick", false, null)]
+
+      public static void cmd_KICK(IPlayer player, int charId)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: charId
+      type: System.Int32
+    content.vb: >-
+      <Command("kick", False, Nothing)>
+
+      Public Shared Sub cmd_KICK(player As IPlayer, charId As Integer)
+  overload: Altv_Roleplay.Handler.Commands.cmd_KICK*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Handler.Commands.cmd_BAn(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  commentId: M:Altv_Roleplay.Handler.Commands.cmd_BAn(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  id: cmd_BAn(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: cmd_BAn(IPlayer, Int32)
+  nameWithType: Commands.cmd_BAn(IPlayer, Int32)
+  fullName: Altv_Roleplay.Handler.Commands.cmd_BAn(AltV.Net.Elements.Entities.IPlayer, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: cmd_BAn
+    path: Handler/Commands.cs
+    startLine: 164
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("ban", false, null)]
+
+      public static void cmd_BAn(IPlayer player, int accId)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: accId
+      type: System.Int32
+    content.vb: >-
+      <Command("ban", False, Nothing)>
+
+      Public Shared Sub cmd_BAn(player As IPlayer, accId As Integer)
+  overload: Altv_Roleplay.Handler.Commands.cmd_BAn*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Handler.Commands.CMD_Unban(Altv_Roleplay.Factories.ClassicPlayer,System.Int32)
+  commentId: M:Altv_Roleplay.Handler.Commands.CMD_Unban(Altv_Roleplay.Factories.ClassicPlayer,System.Int32)
+  id: CMD_Unban(Altv_Roleplay.Factories.ClassicPlayer,System.Int32)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: CMD_Unban(ClassicPlayer, Int32)
+  nameWithType: Commands.CMD_Unban(ClassicPlayer, Int32)
+  fullName: Altv_Roleplay.Handler.Commands.CMD_Unban(Altv_Roleplay.Factories.ClassicPlayer, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CMD_Unban
+    path: Handler/Commands.cs
+    startLine: 181
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("unban", false, null)]
+
+      public static void CMD_Unban(ClassicPlayer player, int accId)
+    parameters:
+    - id: player
+      type: Altv_Roleplay.Factories.ClassicPlayer
+    - id: accId
+      type: System.Int32
+    content.vb: >-
+      <Command("unban", False, Nothing)>
+
+      Public Shared Sub CMD_Unban(player As ClassicPlayer, accId As Integer)
+  overload: Altv_Roleplay.Handler.Commands.CMD_Unban*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Handler.Commands.setDimCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.Int32)
+  commentId: M:Altv_Roleplay.Handler.Commands.setDimCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.Int32)
+  id: setDimCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.Int32)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: setDimCMD(IPlayer, Int32, Int32)
+  nameWithType: Commands.setDimCMD(IPlayer, Int32, Int32)
+  fullName: Altv_Roleplay.Handler.Commands.setDimCMD(AltV.Net.Elements.Entities.IPlayer, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: setDimCMD
+    path: Handler/Commands.cs
+    startLine: 198
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("setdim", false, null)]
+
+      public void setDimCMD(IPlayer player, int charId, int dimension)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: charId
+      type: System.Int32
+    - id: dimension
+      type: System.Int32
+    content.vb: >-
+      <Command("setdim", False, Nothing)>
+
+      Public Sub setDimCMD(player As IPlayer, charId As Integer, dimension As Integer)
+  overload: Altv_Roleplay.Handler.Commands.setDimCMD*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.SetATMCmd(AltV.Net.Elements.Entities.IPlayer,System.String)
+  commentId: M:Altv_Roleplay.Handler.Commands.SetATMCmd(AltV.Net.Elements.Entities.IPlayer,System.String)
+  id: SetATMCmd(AltV.Net.Elements.Entities.IPlayer,System.String)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: SetATMCmd(IPlayer, String)
+  nameWithType: Commands.SetATMCmd(IPlayer, String)
+  fullName: Altv_Roleplay.Handler.Commands.SetATMCmd(AltV.Net.Elements.Entities.IPlayer, System.String)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SetATMCmd
+    path: Handler/Commands.cs
+    startLine: 214
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("setatm", false, null)]
+
+      public void SetATMCmd(IPlayer player, string name)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: name
+      type: System.String
+    content.vb: >-
+      <Command("setatm", False, Nothing)>
+
+      Public Sub SetATMCmd(player As IPlayer, name As String)
+  overload: Altv_Roleplay.Handler.Commands.SetATMCmd*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.SetstoreCmd(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.String)
+  commentId: M:Altv_Roleplay.Handler.Commands.SetstoreCmd(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.String)
+  id: SetstoreCmd(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.String)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: SetstoreCmd(IPlayer, Int32, String)
+  nameWithType: Commands.SetstoreCmd(IPlayer, Int32, String)
+  fullName: Altv_Roleplay.Handler.Commands.SetstoreCmd(AltV.Net.Elements.Entities.IPlayer, System.Int32, System.String)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SetstoreCmd
+    path: Handler/Commands.cs
+    startLine: 231
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("setstore", false, null)]
+
+      public void SetstoreCmd(IPlayer player, int shopid, string shopname)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: shopid
+      type: System.Int32
+    - id: shopname
+      type: System.String
+    content.vb: >-
+      <Command("setstore", False, Nothing)>
+
+      Public Sub SetstoreCmd(player As IPlayer, shopid As Integer, shopname As String)
+  overload: Altv_Roleplay.Handler.Commands.SetstoreCmd*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.Setstore7Cmd(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.String,System.Int32)
+  commentId: M:Altv_Roleplay.Handler.Commands.Setstore7Cmd(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.String,System.Int32)
+  id: Setstore7Cmd(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.String,System.Int32)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: Setstore7Cmd(IPlayer, Int32, String, Int32)
+  nameWithType: Commands.Setstore7Cmd(IPlayer, Int32, String, Int32)
+  fullName: Altv_Roleplay.Handler.Commands.Setstore7Cmd(AltV.Net.Elements.Entities.IPlayer, System.Int32, System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Setstore7Cmd
+    path: Handler/Commands.cs
+    startLine: 252
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("setstoreitem", false, null)]
+
+      public void Setstore7Cmd(IPlayer player, int shopid, string item, int itempreis)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: shopid
+      type: System.Int32
+    - id: item
+      type: System.String
+    - id: itempreis
+      type: System.Int32
+    content.vb: >-
+      <Command("setstoreitem", False, Nothing)>
+
+      Public Sub Setstore7Cmd(player As IPlayer, shopid As Integer, item As String, itempreis As Integer)
+  overload: Altv_Roleplay.Handler.Commands.Setstore7Cmd*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.GiveItemCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  commentId: M:Altv_Roleplay.Handler.Commands.GiveItemCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  id: GiveItemCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: GiveItemCMD(IPlayer, Int32)
+  nameWithType: Commands.GiveItemCMD(IPlayer, Int32)
+  fullName: Altv_Roleplay.Handler.Commands.GiveItemCMD(AltV.Net.Elements.Entities.IPlayer, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GiveItemCMD
+    path: Handler/Commands.cs
+    startLine: 275
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("cash", false, null)]
+
+      public void GiveItemCMD(IPlayer player, int itemAmount)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: itemAmount
+      type: System.Int32
+    content.vb: >-
+      <Command("cash", False, Nothing)>
+
+      Public Sub GiveItemCMD(player As IPlayer, itemAmount As Integer)
+  overload: Altv_Roleplay.Handler.Commands.GiveItemCMD*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.wCMD(AltV.Net.Elements.Entities.IPlayer,AltV.Net.Enums.WeaponModel)
+  commentId: M:Altv_Roleplay.Handler.Commands.wCMD(AltV.Net.Elements.Entities.IPlayer,AltV.Net.Enums.WeaponModel)
+  id: wCMD(AltV.Net.Elements.Entities.IPlayer,AltV.Net.Enums.WeaponModel)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: wCMD(IPlayer, WeaponModel)
+  nameWithType: Commands.wCMD(IPlayer, WeaponModel)
+  fullName: Altv_Roleplay.Handler.Commands.wCMD(AltV.Net.Elements.Entities.IPlayer, AltV.Net.Enums.WeaponModel)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: wCMD
+    path: Handler/Commands.cs
+    startLine: 286
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("wep", false, null)]
+
+      public void wCMD(IPlayer player, WeaponModel wp)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: wp
+      type: AltV.Net.Enums.WeaponModel
+    content.vb: >-
+      <Command("wep", False, Nothing)>
+
+      Public Sub wCMD(player As IPlayer, wp As WeaponModel)
+  overload: Altv_Roleplay.Handler.Commands.wCMD*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.GiveItemCMD(AltV.Net.Elements.Entities.IPlayer,System.String,System.Int32)
+  commentId: M:Altv_Roleplay.Handler.Commands.GiveItemCMD(AltV.Net.Elements.Entities.IPlayer,System.String,System.Int32)
+  id: GiveItemCMD(AltV.Net.Elements.Entities.IPlayer,System.String,System.Int32)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: GiveItemCMD(IPlayer, String, Int32)
+  nameWithType: Commands.GiveItemCMD(IPlayer, String, Int32)
+  fullName: Altv_Roleplay.Handler.Commands.GiveItemCMD(AltV.Net.Elements.Entities.IPlayer, System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GiveItemCMD
+    path: Handler/Commands.cs
+    startLine: 300
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("giveitem", false, null)]
+
+      public void GiveItemCMD(IPlayer player, string itemName, int itemAmount)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: itemName
+      type: System.String
+    - id: itemAmount
+      type: System.Int32
+    content.vb: >-
+      <Command("giveitem", False, Nothing)>
+
+      Public Sub GiveItemCMD(player As IPlayer, itemName As String, itemAmount As Integer)
+  overload: Altv_Roleplay.Handler.Commands.GiveItemCMD*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.heyCMD(AltV.Net.Elements.Entities.IPlayer,System.String)
+  commentId: M:Altv_Roleplay.Handler.Commands.heyCMD(AltV.Net.Elements.Entities.IPlayer,System.String)
+  id: heyCMD(AltV.Net.Elements.Entities.IPlayer,System.String)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: heyCMD(IPlayer, String)
+  nameWithType: Commands.heyCMD(IPlayer, String)
+  fullName: Altv_Roleplay.Handler.Commands.heyCMD(AltV.Net.Elements.Entities.IPlayer, System.String)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: heyCMD
+    path: Handler/Commands.cs
+    startLine: 314
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("car", false, null)]
+
+      public void heyCMD(IPlayer player, string model)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: model
+      type: System.String
+    content.vb: >-
+      <Command("car", False, Nothing)>
+
+      Public Sub heyCMD(player As IPlayer, model As String)
+  overload: Altv_Roleplay.Handler.Commands.heyCMD*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.rentcar(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Handler.Commands.rentcar(AltV.Net.Elements.Entities.IPlayer)
+  id: rentcar(AltV.Net.Elements.Entities.IPlayer)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: rentcar(IPlayer)
+  nameWithType: Commands.rentcar(IPlayer)
+  fullName: Altv_Roleplay.Handler.Commands.rentcar(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: rentcar
+    path: Handler/Commands.cs
+    startLine: 326
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("rentcar", false, null)]
+
+      public void rentcar(IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    content.vb: >-
+      <Command("rentcar", False, Nothing)>
+
+      Public Sub rentcar(player As IPlayer)
+  overload: Altv_Roleplay.Handler.Commands.rentcar*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.delcarCMD(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Handler.Commands.delcarCMD(AltV.Net.Elements.Entities.IPlayer)
+  id: delcarCMD(AltV.Net.Elements.Entities.IPlayer)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: delcarCMD(IPlayer)
+  nameWithType: Commands.delcarCMD(IPlayer)
+  fullName: Altv_Roleplay.Handler.Commands.delcarCMD(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: delcarCMD
+    path: Handler/Commands.cs
+    startLine: 338
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("delcar", false, null)]
+
+      public void delcarCMD(IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    content.vb: >-
+      <Command("delcar", False, Nothing)>
+
+      Public Sub delcarCMD(player As IPlayer)
+  overload: Altv_Roleplay.Handler.Commands.delcarCMD*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.DeleteVehicleRange(AltV.Net.Elements.Entities.IPlayer,System.Single)
+  commentId: M:Altv_Roleplay.Handler.Commands.DeleteVehicleRange(AltV.Net.Elements.Entities.IPlayer,System.Single)
+  id: DeleteVehicleRange(AltV.Net.Elements.Entities.IPlayer,System.Single)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: DeleteVehicleRange(IPlayer, Single)
+  nameWithType: Commands.DeleteVehicleRange(IPlayer, Single)
+  fullName: Altv_Roleplay.Handler.Commands.DeleteVehicleRange(AltV.Net.Elements.Entities.IPlayer, System.Single)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: DeleteVehicleRange
+    path: Handler/Commands.cs
+    startLine: 360
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("dvr", false, null)]
+
+      public void DeleteVehicleRange(IPlayer player, float range = 25F)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: range
+      type: System.Single
+    content.vb: >-
+      <Command("dvr", False, Nothing)>
+
+      Public Sub DeleteVehicleRange(player As IPlayer, range As Single = 25F)
+  overload: Altv_Roleplay.Handler.Commands.DeleteVehicleRange*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.FixVehicle(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Handler.Commands.FixVehicle(AltV.Net.Elements.Entities.IPlayer)
+  id: FixVehicle(AltV.Net.Elements.Entities.IPlayer)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: FixVehicle(IPlayer)
+  nameWithType: Commands.FixVehicle(IPlayer)
+  fullName: Altv_Roleplay.Handler.Commands.FixVehicle(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: FixVehicle
+    path: Handler/Commands.cs
+    startLine: 391
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("fix", false, null)]
+
+      public void FixVehicle(IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    content.vb: >-
+      <Command("fix", False, Nothing)>
+
+      Public Sub FixVehicle(player As IPlayer)
+  overload: Altv_Roleplay.Handler.Commands.FixVehicle*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.CMD_parkVehicleById(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  commentId: M:Altv_Roleplay.Handler.Commands.CMD_parkVehicleById(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  id: CMD_parkVehicleById(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: CMD_parkVehicleById(IPlayer, Int32)
+  nameWithType: Commands.CMD_parkVehicleById(IPlayer, Int32)
+  fullName: Altv_Roleplay.Handler.Commands.CMD_parkVehicleById(AltV.Net.Elements.Entities.IPlayer, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CMD_parkVehicleById
+    path: Handler/Commands.cs
+    startLine: 418
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("parkvehicle", false, null)]
+
+      public static void CMD_parkVehicleById(IPlayer player, int vehId)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: vehId
+      type: System.Int32
+    content.vb: >-
+      <Command("parkvehicle", False, Nothing)>
+
+      Public Shared Sub CMD_parkVehicleById(player As IPlayer, vehId As Integer)
+  overload: Altv_Roleplay.Handler.Commands.CMD_parkVehicleById*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Handler.Commands.CMD_ParkALlVehs(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Handler.Commands.CMD_ParkALlVehs(AltV.Net.Elements.Entities.IPlayer)
+  id: CMD_ParkALlVehs(AltV.Net.Elements.Entities.IPlayer)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: CMD_ParkALlVehs(IPlayer)
+  nameWithType: Commands.CMD_ParkALlVehs(IPlayer)
+  fullName: Altv_Roleplay.Handler.Commands.CMD_ParkALlVehs(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CMD_ParkALlVehs
+    path: Handler/Commands.cs
+    startLine: 435
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("parkallvehicles", false, null)]
+
+      public static void CMD_ParkALlVehs(IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    content.vb: >-
+      <Command("parkallvehicles", False, Nothing)>
+
+      Public Shared Sub CMD_ParkALlVehs(player As IPlayer)
+  overload: Altv_Roleplay.Handler.Commands.CMD_ParkALlVehs*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Handler.Commands.CMD_parkVehicle(AltV.Net.Elements.Entities.IPlayer,System.String)
+  commentId: M:Altv_Roleplay.Handler.Commands.CMD_parkVehicle(AltV.Net.Elements.Entities.IPlayer,System.String)
+  id: CMD_parkVehicle(AltV.Net.Elements.Entities.IPlayer,System.String)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: CMD_parkVehicle(IPlayer, String)
+  nameWithType: Commands.CMD_parkVehicle(IPlayer, String)
+  fullName: Altv_Roleplay.Handler.Commands.CMD_parkVehicle(AltV.Net.Elements.Entities.IPlayer, System.String)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CMD_parkVehicle
+    path: Handler/Commands.cs
+    startLine: 459
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("parkvehiclekz", true, null)]
+
+      public static void CMD_parkVehicle(IPlayer player, string plate)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: plate
+      type: System.String
+    content.vb: >-
+      <Command("parkvehiclekz", True, Nothing)>
+
+      Public Shared Sub CMD_parkVehicle(player As IPlayer, plate As String)
+  overload: Altv_Roleplay.Handler.Commands.CMD_parkVehicle*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Handler.Commands.vehPos(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Handler.Commands.vehPos(AltV.Net.Elements.Entities.IPlayer)
+  id: vehPos(AltV.Net.Elements.Entities.IPlayer)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: vehPos(IPlayer)
+  nameWithType: Commands.vehPos(IPlayer)
+  fullName: Altv_Roleplay.Handler.Commands.vehPos(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: vehPos
+    path: Handler/Commands.cs
+    startLine: 476
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("vehpos", false, null)]
+
+      public void vehPos(IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    content.vb: >-
+      <Command("vehpos", False, Nothing)>
+
+      Public Sub vehPos(player As IPlayer)
+  overload: Altv_Roleplay.Handler.Commands.vehPos*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.CMD_GetCarHash(AltV.Net.Elements.Entities.IPlayer,System.String)
+  commentId: M:Altv_Roleplay.Handler.Commands.CMD_GetCarHash(AltV.Net.Elements.Entities.IPlayer,System.String)
+  id: CMD_GetCarHash(AltV.Net.Elements.Entities.IPlayer,System.String)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: CMD_GetCarHash(IPlayer, String)
+  nameWithType: Commands.CMD_GetCarHash(IPlayer, String)
+  fullName: Altv_Roleplay.Handler.Commands.CMD_GetCarHash(AltV.Net.Elements.Entities.IPlayer, System.String)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CMD_GetCarHash
+    path: Handler/Commands.cs
+    startLine: 484
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("carHash", false, null)]
+
+      public static void CMD_GetCarHash(IPlayer player, string car)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: car
+      type: System.String
+    content.vb: >-
+      <Command("carHash", False, Nothing)>
+
+      Public Shared Sub CMD_GetCarHash(player As IPlayer, car As String)
+  overload: Altv_Roleplay.Handler.Commands.CMD_GetCarHash*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Handler.Commands.PowerCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  commentId: M:Altv_Roleplay.Handler.Commands.PowerCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  id: PowerCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: PowerCMD(IPlayer, Int32)
+  nameWithType: Commands.PowerCMD(IPlayer, Int32)
+  fullName: Altv_Roleplay.Handler.Commands.PowerCMD(AltV.Net.Elements.Entities.IPlayer, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: PowerCMD
+    path: Handler/Commands.cs
+    startLine: 511
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("power", false, null)]
+
+      public void PowerCMD(IPlayer player, int engineMultiplier = -1)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: engineMultiplier
+      type: System.Int32
+    content.vb: >-
+      <Command("power", False, Nothing)>
+
+      Public Sub PowerCMD(player As IPlayer, engineMultiplier As Integer = -1)
+  overload: Altv_Roleplay.Handler.Commands.PowerCMD*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.setVeh(Altv_Roleplay.Factories.ClassicPlayer,System.String,System.String)
+  commentId: M:Altv_Roleplay.Handler.Commands.setVeh(Altv_Roleplay.Factories.ClassicPlayer,System.String,System.String)
+  id: setVeh(Altv_Roleplay.Factories.ClassicPlayer,System.String,System.String)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: setVeh(ClassicPlayer, String, String)
+  nameWithType: Commands.setVeh(ClassicPlayer, String, String)
+  fullName: Altv_Roleplay.Handler.Commands.setVeh(Altv_Roleplay.Factories.ClassicPlayer, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: setVeh
+    path: Handler/Commands.cs
+    startLine: 535
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("setveh", false, null)]
+
+      public void setVeh(ClassicPlayer player, string name, string plate)
+    parameters:
+    - id: player
+      type: Altv_Roleplay.Factories.ClassicPlayer
+    - id: name
+      type: System.String
+    - id: plate
+      type: System.String
+    content.vb: >-
+      <Command("setveh", False, Nothing)>
+
+      Public Sub setVeh(player As ClassicPlayer, name As String, plate As String)
+  overload: Altv_Roleplay.Handler.Commands.setVeh*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.CMD_Giveadmin(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.Int32)
+  commentId: M:Altv_Roleplay.Handler.Commands.CMD_Giveadmin(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.Int32)
+  id: CMD_Giveadmin(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.Int32)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: CMD_Giveadmin(IPlayer, Int32, Int32)
+  nameWithType: Commands.CMD_Giveadmin(IPlayer, Int32, Int32)
+  fullName: Altv_Roleplay.Handler.Commands.CMD_Giveadmin(AltV.Net.Elements.Entities.IPlayer, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CMD_Giveadmin
+    path: Handler/Commands.cs
+    startLine: 564
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("setadmin", false, null)]
+
+      public static void CMD_Giveadmin(IPlayer player, int accId, int adminLevel)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: accId
+      type: System.Int32
+    - id: adminLevel
+      type: System.Int32
+    content.vb: >-
+      <Command("setadmin", False, Nothing)>
+
+      Public Shared Sub CMD_Giveadmin(player As IPlayer, accId As Integer, adminLevel As Integer)
+  overload: Altv_Roleplay.Handler.Commands.CMD_Giveadmin*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Handler.Commands.GetHereCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  commentId: M:Altv_Roleplay.Handler.Commands.GetHereCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  id: GetHereCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: GetHereCMD(IPlayer, Int32)
+  nameWithType: Commands.GetHereCMD(IPlayer, Int32)
+  fullName: Altv_Roleplay.Handler.Commands.GetHereCMD(AltV.Net.Elements.Entities.IPlayer, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetHereCMD
+    path: Handler/Commands.cs
+    startLine: 578
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("gethere", false, null)]
+
+      public void GetHereCMD(IPlayer player, int targetId)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: targetId
+      type: System.Int32
+    content.vb: >-
+      <Command("gethere", False, Nothing)>
+
+      Public Sub GetHereCMD(player As IPlayer, targetId As Integer)
+  overload: Altv_Roleplay.Handler.Commands.GetHereCMD*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.GotoCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  commentId: M:Altv_Roleplay.Handler.Commands.GotoCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  id: GotoCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: GotoCMD(IPlayer, Int32)
+  nameWithType: Commands.GotoCMD(IPlayer, Int32)
+  fullName: Altv_Roleplay.Handler.Commands.GotoCMD(AltV.Net.Elements.Entities.IPlayer, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GotoCMD
+    path: Handler/Commands.cs
+    startLine: 613
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("goto", false, null)]
+
+      public void GotoCMD(IPlayer player, int targetId)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: targetId
+      type: System.Int32
+    content.vb: >-
+      <Command("goto", False, Nothing)>
+
+      Public Sub GotoCMD(player As IPlayer, targetId As Integer)
+  overload: Altv_Roleplay.Handler.Commands.GotoCMD*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.FactionCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.Int32)
+  commentId: M:Altv_Roleplay.Handler.Commands.FactionCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.Int32)
+  id: FactionCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.Int32)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: FactionCMD(IPlayer, Int32, Int32)
+  nameWithType: Commands.FactionCMD(IPlayer, Int32, Int32)
+  fullName: Altv_Roleplay.Handler.Commands.FactionCMD(AltV.Net.Elements.Entities.IPlayer, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: FactionCMD
+    path: Handler/Commands.cs
+    startLine: 648
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("faction", false, null)]
+
+      public void FactionCMD(IPlayer player, int charId, int id)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: charId
+      type: System.Int32
+    - id: id
+      type: System.Int32
+    content.vb: >-
+      <Command("faction", False, Nothing)>
+
+      Public Sub FactionCMD(player As IPlayer, charId As Integer, id As Integer)
+  overload: Altv_Roleplay.Handler.Commands.FactionCMD*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.ReviveTargetCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  commentId: M:Altv_Roleplay.Handler.Commands.ReviveTargetCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  id: ReviveTargetCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: ReviveTargetCMD(IPlayer, Int32)
+  nameWithType: Commands.ReviveTargetCMD(IPlayer, Int32)
+  fullName: Altv_Roleplay.Handler.Commands.ReviveTargetCMD(AltV.Net.Elements.Entities.IPlayer, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: ReviveTargetCMD
+    path: Handler/Commands.cs
+    startLine: 669
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("revive", false, null)]
+
+      public void ReviveTargetCMD(IPlayer player, int targetId)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: targetId
+      type: System.Int32
+    content.vb: >-
+      <Command("revive", False, Nothing)>
+
+      Public Sub ReviveTargetCMD(player As IPlayer, targetId As Integer)
+  overload: Altv_Roleplay.Handler.Commands.ReviveTargetCMD*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.supportCMD(AltV.Net.Elements.Entities.IPlayer,System.String)
+  commentId: M:Altv_Roleplay.Handler.Commands.supportCMD(AltV.Net.Elements.Entities.IPlayer,System.String)
+  id: supportCMD(AltV.Net.Elements.Entities.IPlayer,System.String)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: supportCMD(IPlayer, String)
+  nameWithType: Commands.supportCMD(IPlayer, String)
+  fullName: Altv_Roleplay.Handler.Commands.supportCMD(AltV.Net.Elements.Entities.IPlayer, System.String)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: supportCMD
+    path: Handler/Commands.cs
+    startLine: 688
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("support", true, null)]
+
+      public void supportCMD(IPlayer player, string msg)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: msg
+      type: System.String
+    content.vb: >-
+      <Command("support", True, Nothing)>
+
+      Public Sub supportCMD(player As IPlayer, msg As String)
+  overload: Altv_Roleplay.Handler.Commands.supportCMD*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.VEH_RELOAD(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Handler.Commands.VEH_RELOAD(AltV.Net.Elements.Entities.IPlayer)
+  id: VEH_RELOAD(AltV.Net.Elements.Entities.IPlayer)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: VEH_RELOAD(IPlayer)
+  nameWithType: Commands.VEH_RELOAD(IPlayer)
+  fullName: Altv_Roleplay.Handler.Commands.VEH_RELOAD(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: VEH_RELOAD
+    path: Handler/Commands.cs
+    startLine: 705
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("ReloadVehShops", false, null)]
+
+      public static void VEH_RELOAD(IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    content.vb: >-
+      <Command("ReloadVehShops", False, Nothing)>
+
+      Public Shared Sub VEH_RELOAD(player As IPlayer)
+  overload: Altv_Roleplay.Handler.Commands.VEH_RELOAD*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Handler.Commands.CMD_RELOAD(AltV.Net.Elements.Entities.IPlayer)
+  commentId: M:Altv_Roleplay.Handler.Commands.CMD_RELOAD(AltV.Net.Elements.Entities.IPlayer)
+  id: CMD_RELOAD(AltV.Net.Elements.Entities.IPlayer)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: CMD_RELOAD(IPlayer)
+  nameWithType: Commands.CMD_RELOAD(IPlayer)
+  fullName: Altv_Roleplay.Handler.Commands.CMD_RELOAD(AltV.Net.Elements.Entities.IPlayer)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CMD_RELOAD
+    path: Handler/Commands.cs
+    startLine: 719
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("ReloadDB", false, null)]
+
+      public static void CMD_RELOAD(IPlayer player)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    content.vb: >-
+      <Command("ReloadDB", False, Nothing)>
+
+      Public Shared Sub CMD_RELOAD(player As IPlayer)
+  overload: Altv_Roleplay.Handler.Commands.CMD_RELOAD*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.Handler.Commands.TpPosCMD(AltV.Net.Elements.Entities.IPlayer,System.Single,System.Single,System.Single)
+  commentId: M:Altv_Roleplay.Handler.Commands.TpPosCMD(AltV.Net.Elements.Entities.IPlayer,System.Single,System.Single,System.Single)
+  id: TpPosCMD(AltV.Net.Elements.Entities.IPlayer,System.Single,System.Single,System.Single)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: TpPosCMD(IPlayer, Single, Single, Single)
+  nameWithType: Commands.TpPosCMD(IPlayer, Single, Single, Single)
+  fullName: Altv_Roleplay.Handler.Commands.TpPosCMD(AltV.Net.Elements.Entities.IPlayer, System.Single, System.Single, System.Single)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: TpPosCMD
+    path: Handler/Commands.cs
+    startLine: 745
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("tppos", false, null)]
+
+      public void TpPosCMD(IPlayer player, float X, float Y, float Z)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: X
+      type: System.Single
+    - id: Y
+      type: System.Single
+    - id: Z
+      type: System.Single
+    content.vb: >-
+      <Command("tppos", False, Nothing)>
+
+      Public Sub TpPosCMD(player As IPlayer, X As Single, Y As Single, Z As Single)
+  overload: Altv_Roleplay.Handler.Commands.TpPosCMD*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.announceCMD(AltV.Net.Elements.Entities.IPlayer,System.String)
+  commentId: M:Altv_Roleplay.Handler.Commands.announceCMD(AltV.Net.Elements.Entities.IPlayer,System.String)
+  id: announceCMD(AltV.Net.Elements.Entities.IPlayer,System.String)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: announceCMD(IPlayer, String)
+  nameWithType: Commands.announceCMD(IPlayer, String)
+  fullName: Altv_Roleplay.Handler.Commands.announceCMD(AltV.Net.Elements.Entities.IPlayer, System.String)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: announceCMD
+    path: Handler/Commands.cs
+    startLine: 760
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("msg", true, null)]
+
+      public void announceCMD(IPlayer player, string msg)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: msg
+      type: System.String
+    content.vb: >-
+      <Command("msg", True, Nothing)>
+
+      Public Sub announceCMD(player As IPlayer, msg As String)
+  overload: Altv_Roleplay.Handler.Commands.announceCMD*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.Commands.GetHereCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:Altv_Roleplay.Handler.Commands.GetHereCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: GetHereCMD(AltV.Net.Elements.Entities.IPlayer,System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: Altv_Roleplay.Handler.Commands
+  langs:
+  - csharp
+  - vb
+  name: GetHereCMD(IPlayer, Int32, Int32, Int32, Int32)
+  nameWithType: Commands.GetHereCMD(IPlayer, Int32, Int32, Int32, Int32)
+  fullName: Altv_Roleplay.Handler.Commands.GetHereCMD(AltV.Net.Elements.Entities.IPlayer, System.Int32, System.Int32, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/Commands.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetHereCMD
+    path: Handler/Commands.cs
+    startLine: 779
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Command("ptwp", false, null)]
+
+      public void GetHereCMD(IPlayer player, int targetId, int x, int y, int z)
+    parameters:
+    - id: player
+      type: AltV.Net.Elements.Entities.IPlayer
+    - id: targetId
+      type: System.Int32
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Int32
+    - id: z
+      type: System.Int32
+    content.vb: >-
+      <Command("ptwp", False, Nothing)>
+
+      Public Sub GetHereCMD(player As IPlayer, targetId As Integer, x As Integer, y As Integer, z As Integer)
+  overload: Altv_Roleplay.Handler.Commands.GetHereCMD*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.Handler
+  commentId: N:Altv_Roleplay.Handler
+  name: Altv_Roleplay.Handler
+  nameWithType: Altv_Roleplay.Handler
+  fullName: Altv_Roleplay.Handler
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AltV.Net.IScript
+  commentId: T:AltV.Net.IScript
+  parent: AltV.Net
+  isExternal: true
+  name: IScript
+  nameWithType: IScript
+  fullName: AltV.Net.IScript
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AltV.Net
+  commentId: N:AltV.Net
+  isExternal: true
+  name: AltV.Net
+  nameWithType: AltV.Net
+  fullName: AltV.Net
+- uid: Altv_Roleplay.Handler.Commands.Noti1CMD*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.Noti1CMD
+  name: Noti1CMD
+  nameWithType: Commands.Noti1CMD
+  fullName: Altv_Roleplay.Handler.Commands.Noti1CMD
+- uid: AltV.Net.Elements.Entities.IPlayer
+  commentId: T:AltV.Net.Elements.Entities.IPlayer
+  parent: AltV.Net.Elements.Entities
+  isExternal: true
+  name: IPlayer
+  nameWithType: IPlayer
+  fullName: AltV.Net.Elements.Entities.IPlayer
+- uid: AltV.Net.Elements.Entities
+  commentId: N:AltV.Net.Elements.Entities
+  isExternal: true
+  name: AltV.Net.Elements.Entities
+  nameWithType: AltV.Net.Elements.Entities
+  fullName: AltV.Net.Elements.Entities
+- uid: Altv_Roleplay.Handler.Commands.Noti2CMD*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.Noti2CMD
+  name: Noti2CMD
+  nameWithType: Commands.Noti2CMD
+  fullName: Altv_Roleplay.Handler.Commands.Noti2CMD
+- uid: Altv_Roleplay.Handler.Commands.CMD_Retard*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.CMD_Retard
+  name: CMD_Retard
+  nameWithType: Commands.CMD_Retard
+  fullName: Altv_Roleplay.Handler.Commands.CMD_Retard
+- uid: Altv_Roleplay.Handler.Commands.CMD_ResetHwIdById*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.CMD_ResetHwIdById
+  name: CMD_ResetHwIdById
+  nameWithType: Commands.CMD_ResetHwIdById
+  fullName: Altv_Roleplay.Handler.Commands.CMD_ResetHwIdById
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.Handler.Commands.CMD_ResetSocialById*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.CMD_ResetSocialById
+  name: CMD_ResetSocialById
+  nameWithType: Commands.CMD_ResetSocialById
+  fullName: Altv_Roleplay.Handler.Commands.CMD_ResetSocialById
+- uid: Altv_Roleplay.Handler.Commands.CMD_ResetHwIdByName*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.CMD_ResetHwIdByName
+  name: CMD_ResetHwIdByName
+  nameWithType: Commands.CMD_ResetHwIdByName
+  fullName: Altv_Roleplay.Handler.Commands.CMD_ResetHwIdByName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Altv_Roleplay.Handler.Commands.CMD_ResetSocialByName*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.CMD_ResetSocialByName
+  name: CMD_ResetSocialByName
+  nameWithType: Commands.CMD_ResetSocialByName
+  fullName: Altv_Roleplay.Handler.Commands.CMD_ResetSocialByName
+- uid: Altv_Roleplay.Handler.Commands.CMD_GetAccIdByName*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.CMD_GetAccIdByName
+  name: CMD_GetAccIdByName
+  nameWithType: Commands.CMD_GetAccIdByName
+  fullName: Altv_Roleplay.Handler.Commands.CMD_GetAccIdByName
+- uid: Altv_Roleplay.Handler.Commands.PosCMD*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.PosCMD
+  name: PosCMD
+  nameWithType: Commands.PosCMD
+  fullName: Altv_Roleplay.Handler.Commands.PosCMD
+- uid: Altv_Roleplay.Handler.Commands.cmd_KICK*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.cmd_KICK
+  name: cmd_KICK
+  nameWithType: Commands.cmd_KICK
+  fullName: Altv_Roleplay.Handler.Commands.cmd_KICK
+- uid: Altv_Roleplay.Handler.Commands.cmd_BAn*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.cmd_BAn
+  name: cmd_BAn
+  nameWithType: Commands.cmd_BAn
+  fullName: Altv_Roleplay.Handler.Commands.cmd_BAn
+- uid: Altv_Roleplay.Handler.Commands.CMD_Unban*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.CMD_Unban
+  name: CMD_Unban
+  nameWithType: Commands.CMD_Unban
+  fullName: Altv_Roleplay.Handler.Commands.CMD_Unban
+- uid: Altv_Roleplay.Factories.ClassicPlayer
+  commentId: T:Altv_Roleplay.Factories.ClassicPlayer
+  parent: Altv_Roleplay.Factories
+  name: ClassicPlayer
+  nameWithType: ClassicPlayer
+  fullName: Altv_Roleplay.Factories.ClassicPlayer
+- uid: Altv_Roleplay.Factories
+  commentId: N:Altv_Roleplay.Factories
+  name: Altv_Roleplay.Factories
+  nameWithType: Altv_Roleplay.Factories
+  fullName: Altv_Roleplay.Factories
+- uid: Altv_Roleplay.Handler.Commands.setDimCMD*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.setDimCMD
+  name: setDimCMD
+  nameWithType: Commands.setDimCMD
+  fullName: Altv_Roleplay.Handler.Commands.setDimCMD
+- uid: Altv_Roleplay.Handler.Commands.SetATMCmd*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.SetATMCmd
+  name: SetATMCmd
+  nameWithType: Commands.SetATMCmd
+  fullName: Altv_Roleplay.Handler.Commands.SetATMCmd
+- uid: Altv_Roleplay.Handler.Commands.SetstoreCmd*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.SetstoreCmd
+  name: SetstoreCmd
+  nameWithType: Commands.SetstoreCmd
+  fullName: Altv_Roleplay.Handler.Commands.SetstoreCmd
+- uid: Altv_Roleplay.Handler.Commands.Setstore7Cmd*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.Setstore7Cmd
+  name: Setstore7Cmd
+  nameWithType: Commands.Setstore7Cmd
+  fullName: Altv_Roleplay.Handler.Commands.Setstore7Cmd
+- uid: Altv_Roleplay.Handler.Commands.GiveItemCMD*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.GiveItemCMD
+  name: GiveItemCMD
+  nameWithType: Commands.GiveItemCMD
+  fullName: Altv_Roleplay.Handler.Commands.GiveItemCMD
+- uid: Altv_Roleplay.Handler.Commands.wCMD*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.wCMD
+  name: wCMD
+  nameWithType: Commands.wCMD
+  fullName: Altv_Roleplay.Handler.Commands.wCMD
+- uid: AltV.Net.Enums.WeaponModel
+  commentId: T:AltV.Net.Enums.WeaponModel
+  parent: AltV.Net.Enums
+  isExternal: true
+  name: WeaponModel
+  nameWithType: WeaponModel
+  fullName: AltV.Net.Enums.WeaponModel
+- uid: AltV.Net.Enums
+  commentId: N:AltV.Net.Enums
+  isExternal: true
+  name: AltV.Net.Enums
+  nameWithType: AltV.Net.Enums
+  fullName: AltV.Net.Enums
+- uid: Altv_Roleplay.Handler.Commands.heyCMD*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.heyCMD
+  name: heyCMD
+  nameWithType: Commands.heyCMD
+  fullName: Altv_Roleplay.Handler.Commands.heyCMD
+- uid: Altv_Roleplay.Handler.Commands.rentcar*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.rentcar
+  name: rentcar
+  nameWithType: Commands.rentcar
+  fullName: Altv_Roleplay.Handler.Commands.rentcar
+- uid: Altv_Roleplay.Handler.Commands.delcarCMD*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.delcarCMD
+  name: delcarCMD
+  nameWithType: Commands.delcarCMD
+  fullName: Altv_Roleplay.Handler.Commands.delcarCMD
+- uid: Altv_Roleplay.Handler.Commands.DeleteVehicleRange*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.DeleteVehicleRange
+  name: DeleteVehicleRange
+  nameWithType: Commands.DeleteVehicleRange
+  fullName: Altv_Roleplay.Handler.Commands.DeleteVehicleRange
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Altv_Roleplay.Handler.Commands.FixVehicle*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.FixVehicle
+  name: FixVehicle
+  nameWithType: Commands.FixVehicle
+  fullName: Altv_Roleplay.Handler.Commands.FixVehicle
+- uid: Altv_Roleplay.Handler.Commands.CMD_parkVehicleById*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.CMD_parkVehicleById
+  name: CMD_parkVehicleById
+  nameWithType: Commands.CMD_parkVehicleById
+  fullName: Altv_Roleplay.Handler.Commands.CMD_parkVehicleById
+- uid: Altv_Roleplay.Handler.Commands.CMD_ParkALlVehs*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.CMD_ParkALlVehs
+  name: CMD_ParkALlVehs
+  nameWithType: Commands.CMD_ParkALlVehs
+  fullName: Altv_Roleplay.Handler.Commands.CMD_ParkALlVehs
+- uid: Altv_Roleplay.Handler.Commands.CMD_parkVehicle*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.CMD_parkVehicle
+  name: CMD_parkVehicle
+  nameWithType: Commands.CMD_parkVehicle
+  fullName: Altv_Roleplay.Handler.Commands.CMD_parkVehicle
+- uid: Altv_Roleplay.Handler.Commands.vehPos*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.vehPos
+  name: vehPos
+  nameWithType: Commands.vehPos
+  fullName: Altv_Roleplay.Handler.Commands.vehPos
+- uid: Altv_Roleplay.Handler.Commands.CMD_GetCarHash*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.CMD_GetCarHash
+  name: CMD_GetCarHash
+  nameWithType: Commands.CMD_GetCarHash
+  fullName: Altv_Roleplay.Handler.Commands.CMD_GetCarHash
+- uid: Altv_Roleplay.Handler.Commands.PowerCMD*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.PowerCMD
+  name: PowerCMD
+  nameWithType: Commands.PowerCMD
+  fullName: Altv_Roleplay.Handler.Commands.PowerCMD
+- uid: Altv_Roleplay.Handler.Commands.setVeh*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.setVeh
+  name: setVeh
+  nameWithType: Commands.setVeh
+  fullName: Altv_Roleplay.Handler.Commands.setVeh
+- uid: Altv_Roleplay.Handler.Commands.CMD_Giveadmin*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.CMD_Giveadmin
+  name: CMD_Giveadmin
+  nameWithType: Commands.CMD_Giveadmin
+  fullName: Altv_Roleplay.Handler.Commands.CMD_Giveadmin
+- uid: Altv_Roleplay.Handler.Commands.GetHereCMD*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.GetHereCMD
+  name: GetHereCMD
+  nameWithType: Commands.GetHereCMD
+  fullName: Altv_Roleplay.Handler.Commands.GetHereCMD
+- uid: Altv_Roleplay.Handler.Commands.GotoCMD*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.GotoCMD
+  name: GotoCMD
+  nameWithType: Commands.GotoCMD
+  fullName: Altv_Roleplay.Handler.Commands.GotoCMD
+- uid: Altv_Roleplay.Handler.Commands.FactionCMD*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.FactionCMD
+  name: FactionCMD
+  nameWithType: Commands.FactionCMD
+  fullName: Altv_Roleplay.Handler.Commands.FactionCMD
+- uid: Altv_Roleplay.Handler.Commands.ReviveTargetCMD*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.ReviveTargetCMD
+  name: ReviveTargetCMD
+  nameWithType: Commands.ReviveTargetCMD
+  fullName: Altv_Roleplay.Handler.Commands.ReviveTargetCMD
+- uid: Altv_Roleplay.Handler.Commands.supportCMD*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.supportCMD
+  name: supportCMD
+  nameWithType: Commands.supportCMD
+  fullName: Altv_Roleplay.Handler.Commands.supportCMD
+- uid: Altv_Roleplay.Handler.Commands.VEH_RELOAD*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.VEH_RELOAD
+  name: VEH_RELOAD
+  nameWithType: Commands.VEH_RELOAD
+  fullName: Altv_Roleplay.Handler.Commands.VEH_RELOAD
+- uid: Altv_Roleplay.Handler.Commands.CMD_RELOAD*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.CMD_RELOAD
+  name: CMD_RELOAD
+  nameWithType: Commands.CMD_RELOAD
+  fullName: Altv_Roleplay.Handler.Commands.CMD_RELOAD
+- uid: Altv_Roleplay.Handler.Commands.TpPosCMD*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.TpPosCMD
+  name: TpPosCMD
+  nameWithType: Commands.TpPosCMD
+  fullName: Altv_Roleplay.Handler.Commands.TpPosCMD
+- uid: Altv_Roleplay.Handler.Commands.announceCMD*
+  commentId: Overload:Altv_Roleplay.Handler.Commands.announceCMD
+  name: announceCMD
+  nameWithType: Commands.announceCMD
+  fullName: Altv_Roleplay.Handler.Commands.announceCMD

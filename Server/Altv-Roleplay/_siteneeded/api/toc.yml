@@ -1,0 +1,294 @@
+### YamlMime:TableOfContent
+- uid: Altv_Roleplay
+  name: Altv_Roleplay
+  items:
+  - uid: Altv_Roleplay.Main
+    name: Main
+- uid: Altv_Roleplay.CarRental.Cayo
+  name: Altv_Roleplay.CarRental.Cayo
+  items:
+  - uid: Altv_Roleplay.CarRental.Cayo.Main
+    name: Main
+  - uid: Altv_Roleplay.CarRental.Cayo.Main.Minijob_Spots
+    name: Main.Minijob_Spots
+- uid: Altv_Roleplay.EntityStreamer
+  name: Altv_Roleplay.EntityStreamer
+  items:
+  - uid: Altv_Roleplay.EntityStreamer.Blip
+    name: Blip
+  - uid: Altv_Roleplay.EntityStreamer.BlipStreamer
+    name: BlipStreamer
+  - uid: Altv_Roleplay.EntityStreamer.DropShadow
+    name: DropShadow
+  - uid: Altv_Roleplay.EntityStreamer.GlobalEntity
+    name: GlobalEntity
+  - uid: Altv_Roleplay.EntityStreamer.HelpText
+    name: HelpText
+  - uid: Altv_Roleplay.EntityStreamer.HelpTextStreamer
+    name: HelpTextStreamer
+  - uid: Altv_Roleplay.EntityStreamer.Marker
+    name: Marker
+  - uid: Altv_Roleplay.EntityStreamer.MarkerStreamer
+    name: MarkerStreamer
+  - uid: Altv_Roleplay.EntityStreamer.MarkerTypes
+    name: MarkerTypes
+  - uid: Altv_Roleplay.EntityStreamer.MoveData
+    name: MoveData
+  - uid: Altv_Roleplay.EntityStreamer.Ped
+    name: Ped
+  - uid: Altv_Roleplay.EntityStreamer.PedStreamer
+    name: PedStreamer
+  - uid: Altv_Roleplay.EntityStreamer.PlayerLabel
+    name: PlayerLabel
+  - uid: Altv_Roleplay.EntityStreamer.Prop
+    name: Prop
+  - uid: Altv_Roleplay.EntityStreamer.PropStreamer
+    name: PropStreamer
+  - uid: Altv_Roleplay.EntityStreamer.Rgb
+    name: Rgb
+  - uid: Altv_Roleplay.EntityStreamer.TextLabelStreamer
+    name: TextLabelStreamer
+  - uid: Altv_Roleplay.EntityStreamer.TextureVariation
+    name: TextureVariation
+- uid: Altv_Roleplay.FactionCars.LSPD
+  name: Altv_Roleplay.FactionCars.LSPD
+  items:
+  - uid: Altv_Roleplay.FactionCars.LSPD.Cars
+    name: Cars
+  - uid: Altv_Roleplay.FactionCars.LSPD.Gear
+    name: Gear
+- uid: Altv_Roleplay.Factions.LSFD
+  name: Altv_Roleplay.Factions.LSFD
+  items:
+  - uid: Altv_Roleplay.Factions.LSFD.Functions
+    name: Functions
+- uid: Altv_Roleplay.Factories
+  name: Altv_Roleplay.Factories
+  items:
+  - uid: Altv_Roleplay.Factories.ClassicColshape
+    name: ClassicColshape
+  - uid: Altv_Roleplay.Factories.ClassicPlayer
+    name: ClassicPlayer
+  - uid: Altv_Roleplay.Factories.ClassicVehicle
+    name: ClassicVehicle
+  - uid: Altv_Roleplay.Factories.ColshapeFactory
+    name: ColshapeFactory
+  - uid: Altv_Roleplay.Factories.VehicleFactory
+    name: VehicleFactory
+- uid: Altv_Roleplay.Handler
+  name: Altv_Roleplay.Handler
+  items:
+  - uid: Altv_Roleplay.Handler.bankPickUpPosition
+    name: bankPickUpPosition
+  - uid: Altv_Roleplay.Handler.Commands
+    name: Commands
+  - uid: Altv_Roleplay.Handler.LSPDPickUpPosition
+    name: LSPDPickUpPosition
+  - uid: Altv_Roleplay.Handler.WeedPot
+    name: WeedPot
+- uid: Altv_Roleplay.Minijobs.Busfahrer
+  name: Altv_Roleplay.Minijobs.Busfahrer
+  items:
+  - uid: Altv_Roleplay.Minijobs.Busfahrer.Main
+    name: Main
+- uid: Altv_Roleplay.Minijobs.Elektrolieferant
+  name: Altv_Roleplay.Minijobs.Elektrolieferant
+  items:
+  - uid: Altv_Roleplay.Minijobs.Elektrolieferant.Main
+    name: Main
+  - uid: Altv_Roleplay.Minijobs.Elektrolieferant.Main.Minijob_Spots
+    name: Main.Minijob_Spots
+- uid: Altv_Roleplay.Minijobs.Müllmann
+  name: Altv_Roleplay.Minijobs.Müllmann
+  items:
+  - uid: Altv_Roleplay.Minijobs.Müllmann.Main
+    name: Main
+- uid: Altv_Roleplay.Minijobs.Pilot
+  name: Altv_Roleplay.Minijobs.Pilot
+  items:
+  - uid: Altv_Roleplay.Minijobs.Pilot.Main
+    name: Main
+  - uid: Altv_Roleplay.Minijobs.Pilot.Main.Minijob_Spots
+    name: Main.Minijob_Spots
+- uid: Altv_Roleplay.models
+  name: Altv_Roleplay.models
+  items:
+  - uid: Altv_Roleplay.models.Accounts
+    name: Accounts
+  - uid: Altv_Roleplay.models.AccountsCharacters
+    name: AccountsCharacters
+  - uid: Altv_Roleplay.models.Characters_Bank
+    name: Characters_Bank
+  - uid: Altv_Roleplay.models.Characters_Inventory
+    name: Characters_Inventory
+  - uid: Altv_Roleplay.models.Characters_LastPos
+    name: Characters_LastPos
+  - uid: Altv_Roleplay.models.Characters_Licenses
+    name: Characters_Licenses
+  - uid: Altv_Roleplay.models.Characters_Minijobs
+    name: Characters_Minijobs
+  - uid: Altv_Roleplay.models.Characters_Permissions
+    name: Characters_Permissions
+  - uid: Altv_Roleplay.models.Characters_Skin
+    name: Characters_Skin
+  - uid: Altv_Roleplay.models.Characters_Tablet_Apps
+    name: Characters_Tablet_Apps
+  - uid: Altv_Roleplay.models.Characters_Tattoos
+    name: Characters_Tattoos
+  - uid: Altv_Roleplay.models.Characters_Wanteds
+    name: Characters_Wanteds
+  - uid: Altv_Roleplay.models.Characters_Wardrobe
+    name: Characters_Wardrobe
+  - uid: Altv_Roleplay.models.CharactersOwnedClothes
+    name: CharactersOwnedClothes
+  - uid: Altv_Roleplay.models.CharactersPhoneChatMessages
+    name: CharactersPhoneChatMessages
+  - uid: Altv_Roleplay.models.CharactersPhoneChats
+    name: CharactersPhoneChats
+  - uid: Altv_Roleplay.models.CharactersPhoneContacts
+    name: CharactersPhoneContacts
+  - uid: Altv_Roleplay.models.CharactersPhoneVerlauf
+    name: CharactersPhoneVerlauf
+  - uid: Altv_Roleplay.models.gtaContext
+    name: gtaContext
+  - uid: Altv_Roleplay.models.Server_All_Vehicles
+    name: Server_All_Vehicles
+  - uid: Altv_Roleplay.models.Server_Animations
+    name: Server_Animations
+  - uid: Altv_Roleplay.models.Server_ATM
+    name: Server_ATM
+  - uid: Altv_Roleplay.models.Server_Bank_Paper
+    name: Server_Bank_Paper
+  - uid: Altv_Roleplay.models.Server_Banks
+    name: Server_Banks
+  - uid: Altv_Roleplay.models.Server_Barbers
+    name: Server_Barbers
+  - uid: Altv_Roleplay.models.Server_Blips
+    name: Server_Blips
+  - uid: Altv_Roleplay.models.Server_Clothes_Shops
+    name: Server_Clothes_Shops
+  - uid: Altv_Roleplay.models.Server_Clothes_Shops_Items
+    name: Server_Clothes_Shops_Items
+  - uid: Altv_Roleplay.models.Server_Clothes_Storages
+    name: Server_Clothes_Storages
+  - uid: Altv_Roleplay.models.Server_Company_Members
+    name: Server_Company_Members
+  - uid: Altv_Roleplay.models.Server_Companys
+    name: Server_Companys
+  - uid: Altv_Roleplay.models.Server_Doors
+    name: Server_Doors
+  - uid: Altv_Roleplay.models.Server_Dropped_Items
+    name: Server_Dropped_Items
+  - uid: Altv_Roleplay.models.Server_Faction_Clothes
+    name: Server_Faction_Clothes
+  - uid: Altv_Roleplay.models.Server_Faction_Labor_Items
+    name: Server_Faction_Labor_Items
+  - uid: Altv_Roleplay.models.Server_Faction_Members
+    name: Server_Faction_Members
+  - uid: Altv_Roleplay.models.Server_Faction_Positions
+    name: Server_Faction_Positions
+  - uid: Altv_Roleplay.models.Server_Faction_Ranks
+    name: Server_Faction_Ranks
+  - uid: Altv_Roleplay.models.Server_Faction_Storage_Items
+    name: Server_Faction_Storage_Items
+  - uid: Altv_Roleplay.models.Server_Factions
+    name: Server_Factions
+  - uid: Altv_Roleplay.models.Server_Farming_Producer
+    name: Server_Farming_Producer
+  - uid: Altv_Roleplay.models.Server_Farming_Spots
+    name: Server_Farming_Spots
+  - uid: Altv_Roleplay.models.Server_Fuel_Spots
+    name: Server_Fuel_Spots
+  - uid: Altv_Roleplay.models.Server_Fuel_Stations
+    name: Server_Fuel_Stations
+  - uid: Altv_Roleplay.models.Server_Gang_Members
+    name: Server_Gang_Members
+  - uid: Altv_Roleplay.models.Server_Gang_Positions
+    name: Server_Gang_Positions
+  - uid: Altv_Roleplay.models.Server_Gang_Ranks
+    name: Server_Gang_Ranks
+  - uid: Altv_Roleplay.models.Server_Gang_Storage_Items
+    name: Server_Gang_Storage_Items
+  - uid: Altv_Roleplay.models.Server_Gangs
+    name: Server_Gangs
+  - uid: Altv_Roleplay.models.Server_Garage_Slots
+    name: Server_Garage_Slots
+  - uid: Altv_Roleplay.models.Server_Garages
+    name: Server_Garages
+  - uid: Altv_Roleplay.models.Server_Hotels
+    name: Server_Hotels
+  - uid: Altv_Roleplay.models.Server_Hotels_Apartments
+    name: Server_Hotels_Apartments
+  - uid: Altv_Roleplay.models.Server_Hotels_Storage
+    name: Server_Hotels_Storage
+  - uid: Altv_Roleplay.models.Server_Houses
+    name: Server_Houses
+  - uid: Altv_Roleplay.models.Server_Houses_Interiors
+    name: Server_Houses_Interiors
+  - uid: Altv_Roleplay.models.Server_Houses_Renter
+    name: Server_Houses_Renter
+  - uid: Altv_Roleplay.models.Server_Houses_Storage
+    name: Server_Houses_Storage
+  - uid: Altv_Roleplay.models.Server_IdentifiedVehicles
+    name: Server_IdentifiedVehicles
+  - uid: Altv_Roleplay.models.Server_Items
+    name: Server_Items
+  - uid: Altv_Roleplay.models.Server_Jobs
+    name: Server_Jobs
+  - uid: Altv_Roleplay.models.Server_Licenses
+    name: Server_Licenses
+  - uid: Altv_Roleplay.models.Server_Markers
+    name: Server_Markers
+  - uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Routes
+    name: Server_Minijob_Busdriver_Routes
+  - uid: Altv_Roleplay.models.Server_Minijob_Busdriver_Spots
+    name: Server_Minijob_Busdriver_Spots
+  - uid: Altv_Roleplay.models.Server_Minijob_Garbage_Spots
+    name: Server_Minijob_Garbage_Spots
+  - uid: Altv_Roleplay.models.Server_Peds
+    name: Server_Peds
+  - uid: Altv_Roleplay.models.Server_Shops
+    name: Server_Shops
+  - uid: Altv_Roleplay.models.Server_Shops_Items
+    name: Server_Shops_Items
+  - uid: Altv_Roleplay.models.Server_Storage_Item
+    name: Server_Storage_Item
+  - uid: Altv_Roleplay.models.Server_Storages
+    name: Server_Storages
+  - uid: Altv_Roleplay.models.Server_Tablet_Apps
+    name: Server_Tablet_Apps
+  - uid: Altv_Roleplay.models.Server_Tablet_Events
+    name: Server_Tablet_Events
+  - uid: Altv_Roleplay.models.Server_Tablet_Notes
+    name: Server_Tablet_Notes
+  - uid: Altv_Roleplay.models.Server_Tattoo_Shops
+    name: Server_Tattoo_Shops
+  - uid: Altv_Roleplay.models.Server_Tattoos
+    name: Server_Tattoos
+  - uid: Altv_Roleplay.models.Server_Teleports
+    name: Server_Teleports
+  - uid: Altv_Roleplay.models.Server_Vehicle_Items
+    name: Server_Vehicle_Items
+  - uid: Altv_Roleplay.models.Server_Vehicle_Shops
+    name: Server_Vehicle_Shops
+  - uid: Altv_Roleplay.models.Server_Vehicle_Shops_Items
+    name: Server_Vehicle_Shops_Items
+  - uid: Altv_Roleplay.models.Server_Vehicles
+    name: Server_Vehicles
+  - uid: Altv_Roleplay.models.Server_Vehicles_Mod
+    name: Server_Vehicles_Mod
+  - uid: Altv_Roleplay.models.Server_Wanteds
+    name: Server_Wanteds
+  - uid: Altv_Roleplay.models.ServerFaction_Dispatch
+    name: ServerFaction_Dispatch
+- uid: Altv_Roleplay.Utils
+  name: Altv_Roleplay.Utils
+  items:
+  - uid: Altv_Roleplay.Utils.Constants
+    name: Constants
+  - uid: Altv_Roleplay.Utils.Constants.DatabaseConfig
+    name: Constants.DatabaseConfig
+  - uid: Altv_Roleplay.Utils.Constants.Positions
+    name: Constants.Positions
+  - uid: Altv_Roleplay.Utils.Extensions
+    name: Extensions

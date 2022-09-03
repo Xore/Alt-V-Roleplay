@@ -1,0 +1,1105 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.EntityStreamer.PropStreamer
+  commentId: T:Altv_Roleplay.EntityStreamer.PropStreamer
+  id: PropStreamer
+  parent: Altv_Roleplay.EntityStreamer
+  children:
+  - Altv_Roleplay.EntityStreamer.PropStreamer.Create(System.String,System.Numerics.Vector3,System.Numerics.Vector3,System.Int32,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.UInt32},Altv_Roleplay.EntityStreamer.Rgb,System.Nullable{System.Boolean},System.Nullable{Altv_Roleplay.EntityStreamer.TextureVariation},System.Nullable{System.Boolean},System.UInt32)
+  - Altv_Roleplay.EntityStreamer.PropStreamer.Delete(Altv_Roleplay.EntityStreamer.Prop)
+  - Altv_Roleplay.EntityStreamer.PropStreamer.Delete(System.UInt64)
+  - Altv_Roleplay.EntityStreamer.PropStreamer.DestroyAllDynamicObjects
+  - Altv_Roleplay.EntityStreamer.PropStreamer.GetAllProp
+  - Altv_Roleplay.EntityStreamer.PropStreamer.GetClosestDynamicObject(System.Numerics.Vector3)
+  - Altv_Roleplay.EntityStreamer.PropStreamer.GetProp(System.UInt64)
+  langs:
+  - csharp
+  - vb
+  name: PropStreamer
+  nameWithType: PropStreamer
+  fullName: Altv_Roleplay.EntityStreamer.PropStreamer
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: PropStreamer
+    path: EntityStreamer/PropManager.cs
+    startLine: 456
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public static class PropStreamer
+    content.vb: Public Module PropStreamer
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Altv_Roleplay.EntityStreamer.PropStreamer.Create(System.String,System.Numerics.Vector3,System.Numerics.Vector3,System.Int32,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.UInt32},Altv_Roleplay.EntityStreamer.Rgb,System.Nullable{System.Boolean},System.Nullable{Altv_Roleplay.EntityStreamer.TextureVariation},System.Nullable{System.Boolean},System.UInt32)
+  commentId: M:Altv_Roleplay.EntityStreamer.PropStreamer.Create(System.String,System.Numerics.Vector3,System.Numerics.Vector3,System.Int32,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.UInt32},Altv_Roleplay.EntityStreamer.Rgb,System.Nullable{System.Boolean},System.Nullable{Altv_Roleplay.EntityStreamer.TextureVariation},System.Nullable{System.Boolean},System.UInt32)
+  id: Create(System.String,System.Numerics.Vector3,System.Numerics.Vector3,System.Int32,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.UInt32},Altv_Roleplay.EntityStreamer.Rgb,System.Nullable{System.Boolean},System.Nullable{Altv_Roleplay.EntityStreamer.TextureVariation},System.Nullable{System.Boolean},System.UInt32)
+  parent: Altv_Roleplay.EntityStreamer.PropStreamer
+  langs:
+  - csharp
+  - vb
+  name: Create(String, Vector3, Vector3, Int32, Nullable<Boolean>, Nullable<Boolean>, Nullable<Boolean>, Nullable<UInt32>, Rgb, Nullable<Boolean>, Nullable<TextureVariation>, Nullable<Boolean>, UInt32)
+  nameWithType: PropStreamer.Create(String, Vector3, Vector3, Int32, Nullable<Boolean>, Nullable<Boolean>, Nullable<Boolean>, Nullable<UInt32>, Rgb, Nullable<Boolean>, Nullable<TextureVariation>, Nullable<Boolean>, UInt32)
+  fullName: Altv_Roleplay.EntityStreamer.PropStreamer.Create(System.String, System.Numerics.Vector3, System.Numerics.Vector3, System.Int32, System.Nullable<System.Boolean>, System.Nullable<System.Boolean>, System.Nullable<System.Boolean>, System.Nullable<System.UInt32>, Altv_Roleplay.EntityStreamer.Rgb, System.Nullable<System.Boolean>, System.Nullable<Altv_Roleplay.EntityStreamer.TextureVariation>, System.Nullable<System.Boolean>, System.UInt32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Create
+    path: EntityStreamer/PropManager.cs
+    startLine: 474
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nCreate a new dynamic object.\n"
+  example: []
+  syntax:
+    content: public static Prop Create(string model, Vector3 position, Vector3 rotation, int dimension = 0, bool? isDynamic = null, bool? placeObjectOnGroundProperly = false, bool? frozen = null, uint? lodDistance = null, Rgb lightColor = null, bool? onFire = null, TextureVariation? textureVariation = null, bool? visible = null, uint streamRange = 520U)
+    parameters:
+    - id: model
+      type: System.String
+      description: The object model name.
+    - id: position
+      type: System.Numerics.Vector3
+      description: The position to spawn the object at.
+    - id: rotation
+      type: System.Numerics.Vector3
+      description: The rotation to spawn the object at(degrees).
+    - id: dimension
+      type: System.Int32
+      description: The dimension to spawn the object in.
+    - id: isDynamic
+      type: System.Nullable{System.Boolean}
+      description: '(Optional): Set object dynamic or not.'
+    - id: placeObjectOnGroundProperly
+      type: System.Nullable{System.Boolean}
+    - id: frozen
+      type: System.Nullable{System.Boolean}
+      description: '(Optional): Set object frozen.'
+    - id: lodDistance
+      type: System.Nullable{System.UInt32}
+      description: '(Optional): Set LOD distance.'
+    - id: lightColor
+      type: Altv_Roleplay.EntityStreamer.Rgb
+      description: '(Optional): set light color.'
+    - id: onFire
+      type: System.Nullable{System.Boolean}
+      description: '(Optional): set object on fire(DOESN&apos;T WORK PROPERLY YET!)'
+    - id: textureVariation
+      type: System.Nullable{Altv_Roleplay.EntityStreamer.TextureVariation}
+      description: '(Optional): Set object texture variation.'
+    - id: visible
+      type: System.Nullable{System.Boolean}
+      description: '(Optional): Set object visibility.'
+    - id: streamRange
+      type: System.UInt32
+      description: '(Optional): The range that a player has to be in before the object spawns, default value is 400.'
+    return:
+      type: Altv_Roleplay.EntityStreamer.Prop
+      description: The newly created dynamic object.
+    content.vb: Public Shared Function Create(model As String, position As Vector3, rotation As Vector3, dimension As Integer = 0, isDynamic As Boolean? = Nothing, placeObjectOnGroundProperly As Boolean? = False, frozen As Boolean? = Nothing, lodDistance As UInteger? = Nothing, lightColor As Rgb = Nothing, onFire As Boolean? = Nothing, textureVariation As TextureVariation? = Nothing, visible As Boolean? = Nothing, streamRange As UInteger = 520UI) As Prop
+  overload: Altv_Roleplay.EntityStreamer.PropStreamer.Create*
+  nameWithType.vb: PropStreamer.Create(String, Vector3, Vector3, Int32, Nullable(Of Boolean), Nullable(Of Boolean), Nullable(Of Boolean), Nullable(Of UInt32), Rgb, Nullable(Of Boolean), Nullable(Of TextureVariation), Nullable(Of Boolean), UInt32)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Altv_Roleplay.EntityStreamer.PropStreamer.Create(System.String, System.Numerics.Vector3, System.Numerics.Vector3, System.Int32, System.Nullable(Of System.Boolean), System.Nullable(Of System.Boolean), System.Nullable(Of System.Boolean), System.Nullable(Of System.UInt32), Altv_Roleplay.EntityStreamer.Rgb, System.Nullable(Of System.Boolean), System.Nullable(Of Altv_Roleplay.EntityStreamer.TextureVariation), System.Nullable(Of System.Boolean), System.UInt32)
+  name.vb: Create(String, Vector3, Vector3, Int32, Nullable(Of Boolean), Nullable(Of Boolean), Nullable(Of Boolean), Nullable(Of UInt32), Rgb, Nullable(Of Boolean), Nullable(Of TextureVariation), Nullable(Of Boolean), UInt32)
+- uid: Altv_Roleplay.EntityStreamer.PropStreamer.Delete(System.UInt64)
+  commentId: M:Altv_Roleplay.EntityStreamer.PropStreamer.Delete(System.UInt64)
+  id: Delete(System.UInt64)
+  parent: Altv_Roleplay.EntityStreamer.PropStreamer
+  langs:
+  - csharp
+  - vb
+  name: Delete(UInt64)
+  nameWithType: PropStreamer.Delete(UInt64)
+  fullName: Altv_Roleplay.EntityStreamer.PropStreamer.Delete(System.UInt64)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Delete
+    path: EntityStreamer/PropManager.cs
+    startLine: 497
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public static bool Delete(ulong dynamicObjectId)
+    parameters:
+    - id: dynamicObjectId
+      type: System.UInt64
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function Delete(dynamicObjectId As ULong) As Boolean
+  overload: Altv_Roleplay.EntityStreamer.PropStreamer.Delete*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.EntityStreamer.PropStreamer.Delete(Altv_Roleplay.EntityStreamer.Prop)
+  commentId: M:Altv_Roleplay.EntityStreamer.PropStreamer.Delete(Altv_Roleplay.EntityStreamer.Prop)
+  id: Delete(Altv_Roleplay.EntityStreamer.Prop)
+  parent: Altv_Roleplay.EntityStreamer.PropStreamer
+  langs:
+  - csharp
+  - vb
+  name: Delete(Prop)
+  nameWithType: PropStreamer.Delete(Prop)
+  fullName: Altv_Roleplay.EntityStreamer.PropStreamer.Delete(Altv_Roleplay.EntityStreamer.Prop)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Delete
+    path: EntityStreamer/PropManager.cs
+    startLine: 508
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public static void Delete(Prop obj)
+    parameters:
+    - id: obj
+      type: Altv_Roleplay.EntityStreamer.Prop
+    content.vb: Public Shared Sub Delete(obj As Prop)
+  overload: Altv_Roleplay.EntityStreamer.PropStreamer.Delete*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.EntityStreamer.PropStreamer.GetProp(System.UInt64)
+  commentId: M:Altv_Roleplay.EntityStreamer.PropStreamer.GetProp(System.UInt64)
+  id: GetProp(System.UInt64)
+  parent: Altv_Roleplay.EntityStreamer.PropStreamer
+  langs:
+  - csharp
+  - vb
+  name: GetProp(UInt64)
+  nameWithType: PropStreamer.GetProp(UInt64)
+  fullName: Altv_Roleplay.EntityStreamer.PropStreamer.GetProp(System.UInt64)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetProp
+    path: EntityStreamer/PropManager.cs
+    startLine: 514
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public static Prop GetProp(ulong dynamicObjectId)
+    parameters:
+    - id: dynamicObjectId
+      type: System.UInt64
+    return:
+      type: Altv_Roleplay.EntityStreamer.Prop
+    content.vb: Public Shared Function GetProp(dynamicObjectId As ULong) As Prop
+  overload: Altv_Roleplay.EntityStreamer.PropStreamer.GetProp*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.EntityStreamer.PropStreamer.DestroyAllDynamicObjects
+  commentId: M:Altv_Roleplay.EntityStreamer.PropStreamer.DestroyAllDynamicObjects
+  id: DestroyAllDynamicObjects
+  parent: Altv_Roleplay.EntityStreamer.PropStreamer
+  langs:
+  - csharp
+  - vb
+  name: DestroyAllDynamicObjects()
+  nameWithType: PropStreamer.DestroyAllDynamicObjects()
+  fullName: Altv_Roleplay.EntityStreamer.PropStreamer.DestroyAllDynamicObjects()
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: DestroyAllDynamicObjects
+    path: EntityStreamer/PropManager.cs
+    startLine: 531
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nDestroy all created dynamic objects.\n"
+  example: []
+  syntax:
+    content: public static void DestroyAllDynamicObjects()
+    content.vb: Public Shared Sub DestroyAllDynamicObjects
+  overload: Altv_Roleplay.EntityStreamer.PropStreamer.DestroyAllDynamicObjects*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.EntityStreamer.PropStreamer.GetAllProp
+  commentId: M:Altv_Roleplay.EntityStreamer.PropStreamer.GetAllProp
+  id: GetAllProp
+  parent: Altv_Roleplay.EntityStreamer.PropStreamer
+  langs:
+  - csharp
+  - vb
+  name: GetAllProp()
+  nameWithType: PropStreamer.GetAllProp()
+  fullName: Altv_Roleplay.EntityStreamer.PropStreamer.GetAllProp()
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetAllProp
+    path: EntityStreamer/PropManager.cs
+    startLine: 544
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nGet all created dynamic objects.\n"
+  example: []
+  syntax:
+    content: public static List<Prop> GetAllProp()
+    return:
+      type: System.Collections.Generic.List{Altv_Roleplay.EntityStreamer.Prop}
+      description: A list of dynamic objects.
+    content.vb: Public Shared Function GetAllProp As List(Of Prop)
+  overload: Altv_Roleplay.EntityStreamer.PropStreamer.GetAllProp*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Altv_Roleplay.EntityStreamer.PropStreamer.GetClosestDynamicObject(System.Numerics.Vector3)
+  commentId: M:Altv_Roleplay.EntityStreamer.PropStreamer.GetClosestDynamicObject(System.Numerics.Vector3)
+  id: GetClosestDynamicObject(System.Numerics.Vector3)
+  parent: Altv_Roleplay.EntityStreamer.PropStreamer
+  langs:
+  - csharp
+  - vb
+  name: GetClosestDynamicObject(Vector3)
+  nameWithType: PropStreamer.GetClosestDynamicObject(Vector3)
+  fullName: Altv_Roleplay.EntityStreamer.PropStreamer.GetClosestDynamicObject(System.Numerics.Vector3)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetClosestDynamicObject
+    path: EntityStreamer/PropManager.cs
+    startLine: 564
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nGet the dynamic object that&apos;s closest to a specified position.\n"
+  example: []
+  syntax:
+    content: public static (Prop obj, float distance) GetClosestDynamicObject(Vector3 pos)
+    parameters:
+    - id: pos
+      type: System.Numerics.Vector3
+      description: The position from which to check.
+    return:
+      type: System.ValueTuple{Altv_Roleplay.EntityStreamer.Prop,System.Single}
+      description: The closest dynamic object to the specified position, or null if none found.
+    content.vb: Public Shared Function GetClosestDynamicObject(pos As Vector3) As(obj As Prop, distance As Single)(Of Prop , Single)
+  overload: Altv_Roleplay.EntityStreamer.PropStreamer.GetClosestDynamicObject*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Altv_Roleplay.EntityStreamer
+  commentId: N:Altv_Roleplay.EntityStreamer
+  name: Altv_Roleplay.EntityStreamer
+  nameWithType: Altv_Roleplay.EntityStreamer
+  fullName: Altv_Roleplay.EntityStreamer
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.EntityStreamer.PropStreamer.Create*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.PropStreamer.Create
+  name: Create
+  nameWithType: PropStreamer.Create
+  fullName: Altv_Roleplay.EntityStreamer.PropStreamer.Create
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Numerics.Vector3
+  commentId: T:System.Numerics.Vector3
+  parent: System.Numerics
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: System.Numerics.Vector3
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable{System.UInt32}
+  commentId: T:System.Nullable{System.UInt32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<UInt32>
+  nameWithType: Nullable<UInt32>
+  fullName: System.Nullable<System.UInt32>
+  nameWithType.vb: Nullable(Of UInt32)
+  fullName.vb: System.Nullable(Of System.UInt32)
+  name.vb: Nullable(Of UInt32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.EntityStreamer.Rgb
+  commentId: T:Altv_Roleplay.EntityStreamer.Rgb
+  parent: Altv_Roleplay.EntityStreamer
+  name: Rgb
+  nameWithType: Rgb
+  fullName: Altv_Roleplay.EntityStreamer.Rgb
+- uid: System.Nullable{Altv_Roleplay.EntityStreamer.TextureVariation}
+  commentId: T:System.Nullable{Altv_Roleplay.EntityStreamer.TextureVariation}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<TextureVariation>
+  nameWithType: Nullable<TextureVariation>
+  fullName: System.Nullable<Altv_Roleplay.EntityStreamer.TextureVariation>
+  nameWithType.vb: Nullable(Of TextureVariation)
+  fullName.vb: System.Nullable(Of Altv_Roleplay.EntityStreamer.TextureVariation)
+  name.vb: Nullable(Of TextureVariation)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Altv_Roleplay.EntityStreamer.TextureVariation
+    name: TextureVariation
+    nameWithType: TextureVariation
+    fullName: Altv_Roleplay.EntityStreamer.TextureVariation
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Altv_Roleplay.EntityStreamer.TextureVariation
+    name: TextureVariation
+    nameWithType: TextureVariation
+    fullName: Altv_Roleplay.EntityStreamer.TextureVariation
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: Altv_Roleplay.EntityStreamer.Prop
+  commentId: T:Altv_Roleplay.EntityStreamer.Prop
+  parent: Altv_Roleplay.EntityStreamer
+  name: Prop
+  nameWithType: Prop
+  fullName: Altv_Roleplay.EntityStreamer.Prop
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.EntityStreamer.PropStreamer.Delete*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.PropStreamer.Delete
+  name: Delete
+  nameWithType: PropStreamer.Delete
+  fullName: Altv_Roleplay.EntityStreamer.PropStreamer.Delete
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Altv_Roleplay.EntityStreamer.PropStreamer.GetProp*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.PropStreamer.GetProp
+  name: GetProp
+  nameWithType: PropStreamer.GetProp
+  fullName: Altv_Roleplay.EntityStreamer.PropStreamer.GetProp
+- uid: Altv_Roleplay.EntityStreamer.PropStreamer.DestroyAllDynamicObjects*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.PropStreamer.DestroyAllDynamicObjects
+  name: DestroyAllDynamicObjects
+  nameWithType: PropStreamer.DestroyAllDynamicObjects
+  fullName: Altv_Roleplay.EntityStreamer.PropStreamer.DestroyAllDynamicObjects
+- uid: Altv_Roleplay.EntityStreamer.PropStreamer.GetAllProp*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.PropStreamer.GetAllProp
+  name: GetAllProp
+  nameWithType: PropStreamer.GetAllProp
+  fullName: Altv_Roleplay.EntityStreamer.PropStreamer.GetAllProp
+- uid: System.Collections.Generic.List{Altv_Roleplay.EntityStreamer.Prop}
+  commentId: T:System.Collections.Generic.List{Altv_Roleplay.EntityStreamer.Prop}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Prop>
+  nameWithType: List<Prop>
+  fullName: System.Collections.Generic.List<Altv_Roleplay.EntityStreamer.Prop>
+  nameWithType.vb: List(Of Prop)
+  fullName.vb: System.Collections.Generic.List(Of Altv_Roleplay.EntityStreamer.Prop)
+  name.vb: List(Of Prop)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Altv_Roleplay.EntityStreamer.Prop
+    name: Prop
+    nameWithType: Prop
+    fullName: Altv_Roleplay.EntityStreamer.Prop
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Altv_Roleplay.EntityStreamer.Prop
+    name: Prop
+    nameWithType: Prop
+    fullName: Altv_Roleplay.EntityStreamer.Prop
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Altv_Roleplay.EntityStreamer.PropStreamer.GetClosestDynamicObject*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.PropStreamer.GetClosestDynamicObject
+  name: GetClosestDynamicObject
+  nameWithType: PropStreamer.GetClosestDynamicObject
+  fullName: Altv_Roleplay.EntityStreamer.PropStreamer.GetClosestDynamicObject
+- uid: System.ValueTuple{Altv_Roleplay.EntityStreamer.Prop,System.Single}
+  commentId: T:System.ValueTuple{Altv_Roleplay.EntityStreamer.Prop,System.Single}
+  parent: System
+  definition: System.ValueTuple`2
+  name: (T1, T2)<Prop, Single>
+  nameWithType: (T1, T2)<Prop, Single>
+  fullName: System.ValueTuple<Altv_Roleplay.EntityStreamer.Prop, System.Single>
+  nameWithType.vb: (T1, T2)(Of Prop, Single)
+  fullName.vb: System.ValueTuple(Of Altv_Roleplay.EntityStreamer.Prop, System.Single)
+  name.vb: (T1, T2)(Of Prop, Single)
+  spec.csharp:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Altv_Roleplay.EntityStreamer.Prop
+    name: Prop
+    nameWithType: Prop
+    fullName: Altv_Roleplay.EntityStreamer.Prop
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Altv_Roleplay.EntityStreamer.Prop
+    name: Prop
+    nameWithType: Prop
+    fullName: Altv_Roleplay.EntityStreamer.Prop
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  isExternal: true
+  name: (T1, T2)<T1, T2>
+  nameWithType: (T1, T2)<T1, T2>
+  fullName: System.ValueTuple<T1, T2>
+  nameWithType.vb: (T1, T2)(Of T1, T2)
+  fullName.vb: System.ValueTuple(Of T1, T2)
+  name.vb: (T1, T2)(Of T1, T2)
+  spec.csharp:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: )
+    nameWithType: )
+    fullName: )

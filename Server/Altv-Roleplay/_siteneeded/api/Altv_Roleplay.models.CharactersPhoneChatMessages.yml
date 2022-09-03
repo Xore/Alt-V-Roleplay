@@ -1,0 +1,621 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.models.CharactersPhoneChatMessages
+  commentId: T:Altv_Roleplay.models.CharactersPhoneChatMessages
+  id: CharactersPhoneChatMessages
+  parent: Altv_Roleplay.models
+  children:
+  - Altv_Roleplay.models.CharactersPhoneChatMessages.chatId
+  - Altv_Roleplay.models.CharactersPhoneChatMessages.fromNumber
+  - Altv_Roleplay.models.CharactersPhoneChatMessages.id
+  - Altv_Roleplay.models.CharactersPhoneChatMessages.message
+  - Altv_Roleplay.models.CharactersPhoneChatMessages.toNumber
+  - Altv_Roleplay.models.CharactersPhoneChatMessages.unix
+  langs:
+  - csharp
+  - vb
+  name: CharactersPhoneChatMessages
+  nameWithType: CharactersPhoneChatMessages
+  fullName: Altv_Roleplay.models.CharactersPhoneChatMessages
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/CharactersPhoneChatMessages.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: CharactersPhoneChatMessages
+    path: models/CharactersPhoneChatMessages.cs
+    startLine: 5
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public class CharactersPhoneChatMessages
+    content.vb: Public Class CharactersPhoneChatMessages
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.models.CharactersPhoneChatMessages.id
+  commentId: P:Altv_Roleplay.models.CharactersPhoneChatMessages.id
+  id: id
+  parent: Altv_Roleplay.models.CharactersPhoneChatMessages
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: CharactersPhoneChatMessages.id
+  fullName: Altv_Roleplay.models.CharactersPhoneChatMessages.id
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/CharactersPhoneChatMessages.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: id
+    path: models/CharactersPhoneChatMessages.cs
+    startLine: 7
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property id As Integer
+  overload: Altv_Roleplay.models.CharactersPhoneChatMessages.id*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.CharactersPhoneChatMessages.chatId
+  commentId: P:Altv_Roleplay.models.CharactersPhoneChatMessages.chatId
+  id: chatId
+  parent: Altv_Roleplay.models.CharactersPhoneChatMessages
+  langs:
+  - csharp
+  - vb
+  name: chatId
+  nameWithType: CharactersPhoneChatMessages.chatId
+  fullName: Altv_Roleplay.models.CharactersPhoneChatMessages.chatId
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/CharactersPhoneChatMessages.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: chatId
+    path: models/CharactersPhoneChatMessages.cs
+    startLine: 11
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int chatId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property chatId As Integer
+  overload: Altv_Roleplay.models.CharactersPhoneChatMessages.chatId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.CharactersPhoneChatMessages.fromNumber
+  commentId: P:Altv_Roleplay.models.CharactersPhoneChatMessages.fromNumber
+  id: fromNumber
+  parent: Altv_Roleplay.models.CharactersPhoneChatMessages
+  langs:
+  - csharp
+  - vb
+  name: fromNumber
+  nameWithType: CharactersPhoneChatMessages.fromNumber
+  fullName: Altv_Roleplay.models.CharactersPhoneChatMessages.fromNumber
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/CharactersPhoneChatMessages.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: fromNumber
+    path: models/CharactersPhoneChatMessages.cs
+    startLine: 12
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int fromNumber { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property fromNumber As Integer
+  overload: Altv_Roleplay.models.CharactersPhoneChatMessages.fromNumber*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.CharactersPhoneChatMessages.toNumber
+  commentId: P:Altv_Roleplay.models.CharactersPhoneChatMessages.toNumber
+  id: toNumber
+  parent: Altv_Roleplay.models.CharactersPhoneChatMessages
+  langs:
+  - csharp
+  - vb
+  name: toNumber
+  nameWithType: CharactersPhoneChatMessages.toNumber
+  fullName: Altv_Roleplay.models.CharactersPhoneChatMessages.toNumber
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/CharactersPhoneChatMessages.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: toNumber
+    path: models/CharactersPhoneChatMessages.cs
+    startLine: 13
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int toNumber { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property toNumber As Integer
+  overload: Altv_Roleplay.models.CharactersPhoneChatMessages.toNumber*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.CharactersPhoneChatMessages.unix
+  commentId: P:Altv_Roleplay.models.CharactersPhoneChatMessages.unix
+  id: unix
+  parent: Altv_Roleplay.models.CharactersPhoneChatMessages
+  langs:
+  - csharp
+  - vb
+  name: unix
+  nameWithType: CharactersPhoneChatMessages.unix
+  fullName: Altv_Roleplay.models.CharactersPhoneChatMessages.unix
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/CharactersPhoneChatMessages.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: unix
+    path: models/CharactersPhoneChatMessages.cs
+    startLine: 14
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int unix { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property unix As Integer
+  overload: Altv_Roleplay.models.CharactersPhoneChatMessages.unix*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.CharactersPhoneChatMessages.message
+  commentId: P:Altv_Roleplay.models.CharactersPhoneChatMessages.message
+  id: message
+  parent: Altv_Roleplay.models.CharactersPhoneChatMessages
+  langs:
+  - csharp
+  - vb
+  name: message
+  nameWithType: CharactersPhoneChatMessages.message
+  fullName: Altv_Roleplay.models.CharactersPhoneChatMessages.message
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/CharactersPhoneChatMessages.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: message
+    path: models/CharactersPhoneChatMessages.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string message { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property message As String
+  overload: Altv_Roleplay.models.CharactersPhoneChatMessages.message*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.models
+  commentId: N:Altv_Roleplay.models
+  name: Altv_Roleplay.models
+  nameWithType: Altv_Roleplay.models
+  fullName: Altv_Roleplay.models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.models.CharactersPhoneChatMessages.id*
+  commentId: Overload:Altv_Roleplay.models.CharactersPhoneChatMessages.id
+  name: id
+  nameWithType: CharactersPhoneChatMessages.id
+  fullName: Altv_Roleplay.models.CharactersPhoneChatMessages.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.models.CharactersPhoneChatMessages.chatId*
+  commentId: Overload:Altv_Roleplay.models.CharactersPhoneChatMessages.chatId
+  name: chatId
+  nameWithType: CharactersPhoneChatMessages.chatId
+  fullName: Altv_Roleplay.models.CharactersPhoneChatMessages.chatId
+- uid: Altv_Roleplay.models.CharactersPhoneChatMessages.fromNumber*
+  commentId: Overload:Altv_Roleplay.models.CharactersPhoneChatMessages.fromNumber
+  name: fromNumber
+  nameWithType: CharactersPhoneChatMessages.fromNumber
+  fullName: Altv_Roleplay.models.CharactersPhoneChatMessages.fromNumber
+- uid: Altv_Roleplay.models.CharactersPhoneChatMessages.toNumber*
+  commentId: Overload:Altv_Roleplay.models.CharactersPhoneChatMessages.toNumber
+  name: toNumber
+  nameWithType: CharactersPhoneChatMessages.toNumber
+  fullName: Altv_Roleplay.models.CharactersPhoneChatMessages.toNumber
+- uid: Altv_Roleplay.models.CharactersPhoneChatMessages.unix*
+  commentId: Overload:Altv_Roleplay.models.CharactersPhoneChatMessages.unix
+  name: unix
+  nameWithType: CharactersPhoneChatMessages.unix
+  fullName: Altv_Roleplay.models.CharactersPhoneChatMessages.unix
+- uid: Altv_Roleplay.models.CharactersPhoneChatMessages.message*
+  commentId: Overload:Altv_Roleplay.models.CharactersPhoneChatMessages.message
+  name: message
+  nameWithType: CharactersPhoneChatMessages.message
+  fullName: Altv_Roleplay.models.CharactersPhoneChatMessages.message
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

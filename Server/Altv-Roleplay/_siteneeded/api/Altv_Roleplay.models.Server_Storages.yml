@@ -1,0 +1,902 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.models.Server_Storages
+  commentId: T:Altv_Roleplay.models.Server_Storages
+  id: Server_Storages
+  parent: Altv_Roleplay.models
+  children:
+  - Altv_Roleplay.models.Server_Storages.entryPos
+  - Altv_Roleplay.models.Server_Storages.factionid
+  - Altv_Roleplay.models.Server_Storages.id
+  - Altv_Roleplay.models.Server_Storages.isfaction
+  - Altv_Roleplay.models.Server_Storages.isLocked
+  - Altv_Roleplay.models.Server_Storages.items
+  - Altv_Roleplay.models.Server_Storages.maxSize
+  - Altv_Roleplay.models.Server_Storages.owner
+  - Altv_Roleplay.models.Server_Storages.price
+  - Altv_Roleplay.models.Server_Storages.secondOwner
+  langs:
+  - csharp
+  - vb
+  name: Server_Storages
+  nameWithType: Server_Storages
+  fullName: Altv_Roleplay.models.Server_Storages
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Storages.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Server_Storages
+    path: models/Server_Storages.cs
+    startLine: 7
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public class Server_Storages
+    content.vb: Public Class Server_Storages
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.models.Server_Storages.id
+  commentId: P:Altv_Roleplay.models.Server_Storages.id
+  id: id
+  parent: Altv_Roleplay.models.Server_Storages
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: Server_Storages.id
+  fullName: Altv_Roleplay.models.Server_Storages.id
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Storages.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: id
+    path: models/Server_Storages.cs
+    startLine: 9
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property id As Integer
+  overload: Altv_Roleplay.models.Server_Storages.id*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Storages.owner
+  commentId: P:Altv_Roleplay.models.Server_Storages.owner
+  id: owner
+  parent: Altv_Roleplay.models.Server_Storages
+  langs:
+  - csharp
+  - vb
+  name: owner
+  nameWithType: Server_Storages.owner
+  fullName: Altv_Roleplay.models.Server_Storages.owner
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Storages.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: owner
+    path: models/Server_Storages.cs
+    startLine: 13
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int owner { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property owner As Integer
+  overload: Altv_Roleplay.models.Server_Storages.owner*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Storages.secondOwner
+  commentId: P:Altv_Roleplay.models.Server_Storages.secondOwner
+  id: secondOwner
+  parent: Altv_Roleplay.models.Server_Storages
+  langs:
+  - csharp
+  - vb
+  name: secondOwner
+  nameWithType: Server_Storages.secondOwner
+  fullName: Altv_Roleplay.models.Server_Storages.secondOwner
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Storages.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: secondOwner
+    path: models/Server_Storages.cs
+    startLine: 14
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int secondOwner { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property secondOwner As Integer
+  overload: Altv_Roleplay.models.Server_Storages.secondOwner*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Storages.entryPos
+  commentId: P:Altv_Roleplay.models.Server_Storages.entryPos
+  id: entryPos
+  parent: Altv_Roleplay.models.Server_Storages
+  langs:
+  - csharp
+  - vb
+  name: entryPos
+  nameWithType: Server_Storages.entryPos
+  fullName: Altv_Roleplay.models.Server_Storages.entryPos
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Storages.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: entryPos
+    path: models/Server_Storages.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public Position entryPos { get; set; }
+    parameters: []
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Property entryPos As Position
+  overload: Altv_Roleplay.models.Server_Storages.entryPos*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Storages.items
+  commentId: P:Altv_Roleplay.models.Server_Storages.items
+  id: items
+  parent: Altv_Roleplay.models.Server_Storages
+  langs:
+  - csharp
+  - vb
+  name: items
+  nameWithType: Server_Storages.items
+  fullName: Altv_Roleplay.models.Server_Storages.items
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Storages.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: items
+    path: models/Server_Storages.cs
+    startLine: 16
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public List<Server_Storage_Item> items { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{Altv_Roleplay.models.Server_Storage_Item}
+    content.vb: Public Property items As List(Of Server_Storage_Item)
+  overload: Altv_Roleplay.models.Server_Storages.items*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Storages.maxSize
+  commentId: P:Altv_Roleplay.models.Server_Storages.maxSize
+  id: maxSize
+  parent: Altv_Roleplay.models.Server_Storages
+  langs:
+  - csharp
+  - vb
+  name: maxSize
+  nameWithType: Server_Storages.maxSize
+  fullName: Altv_Roleplay.models.Server_Storages.maxSize
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Storages.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: maxSize
+    path: models/Server_Storages.cs
+    startLine: 17
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float maxSize { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property maxSize As Single
+  overload: Altv_Roleplay.models.Server_Storages.maxSize*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Storages.price
+  commentId: P:Altv_Roleplay.models.Server_Storages.price
+  id: price
+  parent: Altv_Roleplay.models.Server_Storages
+  langs:
+  - csharp
+  - vb
+  name: price
+  nameWithType: Server_Storages.price
+  fullName: Altv_Roleplay.models.Server_Storages.price
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Storages.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: price
+    path: models/Server_Storages.cs
+    startLine: 18
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int price { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property price As Integer
+  overload: Altv_Roleplay.models.Server_Storages.price*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Storages.isfaction
+  commentId: P:Altv_Roleplay.models.Server_Storages.isfaction
+  id: isfaction
+  parent: Altv_Roleplay.models.Server_Storages
+  langs:
+  - csharp
+  - vb
+  name: isfaction
+  nameWithType: Server_Storages.isfaction
+  fullName: Altv_Roleplay.models.Server_Storages.isfaction
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Storages.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: isfaction
+    path: models/Server_Storages.cs
+    startLine: 19
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int isfaction { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property isfaction As Integer
+  overload: Altv_Roleplay.models.Server_Storages.isfaction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Storages.factionid
+  commentId: P:Altv_Roleplay.models.Server_Storages.factionid
+  id: factionid
+  parent: Altv_Roleplay.models.Server_Storages
+  langs:
+  - csharp
+  - vb
+  name: factionid
+  nameWithType: Server_Storages.factionid
+  fullName: Altv_Roleplay.models.Server_Storages.factionid
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Storages.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: factionid
+    path: models/Server_Storages.cs
+    startLine: 20
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int factionid { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property factionid As Integer
+  overload: Altv_Roleplay.models.Server_Storages.factionid*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Storages.isLocked
+  commentId: P:Altv_Roleplay.models.Server_Storages.isLocked
+  id: isLocked
+  parent: Altv_Roleplay.models.Server_Storages
+  langs:
+  - csharp
+  - vb
+  name: isLocked
+  nameWithType: Server_Storages.isLocked
+  fullName: Altv_Roleplay.models.Server_Storages.isLocked
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Storages.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: isLocked
+    path: models/Server_Storages.cs
+    startLine: 22
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [NotMapped]
+
+      public bool isLocked { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <NotMapped>
+
+      Public Property isLocked As Boolean
+  overload: Altv_Roleplay.models.Server_Storages.isLocked*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.models
+  commentId: N:Altv_Roleplay.models
+  name: Altv_Roleplay.models
+  nameWithType: Altv_Roleplay.models
+  fullName: Altv_Roleplay.models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.models.Server_Storages.id*
+  commentId: Overload:Altv_Roleplay.models.Server_Storages.id
+  name: id
+  nameWithType: Server_Storages.id
+  fullName: Altv_Roleplay.models.Server_Storages.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.models.Server_Storages.owner*
+  commentId: Overload:Altv_Roleplay.models.Server_Storages.owner
+  name: owner
+  nameWithType: Server_Storages.owner
+  fullName: Altv_Roleplay.models.Server_Storages.owner
+- uid: Altv_Roleplay.models.Server_Storages.secondOwner*
+  commentId: Overload:Altv_Roleplay.models.Server_Storages.secondOwner
+  name: secondOwner
+  nameWithType: Server_Storages.secondOwner
+  fullName: Altv_Roleplay.models.Server_Storages.secondOwner
+- uid: Altv_Roleplay.models.Server_Storages.entryPos*
+  commentId: Overload:Altv_Roleplay.models.Server_Storages.entryPos
+  name: entryPos
+  nameWithType: Server_Storages.entryPos
+  fullName: Altv_Roleplay.models.Server_Storages.entryPos
+- uid: AltV.Net.Data.Position
+  commentId: T:AltV.Net.Data.Position
+  parent: AltV.Net.Data
+  isExternal: true
+  name: Position
+  nameWithType: Position
+  fullName: AltV.Net.Data.Position
+- uid: AltV.Net.Data
+  commentId: N:AltV.Net.Data
+  isExternal: true
+  name: AltV.Net.Data
+  nameWithType: AltV.Net.Data
+  fullName: AltV.Net.Data
+- uid: Altv_Roleplay.models.Server_Storages.items*
+  commentId: Overload:Altv_Roleplay.models.Server_Storages.items
+  name: items
+  nameWithType: Server_Storages.items
+  fullName: Altv_Roleplay.models.Server_Storages.items
+- uid: System.Collections.Generic.List{Altv_Roleplay.models.Server_Storage_Item}
+  commentId: T:System.Collections.Generic.List{Altv_Roleplay.models.Server_Storage_Item}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Server_Storage_Item>
+  nameWithType: List<Server_Storage_Item>
+  fullName: System.Collections.Generic.List<Altv_Roleplay.models.Server_Storage_Item>
+  nameWithType.vb: List(Of Server_Storage_Item)
+  fullName.vb: System.Collections.Generic.List(Of Altv_Roleplay.models.Server_Storage_Item)
+  name.vb: List(Of Server_Storage_Item)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Altv_Roleplay.models.Server_Storage_Item
+    name: Server_Storage_Item
+    nameWithType: Server_Storage_Item
+    fullName: Altv_Roleplay.models.Server_Storage_Item
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Altv_Roleplay.models.Server_Storage_Item
+    name: Server_Storage_Item
+    nameWithType: Server_Storage_Item
+    fullName: Altv_Roleplay.models.Server_Storage_Item
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Altv_Roleplay.models.Server_Storages.maxSize*
+  commentId: Overload:Altv_Roleplay.models.Server_Storages.maxSize
+  name: maxSize
+  nameWithType: Server_Storages.maxSize
+  fullName: Altv_Roleplay.models.Server_Storages.maxSize
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Altv_Roleplay.models.Server_Storages.price*
+  commentId: Overload:Altv_Roleplay.models.Server_Storages.price
+  name: price
+  nameWithType: Server_Storages.price
+  fullName: Altv_Roleplay.models.Server_Storages.price
+- uid: Altv_Roleplay.models.Server_Storages.isfaction*
+  commentId: Overload:Altv_Roleplay.models.Server_Storages.isfaction
+  name: isfaction
+  nameWithType: Server_Storages.isfaction
+  fullName: Altv_Roleplay.models.Server_Storages.isfaction
+- uid: Altv_Roleplay.models.Server_Storages.factionid*
+  commentId: Overload:Altv_Roleplay.models.Server_Storages.factionid
+  name: factionid
+  nameWithType: Server_Storages.factionid
+  fullName: Altv_Roleplay.models.Server_Storages.factionid
+- uid: Altv_Roleplay.models.Server_Storages.isLocked*
+  commentId: Overload:Altv_Roleplay.models.Server_Storages.isLocked
+  name: isLocked
+  nameWithType: Server_Storages.isLocked
+  fullName: Altv_Roleplay.models.Server_Storages.isLocked
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

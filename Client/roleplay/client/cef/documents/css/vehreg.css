@@ -1,0 +1,88 @@
+/* VEHREG */
+
+#vehReg {
+    display: none;
+    animation: fadeInLeft 1.5s;
+    top: 150px;
+    right: 10px;
+    width: 485px;
+    height: 383px;
+    background-image: url(../assets/vehreg.png);
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+#vehReg-name {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 13.5px;
+    font-weight: bold;
+    text-align: left;
+    top: 16%;
+    left: 7px;
+}
+
+#vehReg-signature {
+    position: absolute;
+    color: #5a8ff1;
+    font-size: 20px;
+    font-family: Sun Deep;
+    font-weight: bolder;
+    text-align: left;
+    top: 88%;
+    left: 7px;
+}
+
+#vehReg-vehName {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 13.5px;
+    font-weight: bold;
+    text-align: left;
+    top: 27%;
+    left: 7px;
+}
+
+#vehReg-manufactor {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 13.5px;
+    font-weight: bold;
+    text-align: left;
+    top: 37%;
+    left: 7px;
+}
+
+#vehReg-serial {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 13.5px;
+    font-weight: bold;
+    text-align: left;
+    top: 48%;
+    left: 7px;
+}
+
+#vehReg-plate {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 13.5px;
+    font-weight: bold;
+    text-align: left;
+    top: 58%;
+    left: 7px;
+}
+
+#vehReg-buyDate {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 13.5px;
+    font-weight: bold;
+    text-align: left;
+    top: 69%;
+    left: 7px;
+}
+
+
+/* VEHREG-END */

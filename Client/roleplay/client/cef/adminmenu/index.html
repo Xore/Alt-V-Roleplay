@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timo's Admin Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="../utils/jquery-3.4.1.min.js"></script>
+    <script src="../utils/jquery-ui.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="adminmenu-main noselect">
+        <p class="adminmenu-main-title">Adminmenü</p>
+        <hr>
+        <ul class="adminmenu-list adminmenu-main-list">
+            <li class="adminmenu-main-list-item adminmenu-main-list-item-player selected">PLAYER</li>
+            <li class="adminmenu-main-list-item adminmenu-main-list-item-online">ONLINE</li>
+            <li class="adminmenu-main-list-item adminmenu-main-list-item-misc">MISC</li>
+            <li class="adminmenu-main-list-item adminmenu-main-list-item-fahrzeug">FAHRZEUG</li>
+            <li class="adminmenu-main-list-item adminmenu-main-list-item-peds">PEDS</li>
+            <li class="adminmenu-main-list-item adminmenu-main-list-item-server">SERVER</li>
+        </ul>
+        <ul id="adminmenu-player-list" class="adminmenu-list adminmenu-player-list"></ul>
+        <ul id="adminmenu-online-list" class="adminmenu-list adminmenu-online-list"></ul>
+        <ul id="adminmenu-misc-list" class="adminmenu-list adminmenu-misc-list"></ul>
+        <ul id="adminmenu-fahrzeug-list" class="adminmenu-list adminmenu-fahrzeug-list"></ul>
+        <ul id="adminmenu-peds-list" class="adminmenu-list adminmenu-peds-list"></ul>
+        <ul id="adminmenu-server-list" class="adminmenu-list adminmenu-server-list"></ul>
+        <ul id="adminmenu-online_action-list" class="adminmenu-list adminmenu-online_action-list"></ul>
+        <input type="input" class="adminmenu-input" autocomplete="off" required>
+        <br><br>
+        <hr class="hr-bottom">
+    </div>
+</body>
+</html>

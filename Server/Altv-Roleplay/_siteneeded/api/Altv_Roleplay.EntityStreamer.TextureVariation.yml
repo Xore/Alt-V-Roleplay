@@ -1,0 +1,574 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.EntityStreamer.TextureVariation
+  commentId: T:Altv_Roleplay.EntityStreamer.TextureVariation
+  id: TextureVariation
+  parent: Altv_Roleplay.EntityStreamer
+  children:
+  - Altv_Roleplay.EntityStreamer.TextureVariation.Azure
+  - Altv_Roleplay.EntityStreamer.TextureVariation.Battleship
+  - Altv_Roleplay.EntityStreamer.TextureVariation.Classico
+  - Altv_Roleplay.EntityStreamer.TextureVariation.Command
+  - Altv_Roleplay.EntityStreamer.TextureVariation.Continental
+  - Altv_Roleplay.EntityStreamer.TextureVariation.Intrepid
+  - Altv_Roleplay.EntityStreamer.TextureVariation.Mariner
+  - Altv_Roleplay.EntityStreamer.TextureVariation.Mediterranean
+  - Altv_Roleplay.EntityStreamer.TextureVariation.Merchant
+  - Altv_Roleplay.EntityStreamer.TextureVariation.Nautical
+  - Altv_Roleplay.EntityStreamer.TextureVariation.Pacific
+  - Altv_Roleplay.EntityStreamer.TextureVariation.Pristine
+  - Altv_Roleplay.EntityStreamer.TextureVariation.Ruby
+  - Altv_Roleplay.EntityStreamer.TextureVariation.Uniform
+  - Altv_Roleplay.EntityStreamer.TextureVariation.Vintage
+  - Altv_Roleplay.EntityStreamer.TextureVariation.Voyager
+  langs:
+  - csharp
+  - vb
+  name: TextureVariation
+  nameWithType: TextureVariation
+  fullName: Altv_Roleplay.EntityStreamer.TextureVariation
+  type: Enum
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: TextureVariation
+    path: EntityStreamer/PropManager.cs
+    startLine: 8
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public enum TextureVariation
+    content.vb: Public Enum TextureVariation
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Altv_Roleplay.EntityStreamer.TextureVariation.Pacific
+  commentId: F:Altv_Roleplay.EntityStreamer.TextureVariation.Pacific
+  id: Pacific
+  parent: Altv_Roleplay.EntityStreamer.TextureVariation
+  langs:
+  - csharp
+  - vb
+  name: Pacific
+  nameWithType: TextureVariation.Pacific
+  fullName: Altv_Roleplay.EntityStreamer.TextureVariation.Pacific
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Pacific
+    path: EntityStreamer/PropManager.cs
+    startLine: 10
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: Pacific = 0
+    return:
+      type: Altv_Roleplay.EntityStreamer.TextureVariation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.TextureVariation.Azure
+  commentId: F:Altv_Roleplay.EntityStreamer.TextureVariation.Azure
+  id: Azure
+  parent: Altv_Roleplay.EntityStreamer.TextureVariation
+  langs:
+  - csharp
+  - vb
+  name: Azure
+  nameWithType: TextureVariation.Azure
+  fullName: Altv_Roleplay.EntityStreamer.TextureVariation.Azure
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Azure
+    path: EntityStreamer/PropManager.cs
+    startLine: 11
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: Azure = 1
+    return:
+      type: Altv_Roleplay.EntityStreamer.TextureVariation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.TextureVariation.Nautical
+  commentId: F:Altv_Roleplay.EntityStreamer.TextureVariation.Nautical
+  id: Nautical
+  parent: Altv_Roleplay.EntityStreamer.TextureVariation
+  langs:
+  - csharp
+  - vb
+  name: Nautical
+  nameWithType: TextureVariation.Nautical
+  fullName: Altv_Roleplay.EntityStreamer.TextureVariation.Nautical
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Nautical
+    path: EntityStreamer/PropManager.cs
+    startLine: 12
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: Nautical = 2
+    return:
+      type: Altv_Roleplay.EntityStreamer.TextureVariation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.TextureVariation.Continental
+  commentId: F:Altv_Roleplay.EntityStreamer.TextureVariation.Continental
+  id: Continental
+  parent: Altv_Roleplay.EntityStreamer.TextureVariation
+  langs:
+  - csharp
+  - vb
+  name: Continental
+  nameWithType: TextureVariation.Continental
+  fullName: Altv_Roleplay.EntityStreamer.TextureVariation.Continental
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Continental
+    path: EntityStreamer/PropManager.cs
+    startLine: 13
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: Continental = 3
+    return:
+      type: Altv_Roleplay.EntityStreamer.TextureVariation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.TextureVariation.Battleship
+  commentId: F:Altv_Roleplay.EntityStreamer.TextureVariation.Battleship
+  id: Battleship
+  parent: Altv_Roleplay.EntityStreamer.TextureVariation
+  langs:
+  - csharp
+  - vb
+  name: Battleship
+  nameWithType: TextureVariation.Battleship
+  fullName: Altv_Roleplay.EntityStreamer.TextureVariation.Battleship
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Battleship
+    path: EntityStreamer/PropManager.cs
+    startLine: 14
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: Battleship = 4
+    return:
+      type: Altv_Roleplay.EntityStreamer.TextureVariation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.TextureVariation.Intrepid
+  commentId: F:Altv_Roleplay.EntityStreamer.TextureVariation.Intrepid
+  id: Intrepid
+  parent: Altv_Roleplay.EntityStreamer.TextureVariation
+  langs:
+  - csharp
+  - vb
+  name: Intrepid
+  nameWithType: TextureVariation.Intrepid
+  fullName: Altv_Roleplay.EntityStreamer.TextureVariation.Intrepid
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Intrepid
+    path: EntityStreamer/PropManager.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: Intrepid = 5
+    return:
+      type: Altv_Roleplay.EntityStreamer.TextureVariation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.TextureVariation.Uniform
+  commentId: F:Altv_Roleplay.EntityStreamer.TextureVariation.Uniform
+  id: Uniform
+  parent: Altv_Roleplay.EntityStreamer.TextureVariation
+  langs:
+  - csharp
+  - vb
+  name: Uniform
+  nameWithType: TextureVariation.Uniform
+  fullName: Altv_Roleplay.EntityStreamer.TextureVariation.Uniform
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Uniform
+    path: EntityStreamer/PropManager.cs
+    startLine: 16
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: Uniform = 6
+    return:
+      type: Altv_Roleplay.EntityStreamer.TextureVariation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.TextureVariation.Classico
+  commentId: F:Altv_Roleplay.EntityStreamer.TextureVariation.Classico
+  id: Classico
+  parent: Altv_Roleplay.EntityStreamer.TextureVariation
+  langs:
+  - csharp
+  - vb
+  name: Classico
+  nameWithType: TextureVariation.Classico
+  fullName: Altv_Roleplay.EntityStreamer.TextureVariation.Classico
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Classico
+    path: EntityStreamer/PropManager.cs
+    startLine: 17
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: Classico = 7
+    return:
+      type: Altv_Roleplay.EntityStreamer.TextureVariation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.TextureVariation.Mediterranean
+  commentId: F:Altv_Roleplay.EntityStreamer.TextureVariation.Mediterranean
+  id: Mediterranean
+  parent: Altv_Roleplay.EntityStreamer.TextureVariation
+  langs:
+  - csharp
+  - vb
+  name: Mediterranean
+  nameWithType: TextureVariation.Mediterranean
+  fullName: Altv_Roleplay.EntityStreamer.TextureVariation.Mediterranean
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Mediterranean
+    path: EntityStreamer/PropManager.cs
+    startLine: 18
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: Mediterranean = 8
+    return:
+      type: Altv_Roleplay.EntityStreamer.TextureVariation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.TextureVariation.Command
+  commentId: F:Altv_Roleplay.EntityStreamer.TextureVariation.Command
+  id: Command
+  parent: Altv_Roleplay.EntityStreamer.TextureVariation
+  langs:
+  - csharp
+  - vb
+  name: Command
+  nameWithType: TextureVariation.Command
+  fullName: Altv_Roleplay.EntityStreamer.TextureVariation.Command
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Command
+    path: EntityStreamer/PropManager.cs
+    startLine: 19
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: Command = 9
+    return:
+      type: Altv_Roleplay.EntityStreamer.TextureVariation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.TextureVariation.Mariner
+  commentId: F:Altv_Roleplay.EntityStreamer.TextureVariation.Mariner
+  id: Mariner
+  parent: Altv_Roleplay.EntityStreamer.TextureVariation
+  langs:
+  - csharp
+  - vb
+  name: Mariner
+  nameWithType: TextureVariation.Mariner
+  fullName: Altv_Roleplay.EntityStreamer.TextureVariation.Mariner
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Mariner
+    path: EntityStreamer/PropManager.cs
+    startLine: 20
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: Mariner = 10
+    return:
+      type: Altv_Roleplay.EntityStreamer.TextureVariation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.TextureVariation.Ruby
+  commentId: F:Altv_Roleplay.EntityStreamer.TextureVariation.Ruby
+  id: Ruby
+  parent: Altv_Roleplay.EntityStreamer.TextureVariation
+  langs:
+  - csharp
+  - vb
+  name: Ruby
+  nameWithType: TextureVariation.Ruby
+  fullName: Altv_Roleplay.EntityStreamer.TextureVariation.Ruby
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Ruby
+    path: EntityStreamer/PropManager.cs
+    startLine: 21
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: Ruby = 11
+    return:
+      type: Altv_Roleplay.EntityStreamer.TextureVariation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.TextureVariation.Vintage
+  commentId: F:Altv_Roleplay.EntityStreamer.TextureVariation.Vintage
+  id: Vintage
+  parent: Altv_Roleplay.EntityStreamer.TextureVariation
+  langs:
+  - csharp
+  - vb
+  name: Vintage
+  nameWithType: TextureVariation.Vintage
+  fullName: Altv_Roleplay.EntityStreamer.TextureVariation.Vintage
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Vintage
+    path: EntityStreamer/PropManager.cs
+    startLine: 22
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: Vintage = 12
+    return:
+      type: Altv_Roleplay.EntityStreamer.TextureVariation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.TextureVariation.Pristine
+  commentId: F:Altv_Roleplay.EntityStreamer.TextureVariation.Pristine
+  id: Pristine
+  parent: Altv_Roleplay.EntityStreamer.TextureVariation
+  langs:
+  - csharp
+  - vb
+  name: Pristine
+  nameWithType: TextureVariation.Pristine
+  fullName: Altv_Roleplay.EntityStreamer.TextureVariation.Pristine
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Pristine
+    path: EntityStreamer/PropManager.cs
+    startLine: 23
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: Pristine = 13
+    return:
+      type: Altv_Roleplay.EntityStreamer.TextureVariation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.TextureVariation.Merchant
+  commentId: F:Altv_Roleplay.EntityStreamer.TextureVariation.Merchant
+  id: Merchant
+  parent: Altv_Roleplay.EntityStreamer.TextureVariation
+  langs:
+  - csharp
+  - vb
+  name: Merchant
+  nameWithType: TextureVariation.Merchant
+  fullName: Altv_Roleplay.EntityStreamer.TextureVariation.Merchant
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Merchant
+    path: EntityStreamer/PropManager.cs
+    startLine: 24
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: Merchant = 14
+    return:
+      type: Altv_Roleplay.EntityStreamer.TextureVariation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.TextureVariation.Voyager
+  commentId: F:Altv_Roleplay.EntityStreamer.TextureVariation.Voyager
+  id: Voyager
+  parent: Altv_Roleplay.EntityStreamer.TextureVariation
+  langs:
+  - csharp
+  - vb
+  name: Voyager
+  nameWithType: TextureVariation.Voyager
+  fullName: Altv_Roleplay.EntityStreamer.TextureVariation.Voyager
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PropManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Voyager
+    path: EntityStreamer/PropManager.cs
+    startLine: 25
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: Voyager = 15
+    return:
+      type: Altv_Roleplay.EntityStreamer.TextureVariation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Altv_Roleplay.EntityStreamer
+  commentId: N:Altv_Roleplay.EntityStreamer
+  name: Altv_Roleplay.EntityStreamer
+  nameWithType: Altv_Roleplay.EntityStreamer
+  fullName: Altv_Roleplay.EntityStreamer
+- uid: Altv_Roleplay.EntityStreamer.TextureVariation
+  commentId: T:Altv_Roleplay.EntityStreamer.TextureVariation
+  parent: Altv_Roleplay.EntityStreamer
+  name: TextureVariation
+  nameWithType: TextureVariation
+  fullName: Altv_Roleplay.EntityStreamer.TextureVariation

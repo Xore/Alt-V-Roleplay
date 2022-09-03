@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.CarRental.Cayo
+  commentId: N:Altv_Roleplay.CarRental.Cayo
+  id: Altv_Roleplay.CarRental.Cayo
+  children:
+  - Altv_Roleplay.CarRental.Cayo.Main
+  - Altv_Roleplay.CarRental.Cayo.Main.Minijob_Spots
+  langs:
+  - csharp
+  - vb
+  name: Altv_Roleplay.CarRental.Cayo
+  nameWithType: Altv_Roleplay.CarRental.Cayo
+  fullName: Altv_Roleplay.CarRental.Cayo
+  type: Namespace
+  assemblies:
+  - NightOut-Gaming
+references:
+- uid: Altv_Roleplay.CarRental.Cayo.Main
+  commentId: T:Altv_Roleplay.CarRental.Cayo.Main
+  name: Main
+  nameWithType: Main
+  fullName: Altv_Roleplay.CarRental.Cayo.Main
+- uid: Altv_Roleplay.CarRental.Cayo.Main.Minijob_Spots
+  commentId: T:Altv_Roleplay.CarRental.Cayo.Main.Minijob_Spots
+  name: Main.Minijob_Spots
+  nameWithType: Main.Minijob_Spots
+  fullName: Altv_Roleplay.CarRental.Cayo.Main.Minijob_Spots

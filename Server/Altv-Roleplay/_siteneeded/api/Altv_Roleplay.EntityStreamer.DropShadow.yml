@@ -1,0 +1,556 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.EntityStreamer.DropShadow
+  commentId: T:Altv_Roleplay.EntityStreamer.DropShadow
+  id: DropShadow
+  parent: Altv_Roleplay.EntityStreamer
+  children:
+  - Altv_Roleplay.EntityStreamer.DropShadow.A
+  - Altv_Roleplay.EntityStreamer.DropShadow.B
+  - Altv_Roleplay.EntityStreamer.DropShadow.Distance
+  - Altv_Roleplay.EntityStreamer.DropShadow.G
+  - Altv_Roleplay.EntityStreamer.DropShadow.R
+  langs:
+  - csharp
+  - vb
+  name: DropShadow
+  nameWithType: DropShadow
+  fullName: Altv_Roleplay.EntityStreamer.DropShadow
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PlayerLabelManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: DropShadow
+    path: EntityStreamer/PlayerLabelManager.cs
+    startLine: 11
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nClass to hold drop shadow data.\n"
+  example: []
+  syntax:
+    content: public class DropShadow
+    content.vb: Public Class DropShadow
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.EntityStreamer.DropShadow.Distance
+  commentId: P:Altv_Roleplay.EntityStreamer.DropShadow.Distance
+  id: Distance
+  parent: Altv_Roleplay.EntityStreamer.DropShadow
+  langs:
+  - csharp
+  - vb
+  name: Distance
+  nameWithType: DropShadow.Distance
+  fullName: Altv_Roleplay.EntityStreamer.DropShadow.Distance
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PlayerLabelManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Distance
+    path: EntityStreamer/PlayerLabelManager.cs
+    startLine: 13
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public int Distance { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Distance As Integer
+  overload: Altv_Roleplay.EntityStreamer.DropShadow.Distance*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.EntityStreamer.DropShadow.R
+  commentId: P:Altv_Roleplay.EntityStreamer.DropShadow.R
+  id: R
+  parent: Altv_Roleplay.EntityStreamer.DropShadow
+  langs:
+  - csharp
+  - vb
+  name: R
+  nameWithType: DropShadow.R
+  fullName: Altv_Roleplay.EntityStreamer.DropShadow.R
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PlayerLabelManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: R
+    path: EntityStreamer/PlayerLabelManager.cs
+    startLine: 14
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public int R { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property R As Integer
+  overload: Altv_Roleplay.EntityStreamer.DropShadow.R*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.EntityStreamer.DropShadow.G
+  commentId: P:Altv_Roleplay.EntityStreamer.DropShadow.G
+  id: G
+  parent: Altv_Roleplay.EntityStreamer.DropShadow
+  langs:
+  - csharp
+  - vb
+  name: G
+  nameWithType: DropShadow.G
+  fullName: Altv_Roleplay.EntityStreamer.DropShadow.G
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PlayerLabelManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: G
+    path: EntityStreamer/PlayerLabelManager.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public int G { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property G As Integer
+  overload: Altv_Roleplay.EntityStreamer.DropShadow.G*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.EntityStreamer.DropShadow.B
+  commentId: P:Altv_Roleplay.EntityStreamer.DropShadow.B
+  id: B
+  parent: Altv_Roleplay.EntityStreamer.DropShadow
+  langs:
+  - csharp
+  - vb
+  name: B
+  nameWithType: DropShadow.B
+  fullName: Altv_Roleplay.EntityStreamer.DropShadow.B
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PlayerLabelManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: B
+    path: EntityStreamer/PlayerLabelManager.cs
+    startLine: 16
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public int B { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property B As Integer
+  overload: Altv_Roleplay.EntityStreamer.DropShadow.B*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.EntityStreamer.DropShadow.A
+  commentId: P:Altv_Roleplay.EntityStreamer.DropShadow.A
+  id: A
+  parent: Altv_Roleplay.EntityStreamer.DropShadow
+  langs:
+  - csharp
+  - vb
+  name: A
+  nameWithType: DropShadow.A
+  fullName: Altv_Roleplay.EntityStreamer.DropShadow.A
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/PlayerLabelManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: A
+    path: EntityStreamer/PlayerLabelManager.cs
+    startLine: 17
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public int A { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property A As Integer
+  overload: Altv_Roleplay.EntityStreamer.DropShadow.A*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.EntityStreamer
+  commentId: N:Altv_Roleplay.EntityStreamer
+  name: Altv_Roleplay.EntityStreamer
+  nameWithType: Altv_Roleplay.EntityStreamer
+  fullName: Altv_Roleplay.EntityStreamer
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.EntityStreamer.DropShadow.Distance*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.DropShadow.Distance
+  name: Distance
+  nameWithType: DropShadow.Distance
+  fullName: Altv_Roleplay.EntityStreamer.DropShadow.Distance
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.EntityStreamer.DropShadow.R*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.DropShadow.R
+  name: R
+  nameWithType: DropShadow.R
+  fullName: Altv_Roleplay.EntityStreamer.DropShadow.R
+- uid: Altv_Roleplay.EntityStreamer.DropShadow.G*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.DropShadow.G
+  name: G
+  nameWithType: DropShadow.G
+  fullName: Altv_Roleplay.EntityStreamer.DropShadow.G
+- uid: Altv_Roleplay.EntityStreamer.DropShadow.B*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.DropShadow.B
+  name: B
+  nameWithType: DropShadow.B
+  fullName: Altv_Roleplay.EntityStreamer.DropShadow.B
+- uid: Altv_Roleplay.EntityStreamer.DropShadow.A*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.DropShadow.A
+  name: A
+  nameWithType: DropShadow.A
+  fullName: Altv_Roleplay.EntityStreamer.DropShadow.A

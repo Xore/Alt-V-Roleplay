@@ -1,0 +1,68 @@
+/* LSMD CARD */
+
+#LSMDCard {
+    display: none;
+    animation: fadeInLeft 1.5s;
+    top: 150px;
+    right: 10px;
+    width: 485px;
+    height: 383px;
+    background-image: url(../assets/lsmd.png);
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+#LSMDCard-name {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 13.5px;
+    font-weight: bold;
+    text-align: left;
+    top: 32%;
+    left: 107px;
+}
+
+#LSMDCard-rankname {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 13.5px;
+    font-weight: bold;
+    text-align: left;
+    top: 47%;
+    left: 107px;
+}
+
+#LSMDCard-serviceNumber {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 13.5px;
+    font-weight: bold;
+    text-align: left;
+    top: 61%;
+    left: 107px;
+}
+
+#LSMDCard-citizenid {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 13.5px;
+    font-weight: bold;
+    text-align: left;
+    top: 75%;
+    left: 107px;
+}
+
+#LSMDCard-signature {
+    position: absolute;
+    color: #5a8ff1;
+    font-size: 20px;
+    font-family: Sun Deep;
+    font-weight: bolder;
+    text-align: left;
+    top: 90%;
+    left: 107px;
+}
+
+
+/* LSMD CARD-END */

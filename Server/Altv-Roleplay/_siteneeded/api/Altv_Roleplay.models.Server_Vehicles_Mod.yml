@@ -1,0 +1,3238 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod
+  commentId: T:Altv_Roleplay.models.Server_Vehicles_Mod
+  id: Server_Vehicles_Mod
+  parent: Altv_Roleplay.models
+  children:
+  - Altv_Roleplay.models.Server_Vehicles_Mod.airfilter
+  - Altv_Roleplay.models.Server_Vehicles_Mod.antenna
+  - Altv_Roleplay.models.Server_Vehicles_Mod.arch_cover
+  - Altv_Roleplay.models.Server_Vehicles_Mod.armor
+  - Altv_Roleplay.models.Server_Vehicles_Mod.back_wheels
+  - Altv_Roleplay.models.Server_Vehicles_Mod.brakes
+  - Altv_Roleplay.models.Server_Vehicles_Mod.colorPearl
+  - Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_b
+  - Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_g
+  - Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_r
+  - Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimaryType
+  - Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_b
+  - Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_g
+  - Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_r
+  - Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondaryType
+  - Altv_Roleplay.models.Server_Vehicles_Mod.dial_design
+  - Altv_Roleplay.models.Server_Vehicles_Mod.door
+  - Altv_Roleplay.models.Server_Vehicles_Mod.door_interior
+  - Altv_Roleplay.models.Server_Vehicles_Mod.engine
+  - Altv_Roleplay.models.Server_Vehicles_Mod.engine_block
+  - Altv_Roleplay.models.Server_Vehicles_Mod.exhaust
+  - Altv_Roleplay.models.Server_Vehicles_Mod.exterior_parts
+  - Altv_Roleplay.models.Server_Vehicles_Mod.fender
+  - Altv_Roleplay.models.Server_Vehicles_Mod.frame
+  - Altv_Roleplay.models.Server_Vehicles_Mod.front_bumper
+  - Altv_Roleplay.models.Server_Vehicles_Mod.grille
+  - Altv_Roleplay.models.Server_Vehicles_Mod.headlightColor
+  - Altv_Roleplay.models.Server_Vehicles_Mod.hood
+  - Altv_Roleplay.models.Server_Vehicles_Mod.horns
+  - Altv_Roleplay.models.Server_Vehicles_Mod.hydraulics
+  - Altv_Roleplay.models.Server_Vehicles_Mod.id
+  - Altv_Roleplay.models.Server_Vehicles_Mod.interior_color
+  - Altv_Roleplay.models.Server_Vehicles_Mod.livery
+  - Altv_Roleplay.models.Server_Vehicles_Mod.neon
+  - Altv_Roleplay.models.Server_Vehicles_Mod.neon_b
+  - Altv_Roleplay.models.Server_Vehicles_Mod.neon_g
+  - Altv_Roleplay.models.Server_Vehicles_Mod.neon_r
+  - Altv_Roleplay.models.Server_Vehicles_Mod.ornaments
+  - Altv_Roleplay.models.Server_Vehicles_Mod.plaques
+  - Altv_Roleplay.models.Server_Vehicles_Mod.plate
+  - Altv_Roleplay.models.Server_Vehicles_Mod.plate_color
+  - Altv_Roleplay.models.Server_Vehicles_Mod.plate_holder
+  - Altv_Roleplay.models.Server_Vehicles_Mod.plate_vanity
+  - Altv_Roleplay.models.Server_Vehicles_Mod.rear_bumper
+  - Altv_Roleplay.models.Server_Vehicles_Mod.rear_hydraulics
+  - Altv_Roleplay.models.Server_Vehicles_Mod.rear_shelf
+  - Altv_Roleplay.models.Server_Vehicles_Mod.right_fender
+  - Altv_Roleplay.models.Server_Vehicles_Mod.roof
+  - Altv_Roleplay.models.Server_Vehicles_Mod.seats
+  - Altv_Roleplay.models.Server_Vehicles_Mod.shift_lever
+  - Altv_Roleplay.models.Server_Vehicles_Mod.side_skirt
+  - Altv_Roleplay.models.Server_Vehicles_Mod.smoke
+  - Altv_Roleplay.models.Server_Vehicles_Mod.smoke_b
+  - Altv_Roleplay.models.Server_Vehicles_Mod.smoke_g
+  - Altv_Roleplay.models.Server_Vehicles_Mod.smoke_r
+  - Altv_Roleplay.models.Server_Vehicles_Mod.spoiler
+  - Altv_Roleplay.models.Server_Vehicles_Mod.steering_wheel
+  - Altv_Roleplay.models.Server_Vehicles_Mod.strut_bar
+  - Altv_Roleplay.models.Server_Vehicles_Mod.suspension
+  - Altv_Roleplay.models.Server_Vehicles_Mod.tank
+  - Altv_Roleplay.models.Server_Vehicles_Mod.transmission
+  - Altv_Roleplay.models.Server_Vehicles_Mod.trim_design
+  - Altv_Roleplay.models.Server_Vehicles_Mod.trunk
+  - Altv_Roleplay.models.Server_Vehicles_Mod.turbo
+  - Altv_Roleplay.models.Server_Vehicles_Mod.vehId
+  - Altv_Roleplay.models.Server_Vehicles_Mod.wheel_type
+  - Altv_Roleplay.models.Server_Vehicles_Mod.wheelcolor
+  - Altv_Roleplay.models.Server_Vehicles_Mod.wheels
+  - Altv_Roleplay.models.Server_Vehicles_Mod.window_tint
+  - Altv_Roleplay.models.Server_Vehicles_Mod.xenon
+  langs:
+  - csharp
+  - vb
+  name: Server_Vehicles_Mod
+  nameWithType: Server_Vehicles_Mod
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Server_Vehicles_Mod
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 5
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public class Server_Vehicles_Mod
+    content.vb: Public Class Server_Vehicles_Mod
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.id
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.id
+  id: id
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: Server_Vehicles_Mod.id
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.id
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: id
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 7
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property id As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.id*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.vehId
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.vehId
+  id: vehId
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: vehId
+  nameWithType: Server_Vehicles_Mod.vehId
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.vehId
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: vehId
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 11
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int vehId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property vehId As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.vehId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimaryType
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimaryType
+  id: colorPrimaryType
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: colorPrimaryType
+  nameWithType: Server_Vehicles_Mod.colorPrimaryType
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimaryType
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: colorPrimaryType
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 12
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int colorPrimaryType { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property colorPrimaryType As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimaryType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_r
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_r
+  id: colorPrimary_r
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: colorPrimary_r
+  nameWithType: Server_Vehicles_Mod.colorPrimary_r
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_r
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: colorPrimary_r
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 13
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int colorPrimary_r { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property colorPrimary_r As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_r*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_g
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_g
+  id: colorPrimary_g
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: colorPrimary_g
+  nameWithType: Server_Vehicles_Mod.colorPrimary_g
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_g
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: colorPrimary_g
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 14
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int colorPrimary_g { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property colorPrimary_g As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_g*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_b
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_b
+  id: colorPrimary_b
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: colorPrimary_b
+  nameWithType: Server_Vehicles_Mod.colorPrimary_b
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_b
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: colorPrimary_b
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int colorPrimary_b { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property colorPrimary_b As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_b*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondaryType
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondaryType
+  id: colorSecondaryType
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: colorSecondaryType
+  nameWithType: Server_Vehicles_Mod.colorSecondaryType
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondaryType
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: colorSecondaryType
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 16
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int colorSecondaryType { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property colorSecondaryType As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondaryType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_r
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_r
+  id: colorSecondary_r
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: colorSecondary_r
+  nameWithType: Server_Vehicles_Mod.colorSecondary_r
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_r
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: colorSecondary_r
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 17
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int colorSecondary_r { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property colorSecondary_r As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_r*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_g
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_g
+  id: colorSecondary_g
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: colorSecondary_g
+  nameWithType: Server_Vehicles_Mod.colorSecondary_g
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_g
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: colorSecondary_g
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 18
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int colorSecondary_g { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property colorSecondary_g As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_g*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_b
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_b
+  id: colorSecondary_b
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: colorSecondary_b
+  nameWithType: Server_Vehicles_Mod.colorSecondary_b
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_b
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: colorSecondary_b
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 19
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int colorSecondary_b { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property colorSecondary_b As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_b*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.colorPearl
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.colorPearl
+  id: colorPearl
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: colorPearl
+  nameWithType: Server_Vehicles_Mod.colorPearl
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.colorPearl
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: colorPearl
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 20
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int colorPearl { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property colorPearl As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.colorPearl*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.headlightColor
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.headlightColor
+  id: headlightColor
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: headlightColor
+  nameWithType: Server_Vehicles_Mod.headlightColor
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.headlightColor
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: headlightColor
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 21
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int headlightColor { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property headlightColor As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.headlightColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.spoiler
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.spoiler
+  id: spoiler
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: spoiler
+  nameWithType: Server_Vehicles_Mod.spoiler
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.spoiler
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: spoiler
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 22
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int spoiler { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property spoiler As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.spoiler*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.front_bumper
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.front_bumper
+  id: front_bumper
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: front_bumper
+  nameWithType: Server_Vehicles_Mod.front_bumper
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.front_bumper
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: front_bumper
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 23
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int front_bumper { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property front_bumper As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.front_bumper*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.rear_bumper
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.rear_bumper
+  id: rear_bumper
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: rear_bumper
+  nameWithType: Server_Vehicles_Mod.rear_bumper
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.rear_bumper
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: rear_bumper
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 24
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int rear_bumper { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property rear_bumper As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.rear_bumper*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.side_skirt
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.side_skirt
+  id: side_skirt
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: side_skirt
+  nameWithType: Server_Vehicles_Mod.side_skirt
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.side_skirt
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: side_skirt
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 25
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int side_skirt { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property side_skirt As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.side_skirt*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.exhaust
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.exhaust
+  id: exhaust
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: exhaust
+  nameWithType: Server_Vehicles_Mod.exhaust
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.exhaust
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: exhaust
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 26
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int exhaust { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property exhaust As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.exhaust*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.frame
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.frame
+  id: frame
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: frame
+  nameWithType: Server_Vehicles_Mod.frame
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.frame
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: frame
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 27
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int frame { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property frame As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.frame*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.grille
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.grille
+  id: grille
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: grille
+  nameWithType: Server_Vehicles_Mod.grille
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.grille
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: grille
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 28
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int grille { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property grille As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.grille*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.hood
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.hood
+  id: hood
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: hood
+  nameWithType: Server_Vehicles_Mod.hood
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.hood
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: hood
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 29
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int hood { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property hood As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.hood*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.fender
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.fender
+  id: fender
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: fender
+  nameWithType: Server_Vehicles_Mod.fender
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.fender
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: fender
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 30
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int fender { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property fender As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.fender*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.right_fender
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.right_fender
+  id: right_fender
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: right_fender
+  nameWithType: Server_Vehicles_Mod.right_fender
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.right_fender
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: right_fender
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 31
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int right_fender { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property right_fender As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.right_fender*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.roof
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.roof
+  id: roof
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: roof
+  nameWithType: Server_Vehicles_Mod.roof
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.roof
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: roof
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 32
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int roof { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property roof As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.roof*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.engine
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.engine
+  id: engine
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: engine
+  nameWithType: Server_Vehicles_Mod.engine
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.engine
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: engine
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 33
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int engine { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property engine As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.engine*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.brakes
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.brakes
+  id: brakes
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: brakes
+  nameWithType: Server_Vehicles_Mod.brakes
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.brakes
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: brakes
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 34
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int brakes { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property brakes As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.brakes*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.transmission
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.transmission
+  id: transmission
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: transmission
+  nameWithType: Server_Vehicles_Mod.transmission
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.transmission
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: transmission
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 35
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int transmission { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property transmission As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.transmission*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.horns
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.horns
+  id: horns
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: horns
+  nameWithType: Server_Vehicles_Mod.horns
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.horns
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: horns
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 36
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int horns { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property horns As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.horns*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.suspension
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.suspension
+  id: suspension
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: suspension
+  nameWithType: Server_Vehicles_Mod.suspension
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.suspension
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: suspension
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 37
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int suspension { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property suspension As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.suspension*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.armor
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.armor
+  id: armor
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: armor
+  nameWithType: Server_Vehicles_Mod.armor
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.armor
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: armor
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 38
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int armor { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property armor As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.armor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.turbo
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.turbo
+  id: turbo
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: turbo
+  nameWithType: Server_Vehicles_Mod.turbo
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.turbo
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: turbo
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 39
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int turbo { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property turbo As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.turbo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.xenon
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.xenon
+  id: xenon
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: xenon
+  nameWithType: Server_Vehicles_Mod.xenon
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.xenon
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: xenon
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 40
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int xenon { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property xenon As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.xenon*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.wheel_type
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.wheel_type
+  id: wheel_type
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: wheel_type
+  nameWithType: Server_Vehicles_Mod.wheel_type
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.wheel_type
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: wheel_type
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 41
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int wheel_type { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property wheel_type As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.wheel_type*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.wheels
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.wheels
+  id: wheels
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: wheels
+  nameWithType: Server_Vehicles_Mod.wheels
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.wheels
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: wheels
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 42
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int wheels { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property wheels As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.wheels*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.back_wheels
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.back_wheels
+  id: back_wheels
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: back_wheels
+  nameWithType: Server_Vehicles_Mod.back_wheels
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.back_wheels
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: back_wheels
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 43
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int back_wheels { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property back_wheels As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.back_wheels*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.wheelcolor
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.wheelcolor
+  id: wheelcolor
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: wheelcolor
+  nameWithType: Server_Vehicles_Mod.wheelcolor
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.wheelcolor
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: wheelcolor
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 44
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int wheelcolor { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property wheelcolor As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.wheelcolor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.plate_holder
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.plate_holder
+  id: plate_holder
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: plate_holder
+  nameWithType: Server_Vehicles_Mod.plate_holder
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.plate_holder
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: plate_holder
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 45
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int plate_holder { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property plate_holder As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.plate_holder*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.plate_vanity
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.plate_vanity
+  id: plate_vanity
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: plate_vanity
+  nameWithType: Server_Vehicles_Mod.plate_vanity
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.plate_vanity
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: plate_vanity
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 46
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int plate_vanity { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property plate_vanity As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.plate_vanity*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.trim_design
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.trim_design
+  id: trim_design
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: trim_design
+  nameWithType: Server_Vehicles_Mod.trim_design
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.trim_design
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: trim_design
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 47
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int trim_design { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property trim_design As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.trim_design*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.ornaments
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.ornaments
+  id: ornaments
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: ornaments
+  nameWithType: Server_Vehicles_Mod.ornaments
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.ornaments
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: ornaments
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 48
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int ornaments { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ornaments As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.ornaments*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.dial_design
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.dial_design
+  id: dial_design
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: dial_design
+  nameWithType: Server_Vehicles_Mod.dial_design
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.dial_design
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: dial_design
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 49
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int dial_design { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property dial_design As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.dial_design*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.door_interior
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.door_interior
+  id: door_interior
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: door_interior
+  nameWithType: Server_Vehicles_Mod.door_interior
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.door_interior
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: door_interior
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 50
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int door_interior { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property door_interior As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.door_interior*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.seats
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.seats
+  id: seats
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: seats
+  nameWithType: Server_Vehicles_Mod.seats
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.seats
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: seats
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 51
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int seats { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property seats As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.seats*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.steering_wheel
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.steering_wheel
+  id: steering_wheel
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: steering_wheel
+  nameWithType: Server_Vehicles_Mod.steering_wheel
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.steering_wheel
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: steering_wheel
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 52
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int steering_wheel { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property steering_wheel As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.steering_wheel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.shift_lever
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.shift_lever
+  id: shift_lever
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: shift_lever
+  nameWithType: Server_Vehicles_Mod.shift_lever
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.shift_lever
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: shift_lever
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 53
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int shift_lever { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property shift_lever As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.shift_lever*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.plaques
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.plaques
+  id: plaques
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: plaques
+  nameWithType: Server_Vehicles_Mod.plaques
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.plaques
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: plaques
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 54
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int plaques { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property plaques As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.plaques*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.hydraulics
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.hydraulics
+  id: hydraulics
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: hydraulics
+  nameWithType: Server_Vehicles_Mod.hydraulics
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.hydraulics
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: hydraulics
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 55
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int hydraulics { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property hydraulics As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.hydraulics*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.rear_shelf
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.rear_shelf
+  id: rear_shelf
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: rear_shelf
+  nameWithType: Server_Vehicles_Mod.rear_shelf
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.rear_shelf
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: rear_shelf
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 56
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int rear_shelf { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property rear_shelf As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.rear_shelf*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.trunk
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.trunk
+  id: trunk
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: trunk
+  nameWithType: Server_Vehicles_Mod.trunk
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.trunk
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: trunk
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 57
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int trunk { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property trunk As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.trunk*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.engine_block
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.engine_block
+  id: engine_block
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: engine_block
+  nameWithType: Server_Vehicles_Mod.engine_block
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.engine_block
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: engine_block
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 58
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int engine_block { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property engine_block As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.engine_block*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.airfilter
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.airfilter
+  id: airfilter
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: airfilter
+  nameWithType: Server_Vehicles_Mod.airfilter
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.airfilter
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: airfilter
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 59
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int airfilter { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property airfilter As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.airfilter*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.strut_bar
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.strut_bar
+  id: strut_bar
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: strut_bar
+  nameWithType: Server_Vehicles_Mod.strut_bar
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.strut_bar
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: strut_bar
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 60
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int strut_bar { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property strut_bar As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.strut_bar*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.arch_cover
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.arch_cover
+  id: arch_cover
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: arch_cover
+  nameWithType: Server_Vehicles_Mod.arch_cover
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.arch_cover
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: arch_cover
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 61
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int arch_cover { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property arch_cover As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.arch_cover*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.antenna
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.antenna
+  id: antenna
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: antenna
+  nameWithType: Server_Vehicles_Mod.antenna
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.antenna
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: antenna
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 62
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int antenna { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property antenna As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.antenna*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.exterior_parts
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.exterior_parts
+  id: exterior_parts
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: exterior_parts
+  nameWithType: Server_Vehicles_Mod.exterior_parts
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.exterior_parts
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: exterior_parts
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 63
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int exterior_parts { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property exterior_parts As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.exterior_parts*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.tank
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.tank
+  id: tank
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: tank
+  nameWithType: Server_Vehicles_Mod.tank
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.tank
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: tank
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 64
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int tank { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property tank As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.tank*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.door
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.door
+  id: door
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: door
+  nameWithType: Server_Vehicles_Mod.door
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.door
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: door
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 65
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int door { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property door As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.door*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.window_tint
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.window_tint
+  id: window_tint
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: window_tint
+  nameWithType: Server_Vehicles_Mod.window_tint
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.window_tint
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: window_tint
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 66
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int window_tint { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property window_tint As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.window_tint*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.rear_hydraulics
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.rear_hydraulics
+  id: rear_hydraulics
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: rear_hydraulics
+  nameWithType: Server_Vehicles_Mod.rear_hydraulics
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.rear_hydraulics
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: rear_hydraulics
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 67
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int rear_hydraulics { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property rear_hydraulics As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.rear_hydraulics*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.livery
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.livery
+  id: livery
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: livery
+  nameWithType: Server_Vehicles_Mod.livery
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.livery
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: livery
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 68
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int livery { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property livery As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.livery*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.plate_color
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.plate_color
+  id: plate_color
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: plate_color
+  nameWithType: Server_Vehicles_Mod.plate_color
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.plate_color
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: plate_color
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 69
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int plate_color { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property plate_color As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.plate_color*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.plate
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.plate
+  id: plate
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: plate
+  nameWithType: Server_Vehicles_Mod.plate
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.plate
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: plate
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 70
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int plate { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property plate As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.plate*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.interior_color
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.interior_color
+  id: interior_color
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: interior_color
+  nameWithType: Server_Vehicles_Mod.interior_color
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.interior_color
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: interior_color
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 71
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int interior_color { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property interior_color As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.interior_color*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.neon
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.neon
+  id: neon
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: neon
+  nameWithType: Server_Vehicles_Mod.neon
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.neon
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: neon
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 72
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int neon { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property neon As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.neon*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.neon_r
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.neon_r
+  id: neon_r
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: neon_r
+  nameWithType: Server_Vehicles_Mod.neon_r
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.neon_r
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: neon_r
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 73
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int neon_r { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property neon_r As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.neon_r*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.neon_g
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.neon_g
+  id: neon_g
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: neon_g
+  nameWithType: Server_Vehicles_Mod.neon_g
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.neon_g
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: neon_g
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 74
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int neon_g { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property neon_g As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.neon_g*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.neon_b
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.neon_b
+  id: neon_b
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: neon_b
+  nameWithType: Server_Vehicles_Mod.neon_b
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.neon_b
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: neon_b
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 75
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int neon_b { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property neon_b As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.neon_b*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.smoke_r
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.smoke_r
+  id: smoke_r
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: smoke_r
+  nameWithType: Server_Vehicles_Mod.smoke_r
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.smoke_r
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: smoke_r
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 76
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int smoke_r { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property smoke_r As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.smoke_r*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.smoke_g
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.smoke_g
+  id: smoke_g
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: smoke_g
+  nameWithType: Server_Vehicles_Mod.smoke_g
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.smoke_g
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: smoke_g
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 77
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int smoke_g { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property smoke_g As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.smoke_g*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.smoke_b
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.smoke_b
+  id: smoke_b
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: smoke_b
+  nameWithType: Server_Vehicles_Mod.smoke_b
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.smoke_b
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: smoke_b
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 78
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int smoke_b { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property smoke_b As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.smoke_b*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.smoke
+  commentId: P:Altv_Roleplay.models.Server_Vehicles_Mod.smoke
+  id: smoke
+  parent: Altv_Roleplay.models.Server_Vehicles_Mod
+  langs:
+  - csharp
+  - vb
+  name: smoke
+  nameWithType: Server_Vehicles_Mod.smoke
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.smoke
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Vehicles_Mod.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: smoke
+    path: models/Server_Vehicles_Mod.cs
+    startLine: 79
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int smoke { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property smoke As Integer
+  overload: Altv_Roleplay.models.Server_Vehicles_Mod.smoke*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.models
+  commentId: N:Altv_Roleplay.models
+  name: Altv_Roleplay.models
+  nameWithType: Altv_Roleplay.models
+  fullName: Altv_Roleplay.models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.id*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.id
+  name: id
+  nameWithType: Server_Vehicles_Mod.id
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.vehId*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.vehId
+  name: vehId
+  nameWithType: Server_Vehicles_Mod.vehId
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.vehId
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimaryType*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimaryType
+  name: colorPrimaryType
+  nameWithType: Server_Vehicles_Mod.colorPrimaryType
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimaryType
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_r*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_r
+  name: colorPrimary_r
+  nameWithType: Server_Vehicles_Mod.colorPrimary_r
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_r
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_g*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_g
+  name: colorPrimary_g
+  nameWithType: Server_Vehicles_Mod.colorPrimary_g
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_g
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_b*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_b
+  name: colorPrimary_b
+  nameWithType: Server_Vehicles_Mod.colorPrimary_b
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.colorPrimary_b
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondaryType*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondaryType
+  name: colorSecondaryType
+  nameWithType: Server_Vehicles_Mod.colorSecondaryType
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondaryType
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_r*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_r
+  name: colorSecondary_r
+  nameWithType: Server_Vehicles_Mod.colorSecondary_r
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_r
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_g*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_g
+  name: colorSecondary_g
+  nameWithType: Server_Vehicles_Mod.colorSecondary_g
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_g
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_b*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_b
+  name: colorSecondary_b
+  nameWithType: Server_Vehicles_Mod.colorSecondary_b
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.colorSecondary_b
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.colorPearl*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.colorPearl
+  name: colorPearl
+  nameWithType: Server_Vehicles_Mod.colorPearl
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.colorPearl
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.headlightColor*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.headlightColor
+  name: headlightColor
+  nameWithType: Server_Vehicles_Mod.headlightColor
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.headlightColor
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.spoiler*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.spoiler
+  name: spoiler
+  nameWithType: Server_Vehicles_Mod.spoiler
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.spoiler
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.front_bumper*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.front_bumper
+  name: front_bumper
+  nameWithType: Server_Vehicles_Mod.front_bumper
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.front_bumper
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.rear_bumper*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.rear_bumper
+  name: rear_bumper
+  nameWithType: Server_Vehicles_Mod.rear_bumper
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.rear_bumper
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.side_skirt*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.side_skirt
+  name: side_skirt
+  nameWithType: Server_Vehicles_Mod.side_skirt
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.side_skirt
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.exhaust*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.exhaust
+  name: exhaust
+  nameWithType: Server_Vehicles_Mod.exhaust
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.exhaust
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.frame*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.frame
+  name: frame
+  nameWithType: Server_Vehicles_Mod.frame
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.frame
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.grille*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.grille
+  name: grille
+  nameWithType: Server_Vehicles_Mod.grille
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.grille
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.hood*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.hood
+  name: hood
+  nameWithType: Server_Vehicles_Mod.hood
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.hood
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.fender*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.fender
+  name: fender
+  nameWithType: Server_Vehicles_Mod.fender
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.fender
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.right_fender*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.right_fender
+  name: right_fender
+  nameWithType: Server_Vehicles_Mod.right_fender
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.right_fender
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.roof*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.roof
+  name: roof
+  nameWithType: Server_Vehicles_Mod.roof
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.roof
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.engine*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.engine
+  name: engine
+  nameWithType: Server_Vehicles_Mod.engine
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.engine
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.brakes*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.brakes
+  name: brakes
+  nameWithType: Server_Vehicles_Mod.brakes
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.brakes
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.transmission*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.transmission
+  name: transmission
+  nameWithType: Server_Vehicles_Mod.transmission
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.transmission
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.horns*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.horns
+  name: horns
+  nameWithType: Server_Vehicles_Mod.horns
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.horns
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.suspension*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.suspension
+  name: suspension
+  nameWithType: Server_Vehicles_Mod.suspension
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.suspension
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.armor*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.armor
+  name: armor
+  nameWithType: Server_Vehicles_Mod.armor
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.armor
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.turbo*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.turbo
+  name: turbo
+  nameWithType: Server_Vehicles_Mod.turbo
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.turbo
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.xenon*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.xenon
+  name: xenon
+  nameWithType: Server_Vehicles_Mod.xenon
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.xenon
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.wheel_type*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.wheel_type
+  name: wheel_type
+  nameWithType: Server_Vehicles_Mod.wheel_type
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.wheel_type
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.wheels*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.wheels
+  name: wheels
+  nameWithType: Server_Vehicles_Mod.wheels
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.wheels
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.back_wheels*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.back_wheels
+  name: back_wheels
+  nameWithType: Server_Vehicles_Mod.back_wheels
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.back_wheels
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.wheelcolor*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.wheelcolor
+  name: wheelcolor
+  nameWithType: Server_Vehicles_Mod.wheelcolor
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.wheelcolor
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.plate_holder*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.plate_holder
+  name: plate_holder
+  nameWithType: Server_Vehicles_Mod.plate_holder
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.plate_holder
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.plate_vanity*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.plate_vanity
+  name: plate_vanity
+  nameWithType: Server_Vehicles_Mod.plate_vanity
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.plate_vanity
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.trim_design*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.trim_design
+  name: trim_design
+  nameWithType: Server_Vehicles_Mod.trim_design
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.trim_design
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.ornaments*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.ornaments
+  name: ornaments
+  nameWithType: Server_Vehicles_Mod.ornaments
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.ornaments
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.dial_design*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.dial_design
+  name: dial_design
+  nameWithType: Server_Vehicles_Mod.dial_design
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.dial_design
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.door_interior*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.door_interior
+  name: door_interior
+  nameWithType: Server_Vehicles_Mod.door_interior
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.door_interior
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.seats*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.seats
+  name: seats
+  nameWithType: Server_Vehicles_Mod.seats
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.seats
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.steering_wheel*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.steering_wheel
+  name: steering_wheel
+  nameWithType: Server_Vehicles_Mod.steering_wheel
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.steering_wheel
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.shift_lever*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.shift_lever
+  name: shift_lever
+  nameWithType: Server_Vehicles_Mod.shift_lever
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.shift_lever
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.plaques*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.plaques
+  name: plaques
+  nameWithType: Server_Vehicles_Mod.plaques
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.plaques
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.hydraulics*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.hydraulics
+  name: hydraulics
+  nameWithType: Server_Vehicles_Mod.hydraulics
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.hydraulics
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.rear_shelf*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.rear_shelf
+  name: rear_shelf
+  nameWithType: Server_Vehicles_Mod.rear_shelf
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.rear_shelf
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.trunk*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.trunk
+  name: trunk
+  nameWithType: Server_Vehicles_Mod.trunk
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.trunk
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.engine_block*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.engine_block
+  name: engine_block
+  nameWithType: Server_Vehicles_Mod.engine_block
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.engine_block
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.airfilter*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.airfilter
+  name: airfilter
+  nameWithType: Server_Vehicles_Mod.airfilter
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.airfilter
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.strut_bar*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.strut_bar
+  name: strut_bar
+  nameWithType: Server_Vehicles_Mod.strut_bar
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.strut_bar
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.arch_cover*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.arch_cover
+  name: arch_cover
+  nameWithType: Server_Vehicles_Mod.arch_cover
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.arch_cover
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.antenna*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.antenna
+  name: antenna
+  nameWithType: Server_Vehicles_Mod.antenna
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.antenna
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.exterior_parts*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.exterior_parts
+  name: exterior_parts
+  nameWithType: Server_Vehicles_Mod.exterior_parts
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.exterior_parts
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.tank*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.tank
+  name: tank
+  nameWithType: Server_Vehicles_Mod.tank
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.tank
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.door*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.door
+  name: door
+  nameWithType: Server_Vehicles_Mod.door
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.door
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.window_tint*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.window_tint
+  name: window_tint
+  nameWithType: Server_Vehicles_Mod.window_tint
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.window_tint
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.rear_hydraulics*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.rear_hydraulics
+  name: rear_hydraulics
+  nameWithType: Server_Vehicles_Mod.rear_hydraulics
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.rear_hydraulics
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.livery*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.livery
+  name: livery
+  nameWithType: Server_Vehicles_Mod.livery
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.livery
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.plate_color*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.plate_color
+  name: plate_color
+  nameWithType: Server_Vehicles_Mod.plate_color
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.plate_color
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.plate*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.plate
+  name: plate
+  nameWithType: Server_Vehicles_Mod.plate
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.plate
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.interior_color*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.interior_color
+  name: interior_color
+  nameWithType: Server_Vehicles_Mod.interior_color
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.interior_color
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.neon*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.neon
+  name: neon
+  nameWithType: Server_Vehicles_Mod.neon
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.neon
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.neon_r*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.neon_r
+  name: neon_r
+  nameWithType: Server_Vehicles_Mod.neon_r
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.neon_r
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.neon_g*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.neon_g
+  name: neon_g
+  nameWithType: Server_Vehicles_Mod.neon_g
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.neon_g
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.neon_b*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.neon_b
+  name: neon_b
+  nameWithType: Server_Vehicles_Mod.neon_b
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.neon_b
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.smoke_r*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.smoke_r
+  name: smoke_r
+  nameWithType: Server_Vehicles_Mod.smoke_r
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.smoke_r
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.smoke_g*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.smoke_g
+  name: smoke_g
+  nameWithType: Server_Vehicles_Mod.smoke_g
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.smoke_g
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.smoke_b*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.smoke_b
+  name: smoke_b
+  nameWithType: Server_Vehicles_Mod.smoke_b
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.smoke_b
+- uid: Altv_Roleplay.models.Server_Vehicles_Mod.smoke*
+  commentId: Overload:Altv_Roleplay.models.Server_Vehicles_Mod.smoke
+  name: smoke
+  nameWithType: Server_Vehicles_Mod.smoke
+  fullName: Altv_Roleplay.models.Server_Vehicles_Mod.smoke

@@ -1,0 +1,1214 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.models.Characters_Skin
+  commentId: T:Altv_Roleplay.models.Characters_Skin
+  id: Characters_Skin
+  parent: Altv_Roleplay.models
+  children:
+  - Altv_Roleplay.models.Characters_Skin.charId
+  - Altv_Roleplay.models.Characters_Skin.clothesArmor
+  - Altv_Roleplay.models.Characters_Skin.clothesBag
+  - Altv_Roleplay.models.Characters_Skin.clothesBracelet
+  - Altv_Roleplay.models.Characters_Skin.clothesDecal
+  - Altv_Roleplay.models.Characters_Skin.clothesEarring
+  - Altv_Roleplay.models.Characters_Skin.clothesFeet
+  - Altv_Roleplay.models.Characters_Skin.clothesGlass
+  - Altv_Roleplay.models.Characters_Skin.clothesHat
+  - Altv_Roleplay.models.Characters_Skin.clothesLeg
+  - Altv_Roleplay.models.Characters_Skin.clothesMask
+  - Altv_Roleplay.models.Characters_Skin.clothesNecklace
+  - Altv_Roleplay.models.Characters_Skin.clothesTop
+  - Altv_Roleplay.models.Characters_Skin.clothesTorso
+  - Altv_Roleplay.models.Characters_Skin.clothesUndershirt
+  - Altv_Roleplay.models.Characters_Skin.clothesWatch
+  - Altv_Roleplay.models.Characters_Skin.facefeatures
+  - Altv_Roleplay.models.Characters_Skin.headblendsdata
+  - Altv_Roleplay.models.Characters_Skin.headoverlays
+  - Altv_Roleplay.models.Characters_Skin.id
+  langs:
+  - csharp
+  - vb
+  name: Characters_Skin
+  nameWithType: Characters_Skin
+  fullName: Altv_Roleplay.models.Characters_Skin
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Characters_Skin
+    path: models/Characters_Skin.cs
+    startLine: 5
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public class Characters_Skin
+    content.vb: Public Class Characters_Skin
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.models.Characters_Skin.id
+  commentId: P:Altv_Roleplay.models.Characters_Skin.id
+  id: id
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: Characters_Skin.id
+  fullName: Altv_Roleplay.models.Characters_Skin.id
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: id
+    path: models/Characters_Skin.cs
+    startLine: 7
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property id As Integer
+  overload: Altv_Roleplay.models.Characters_Skin.id*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.charId
+  commentId: P:Altv_Roleplay.models.Characters_Skin.charId
+  id: charId
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: charId
+  nameWithType: Characters_Skin.charId
+  fullName: Altv_Roleplay.models.Characters_Skin.charId
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: charId
+    path: models/Characters_Skin.cs
+    startLine: 11
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int charId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property charId As Integer
+  overload: Altv_Roleplay.models.Characters_Skin.charId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.facefeatures
+  commentId: P:Altv_Roleplay.models.Characters_Skin.facefeatures
+  id: facefeatures
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: facefeatures
+  nameWithType: Characters_Skin.facefeatures
+  fullName: Altv_Roleplay.models.Characters_Skin.facefeatures
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: facefeatures
+    path: models/Characters_Skin.cs
+    startLine: 14
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string facefeatures { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property facefeatures As String
+  overload: Altv_Roleplay.models.Characters_Skin.facefeatures*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.headblendsdata
+  commentId: P:Altv_Roleplay.models.Characters_Skin.headblendsdata
+  id: headblendsdata
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: headblendsdata
+  nameWithType: Characters_Skin.headblendsdata
+  fullName: Altv_Roleplay.models.Characters_Skin.headblendsdata
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: headblendsdata
+    path: models/Characters_Skin.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string headblendsdata { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property headblendsdata As String
+  overload: Altv_Roleplay.models.Characters_Skin.headblendsdata*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.headoverlays
+  commentId: P:Altv_Roleplay.models.Characters_Skin.headoverlays
+  id: headoverlays
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: headoverlays
+  nameWithType: Characters_Skin.headoverlays
+  fullName: Altv_Roleplay.models.Characters_Skin.headoverlays
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: headoverlays
+    path: models/Characters_Skin.cs
+    startLine: 16
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string headoverlays { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property headoverlays As String
+  overload: Altv_Roleplay.models.Characters_Skin.headoverlays*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.clothesTop
+  commentId: P:Altv_Roleplay.models.Characters_Skin.clothesTop
+  id: clothesTop
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: clothesTop
+  nameWithType: Characters_Skin.clothesTop
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesTop
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: clothesTop
+    path: models/Characters_Skin.cs
+    startLine: 17
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int clothesTop { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property clothesTop As Integer
+  overload: Altv_Roleplay.models.Characters_Skin.clothesTop*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.clothesTorso
+  commentId: P:Altv_Roleplay.models.Characters_Skin.clothesTorso
+  id: clothesTorso
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: clothesTorso
+  nameWithType: Characters_Skin.clothesTorso
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesTorso
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: clothesTorso
+    path: models/Characters_Skin.cs
+    startLine: 18
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int clothesTorso { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property clothesTorso As Integer
+  overload: Altv_Roleplay.models.Characters_Skin.clothesTorso*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.clothesLeg
+  commentId: P:Altv_Roleplay.models.Characters_Skin.clothesLeg
+  id: clothesLeg
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: clothesLeg
+  nameWithType: Characters_Skin.clothesLeg
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesLeg
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: clothesLeg
+    path: models/Characters_Skin.cs
+    startLine: 19
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int clothesLeg { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property clothesLeg As Integer
+  overload: Altv_Roleplay.models.Characters_Skin.clothesLeg*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.clothesFeet
+  commentId: P:Altv_Roleplay.models.Characters_Skin.clothesFeet
+  id: clothesFeet
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: clothesFeet
+  nameWithType: Characters_Skin.clothesFeet
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesFeet
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: clothesFeet
+    path: models/Characters_Skin.cs
+    startLine: 20
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int clothesFeet { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property clothesFeet As Integer
+  overload: Altv_Roleplay.models.Characters_Skin.clothesFeet*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.clothesHat
+  commentId: P:Altv_Roleplay.models.Characters_Skin.clothesHat
+  id: clothesHat
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: clothesHat
+  nameWithType: Characters_Skin.clothesHat
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesHat
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: clothesHat
+    path: models/Characters_Skin.cs
+    startLine: 21
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int clothesHat { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property clothesHat As Integer
+  overload: Altv_Roleplay.models.Characters_Skin.clothesHat*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.clothesGlass
+  commentId: P:Altv_Roleplay.models.Characters_Skin.clothesGlass
+  id: clothesGlass
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: clothesGlass
+  nameWithType: Characters_Skin.clothesGlass
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesGlass
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: clothesGlass
+    path: models/Characters_Skin.cs
+    startLine: 22
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int clothesGlass { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property clothesGlass As Integer
+  overload: Altv_Roleplay.models.Characters_Skin.clothesGlass*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.clothesEarring
+  commentId: P:Altv_Roleplay.models.Characters_Skin.clothesEarring
+  id: clothesEarring
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: clothesEarring
+  nameWithType: Characters_Skin.clothesEarring
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesEarring
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: clothesEarring
+    path: models/Characters_Skin.cs
+    startLine: 23
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int clothesEarring { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property clothesEarring As Integer
+  overload: Altv_Roleplay.models.Characters_Skin.clothesEarring*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.clothesNecklace
+  commentId: P:Altv_Roleplay.models.Characters_Skin.clothesNecklace
+  id: clothesNecklace
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: clothesNecklace
+  nameWithType: Characters_Skin.clothesNecklace
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesNecklace
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: clothesNecklace
+    path: models/Characters_Skin.cs
+    startLine: 24
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int clothesNecklace { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property clothesNecklace As Integer
+  overload: Altv_Roleplay.models.Characters_Skin.clothesNecklace*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.clothesMask
+  commentId: P:Altv_Roleplay.models.Characters_Skin.clothesMask
+  id: clothesMask
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: clothesMask
+  nameWithType: Characters_Skin.clothesMask
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesMask
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: clothesMask
+    path: models/Characters_Skin.cs
+    startLine: 25
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int clothesMask { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property clothesMask As Integer
+  overload: Altv_Roleplay.models.Characters_Skin.clothesMask*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.clothesArmor
+  commentId: P:Altv_Roleplay.models.Characters_Skin.clothesArmor
+  id: clothesArmor
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: clothesArmor
+  nameWithType: Characters_Skin.clothesArmor
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesArmor
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: clothesArmor
+    path: models/Characters_Skin.cs
+    startLine: 26
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int clothesArmor { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property clothesArmor As Integer
+  overload: Altv_Roleplay.models.Characters_Skin.clothesArmor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.clothesUndershirt
+  commentId: P:Altv_Roleplay.models.Characters_Skin.clothesUndershirt
+  id: clothesUndershirt
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: clothesUndershirt
+  nameWithType: Characters_Skin.clothesUndershirt
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesUndershirt
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: clothesUndershirt
+    path: models/Characters_Skin.cs
+    startLine: 27
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int clothesUndershirt { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property clothesUndershirt As Integer
+  overload: Altv_Roleplay.models.Characters_Skin.clothesUndershirt*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.clothesBracelet
+  commentId: P:Altv_Roleplay.models.Characters_Skin.clothesBracelet
+  id: clothesBracelet
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: clothesBracelet
+  nameWithType: Characters_Skin.clothesBracelet
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesBracelet
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: clothesBracelet
+    path: models/Characters_Skin.cs
+    startLine: 28
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int clothesBracelet { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property clothesBracelet As Integer
+  overload: Altv_Roleplay.models.Characters_Skin.clothesBracelet*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.clothesWatch
+  commentId: P:Altv_Roleplay.models.Characters_Skin.clothesWatch
+  id: clothesWatch
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: clothesWatch
+  nameWithType: Characters_Skin.clothesWatch
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesWatch
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: clothesWatch
+    path: models/Characters_Skin.cs
+    startLine: 29
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int clothesWatch { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property clothesWatch As Integer
+  overload: Altv_Roleplay.models.Characters_Skin.clothesWatch*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.clothesBag
+  commentId: P:Altv_Roleplay.models.Characters_Skin.clothesBag
+  id: clothesBag
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: clothesBag
+  nameWithType: Characters_Skin.clothesBag
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesBag
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: clothesBag
+    path: models/Characters_Skin.cs
+    startLine: 30
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int clothesBag { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property clothesBag As Integer
+  overload: Altv_Roleplay.models.Characters_Skin.clothesBag*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Characters_Skin.clothesDecal
+  commentId: P:Altv_Roleplay.models.Characters_Skin.clothesDecal
+  id: clothesDecal
+  parent: Altv_Roleplay.models.Characters_Skin
+  langs:
+  - csharp
+  - vb
+  name: clothesDecal
+  nameWithType: Characters_Skin.clothesDecal
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesDecal
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Characters_Skin.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: clothesDecal
+    path: models/Characters_Skin.cs
+    startLine: 31
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int clothesDecal { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property clothesDecal As Integer
+  overload: Altv_Roleplay.models.Characters_Skin.clothesDecal*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.models
+  commentId: N:Altv_Roleplay.models
+  name: Altv_Roleplay.models
+  nameWithType: Altv_Roleplay.models
+  fullName: Altv_Roleplay.models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.models.Characters_Skin.id*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.id
+  name: id
+  nameWithType: Characters_Skin.id
+  fullName: Altv_Roleplay.models.Characters_Skin.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.models.Characters_Skin.charId*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.charId
+  name: charId
+  nameWithType: Characters_Skin.charId
+  fullName: Altv_Roleplay.models.Characters_Skin.charId
+- uid: Altv_Roleplay.models.Characters_Skin.facefeatures*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.facefeatures
+  name: facefeatures
+  nameWithType: Characters_Skin.facefeatures
+  fullName: Altv_Roleplay.models.Characters_Skin.facefeatures
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Altv_Roleplay.models.Characters_Skin.headblendsdata*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.headblendsdata
+  name: headblendsdata
+  nameWithType: Characters_Skin.headblendsdata
+  fullName: Altv_Roleplay.models.Characters_Skin.headblendsdata
+- uid: Altv_Roleplay.models.Characters_Skin.headoverlays*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.headoverlays
+  name: headoverlays
+  nameWithType: Characters_Skin.headoverlays
+  fullName: Altv_Roleplay.models.Characters_Skin.headoverlays
+- uid: Altv_Roleplay.models.Characters_Skin.clothesTop*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.clothesTop
+  name: clothesTop
+  nameWithType: Characters_Skin.clothesTop
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesTop
+- uid: Altv_Roleplay.models.Characters_Skin.clothesTorso*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.clothesTorso
+  name: clothesTorso
+  nameWithType: Characters_Skin.clothesTorso
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesTorso
+- uid: Altv_Roleplay.models.Characters_Skin.clothesLeg*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.clothesLeg
+  name: clothesLeg
+  nameWithType: Characters_Skin.clothesLeg
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesLeg
+- uid: Altv_Roleplay.models.Characters_Skin.clothesFeet*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.clothesFeet
+  name: clothesFeet
+  nameWithType: Characters_Skin.clothesFeet
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesFeet
+- uid: Altv_Roleplay.models.Characters_Skin.clothesHat*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.clothesHat
+  name: clothesHat
+  nameWithType: Characters_Skin.clothesHat
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesHat
+- uid: Altv_Roleplay.models.Characters_Skin.clothesGlass*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.clothesGlass
+  name: clothesGlass
+  nameWithType: Characters_Skin.clothesGlass
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesGlass
+- uid: Altv_Roleplay.models.Characters_Skin.clothesEarring*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.clothesEarring
+  name: clothesEarring
+  nameWithType: Characters_Skin.clothesEarring
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesEarring
+- uid: Altv_Roleplay.models.Characters_Skin.clothesNecklace*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.clothesNecklace
+  name: clothesNecklace
+  nameWithType: Characters_Skin.clothesNecklace
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesNecklace
+- uid: Altv_Roleplay.models.Characters_Skin.clothesMask*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.clothesMask
+  name: clothesMask
+  nameWithType: Characters_Skin.clothesMask
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesMask
+- uid: Altv_Roleplay.models.Characters_Skin.clothesArmor*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.clothesArmor
+  name: clothesArmor
+  nameWithType: Characters_Skin.clothesArmor
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesArmor
+- uid: Altv_Roleplay.models.Characters_Skin.clothesUndershirt*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.clothesUndershirt
+  name: clothesUndershirt
+  nameWithType: Characters_Skin.clothesUndershirt
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesUndershirt
+- uid: Altv_Roleplay.models.Characters_Skin.clothesBracelet*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.clothesBracelet
+  name: clothesBracelet
+  nameWithType: Characters_Skin.clothesBracelet
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesBracelet
+- uid: Altv_Roleplay.models.Characters_Skin.clothesWatch*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.clothesWatch
+  name: clothesWatch
+  nameWithType: Characters_Skin.clothesWatch
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesWatch
+- uid: Altv_Roleplay.models.Characters_Skin.clothesBag*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.clothesBag
+  name: clothesBag
+  nameWithType: Characters_Skin.clothesBag
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesBag
+- uid: Altv_Roleplay.models.Characters_Skin.clothesDecal*
+  commentId: Overload:Altv_Roleplay.models.Characters_Skin.clothesDecal
+  name: clothesDecal
+  nameWithType: Characters_Skin.clothesDecal
+  fullName: Altv_Roleplay.models.Characters_Skin.clothesDecal

@@ -1,0 +1,1098 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.EntityStreamer.GlobalEntity
+  commentId: T:Altv_Roleplay.EntityStreamer.GlobalEntity
+  id: GlobalEntity
+  parent: Altv_Roleplay.EntityStreamer
+  children:
+  - Altv_Roleplay.EntityStreamer.GlobalEntity.#ctor
+  - Altv_Roleplay.EntityStreamer.GlobalEntity.Add(AltV.Net.EntitySync.IEntity)
+  - Altv_Roleplay.EntityStreamer.GlobalEntity.Find(System.Numerics.Vector3,System.Int32)
+  - Altv_Roleplay.EntityStreamer.GlobalEntity.Remove(AltV.Net.EntitySync.IEntity)
+  - Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityDimension(AltV.Net.EntitySync.IEntity,System.Int32)
+  - Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityPosition(AltV.Net.EntitySync.IEntity,System.Numerics.Vector3@)
+  - Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityRange(AltV.Net.EntitySync.IEntity,System.UInt32)
+  langs:
+  - csharp
+  - vb
+  name: GlobalEntity
+  nameWithType: GlobalEntity
+  fullName: Altv_Roleplay.EntityStreamer.GlobalEntity
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/CustomSpatialPartition.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GlobalEntity
+    path: EntityStreamer/CustomSpatialPartition.cs
+    startLine: 11
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: 'public class GlobalEntity : SpatialPartition'
+    content.vb: >-
+      Public Class GlobalEntity
+          Inherits SpatialPartition
+  inheritance:
+  - System.Object
+  - AltV.Net.EntitySync.SpatialPartitions.SpatialPartition
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.EntityStreamer.GlobalEntity.#ctor
+  commentId: M:Altv_Roleplay.EntityStreamer.GlobalEntity.#ctor
+  id: '#ctor'
+  parent: Altv_Roleplay.EntityStreamer.GlobalEntity
+  langs:
+  - csharp
+  - vb
+  name: GlobalEntity()
+  nameWithType: GlobalEntity.GlobalEntity()
+  fullName: Altv_Roleplay.EntityStreamer.GlobalEntity.GlobalEntity()
+  type: Constructor
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/CustomSpatialPartition.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: .ctor
+    path: EntityStreamer/CustomSpatialPartition.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public GlobalEntity()
+    content.vb: Public Sub New
+  overload: Altv_Roleplay.EntityStreamer.GlobalEntity.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.EntityStreamer.GlobalEntity.Add(AltV.Net.EntitySync.IEntity)
+  commentId: M:Altv_Roleplay.EntityStreamer.GlobalEntity.Add(AltV.Net.EntitySync.IEntity)
+  id: Add(AltV.Net.EntitySync.IEntity)
+  parent: Altv_Roleplay.EntityStreamer.GlobalEntity
+  langs:
+  - csharp
+  - vb
+  name: Add(IEntity)
+  nameWithType: GlobalEntity.Add(IEntity)
+  fullName: Altv_Roleplay.EntityStreamer.GlobalEntity.Add(AltV.Net.EntitySync.IEntity)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/CustomSpatialPartition.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Add
+    path: EntityStreamer/CustomSpatialPartition.cs
+    startLine: 19
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public override void Add(IEntity entity)
+    parameters:
+    - id: entity
+      type: AltV.Net.EntitySync.IEntity
+    content.vb: Public Overrides Sub Add(entity As IEntity)
+  overridden: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Add(AltV.Net.EntitySync.IEntity)
+  overload: Altv_Roleplay.EntityStreamer.GlobalEntity.Add*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Altv_Roleplay.EntityStreamer.GlobalEntity.Remove(AltV.Net.EntitySync.IEntity)
+  commentId: M:Altv_Roleplay.EntityStreamer.GlobalEntity.Remove(AltV.Net.EntitySync.IEntity)
+  id: Remove(AltV.Net.EntitySync.IEntity)
+  parent: Altv_Roleplay.EntityStreamer.GlobalEntity
+  langs:
+  - csharp
+  - vb
+  name: Remove(IEntity)
+  nameWithType: GlobalEntity.Remove(IEntity)
+  fullName: Altv_Roleplay.EntityStreamer.GlobalEntity.Remove(AltV.Net.EntitySync.IEntity)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/CustomSpatialPartition.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Remove
+    path: EntityStreamer/CustomSpatialPartition.cs
+    startLine: 24
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public override void Remove(IEntity entity)
+    parameters:
+    - id: entity
+      type: AltV.Net.EntitySync.IEntity
+    content.vb: Public Overrides Sub Remove(entity As IEntity)
+  overridden: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Remove(AltV.Net.EntitySync.IEntity)
+  overload: Altv_Roleplay.EntityStreamer.GlobalEntity.Remove*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityPosition(AltV.Net.EntitySync.IEntity,System.Numerics.Vector3@)
+  commentId: M:Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityPosition(AltV.Net.EntitySync.IEntity,System.Numerics.Vector3@)
+  id: UpdateEntityPosition(AltV.Net.EntitySync.IEntity,System.Numerics.Vector3@)
+  parent: Altv_Roleplay.EntityStreamer.GlobalEntity
+  langs:
+  - csharp
+  - vb
+  name: UpdateEntityPosition(IEntity, in Vector3)
+  nameWithType: GlobalEntity.UpdateEntityPosition(IEntity, in Vector3)
+  fullName: Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityPosition(AltV.Net.EntitySync.IEntity, in System.Numerics.Vector3)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/CustomSpatialPartition.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: UpdateEntityPosition
+    path: EntityStreamer/CustomSpatialPartition.cs
+    startLine: 29
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public override void UpdateEntityPosition(IEntity entity, in Vector3 newPosition)
+    parameters:
+    - id: entity
+      type: AltV.Net.EntitySync.IEntity
+    - id: newPosition
+      type: System.Numerics.Vector3
+    content.vb: Public Overrides Sub UpdateEntityPosition(entity As IEntity, ByRef newPosition As Vector3)
+  overridden: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityPosition(AltV.Net.EntitySync.IEntity,System.Numerics.Vector3@)
+  overload: Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityPosition*
+  nameWithType.vb: GlobalEntity.UpdateEntityPosition(IEntity, ByRef Vector3)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityPosition(AltV.Net.EntitySync.IEntity, ByRef System.Numerics.Vector3)
+  name.vb: UpdateEntityPosition(IEntity, ByRef Vector3)
+- uid: Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityRange(AltV.Net.EntitySync.IEntity,System.UInt32)
+  commentId: M:Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityRange(AltV.Net.EntitySync.IEntity,System.UInt32)
+  id: UpdateEntityRange(AltV.Net.EntitySync.IEntity,System.UInt32)
+  parent: Altv_Roleplay.EntityStreamer.GlobalEntity
+  langs:
+  - csharp
+  - vb
+  name: UpdateEntityRange(IEntity, UInt32)
+  nameWithType: GlobalEntity.UpdateEntityRange(IEntity, UInt32)
+  fullName: Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityRange(AltV.Net.EntitySync.IEntity, System.UInt32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/CustomSpatialPartition.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: UpdateEntityRange
+    path: EntityStreamer/CustomSpatialPartition.cs
+    startLine: 33
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public override void UpdateEntityRange(IEntity entity, uint range)
+    parameters:
+    - id: entity
+      type: AltV.Net.EntitySync.IEntity
+    - id: range
+      type: System.UInt32
+    content.vb: Public Overrides Sub UpdateEntityRange(entity As IEntity, range As UInteger)
+  overridden: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityRange(AltV.Net.EntitySync.IEntity,System.UInt32)
+  overload: Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityRange*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityDimension(AltV.Net.EntitySync.IEntity,System.Int32)
+  commentId: M:Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityDimension(AltV.Net.EntitySync.IEntity,System.Int32)
+  id: UpdateEntityDimension(AltV.Net.EntitySync.IEntity,System.Int32)
+  parent: Altv_Roleplay.EntityStreamer.GlobalEntity
+  langs:
+  - csharp
+  - vb
+  name: UpdateEntityDimension(IEntity, Int32)
+  nameWithType: GlobalEntity.UpdateEntityDimension(IEntity, Int32)
+  fullName: Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityDimension(AltV.Net.EntitySync.IEntity, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/CustomSpatialPartition.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: UpdateEntityDimension
+    path: EntityStreamer/CustomSpatialPartition.cs
+    startLine: 37
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public override void UpdateEntityDimension(IEntity entity, int dimension)
+    parameters:
+    - id: entity
+      type: AltV.Net.EntitySync.IEntity
+    - id: dimension
+      type: System.Int32
+    content.vb: Public Overrides Sub UpdateEntityDimension(entity As IEntity, dimension As Integer)
+  overridden: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityDimension(AltV.Net.EntitySync.IEntity,System.Int32)
+  overload: Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityDimension*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Altv_Roleplay.EntityStreamer.GlobalEntity.Find(System.Numerics.Vector3,System.Int32)
+  commentId: M:Altv_Roleplay.EntityStreamer.GlobalEntity.Find(System.Numerics.Vector3,System.Int32)
+  id: Find(System.Numerics.Vector3,System.Int32)
+  parent: Altv_Roleplay.EntityStreamer.GlobalEntity
+  langs:
+  - csharp
+  - vb
+  name: Find(Vector3, Int32)
+  nameWithType: GlobalEntity.Find(Vector3, Int32)
+  fullName: Altv_Roleplay.EntityStreamer.GlobalEntity.Find(System.Numerics.Vector3, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/CustomSpatialPartition.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Find
+    path: EntityStreamer/CustomSpatialPartition.cs
+    startLine: 49
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public override IList<IEntity> Find(Vector3 position, int dimension)
+    parameters:
+    - id: position
+      type: System.Numerics.Vector3
+    - id: dimension
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.IList{AltV.Net.EntitySync.IEntity}
+    content.vb: Public Overrides Function Find(position As Vector3, dimension As Integer) As IList(Of IEntity)
+  overridden: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Find(System.Numerics.Vector3,System.Int32)
+  overload: Altv_Roleplay.EntityStreamer.GlobalEntity.Find*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Altv_Roleplay.EntityStreamer
+  commentId: N:Altv_Roleplay.EntityStreamer
+  name: Altv_Roleplay.EntityStreamer
+  nameWithType: Altv_Roleplay.EntityStreamer
+  fullName: Altv_Roleplay.EntityStreamer
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition
+  commentId: T:AltV.Net.EntitySync.SpatialPartitions.SpatialPartition
+  parent: AltV.Net.EntitySync.SpatialPartitions
+  isExternal: true
+  name: SpatialPartition
+  nameWithType: SpatialPartition
+  fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AltV.Net.EntitySync.SpatialPartitions
+  commentId: N:AltV.Net.EntitySync.SpatialPartitions
+  isExternal: true
+  name: AltV.Net.EntitySync.SpatialPartitions
+  nameWithType: AltV.Net.EntitySync.SpatialPartitions
+  fullName: AltV.Net.EntitySync.SpatialPartitions
+- uid: Altv_Roleplay.EntityStreamer.GlobalEntity.#ctor*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.GlobalEntity.#ctor
+  name: GlobalEntity
+  nameWithType: GlobalEntity.GlobalEntity
+  fullName: Altv_Roleplay.EntityStreamer.GlobalEntity.GlobalEntity
+- uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Add(AltV.Net.EntitySync.IEntity)
+  commentId: M:AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Add(AltV.Net.EntitySync.IEntity)
+  parent: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition
+  isExternal: true
+  name: Add(IEntity)
+  nameWithType: SpatialPartition.Add(IEntity)
+  fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Add(AltV.Net.EntitySync.IEntity)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Add(AltV.Net.EntitySync.IEntity)
+    name: Add
+    nameWithType: SpatialPartition.Add
+    fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Add
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.EntitySync.IEntity
+    name: IEntity
+    nameWithType: IEntity
+    fullName: AltV.Net.EntitySync.IEntity
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Add(AltV.Net.EntitySync.IEntity)
+    name: Add
+    nameWithType: SpatialPartition.Add
+    fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Add
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.EntitySync.IEntity
+    name: IEntity
+    nameWithType: IEntity
+    fullName: AltV.Net.EntitySync.IEntity
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.EntityStreamer.GlobalEntity.Add*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.GlobalEntity.Add
+  name: Add
+  nameWithType: GlobalEntity.Add
+  fullName: Altv_Roleplay.EntityStreamer.GlobalEntity.Add
+- uid: AltV.Net.EntitySync.IEntity
+  commentId: T:AltV.Net.EntitySync.IEntity
+  parent: AltV.Net.EntitySync
+  isExternal: true
+  name: IEntity
+  nameWithType: IEntity
+  fullName: AltV.Net.EntitySync.IEntity
+- uid: AltV.Net.EntitySync
+  commentId: N:AltV.Net.EntitySync
+  isExternal: true
+  name: AltV.Net.EntitySync
+  nameWithType: AltV.Net.EntitySync
+  fullName: AltV.Net.EntitySync
+- uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Remove(AltV.Net.EntitySync.IEntity)
+  commentId: M:AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Remove(AltV.Net.EntitySync.IEntity)
+  parent: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition
+  isExternal: true
+  name: Remove(IEntity)
+  nameWithType: SpatialPartition.Remove(IEntity)
+  fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Remove(AltV.Net.EntitySync.IEntity)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Remove(AltV.Net.EntitySync.IEntity)
+    name: Remove
+    nameWithType: SpatialPartition.Remove
+    fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Remove
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.EntitySync.IEntity
+    name: IEntity
+    nameWithType: IEntity
+    fullName: AltV.Net.EntitySync.IEntity
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Remove(AltV.Net.EntitySync.IEntity)
+    name: Remove
+    nameWithType: SpatialPartition.Remove
+    fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Remove
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.EntitySync.IEntity
+    name: IEntity
+    nameWithType: IEntity
+    fullName: AltV.Net.EntitySync.IEntity
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.EntityStreamer.GlobalEntity.Remove*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.GlobalEntity.Remove
+  name: Remove
+  nameWithType: GlobalEntity.Remove
+  fullName: Altv_Roleplay.EntityStreamer.GlobalEntity.Remove
+- uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityPosition(AltV.Net.EntitySync.IEntity,System.Numerics.Vector3@)
+  commentId: M:AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityPosition(AltV.Net.EntitySync.IEntity,System.Numerics.Vector3@)
+  parent: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition
+  isExternal: true
+  name: UpdateEntityPosition(IEntity, Vector3)
+  nameWithType: SpatialPartition.UpdateEntityPosition(IEntity, Vector3)
+  fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityPosition(AltV.Net.EntitySync.IEntity, System.Numerics.Vector3)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityPosition(AltV.Net.EntitySync.IEntity,System.Numerics.Vector3@)
+    name: UpdateEntityPosition
+    nameWithType: SpatialPartition.UpdateEntityPosition
+    fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityPosition
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.EntitySync.IEntity
+    name: IEntity
+    nameWithType: IEntity
+    fullName: AltV.Net.EntitySync.IEntity
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: System.Numerics.Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityPosition(AltV.Net.EntitySync.IEntity,System.Numerics.Vector3@)
+    name: UpdateEntityPosition
+    nameWithType: SpatialPartition.UpdateEntityPosition
+    fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityPosition
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.EntitySync.IEntity
+    name: IEntity
+    nameWithType: IEntity
+    fullName: AltV.Net.EntitySync.IEntity
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: System.Numerics.Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityPosition*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityPosition
+  name: UpdateEntityPosition
+  nameWithType: GlobalEntity.UpdateEntityPosition
+  fullName: Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityPosition
+- uid: System.Numerics.Vector3
+  commentId: T:System.Numerics.Vector3
+  parent: System.Numerics
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: System.Numerics.Vector3
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+- uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityRange(AltV.Net.EntitySync.IEntity,System.UInt32)
+  commentId: M:AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityRange(AltV.Net.EntitySync.IEntity,System.UInt32)
+  parent: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition
+  isExternal: true
+  name: UpdateEntityRange(IEntity, UInt32)
+  nameWithType: SpatialPartition.UpdateEntityRange(IEntity, UInt32)
+  fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityRange(AltV.Net.EntitySync.IEntity, System.UInt32)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityRange(AltV.Net.EntitySync.IEntity,System.UInt32)
+    name: UpdateEntityRange
+    nameWithType: SpatialPartition.UpdateEntityRange
+    fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityRange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.EntitySync.IEntity
+    name: IEntity
+    nameWithType: IEntity
+    fullName: AltV.Net.EntitySync.IEntity
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityRange(AltV.Net.EntitySync.IEntity,System.UInt32)
+    name: UpdateEntityRange
+    nameWithType: SpatialPartition.UpdateEntityRange
+    fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityRange
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.EntitySync.IEntity
+    name: IEntity
+    nameWithType: IEntity
+    fullName: AltV.Net.EntitySync.IEntity
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityRange*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityRange
+  name: UpdateEntityRange
+  nameWithType: GlobalEntity.UpdateEntityRange
+  fullName: Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityRange
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityDimension(AltV.Net.EntitySync.IEntity,System.Int32)
+  commentId: M:AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityDimension(AltV.Net.EntitySync.IEntity,System.Int32)
+  parent: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition
+  isExternal: true
+  name: UpdateEntityDimension(IEntity, Int32)
+  nameWithType: SpatialPartition.UpdateEntityDimension(IEntity, Int32)
+  fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityDimension(AltV.Net.EntitySync.IEntity, System.Int32)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityDimension(AltV.Net.EntitySync.IEntity,System.Int32)
+    name: UpdateEntityDimension
+    nameWithType: SpatialPartition.UpdateEntityDimension
+    fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityDimension
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.EntitySync.IEntity
+    name: IEntity
+    nameWithType: IEntity
+    fullName: AltV.Net.EntitySync.IEntity
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityDimension(AltV.Net.EntitySync.IEntity,System.Int32)
+    name: UpdateEntityDimension
+    nameWithType: SpatialPartition.UpdateEntityDimension
+    fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.UpdateEntityDimension
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.EntitySync.IEntity
+    name: IEntity
+    nameWithType: IEntity
+    fullName: AltV.Net.EntitySync.IEntity
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityDimension*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityDimension
+  name: UpdateEntityDimension
+  nameWithType: GlobalEntity.UpdateEntityDimension
+  fullName: Altv_Roleplay.EntityStreamer.GlobalEntity.UpdateEntityDimension
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Find(System.Numerics.Vector3,System.Int32)
+  commentId: M:AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Find(System.Numerics.Vector3,System.Int32)
+  parent: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition
+  isExternal: true
+  name: Find(Vector3, Int32)
+  nameWithType: SpatialPartition.Find(Vector3, Int32)
+  fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Find(System.Numerics.Vector3, System.Int32)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Find(System.Numerics.Vector3,System.Int32)
+    name: Find
+    nameWithType: SpatialPartition.Find
+    fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Find
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: System.Numerics.Vector3
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Find(System.Numerics.Vector3,System.Int32)
+    name: Find
+    nameWithType: SpatialPartition.Find
+    fullName: AltV.Net.EntitySync.SpatialPartitions.SpatialPartition.Find
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: System.Numerics.Vector3
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.EntityStreamer.GlobalEntity.Find*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.GlobalEntity.Find
+  name: Find
+  nameWithType: GlobalEntity.Find
+  fullName: Altv_Roleplay.EntityStreamer.GlobalEntity.Find
+- uid: System.Collections.Generic.IList{AltV.Net.EntitySync.IEntity}
+  commentId: T:System.Collections.Generic.IList{AltV.Net.EntitySync.IEntity}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<IEntity>
+  nameWithType: IList<IEntity>
+  fullName: System.Collections.Generic.IList<AltV.Net.EntitySync.IEntity>
+  nameWithType.vb: IList(Of IEntity)
+  fullName.vb: System.Collections.Generic.IList(Of AltV.Net.EntitySync.IEntity)
+  name.vb: IList(Of IEntity)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.EntitySync.IEntity
+    name: IEntity
+    nameWithType: IEntity
+    fullName: AltV.Net.EntitySync.IEntity
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.EntitySync.IEntity
+    name: IEntity
+    nameWithType: IEntity
+    fullName: AltV.Net.EntitySync.IEntity
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

@@ -1,0 +1,855 @@
+@font-face {
+    font-family: 'PEL';
+    src: url('../../utils/fonts/Poppins-ExtraLight.ttf') format('truetype');
+    /*src: url('../utils/fonts/Poppins-ExtraLight.ttf') format('truetype');*/
+}
+
+@font-face {
+    font-family: 'PM';
+    src: url('../../utils/fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PT';
+    src: url('../../utils/fonts/Poppins-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSR';
+    src: url('../../utils/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSL';
+    src: url('../../utils/fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DB';
+    src: url('../../utils/fonts/db.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSSB';
+    src: url('../../utils/fonts/OpenSans-Semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BNT';
+    src: url('../../utils/fonts/bnt.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "PricedownBL";
+    src: url('../../utils/fonts/pricedownbl.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "PricedownBL";
+    src: url('../../utils/fonts/pricedownbl.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Sun Deep';
+    src: url('/assets/fonts/SunDeep.ttf');
+}
+
+@font-face {
+    font-family: 'FE';
+    src: url('/assets/fonts/FE-FONT.TTF');
+}
+
+@keyframes flickerAnimationn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 0.95;
+        transform: translateX(0%);
+    }
+}
+
+h4 {
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    color: rgba(255, 255, 255, 0.80);
+    outline: none;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+body {
+    -webkit-user-select: none;
+    user-select: none;
+    background: none;
+    /*background: url(../utils/img/bg3.jpg);*/
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+/*bankFactionATMForm Start*/
+
+div#bankFactionATMForm {
+    opacity: 0;
+}
+
+div#bankFactionATMForm {
+    display: none;
+}
+
+div#bankFactionATMForm {
+    width: 650px;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.425), rgba(86, 0, 121, 0.329));
+    border-radius: 20px;
+    text-align: center;
+    padding-bottom: 12px;
+}
+
+div#bankFactionATMForm>p.title {
+    color: white;
+    font-size: 20px;
+    font-family: PEL;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+div#bankFactionATMForm>p.description {
+    color: white;
+    font-size: 14px;
+    padding-left: 12px;
+    font-family: PEL;
+    padding-right: 12px;
+}
+
+div#bankFactionATMForm>ul.list-group {
+    float: left;
+    background: transparent;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-left: 10px;
+    display: block;
+}
+
+div#bankFactionATMForm>ul.list-group {
+    padding: 0 !important;
+}
+
+div#bankFactionATMForm>ul.list-group {
+    margin-bottom: -15px;
+}
+
+div#bankFactionATMForm>ul.list-group>li.list-group-item {
+    background: #1819186b !important;
+    float: left;
+    margin-top: 15px;
+    text-align: center;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    padding-bottom: 0rem !important;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    width: 230px;
+    padding-top: 15px;
+}
+
+div#bankFactionATMForm>ul.list-group>li.list-group-item>p.title {
+    color: #fff;
+    padding-top: 12px;
+    font-family: PEL;
+}
+
+div#bankFactionATMForm>ul.list-group>li.list-group-item>p.title {
+    padding-top: 0px !important;
+    margin-bottom: 11.52px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+
+div#bankFactionATMForm>ul.list-group>li.list-group-item>p.payin {
+    color: #23ad00;
+    padding-top: 0px !important;
+    margin-bottom: 11.52px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+
+div#bankFactionATMForm>ul.list-group>li.list-group-item>p.payout {
+    color: #ad0000;
+    padding-top: 0px !important;
+    margin-bottom: 11.52px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+
+div#bankFactionATMForm>ul.list-group>li.list-group-item>p.description {
+    color: #d2d2d2;
+    font-size: 15px;
+    padding-left: 12px;
+    font-family: PEL;
+    padding-right: 12px;
+}
+
+div#bankFactionATMForm>ul.list-group>li.list-group-item>p.payin:hover {
+    cursor: pointer;
+    border-color: #23ad00;
+    letter-spacing: 1px;
+}
+
+div#bankFactionATMForm>ul.list-group>li.list-group-item>p.payout:hover {
+    cursor: pointer;
+    border-color: #ad0000;
+    letter-spacing: 1px;
+}
+
+input#bankFactionATMForm-DepositInput,
+input#bankFactionATMForm-WithDrawInput {
+    outline: none;
+    border: none;
+    background: rgba(95, 95, 95, 0.34);
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #f1f1f1;
+    font-family: PEL;
+    border: 1px solid #131313;
+    padding: 0.2rem 0rem;
+}
+
+div#bankFactionATMForm>span.closeBankManageForm {
+    color: red;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    top: 0;
+    opacity: .45;
+    transition: all 0.5s ease-in-out;
+}
+
+div#bankFactionATMForm>span.closeBankManageForm:hover {
+    opacity: .8;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
+/*bankFactionATMForm END*/
+
+
+/*bankAccountManageForm START*/
+
+div#bankAccountManageForm {
+    opacity: 0;
+}
+
+div#bankAccountManageForm {
+    display: none;
+}
+
+#bankAccountManageForm {
+    width: 750px;
+    top: 20%;
+    left: 50%;
+    margin-left: -375px;
+    padding: 20px;
+    position: absolute;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.425), rgba(86, 0, 121, 0.329));
+    border-radius: 20px;
+    text-align: center;
+    padding-bottom: 12px;
+}
+
+#bankAccountManageForm>p.title {
+    color: white;
+    font-size: 20px;
+    font-family: PEL;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+#bankAccountManageForm>p.description {
+    color: white;
+    font-size: 14px;
+    padding-left: 12px;
+    font-family: PEL;
+    padding-right: 12px;
+}
+
+#bankAccountManageForm>hr {
+    border-top: 1px solid white;
+    width: 650px;
+}
+
+#bankAccountManageForm>ul.list-group {
+    float: left;
+    background: transparent;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-left: 10px;
+    display: block;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item {
+    background: #18191899 !important;
+    float: left;
+    padding: 1rem;
+    margin-left: 20px;
+    margin-top: 15px;
+    width: 600px;
+    text-align: center;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item.new {
+    height: 230px;
+    transition: all 0.5s ease-in-out;
+    color: #23262b;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item.new:hover {
+    background: #23262b !important;
+    color: #d2d2d2 !important;
+    cursor: pointer;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item.new>i {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item>p.title {
+    color: #d2d2d2;
+    font-family: PEL;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #7a3198;
+    padding-bottom: 10px;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item>p.floatleft {
+    float: left;
+    width: 50%;
+    text-align: left;
+    color: #d2d2d2;
+    font-size: 15px;
+    border-bottom: 1px solid #7373731c;
+    padding-bottom: 16px;
+    font-family: OSR;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item>p.floatright {
+    float: left;
+    width: 50%;
+    text-align: right;
+    color: #31985a;
+    font-size: 15px;
+    border-bottom: 1px solid #7373731c;
+    padding-bottom: 16px;
+    font-family: PT;
+    font-weight: bold;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item>button {
+    margin-left: 8px;
+    padding: 9px;
+    font-size: 16px;
+    text-align: center;
+    background: #a991b594;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item>button:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+    background: #a991b5;
+}
+
+#bankAccountManageForm>ul.list-group>li.list-group-item>button:focus {
+    box-shadow: 0 0 0 0.1rem rgba(50, 51, 50, 0.5);
+}
+
+div#bankAccountManageForm>span.closeBankManageForm {
+    color: red;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    top: 0;
+    opacity: .45;
+    transition: all 0.5s ease-in-out;
+}
+
+div#bankAccountManageForm>span.closeBankManageForm:hover {
+    opacity: .8;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
+/*bankAccountManageForm END*/
+
+
+/*bankATMbox START*/
+
+
+/**/
+
+div#bankATMbox {
+    opacity: 0;
+}
+
+div#bankATMbox {
+    display: none;
+}
+
+
+/**/
+
+div#bankATMbox-WithDrawArea {
+    opacity: 0;
+}
+
+div#bankATMbox-WithDrawArea {
+    display: none;
+}
+
+
+/**/
+
+div#bankATMbox-DepositArea {
+    opacity: 0;
+}
+
+div#bankATMbox-DepositArea {
+    display: none;
+}
+
+
+/**/
+
+div#bankATMbox-ViewTransactionArea {
+    opacity: 0;
+}
+
+div#bankATMbox-ViewTransactionArea {
+    display: none;
+}
+
+
+/**/
+
+div#bankATMbox-BalanceArea {
+    opacity: 0;
+}
+
+div#bankATMbox-BalanceArea {
+    display: none;
+}
+
+
+/**/
+
+div#bankATMbox-PinArea {
+    opacity: 0;
+}
+
+div#bankATMbox-PinArea {
+    display: none;
+}
+
+
+/**/
+
+div#bankATMbox-OverviewArea {
+    opacity: 0;
+}
+
+div#bankATMbox-OverviewArea {
+    display: none;
+}
+
+
+/**/
+
+#bankATMbox {
+    width: 1000px;
+    height: 650px;
+    top: 20%;
+    left: 50%;
+    margin-left: -455px;
+    padding: 20px;
+    position: absolute;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.425), rgba(86, 0, 121, 0.329));
+    border-radius: 20px;
+    text-align: center;
+    padding-bottom: 12px;
+}
+
+#bankATMbox>p.title {
+    color: white;
+    font-size: 20px;
+    font-family: PEL;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    margin-left: 130px;
+}
+
+#bankATMbox>#bankATMbox-OverviewArea>p.title {
+    color: white;
+    font-size: 20px;
+    font-family: PEL;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    margin-left: 130px;
+}
+
+#bankATMbox>p.description {
+    color: white;
+    font-size: 14px;
+    padding-left: 12px;
+    font-family: PEL;
+    padding-right: 12px;
+    margin-left: 130px;
+}
+
+#bankATMbox>hr {
+    border-top: 1px solid white;
+    width: 815px;
+    margin-left: 165px;
+}
+
+#bankATMbox>div#bankATMbox-OverviewArea>ul.list-group {
+    float: left;
+    background: transparent;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-left: 10px;
+    display: block;
+}
+
+#bankATMbox>div#bankATMbox-OverviewArea>ul.list-group {
+    margin-bottom: -15px;
+}
+
+#bankATMbox>div#bankATMbox-OverviewArea>ul.list-group>li.list-group-item {
+    background: #181918 !important;
+    float: left;
+    margin-top: 15px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+#bankATMbox>div#bankATMbox-OverviewArea>ul.list-group>li.list-group-item {
+    padding: 2rem !important;
+    margin-left: 50px !important;
+    width: 200px !important;
+    opacity: .4;
+    padding-bottom: 0rem !important;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+#bankATMbox>div#bankATMbox-OverviewArea>ul.list-group>li.list-group-item:hover {
+    opacity: .85;
+    cursor: pointer;
+}
+
+#bankATMbox>div#bankATMbox-OverviewArea>ul.list-group>li.list-group-item>p.title {
+    color: #fff;
+    padding-top: 12px;
+    font-family: PEL;
+}
+
+div#bankATMbox>div#bankATMbox-PinArea>input#bankATMBox-PinInput,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositInput,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawInput,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferTargetInput,
+div#banKATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneytransferInput {
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    padding-top: 10px;
+    text-align: center;
+    background: rgb(0 0 0 / 55%);
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    border-radius: 6px;
+    opacity: .35;
+}
+
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositBalanceInput,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawBalanceInput,
+div#bankATMbox>div#bankATMbox-OverviewArea>input#bankATMBox-OverviewBalance,
+div#bankATMbox>div#bankATMbox-OverviewArea>input#bankATMBox-OverviewCardNumber,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferBalanceInput {
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    padding-top: 10px;
+    text-align: center;
+    background: #252525;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #00cf1c;
+    border-radius: 6px;
+    border: 2px solid #252b28;
+    opacity: .35;
+    font-size: 35px;
+}
+
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositBalanceInput,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositInput,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawInput,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawBalanceInput,
+div#bankATMbox>div#bankATMbox-OverviewArea>input#bankATMBox-OverviewBalance,
+div#bankATMbox>div#bankATMbox-OverviewArea>input#bankATMBox-OverviewCardNumber,
+div#bankATMbox>div#banKATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferBalanceInput,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferTargetInput,
+div#banKATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneytransferInput {
+    margin-top: 0 !important;
+    padding-bottom: 6px !important;
+    padding-top: 6px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+}
+
+div#bankATMbox>div#bankATMbox-PinArea>input#bankATMBox-PinInput::placeholder,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositBalanceInput::placeholder,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositInput::placeholder,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawInput::placeholder,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawBalanceInput::placeholder,
+div#bankATMbox>div#bankATMbox-OverviewArea>input#bankATMBox-OverviewBalance::placeholder,
+div#bankATMbox>div#bankATMbox-OverviewArea>input#bankATMBox-OverviewCardNumber::placeholder,
+div#bankATMbox>div#banKATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferBalanceInput::placeholder,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferTargetInput::placeholder,
+div#banKATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneytransferInput::placeholder {
+    color: #313131;
+}
+
+div#bankATMbox>div#bankATMbox-PinArea>input#bankATMBox-PinInput:focus,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositBalanceInput:focus,
+div#bankATMbox>div#bankATMbox-DepositArea>input#bankATMBox-DepositInput:focus,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawBalanceInput:focus,
+div#bankATMbox>div#bankATMbox-OverviewArea>input#bankATMBox-OverviewBalance:focus,
+div#bankATMbox>div#bankATMbox-OverviewArea>input#bankATMBox-OverviewCardNumber:focus,
+div#bankATMbox>div#bankATMbox-WithdrawArea>input#bankATMBox-WithdrawInput:focus,
+div#bankATMbox>div#banKATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferBalanceInput:focus,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneyTransferTargetInput:focus,
+div#banKATMbox>div#bankATMbox-DoMoneyTransfer>input#bankATMBox-MoneytransferInput:focus {
+    opacity: .8;
+    transform: scale(1.05);
+}
+
+div#bankATMbox>div#bankATMbox-DepositArea>p.title,
+div#bankATMbox>div#bankATMbox-WithDrawArea>p.title,
+div#bankATMbox>div#banKATMbox-DoMoneyTransfer>p.title {
+    color: #d2d2d2;
+    font-size: 16px;
+    font-family: PEL;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+div#bankATMbox>div#bankATMbox-PinArea>button#bankATMBox-PinInput-Button,
+div#bankATMbox>div#bankATMbox-DepositArea>button#bankATMBox-DepositArea-Button,
+div#bankATMbox>div#bankATMbox-WithdrawArea>button#bankATMBox-WithdrawArea-Button,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>button#bankATMBox-DoMoneyTransfer-Button {
+    margin-top: 12px;
+    color: white;
+    font-family: PEL;
+    font-weight: bold;
+    font-size: 15px;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 6px;
+    opacity: .5;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+div#bankATMbox>div#bankATMbox-PinArea>button#bankATMBox-PinInput-Button:hover,
+div#bankATMbox>div#bankATMbox-DepositArea>button#bankATMBox-DepositArea-Button:hover,
+div#bankATMbox>div#bankATMbox-WithdrawArea>button#bankATMBox-WithdrawArea-Button:hover,
+div#bankATMbox>div#bankATMbox-DoMoneyTransfer>button#bankATMBox-DoMoneyTransfer-Button:hover {
+    cursor: pointer;
+    opacity: .8;
+    color: #d2d2d2;
+    outline: none;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List {
+    display: block;
+    float: left;
+    top: 46px;
+    max-height: 490px;
+    overflow-y: auto;
+    margin-left: 130px;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card.green {
+    border-left: 5px solid #23a55d !important;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card.red {
+    border-left: 5px solid #bf3f32 !important;
+    background: rgba(204, 70, 70, 0.32) !important;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card.blue {
+    border-left: 5px solid #3287bf !important;
+    background: rgba(70, 133, 204, 0.32) !important;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card {
+    min-width: 600px;
+    max-width: 600px;
+    max-height: 190px;
+    min-height: 190px;
+    margin-left: 5px;
+    margin-bottom: 14px;
+    background: rgba(82, 191, 128, 0.25) !important;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card>div.card-header {
+    font-size: 0.9rem;
+    font-family: PEL;
+    letter-spacing: 0.1px;
+    padding-left: 0.8rem;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card>div.card-body>h6.card-title {
+    font-family: OSR;
+    margin-bottom: 5px;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card>div.card-body>p.card-text {
+    font-family: PEL;
+    font-size: 15px;
+    text-align: left;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card.green>div.card-body>p.card-text>b {
+    color: #23a55d !important;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card.red>div.card-body>p.card-text>b {
+    color: #bf3f32 !important;
+}
+
+div#bankATMbox>div#bankATMbox-ViewTransactionArea>ul#bankATMbox-ViewTransactionArea-List>div.card.blue>div.card-body>p.card-text>b {
+    color: #3287bf !important;
+}
+
+div#bankATMbox>span#bankATMbox-CloseBankCef {
+    position: absolute;
+    color: #d2d2d2;
+    font-family: PEL;
+    text-align: center;
+    left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    top: 0;
+}
+
+div#bankATMbox>span#bankATMbox-CloseBankCef:hover {
+    cursor: pointer;
+}
+
+
+/*bankATMbox END*/
+
+
+/*bankATMbox SideBarStart*/
+
+.sidenav {
+    height: 100%;
+    width: 185px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #11111187;
+    overflow-x: hidden;
+    padding-top: 100px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.sidenav span {
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #939393;
+    display: block;
+    transition: 1s;
+}
+
+.sidenav span:hover {
+    color: #f1f1f1;
+    transition: 1s;
+}
+
+.main {
+    margin-left: 160px;
+    /* Same as the width of the sidenav */
+    font-size: 28px;
+    /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+/*bankATMbox SideBarEND*/

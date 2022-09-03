@@ -1,0 +1,317 @@
+/*GangStorageCEFBox*/
+
+div#GangStorage {
+    opacity: 0;
+}
+
+div#GangStorage {
+    display: none;
+}
+
+
+/*INVENTORY-ITEMS BOX THINGY*/
+
+#GangInventoryBox {
+    width: 460px;
+    height: 605px;
+    padding-bottom: 20px;
+    position: absolute;
+    z-index: 100;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.425), rgba(86, 0, 121, 0.329));
+    text-align: center;
+    padding-bottom: 12px;
+    left: 450px;
+    top: 200px;
+    border-radius: 35px;
+}
+
+#GangInventoryBox>div.weight {
+    margin-left: 800px;
+}
+
+#GangInventoryBox>div.title {
+    margin-top: 85px;
+    margin-left: -885;
+    margin-bottom: -77px;
+    font-family: 'PEL';
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#GangInventoryBox>div.headContainer {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    right: 5;
+    background: #00000063;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+}
+
+#GangInventoryBox>div.headContainer>.closebtn {
+    position: absolute;
+    left: 25px;
+    top: 13px;
+    color: red;
+}
+
+#GangInventoryBox>div.headContainer>span {
+    font-family: 'PEL';
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+}
+
+#GangInventoryBox>div.ContentArea {
+    height: 530px;
+    width: 455px;
+    position: relative;
+    margin-top: 5;
+    left: 0px;
+}
+
+#GangInventoryBox>div.ContentArea>ul.list-group {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#GangInventoryBox>div.ContentArea>ul.list-group>li.list-group-item {
+    float: left;
+    width: 450px;
+    border-radius: 35px;
+    margin-left: 5px;
+    max-height: 240px;
+    margin-top: 10px;
+    background: #00000024;
+    transition: opacity 0.3s 0s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+#GangInventoryBox>div.ContentArea>ul.list-group>li.list-group-item>input {
+    width: 40%;
+    outline: none;
+    border: 1px solid #0e0e0ea8;
+    background: #2b2b2b;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'PEL';
+    font-size: 13px;
+    text-align: center;
+    color: #d2d2d2;
+    font-weight: bold;
+    -webkit-appearance: none;
+}
+
+#GangInventoryBox>div.ContentArea>ul.list-group>li.list-group-item>button {
+    background: #3a3a3a;
+    font-size: 12px;
+    opacity: .6;
+    transition: all 0.3s ease-in-out;
+}
+
+#GangInventoryBox>div.ContentArea>ul.list-group>li.list-group-item:hover>.btn {
+    color: #d2d2d2;
+}
+
+#GangInventoryBox>div.ContentArea>ul.list-group>li.list-group-item>img {
+    width: 48px !important;
+    margin-top: 4px;
+}
+
+#GangInventoryBox>div.ContentArea>ul.list-group>li.list-group-item>p {
+    color: #d2d2d2;
+    font-family: 'PEL';
+    font-size: 17px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+#GangInventoryBox>div.ContentArea>ul.list-group>li.list-group-item>.btn {
+    font-size: 16px;
+    text-align: center;
+    color: #444444bd;
+    padding: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid #00000038;
+    opacity: .9;
+}
+
+
+/*INVENTORY-ITEMS BOX THINGY END*/
+
+
+/*GANG-ITEMS BOX THINGY*/
+
+#GangBox {
+    width: 460px;
+    height: 605px;
+    padding-bottom: 20px;
+    position: absolute;
+    z-index: 100;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.425), rgba(86, 0, 121, 0.329));
+    text-align: center;
+    padding-bottom: 12px;
+    right: 450px;
+    top: 200px;
+    border-radius: 35px;
+}
+
+#GangBox>div.weight {
+    margin-left: 800px;
+}
+
+#GangBox>div.title {
+    margin-top: 85px;
+    margin-left: -885;
+    margin-bottom: -77px;
+    font-family: 'PEL';
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#GangBox>div.headContainer {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    right: 5;
+    background: #00000063;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+}
+
+#GangBox>div.headContainer>span {
+    font-family: 'PEL';
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+}
+
+#GangBox>div.ContentArea {
+    height: 530px;
+    width: 455px;
+    position: relative;
+    margin-top: 5;
+    left: 0px;
+}
+
+#GangBox>div.ContentArea>ul.list-group {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#GangBox>div.ContentArea>ul.list-group>li.list-group-item {
+    float: left;
+    width: 450px;
+    border-radius: 35px;
+    margin-left: 5px;
+    max-height: 240px;
+    margin-top: 10px;
+    background: #00000024;
+    transition: opacity 0.3s 0s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+#GangBox>div.ContentArea>ul.list-group>li.list-group-item>input {
+    width: 40%;
+    outline: none;
+    border: 1px solid #0e0e0ea8;
+    background: #2b2b2b;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'PEL';
+    font-size: 13px;
+    text-align: center;
+    color: #d2d2d2;
+    font-weight: bold;
+    -webkit-appearance: none;
+}
+
+#GangBox>div.ContentArea>ul.list-group>li.list-group-item>button {
+    background: #3a3a3a;
+    font-size: 12px;
+    opacity: .6;
+    transition: all 0.3s ease-in-out;
+}
+
+#GangBox>div.ContentArea>ul.list-group>li.list-group-item:hover>.btn {
+    color: #d2d2d2;
+}
+
+#GangBox>div.ContentArea>ul.list-group>li.list-group-item>img {
+    width: 48px !important;
+    margin-top: 4px;
+}
+
+#GangBox>div.ContentArea>ul.list-group>li.list-group-item>p {
+    color: #d2d2d2;
+    font-family: 'PEL';
+    font-size: 17px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+#GangBox>div.ContentArea>ul.list-group>li.list-group-item>.btn {
+    font-size: 16px;
+    text-align: center;
+    color: #444444bd;
+    padding: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid #00000038;
+    opacity: .9;
+}
+
+
+/*GANG-ITEMS BOX THINGY END*/
+
+div#GangStorageCEFBox>p.closebtn {
+    display: table;
+    color: red;
+    text-align: left;
+    position: absolute;
+    margin-left: -20px;
+    margin-top: -20px;
+    padding-left: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 14px;
+    transition: all 0.5s ease-in-out;
+    font-size: 14px;
+}
+
+div#GangStorageCEFBox>p.closebtn:hover {
+    cursor: pointer;
+    background: rgba(214, 28, 28, 0.72);
+    color: #fff;
+    opacity: 1;
+}
+
+
+/*GangStorageCEFBox-END*/

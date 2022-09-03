@@ -1,0 +1,724 @@
+﻿<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../utils/bootstrap.min.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../utils/toastr.min.css">
+    <link rel="stylesheet" href="../utils/mdb/css/mdb-sass.css">
+    <!-- JQUERY -->
+    <script src="../utils/jquery-3.4.1.min.js"></script>
+    <script src="../utils/jquery-ui.min.js"></script>
+    <!-- MAIN -->
+    <script src="js/script.js"></script>
+    <title>HUD</title>
+</head>
+
+<body>
+
+    <h2 id="start"></h2>
+
+    <!-- HUD -->
+    <div ID="hud">
+        <div id="money">
+            <div id="moneybar">10000000 $</div>
+            <div id="moneyicon"><i class="fas fa-wallet"></i></div>
+        </div>
+        <div id="thirst">
+            <div id="thirstbar">50%</div>
+            <div id="thirsticon"><i class="fas fa-tint"></i></div>
+        </div>
+        <div id="food">
+            <div id="foodbar">50%</div>
+            <div id="foodicon"><i class="fa fa-utensils"></i></div>
+        </div>
+        <div id="mic">
+            <div id="micbar"></div>
+            <div id="micicon"><i class="fas fa-microphone"></i></div>
+        </div>
+        <div id="health">
+            <div id="healthbar">50%</div>
+            <div id="healthicon"><i class="fas fa-heartbeat"></i></div>
+        </div>
+    </div>
+
+    </div>
+    <p id="locationtext">Strassenname fehlerhaft</p>
+
+    <ul id="InteractionMenu-List"></ul>
+
+    <div id="identityCardApplyForm">
+        <div class="contract2">
+            <div class="container d-flex justify-content-center align-items-center">
+                <div class="card contract2-card">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-center">
+                            <span id="title" style="font-size: 25px; font-family: MingLiu;">Antrag:
+                                Personalausweis</span>
+                        </div>
+                        <hr>
+                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Damit sie sich legal in
+                            San Andreas aufhalten können ist ein Personalausweis erforderlich.</p>
+                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Diesen können sie hier
+                            beantragen jedoch benötigen wir noch einige Informationen von ihnen.</p>
+                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Die Haupt Informationen
+                            über sie, wurden uns bereits von dem Amt für Einreise übermittelt, Tragen sie dort unten nur
+                            ihren Geburtsort ein.</p>
+                        Name:
+                        <div class="inputgroup">
+                            <input id="identityCardApplyFormCharname" type="text" maxlength="32"
+                                placeholder="Vor- und Nachname" spellcheck="false" value="Hans Parker" disabled
+                                style="border:none;border-bottom:1px solid black;outline:none;background: transparent;">
+                        </div>
+                        Geschlecht:
+                        <div class="inputgroup">
+                            <input id="identityCardApplyFormGender" type="text" maxlength="32" placeholder="Geschlecht"
+                                spellcheck="false" value="Männlich" disabled
+                                style="border:none;border-bottom:1px solid black;outline:none;background: transparent;">
+                        </div>
+                        Addresse:
+                        <div class="inputgroup">
+                            <input id="identityCardApplyFormAdress" type="text" maxlength="32" placeholder="Adresse"
+                                spellcheck="false" value="Strawberry Avenue 91" disabled
+                                style="border:none;border-bottom:1px solid black;outline:none;background: transparent;">
+                        </div>
+                        Geburtsdatum:
+                        <div class="inputgroup">
+                            <input id="identityCardApplyFormBirthdate" type="text" maxlength="32"
+                                placeholder="Geburtsdatum" spellcheck="false" value="01. Januar 1992" disabled
+                                style="border:none;border-bottom:1px solid black;outline:none;background: transparent;">
+                        </div>
+                        Geburtsort:
+                        <div class="inputgroup" style="font-family: DB;">
+                            <input id="identityCardApplyFormBirthplace" type="text" maxlength="32" placeholder=" "
+                                spellcheck="false"
+                                style="border:none;border-bottom:1px solid black;outline:none;background: transparent;">
+                        </div>
+
+                        <div class="fixed-bottom d-flex justify-content-center" style="margin-bottom: 20px;">
+                            <button
+                                style="font-size: 20px; font-family: MingLiu; border-bottom:none; border-top:none; border-right:none; border-left:none; outline: none; background-color:#fff;"
+                                type="button" onclick="SendIdentityCardApplyForm();">Unterschreiben</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="VehicleFuelstationCEFBox">
+        <p class="closebtn" onclick="closeFuelstationCEF();"><i class="fas fa-times"></i></p>
+        <p class="title">TANKSTELLE</p>
+        <div class="container">
+            <p class="subtitle">Name der Tankstelle:
+                <font id="VehicleFuelstationCEFBox-stationName">Fehler</font>
+            </p>
+            <p class="subtitle">Verfügbare Liter:
+                <font id="VehicleFuelstationCEFBox-availableLiter">Fehler</font>
+            </p>
+        </div>
+        <hr>
+        <div class="container">
+            <p class="title">LITER ANZAHL AUSWÄHLEN</p>
+            <form oninput="numerisch.value=auswertung.value">
+                <input id="VehicleFuelStationCEFBox-LiterSlider" oninput="VehicleFuelStationCEFBoxCalculatePrices();"
+                    type="range" name="auswertung" min="1" max="100" value="1"><output name="numerisch"
+                    id="VehicleFuelStationCEFBox-Out" class="numberfield">1</output>
+            </form>
+            <ul id="VehicleFuelstationCEFBox-List" class="list-group">
+
+            </ul>
+        </div>
+    </div>
+
+    <div id="GivePlayerBillCEFBox">
+        <div class="contract3">
+            <div class="container d-flex justify-content-center align-items-center">
+                <div class="card contract3-card">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-center">
+                            <span id="title" style="font-size: 25px; font-family: MingLiu;">Rechnung</span>
+                        </div>
+                        <hr>
+                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;"> </p>
+                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;"> </p>
+                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;"> </p>
+
+                        <div class="container" style="border-bottom: 2px solid #ffffff0a;">
+                            <p>Betrag</p>
+                            <input id="GivePlayerBillCEFBox-AmountInput" type="number" spellcheck="false"
+                                onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                        </div>
+                        <div class="container" style="padding-top: 15px;">
+                            <p>Begründung</p>
+                            <textarea style="height:120px;max-height: 120px;min-height: 120px;"
+                                id="GivePlayerBillCEFBox-ReasonInput" cols="40" rows="5"></textarea>
+                        </div>
+
+                        <div class="fixed-bottom d-flex justify-content-center" style="margin-bottom: 20px;">
+                            <button
+                                style="font-size: 20px; font-family: MingLiu; border-bottom:none; border-top:none; border-right:none; border-left:none; outline: none; background-color:#fff;"
+                                type="button" onclick="SendIdentityCardApplyForm();">Ausstellen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="RecievePlayerBillCEFBox">
+        <div class="contract4">
+            <div class="container d-flex justify-content-center align-items-center">
+                <div class="card contract4-card">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-center">
+                            <span id="title" style="font-size: 25px; font-family: MingLiu;">Rechnung</span>
+                        </div>
+                        <hr>
+                        <p class="text-justify" style="font-size: 15px; font-family: MingLiu;">Sie sind Verpflichtet
+                            diese Rechnung zu Zahlen insofern sie von einem Legitimen Unternehmen Ausgestellt wurde.
+                            Dazu gehören Sämtliche Staatliche Unternehmen (LSPD, EMS, DoJ etc.) sowie auch Offiziell
+                            Eingetragene Firmen und Privat Unternehmen.
+                        </p>
+                        <p class="text-justify" style="font-size: 15px; font-family: MingLiu;">Sollte es sich hierbei um
+                            keine Legitime Rechnung (Fälschung etc.) Handeln, kontaktieren sie die Justiz.</p>
+                        <p class="text-justify" style="font-size: 15px; font-family: MingLiu;"> </p>
+                        <p class="text-justify" style="font-size: 15px; font-family: MingLiu;">Sollte es eine Legitime
+                            Rechnung sein sind sie Verpflichtet diese zu Zahlen, sollten Sie die Rechnung nicht Bezahlen
+                            kann dies Rechtliche Folgen haben.</p>
+                        <p class="text-justify" style="font-size: 15px; font-family: MingLiu;">Sollten sie die Rechnung
+                            aus Finanziellen Gründen nicht Zahlen können müssen Sie das dem Aussteller der Rechnung
+                            mitteilen.</p>
+                        <hr>
+                        <div class="container" style="border-bottom: 2px solid #ffffff0a;">
+                            <p>Fraktions- / Unternehmensname</p>
+                            <input style="width: 75%;" id="RecievePlayerBillCEFBox-NameInput" type="text"
+                                spellcheck="false" maxlength="64" disabled>
+                        </div>
+                        <div class="container" style="padding-top: 15px; border-bottom: 2px solid #ffffff0a;">
+                            <p>Begründung</p>
+                            <input style="width: 75%;" id="RecievePlayerBillCEFBox-ReasonInput" type="text"
+                                spellcheck="false" maxlength="32" disabled>
+                        </div>
+                        <div class="container" style="padding-top: 15px">
+                            <p>Betrag</p>
+                            <input id="RecievePlayerBillCEFBox-AmountInput" type="number" spellcheck="false" disabled>
+                        </div>
+                        <hr>
+                        <div class="fixed-bottom d-flex justify-content-center" style="margin-bottom: 20px;">
+                            <button onclick="RecievePlayerBillCEFBoxAction(`bar`);" type="btn"
+                                class="btn">Barzahlung</button>
+                            <button onclick="RecievePlayerBillCEFBoxAction(`bank`);" type="btn"
+                                class="btn">Bankzahlung</button>
+                            <button onclick="RecievePlayerBillCEFBoxAction(`decline`);" type="btn"
+                                class="btn">Ablehnen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="VehicleLicensingCEFBox">
+        <p class="closebtn" onclick="closeVehicleLicensingCEFBox();"><i class="fas fa-times"></i></p>
+        <p class="title">DMV</p>
+        <p class="description">Wähle unten eins der Fahrzeuge aus, die du anmelden möchtest.
+            <br><b>Leerzeichen müssen durch einen Bindestrich ( - ) ersetzt werden.</b></p>
+        <p class="warndescription"><b>Das Kennzeichen darf KEINE Sonderzeichen außer ( - ) enthalten!</b></p>
+        <img src="assets/plate.png">
+        <input id='PlateText' type='text' spellcheck='false' maxlength='8' placeholder='TEXT'>
+        <hr>
+        <ul id="VehicleLicensingCEFBox-List" class="list-group">
+            <li class='list-group-item'>
+                <div class='container left'>
+                    <p class='title'>FAHRZEUGNAME</p>
+                    <p class='name'>vehName</p>
+                </div>
+                <div class='container mid'>
+                    <p class='title'>KENNZEICHEN</p>
+                    <p class='name'>vehPlate</p>
+                </div>
+                <div class='container right'>
+                    <p class='title'>FAHRZEUG ANMELDEN?</p>
+                    <button type='button'
+                        onclick='VehicleLicensingCEFAction(`anmelden`, " + vehArray[i].vehId + ", `" + vehArray[i].vehPlate + "`, this);'
+                        class='btn btn-sm btn-anmelden'><i class='fas fa-check'></i></button>
+                    <button type='button'
+                        onclick='VehicleLicensingCEFAction(`abmelden`, " + vehArray[i].vehId + ", `" + vehArray[i].vehPlate + "`, this);'
+                        class='btn btn-sm btn-abmelden'><i class='fas fa-times'></i></button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="VehicleKeyCEFBox">
+        <p class="closebtn" onclick="closeVehicleKeyCEFBox();"><i class="fas fa-times"></i></p>
+        <p class="title">SCHLÜSSELDIENST</p>
+        <p class="description">Hier kannst du für deine Fahrzeuge die Schlüssel nachmachen.<br>Das Fahrzeug muss auf der
+            Markierung stehen.<br></b>
+        </p>
+        <hr>
+        <ul id="VehicleKeyCEFBox-List" class="list-group"></ul>
+    </div>
+
+    <div id="VehicleSellCEFBox">
+        <p class="closebtn" onclick="closeVehicleSellCEFBox();"><i class="fas fa-times"></i></p>
+        <p class="title">KFZ-ANKAUF</p>
+        <p class="description">Hier kannst du deine Fahrzeuge für 50% Des Kaufpreises Verkaufen.<br>Das Fahrzeug
+            muss auf der Markierung stehen.<br></b>
+        </p>
+        <hr>
+        <ul id="VehicleSellCEFBox-List" class="list-group"></ul>
+    </div>
+
+    <div id="HotelManageCEFBox">
+        <p class="closebtn" onclick="closeHotelManageCEFBox();"><i class="fas fa-times"></i></p>
+        <p id="HotelManageCEFBox-HotelName" class="title">Hotel: Fehler</p>
+        <p class="description">Miete dir ein Apartment zu günstigen Konditionen.<br> Nach Ablauf der Mietdauer wird dein
+            Zimmer automatisch gekündigt.</p>
+        <hr>
+        <ul id="HotelManageCEFBox-ApartmentList" class="list-group"></ul>
+    </div>
+
+    <div id="HouseEntranceCEFBox">
+        <p class="closebtn" onclick="closeHouseEntranceCEFBox();"><i class="fas fa-times"></i></p>
+        <p id="HouseEntranceCEFBox-HouseName" class="title">Boulevard Del Perro 13a</p>
+        <p class="description">Kaufe, betrete oder miete dieses Haus.<br>Ob die Möglichkeiten bestehen und weitere Infos
+            findest du weiter unten.</p>
+        <hr id="HouseEntranceCEFBox-Cut">
+        <div id="HouseEntranceCEFBox-List"></div>
+    </div>
+
+    <div id="TownhallHouseSelectorBox">
+        <p class="closebtn" onclick="closeTownHallHouseSelector();"><i class="fas fa-times"></i></p>
+        <p class="title">Einwohnermeldeamt</p>
+        <p class="description">Besitzt du ein Haus? Falls ja wähle dieses hier aus um dieses als Wohnsitz zu wählen.</p>
+        <hr>
+        <ul id="TownHallHouseSelector-List" class="list-group"></ul>
+    </div>
+
+    <div id="HouseManageCEFBox">
+        <p class="closebtn" onclick="closeHouseManageCEFBox();"><i class="fas fa-times"></i></p>
+        <p class="title">VERWALTUNG</p>
+        <p class="description">Hier hast du die Möglichkeit dein Haus/Lager zu verwalten.</p>
+        <hr>
+        <ul class="nav nav-tabs">
+            <li data-toggle="tab" href="#verwaltung">
+                <a>Verwaltung</a>
+            </li>
+            <li data-toggle="tab" href="#mieter"><a>Mieter</a></li>
+            <li data-toggle="tab" href="#upgrades"><a>Upgrades</a></li>
+            <li data-toggle="tab" href="#bank"><a>Tresor</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="verwaltung" class="tab-pane fade">
+                <h3>Verwaltung</h3>
+                <p>Lege fest ob du Mieter zulassen möchtest oder nicht.<br>Falls ja, bestimmte zusätzlich einen
+                    Mietpreis welcher täglich erhoben wird.</p>
+
+                <div class="container">
+                    <p class="title">Mietpreis setzen</p>
+                    <input id="HouseManageCEFBox-rentPriceInput" type="number"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    <button id="HouseManageCEFBox-setRentPriceBtn" type="button" class="btn btn-sm btn-danger"><i
+                            class="fa fa-check"></i></button>
+                </div>
+                <div class="container">
+                    <p class="title">Mieter zulassen?</p>
+                    <button id="HouseManageCEFBox-AllowRentersBtn" type="button"
+                        class="btn btn-sm btn-success">JA</button>
+                    <button id="HouseManageCEFBox-DenyRentersBtn" type="button"
+                        class="btn btn-sm btn-danger">NEIN</button>
+                </div>
+            </div>
+            <div id="mieter" class="tab-pane fade">
+                <h3>Mieter verwalten</h3>
+                <p>Eine Übersicht aller aktuell eingemieteten Personen.<br>Falls nicht erwünscht kannst du diese
+                    kündigen.</p>
+                <ul id="HouseManageCEFBox-RenterList" class="list-group"></ul>
+            </div>
+            <div id="upgrades" class="tab-pane fade">
+                <h3>Haus ausbauen</h3>
+                <p>Baue dein Haus aus und erhalte Zugriff auf neue Features.<br>Die Gebühren werden von deinem
+                    Hauptkonto abgebucht.</p>
+                <ul id="HouseManageCEFBox-UpgradeList" class="list-group"></ul>
+            </div>
+            <div id="bank" class="tab-pane fade">
+                <h3>Tresor verwalten</h3>
+                <p>Solltest du über einen ausgebauten Tresor verfügen,<br>kannst du hier auf deinen Tresor Geld ein- &
+                    auszahlen.</p>
+                <div class="container">
+                    <p class="title">Tresorstand:
+                        <font id="HouseManageCEFBox-TresorAmount">0$</font>
+                    </p>
+                    <input id="HouseManageCEFBox-TresorInput" type="number"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    <button id="HouseManageCEFBox-TresorDepositBtn" style="padding: 4px 8px 4px 8px" type="button"
+                        class="btn btn-sm btn-success">EINZAHLEN</button>
+                    <button id="HouseManageCEFBox-TresorWithdrawBtn" type="button"
+                        class="btn btn-sm btn-danger">AUSZAHLEN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="GivePlayerLicenseCEFBox">
+        <p class="closebtn" onclick="closeGivePlayerLicenseCEFBox();"><i class="fas fa-times"></i></p>
+        <p class="title">ZULASSUNGSSTELLE</p>
+        <hr>
+        <ul id="GivePlayerLicenseCEFBox-List" class="list-group"></ul>
+    </div>
+
+    <div id="Minijob-BusDriverCEFBox">
+        <p class="closebtn" onclick="closeMinijobBusDriverCEFBox();"><i class="fas fa-times"></i></p>
+        <p class="title">MINIJOB: BUSFAHRER</p>
+        <p class="description">Als Busfahrer versorgst du den Stadtverkehr.<br>Jede Linie hat einen anderen Verdienst
+            und eine andere Dauer.</p>
+        <div id="Minijob-BusDriverCEFBox-List"></div>
+    </div>
+
+    <div id="Minijob-PilotCEFBox">
+        <p class="closebtn" onclick="closeMinijobPilotCEFBox();"><i class="fas fa-times"></i></p>
+        <p class="title">Auto Vermietung</p>
+        <div class="billUnderlineBody"></div>
+        <ul class="list-group">
+            <li class="list-group-item" onclick="MinijobPilotCEFSelectJob(1);">
+                <p class="title">250$</p>
+                <p class="veh">Winky</p>
+            </li>
+            <li class="list-group-item" onclick="MinijobPilotCEFSelectJob(2);">
+                <p class="title">350$</p>
+                <p class="veh">Kamacho</p>
+            </li>
+            <li class="list-group-item" onclick="MinijobPilotCEFSelectJob(3);">
+                <p class="title">550$</p>
+                <p class="veh">Youga Custom</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="barberCEFBox">
+        <!-- Friseur HUD -->
+        <span class="closeBarberCEF" onclick="CloseBarberCEF();"><i class="fas fa-times"></i></span>
+        <p class="title">FRISIERE DEINEN CHARAKTER</p>
+        <div class="dropdown">
+            <input onclick="clickdropBarber(this);" class="dropdown-selector" type="checkbox" />
+            <div class="dropdown-caption">
+                <i class="fas fa-angle-double-right dropdown"></i> Kopfbehaarung
+            </div>
+            <div class="dropdown-content">
+                <div class="subboxcontent">
+                    <p>Haare</p>
+                    <div class="nose-pegel">
+                        <form oninput="numerisch.value=auswertung.value">
+                            <input id="BarberHairVariation" oninput="BarberChangeHair(0);" type="range"
+                                name="auswertung" min="0" step="1" max="150" value="0" class="slider"><output
+                                name="numerisch" id="BarberHairVariationOutput" class="numberfield">0</output>
+                        </form>
+                    </div>
+                </div>
+                <div class="subboxcontent">
+                    <p>Haarfarbe (primär)</p>
+                    <div class="nose-pegel">
+                        <form oninput="numerisch.value=auswertung.value">
+                            <input id="BarberHairColor1" oninput="BarberChangeHair(1);" type="range" name="auswertung"
+                                min="0" step="1" max="63" value="0" class="slider"><output name="numerisch"
+                                id="BarberHairColor1Output" class="numberfield">0</output>
+                        </form>
+                    </div>
+                </div>
+                <div class="subboxcontent">
+                    <p>Haarfarbe (sekundär)</p>
+                    <div class="nose-pegel">
+                        <form oninput="numerisch.value=auswertung.value">
+                            <input id="BarberHairColor2" oninput="BarberChangeHair(2);" type="range" name="auswertung"
+                                min="0" step="1" max="63" value="0" class="slider"><output name="numerisch"
+                                id="BarberHairColor2Output" class="numberfield">0</output>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <input onclick="clickdropBarber(this);" class="dropdown-selector" type="checkbox" />
+            <div class="dropdown-caption">
+                <i class="fas fa-angle-double-right dropdown"></i> Augenbrauen
+            </div>
+            <div class="dropdown-content">
+                <div class="subboxcontent">
+                    <p>Variation</p>
+                    <div class="nose-pegel">
+                        <form oninput="numerisch.value=auswertung.value">
+                            <input id="BarberEyebrowsVariation" oninput="BarberChangeHair(5);" type="range"
+                                name="auswertung" min="-1" step="1" max="30" value="-1" class="slider"><output
+                                name="numerisch" id="BarberEyebrowsVariationOutput" class="numberfield">0</output>
+                        </form>
+                    </div>
+                </div>
+                <div class="subboxcontent">
+                    <p>Farbe</p>
+                    <div class="nose-pegel">
+                        <form oninput="numerisch.value=auswertung.value">
+                            <input id="BarberEyebrowsColor" oninput="BarberChangeHair(6);" type="range"
+                                name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output
+                                name="numerisch" id="BarberEyebrowsColorOutput" class="numberfield">0</output>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <input onclick="clickdropBarber(this);" class="dropdown-selector" type="checkbox" />
+            <div class="dropdown-caption">
+                <i class="fas fa-angle-double-right dropdown"></i> Bartbehaarung
+            </div>
+            <div class="dropdown-content">
+                <div class="subboxcontent">
+                    <p>Variation</p>
+                    <div class="nose-pegel">
+                        <form oninput="numerisch.value=auswertung.value">
+                            <input id="BarberBeardVariation" oninput="BarberChangeHair(3);" type="range"
+                                name="auswertung" min="-1" step="1" max="30" value="-1" class="slider"><output
+                                name="numerisch" id="BarberBeardVariationOutput" class="numberfield">0</output>
+                        </form>
+                    </div>
+                </div>
+                <div class="subboxcontent">
+                    <p>Farbe</p>
+                    <div class="nose-pegel">
+                        <form oninput="numerisch.value=auswertung.value">
+                            <input id="BarberBeardColor" oninput="BarberChangeHair(4);" type="range" name="auswertung"
+                                min="0" step="1" max="63" value="0" class="slider"><output name="numerisch"
+                                id="BarberBeardColorOutput" class="numberfield">0</output>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <input onclick="clickdropBarber(this);" class="dropdown-selector" type="checkbox" />
+            <div class="dropdown-caption">
+                <i class="fas fa-angle-double-right dropdown"></i> Makeup
+            </div>
+            <div class="dropdown-content">
+                <div class="subboxcontent">
+                    <p>MakeUp Variation</p>
+                    <div class="nose-pegel">
+                        <form oninput="numerisch.value=auswertung.value">
+                            <input id="BarberMakeupVariation" oninput="BarberChangeHair(7);" type="range"
+                                name="auswertung" min="-1" step="1" max="71" value="-1" class="slider"><output
+                                name="numerisch" id="BarberMakeupVariationOutput" class="numberfield">0</output>
+                        </form>
+                    </div>
+                </div>
+                <div class="subboxcontent">
+                    <p>MakeUp Sichtbarkeit</p>
+                    <div class="nose-pegel">
+                        <form oninput="numerisch.value=auswertung.value">
+                            <input id="BarberMakeupAlpha" oninput="BarberChangeHair(8);" type="range" name="auswertung"
+                                min="0" step="1" max="1" value="1" class="slider"><output name="numerisch"
+                                id="BarberMakeupAlphaOutput" class="numberfield">0</output>
+                        </form>
+                    </div>
+                </div>
+                <div class="subboxcontent">
+                    <p>Lippenstift</p>
+                    <div class="nose-pegel">
+                        <form oninput="numerisch.value=auswertung.value">
+                            <input id="BarberLipstickVariation" oninput="BarberChangeHair(9);" type="range"
+                                name="auswertung" min="-1" step="1" max="9" value="-1" class="slider"><output
+                                name="numerisch" id="BarberLipstickVariationOutput" class="numberfield">0</output>
+                        </form>
+                    </div>
+                </div>
+                <div class="subboxcontent">
+                    <p>Lippenstift Farbe</p>
+                    <div class="nose-pegel">
+                        <form oninput="numerisch.value=auswertung.value">
+                            <input id="BarberLipstickColor" oninput="BarberChangeHair(10);" type="range"
+                                name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output
+                                name="numerisch" id="BarberLipstickColorOutput" class="numberfield">0</output>
+                        </form>
+                    </div>
+                </div>
+                <div class="subboxcontent">
+                    <p>Wangenröte</p>
+                    <div class="nose-pegel">
+                        <form oninput="numerisch.value=auswertung.value">
+                            <input id="BarberWangenBlushVariation" oninput="BarberChangeHair(11);" type="range"
+                                name="auswertung" min="-1" step="1" max="6" value="-1" class="slider"><output
+                                name="numerisch" id="BarberWangenBlushVariationOutput" class="numberfield">0</output>
+                        </form>
+                    </div>
+                </div>
+                <div class="subboxcontent">
+                    <p>Wangenröte Farbe</p>
+                    <div class="nose-pegel">
+                        <form oninput="numerisch.value=auswertung.value">
+                            <input id="BarberWangenBlushColor" oninput="BarberChangeHair(12);" type="range"
+                                name="auswertung" min="0" step="1" max="63" value="0" class="slider"><output
+                                name="numerisch" id="BarberWangenBlushColorOutput" class="numberfield">0</output>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" id="BarberBuyButton" onclick="BarberBuyHairStyles();" class="btn btn-success">Bezahlen
+            (50$)</button>
+    </div>
+
+    <div id="VehicleShopCEFBox">
+        <p class="closebtn" onclick="CloseVehicleShopCEF();"><i class="fas fa-times"></i></p>
+        <p id="VehicleShopCEFBox-title">Fahrzeugshop: Morningwood</p>
+        <hr>
+        <input class="VehSearch" type="text" id="VehSearch" placeholder="Suchen..." onkeyup="VehSearch()"/>
+        <ul id="VehicleShopCEFBox-StoreList" class="list-group"></ul>
+    </div>
+    <script>
+        function VehSearch() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("VehSearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("VehicleShopCEFBox-StoreList");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("span")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+        </script>
+
+    <div id="ProcessingBox">
+        <div class="ProcessingBoxUpperPart">
+            <div class="circlediv ProcessingBocCloseBtn" onclick="closeProcessingMenuCEF();"><i
+                    class="fa fa-times-circle"></i></div>
+            <p class="ProcessingBoxTitle">Verarbeitung</p>
+        </div>
+        <div class="ProcessingBoxZutaten">
+            <div id="ProcessingBoxNeededItems">
+                
+            </div>
+            <i class='fas fa-arrow-down'></i>
+            <div id="ProcessingBoxProducedItem">
+                
+            </div>
+        </div>
+        <div id="ProcessingBoxMainfraim">
+
+        </div>
+        <div id="ProcessingBoxButtonBoxes">
+            
+        </div>
+    </div>
+
+    <div id="changeVehOwnerHUD">
+        <div class="contract1">
+            <div class="container d-flex justify-content-center align-items-center">
+                <div class="card contract1-card">
+                    <p onclick="closeChangeVehOwnerHUD();" class="closebtn"><i class="fas fa-times"></i></p>
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-center">
+                            <span id="title" style="font-size: 25px; font-family: MingLiu;">Fahrzeugverkaufs
+                                Vertrag</span>
+                        </div>
+                        <hr>
+                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Wichtig, vorab zu wissen
+                        </p>
+                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Mit dem Kaufvertrag
+                            vermeiden Sie Rechtsstreitigkeiten und sichern sich das Vertrauen des Käufers.</p>
+                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Lesen Sie auf dieser
+                            Seite die wichtigsten Hinweise zum Verkaufsprozess.</p>
+                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Das Fahrzeug wird so
+                            Verkauft wie es ist und Der Verkäufer übernimmt keine Garantie für den Zustand des Autos.
+                        </p>
+                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Der Verkäufer stellt dem
+                            Käufer alle Schlüssel zur Verfügung.</p>
+                        <p class="text-justify" style="font-size: 17px; font-family: MingLiu;">Sollte das nicht
+                            Passieren können Rechtliche Schritte eingeleitet werden.</p>
+                        <p id="changeVehOwnerHUD-desc" style="font-size: 17px; font-family: MingLiu;"
+                            class="text-justify">Fahrzeug:</p>
+                        <div class="fixed-bottom row d-flex justify-content-center" style="margin-bottom: 100px;">
+                            <div class="col col-md-4" style="width: 220px;">
+                                <label class="d-flex justify-content-center"
+                                    style="font-size: 15px; margin-top: 5px; font-family: MingLiu;">Ausweis Nr. des
+                                    Käufers</label>
+                                <input
+                                    style="font-family: DB; border-bottom: 1px solid #2f3037; border-top:none; border-right:none; border-left:none; outline: none;"
+                                    id="changeVehOwnerHUD-value" type="number" spellcheck="false" max="9999999" min="1"
+                                    maxlength="999999" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                            </div>
+                            <div class="col col-md-4" style="width: 220px;"></div>
+                        </div>
+
+                        <div class="fixed-bottom d-flex justify-content-center" style="margin-bottom: 20px;">
+                            <button
+                                style="font-size: 20px; font-family: MingLiu; border-bottom:none; border-top:none; border-right:none; border-left:none; outline: none; background-color:#fff;"
+                                type="button" onclick="changeVehOwner();">Überschreiben</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="RotationHUD" class="slidecontainer"
+        style="text-align: center; position: relative; height: 100%; width: 100%;">
+        <input style="position: relative; top: 90%; width: 20%;" type="range" min="1" max="360" value="180"
+            class="slider" oninput="rotatePlayer(this)">
+    </div>
+
+    <div id="TattooShopHUD">
+        <span onclick="closeTattooShopCef();"><i class="fas fa-times"></i></span>
+        <p class="title" style="margin-bottom: 0;">TATTOO LADEN</p>
+        <ul class="list-group" id="TattooShopHUD-HomeList">
+            <li class="list-group-item" onclick="openTattooCategory('Head');">
+                <img class="img-fluid" src="../utils/img/skin.png">
+                <p>Kopf</p>
+            </li>
+            <li class="list-group-item" onclick="openTattooCategory('leftArm');">
+                <img class="img-fluid" src="../utils/img/arm.png">
+                <p>Linker Arm</p>
+            </li>
+            <li class="list-group-item" onclick="openTattooCategory('Torso');">
+                <img class="img-fluid" src="../utils/img/body-parts.png">
+                <p>Brust</p>
+            </li>
+            <li class="list-group-item" onclick="openTattooCategory('rightArm');">
+                <img class="img-fluid" src="../utils/img/armright.png">
+                <p>Rechter Arm</p>
+            </li>
+            <li class="list-group-item" onclick="openTattooCategory('leftLeg');">
+                <img class="img-fluid" src="../utils/img/legsright.png">
+                <p>Linkes Bein</p>
+            </li>
+            <li class="list-group-item" onclick="openTattooCategory('rightLeg');">
+                <img class="img-fluid" src="../utils/img/legs.png">
+                <p>Rechtes Bein</p>
+            </li>
+            <li class="list-group-item" onclick="openTattooCategory('ownTattoos');">
+                <img class="img-fluid" src="../utils/img/death.png">
+                <p>Deine Tattoos</p>
+            </li>
+        </ul>
+        <ul class="list-group" id="TattooShopHUD-TattooList"></ul>
+    </div>
+    <script src="../utils/popper.min.js"></script>
+    <script src="../utils/bootstrap.min.js"></script>
+    <script src="../utils/mdb/js/mdb.min.js"></script>
+    <script src="../utils/anime.min.js"></script>
+    <script src="../utils/toastr.js"></script>
+    <script defer src="../utils/fontawesome/js/all.js"></script>
+</body>
+
+
+
+</html>

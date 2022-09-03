@@ -1,0 +1,2453 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.Main
+  commentId: T:Altv_Roleplay.Main
+  id: Main
+  parent: Altv_Roleplay
+  children:
+  - Altv_Roleplay.Main.GetColShapeFactory
+  - Altv_Roleplay.Main.GetPlayerFactory
+  - Altv_Roleplay.Main.GetVehicleFactory
+  - Altv_Roleplay.Main.OnStart
+  - Altv_Roleplay.Main.OnStop
+  langs:
+  - csharp
+  - vb
+  name: Main
+  nameWithType: Main
+  fullName: Altv_Roleplay.Main
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Main.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Main
+    path: Main.cs
+    startLine: 20
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay
+  syntax:
+    content: 'public class Main : AsyncResource, IResource'
+    content.vb: >-
+      Public Class Main
+          Inherits AsyncResource
+          Implements IResource
+  inheritance:
+  - System.Object
+  - AltV.Net.Resource
+  - AltV.Net.Async.AsyncResource
+  implements:
+  - AltV.Net.IResource
+  inheritedMembers:
+  - AltV.Net.Async.AsyncResource.OnTick
+  - AltV.Net.Async.AsyncResource.GetBaseEntityPool(AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IPlayer},AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IVehicle})
+  - AltV.Net.Async.AsyncResource.GetPlayerPool(AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IPlayer})
+  - AltV.Net.Async.AsyncResource.GetVehiclePool(AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IVehicle})
+  - AltV.Net.Async.AsyncResource.GetBlipPool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IBlip})
+  - AltV.Net.Async.AsyncResource.GetCheckpointPool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.ICheckpoint})
+  - AltV.Net.Async.AsyncResource.GetVoiceChannelPool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IVoiceChannel})
+  - AltV.Net.Async.AsyncResource.GetColShapePool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IColShape})
+  - AltV.Net.Async.AsyncResource.GetModule(AltV.Net.IServer,System.Runtime.Loader.AssemblyLoadContext,AltV.Net.INativeResource,AltV.Net.IBaseBaseObjectPool,AltV.Net.IBaseEntityPool,AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IPlayer},AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IVehicle},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IBlip},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.ICheckpoint},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IVoiceChannel},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IColShape},AltV.Net.INativeResourcePool)
+  - AltV.Net.Resource.OnStart(System.IntPtr,System.IntPtr,System.String,System.String)
+  - AltV.Net.Resource.GetBaseBaseObjectPool(AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IPlayer},AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IVehicle},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IBlip},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.ICheckpoint},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IVoiceChannel},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IColShape})
+  - AltV.Net.Resource.GetNativeResourcePool(AltV.Net.INativeResourceFactory)
+  - AltV.Net.Resource.GetBlipFactory
+  - AltV.Net.Resource.GetCheckpointFactory
+  - AltV.Net.Resource.GetVoiceChannelFactory
+  - AltV.Net.Resource.GetNativeResourceFactory
+  - AltV.Net.Resource.GetLibrary
+  - AltV.Net.Resource.GetScripts
+  - AltV.Net.Resource.GetModules
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.Main.GetPlayerFactory
+  commentId: M:Altv_Roleplay.Main.GetPlayerFactory
+  id: GetPlayerFactory
+  parent: Altv_Roleplay.Main
+  langs:
+  - csharp
+  - vb
+  name: GetPlayerFactory()
+  nameWithType: Main.GetPlayerFactory()
+  fullName: Altv_Roleplay.Main.GetPlayerFactory()
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Main.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetPlayerFactory
+    path: Main.cs
+    startLine: 22
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay
+  syntax:
+    content: public override IEntityFactory<IPlayer> GetPlayerFactory()
+    return:
+      type: AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IPlayer}
+    content.vb: Public Overrides Function GetPlayerFactory As IEntityFactory(Of IPlayer)
+  overridden: AltV.Net.Resource.GetPlayerFactory
+  overload: Altv_Roleplay.Main.GetPlayerFactory*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Altv_Roleplay.Main.GetColShapeFactory
+  commentId: M:Altv_Roleplay.Main.GetColShapeFactory
+  id: GetColShapeFactory
+  parent: Altv_Roleplay.Main
+  langs:
+  - csharp
+  - vb
+  name: GetColShapeFactory()
+  nameWithType: Main.GetColShapeFactory()
+  fullName: Altv_Roleplay.Main.GetColShapeFactory()
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Main.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetColShapeFactory
+    path: Main.cs
+    startLine: 27
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay
+  syntax:
+    content: public override IBaseObjectFactory<IColShape> GetColShapeFactory()
+    return:
+      type: AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IColShape}
+    content.vb: Public Overrides Function GetColShapeFactory As IBaseObjectFactory(Of IColShape)
+  overridden: AltV.Net.Resource.GetColShapeFactory
+  overload: Altv_Roleplay.Main.GetColShapeFactory*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Altv_Roleplay.Main.GetVehicleFactory
+  commentId: M:Altv_Roleplay.Main.GetVehicleFactory
+  id: GetVehicleFactory
+  parent: Altv_Roleplay.Main
+  langs:
+  - csharp
+  - vb
+  name: GetVehicleFactory()
+  nameWithType: Main.GetVehicleFactory()
+  fullName: Altv_Roleplay.Main.GetVehicleFactory()
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Main.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: GetVehicleFactory
+    path: Main.cs
+    startLine: 32
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay
+  syntax:
+    content: public override IEntityFactory<IVehicle> GetVehicleFactory()
+    return:
+      type: AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IVehicle}
+    content.vb: Public Overrides Function GetVehicleFactory As IEntityFactory(Of IVehicle)
+  overridden: AltV.Net.Resource.GetVehicleFactory
+  overload: Altv_Roleplay.Main.GetVehicleFactory*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Altv_Roleplay.Main.OnStart
+  commentId: M:Altv_Roleplay.Main.OnStart
+  id: OnStart
+  parent: Altv_Roleplay.Main
+  langs:
+  - csharp
+  - vb
+  name: OnStart()
+  nameWithType: Main.OnStart()
+  fullName: Altv_Roleplay.Main.OnStart()
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Main.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: OnStart
+    path: Main.cs
+    startLine: 37
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay
+  syntax:
+    content: public override void OnStart()
+    content.vb: Public Overrides Sub OnStart
+  overridden: AltV.Net.Resource.OnStart
+  overload: Altv_Roleplay.Main.OnStart*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Altv_Roleplay.Main.OnStop
+  commentId: M:Altv_Roleplay.Main.OnStop
+  id: OnStop
+  parent: Altv_Roleplay.Main
+  langs:
+  - csharp
+  - vb
+  name: OnStop()
+  nameWithType: Main.OnStop()
+  fullName: Altv_Roleplay.Main.OnStop()
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Main.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: OnStop
+    path: Main.cs
+    startLine: 307
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay
+  syntax:
+    content: public override void OnStop()
+    content.vb: Public Overrides Sub OnStop
+  overridden: AltV.Net.Resource.OnStop
+  overload: Altv_Roleplay.Main.OnStop*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Altv_Roleplay
+  commentId: N:Altv_Roleplay
+  name: Altv_Roleplay
+  nameWithType: Altv_Roleplay
+  fullName: Altv_Roleplay
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AltV.Net.Resource
+  commentId: T:AltV.Net.Resource
+  parent: AltV.Net
+  isExternal: true
+  name: Resource
+  nameWithType: Resource
+  fullName: AltV.Net.Resource
+- uid: AltV.Net.Async.AsyncResource
+  commentId: T:AltV.Net.Async.AsyncResource
+  parent: AltV.Net.Async
+  isExternal: true
+  name: AsyncResource
+  nameWithType: AsyncResource
+  fullName: AltV.Net.Async.AsyncResource
+- uid: AltV.Net.IResource
+  commentId: T:AltV.Net.IResource
+  parent: AltV.Net
+  isExternal: true
+  name: IResource
+  nameWithType: IResource
+  fullName: AltV.Net.IResource
+- uid: AltV.Net.Async.AsyncResource.OnTick
+  commentId: M:AltV.Net.Async.AsyncResource.OnTick
+  parent: AltV.Net.Async.AsyncResource
+  isExternal: true
+  name: OnTick()
+  nameWithType: AsyncResource.OnTick()
+  fullName: AltV.Net.Async.AsyncResource.OnTick()
+  spec.csharp:
+  - uid: AltV.Net.Async.AsyncResource.OnTick
+    name: OnTick
+    nameWithType: AsyncResource.OnTick
+    fullName: AltV.Net.Async.AsyncResource.OnTick
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Async.AsyncResource.OnTick
+    name: OnTick
+    nameWithType: AsyncResource.OnTick
+    fullName: AltV.Net.Async.AsyncResource.OnTick
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Async.AsyncResource.GetBaseEntityPool(AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IPlayer},AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IVehicle})
+  commentId: M:AltV.Net.Async.AsyncResource.GetBaseEntityPool(AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IPlayer},AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IVehicle})
+  parent: AltV.Net.Async.AsyncResource
+  isExternal: true
+  name: GetBaseEntityPool(IEntityPool<IPlayer>, IEntityPool<IVehicle>)
+  nameWithType: AsyncResource.GetBaseEntityPool(IEntityPool<IPlayer>, IEntityPool<IVehicle>)
+  fullName: AltV.Net.Async.AsyncResource.GetBaseEntityPool(AltV.Net.IEntityPool<AltV.Net.Elements.Entities.IPlayer>, AltV.Net.IEntityPool<AltV.Net.Elements.Entities.IVehicle>)
+  nameWithType.vb: AsyncResource.GetBaseEntityPool(IEntityPool(Of IPlayer), IEntityPool(Of IVehicle))
+  fullName.vb: AltV.Net.Async.AsyncResource.GetBaseEntityPool(AltV.Net.IEntityPool(Of AltV.Net.Elements.Entities.IPlayer), AltV.Net.IEntityPool(Of AltV.Net.Elements.Entities.IVehicle))
+  name.vb: GetBaseEntityPool(IEntityPool(Of IPlayer), IEntityPool(Of IVehicle))
+  spec.csharp:
+  - uid: AltV.Net.Async.AsyncResource.GetBaseEntityPool(AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IPlayer},AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IVehicle})
+    name: GetBaseEntityPool
+    nameWithType: AsyncResource.GetBaseEntityPool
+    fullName: AltV.Net.Async.AsyncResource.GetBaseEntityPool
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IEntityPool`1
+    name: IEntityPool
+    nameWithType: IEntityPool
+    fullName: AltV.Net.IEntityPool
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IPlayer
+    name: IPlayer
+    nameWithType: IPlayer
+    fullName: AltV.Net.Elements.Entities.IPlayer
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IEntityPool`1
+    name: IEntityPool
+    nameWithType: IEntityPool
+    fullName: AltV.Net.IEntityPool
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IVehicle
+    name: IVehicle
+    nameWithType: IVehicle
+    fullName: AltV.Net.Elements.Entities.IVehicle
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Async.AsyncResource.GetBaseEntityPool(AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IPlayer},AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IVehicle})
+    name: GetBaseEntityPool
+    nameWithType: AsyncResource.GetBaseEntityPool
+    fullName: AltV.Net.Async.AsyncResource.GetBaseEntityPool
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IEntityPool`1
+    name: IEntityPool
+    nameWithType: IEntityPool
+    fullName: AltV.Net.IEntityPool
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IPlayer
+    name: IPlayer
+    nameWithType: IPlayer
+    fullName: AltV.Net.Elements.Entities.IPlayer
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IEntityPool`1
+    name: IEntityPool
+    nameWithType: IEntityPool
+    fullName: AltV.Net.IEntityPool
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IVehicle
+    name: IVehicle
+    nameWithType: IVehicle
+    fullName: AltV.Net.Elements.Entities.IVehicle
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Async.AsyncResource.GetPlayerPool(AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IPlayer})
+  commentId: M:AltV.Net.Async.AsyncResource.GetPlayerPool(AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IPlayer})
+  parent: AltV.Net.Async.AsyncResource
+  isExternal: true
+  name: GetPlayerPool(IEntityFactory<IPlayer>)
+  nameWithType: AsyncResource.GetPlayerPool(IEntityFactory<IPlayer>)
+  fullName: AltV.Net.Async.AsyncResource.GetPlayerPool(AltV.Net.IEntityFactory<AltV.Net.Elements.Entities.IPlayer>)
+  nameWithType.vb: AsyncResource.GetPlayerPool(IEntityFactory(Of IPlayer))
+  fullName.vb: AltV.Net.Async.AsyncResource.GetPlayerPool(AltV.Net.IEntityFactory(Of AltV.Net.Elements.Entities.IPlayer))
+  name.vb: GetPlayerPool(IEntityFactory(Of IPlayer))
+  spec.csharp:
+  - uid: AltV.Net.Async.AsyncResource.GetPlayerPool(AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IPlayer})
+    name: GetPlayerPool
+    nameWithType: AsyncResource.GetPlayerPool
+    fullName: AltV.Net.Async.AsyncResource.GetPlayerPool
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: AltV.Net.IEntityFactory
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IPlayer
+    name: IPlayer
+    nameWithType: IPlayer
+    fullName: AltV.Net.Elements.Entities.IPlayer
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Async.AsyncResource.GetPlayerPool(AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IPlayer})
+    name: GetPlayerPool
+    nameWithType: AsyncResource.GetPlayerPool
+    fullName: AltV.Net.Async.AsyncResource.GetPlayerPool
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: AltV.Net.IEntityFactory
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IPlayer
+    name: IPlayer
+    nameWithType: IPlayer
+    fullName: AltV.Net.Elements.Entities.IPlayer
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Async.AsyncResource.GetVehiclePool(AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IVehicle})
+  commentId: M:AltV.Net.Async.AsyncResource.GetVehiclePool(AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IVehicle})
+  parent: AltV.Net.Async.AsyncResource
+  isExternal: true
+  name: GetVehiclePool(IEntityFactory<IVehicle>)
+  nameWithType: AsyncResource.GetVehiclePool(IEntityFactory<IVehicle>)
+  fullName: AltV.Net.Async.AsyncResource.GetVehiclePool(AltV.Net.IEntityFactory<AltV.Net.Elements.Entities.IVehicle>)
+  nameWithType.vb: AsyncResource.GetVehiclePool(IEntityFactory(Of IVehicle))
+  fullName.vb: AltV.Net.Async.AsyncResource.GetVehiclePool(AltV.Net.IEntityFactory(Of AltV.Net.Elements.Entities.IVehicle))
+  name.vb: GetVehiclePool(IEntityFactory(Of IVehicle))
+  spec.csharp:
+  - uid: AltV.Net.Async.AsyncResource.GetVehiclePool(AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IVehicle})
+    name: GetVehiclePool
+    nameWithType: AsyncResource.GetVehiclePool
+    fullName: AltV.Net.Async.AsyncResource.GetVehiclePool
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: AltV.Net.IEntityFactory
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IVehicle
+    name: IVehicle
+    nameWithType: IVehicle
+    fullName: AltV.Net.Elements.Entities.IVehicle
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Async.AsyncResource.GetVehiclePool(AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IVehicle})
+    name: GetVehiclePool
+    nameWithType: AsyncResource.GetVehiclePool
+    fullName: AltV.Net.Async.AsyncResource.GetVehiclePool
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: AltV.Net.IEntityFactory
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IVehicle
+    name: IVehicle
+    nameWithType: IVehicle
+    fullName: AltV.Net.Elements.Entities.IVehicle
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Async.AsyncResource.GetBlipPool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IBlip})
+  commentId: M:AltV.Net.Async.AsyncResource.GetBlipPool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IBlip})
+  parent: AltV.Net.Async.AsyncResource
+  isExternal: true
+  name: GetBlipPool(IBaseObjectFactory<IBlip>)
+  nameWithType: AsyncResource.GetBlipPool(IBaseObjectFactory<IBlip>)
+  fullName: AltV.Net.Async.AsyncResource.GetBlipPool(AltV.Net.IBaseObjectFactory<AltV.Net.Elements.Entities.IBlip>)
+  nameWithType.vb: AsyncResource.GetBlipPool(IBaseObjectFactory(Of IBlip))
+  fullName.vb: AltV.Net.Async.AsyncResource.GetBlipPool(AltV.Net.IBaseObjectFactory(Of AltV.Net.Elements.Entities.IBlip))
+  name.vb: GetBlipPool(IBaseObjectFactory(Of IBlip))
+  spec.csharp:
+  - uid: AltV.Net.Async.AsyncResource.GetBlipPool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IBlip})
+    name: GetBlipPool
+    nameWithType: AsyncResource.GetBlipPool
+    fullName: AltV.Net.Async.AsyncResource.GetBlipPool
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IBaseObjectFactory`1
+    name: IBaseObjectFactory
+    nameWithType: IBaseObjectFactory
+    fullName: AltV.Net.IBaseObjectFactory
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IBlip
+    name: IBlip
+    nameWithType: IBlip
+    fullName: AltV.Net.Elements.Entities.IBlip
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Async.AsyncResource.GetBlipPool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IBlip})
+    name: GetBlipPool
+    nameWithType: AsyncResource.GetBlipPool
+    fullName: AltV.Net.Async.AsyncResource.GetBlipPool
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IBaseObjectFactory`1
+    name: IBaseObjectFactory
+    nameWithType: IBaseObjectFactory
+    fullName: AltV.Net.IBaseObjectFactory
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IBlip
+    name: IBlip
+    nameWithType: IBlip
+    fullName: AltV.Net.Elements.Entities.IBlip
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Async.AsyncResource.GetCheckpointPool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.ICheckpoint})
+  commentId: M:AltV.Net.Async.AsyncResource.GetCheckpointPool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.ICheckpoint})
+  parent: AltV.Net.Async.AsyncResource
+  isExternal: true
+  name: GetCheckpointPool(IBaseObjectFactory<ICheckpoint>)
+  nameWithType: AsyncResource.GetCheckpointPool(IBaseObjectFactory<ICheckpoint>)
+  fullName: AltV.Net.Async.AsyncResource.GetCheckpointPool(AltV.Net.IBaseObjectFactory<AltV.Net.Elements.Entities.ICheckpoint>)
+  nameWithType.vb: AsyncResource.GetCheckpointPool(IBaseObjectFactory(Of ICheckpoint))
+  fullName.vb: AltV.Net.Async.AsyncResource.GetCheckpointPool(AltV.Net.IBaseObjectFactory(Of AltV.Net.Elements.Entities.ICheckpoint))
+  name.vb: GetCheckpointPool(IBaseObjectFactory(Of ICheckpoint))
+  spec.csharp:
+  - uid: AltV.Net.Async.AsyncResource.GetCheckpointPool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.ICheckpoint})
+    name: GetCheckpointPool
+    nameWithType: AsyncResource.GetCheckpointPool
+    fullName: AltV.Net.Async.AsyncResource.GetCheckpointPool
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IBaseObjectFactory`1
+    name: IBaseObjectFactory
+    nameWithType: IBaseObjectFactory
+    fullName: AltV.Net.IBaseObjectFactory
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.ICheckpoint
+    name: ICheckpoint
+    nameWithType: ICheckpoint
+    fullName: AltV.Net.Elements.Entities.ICheckpoint
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Async.AsyncResource.GetCheckpointPool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.ICheckpoint})
+    name: GetCheckpointPool
+    nameWithType: AsyncResource.GetCheckpointPool
+    fullName: AltV.Net.Async.AsyncResource.GetCheckpointPool
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IBaseObjectFactory`1
+    name: IBaseObjectFactory
+    nameWithType: IBaseObjectFactory
+    fullName: AltV.Net.IBaseObjectFactory
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.ICheckpoint
+    name: ICheckpoint
+    nameWithType: ICheckpoint
+    fullName: AltV.Net.Elements.Entities.ICheckpoint
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Async.AsyncResource.GetVoiceChannelPool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IVoiceChannel})
+  commentId: M:AltV.Net.Async.AsyncResource.GetVoiceChannelPool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IVoiceChannel})
+  parent: AltV.Net.Async.AsyncResource
+  isExternal: true
+  name: GetVoiceChannelPool(IBaseObjectFactory<IVoiceChannel>)
+  nameWithType: AsyncResource.GetVoiceChannelPool(IBaseObjectFactory<IVoiceChannel>)
+  fullName: AltV.Net.Async.AsyncResource.GetVoiceChannelPool(AltV.Net.IBaseObjectFactory<AltV.Net.Elements.Entities.IVoiceChannel>)
+  nameWithType.vb: AsyncResource.GetVoiceChannelPool(IBaseObjectFactory(Of IVoiceChannel))
+  fullName.vb: AltV.Net.Async.AsyncResource.GetVoiceChannelPool(AltV.Net.IBaseObjectFactory(Of AltV.Net.Elements.Entities.IVoiceChannel))
+  name.vb: GetVoiceChannelPool(IBaseObjectFactory(Of IVoiceChannel))
+  spec.csharp:
+  - uid: AltV.Net.Async.AsyncResource.GetVoiceChannelPool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IVoiceChannel})
+    name: GetVoiceChannelPool
+    nameWithType: AsyncResource.GetVoiceChannelPool
+    fullName: AltV.Net.Async.AsyncResource.GetVoiceChannelPool
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IBaseObjectFactory`1
+    name: IBaseObjectFactory
+    nameWithType: IBaseObjectFactory
+    fullName: AltV.Net.IBaseObjectFactory
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IVoiceChannel
+    name: IVoiceChannel
+    nameWithType: IVoiceChannel
+    fullName: AltV.Net.Elements.Entities.IVoiceChannel
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Async.AsyncResource.GetVoiceChannelPool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IVoiceChannel})
+    name: GetVoiceChannelPool
+    nameWithType: AsyncResource.GetVoiceChannelPool
+    fullName: AltV.Net.Async.AsyncResource.GetVoiceChannelPool
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IBaseObjectFactory`1
+    name: IBaseObjectFactory
+    nameWithType: IBaseObjectFactory
+    fullName: AltV.Net.IBaseObjectFactory
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IVoiceChannel
+    name: IVoiceChannel
+    nameWithType: IVoiceChannel
+    fullName: AltV.Net.Elements.Entities.IVoiceChannel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Async.AsyncResource.GetColShapePool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IColShape})
+  commentId: M:AltV.Net.Async.AsyncResource.GetColShapePool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IColShape})
+  parent: AltV.Net.Async.AsyncResource
+  isExternal: true
+  name: GetColShapePool(IBaseObjectFactory<IColShape>)
+  nameWithType: AsyncResource.GetColShapePool(IBaseObjectFactory<IColShape>)
+  fullName: AltV.Net.Async.AsyncResource.GetColShapePool(AltV.Net.IBaseObjectFactory<AltV.Net.Elements.Entities.IColShape>)
+  nameWithType.vb: AsyncResource.GetColShapePool(IBaseObjectFactory(Of IColShape))
+  fullName.vb: AltV.Net.Async.AsyncResource.GetColShapePool(AltV.Net.IBaseObjectFactory(Of AltV.Net.Elements.Entities.IColShape))
+  name.vb: GetColShapePool(IBaseObjectFactory(Of IColShape))
+  spec.csharp:
+  - uid: AltV.Net.Async.AsyncResource.GetColShapePool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IColShape})
+    name: GetColShapePool
+    nameWithType: AsyncResource.GetColShapePool
+    fullName: AltV.Net.Async.AsyncResource.GetColShapePool
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IBaseObjectFactory`1
+    name: IBaseObjectFactory
+    nameWithType: IBaseObjectFactory
+    fullName: AltV.Net.IBaseObjectFactory
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Async.AsyncResource.GetColShapePool(AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IColShape})
+    name: GetColShapePool
+    nameWithType: AsyncResource.GetColShapePool
+    fullName: AltV.Net.Async.AsyncResource.GetColShapePool
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IBaseObjectFactory`1
+    name: IBaseObjectFactory
+    nameWithType: IBaseObjectFactory
+    fullName: AltV.Net.IBaseObjectFactory
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Async.AsyncResource.GetModule(AltV.Net.IServer,System.Runtime.Loader.AssemblyLoadContext,AltV.Net.INativeResource,AltV.Net.IBaseBaseObjectPool,AltV.Net.IBaseEntityPool,AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IPlayer},AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IVehicle},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IBlip},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.ICheckpoint},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IVoiceChannel},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IColShape},AltV.Net.INativeResourcePool)
+  commentId: M:AltV.Net.Async.AsyncResource.GetModule(AltV.Net.IServer,System.Runtime.Loader.AssemblyLoadContext,AltV.Net.INativeResource,AltV.Net.IBaseBaseObjectPool,AltV.Net.IBaseEntityPool,AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IPlayer},AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IVehicle},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IBlip},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.ICheckpoint},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IVoiceChannel},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IColShape},AltV.Net.INativeResourcePool)
+  parent: AltV.Net.Async.AsyncResource
+  isExternal: true
+  name: GetModule(IServer, AssemblyLoadContext, INativeResource, IBaseBaseObjectPool, IBaseEntityPool, IEntityPool<IPlayer>, IEntityPool<IVehicle>, IBaseObjectPool<IBlip>, IBaseObjectPool<ICheckpoint>, IBaseObjectPool<IVoiceChannel>, IBaseObjectPool<IColShape>, INativeResourcePool)
+  nameWithType: AsyncResource.GetModule(IServer, AssemblyLoadContext, INativeResource, IBaseBaseObjectPool, IBaseEntityPool, IEntityPool<IPlayer>, IEntityPool<IVehicle>, IBaseObjectPool<IBlip>, IBaseObjectPool<ICheckpoint>, IBaseObjectPool<IVoiceChannel>, IBaseObjectPool<IColShape>, INativeResourcePool)
+  fullName: AltV.Net.Async.AsyncResource.GetModule(AltV.Net.IServer, System.Runtime.Loader.AssemblyLoadContext, AltV.Net.INativeResource, AltV.Net.IBaseBaseObjectPool, AltV.Net.IBaseEntityPool, AltV.Net.IEntityPool<AltV.Net.Elements.Entities.IPlayer>, AltV.Net.IEntityPool<AltV.Net.Elements.Entities.IVehicle>, AltV.Net.IBaseObjectPool<AltV.Net.Elements.Entities.IBlip>, AltV.Net.IBaseObjectPool<AltV.Net.Elements.Entities.ICheckpoint>, AltV.Net.IBaseObjectPool<AltV.Net.Elements.Entities.IVoiceChannel>, AltV.Net.IBaseObjectPool<AltV.Net.Elements.Entities.IColShape>, AltV.Net.INativeResourcePool)
+  nameWithType.vb: AsyncResource.GetModule(IServer, AssemblyLoadContext, INativeResource, IBaseBaseObjectPool, IBaseEntityPool, IEntityPool(Of IPlayer), IEntityPool(Of IVehicle), IBaseObjectPool(Of IBlip), IBaseObjectPool(Of ICheckpoint), IBaseObjectPool(Of IVoiceChannel), IBaseObjectPool(Of IColShape), INativeResourcePool)
+  fullName.vb: AltV.Net.Async.AsyncResource.GetModule(AltV.Net.IServer, System.Runtime.Loader.AssemblyLoadContext, AltV.Net.INativeResource, AltV.Net.IBaseBaseObjectPool, AltV.Net.IBaseEntityPool, AltV.Net.IEntityPool(Of AltV.Net.Elements.Entities.IPlayer), AltV.Net.IEntityPool(Of AltV.Net.Elements.Entities.IVehicle), AltV.Net.IBaseObjectPool(Of AltV.Net.Elements.Entities.IBlip), AltV.Net.IBaseObjectPool(Of AltV.Net.Elements.Entities.ICheckpoint), AltV.Net.IBaseObjectPool(Of AltV.Net.Elements.Entities.IVoiceChannel), AltV.Net.IBaseObjectPool(Of AltV.Net.Elements.Entities.IColShape), AltV.Net.INativeResourcePool)
+  name.vb: GetModule(IServer, AssemblyLoadContext, INativeResource, IBaseBaseObjectPool, IBaseEntityPool, IEntityPool(Of IPlayer), IEntityPool(Of IVehicle), IBaseObjectPool(Of IBlip), IBaseObjectPool(Of ICheckpoint), IBaseObjectPool(Of IVoiceChannel), IBaseObjectPool(Of IColShape), INativeResourcePool)
+  spec.csharp:
+  - uid: AltV.Net.Async.AsyncResource.GetModule(AltV.Net.IServer,System.Runtime.Loader.AssemblyLoadContext,AltV.Net.INativeResource,AltV.Net.IBaseBaseObjectPool,AltV.Net.IBaseEntityPool,AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IPlayer},AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IVehicle},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IBlip},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.ICheckpoint},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IVoiceChannel},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IColShape},AltV.Net.INativeResourcePool)
+    name: GetModule
+    nameWithType: AsyncResource.GetModule
+    fullName: AltV.Net.Async.AsyncResource.GetModule
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IServer
+    name: IServer
+    nameWithType: IServer
+    fullName: AltV.Net.IServer
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Runtime.Loader.AssemblyLoadContext
+    name: AssemblyLoadContext
+    nameWithType: AssemblyLoadContext
+    fullName: System.Runtime.Loader.AssemblyLoadContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.INativeResource
+    name: INativeResource
+    nameWithType: INativeResource
+    fullName: AltV.Net.INativeResource
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseBaseObjectPool
+    name: IBaseBaseObjectPool
+    nameWithType: IBaseBaseObjectPool
+    fullName: AltV.Net.IBaseBaseObjectPool
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseEntityPool
+    name: IBaseEntityPool
+    nameWithType: IBaseEntityPool
+    fullName: AltV.Net.IBaseEntityPool
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IEntityPool`1
+    name: IEntityPool
+    nameWithType: IEntityPool
+    fullName: AltV.Net.IEntityPool
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IPlayer
+    name: IPlayer
+    nameWithType: IPlayer
+    fullName: AltV.Net.Elements.Entities.IPlayer
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IEntityPool`1
+    name: IEntityPool
+    nameWithType: IEntityPool
+    fullName: AltV.Net.IEntityPool
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IVehicle
+    name: IVehicle
+    nameWithType: IVehicle
+    fullName: AltV.Net.Elements.Entities.IVehicle
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseObjectPool`1
+    name: IBaseObjectPool
+    nameWithType: IBaseObjectPool
+    fullName: AltV.Net.IBaseObjectPool
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IBlip
+    name: IBlip
+    nameWithType: IBlip
+    fullName: AltV.Net.Elements.Entities.IBlip
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseObjectPool`1
+    name: IBaseObjectPool
+    nameWithType: IBaseObjectPool
+    fullName: AltV.Net.IBaseObjectPool
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.ICheckpoint
+    name: ICheckpoint
+    nameWithType: ICheckpoint
+    fullName: AltV.Net.Elements.Entities.ICheckpoint
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseObjectPool`1
+    name: IBaseObjectPool
+    nameWithType: IBaseObjectPool
+    fullName: AltV.Net.IBaseObjectPool
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IVoiceChannel
+    name: IVoiceChannel
+    nameWithType: IVoiceChannel
+    fullName: AltV.Net.Elements.Entities.IVoiceChannel
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseObjectPool`1
+    name: IBaseObjectPool
+    nameWithType: IBaseObjectPool
+    fullName: AltV.Net.IBaseObjectPool
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.INativeResourcePool
+    name: INativeResourcePool
+    nameWithType: INativeResourcePool
+    fullName: AltV.Net.INativeResourcePool
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Async.AsyncResource.GetModule(AltV.Net.IServer,System.Runtime.Loader.AssemblyLoadContext,AltV.Net.INativeResource,AltV.Net.IBaseBaseObjectPool,AltV.Net.IBaseEntityPool,AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IPlayer},AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IVehicle},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IBlip},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.ICheckpoint},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IVoiceChannel},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IColShape},AltV.Net.INativeResourcePool)
+    name: GetModule
+    nameWithType: AsyncResource.GetModule
+    fullName: AltV.Net.Async.AsyncResource.GetModule
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IServer
+    name: IServer
+    nameWithType: IServer
+    fullName: AltV.Net.IServer
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Runtime.Loader.AssemblyLoadContext
+    name: AssemblyLoadContext
+    nameWithType: AssemblyLoadContext
+    fullName: System.Runtime.Loader.AssemblyLoadContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.INativeResource
+    name: INativeResource
+    nameWithType: INativeResource
+    fullName: AltV.Net.INativeResource
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseBaseObjectPool
+    name: IBaseBaseObjectPool
+    nameWithType: IBaseBaseObjectPool
+    fullName: AltV.Net.IBaseBaseObjectPool
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseEntityPool
+    name: IBaseEntityPool
+    nameWithType: IBaseEntityPool
+    fullName: AltV.Net.IBaseEntityPool
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IEntityPool`1
+    name: IEntityPool
+    nameWithType: IEntityPool
+    fullName: AltV.Net.IEntityPool
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IPlayer
+    name: IPlayer
+    nameWithType: IPlayer
+    fullName: AltV.Net.Elements.Entities.IPlayer
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IEntityPool`1
+    name: IEntityPool
+    nameWithType: IEntityPool
+    fullName: AltV.Net.IEntityPool
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IVehicle
+    name: IVehicle
+    nameWithType: IVehicle
+    fullName: AltV.Net.Elements.Entities.IVehicle
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseObjectPool`1
+    name: IBaseObjectPool
+    nameWithType: IBaseObjectPool
+    fullName: AltV.Net.IBaseObjectPool
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IBlip
+    name: IBlip
+    nameWithType: IBlip
+    fullName: AltV.Net.Elements.Entities.IBlip
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseObjectPool`1
+    name: IBaseObjectPool
+    nameWithType: IBaseObjectPool
+    fullName: AltV.Net.IBaseObjectPool
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.ICheckpoint
+    name: ICheckpoint
+    nameWithType: ICheckpoint
+    fullName: AltV.Net.Elements.Entities.ICheckpoint
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseObjectPool`1
+    name: IBaseObjectPool
+    nameWithType: IBaseObjectPool
+    fullName: AltV.Net.IBaseObjectPool
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IVoiceChannel
+    name: IVoiceChannel
+    nameWithType: IVoiceChannel
+    fullName: AltV.Net.Elements.Entities.IVoiceChannel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseObjectPool`1
+    name: IBaseObjectPool
+    nameWithType: IBaseObjectPool
+    fullName: AltV.Net.IBaseObjectPool
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.INativeResourcePool
+    name: INativeResourcePool
+    nameWithType: INativeResourcePool
+    fullName: AltV.Net.INativeResourcePool
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Resource.OnStart(System.IntPtr,System.IntPtr,System.String,System.String)
+  commentId: M:AltV.Net.Resource.OnStart(System.IntPtr,System.IntPtr,System.String,System.String)
+  parent: AltV.Net.Resource
+  isExternal: true
+  name: OnStart(IntPtr, IntPtr, String, String)
+  nameWithType: Resource.OnStart(IntPtr, IntPtr, String, String)
+  fullName: AltV.Net.Resource.OnStart(System.IntPtr, System.IntPtr, System.String, System.String)
+  spec.csharp:
+  - uid: AltV.Net.Resource.OnStart(System.IntPtr,System.IntPtr,System.String,System.String)
+    name: OnStart
+    nameWithType: Resource.OnStart
+    fullName: AltV.Net.Resource.OnStart
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IntPtr
+    name: IntPtr
+    nameWithType: IntPtr
+    fullName: System.IntPtr
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IntPtr
+    name: IntPtr
+    nameWithType: IntPtr
+    fullName: System.IntPtr
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Resource.OnStart(System.IntPtr,System.IntPtr,System.String,System.String)
+    name: OnStart
+    nameWithType: Resource.OnStart
+    fullName: AltV.Net.Resource.OnStart
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IntPtr
+    name: IntPtr
+    nameWithType: IntPtr
+    fullName: System.IntPtr
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IntPtr
+    name: IntPtr
+    nameWithType: IntPtr
+    fullName: System.IntPtr
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Resource.GetBaseBaseObjectPool(AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IPlayer},AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IVehicle},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IBlip},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.ICheckpoint},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IVoiceChannel},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IColShape})
+  commentId: M:AltV.Net.Resource.GetBaseBaseObjectPool(AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IPlayer},AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IVehicle},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IBlip},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.ICheckpoint},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IVoiceChannel},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IColShape})
+  parent: AltV.Net.Resource
+  isExternal: true
+  name: GetBaseBaseObjectPool(IEntityPool<IPlayer>, IEntityPool<IVehicle>, IBaseObjectPool<IBlip>, IBaseObjectPool<ICheckpoint>, IBaseObjectPool<IVoiceChannel>, IBaseObjectPool<IColShape>)
+  nameWithType: Resource.GetBaseBaseObjectPool(IEntityPool<IPlayer>, IEntityPool<IVehicle>, IBaseObjectPool<IBlip>, IBaseObjectPool<ICheckpoint>, IBaseObjectPool<IVoiceChannel>, IBaseObjectPool<IColShape>)
+  fullName: AltV.Net.Resource.GetBaseBaseObjectPool(AltV.Net.IEntityPool<AltV.Net.Elements.Entities.IPlayer>, AltV.Net.IEntityPool<AltV.Net.Elements.Entities.IVehicle>, AltV.Net.IBaseObjectPool<AltV.Net.Elements.Entities.IBlip>, AltV.Net.IBaseObjectPool<AltV.Net.Elements.Entities.ICheckpoint>, AltV.Net.IBaseObjectPool<AltV.Net.Elements.Entities.IVoiceChannel>, AltV.Net.IBaseObjectPool<AltV.Net.Elements.Entities.IColShape>)
+  nameWithType.vb: Resource.GetBaseBaseObjectPool(IEntityPool(Of IPlayer), IEntityPool(Of IVehicle), IBaseObjectPool(Of IBlip), IBaseObjectPool(Of ICheckpoint), IBaseObjectPool(Of IVoiceChannel), IBaseObjectPool(Of IColShape))
+  fullName.vb: AltV.Net.Resource.GetBaseBaseObjectPool(AltV.Net.IEntityPool(Of AltV.Net.Elements.Entities.IPlayer), AltV.Net.IEntityPool(Of AltV.Net.Elements.Entities.IVehicle), AltV.Net.IBaseObjectPool(Of AltV.Net.Elements.Entities.IBlip), AltV.Net.IBaseObjectPool(Of AltV.Net.Elements.Entities.ICheckpoint), AltV.Net.IBaseObjectPool(Of AltV.Net.Elements.Entities.IVoiceChannel), AltV.Net.IBaseObjectPool(Of AltV.Net.Elements.Entities.IColShape))
+  name.vb: GetBaseBaseObjectPool(IEntityPool(Of IPlayer), IEntityPool(Of IVehicle), IBaseObjectPool(Of IBlip), IBaseObjectPool(Of ICheckpoint), IBaseObjectPool(Of IVoiceChannel), IBaseObjectPool(Of IColShape))
+  spec.csharp:
+  - uid: AltV.Net.Resource.GetBaseBaseObjectPool(AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IPlayer},AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IVehicle},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IBlip},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.ICheckpoint},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IVoiceChannel},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IColShape})
+    name: GetBaseBaseObjectPool
+    nameWithType: Resource.GetBaseBaseObjectPool
+    fullName: AltV.Net.Resource.GetBaseBaseObjectPool
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IEntityPool`1
+    name: IEntityPool
+    nameWithType: IEntityPool
+    fullName: AltV.Net.IEntityPool
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IPlayer
+    name: IPlayer
+    nameWithType: IPlayer
+    fullName: AltV.Net.Elements.Entities.IPlayer
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IEntityPool`1
+    name: IEntityPool
+    nameWithType: IEntityPool
+    fullName: AltV.Net.IEntityPool
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IVehicle
+    name: IVehicle
+    nameWithType: IVehicle
+    fullName: AltV.Net.Elements.Entities.IVehicle
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseObjectPool`1
+    name: IBaseObjectPool
+    nameWithType: IBaseObjectPool
+    fullName: AltV.Net.IBaseObjectPool
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IBlip
+    name: IBlip
+    nameWithType: IBlip
+    fullName: AltV.Net.Elements.Entities.IBlip
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseObjectPool`1
+    name: IBaseObjectPool
+    nameWithType: IBaseObjectPool
+    fullName: AltV.Net.IBaseObjectPool
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.ICheckpoint
+    name: ICheckpoint
+    nameWithType: ICheckpoint
+    fullName: AltV.Net.Elements.Entities.ICheckpoint
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseObjectPool`1
+    name: IBaseObjectPool
+    nameWithType: IBaseObjectPool
+    fullName: AltV.Net.IBaseObjectPool
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IVoiceChannel
+    name: IVoiceChannel
+    nameWithType: IVoiceChannel
+    fullName: AltV.Net.Elements.Entities.IVoiceChannel
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseObjectPool`1
+    name: IBaseObjectPool
+    nameWithType: IBaseObjectPool
+    fullName: AltV.Net.IBaseObjectPool
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Resource.GetBaseBaseObjectPool(AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IPlayer},AltV.Net.IEntityPool{AltV.Net.Elements.Entities.IVehicle},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IBlip},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.ICheckpoint},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IVoiceChannel},AltV.Net.IBaseObjectPool{AltV.Net.Elements.Entities.IColShape})
+    name: GetBaseBaseObjectPool
+    nameWithType: Resource.GetBaseBaseObjectPool
+    fullName: AltV.Net.Resource.GetBaseBaseObjectPool
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IEntityPool`1
+    name: IEntityPool
+    nameWithType: IEntityPool
+    fullName: AltV.Net.IEntityPool
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IPlayer
+    name: IPlayer
+    nameWithType: IPlayer
+    fullName: AltV.Net.Elements.Entities.IPlayer
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IEntityPool`1
+    name: IEntityPool
+    nameWithType: IEntityPool
+    fullName: AltV.Net.IEntityPool
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IVehicle
+    name: IVehicle
+    nameWithType: IVehicle
+    fullName: AltV.Net.Elements.Entities.IVehicle
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseObjectPool`1
+    name: IBaseObjectPool
+    nameWithType: IBaseObjectPool
+    fullName: AltV.Net.IBaseObjectPool
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IBlip
+    name: IBlip
+    nameWithType: IBlip
+    fullName: AltV.Net.Elements.Entities.IBlip
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseObjectPool`1
+    name: IBaseObjectPool
+    nameWithType: IBaseObjectPool
+    fullName: AltV.Net.IBaseObjectPool
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.ICheckpoint
+    name: ICheckpoint
+    nameWithType: ICheckpoint
+    fullName: AltV.Net.Elements.Entities.ICheckpoint
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseObjectPool`1
+    name: IBaseObjectPool
+    nameWithType: IBaseObjectPool
+    fullName: AltV.Net.IBaseObjectPool
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IVoiceChannel
+    name: IVoiceChannel
+    nameWithType: IVoiceChannel
+    fullName: AltV.Net.Elements.Entities.IVoiceChannel
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AltV.Net.IBaseObjectPool`1
+    name: IBaseObjectPool
+    nameWithType: IBaseObjectPool
+    fullName: AltV.Net.IBaseObjectPool
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Resource.GetNativeResourcePool(AltV.Net.INativeResourceFactory)
+  commentId: M:AltV.Net.Resource.GetNativeResourcePool(AltV.Net.INativeResourceFactory)
+  parent: AltV.Net.Resource
+  isExternal: true
+  name: GetNativeResourcePool(INativeResourceFactory)
+  nameWithType: Resource.GetNativeResourcePool(INativeResourceFactory)
+  fullName: AltV.Net.Resource.GetNativeResourcePool(AltV.Net.INativeResourceFactory)
+  spec.csharp:
+  - uid: AltV.Net.Resource.GetNativeResourcePool(AltV.Net.INativeResourceFactory)
+    name: GetNativeResourcePool
+    nameWithType: Resource.GetNativeResourcePool
+    fullName: AltV.Net.Resource.GetNativeResourcePool
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.INativeResourceFactory
+    name: INativeResourceFactory
+    nameWithType: INativeResourceFactory
+    fullName: AltV.Net.INativeResourceFactory
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Resource.GetNativeResourcePool(AltV.Net.INativeResourceFactory)
+    name: GetNativeResourcePool
+    nameWithType: Resource.GetNativeResourcePool
+    fullName: AltV.Net.Resource.GetNativeResourcePool
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.INativeResourceFactory
+    name: INativeResourceFactory
+    nameWithType: INativeResourceFactory
+    fullName: AltV.Net.INativeResourceFactory
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Resource.GetBlipFactory
+  commentId: M:AltV.Net.Resource.GetBlipFactory
+  parent: AltV.Net.Resource
+  isExternal: true
+  name: GetBlipFactory()
+  nameWithType: Resource.GetBlipFactory()
+  fullName: AltV.Net.Resource.GetBlipFactory()
+  spec.csharp:
+  - uid: AltV.Net.Resource.GetBlipFactory
+    name: GetBlipFactory
+    nameWithType: Resource.GetBlipFactory
+    fullName: AltV.Net.Resource.GetBlipFactory
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Resource.GetBlipFactory
+    name: GetBlipFactory
+    nameWithType: Resource.GetBlipFactory
+    fullName: AltV.Net.Resource.GetBlipFactory
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Resource.GetCheckpointFactory
+  commentId: M:AltV.Net.Resource.GetCheckpointFactory
+  parent: AltV.Net.Resource
+  isExternal: true
+  name: GetCheckpointFactory()
+  nameWithType: Resource.GetCheckpointFactory()
+  fullName: AltV.Net.Resource.GetCheckpointFactory()
+  spec.csharp:
+  - uid: AltV.Net.Resource.GetCheckpointFactory
+    name: GetCheckpointFactory
+    nameWithType: Resource.GetCheckpointFactory
+    fullName: AltV.Net.Resource.GetCheckpointFactory
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Resource.GetCheckpointFactory
+    name: GetCheckpointFactory
+    nameWithType: Resource.GetCheckpointFactory
+    fullName: AltV.Net.Resource.GetCheckpointFactory
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Resource.GetVoiceChannelFactory
+  commentId: M:AltV.Net.Resource.GetVoiceChannelFactory
+  parent: AltV.Net.Resource
+  isExternal: true
+  name: GetVoiceChannelFactory()
+  nameWithType: Resource.GetVoiceChannelFactory()
+  fullName: AltV.Net.Resource.GetVoiceChannelFactory()
+  spec.csharp:
+  - uid: AltV.Net.Resource.GetVoiceChannelFactory
+    name: GetVoiceChannelFactory
+    nameWithType: Resource.GetVoiceChannelFactory
+    fullName: AltV.Net.Resource.GetVoiceChannelFactory
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Resource.GetVoiceChannelFactory
+    name: GetVoiceChannelFactory
+    nameWithType: Resource.GetVoiceChannelFactory
+    fullName: AltV.Net.Resource.GetVoiceChannelFactory
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Resource.GetNativeResourceFactory
+  commentId: M:AltV.Net.Resource.GetNativeResourceFactory
+  parent: AltV.Net.Resource
+  isExternal: true
+  name: GetNativeResourceFactory()
+  nameWithType: Resource.GetNativeResourceFactory()
+  fullName: AltV.Net.Resource.GetNativeResourceFactory()
+  spec.csharp:
+  - uid: AltV.Net.Resource.GetNativeResourceFactory
+    name: GetNativeResourceFactory
+    nameWithType: Resource.GetNativeResourceFactory
+    fullName: AltV.Net.Resource.GetNativeResourceFactory
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Resource.GetNativeResourceFactory
+    name: GetNativeResourceFactory
+    nameWithType: Resource.GetNativeResourceFactory
+    fullName: AltV.Net.Resource.GetNativeResourceFactory
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Resource.GetLibrary
+  commentId: M:AltV.Net.Resource.GetLibrary
+  parent: AltV.Net.Resource
+  isExternal: true
+  name: GetLibrary()
+  nameWithType: Resource.GetLibrary()
+  fullName: AltV.Net.Resource.GetLibrary()
+  spec.csharp:
+  - uid: AltV.Net.Resource.GetLibrary
+    name: GetLibrary
+    nameWithType: Resource.GetLibrary
+    fullName: AltV.Net.Resource.GetLibrary
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Resource.GetLibrary
+    name: GetLibrary
+    nameWithType: Resource.GetLibrary
+    fullName: AltV.Net.Resource.GetLibrary
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Resource.GetScripts
+  commentId: M:AltV.Net.Resource.GetScripts
+  parent: AltV.Net.Resource
+  isExternal: true
+  name: GetScripts()
+  nameWithType: Resource.GetScripts()
+  fullName: AltV.Net.Resource.GetScripts()
+  spec.csharp:
+  - uid: AltV.Net.Resource.GetScripts
+    name: GetScripts
+    nameWithType: Resource.GetScripts
+    fullName: AltV.Net.Resource.GetScripts
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Resource.GetScripts
+    name: GetScripts
+    nameWithType: Resource.GetScripts
+    fullName: AltV.Net.Resource.GetScripts
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Resource.GetModules
+  commentId: M:AltV.Net.Resource.GetModules
+  parent: AltV.Net.Resource
+  isExternal: true
+  name: GetModules()
+  nameWithType: Resource.GetModules()
+  fullName: AltV.Net.Resource.GetModules()
+  spec.csharp:
+  - uid: AltV.Net.Resource.GetModules
+    name: GetModules
+    nameWithType: Resource.GetModules
+    fullName: AltV.Net.Resource.GetModules
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Resource.GetModules
+    name: GetModules
+    nameWithType: Resource.GetModules
+    fullName: AltV.Net.Resource.GetModules
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AltV.Net
+  commentId: N:AltV.Net
+  isExternal: true
+  name: AltV.Net
+  nameWithType: AltV.Net
+  fullName: AltV.Net
+- uid: AltV.Net.Async
+  commentId: N:AltV.Net.Async
+  isExternal: true
+  name: AltV.Net.Async
+  nameWithType: AltV.Net.Async
+  fullName: AltV.Net.Async
+- uid: AltV.Net.Resource.GetPlayerFactory
+  commentId: M:AltV.Net.Resource.GetPlayerFactory
+  parent: AltV.Net.Resource
+  isExternal: true
+  name: GetPlayerFactory()
+  nameWithType: Resource.GetPlayerFactory()
+  fullName: AltV.Net.Resource.GetPlayerFactory()
+  spec.csharp:
+  - uid: AltV.Net.Resource.GetPlayerFactory
+    name: GetPlayerFactory
+    nameWithType: Resource.GetPlayerFactory
+    fullName: AltV.Net.Resource.GetPlayerFactory
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Resource.GetPlayerFactory
+    name: GetPlayerFactory
+    nameWithType: Resource.GetPlayerFactory
+    fullName: AltV.Net.Resource.GetPlayerFactory
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.Main.GetPlayerFactory*
+  commentId: Overload:Altv_Roleplay.Main.GetPlayerFactory
+  name: GetPlayerFactory
+  nameWithType: Main.GetPlayerFactory
+  fullName: Altv_Roleplay.Main.GetPlayerFactory
+- uid: AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IPlayer}
+  commentId: T:AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IPlayer}
+  parent: AltV.Net
+  definition: AltV.Net.IEntityFactory`1
+  name: IEntityFactory<IPlayer>
+  nameWithType: IEntityFactory<IPlayer>
+  fullName: AltV.Net.IEntityFactory<AltV.Net.Elements.Entities.IPlayer>
+  nameWithType.vb: IEntityFactory(Of IPlayer)
+  fullName.vb: AltV.Net.IEntityFactory(Of AltV.Net.Elements.Entities.IPlayer)
+  name.vb: IEntityFactory(Of IPlayer)
+  spec.csharp:
+  - uid: AltV.Net.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: AltV.Net.IEntityFactory
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IPlayer
+    name: IPlayer
+    nameWithType: IPlayer
+    fullName: AltV.Net.Elements.Entities.IPlayer
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AltV.Net.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: AltV.Net.IEntityFactory
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IPlayer
+    name: IPlayer
+    nameWithType: IPlayer
+    fullName: AltV.Net.Elements.Entities.IPlayer
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.IEntityFactory`1
+  commentId: T:AltV.Net.IEntityFactory`1
+  isExternal: true
+  name: IEntityFactory<TEntity>
+  nameWithType: IEntityFactory<TEntity>
+  fullName: AltV.Net.IEntityFactory<TEntity>
+  nameWithType.vb: IEntityFactory(Of TEntity)
+  fullName.vb: AltV.Net.IEntityFactory(Of TEntity)
+  name.vb: IEntityFactory(Of TEntity)
+  spec.csharp:
+  - uid: AltV.Net.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: AltV.Net.IEntityFactory
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AltV.Net.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: AltV.Net.IEntityFactory
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Resource.GetColShapeFactory
+  commentId: M:AltV.Net.Resource.GetColShapeFactory
+  parent: AltV.Net.Resource
+  isExternal: true
+  name: GetColShapeFactory()
+  nameWithType: Resource.GetColShapeFactory()
+  fullName: AltV.Net.Resource.GetColShapeFactory()
+  spec.csharp:
+  - uid: AltV.Net.Resource.GetColShapeFactory
+    name: GetColShapeFactory
+    nameWithType: Resource.GetColShapeFactory
+    fullName: AltV.Net.Resource.GetColShapeFactory
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Resource.GetColShapeFactory
+    name: GetColShapeFactory
+    nameWithType: Resource.GetColShapeFactory
+    fullName: AltV.Net.Resource.GetColShapeFactory
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.Main.GetColShapeFactory*
+  commentId: Overload:Altv_Roleplay.Main.GetColShapeFactory
+  name: GetColShapeFactory
+  nameWithType: Main.GetColShapeFactory
+  fullName: Altv_Roleplay.Main.GetColShapeFactory
+- uid: AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IColShape}
+  commentId: T:AltV.Net.IBaseObjectFactory{AltV.Net.Elements.Entities.IColShape}
+  parent: AltV.Net
+  definition: AltV.Net.IBaseObjectFactory`1
+  name: IBaseObjectFactory<IColShape>
+  nameWithType: IBaseObjectFactory<IColShape>
+  fullName: AltV.Net.IBaseObjectFactory<AltV.Net.Elements.Entities.IColShape>
+  nameWithType.vb: IBaseObjectFactory(Of IColShape)
+  fullName.vb: AltV.Net.IBaseObjectFactory(Of AltV.Net.Elements.Entities.IColShape)
+  name.vb: IBaseObjectFactory(Of IColShape)
+  spec.csharp:
+  - uid: AltV.Net.IBaseObjectFactory`1
+    name: IBaseObjectFactory
+    nameWithType: IBaseObjectFactory
+    fullName: AltV.Net.IBaseObjectFactory
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AltV.Net.IBaseObjectFactory`1
+    name: IBaseObjectFactory
+    nameWithType: IBaseObjectFactory
+    fullName: AltV.Net.IBaseObjectFactory
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IColShape
+    name: IColShape
+    nameWithType: IColShape
+    fullName: AltV.Net.Elements.Entities.IColShape
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.IBaseObjectFactory`1
+  commentId: T:AltV.Net.IBaseObjectFactory`1
+  isExternal: true
+  name: IBaseObjectFactory<TBaseObject>
+  nameWithType: IBaseObjectFactory<TBaseObject>
+  fullName: AltV.Net.IBaseObjectFactory<TBaseObject>
+  nameWithType.vb: IBaseObjectFactory(Of TBaseObject)
+  fullName.vb: AltV.Net.IBaseObjectFactory(Of TBaseObject)
+  name.vb: IBaseObjectFactory(Of TBaseObject)
+  spec.csharp:
+  - uid: AltV.Net.IBaseObjectFactory`1
+    name: IBaseObjectFactory
+    nameWithType: IBaseObjectFactory
+    fullName: AltV.Net.IBaseObjectFactory
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TBaseObject
+    nameWithType: TBaseObject
+    fullName: TBaseObject
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AltV.Net.IBaseObjectFactory`1
+    name: IBaseObjectFactory
+    nameWithType: IBaseObjectFactory
+    fullName: AltV.Net.IBaseObjectFactory
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TBaseObject
+    nameWithType: TBaseObject
+    fullName: TBaseObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Resource.GetVehicleFactory
+  commentId: M:AltV.Net.Resource.GetVehicleFactory
+  parent: AltV.Net.Resource
+  isExternal: true
+  name: GetVehicleFactory()
+  nameWithType: Resource.GetVehicleFactory()
+  fullName: AltV.Net.Resource.GetVehicleFactory()
+  spec.csharp:
+  - uid: AltV.Net.Resource.GetVehicleFactory
+    name: GetVehicleFactory
+    nameWithType: Resource.GetVehicleFactory
+    fullName: AltV.Net.Resource.GetVehicleFactory
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Resource.GetVehicleFactory
+    name: GetVehicleFactory
+    nameWithType: Resource.GetVehicleFactory
+    fullName: AltV.Net.Resource.GetVehicleFactory
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.Main.GetVehicleFactory*
+  commentId: Overload:Altv_Roleplay.Main.GetVehicleFactory
+  name: GetVehicleFactory
+  nameWithType: Main.GetVehicleFactory
+  fullName: Altv_Roleplay.Main.GetVehicleFactory
+- uid: AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IVehicle}
+  commentId: T:AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IVehicle}
+  parent: AltV.Net
+  definition: AltV.Net.IEntityFactory`1
+  name: IEntityFactory<IVehicle>
+  nameWithType: IEntityFactory<IVehicle>
+  fullName: AltV.Net.IEntityFactory<AltV.Net.Elements.Entities.IVehicle>
+  nameWithType.vb: IEntityFactory(Of IVehicle)
+  fullName.vb: AltV.Net.IEntityFactory(Of AltV.Net.Elements.Entities.IVehicle)
+  name.vb: IEntityFactory(Of IVehicle)
+  spec.csharp:
+  - uid: AltV.Net.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: AltV.Net.IEntityFactory
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IVehicle
+    name: IVehicle
+    nameWithType: IVehicle
+    fullName: AltV.Net.Elements.Entities.IVehicle
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AltV.Net.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: AltV.Net.IEntityFactory
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IVehicle
+    name: IVehicle
+    nameWithType: IVehicle
+    fullName: AltV.Net.Elements.Entities.IVehicle
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.Resource.OnStart
+  commentId: M:AltV.Net.Resource.OnStart
+  parent: AltV.Net.Resource
+  isExternal: true
+  name: OnStart()
+  nameWithType: Resource.OnStart()
+  fullName: AltV.Net.Resource.OnStart()
+  spec.csharp:
+  - uid: AltV.Net.Resource.OnStart
+    name: OnStart
+    nameWithType: Resource.OnStart
+    fullName: AltV.Net.Resource.OnStart
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Resource.OnStart
+    name: OnStart
+    nameWithType: Resource.OnStart
+    fullName: AltV.Net.Resource.OnStart
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.Main.OnStart*
+  commentId: Overload:Altv_Roleplay.Main.OnStart
+  name: OnStart
+  nameWithType: Main.OnStart
+  fullName: Altv_Roleplay.Main.OnStart
+- uid: AltV.Net.Resource.OnStop
+  commentId: M:AltV.Net.Resource.OnStop
+  parent: AltV.Net.Resource
+  isExternal: true
+  name: OnStop()
+  nameWithType: Resource.OnStop()
+  fullName: AltV.Net.Resource.OnStop()
+  spec.csharp:
+  - uid: AltV.Net.Resource.OnStop
+    name: OnStop
+    nameWithType: Resource.OnStop
+    fullName: AltV.Net.Resource.OnStop
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.Resource.OnStop
+    name: OnStop
+    nameWithType: Resource.OnStop
+    fullName: AltV.Net.Resource.OnStop
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.Main.OnStop*
+  commentId: Overload:Altv_Roleplay.Main.OnStop
+  name: OnStop
+  nameWithType: Main.OnStop
+  fullName: Altv_Roleplay.Main.OnStop

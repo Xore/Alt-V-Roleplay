@@ -1,0 +1,1398 @@
+﻿<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css?fuqqcache=true">
+    <link rel="stylesheet" href="glasstyle.css?fuqqcache=true">
+
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet" type="text/css">
+
+    <title>Tablet</title>
+</head>
+
+<body>
+    <div class="TabletBG">
+        <button id="homebutton" class="btn btn-home btn-circle btn-circle-sm m-1"></button>
+        <div class="Tablet">
+
+            <div class="Tablet-UseableArea">
+                <div class="dark-light">
+                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
+                    <div id="phone-min-time" class="phone-inline" style="margin-left:20px;">
+                        NaN
+                    </div>
+                </div>
+
+
+                <div class="app">
+                    <div class="header">
+                        <div class="header-menu">
+                        </div>
+                    </div>
+
+					<div class="wrapper" id="lspd" style="display: none;">
+                        <div class="main-container">												
+                            <div class="content-wrapper">
+                                <div class="content-section">
+									
+								  <div class="container" id="lspddispatches" style="display:none;">
+										<h1 class="t1">AKTUELLE NOTRUFE</h1>
+                            			<div id="lspdApp-Area-ViewDispatches-List"></div>
+									</div>
+									
+								  <div class="container" id="lspdvehiclelist" style="display:none;">
+										<h1 class="t1">AUSGEPARKTE FAHRZEUGE</h1>
+                            			<div id="lspdApp-Area-ViewFactionVehicles-List"></div>
+									</div>
+									
+								<div class="container" id="lspdlicencecheck" style="display:none;">
+									
+									<h1 class="t1">LIZENZÜBERPRÜFUNG</h1>
+									<div class="search-bar">
+										<input id="lspdApp-Area-SearchLicense-InputName" type="text" maxlength="32" placeholder="Name der zu suchenden Person.." spellcheck="false">
+										<button onclick="lspdAppSearchLicense();" type="button" class="lspd-button">Suchen</button>
+								  	</div>
+                           				<div id="lspdApp-Area-SearchLicense-List"></div>
+									</div>
+									
+								<div class="container" id="lspdvehiclesearch" style="display:none;">
+									
+									<h1 class="t1">KENNZEICHENABFRAGE</h1>
+									<div class="search-bar">
+										<input id="lspdApp-Area-SearchVehiclePlate-InputPlate" type="text" maxlength="32" placeholder="Kennzeichen eingeben.." spellcheck="false">
+										<button onclick="lspdAppSearchVehiclePlate();" type="button" class="lspd-button" id="vehiclesearch">Suchen</button>
+								  	</div>
+									
+									<div class="container">
+									<p><b>Besitzer:</b>
+										<font id="lspdApp-Area-SearchVehiclePlate-charName">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Fahrzeugname:</b>
+										<font id="lspdApp-Area-SearchVehiclePlate-vehName">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Hersteller:</b>
+										<font id="lspdApp-Area-SearchVehiclePlate-manufactor">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Kaufdatum:</b>
+										<font id="lspdApp-Area-SearchVehiclePlate-buydate">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Kofferraumgröße:</b>
+										<font id="lspdApp-Area-SearchVehiclePlate-trunk">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Tankgröße:</b>
+										<font id="lspdApp-Area-SearchVehiclePlate-fuel">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Tankart:</b>
+										<font id="lspdApp-Area-SearchVehiclePlate-fueltype">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Steuern:</b>
+										<font id="lspdApp-Area-SearchVehiclePlate-taxes">-/-</font>
+									</p>
+								</div>
+
+									
+									
+									
+								</div>
+																	
+								<div class="container" id="lspdsearch" style="display:none;">
+									
+									<h1 class="t1">PERSONENABFRAGE</h1>
+									<div class="search-bar">
+										<input id="lspdApp-Area-SearchPerson-InputName" type="text" maxlength="32" placeholder="Name der zu suchenden Person.." spellcheck="false">
+										<button onclick="lspdAppSearchPerson();" type="button" class="lspd-button" id="personsearch">Suchen</button>
+								  	</div>
+									<hr style="border-color: #0000004a; margin-bottom: 0;">
+									<div class="container">
+										<p><b>Name der Person:</b>
+											<font id="lspdApp-Area-SearchPerson-charName">-/-</font>
+										</p>
+									</div>
+									<div class="container">
+										<p><b>Geschlecht:</b>
+											<font id="lspdApp-Area-SearchPerson-gender">-/-</font>
+										</p>
+									</div>
+									<div class="container">
+										<p><b>Geburtsdatum:</b>
+											<font id="lspdApp-Area-SearchPerson-birthdate">-/-</font>
+										</p>
+									</div>
+									<div class="container">
+										<p><b>Geburtsort:</b>
+											<font id="lspdApp-Area-SearchPerson-birthplace">-/-</font>
+										</p>
+									</div>
+									<div class="container">
+										<p><b>Adresse:</b>
+											<font id="lspdApp-Area-SearchPerson-address">-/-</font>
+										</p>
+									</div>
+									<div class="container">
+										<p><b>Hauptkonto:</b>
+											<font id="lspdApp-Area-SearchPerson-mainBankAccNr">-/-</font>
+										</p>
+									</div>
+									<div class="container">
+										<p><b>Einreisedatum:</b>
+											<font id="lspdApp-Area-SearchPerson-firstJoinDate">-/-</font>
+										</p>
+									</div>
+									
+								</div>
+									
+									<div class="container" id="lspdmain">
+										<h1 class="t1">Los Santos Police Department</h1>
+										<b>Aktuelle Notrufe: </b>
+										<font id="lspdApp-Area-Overview-DispatchCount">-1</font><br>
+										<b>Aktive Mitarbeiter: </b>
+										<font id="lspdApp-Area-Overview-DutyMemberCount">-1</font><br>		
+										
+										<div class="apps-card">
+											<div class="app-card">
+												<span>
+													<img src="assets/img/multiple-users-silhouette.png" alt="alt">
+													Personen überprüfen
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="lspdsearchbtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/driving-license.png" alt="alt">
+													Lizenz abfragen
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="lspdlicencebtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/license.png" alt="alt">
+													Kennzeichen überprüfen
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="lspdvehiclesearchbtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/protected.png" alt="alt">
+													Strafkatalog
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/sos.png" alt="alt">
+													Aktive Dispatches
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="lspddispatchesbtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/parking.png" alt="alt">
+													Ausgeparkte Fahrzeuge
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="lspdvehiclelistbtn">Öffnen</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="wrapper" id="finance" style="display: none;">
+                        <div class="main-container">												
+                            <div class="content-wrapper">
+                                <div class="content-section">
+								
+								<div class="container" id="financehistory" style="display:none;">
+									<h1 class="t1">LETZTE TRANSAKTIONEN</h1>
+									<ul id="bankapp-bankhistory-list" class="list-group">
+										<li>Test</li>
+										<li>Test</li>
+										<li>Test</li>
+									</ul>
+								</div>
+								
+									<div class="container" id="financetransaction" style="display:none;">
+											<div class="transactionform">
+												<div id="BankingApp-ErrorMsg" style="display: none;">
+													<p id="BankingApp-NewTransactionArea-Error">Dies ist eine Fehlermeldung.</p>
+												</div>
+													<h1 class="t1">Neue Transaktion tätigen</h1>
+												 <input id="bankingapp-banknumber" class="form__input" type="number" onkeypress="return event.charCode >= 48 ; event.charCode <= 57" maxlength="16" placeholder="Kontonummer eingeben.." spellcheck="false">
+												 <input id="bankingapp-transactiontext"  class="form__input" type="text" maxlength="20" placeholder="Verwendungszweck eingeben.." spellcheck="false">
+												 <input id="bankingapp-moneyamount" class="form__input" type="number" onkeypress="return event.charCode >= 48 ; event.charCode <= 57" placeholder="Betrag eingeben.." spellcheck="false">
+												 <button class="content-button" type="submit" id="transactionbutton">Transaktion durchführen</button>
+											</div>
+									</div>
+									
+									<div class="container" id="financemain">
+									  <main>
+										<h1 class="t1">BANKING</h1>
+										<div id="app">
+											<div class="card-form">
+											<div class="card-list">
+												<div class="card-item">
+												<div class="card-item__side -front">
+													<div class="card-item__focus" ref="focusElement"></div>
+													<div class="card-item__cover">
+													<img src="assets/img/creditcard/1.jpeg" class="card-item__bg" alt="alt">
+													</div>
+													
+													<div class="card-item__wrapper">
+													<div class="card-item__top">
+														<img src="assets/img/creditcard/chip.png" class="card-item__chip" alt="alt">
+														<div class="card-item__type">
+															<img src="assets/img/creditcard/fleeca.png" class="card-item__typeImg" alt="alt">
+														</div>
+													</div>
+													<label class="card-item__number">
+														1234 1234 1234 1234
+													</label>
+													<div class="card-item__content">
+														<label class="card-item__info">
+														<div class="card-item__holder">Card Holder</div>
+															<div class="card-item__name" id="cardholder">
+																Max Mustermann
+															</div>
+														</label>
+														<div class="card-item__date">
+														<label class="card-item__dateTitle">Expires</label>
+														<label class="card-item__dateItem">
+															<span>12</span>
+														</label>
+														/
+														<label class="card-item__dateItem">
+															<span>32</span>
+														</label>
+														</div>
+													</div>
+													</div>
+												</div>
+												</div>
+											</div>
+											<h3 class="currentMoney">Massiv Rich alla</h3>
+											</div>
+										</div>
+									  </main>
+									  <nav>
+										<button id="btntransactions" class="content-button">Neue Transaktion</button>
+										<button id="btnhistory" class="content-button">History</button>
+									  </nav>
+									</div>
+								</div>
+							</div>
+						</div>						
+					</div>
+
+
+					<div class="wrapper" id="lsfd" style="display: none;">
+                        <div class="main-container">												
+                            <div class="content-wrapper">
+                                <div class="content-section">
+									
+								  <div class="container" id="lsfddispatches" style="display:none;">
+										<h1 class="t1">AKTUELLE NOTRUFE</h1>
+                            			<div id="lsfdApp-Area-ViewDispatches-List"></div>
+									</div>
+									
+								  <div class="container" id="lsfdvehiclelist" style="display:none;">
+										<h1 class="t1">AUSGEPARKTE FAHRZEUGE</h1>
+                            			<div id="lsfdApp-Area-ViewFactionVehicles-List"></div>
+									</div>
+									
+									
+									<div class="container" id="lsfdmain">
+										<h1 class="t1">Los Santos Fire Department</h1>
+										<b>Aktuelle Notrufe: </b>
+										<font id="lsfdApp-Area-Overview-DispatchCount">-1</font><br>
+										<b>Aktive Mitarbeiter: </b>
+										<font id="lsfdApp-Area-Overview-DutyMemberCount">-1</font><br>		
+										
+										<div class="apps-card">
+											<div class="app-card">
+												<span>
+													<img src="assets/img/sos.png" alt="alt">
+													Aktive Dispatches
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="lsfddispatchesbtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/parking.png" alt="alt">
+													Ausgeparkte Fahrzeuge
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="lsfdvehiclelistbtn">Öffnen</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<div class="wrapper" id="acls" style="display: none;">
+                        <div class="main-container">												
+                            <div class="content-wrapper">
+                                <div class="content-section">
+									
+								  <div class="container" id="aclsdispatches" style="display:none;">
+										<h1 class="t1">AKTUELLE NOTRUFE</h1>
+                            			<div id="aclsApp-Area-ViewDispatches-List"></div>
+									</div>
+									
+								  <div class="container" id="aclsvehiclelist" style="display:none;">
+										<h1 class="t1">AUSGEPARKTE FAHRZEUGE</h1>
+                            			<div id="aclsApp-Area-ViewFactionVehicles-List"></div>
+									</div>									
+									
+									<div class="container" id="aclsmain">
+										<h1 class="t1">Auto Club Los Santos</h1>
+										<b>Aktuelle Notrufe: </b>
+										<font id="aclsApp-Area-Overview-DispatchCount">-1</font><br>
+										<b>Aktive Mitarbeiter: </b>
+										<font id="aclsApp-Area-Overview-DutyMemberCount">-1</font><br>		
+										
+										<div class="apps-card">
+											<div class="app-card">
+												<span>
+													<img src="assets/img/sos.png" alt="alt">
+													Aktive Dispatches
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="aclsdispatchesbtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/parking.png" alt="alt">
+													Ausgeparkte Fahrzeuge
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="aclsvehiclelistbtn">Öffnen</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<div class="wrapper" id="fbi" style="display: none;">
+                        <div class="main-container">												
+                            <div class="content-wrapper">
+                                <div class="content-section">
+									
+								  <div class="container" id="fbidispatches" style="display:none;">
+										<h1 class="t1">AKTUELLE NOTRUFE</h1>
+                            			<div id="fbiApp-Area-ViewDispatches-List"></div>
+									</div>
+									
+								  <div class="container" id="fbivehiclelist" style="display:none;">
+										<h1 class="t1">AUSGEPARKTE FAHRZEUGE</h1>
+                            			<div id="fbiApp-Area-ViewFactionVehicles-List"></div>
+									</div>
+									
+								<div class="container" id="fbilicencecheck" style="display:none;">
+									
+									<h1 class="t1">LIZENZÜBERPRÜFUNG</h1>
+									<div class="search-bar">
+										<input id="fbiApp-Area-SearchLicense-InputName" type="text" maxlength="32" placeholder="Name der zu suchenden Person.." spellcheck="false">
+										<button onclick="fbiAppSearchLicense();" type="button" class="fbi-button">Suchen</button>
+								  	</div>
+                           				<div id="fbiApp-Area-SearchLicense-List"></div>
+									</div>
+									
+								<div class="container" id="fbivehiclesearch" style="display:none;">
+									
+									<h1 class="t1">KENNZEICHENABFRAGE</h1>
+									<div class="search-bar">
+										<input id="fbiApp-Area-SearchVehiclePlate-InputPlate" type="text" maxlength="32" placeholder="Kennzeichen eingeben.." spellcheck="false">
+										<button onclick="fbiAppSearchVehiclePlate();" type="button" class="fbi-button" id="vehiclesearch">Suchen</button>
+								  	</div>
+									
+									<div class="container">
+									<p><b>Besitzer:</b>
+										<font id="fbiApp-Area-SearchVehiclePlate-charName">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Fahrzeugname:</b>
+										<font id="fbiApp-Area-SearchVehiclePlate-vehName">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Hersteller:</b>
+										<font id="fbiApp-Area-SearchVehiclePlate-manufactor">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Kaufdatum:</b>
+										<font id="fbiApp-Area-SearchVehiclePlate-buydate">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Kofferraumgröße:</b>
+										<font id="fbiApp-Area-SearchVehiclePlate-trunk">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Tankgröße:</b>
+										<font id="fbiApp-Area-SearchVehiclePlate-fuel">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Tankart:</b>
+										<font id="fbiApp-Area-SearchVehiclePlate-fueltype">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Steuern:</b>
+										<font id="fbiApp-Area-SearchVehiclePlate-taxes">-/-</font>
+									</p>
+								</div>
+
+									
+									
+									
+								</div>
+																	
+								<div class="container" id="fbisearch" style="display:none;">
+									
+									<h1 class="t1">PERSONENABFRAGE</h1>
+									<div class="search-bar">
+										<input id="fbiApp-Area-SearchPerson-InputName" type="text" maxlength="32" placeholder="Name der zu suchenden Person.." spellcheck="false">
+										<button onclick="fbiAppSearchPerson();" type="button" class="fbi-button" id="personsearch">Suchen</button>
+								  	</div>
+									<hr style="border-color: #0000004a; margin-bottom: 0;">
+									<div class="container">
+										<p><b>Name der Person:</b>
+											<font id="fbiApp-Area-SearchPerson-charName">-/-</font>
+										</p>
+									</div>
+									<div class="container">
+										<p><b>Geschlecht:</b>
+											<font id="fbiApp-Area-SearchPerson-gender">-/-</font>
+										</p>
+									</div>
+									<div class="container">
+										<p><b>Geburtsdatum:</b>
+											<font id="fbiApp-Area-SearchPerson-birthdate">-/-</font>
+										</p>
+									</div>
+									<div class="container">
+										<p><b>Geburtsort:</b>
+											<font id="fbiApp-Area-SearchPerson-birthplace">-/-</font>
+										</p>
+									</div>
+									<div class="container">
+										<p><b>Adresse:</b>
+											<font id="fbiApp-Area-SearchPerson-address">-/-</font>
+										</p>
+									</div>
+									<div class="container">
+										<p><b>Hauptkonto:</b>
+											<font id="fbiApp-Area-SearchPerson-mainBankAccNr">-/-</font>
+										</p>
+									</div>
+									<div class="container">
+										<p><b>Einreisedatum:</b>
+											<font id="fbiApp-Area-SearchPerson-firstJoinDate">-/-</font>
+										</p>
+									</div>
+									
+								</div>
+									
+									<div class="container" id="fbimain">
+										<h1 class="t1">Federal Bereu of what evah</h1>
+										<b>Aktuelle Notrufe: </b>
+										<font id="fbiApp-Area-Overview-DispatchCount">-1</font><br>
+										<b>Aktive Mitarbeiter: </b>
+										<font id="fbiApp-Area-Overview-DutyMemberCount">-1</font><br>		
+										
+										<div class="apps-card">
+											<div class="app-card">
+												<span>
+													<img src="assets/img/multiple-users-silhouette.png" alt="alt">
+													Personen überprüfen
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="fbisearchbtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/driving-license.png" alt="alt">
+													Lizenz abfragen
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="fbilicencebtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/license.png" alt="alt">
+													Kennzeichen überprüfen
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="fbivehiclesearchbtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/protected.png" alt="alt">
+													Strafkatalog
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/sos.png" alt="alt">
+													Aktive Dispatches
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="fbidispatchesbtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/parking.png" alt="alt">
+													Ausgeparkte Fahrzeuge
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="fbivehiclelistbtn">Öffnen</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<div class="wrapper" id="justice" style="display: none;">
+                        <div class="main-container">												
+                            <div class="content-wrapper">
+                                <div class="content-section">
+
+
+									<div class="container" id="justiceviewbanktransactions" style="display:none;">
+										  <h1 class="t1">KONTOAKTIVITÄTEN CHECKEN</h1>
+										  <input id="JusticeApp-Area-ViewBankTransactions-InputName" class="form__input" type="text" maxlength="32" placeholder="Name der zu suchenden Person.." spellcheck="false">
+										  <button onclick="JusticeAppSearchBankAccounts();" type="button" class="content-button status-button">Suchen</button>
+										  <hr style="border-color: #0000004a; margin-bottom: -10;">
+										  <p class="title">KONTOAUSWAHL</p>
+										  <ul id="JusticeApp-Area-ViewBankTransactions-AccountList" class="list-group"></ul>
+										  <hr style="border-color: #0000004a; margin-bottom: -10;">
+										  <p class="title">KONTOVERLAUF</p>
+										  <ul id="JusticeApp-Area-ViewBankTransactions-HistoryList" class="list-group"></ul>
+									  </div>
+
+
+									<div class="container" id="justicegiveweaponlicense" style="display:none;">
+										  <h1 class="t1">Waffenschein ausstellen</h1>
+										  <div class="inputgroup">
+											<input id="JusticeApp-Area-GiveWeaponLicense-InputName" class="form__input" type="text" maxlength="64" placeholder="Weitere Infos eingeben..." spellcheck="false">
+										</div>
+										<button type="button" onclick="JusticeAppGiveWeaponLicense();" class="content-button status-button"><i class="fas fa-check" style="padding-right: 6px;"></i>Waffenschein ausstellen</button>
+									  </div>
+									
+									
+								  <div class="container" id="justicevehiclelist" style="display:none;">
+										<h1 class="t1">AUSGEPARKTE FAHRZEUGE</h1>
+                            			<div id="justiceApp-Area-ViewFactionVehicles-List"></div>
+									</div>
+
+
+
+									
+									
+								<div class="container" id="justicelicencecheck" style="display:none;">
+									
+									<h1 class="t1">LIZENZÜBERPRÜFUNG</h1>
+									<div class="search-bar">
+										<input id="justiceApp-Area-SearchLicense-InputName" type="text" maxlength="32" placeholder="Name der zu suchenden Person.." spellcheck="false">
+										<button onclick="justiceAppSearchLicense();" type="button" class="justice-button">Suchen</button>
+								  	</div>
+                           				<div id="justiceApp-Area-SearchLicense-List"></div>
+									</div>
+									
+								<div class="container" id="justicevehiclesearch" style="display:none;">
+									
+									<h1 class="t1">KENNZEICHENABFRAGE</h1>
+									<div class="search-bar">
+										<input id="justiceApp-Area-SearchVehiclePlate-InputPlate" type="text" maxlength="32" placeholder="Kennzeichen eingeben.." spellcheck="false">
+										<button onclick="justiceAppSearchVehiclePlate();" type="button" class="justice-button" id="vehiclesearch">Suchen</button>
+								  	</div>
+									
+									<div class="container">
+									<p><b>Besitzer:</b>
+										<font id="justiceApp-Area-SearchVehiclePlate-charName">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Fahrzeugname:</b>
+										<font id="justiceApp-Area-SearchVehiclePlate-vehName">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Hersteller:</b>
+										<font id="justiceApp-Area-SearchVehiclePlate-manufactor">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Kaufdatum:</b>
+										<font id="justiceApp-Area-SearchVehiclePlate-buydate">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Kofferraumgröße:</b>
+										<font id="justiceApp-Area-SearchVehiclePlate-trunk">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Tankgröße:</b>
+										<font id="justiceApp-Area-SearchVehiclePlate-fuel">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Tankart:</b>
+										<font id="justiceApp-Area-SearchVehiclePlate-fueltype">-/-</font>
+									</p>
+								</div>
+								<div class="container">
+									<p><b>Steuern:</b>
+										<font id="justiceApp-Area-SearchVehiclePlate-taxes">-/-</font>
+									</p>
+								</div>
+
+									
+									
+									
+								</div>
+																	
+								<div class="container" id="justicesearch" style="display:none;">
+									
+									<h1 class="t1">PERSONENABFRAGE</h1>
+									<div class="search-bar">
+										<input id="justiceApp-Area-SearchPerson-InputName" type="text" maxlength="32" placeholder="Name der zu suchenden Person.." spellcheck="false">
+										<button onclick="justiceAppSearchPerson();" type="button" class="justice-button" id="personsearch">Suchen</button>
+								  	</div>
+									<hr style="border-color: #0000004a; margin-bottom: 0;">
+									<div class="container">
+										<p><b>Name der Person:</b>
+											<font id="justiceApp-Area-SearchPerson-charName">-/-</font>
+										</p>
+									</div>
+									<div class="container">
+										<p><b>Geschlecht:</b>
+											<font id="justiceApp-Area-SearchPerson-gender">-/-</font>
+										</p>
+									</div>
+									<div class="container">
+										<p><b>Geburtsdatum:</b>
+											<font id="justiceApp-Area-SearchPerson-birthdate">-/-</font>
+										</p>
+									</div>
+									<div class="container">
+										<p><b>Geburtsort:</b>
+											<font id="justiceApp-Area-SearchPerson-birthplace">-/-</font>
+										</p>
+									</div>
+									<div class="container">
+										<p><b>Adresse:</b>
+											<font id="justiceApp-Area-SearchPerson-address">-/-</font>
+										</p>
+									</div>
+									<div class="container">
+										<p><b>Hauptkonto:</b>
+											<font id="justiceApp-Area-SearchPerson-mainBankAccNr">-/-</font>
+										</p>
+									</div>
+									<div class="container">
+										<p><b>Einreisedatum:</b>
+											<font id="justiceApp-Area-SearchPerson-firstJoinDate">-/-</font>
+										</p>
+									</div>
+									
+								</div>
+									
+									<div class="container" id="justicemain">
+										<h1 class="t1">Los Santos Police Department</h1>
+										<b>Aktuelle Notrufe: </b>
+										<font id="justiceApp-Area-Overview-DispatchCount">-1</font><br>
+										<b>Aktive Mitarbeiter: </b>
+										<font id="justiceApp-Area-Overview-DutyMemberCount">-1</font><br>		
+										
+										<div class="apps-card">
+											<div class="app-card">
+												<span>
+													<img src="assets/img/multiple-users-silhouette.png" alt="alt">
+													Personen überprüfen
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="justicesearchbtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/driving-license.png" alt="alt">
+													Lizenz abfragen
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="justicelicencebtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/license.png" alt="alt">
+													Kennzeichen überprüfen
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="justicevehiclesearchbtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/bank/transaction.png" alt="alt">
+													Bankdaten überprüfen
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="justicebankcheckbtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/gun.png" alt="alt">
+													Waffenschein vergeben
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="justiceweaponbtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/parking.png" alt="alt">
+													Ausgeparkte Fahrzeuge
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="justicevehiclelistbtn">Öffnen</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="wrapper" id="bennys" style="display: none;">
+                        <div class="main-container">												
+                            <div class="content-wrapper">
+                                <div class="content-section">
+									
+								  <div class="container" id="bennysdispatches" style="display:none;">
+										<h1 class="t1">AKTUELLE NOTRUFE</h1>
+                            			<div id="bennysApp-Area-ViewDispatches-List"></div>
+									</div>
+									
+								  <div class="container" id="bennysvehiclelist" style="display:none;">
+										<h1 class="t1">AUSGEPARKTE FAHRZEUGE</h1>
+                            			<div id="bennysApp-Area-ViewFactionVehicles-List"></div>
+									</div>
+															
+
+									<div class="container" id="bennysmain">
+										<h1 class="t1">Benny's</h1>
+										<b>Aktuelle Notrufe: </b>
+										<font id="bennysApp-Area-Overview-DispatchCount">-1</font><br>
+										<b>Aktive Mitarbeiter: </b>
+										<font id="bennysApp-Area-Overview-DutyMemberCount">-1</font><br>		
+										
+										<div class="apps-card">
+											<div class="app-card">
+												<span>
+													<img src="assets/img/sos.png" alt="alt">
+													Aktive Dispatches
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="bennysdispatchesbtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/parking.png" alt="alt">
+													Ausgeparkte Fahrzeuge
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="bennysvehiclelistbtn">Öffnen</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<div class="wrapper" id="taxi" style="display: none;">
+                        <div class="main-container">												
+                            <div class="content-wrapper">
+                                <div class="content-section">
+									
+								  <div class="container" id="taxidispatches" style="display:none;">
+										<h1 class="t1">AKTUELLE NOTRUFE</h1>
+                            			<div id="taxiApp-Area-ViewDispatches-List"></div>
+									</div>
+									
+								  <div class="container" id="taxivehiclelist" style="display:none;">
+										<h1 class="t1">AUSGEPARKTE FAHRZEUGE</h1>
+                            			<div id="taxiApp-Area-ViewFactionVehicles-List"></div>
+									</div>
+									
+									
+									<div class="container" id="taximain">
+										<h1 class="t1">Downtown Cab. Co</h1>
+										<b>Aktuelle Notrufe: </b>
+										<font id="taxiApp-Area-Overview-DispatchCount">-1</font><br>
+										<b>Aktive Mitarbeiter: </b>
+										<font id="taxiApp-Area-Overview-DutyMemberCount">-1</font><br>		
+										
+										<div class="apps-card">
+											<div class="app-card">
+												<span>
+													<img src="assets/img/sos.png" alt="alt">
+													Aktive Dispatches
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="taxidispatchesbtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/parking.png" alt="alt">
+													Ausgeparkte Fahrzeuge
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="taxivehiclelistbtn">Öffnen</button>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="wrapper" id="vehicleshopscreen" style="display: none;">
+						<div class="main-container">
+							<div class="content-wrapper">
+								<div class="content-section">
+									<div class="container">
+										<p class="title" style="padding-top: 25px">FAHRZEUG BESTELLEN</p>
+										<p class="description">Erwerbe online ein Fahrzeug welches es beim örtlichen Händler nicht gibt.<br>Die Fahrzeugfarbe ist
+											<font id="VehicleStore-ColorText" style="font-weight: bold">weiß</font>, diese kannst du vor Kauf ändern.</p>
+			
+										<ul id="VehicleStore-List" class="list-group">
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="wrapper" id="lifeinvaderscreen" style="display: none;">
+						<div class="main-container">
+							<div class="content-wrapper">
+								<div class="content-section">
+									<div class="container">
+										<div class="webcontainer">
+												<iframe src="https://social.nightout-gaming.de/" height="540px" width="960px" allowfullscreen="" frameborder="0"></iframe>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="wrapper" id="newsscreen" style="display: none;">
+						<div class="main-container">
+							<div class="content-wrapper">
+								<div class="content-section">
+									<div class="container">
+										<div class="webcontainer">
+												<iframe src="https://news.nightout-gaming.de" height="540px" width="960px" allowfullscreen="" frameborder="0"></iframe>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="wrapper" id="factionmanagementscreen" style="display: none;">
+						<div class="main-container">							
+							<div class="content-wrapper">
+
+								<div class="container" id="factionMain">
+										<div id="factionmanagerapp-overview-header" class="card-header">Standartfraktion (FEHLER)</div>
+
+										<h6 class="card-title">Fraktionsinformationen</h6>
+										<p id="factionmanagerapp-overview-text" class="card-text"></p>
+
+										<div class="apps-card">
+											<div class="app-card">
+												<span>
+													<img src="assets/img/multiple-users-silhouette.png" alt="alt">
+													Mitarbeiter einsehen
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="factionViewMemberbtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/bank/transaction.png" alt="alt">
+													Gehälter verwalten
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="factionRankManagementbtn">Öffnen</button>
+												</div>
+											</div>
+											<div class="app-card">
+												<span>
+													<img src="assets/img/invitation.png" alt="alt">
+													Mitarbeiter einstellen
+												</span>
+												<div class="app-card__subtext">Description</div>
+												<div class="app-card-buttons">
+													<button class="content-button status-button" id="factionMemberInvitebtn">Öffnen</button>
+												</div>
+											</div>
+										</div>
+								</div>
+
+								<div class="container" id="factionMember" style="display: none;">
+									<p>MITARBEITER EINSEHEN</p>
+									<ul id="FactionManagerApp-Area-ViewAllMembers-List" class="list-group"></ul>
+
+								</div>
+
+
+								<div class="container" id="factionNewMember" style="display:none";>
+									
+									<div class="transactionform">
+										<p>NEUEN MITARBEITER EINSTELLEN</p>
+										<p>Hier hast du die Möglichkeit einen Mitarbeiter einzustellen.<br>Dieser erhält dann Zugriff auf Funktionen des Unternehmens.</p>
+										<div class="inputgroup" style="margin-top: 2.5rem;">
+											<i class="fas fa-user icon"></i>
+											<input id="factionmanagerapp-name" class="form__input" type="text" maxlength="32" placeholder="Namen eingeben.." spellcheck="false">
+										</div>
+										<div class="inputgroup" style="margin-top: 0.5rem;">
+											<i class="fas fa-list-ol icon"></i>
+											<input id="factionmanagerapp-dienstnummer"  class="form__input" type="number" maxlength="32" placeholder="Dienstnummer eingeben.." spellcheck="false" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+										</div>
+										<button type="button" id="factionmanagerAppInviteNewMemberbtn" class="content-button status-button"><i class="fas fa-check" style="padding-right: 6px;"></i>Mitarbeiter einstellen</button>
+
+
+									</div>
+
+								</div>
+								
+
+								<div class="container" id="factionRankManagement" style="display:none";>
+									<p>GEHÄLTER VERWALTEN</p>
+									<p>Hier hast du die Möglichkeit die Gehälter deiner Fraktion anzupassen.<br>Ein Minimum von 1$ und ein Maximum von 10.000$ sind hier Minimal- und Maximalwerte.</p>
+		
+									<ul id="FactionManagerApp-Area-RankManage-List" class="list-group"></ul>
+		 
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="wrapper" id="gangmanagementscreen" style="display: none;">
+						<div class="main-container">
+							<div class="content-wrapper">
+
+								<div class="container" id="gangMain">
+									<div id="gangmanagerapp-overview-header" class="card-header">Standartgruppierung (FEHLER)</div>
+
+									<h6 class="card-title">Gruppierunginformationen</h6>
+									<p id="gangmanagerapp-overview-text" class="card-text"></p>
+
+									<div class="apps-card">
+										<div class="app-card">
+											<span>
+												<img src="assets/img/multiple-users-silhouette.png" alt="alt">
+												Member einsehen
+											</span>
+											<div class="app-card__subtext">Description</div>
+											<div class="app-card-buttons">
+												<button class="content-button status-button" id="gangViewMemberbtn">Öffnen</button>
+											</div>
+										</div>
+										<div class="app-card">
+											<span>
+												<img src="assets/img/bank/transaction.png" alt="alt">
+												Rang Übersicht
+											</span>
+											<div class="app-card__subtext">Description</div>
+											<div class="app-card-buttons">
+												<button class="content-button status-button" id="gangRankManagementbtn">Öffnen</button>
+											</div>
+										</div>
+										<div class="app-card">
+											<span>
+												<img src="assets/img/invitation.png" alt="alt">
+												Member einstellen
+											</span>
+											<div class="app-card__subtext">Description</div>
+											<div class="app-card-buttons">
+												<button class="content-button status-button" id="gangMemberInvitebtn">Öffnen</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="container" id="gangMember" style="display:none;">
+									<p>MEMBER EINSEHEN</p>
+									<ul id="GangManagerApp-Area-ViewAllMembers-List" class="list-group"></ul>
+		 
+								</div>
+
+
+								<div class="container" id="gangNewMember" style="display:none;">
+									<div class="transactionform">
+										<p>NEUEN MEMBER EINSTELLEN</p>
+										<p>Hier hast du die Möglichkeit einen Member einzustellen.<br>Dieser erhält dann Zugriff auf Funktionen der Gruppierung.</p>
+										<div class="inputgroup" style="margin-top: 2.5rem;">
+											<i class="fas fa-user icon"></i>
+											<input id="gangmanagerapp-name" class="form__input" type="text" maxlength="32" placeholder="Namen eingeben.." spellcheck="false">
+										</div>
+										<button type="button" id="gangmanagerAppInviteNewMemberbtn" class="content-button status-button"><i class="fas fa-check" style="padding-right: 6px;"></i>Member einstellen</button> 
+
+									</div>
+								</div>
+
+
+								<div class="container" id="gangRankMangement" style="display:none;">
+									<p>RANG ÜBERSICHT</p>
+									<p>Hier hast du eine Übersicht aller Ränge der Gruppierung.</p>
+		
+									<ul id="GangManagerApp-Area-RankManage-List" class="list-group"></ul>
+								
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="wrapper" id="eventscreen" style="display: none;">
+						<div class="main-container">
+							<div class="content-wrapper">
+								<div class="content-section">
+									<div class="container" id="eventMain">
+										<button id="newEventbtn" type="button" class="btn btn-success float-right eventcreate"><i class="fas fa-plus" style="padding-right: 6px;"></i>Event eintragen</button>
+										<ul id="event-entry-list" class="list-group"></ul>
+									</div>
+									<div class="container" id="createEvent" style="display:none;">
+										<p>EIN EVENT EINTRAGEN</p>
+										<div id="EventsApp-ErrorMsg" style="display: none;">
+											<p id="EventsApp-CreateEvent-Error">Du hast ein falsches Datum ausgewählt.</p>
+										</div>
+											<div class="transactionform">
+											<div class="inputgroup" style="margin-top: 1rem;">
+												<i class="fas fa-pencil-alt icon"></i>
+												<input id="eventsapp-title" class="form__input" type="text" maxlength="20" placeholder="Titel eingeben..." spellcheck="false">
+											</div>
+											<div class="inputgroup">
+												<i class="fas fa-phone-alt icon"></i>
+												<input id="eventsapp-callnumber" class="form__input" type="number" maxlength="13" placeholder="Telefonnr. eingeben (optional)" spellcheck="false" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+											</div>
+											<div class="inputgroup">
+												<i class="far fa-calendar-alt icon"></i>
+												<input id="eventsapp-date" class="form__input" type="text" maxlength="32" placeholder="Datum eingeben (01.01.2001)" spellcheck="false">
+											</div>
+											<div class="inputgroup">
+												<i class="far fa-clock icon"></i>
+												<input id="eventsapp-clock" class="form__input" type="text" maxlength="32" placeholder="Uhrzeit eingeben (12:00)" spellcheck="false">
+											</div>
+											<div class="inputgroup">
+												<i class="fas fa-map-marker-alt icon"></i>
+												<input id="eventsapp-location" class="form__input" type="text" maxlength="32" placeholder="Standort eingeben..." spellcheck="false">
+											</div>
+											<div class="inputgroup">
+												<i class="fas fa-certificate icon"></i>
+												<input id="eventsapp-eventtype" class="form__input" type="text" maxlength="20" placeholder="Art der Veranstaltung eingeben..." spellcheck="false">
+											</div>
+											<div class="inputgroup">
+												<i class="fas fa-align-left icon"></i>
+												<input id="eventsapp-info" class="form__input" type="text" maxlength="64" placeholder="Weitere Infos eingeben..." spellcheck="false">
+											</div>
+											<button type="button" id="createEventbtn" class="content-button"><i class="fas fa-check" style="padding-right: 6px;"></i>Event eintragen (250$)</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="wrapper" id="vehiclescreen" style="display: none;">
+						<div class="main-container">
+							<div class="content-wrapper">
+								<div class="container">
+									<p class="title">FAHRZEUGE</p>
+									<p class="description">In dieser App erhälst du eine &Uuml;bersicht aller deiner Fahrzeuge mit weiteren Informationen. <br>Besitzt dein Fahrzeug ein eingebautes GPS kannst du dieses hier orten.</p>
+			
+									<div class="container">
+										<table class="table table-dark">
+											<thead>
+												<tr>
+													<th scope="col">Name</th>
+													<th scope="col">Kennzeichen</th>
+													<th scope="col">Letzte Garage</th>
+													<th scope="col">Status</th>
+													<th scope="col">Aktion</th>
+												</tr>
+											</thead>
+											<tbody id="VehiclesApp-VehicleList">
+												<tr>
+													<th scope="row">-</th>
+													<td>-</td>
+													<td>-</td>
+													<td>-</td>
+													<td>-</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+                    <div class="wrapper" id="homescreen">	
+
+                         <div class="left-side">
+                            <div class="side-wrapper">
+                                <div class="side-title">Apps</div>
+                                <div class="side-menu">
+									
+                                    <a href="#" id="homebutton">
+                                        Homescreen
+                                    </a>
+									
+                                    <a href="#" id="financeapp">
+                                        Financeapp
+                                    </a>
+									
+									
+                                    <a href="#" id="lspdapp" style="display:none;">
+                                        lspd
+                                    </a>
+									
+									
+                                    <a href="#" id="lsfdapp" style="display:none;">
+                                        LSFD
+                                    </a>
+									
+									
+                                    <a href="#" id="aclsapp" style="display:none;">
+                                        ACLS
+                                    </a>
+									
+									
+                                    <a href="#" id="fbiapp" style="display:none;">
+                                        FBI
+                                    </a>
+									
+									
+                                    <a href="#" id="justiceapp" style="display:none;">
+                                        JUSTICE
+                                    </a>
+									
+									
+									
+                                    <a href="#" id="bennysapp" style="display:none;">
+                                        Bennys
+                                    </a>
+									
+                                    <a href="#" id="taxiapp" style="display:none;">
+                                        Taxi
+                                    </a>
+									
+									
+                                    <a href="#" id="vehiclestoreapp">
+                                        Vehiclestore
+                                    </a>
+									
+                                    <a href="#" id="gangmangementapp" style="display:none;">
+                                        Gang
+                                    </a>
+									
+                                    <a href="#" id="factionmanagementapp" style="display:none;">
+                                        Faction
+                                    </a>
+									
+									
+                                    <a href="#" id="lifeinvaderapp">
+                                        Lifeinvader
+                                    </a>
+									
+									
+                                    <a href="#" id="newsapp">
+                                        News
+                                    </a>
+									
+									
+                                    <a href="#" id="eventsapp">
+                                        Events
+                                    </a>
+									
+									
+                                    <a href="#" id="vehiclesapp">
+                                        Vehicles
+                                    </a>
+									
+                                </div>
+                            </div>
+                        </div> 
+
+
+                        <div class="main-container">
+                            <div class="content-wrapper">
+                                <div class="content-wrapper-header">
+                                    <div class="content-wrapper-context">
+                                        <h3 class="img-content">
+
+                                        </h3>
+                                        <div class="content-text">
+                                            <a class="weatherwidget-io"
+                                                href="https://forecast7.com/de/40d42n3d70/madrid/"
+                                                data-label_1="LOS SANTOS" data-label_2="WETTER"
+                                                data-icons="Climacons Animated" data-theme="gray"
+                                                data-basecolor="rgba(31, 86, 124, 0)"
+                                                style="pointer-events: none;cursor: default;">LOS SANTOS WETTER</a>
+                                            <script>
+                                                ! function (d, s, id) {
+                                                    var js, fjs = d.getElementsByTagName(s)[0];
+                                                    if (!d.getElementById(id)) {
+                                                        js = d.createElement(s);
+                                                        js.id = id;
+                                                        js.src = "https://weatherwidget.io/js/widget.min.js";
+                                                        fjs.parentNode.insertBefore(js, fjs);
+                                                    }
+                                                }(document, "script", "weatherwidget-io-js");
+                                            </script>
+                                        </div>
+                                        <!--<button class="content-button"></button>-->
+                                    </div>
+                                </div>
+
+                                <div class="content-section">
+									Praise Xore your lord and savior!
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js"></script>
+        <script src="https://kit.fontawesome.com/640357ffb4.js"></script>
+        <script src="./script.js"></script>
+</body>
+
+</html>

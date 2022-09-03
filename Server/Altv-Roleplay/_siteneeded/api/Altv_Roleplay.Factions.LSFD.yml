@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.Factions.LSFD
+  commentId: N:Altv_Roleplay.Factions.LSFD
+  id: Altv_Roleplay.Factions.LSFD
+  children:
+  - Altv_Roleplay.Factions.LSFD.Functions
+  langs:
+  - csharp
+  - vb
+  name: Altv_Roleplay.Factions.LSFD
+  nameWithType: Altv_Roleplay.Factions.LSFD
+  fullName: Altv_Roleplay.Factions.LSFD
+  type: Namespace
+  assemblies:
+  - NightOut-Gaming
+references:
+- uid: Altv_Roleplay.Factions.LSFD.Functions
+  commentId: T:Altv_Roleplay.Factions.LSFD.Functions
+  name: Functions
+  nameWithType: Functions
+  fullName: Altv_Roleplay.Factions.LSFD.Functions

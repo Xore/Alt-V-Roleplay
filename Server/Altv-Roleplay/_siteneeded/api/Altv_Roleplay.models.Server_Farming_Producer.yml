@@ -1,0 +1,1127 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.models.Server_Farming_Producer
+  commentId: T:Altv_Roleplay.models.Server_Farming_Producer
+  id: Server_Farming_Producer
+  parent: Altv_Roleplay.models
+  children:
+  - Altv_Roleplay.models.Server_Farming_Producer.blipName
+  - Altv_Roleplay.models.Server_Farming_Producer.duration
+  - Altv_Roleplay.models.Server_Farming_Producer.id
+  - Altv_Roleplay.models.Server_Farming_Producer.isBlipVisible
+  - Altv_Roleplay.models.Server_Farming_Producer.neededItem
+  - Altv_Roleplay.models.Server_Farming_Producer.neededItemAmount
+  - Altv_Roleplay.models.Server_Farming_Producer.neededItemTHREE
+  - Altv_Roleplay.models.Server_Farming_Producer.neededItemTHREEAmount
+  - Altv_Roleplay.models.Server_Farming_Producer.neededItemTWO
+  - Altv_Roleplay.models.Server_Farming_Producer.neededItemTWOAmount
+  - Altv_Roleplay.models.Server_Farming_Producer.pedModel
+  - Altv_Roleplay.models.Server_Farming_Producer.pedRotation
+  - Altv_Roleplay.models.Server_Farming_Producer.posX
+  - Altv_Roleplay.models.Server_Farming_Producer.posY
+  - Altv_Roleplay.models.Server_Farming_Producer.posZ
+  - Altv_Roleplay.models.Server_Farming_Producer.producedItem
+  - Altv_Roleplay.models.Server_Farming_Producer.producedItemAmount
+  - Altv_Roleplay.models.Server_Farming_Producer.range
+  langs:
+  - csharp
+  - vb
+  name: Server_Farming_Producer
+  nameWithType: Server_Farming_Producer
+  fullName: Altv_Roleplay.models.Server_Farming_Producer
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Server_Farming_Producer
+    path: models/Server_Farming_Producer.cs
+    startLine: 5
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public class Server_Farming_Producer
+    content.vb: Public Class Server_Farming_Producer
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.models.Server_Farming_Producer.id
+  commentId: P:Altv_Roleplay.models.Server_Farming_Producer.id
+  id: id
+  parent: Altv_Roleplay.models.Server_Farming_Producer
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: Server_Farming_Producer.id
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.id
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: id
+    path: models/Server_Farming_Producer.cs
+    startLine: 7
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property id As Integer
+  overload: Altv_Roleplay.models.Server_Farming_Producer.id*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Farming_Producer.posX
+  commentId: P:Altv_Roleplay.models.Server_Farming_Producer.posX
+  id: posX
+  parent: Altv_Roleplay.models.Server_Farming_Producer
+  langs:
+  - csharp
+  - vb
+  name: posX
+  nameWithType: Server_Farming_Producer.posX
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.posX
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: posX
+    path: models/Server_Farming_Producer.cs
+    startLine: 11
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float posX { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property posX As Single
+  overload: Altv_Roleplay.models.Server_Farming_Producer.posX*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Farming_Producer.posY
+  commentId: P:Altv_Roleplay.models.Server_Farming_Producer.posY
+  id: posY
+  parent: Altv_Roleplay.models.Server_Farming_Producer
+  langs:
+  - csharp
+  - vb
+  name: posY
+  nameWithType: Server_Farming_Producer.posY
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.posY
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: posY
+    path: models/Server_Farming_Producer.cs
+    startLine: 12
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float posY { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property posY As Single
+  overload: Altv_Roleplay.models.Server_Farming_Producer.posY*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Farming_Producer.posZ
+  commentId: P:Altv_Roleplay.models.Server_Farming_Producer.posZ
+  id: posZ
+  parent: Altv_Roleplay.models.Server_Farming_Producer
+  langs:
+  - csharp
+  - vb
+  name: posZ
+  nameWithType: Server_Farming_Producer.posZ
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.posZ
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: posZ
+    path: models/Server_Farming_Producer.cs
+    startLine: 13
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float posZ { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property posZ As Single
+  overload: Altv_Roleplay.models.Server_Farming_Producer.posZ*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Farming_Producer.pedRotation
+  commentId: P:Altv_Roleplay.models.Server_Farming_Producer.pedRotation
+  id: pedRotation
+  parent: Altv_Roleplay.models.Server_Farming_Producer
+  langs:
+  - csharp
+  - vb
+  name: pedRotation
+  nameWithType: Server_Farming_Producer.pedRotation
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.pedRotation
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: pedRotation
+    path: models/Server_Farming_Producer.cs
+    startLine: 14
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float pedRotation { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property pedRotation As Single
+  overload: Altv_Roleplay.models.Server_Farming_Producer.pedRotation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Farming_Producer.pedModel
+  commentId: P:Altv_Roleplay.models.Server_Farming_Producer.pedModel
+  id: pedModel
+  parent: Altv_Roleplay.models.Server_Farming_Producer
+  langs:
+  - csharp
+  - vb
+  name: pedModel
+  nameWithType: Server_Farming_Producer.pedModel
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.pedModel
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: pedModel
+    path: models/Server_Farming_Producer.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string pedModel { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property pedModel As String
+  overload: Altv_Roleplay.models.Server_Farming_Producer.pedModel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Farming_Producer.neededItem
+  commentId: P:Altv_Roleplay.models.Server_Farming_Producer.neededItem
+  id: neededItem
+  parent: Altv_Roleplay.models.Server_Farming_Producer
+  langs:
+  - csharp
+  - vb
+  name: neededItem
+  nameWithType: Server_Farming_Producer.neededItem
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.neededItem
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: neededItem
+    path: models/Server_Farming_Producer.cs
+    startLine: 16
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string neededItem { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property neededItem As String
+  overload: Altv_Roleplay.models.Server_Farming_Producer.neededItem*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Farming_Producer.producedItem
+  commentId: P:Altv_Roleplay.models.Server_Farming_Producer.producedItem
+  id: producedItem
+  parent: Altv_Roleplay.models.Server_Farming_Producer
+  langs:
+  - csharp
+  - vb
+  name: producedItem
+  nameWithType: Server_Farming_Producer.producedItem
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.producedItem
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: producedItem
+    path: models/Server_Farming_Producer.cs
+    startLine: 17
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string producedItem { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property producedItem As String
+  overload: Altv_Roleplay.models.Server_Farming_Producer.producedItem*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Farming_Producer.range
+  commentId: P:Altv_Roleplay.models.Server_Farming_Producer.range
+  id: range
+  parent: Altv_Roleplay.models.Server_Farming_Producer
+  langs:
+  - csharp
+  - vb
+  name: range
+  nameWithType: Server_Farming_Producer.range
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.range
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: range
+    path: models/Server_Farming_Producer.cs
+    startLine: 18
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float range { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property range As Single
+  overload: Altv_Roleplay.models.Server_Farming_Producer.range*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Farming_Producer.duration
+  commentId: P:Altv_Roleplay.models.Server_Farming_Producer.duration
+  id: duration
+  parent: Altv_Roleplay.models.Server_Farming_Producer
+  langs:
+  - csharp
+  - vb
+  name: duration
+  nameWithType: Server_Farming_Producer.duration
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.duration
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: duration
+    path: models/Server_Farming_Producer.cs
+    startLine: 19
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int duration { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property duration As Integer
+  overload: Altv_Roleplay.models.Server_Farming_Producer.duration*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Farming_Producer.neededItemAmount
+  commentId: P:Altv_Roleplay.models.Server_Farming_Producer.neededItemAmount
+  id: neededItemAmount
+  parent: Altv_Roleplay.models.Server_Farming_Producer
+  langs:
+  - csharp
+  - vb
+  name: neededItemAmount
+  nameWithType: Server_Farming_Producer.neededItemAmount
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.neededItemAmount
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: neededItemAmount
+    path: models/Server_Farming_Producer.cs
+    startLine: 20
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int neededItemAmount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property neededItemAmount As Integer
+  overload: Altv_Roleplay.models.Server_Farming_Producer.neededItemAmount*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Farming_Producer.producedItemAmount
+  commentId: P:Altv_Roleplay.models.Server_Farming_Producer.producedItemAmount
+  id: producedItemAmount
+  parent: Altv_Roleplay.models.Server_Farming_Producer
+  langs:
+  - csharp
+  - vb
+  name: producedItemAmount
+  nameWithType: Server_Farming_Producer.producedItemAmount
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.producedItemAmount
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: producedItemAmount
+    path: models/Server_Farming_Producer.cs
+    startLine: 21
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int producedItemAmount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property producedItemAmount As Integer
+  overload: Altv_Roleplay.models.Server_Farming_Producer.producedItemAmount*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Farming_Producer.blipName
+  commentId: P:Altv_Roleplay.models.Server_Farming_Producer.blipName
+  id: blipName
+  parent: Altv_Roleplay.models.Server_Farming_Producer
+  langs:
+  - csharp
+  - vb
+  name: blipName
+  nameWithType: Server_Farming_Producer.blipName
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.blipName
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: blipName
+    path: models/Server_Farming_Producer.cs
+    startLine: 22
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string blipName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property blipName As String
+  overload: Altv_Roleplay.models.Server_Farming_Producer.blipName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Farming_Producer.isBlipVisible
+  commentId: P:Altv_Roleplay.models.Server_Farming_Producer.isBlipVisible
+  id: isBlipVisible
+  parent: Altv_Roleplay.models.Server_Farming_Producer
+  langs:
+  - csharp
+  - vb
+  name: isBlipVisible
+  nameWithType: Server_Farming_Producer.isBlipVisible
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.isBlipVisible
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: isBlipVisible
+    path: models/Server_Farming_Producer.cs
+    startLine: 23
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public bool isBlipVisible { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property isBlipVisible As Boolean
+  overload: Altv_Roleplay.models.Server_Farming_Producer.isBlipVisible*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Farming_Producer.neededItemTWO
+  commentId: P:Altv_Roleplay.models.Server_Farming_Producer.neededItemTWO
+  id: neededItemTWO
+  parent: Altv_Roleplay.models.Server_Farming_Producer
+  langs:
+  - csharp
+  - vb
+  name: neededItemTWO
+  nameWithType: Server_Farming_Producer.neededItemTWO
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.neededItemTWO
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: neededItemTWO
+    path: models/Server_Farming_Producer.cs
+    startLine: 24
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string neededItemTWO { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property neededItemTWO As String
+  overload: Altv_Roleplay.models.Server_Farming_Producer.neededItemTWO*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Farming_Producer.neededItemTHREE
+  commentId: P:Altv_Roleplay.models.Server_Farming_Producer.neededItemTHREE
+  id: neededItemTHREE
+  parent: Altv_Roleplay.models.Server_Farming_Producer
+  langs:
+  - csharp
+  - vb
+  name: neededItemTHREE
+  nameWithType: Server_Farming_Producer.neededItemTHREE
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.neededItemTHREE
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: neededItemTHREE
+    path: models/Server_Farming_Producer.cs
+    startLine: 25
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string neededItemTHREE { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property neededItemTHREE As String
+  overload: Altv_Roleplay.models.Server_Farming_Producer.neededItemTHREE*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Farming_Producer.neededItemTWOAmount
+  commentId: P:Altv_Roleplay.models.Server_Farming_Producer.neededItemTWOAmount
+  id: neededItemTWOAmount
+  parent: Altv_Roleplay.models.Server_Farming_Producer
+  langs:
+  - csharp
+  - vb
+  name: neededItemTWOAmount
+  nameWithType: Server_Farming_Producer.neededItemTWOAmount
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.neededItemTWOAmount
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: neededItemTWOAmount
+    path: models/Server_Farming_Producer.cs
+    startLine: 26
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int neededItemTWOAmount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property neededItemTWOAmount As Integer
+  overload: Altv_Roleplay.models.Server_Farming_Producer.neededItemTWOAmount*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Farming_Producer.neededItemTHREEAmount
+  commentId: P:Altv_Roleplay.models.Server_Farming_Producer.neededItemTHREEAmount
+  id: neededItemTHREEAmount
+  parent: Altv_Roleplay.models.Server_Farming_Producer
+  langs:
+  - csharp
+  - vb
+  name: neededItemTHREEAmount
+  nameWithType: Server_Farming_Producer.neededItemTHREEAmount
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.neededItemTHREEAmount
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Farming_Producer.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: neededItemTHREEAmount
+    path: models/Server_Farming_Producer.cs
+    startLine: 27
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int neededItemTHREEAmount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property neededItemTHREEAmount As Integer
+  overload: Altv_Roleplay.models.Server_Farming_Producer.neededItemTHREEAmount*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.models
+  commentId: N:Altv_Roleplay.models
+  name: Altv_Roleplay.models
+  nameWithType: Altv_Roleplay.models
+  fullName: Altv_Roleplay.models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.models.Server_Farming_Producer.id*
+  commentId: Overload:Altv_Roleplay.models.Server_Farming_Producer.id
+  name: id
+  nameWithType: Server_Farming_Producer.id
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.models.Server_Farming_Producer.posX*
+  commentId: Overload:Altv_Roleplay.models.Server_Farming_Producer.posX
+  name: posX
+  nameWithType: Server_Farming_Producer.posX
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.posX
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Altv_Roleplay.models.Server_Farming_Producer.posY*
+  commentId: Overload:Altv_Roleplay.models.Server_Farming_Producer.posY
+  name: posY
+  nameWithType: Server_Farming_Producer.posY
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.posY
+- uid: Altv_Roleplay.models.Server_Farming_Producer.posZ*
+  commentId: Overload:Altv_Roleplay.models.Server_Farming_Producer.posZ
+  name: posZ
+  nameWithType: Server_Farming_Producer.posZ
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.posZ
+- uid: Altv_Roleplay.models.Server_Farming_Producer.pedRotation*
+  commentId: Overload:Altv_Roleplay.models.Server_Farming_Producer.pedRotation
+  name: pedRotation
+  nameWithType: Server_Farming_Producer.pedRotation
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.pedRotation
+- uid: Altv_Roleplay.models.Server_Farming_Producer.pedModel*
+  commentId: Overload:Altv_Roleplay.models.Server_Farming_Producer.pedModel
+  name: pedModel
+  nameWithType: Server_Farming_Producer.pedModel
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.pedModel
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Altv_Roleplay.models.Server_Farming_Producer.neededItem*
+  commentId: Overload:Altv_Roleplay.models.Server_Farming_Producer.neededItem
+  name: neededItem
+  nameWithType: Server_Farming_Producer.neededItem
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.neededItem
+- uid: Altv_Roleplay.models.Server_Farming_Producer.producedItem*
+  commentId: Overload:Altv_Roleplay.models.Server_Farming_Producer.producedItem
+  name: producedItem
+  nameWithType: Server_Farming_Producer.producedItem
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.producedItem
+- uid: Altv_Roleplay.models.Server_Farming_Producer.range*
+  commentId: Overload:Altv_Roleplay.models.Server_Farming_Producer.range
+  name: range
+  nameWithType: Server_Farming_Producer.range
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.range
+- uid: Altv_Roleplay.models.Server_Farming_Producer.duration*
+  commentId: Overload:Altv_Roleplay.models.Server_Farming_Producer.duration
+  name: duration
+  nameWithType: Server_Farming_Producer.duration
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.duration
+- uid: Altv_Roleplay.models.Server_Farming_Producer.neededItemAmount*
+  commentId: Overload:Altv_Roleplay.models.Server_Farming_Producer.neededItemAmount
+  name: neededItemAmount
+  nameWithType: Server_Farming_Producer.neededItemAmount
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.neededItemAmount
+- uid: Altv_Roleplay.models.Server_Farming_Producer.producedItemAmount*
+  commentId: Overload:Altv_Roleplay.models.Server_Farming_Producer.producedItemAmount
+  name: producedItemAmount
+  nameWithType: Server_Farming_Producer.producedItemAmount
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.producedItemAmount
+- uid: Altv_Roleplay.models.Server_Farming_Producer.blipName*
+  commentId: Overload:Altv_Roleplay.models.Server_Farming_Producer.blipName
+  name: blipName
+  nameWithType: Server_Farming_Producer.blipName
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.blipName
+- uid: Altv_Roleplay.models.Server_Farming_Producer.isBlipVisible*
+  commentId: Overload:Altv_Roleplay.models.Server_Farming_Producer.isBlipVisible
+  name: isBlipVisible
+  nameWithType: Server_Farming_Producer.isBlipVisible
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.isBlipVisible
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Altv_Roleplay.models.Server_Farming_Producer.neededItemTWO*
+  commentId: Overload:Altv_Roleplay.models.Server_Farming_Producer.neededItemTWO
+  name: neededItemTWO
+  nameWithType: Server_Farming_Producer.neededItemTWO
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.neededItemTWO
+- uid: Altv_Roleplay.models.Server_Farming_Producer.neededItemTHREE*
+  commentId: Overload:Altv_Roleplay.models.Server_Farming_Producer.neededItemTHREE
+  name: neededItemTHREE
+  nameWithType: Server_Farming_Producer.neededItemTHREE
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.neededItemTHREE
+- uid: Altv_Roleplay.models.Server_Farming_Producer.neededItemTWOAmount*
+  commentId: Overload:Altv_Roleplay.models.Server_Farming_Producer.neededItemTWOAmount
+  name: neededItemTWOAmount
+  nameWithType: Server_Farming_Producer.neededItemTWOAmount
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.neededItemTWOAmount
+- uid: Altv_Roleplay.models.Server_Farming_Producer.neededItemTHREEAmount*
+  commentId: Overload:Altv_Roleplay.models.Server_Farming_Producer.neededItemTHREEAmount
+  name: neededItemTHREEAmount
+  nameWithType: Server_Farming_Producer.neededItemTHREEAmount
+  fullName: Altv_Roleplay.models.Server_Farming_Producer.neededItemTHREEAmount

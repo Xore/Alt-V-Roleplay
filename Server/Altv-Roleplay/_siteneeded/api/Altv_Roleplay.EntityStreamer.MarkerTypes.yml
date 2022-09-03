@@ -1,0 +1,1137 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes
+  commentId: T:Altv_Roleplay.EntityStreamer.MarkerTypes
+  id: MarkerTypes
+  parent: Altv_Roleplay.EntityStreamer
+  children:
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeCar
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeCheckeredFlagCircle
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeCheckeredFlagRect
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeChevronUpx1
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeChevronUpx2
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeChevronUpx3
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeDallorSign
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeDebugSphere
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalBars
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalCircleFat
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalCircleSkinny
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalCircleSkinny_Arrow
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalSplitArrowCircle
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeLostMCDark
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeLostMCLight
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber0
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber1
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber2
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber3
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber4
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber5
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber6
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber7
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber8
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber9
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypePlaneModel
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeReplayIcon
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeThickChevronUp
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeThinChevronUp
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeUpsideDownCone
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeVerticalCylinder
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeVerticleCircle
+  - Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeWolfHead
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypes
+  nameWithType: MarkerTypes
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes
+  type: Enum
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypes
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 11
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nMarker types.\n"
+  example: []
+  syntax:
+    content: public enum MarkerTypes
+    content.vb: Public Enum MarkerTypes
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeUpsideDownCone
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeUpsideDownCone
+  id: MarkerTypeUpsideDownCone
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeUpsideDownCone
+  nameWithType: MarkerTypes.MarkerTypeUpsideDownCone
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeUpsideDownCone
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeUpsideDownCone
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 13
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeUpsideDownCone = 0
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeVerticalCylinder
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeVerticalCylinder
+  id: MarkerTypeVerticalCylinder
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeVerticalCylinder
+  nameWithType: MarkerTypes.MarkerTypeVerticalCylinder
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeVerticalCylinder
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeVerticalCylinder
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 14
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeVerticalCylinder = 1
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeThickChevronUp
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeThickChevronUp
+  id: MarkerTypeThickChevronUp
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeThickChevronUp
+  nameWithType: MarkerTypes.MarkerTypeThickChevronUp
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeThickChevronUp
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeThickChevronUp
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeThickChevronUp = 2
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeThinChevronUp
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeThinChevronUp
+  id: MarkerTypeThinChevronUp
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeThinChevronUp
+  nameWithType: MarkerTypes.MarkerTypeThinChevronUp
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeThinChevronUp
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeThinChevronUp
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 16
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeThinChevronUp = 3
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeCheckeredFlagRect
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeCheckeredFlagRect
+  id: MarkerTypeCheckeredFlagRect
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeCheckeredFlagRect
+  nameWithType: MarkerTypes.MarkerTypeCheckeredFlagRect
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeCheckeredFlagRect
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeCheckeredFlagRect
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 17
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeCheckeredFlagRect = 4
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeCheckeredFlagCircle
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeCheckeredFlagCircle
+  id: MarkerTypeCheckeredFlagCircle
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeCheckeredFlagCircle
+  nameWithType: MarkerTypes.MarkerTypeCheckeredFlagCircle
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeCheckeredFlagCircle
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeCheckeredFlagCircle
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 18
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeCheckeredFlagCircle = 5
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeVerticleCircle
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeVerticleCircle
+  id: MarkerTypeVerticleCircle
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeVerticleCircle
+  nameWithType: MarkerTypes.MarkerTypeVerticleCircle
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeVerticleCircle
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeVerticleCircle
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 19
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeVerticleCircle = 6
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypePlaneModel
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypePlaneModel
+  id: MarkerTypePlaneModel
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypePlaneModel
+  nameWithType: MarkerTypes.MarkerTypePlaneModel
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypePlaneModel
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypePlaneModel
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 20
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypePlaneModel = 7
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeLostMCDark
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeLostMCDark
+  id: MarkerTypeLostMCDark
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeLostMCDark
+  nameWithType: MarkerTypes.MarkerTypeLostMCDark
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeLostMCDark
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeLostMCDark
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 21
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeLostMCDark = 8
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeLostMCLight
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeLostMCLight
+  id: MarkerTypeLostMCLight
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeLostMCLight
+  nameWithType: MarkerTypes.MarkerTypeLostMCLight
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeLostMCLight
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeLostMCLight
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 22
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeLostMCLight = 9
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber0
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber0
+  id: MarkerTypeNumber0
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeNumber0
+  nameWithType: MarkerTypes.MarkerTypeNumber0
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber0
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeNumber0
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 23
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeNumber0 = 10
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber1
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber1
+  id: MarkerTypeNumber1
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeNumber1
+  nameWithType: MarkerTypes.MarkerTypeNumber1
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber1
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeNumber1
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 24
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeNumber1 = 11
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber2
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber2
+  id: MarkerTypeNumber2
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeNumber2
+  nameWithType: MarkerTypes.MarkerTypeNumber2
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber2
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeNumber2
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 25
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeNumber2 = 12
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber3
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber3
+  id: MarkerTypeNumber3
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeNumber3
+  nameWithType: MarkerTypes.MarkerTypeNumber3
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber3
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeNumber3
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 26
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeNumber3 = 13
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber4
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber4
+  id: MarkerTypeNumber4
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeNumber4
+  nameWithType: MarkerTypes.MarkerTypeNumber4
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber4
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeNumber4
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 27
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeNumber4 = 14
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber5
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber5
+  id: MarkerTypeNumber5
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeNumber5
+  nameWithType: MarkerTypes.MarkerTypeNumber5
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber5
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeNumber5
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 28
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeNumber5 = 15
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber6
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber6
+  id: MarkerTypeNumber6
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeNumber6
+  nameWithType: MarkerTypes.MarkerTypeNumber6
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber6
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeNumber6
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 29
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeNumber6 = 16
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber7
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber7
+  id: MarkerTypeNumber7
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeNumber7
+  nameWithType: MarkerTypes.MarkerTypeNumber7
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber7
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeNumber7
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 30
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeNumber7 = 17
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber8
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber8
+  id: MarkerTypeNumber8
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeNumber8
+  nameWithType: MarkerTypes.MarkerTypeNumber8
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber8
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeNumber8
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 31
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeNumber8 = 18
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber9
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber9
+  id: MarkerTypeNumber9
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeNumber9
+  nameWithType: MarkerTypes.MarkerTypeNumber9
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeNumber9
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeNumber9
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 32
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeNumber9 = 19
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeChevronUpx1
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeChevronUpx1
+  id: MarkerTypeChevronUpx1
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeChevronUpx1
+  nameWithType: MarkerTypes.MarkerTypeChevronUpx1
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeChevronUpx1
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeChevronUpx1
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 33
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeChevronUpx1 = 20
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeChevronUpx2
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeChevronUpx2
+  id: MarkerTypeChevronUpx2
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeChevronUpx2
+  nameWithType: MarkerTypes.MarkerTypeChevronUpx2
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeChevronUpx2
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeChevronUpx2
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 34
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeChevronUpx2 = 21
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeChevronUpx3
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeChevronUpx3
+  id: MarkerTypeChevronUpx3
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeChevronUpx3
+  nameWithType: MarkerTypes.MarkerTypeChevronUpx3
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeChevronUpx3
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeChevronUpx3
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 35
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeChevronUpx3 = 22
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalCircleFat
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalCircleFat
+  id: MarkerTypeHorizontalCircleFat
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeHorizontalCircleFat
+  nameWithType: MarkerTypes.MarkerTypeHorizontalCircleFat
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalCircleFat
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeHorizontalCircleFat
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 36
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeHorizontalCircleFat = 23
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeReplayIcon
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeReplayIcon
+  id: MarkerTypeReplayIcon
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeReplayIcon
+  nameWithType: MarkerTypes.MarkerTypeReplayIcon
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeReplayIcon
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeReplayIcon
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 37
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeReplayIcon = 24
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalCircleSkinny
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalCircleSkinny
+  id: MarkerTypeHorizontalCircleSkinny
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeHorizontalCircleSkinny
+  nameWithType: MarkerTypes.MarkerTypeHorizontalCircleSkinny
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalCircleSkinny
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeHorizontalCircleSkinny
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 38
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeHorizontalCircleSkinny = 25
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalCircleSkinny_Arrow
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalCircleSkinny_Arrow
+  id: MarkerTypeHorizontalCircleSkinny_Arrow
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeHorizontalCircleSkinny_Arrow
+  nameWithType: MarkerTypes.MarkerTypeHorizontalCircleSkinny_Arrow
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalCircleSkinny_Arrow
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeHorizontalCircleSkinny_Arrow
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 39
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeHorizontalCircleSkinny_Arrow = 26
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalSplitArrowCircle
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalSplitArrowCircle
+  id: MarkerTypeHorizontalSplitArrowCircle
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeHorizontalSplitArrowCircle
+  nameWithType: MarkerTypes.MarkerTypeHorizontalSplitArrowCircle
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalSplitArrowCircle
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeHorizontalSplitArrowCircle
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 40
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeHorizontalSplitArrowCircle = 27
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeDebugSphere
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeDebugSphere
+  id: MarkerTypeDebugSphere
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeDebugSphere
+  nameWithType: MarkerTypes.MarkerTypeDebugSphere
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeDebugSphere
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeDebugSphere
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 41
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeDebugSphere = 28
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeDallorSign
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeDallorSign
+  id: MarkerTypeDallorSign
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeDallorSign
+  nameWithType: MarkerTypes.MarkerTypeDallorSign
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeDallorSign
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeDallorSign
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 42
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeDallorSign = 29
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalBars
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalBars
+  id: MarkerTypeHorizontalBars
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeHorizontalBars
+  nameWithType: MarkerTypes.MarkerTypeHorizontalBars
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeHorizontalBars
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeHorizontalBars
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 43
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeHorizontalBars = 30
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeWolfHead
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeWolfHead
+  id: MarkerTypeWolfHead
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeWolfHead
+  nameWithType: MarkerTypes.MarkerTypeWolfHead
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeWolfHead
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeWolfHead
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 44
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeWolfHead = 31
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeCar
+  commentId: F:Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeCar
+  id: MarkerTypeCar
+  parent: Altv_Roleplay.EntityStreamer.MarkerTypes
+  langs:
+  - csharp
+  - vb
+  name: MarkerTypeCar
+  nameWithType: MarkerTypes.MarkerTypeCar
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes.MarkerTypeCar
+  type: Field
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/MarkerManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: MarkerTypeCar
+    path: EntityStreamer/MarkerManager.cs
+    startLine: 45
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: MarkerTypeCar = 36
+    return:
+      type: Altv_Roleplay.EntityStreamer.MarkerTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Altv_Roleplay.EntityStreamer
+  commentId: N:Altv_Roleplay.EntityStreamer
+  name: Altv_Roleplay.EntityStreamer
+  nameWithType: Altv_Roleplay.EntityStreamer
+  fullName: Altv_Roleplay.EntityStreamer
+- uid: Altv_Roleplay.EntityStreamer.MarkerTypes
+  commentId: T:Altv_Roleplay.EntityStreamer.MarkerTypes
+  parent: Altv_Roleplay.EntityStreamer
+  name: MarkerTypes
+  nameWithType: MarkerTypes
+  fullName: Altv_Roleplay.EntityStreamer.MarkerTypes

@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.Utils
+  commentId: N:Altv_Roleplay.Utils
+  id: Altv_Roleplay.Utils
+  children:
+  - Altv_Roleplay.Utils.Constants
+  - Altv_Roleplay.Utils.Constants.DatabaseConfig
+  - Altv_Roleplay.Utils.Constants.Positions
+  - Altv_Roleplay.Utils.Extensions
+  langs:
+  - csharp
+  - vb
+  name: Altv_Roleplay.Utils
+  nameWithType: Altv_Roleplay.Utils
+  fullName: Altv_Roleplay.Utils
+  type: Namespace
+  assemblies:
+  - NightOut-Gaming
+references:
+- uid: Altv_Roleplay.Utils.Constants
+  commentId: T:Altv_Roleplay.Utils.Constants
+  name: Constants
+  nameWithType: Constants
+  fullName: Altv_Roleplay.Utils.Constants
+- uid: Altv_Roleplay.Utils.Constants.DatabaseConfig
+  commentId: T:Altv_Roleplay.Utils.Constants.DatabaseConfig
+  name: Constants.DatabaseConfig
+  nameWithType: Constants.DatabaseConfig
+  fullName: Altv_Roleplay.Utils.Constants.DatabaseConfig
+- uid: Altv_Roleplay.Utils.Constants.Positions
+  commentId: T:Altv_Roleplay.Utils.Constants.Positions
+  name: Constants.Positions
+  nameWithType: Constants.Positions
+  fullName: Altv_Roleplay.Utils.Constants.Positions
+- uid: Altv_Roleplay.Utils.Extensions
+  commentId: T:Altv_Roleplay.Utils.Extensions
+  parent: Altv_Roleplay.Utils
+  name: Extensions
+  nameWithType: Extensions
+  fullName: Altv_Roleplay.Utils.Extensions
+- uid: Altv_Roleplay.Utils
+  commentId: N:Altv_Roleplay.Utils
+  name: Altv_Roleplay.Utils
+  nameWithType: Altv_Roleplay.Utils
+  fullName: Altv_Roleplay.Utils

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+* {
+    font-family: Poppins;
+}
+
+.mainWLContainer {
+    position: relative;
+    left: 23%;
+    height: 835px;
+    width: 995px;
+    border-radius: 35px;
+}
+
+.whitelist-container {
+    width: 924px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.success {
+    text-align: center;
+    padding: 5px;
+    line-height: 1;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 25px;
+}
+
+.successIcon {
+    height: 20px;
+    color: lime;
+}
+
+.unsuccess {
+    text-align: center;
+    padding: 5px;
+    line-height: 1;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 25px;
+}
+
+.unsuccessIcon {
+    height: 20px;
+    color: red;
+}
+
+.questionInfo {
+    text-align: center;
+    padding: 5px;
+    line-height: 1;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.question {
+    color: #ffffff;
+    padding: 10px 3% 10px 3%;
+    font-size: 25px;
+    margin: 10px 0 5px;
+    border-bottom: 1px solid white;
+}
+
+.answer {
+    display: table;
+    border-spacing: 10px;
+    width: 100%;
+}
+
+.quizQuestAlreadyAnswered .quizSingleAnswer {
+    cursor: auto;
+}
+
+.quizSingleAnswer {
+    display: table-row;
+    cursor: pointer;
+    position: relative;
+}
+
+.quizAnswerPosition {
+    font-size: 1.5835em;
+    text-align: center;
+    line-height: 1;
+    display: table-cell;
+    /* padding: 0 2%; */
+    vertical-align: middle;
+    width: 6%;
+    color: white;
+    border-bottom: 1px solid white;
+    transition: 0.5s;
+}
+
+.quizAnswerPosition:hover,
+.quizAnswerText:hover {
+    color: #5d1dc5;
+    border-bottom: 1px solid #5d1dc5;
+}
+
+.quizQuestAlreadyAnswered .quizAnswerText {
+    padding-right: 15%;
+    width: 82%;
+}
+
+.quizAnswerText {
+    font-size: 1.5835em;
+    padding: 12px 2% 12px 3%;
+    line-height: 1;
+    /* display: table-cell; */
+    width: 95%;
+    float: left;
+    position: relative;
+    color: white;
+    border-bottom: 1px solid white;
+    transition: 0.5s;
+}
+
+.whitelistStart {
+    font-size: 1.5835em;
+    padding: 12px 2% 12px 3%;
+    line-height: 1;
+    /* display: table-cell; */
+    width: 95%;
+    float: left;
+    position: relative;
+    color: white;
+    border-bottom: 1px solid white;
+    transition: 0.5s;
+}
+
+.whitelistStart1 {
+    left: 38%;
+    width: 225px;
+    text-align: center;
+    display: table-row;
+    cursor: pointer;
+    position: absolute;
+}
+
+.whitelistHeader {
+    text-align: center;
+    padding: 5px;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 25px;
+}
+
+.beginTest {
+    width: 200px;
+    background: blue;
+    height: 46px;
+    margin: 0 auto;
+}

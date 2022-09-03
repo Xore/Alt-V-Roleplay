@@ -1,0 +1,734 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.Factories.VehicleFactory
+  commentId: T:Altv_Roleplay.Factories.VehicleFactory
+  id: VehicleFactory
+  parent: Altv_Roleplay.Factories
+  children:
+  - Altv_Roleplay.Factories.VehicleFactory.Create(AltV.Net.IServer,System.IntPtr,System.UInt16)
+  - Altv_Roleplay.Factories.VehicleFactory.Create(AltV.Net.IServer,System.UInt32,AltV.Net.Data.Position,AltV.Net.Data.Rotation)
+  langs:
+  - csharp
+  - vb
+  name: VehicleFactory
+  nameWithType: VehicleFactory
+  fullName: Altv_Roleplay.Factories.VehicleFactory
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Factories/Factories.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: VehicleFactory
+    path: Factories/Factories.cs
+    startLine: 9
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Factories
+  syntax:
+    content: 'public class VehicleFactory : IEntityFactory<IVehicle>'
+    content.vb: >-
+      Public Class VehicleFactory
+          Implements IEntityFactory(Of IVehicle)
+  inheritance:
+  - System.Object
+  implements:
+  - AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IVehicle}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.Factories.VehicleFactory.Create(AltV.Net.IServer,System.UInt32,AltV.Net.Data.Position,AltV.Net.Data.Rotation)
+  commentId: M:Altv_Roleplay.Factories.VehicleFactory.Create(AltV.Net.IServer,System.UInt32,AltV.Net.Data.Position,AltV.Net.Data.Rotation)
+  id: Create(AltV.Net.IServer,System.UInt32,AltV.Net.Data.Position,AltV.Net.Data.Rotation)
+  parent: Altv_Roleplay.Factories.VehicleFactory
+  langs:
+  - csharp
+  - vb
+  name: Create(IServer, UInt32, Position, Rotation)
+  nameWithType: VehicleFactory.Create(IServer, UInt32, Position, Rotation)
+  fullName: Altv_Roleplay.Factories.VehicleFactory.Create(AltV.Net.IServer, System.UInt32, AltV.Net.Data.Position, AltV.Net.Data.Rotation)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Factories/Factories.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Create
+    path: Factories/Factories.cs
+    startLine: 11
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Factories
+  syntax:
+    content: public IVehicle Create(IServer server, uint model, Position position, Rotation rotation)
+    parameters:
+    - id: server
+      type: AltV.Net.IServer
+    - id: model
+      type: System.UInt32
+    - id: position
+      type: AltV.Net.Data.Position
+    - id: rotation
+      type: AltV.Net.Data.Rotation
+    return:
+      type: AltV.Net.Elements.Entities.IVehicle
+    content.vb: Public Function Create(server As IServer, model As UInteger, position As Position, rotation As Rotation) As IVehicle
+  overload: Altv_Roleplay.Factories.VehicleFactory.Create*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Factories.VehicleFactory.Create(AltV.Net.IServer,System.IntPtr,System.UInt16)
+  commentId: M:Altv_Roleplay.Factories.VehicleFactory.Create(AltV.Net.IServer,System.IntPtr,System.UInt16)
+  id: Create(AltV.Net.IServer,System.IntPtr,System.UInt16)
+  parent: Altv_Roleplay.Factories.VehicleFactory
+  langs:
+  - csharp
+  - vb
+  name: Create(IServer, IntPtr, UInt16)
+  nameWithType: VehicleFactory.Create(IServer, IntPtr, UInt16)
+  fullName: Altv_Roleplay.Factories.VehicleFactory.Create(AltV.Net.IServer, System.IntPtr, System.UInt16)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Factories/Factories.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Create
+    path: Factories/Factories.cs
+    startLine: 16
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Factories
+  syntax:
+    content: public IVehicle Create(IServer server, IntPtr nativePointer, ushort id)
+    parameters:
+    - id: server
+      type: AltV.Net.IServer
+    - id: nativePointer
+      type: System.IntPtr
+    - id: id
+      type: System.UInt16
+    return:
+      type: AltV.Net.Elements.Entities.IVehicle
+    content.vb: Public Function Create(server As IServer, nativePointer As IntPtr, id As UShort) As IVehicle
+  overload: Altv_Roleplay.Factories.VehicleFactory.Create*
+  implements:
+  - AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IVehicle}.Create(AltV.Net.IServer,System.IntPtr,System.UInt16)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.Factories
+  commentId: N:Altv_Roleplay.Factories
+  name: Altv_Roleplay.Factories
+  nameWithType: Altv_Roleplay.Factories
+  fullName: Altv_Roleplay.Factories
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IVehicle}
+  commentId: T:AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IVehicle}
+  parent: AltV.Net
+  definition: AltV.Net.IEntityFactory`1
+  name: IEntityFactory<IVehicle>
+  nameWithType: IEntityFactory<IVehicle>
+  fullName: AltV.Net.IEntityFactory<AltV.Net.Elements.Entities.IVehicle>
+  nameWithType.vb: IEntityFactory(Of IVehicle)
+  fullName.vb: AltV.Net.IEntityFactory(Of AltV.Net.Elements.Entities.IVehicle)
+  name.vb: IEntityFactory(Of IVehicle)
+  spec.csharp:
+  - uid: AltV.Net.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: AltV.Net.IEntityFactory
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AltV.Net.Elements.Entities.IVehicle
+    name: IVehicle
+    nameWithType: IVehicle
+    fullName: AltV.Net.Elements.Entities.IVehicle
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AltV.Net.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: AltV.Net.IEntityFactory
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AltV.Net.Elements.Entities.IVehicle
+    name: IVehicle
+    nameWithType: IVehicle
+    fullName: AltV.Net.Elements.Entities.IVehicle
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AltV.Net.IEntityFactory`1
+  commentId: T:AltV.Net.IEntityFactory`1
+  isExternal: true
+  name: IEntityFactory<TEntity>
+  nameWithType: IEntityFactory<TEntity>
+  fullName: AltV.Net.IEntityFactory<TEntity>
+  nameWithType.vb: IEntityFactory(Of TEntity)
+  fullName.vb: AltV.Net.IEntityFactory(Of TEntity)
+  name.vb: IEntityFactory(Of TEntity)
+  spec.csharp:
+  - uid: AltV.Net.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: AltV.Net.IEntityFactory
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AltV.Net.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: AltV.Net.IEntityFactory
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net
+  commentId: N:AltV.Net
+  isExternal: true
+  name: AltV.Net
+  nameWithType: AltV.Net
+  fullName: AltV.Net
+- uid: Altv_Roleplay.Factories.VehicleFactory.Create*
+  commentId: Overload:Altv_Roleplay.Factories.VehicleFactory.Create
+  name: Create
+  nameWithType: VehicleFactory.Create
+  fullName: Altv_Roleplay.Factories.VehicleFactory.Create
+- uid: AltV.Net.IServer
+  commentId: T:AltV.Net.IServer
+  parent: AltV.Net
+  isExternal: true
+  name: IServer
+  nameWithType: IServer
+  fullName: AltV.Net.IServer
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: AltV.Net.Data.Position
+  commentId: T:AltV.Net.Data.Position
+  parent: AltV.Net.Data
+  isExternal: true
+  name: Position
+  nameWithType: Position
+  fullName: AltV.Net.Data.Position
+- uid: AltV.Net.Data.Rotation
+  commentId: T:AltV.Net.Data.Rotation
+  parent: AltV.Net.Data
+  isExternal: true
+  name: Rotation
+  nameWithType: Rotation
+  fullName: AltV.Net.Data.Rotation
+- uid: AltV.Net.Elements.Entities.IVehicle
+  commentId: T:AltV.Net.Elements.Entities.IVehicle
+  parent: AltV.Net.Elements.Entities
+  isExternal: true
+  name: IVehicle
+  nameWithType: IVehicle
+  fullName: AltV.Net.Elements.Entities.IVehicle
+- uid: AltV.Net.Data
+  commentId: N:AltV.Net.Data
+  isExternal: true
+  name: AltV.Net.Data
+  nameWithType: AltV.Net.Data
+  fullName: AltV.Net.Data
+- uid: AltV.Net.Elements.Entities
+  commentId: N:AltV.Net.Elements.Entities
+  isExternal: true
+  name: AltV.Net.Elements.Entities
+  nameWithType: AltV.Net.Elements.Entities
+  fullName: AltV.Net.Elements.Entities
+- uid: AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IVehicle}.Create(AltV.Net.IServer,System.IntPtr,System.UInt16)
+  commentId: M:AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IVehicle}.Create(AltV.Net.IServer,System.IntPtr,System.UInt16)
+  parent: AltV.Net.IEntityFactory{AltV.Net.Elements.Entities.IVehicle}
+  definition: AltV.Net.IEntityFactory`1.Create(AltV.Net.IServer,System.IntPtr,System.UInt16)
+  name: Create(IServer, IntPtr, UInt16)
+  nameWithType: IEntityFactory<IVehicle>.Create(IServer, IntPtr, UInt16)
+  fullName: AltV.Net.IEntityFactory<AltV.Net.Elements.Entities.IVehicle>.Create(AltV.Net.IServer, System.IntPtr, System.UInt16)
+  nameWithType.vb: IEntityFactory(Of IVehicle).Create(IServer, IntPtr, UInt16)
+  fullName.vb: AltV.Net.IEntityFactory(Of AltV.Net.Elements.Entities.IVehicle).Create(AltV.Net.IServer, System.IntPtr, System.UInt16)
+  spec.csharp:
+  - uid: AltV.Net.IEntityFactory`1.Create(AltV.Net.IServer,System.IntPtr,System.UInt16)
+    name: Create
+    nameWithType: IEntityFactory<IVehicle>.Create
+    fullName: AltV.Net.IEntityFactory<AltV.Net.Elements.Entities.IVehicle>.Create
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IServer
+    name: IServer
+    nameWithType: IServer
+    fullName: AltV.Net.IServer
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IntPtr
+    name: IntPtr
+    nameWithType: IntPtr
+    fullName: System.IntPtr
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt16
+    name: UInt16
+    nameWithType: UInt16
+    fullName: System.UInt16
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.IEntityFactory`1.Create(AltV.Net.IServer,System.IntPtr,System.UInt16)
+    name: Create
+    nameWithType: IEntityFactory(Of IVehicle).Create
+    fullName: AltV.Net.IEntityFactory(Of AltV.Net.Elements.Entities.IVehicle).Create
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IServer
+    name: IServer
+    nameWithType: IServer
+    fullName: AltV.Net.IServer
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IntPtr
+    name: IntPtr
+    nameWithType: IntPtr
+    fullName: System.IntPtr
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt16
+    name: UInt16
+    nameWithType: UInt16
+    fullName: System.UInt16
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  name: IntPtr
+  nameWithType: IntPtr
+  fullName: System.IntPtr
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  name: UInt16
+  nameWithType: UInt16
+  fullName: System.UInt16
+- uid: AltV.Net.IEntityFactory`1.Create(AltV.Net.IServer,System.IntPtr,System.UInt16)
+  commentId: M:AltV.Net.IEntityFactory`1.Create(AltV.Net.IServer,System.IntPtr,System.UInt16)
+  isExternal: true
+  name: Create(IServer, IntPtr, UInt16)
+  nameWithType: IEntityFactory<TEntity>.Create(IServer, IntPtr, UInt16)
+  fullName: AltV.Net.IEntityFactory<TEntity>.Create(AltV.Net.IServer, System.IntPtr, System.UInt16)
+  nameWithType.vb: IEntityFactory(Of TEntity).Create(IServer, IntPtr, UInt16)
+  fullName.vb: AltV.Net.IEntityFactory(Of TEntity).Create(AltV.Net.IServer, System.IntPtr, System.UInt16)
+  spec.csharp:
+  - uid: AltV.Net.IEntityFactory`1.Create(AltV.Net.IServer,System.IntPtr,System.UInt16)
+    name: Create
+    nameWithType: IEntityFactory<TEntity>.Create
+    fullName: AltV.Net.IEntityFactory<TEntity>.Create
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IServer
+    name: IServer
+    nameWithType: IServer
+    fullName: AltV.Net.IServer
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IntPtr
+    name: IntPtr
+    nameWithType: IntPtr
+    fullName: System.IntPtr
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt16
+    name: UInt16
+    nameWithType: UInt16
+    fullName: System.UInt16
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.IEntityFactory`1.Create(AltV.Net.IServer,System.IntPtr,System.UInt16)
+    name: Create
+    nameWithType: IEntityFactory(Of TEntity).Create
+    fullName: AltV.Net.IEntityFactory(Of TEntity).Create
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.IServer
+    name: IServer
+    nameWithType: IServer
+    fullName: AltV.Net.IServer
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IntPtr
+    name: IntPtr
+    nameWithType: IntPtr
+    fullName: System.IntPtr
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt16
+    name: UInt16
+    nameWithType: UInt16
+    fullName: System.UInt16
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

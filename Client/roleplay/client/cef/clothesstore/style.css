@@ -1,0 +1,399 @@
+@font-face {
+    font-family: 'PEL';
+    src: url('../utils/fonts/Poppins-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PM';
+    src: url('../utils/fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PT';
+    src: url('../utils/fonts/Poppins-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSR';
+    src: url('../utils/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSL';
+    src: url('../utils/fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DB';
+    src: url('../utils/fonts/db.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSSB';
+    src: url('../utils/fonts/OpenSans-Semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BNT';
+    src: url('../utils/fonts/bnt.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "PricedownBL";
+    src: url('../utils/fonts/pricedownbl.ttf') format('truetype');
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#clothesstore-main {
+    width: 50vh;
+    height: 98vh;
+    margin-top: 4.5vh;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.425), rgba(86, 0, 121, 0.329));
+    border-radius: 20px;
+}
+
+#clothesstore-title {
+    font-size: 5vh;
+    font-family: PEL;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+}
+
+#clothesstore-main-list-item {
+    list-style: none;
+    color: white;
+    background-color: #2c2c2c;
+    width: 45vh;
+    height: 3vh;
+    margin-bottom: 1vh;
+    text-align: center;
+    margin-left: -0.7vh;
+    font-size: 2vh;
+    padding-top: 0.7vh;
+    border-radius: 1vh;
+}
+
+#clothesstore-main-list-item:hover {
+    cursor: pointer;
+}
+
+#clothesstore-main-list,
+.male,
+.female {
+    overflow-y: scroll;
+    max-height: 57vh;
+    margin-top: -3vh;
+    margin-left: 3vh;
+}
+
+::-webkit-scrollbar {
+    width: 0.6vh;
+}
+
+::-webkit-scrollbar-track {
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a1a1a1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 255, 255);
+}
+
+.fa-arrow-alt-circle-left {
+    color: white;
+    font-size: 3.5vh;
+    padding-bottom: 2vh;
+}
+
+.fa-arrow-alt-circle-left:hover {
+    cursor: pointer;
+}
+
+h2 {
+    margin-block-start: -4vh;
+    margin-block-end: 5.75vh;
+}
+
+.male,
+.female {
+    max-height: 62.5vh;
+    margin-top: -8.5vh;
+}
+
+.undertitle {
+    color: white;
+    margin-top: 3vh;
+}
+
+input {
+    outline: none;
+    background-color: transparent;
+    color: white;
+    border: none;
+    text-align: right;
+    width: 4vh;
+}
+
+asdas {
+    color: white;
+    font: 400 1.5vh Arial;
+    margin-top: 3.05vh;
+}
+
+.undertitle {
+    font-size: 2vh;
+    text-align: center;
+}
+
+.clothesstore-item-input {
+    margin-left: -17.35vh;
+    margin-top: 1vh;
+    font-size: 1.5vh;
+}
+
+.clothesstore-item-maindiv {
+    margin-left: 14.7vh;
+    margin-top: -1vh;
+}
+
+.clothesstore-item-img {
+    width: 4.5vh;
+    margin-left: -10.5vh;
+}
+
+.maindiv-bg {
+    border-bottom: 1px solid #ffffff;
+    width: 45vh;
+    height: 9vh;
+    margin-left: -12.5vh;
+    margin-top: -8.4vh;
+    margin-bottom: -1.5vh;
+}
+
+.scrolldiv {
+    overflow-y: scroll;
+    height: 85vh;
+    margin-top: -3vh;
+}
+
+.clothesstore-item-div {
+    margin-top: 2.3vh;
+}
+
+#clothesstore-item-oberbekleidung {
+    margin-top: 4vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button {
+    -webkit-appearance: none;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+svg {
+    width: 3vh;
+    height: 4vh;
+}
+
+.arrow {
+    cursor: pointer;
+}
+
+.left {
+    margin-left: 4vh;
+}
+
+.right {
+    margin-left: 15vh;
+}
+
+.left:hover polyline,
+.left:focus polyline {
+    stroke-width: 3;
+}
+
+.left:active polyline {
+    stroke-width: 6;
+    transition: all 100ms ease-in-out;
+}
+
+.right:hover polyline,
+.right:focus polyline {
+    stroke-width: 3;
+}
+
+.right:active polyline {
+    stroke-width: 6;
+    transition: all 100ms ease-in-out;
+}
+
+polyline {
+    transition: all 250ms ease-in-out;
+}
+
+p {
+    margin-block-end: 0em;
+    margin-inline-end: 0px;
+    display: block;
+    margin-block-start: 1em;
+    margin-inline-start: 0px;
+}
+
+.clothesshop-icon {
+    margin-left: 27.25vh;
+    font-size: 1.75vh;
+    --fa-secondary-color: rgb(0, 132, 255);
+    color: rgb(255, 255, 255);
+    border-radius: 3vh;
+    position: relative;
+}
+
+.clothesshop-icon-scnd {
+    margin-left: 27.25vh;
+    margin-top: -7.6vh;
+    font-size: 1.75vh;
+    --fa-secondary-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 3vh;
+    position: relative;
+}
+
+.clothesshop-icon:hover {
+    cursor: pointer;
+    color: rgb(0, 132, 255);
+}
+
+.clothesshop-icon-scnd:hover {
+    cursor: pointer;
+    color: rgb(25, 124, 0);
+}
+
+#clothesstore-item-oberbekleidung {
+    margin-top: -2vh;
+}
+
+
+/* TEXTURE MENU */
+
+#clothesstore-texture-menu {
+    width: 40vh;
+    height: 12vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.425), rgba(86, 0, 121, 0.329));
+    border-radius: 20px;
+    position: absolute;
+    margin-left: 51vh;
+    margin-top: -98vh;
+}
+
+#texturemenu-title {
+    margin-top: 1vh;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: PEL;
+    letter-spacing: 1px;
+}
+
+.clothesstore-texture-menu-maindiv {
+    margin: auto;
+    width: 40vh;
+    height: 8vh;
+    margin-top: -5vh;
+}
+
+.texturearrow {
+    cursor: pointer;
+    margin-top: 2vh;
+}
+
+.textureleft {
+    margin-left: 8vh;
+}
+
+.textureright {
+    margin-left: 15vh;
+}
+
+.textureleft:hover polyline,
+.textureleft:focus polyline {
+    stroke-width: 3;
+}
+
+.textureleft:active polyline {
+    stroke-width: 6;
+    transition: all 100ms ease-in-out;
+}
+
+.textureright:hover polyline,
+.textureright:focus polyline {
+    stroke-width: 3;
+}
+
+.textureright:active polyline {
+    stroke-width: 6;
+    transition: all 100ms ease-in-out;
+}
+
+#clothesstore-texture-input {
+    position: absolute;
+    margin-top: 3vh;
+}
+
+#clothesstore-texture-maxinputvalue {
+    position: absolute;
+    margin-left: 2.8vh;
+}
+
+
+/* Slider */
+
+.slidecontainer {
+    width: 100%;
+}
+
+.slidecontainer>.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #1d1d1ddb;
+    outline: none;
+    opacity: 0.6;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slidecontainer>.slider:hover {
+    opacity: 1;
+}
+
+.slidecontainer>.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: purple;
+    cursor: pointer;
+    border-radius: 100px;
+}

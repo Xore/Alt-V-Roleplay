@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.Minijobs.Müllmann
+  commentId: N:Altv_Roleplay.Minijobs.Müllmann
+  id: Altv_Roleplay.Minijobs.Müllmann
+  children:
+  - Altv_Roleplay.Minijobs.Müllmann.Main
+  langs:
+  - csharp
+  - vb
+  name: Altv_Roleplay.Minijobs.Müllmann
+  nameWithType: Altv_Roleplay.Minijobs.Müllmann
+  fullName: Altv_Roleplay.Minijobs.Müllmann
+  type: Namespace
+  assemblies:
+  - NightOut-Gaming
+references:
+- uid: Altv_Roleplay.Minijobs.Müllmann.Main
+  commentId: T:Altv_Roleplay.Minijobs.Müllmann.Main
+  name: Main
+  nameWithType: Main
+  fullName: Altv_Roleplay.Minijobs.Müllmann.Main

@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.Handler
+  commentId: N:Altv_Roleplay.Handler
+  id: Altv_Roleplay.Handler
+  children:
+  - Altv_Roleplay.Handler.bankPickUpPosition
+  - Altv_Roleplay.Handler.Commands
+  - Altv_Roleplay.Handler.LSPDPickUpPosition
+  - Altv_Roleplay.Handler.WeedPot
+  langs:
+  - csharp
+  - vb
+  name: Altv_Roleplay.Handler
+  nameWithType: Altv_Roleplay.Handler
+  fullName: Altv_Roleplay.Handler
+  type: Namespace
+  assemblies:
+  - NightOut-Gaming
+references:
+- uid: Altv_Roleplay.Handler.Commands
+  commentId: T:Altv_Roleplay.Handler.Commands
+  name: Commands
+  nameWithType: Commands
+  fullName: Altv_Roleplay.Handler.Commands
+- uid: Altv_Roleplay.Handler.bankPickUpPosition
+  commentId: T:Altv_Roleplay.Handler.bankPickUpPosition
+  name: bankPickUpPosition
+  nameWithType: bankPickUpPosition
+  fullName: Altv_Roleplay.Handler.bankPickUpPosition
+- uid: Altv_Roleplay.Handler.LSPDPickUpPosition
+  commentId: T:Altv_Roleplay.Handler.LSPDPickUpPosition
+  name: LSPDPickUpPosition
+  nameWithType: LSPDPickUpPosition
+  fullName: Altv_Roleplay.Handler.LSPDPickUpPosition
+- uid: Altv_Roleplay.Handler.WeedPot
+  commentId: T:Altv_Roleplay.Handler.WeedPot
+  name: WeedPot
+  nameWithType: WeedPot
+  fullName: Altv_Roleplay.Handler.WeedPot

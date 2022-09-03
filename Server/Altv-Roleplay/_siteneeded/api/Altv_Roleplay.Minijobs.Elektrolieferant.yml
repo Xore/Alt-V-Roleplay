@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.Minijobs.Elektrolieferant
+  commentId: N:Altv_Roleplay.Minijobs.Elektrolieferant
+  id: Altv_Roleplay.Minijobs.Elektrolieferant
+  children:
+  - Altv_Roleplay.Minijobs.Elektrolieferant.Main
+  - Altv_Roleplay.Minijobs.Elektrolieferant.Main.Minijob_Spots
+  langs:
+  - csharp
+  - vb
+  name: Altv_Roleplay.Minijobs.Elektrolieferant
+  nameWithType: Altv_Roleplay.Minijobs.Elektrolieferant
+  fullName: Altv_Roleplay.Minijobs.Elektrolieferant
+  type: Namespace
+  assemblies:
+  - NightOut-Gaming
+references:
+- uid: Altv_Roleplay.Minijobs.Elektrolieferant.Main
+  commentId: T:Altv_Roleplay.Minijobs.Elektrolieferant.Main
+  name: Main
+  nameWithType: Main
+  fullName: Altv_Roleplay.Minijobs.Elektrolieferant.Main
+- uid: Altv_Roleplay.Minijobs.Elektrolieferant.Main.Minijob_Spots
+  commentId: T:Altv_Roleplay.Minijobs.Elektrolieferant.Main.Minijob_Spots
+  name: Main.Minijob_Spots
+  nameWithType: Main.Minijob_Spots
+  fullName: Altv_Roleplay.Minijobs.Elektrolieferant.Main.Minijob_Spots

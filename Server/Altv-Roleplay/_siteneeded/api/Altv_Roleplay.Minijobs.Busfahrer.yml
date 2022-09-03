@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.Minijobs.Busfahrer
+  commentId: N:Altv_Roleplay.Minijobs.Busfahrer
+  id: Altv_Roleplay.Minijobs.Busfahrer
+  children:
+  - Altv_Roleplay.Minijobs.Busfahrer.Main
+  langs:
+  - csharp
+  - vb
+  name: Altv_Roleplay.Minijobs.Busfahrer
+  nameWithType: Altv_Roleplay.Minijobs.Busfahrer
+  fullName: Altv_Roleplay.Minijobs.Busfahrer
+  type: Namespace
+  assemblies:
+  - NightOut-Gaming
+references:
+- uid: Altv_Roleplay.Minijobs.Busfahrer.Main
+  commentId: T:Altv_Roleplay.Minijobs.Busfahrer.Main
+  name: Main
+  nameWithType: Main
+  fullName: Altv_Roleplay.Minijobs.Busfahrer.Main

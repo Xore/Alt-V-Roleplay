@@ -1,0 +1,1836 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.EntityStreamer.Blip
+  commentId: T:Altv_Roleplay.EntityStreamer.Blip
+  id: Blip
+  parent: Altv_Roleplay.EntityStreamer
+  children:
+  - Altv_Roleplay.EntityStreamer.Blip.#ctor(System.Numerics.Vector3,System.Int32,System.UInt32,System.UInt64)
+  - Altv_Roleplay.EntityStreamer.Blip.Color
+  - Altv_Roleplay.EntityStreamer.Blip.Delete
+  - Altv_Roleplay.EntityStreamer.Blip.IsStaticBlip
+  - Altv_Roleplay.EntityStreamer.Blip.Name
+  - Altv_Roleplay.EntityStreamer.Blip.Scale
+  - Altv_Roleplay.EntityStreamer.Blip.SetBlipType(System.Int32)
+  - Altv_Roleplay.EntityStreamer.Blip.SetPosition(AltV.Net.Data.Position)
+  - Altv_Roleplay.EntityStreamer.Blip.ShortRange
+  - Altv_Roleplay.EntityStreamer.Blip.Sprite
+  langs:
+  - csharp
+  - vb
+  name: Blip
+  nameWithType: Blip
+  fullName: Altv_Roleplay.EntityStreamer.Blip
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/BlipManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Blip
+    path: EntityStreamer/BlipManager.cs
+    startLine: 10
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nBlip class that stores all data related to a single blip.\n"
+  example: []
+  syntax:
+    content: 'public class Blip : Entity, IEntity'
+    content.vb: >-
+      Public Class Blip
+          Inherits Entity
+          Implements IEntity
+  inheritance:
+  - System.Object
+  - AltV.Net.EntitySync.Entity
+  implements:
+  - AltV.Net.EntitySync.IEntity
+  inheritedMembers:
+  - AltV.Net.EntitySync.Entity.SetData(System.String,System.Object)
+  - AltV.Net.EntitySync.Entity.ResetData(System.String)
+  - AltV.Net.EntitySync.Entity.TryGetData(System.String,System.Object@)
+  - AltV.Net.EntitySync.Entity.TryGetData``1(System.String,{T}@)
+  - AltV.Net.EntitySync.Entity.TryAddClient(AltV.Net.EntitySync.IClient)
+  - AltV.Net.EntitySync.Entity.RemoveClient(AltV.Net.EntitySync.IClient)
+  - AltV.Net.EntitySync.Entity.GetClients
+  - AltV.Net.EntitySync.Entity.SetPositionInternal(System.Numerics.Vector3)
+  - AltV.Net.EntitySync.Entity.SetDimensionInternal(System.Int32)
+  - AltV.Net.EntitySync.Entity.SetRangeInternal(System.UInt32)
+  - AltV.Net.EntitySync.Entity.TrySetPropertiesComputing(System.Numerics.Vector3@,System.UInt32@,System.Int32@)
+  - AltV.Net.EntitySync.Entity.SetThreadLocalData(System.String,System.Object)
+  - AltV.Net.EntitySync.Entity.ResetThreadLocalData(System.String)
+  - AltV.Net.EntitySync.Entity.TryGetThreadLocalData(System.String,System.Object@)
+  - AltV.Net.EntitySync.Entity.Serialize(System.Collections.Generic.IEnumerable{System.String})
+  - AltV.Net.EntitySync.Entity.SetExistsInternal(System.Boolean)
+  - AltV.Net.EntitySync.Entity.GetHashCode
+  - AltV.Net.EntitySync.Entity.Equals(System.Object)
+  - AltV.Net.EntitySync.Entity.Id
+  - AltV.Net.EntitySync.Entity.Type
+  - AltV.Net.EntitySync.Entity.HashKey
+  - AltV.Net.EntitySync.Entity.Position
+  - AltV.Net.EntitySync.Entity.Exists
+  - AltV.Net.EntitySync.Entity.Dimension
+  - AltV.Net.EntitySync.Entity.Range
+  - AltV.Net.EntitySync.Entity.MigrationDistance
+  - AltV.Net.EntitySync.Entity.RangeSquared
+  - AltV.Net.EntitySync.Entity.TempNetOwner
+  - AltV.Net.EntitySync.Entity.NetOwner
+  - AltV.Net.EntitySync.Entity.NetOwnerRange
+  - AltV.Net.EntitySync.Entity.TempNetOwnerRange
+  - AltV.Net.EntitySync.Entity.LastStreamInRange
+  - AltV.Net.EntitySync.Entity.ThreadLocalData
+  - AltV.Net.EntitySync.Entity.DataSnapshot
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.EntityStreamer.Blip.Name
+  commentId: P:Altv_Roleplay.EntityStreamer.Blip.Name
+  id: Name
+  parent: Altv_Roleplay.EntityStreamer.Blip
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Blip.Name
+  fullName: Altv_Roleplay.EntityStreamer.Blip.Name
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/BlipManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Name
+    path: EntityStreamer/BlipManager.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nThe text to display on the blip in the map menu\n"
+  example: []
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Altv_Roleplay.EntityStreamer.Blip.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.EntityStreamer.Blip.Sprite
+  commentId: P:Altv_Roleplay.EntityStreamer.Blip.Sprite
+  id: Sprite
+  parent: Altv_Roleplay.EntityStreamer.Blip
+  langs:
+  - csharp
+  - vb
+  name: Sprite
+  nameWithType: Blip.Sprite
+  fullName: Altv_Roleplay.EntityStreamer.Blip.Sprite
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/BlipManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Sprite
+    path: EntityStreamer/BlipManager.cs
+    startLine: 33
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nID of the sprite to use, can be found on the ALTV wiki\n"
+  example: []
+  syntax:
+    content: public int Sprite { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Sprite As Integer
+  overload: Altv_Roleplay.EntityStreamer.Blip.Sprite*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.EntityStreamer.Blip.Color
+  commentId: P:Altv_Roleplay.EntityStreamer.Blip.Color
+  id: Color
+  parent: Altv_Roleplay.EntityStreamer.Blip
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: Blip.Color
+  fullName: Altv_Roleplay.EntityStreamer.Blip.Color
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/BlipManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Color
+    path: EntityStreamer/BlipManager.cs
+    startLine: 51
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nBlip Color code, can also be found on the ALTV wiki\n"
+  example: []
+  syntax:
+    content: public int Color { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Color As Integer
+  overload: Altv_Roleplay.EntityStreamer.Blip.Color*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.EntityStreamer.Blip.Scale
+  commentId: P:Altv_Roleplay.EntityStreamer.Blip.Scale
+  id: Scale
+  parent: Altv_Roleplay.EntityStreamer.Blip
+  langs:
+  - csharp
+  - vb
+  name: Scale
+  nameWithType: Blip.Scale
+  fullName: Altv_Roleplay.EntityStreamer.Blip.Scale
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/BlipManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Scale
+    path: EntityStreamer/BlipManager.cs
+    startLine: 69
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nScale of the blip, 1 is regular size.\n"
+  example: []
+  syntax:
+    content: public float Scale { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Scale As Single
+  overload: Altv_Roleplay.EntityStreamer.Blip.Scale*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.EntityStreamer.Blip.ShortRange
+  commentId: P:Altv_Roleplay.EntityStreamer.Blip.ShortRange
+  id: ShortRange
+  parent: Altv_Roleplay.EntityStreamer.Blip
+  langs:
+  - csharp
+  - vb
+  name: ShortRange
+  nameWithType: Blip.ShortRange
+  fullName: Altv_Roleplay.EntityStreamer.Blip.ShortRange
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/BlipManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: ShortRange
+    path: EntityStreamer/BlipManager.cs
+    startLine: 87
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nWhether this blip can be seen on the minimap from anywhere on the map, or only when close to it(it will always show on the main map).\n"
+  example: []
+  syntax:
+    content: public bool ShortRange { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ShortRange As Boolean
+  overload: Altv_Roleplay.EntityStreamer.Blip.ShortRange*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.EntityStreamer.Blip.#ctor(System.Numerics.Vector3,System.Int32,System.UInt32,System.UInt64)
+  commentId: M:Altv_Roleplay.EntityStreamer.Blip.#ctor(System.Numerics.Vector3,System.Int32,System.UInt32,System.UInt64)
+  id: '#ctor(System.Numerics.Vector3,System.Int32,System.UInt32,System.UInt64)'
+  parent: Altv_Roleplay.EntityStreamer.Blip
+  langs:
+  - csharp
+  - vb
+  name: Blip(Vector3, Int32, UInt32, UInt64)
+  nameWithType: Blip.Blip(Vector3, Int32, UInt32, UInt64)
+  fullName: Altv_Roleplay.EntityStreamer.Blip.Blip(System.Numerics.Vector3, System.Int32, System.UInt32, System.UInt64)
+  type: Constructor
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/BlipManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: .ctor
+    path: EntityStreamer/BlipManager.cs
+    startLine: 102
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public Blip(Vector3 position, int dimension, uint range, ulong entityType)
+    parameters:
+    - id: position
+      type: System.Numerics.Vector3
+    - id: dimension
+      type: System.Int32
+    - id: range
+      type: System.UInt32
+    - id: entityType
+      type: System.UInt64
+    content.vb: Public Sub New(position As Vector3, dimension As Integer, range As UInteger, entityType As ULong)
+  overload: Altv_Roleplay.EntityStreamer.Blip.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.EntityStreamer.Blip.IsStaticBlip
+  commentId: P:Altv_Roleplay.EntityStreamer.Blip.IsStaticBlip
+  id: IsStaticBlip
+  parent: Altv_Roleplay.EntityStreamer.Blip
+  langs:
+  - csharp
+  - vb
+  name: IsStaticBlip
+  nameWithType: Blip.IsStaticBlip
+  fullName: Altv_Roleplay.EntityStreamer.Blip.IsStaticBlip
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/BlipManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: IsStaticBlip
+    path: EntityStreamer/BlipManager.cs
+    startLine: 106
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public bool IsStaticBlip { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsStaticBlip As Boolean
+  overload: Altv_Roleplay.EntityStreamer.Blip.IsStaticBlip*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.EntityStreamer.Blip.Delete
+  commentId: M:Altv_Roleplay.EntityStreamer.Blip.Delete
+  id: Delete
+  parent: Altv_Roleplay.EntityStreamer.Blip
+  langs:
+  - csharp
+  - vb
+  name: Delete()
+  nameWithType: Blip.Delete()
+  fullName: Altv_Roleplay.EntityStreamer.Blip.Delete()
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/BlipManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Delete
+    path: EntityStreamer/BlipManager.cs
+    startLine: 111
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  summary: "\nDestroy this blip.\n"
+  example: []
+  syntax:
+    content: public void Delete()
+    content.vb: Public Sub Delete
+  overload: Altv_Roleplay.EntityStreamer.Blip.Delete*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.EntityStreamer.Blip.SetPosition(AltV.Net.Data.Position)
+  commentId: M:Altv_Roleplay.EntityStreamer.Blip.SetPosition(AltV.Net.Data.Position)
+  id: SetPosition(AltV.Net.Data.Position)
+  parent: Altv_Roleplay.EntityStreamer.Blip
+  langs:
+  - csharp
+  - vb
+  name: SetPosition(Position)
+  nameWithType: Blip.SetPosition(Position)
+  fullName: Altv_Roleplay.EntityStreamer.Blip.SetPosition(AltV.Net.Data.Position)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/BlipManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SetPosition
+    path: EntityStreamer/BlipManager.cs
+    startLine: 116
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public void SetPosition(Position pos)
+    parameters:
+    - id: pos
+      type: AltV.Net.Data.Position
+    content.vb: Public Sub SetPosition(pos As Position)
+  overload: Altv_Roleplay.EntityStreamer.Blip.SetPosition*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.EntityStreamer.Blip.SetBlipType(System.Int32)
+  commentId: M:Altv_Roleplay.EntityStreamer.Blip.SetBlipType(System.Int32)
+  id: SetBlipType(System.Int32)
+  parent: Altv_Roleplay.EntityStreamer.Blip
+  langs:
+  - csharp
+  - vb
+  name: SetBlipType(Int32)
+  nameWithType: Blip.SetBlipType(Int32)
+  fullName: Altv_Roleplay.EntityStreamer.Blip.SetBlipType(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Server/Altv-Roleplay/EntityStreamer/BlipManager.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: SetBlipType
+    path: EntityStreamer/BlipManager.cs
+    startLine: 121
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.EntityStreamer
+  syntax:
+    content: public void SetBlipType(int type)
+    parameters:
+    - id: type
+      type: System.Int32
+    content.vb: Public Sub SetBlipType(type As Integer)
+  overload: Altv_Roleplay.EntityStreamer.Blip.SetBlipType*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.EntityStreamer
+  commentId: N:Altv_Roleplay.EntityStreamer
+  name: Altv_Roleplay.EntityStreamer
+  nameWithType: Altv_Roleplay.EntityStreamer
+  fullName: Altv_Roleplay.EntityStreamer
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AltV.Net.EntitySync.Entity
+  commentId: T:AltV.Net.EntitySync.Entity
+  parent: AltV.Net.EntitySync
+  isExternal: true
+  name: Entity
+  nameWithType: Entity
+  fullName: AltV.Net.EntitySync.Entity
+- uid: AltV.Net.EntitySync.IEntity
+  commentId: T:AltV.Net.EntitySync.IEntity
+  parent: AltV.Net.EntitySync
+  isExternal: true
+  name: IEntity
+  nameWithType: IEntity
+  fullName: AltV.Net.EntitySync.IEntity
+- uid: AltV.Net.EntitySync.Entity.SetData(System.String,System.Object)
+  commentId: M:AltV.Net.EntitySync.Entity.SetData(System.String,System.Object)
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: SetData(String, Object)
+  nameWithType: Entity.SetData(String, Object)
+  fullName: AltV.Net.EntitySync.Entity.SetData(System.String, System.Object)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.SetData(System.String,System.Object)
+    name: SetData
+    nameWithType: Entity.SetData
+    fullName: AltV.Net.EntitySync.Entity.SetData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.SetData(System.String,System.Object)
+    name: SetData
+    nameWithType: Entity.SetData
+    fullName: AltV.Net.EntitySync.Entity.SetData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.EntitySync.Entity.ResetData(System.String)
+  commentId: M:AltV.Net.EntitySync.Entity.ResetData(System.String)
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: ResetData(String)
+  nameWithType: Entity.ResetData(String)
+  fullName: AltV.Net.EntitySync.Entity.ResetData(System.String)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.ResetData(System.String)
+    name: ResetData
+    nameWithType: Entity.ResetData
+    fullName: AltV.Net.EntitySync.Entity.ResetData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.ResetData(System.String)
+    name: ResetData
+    nameWithType: Entity.ResetData
+    fullName: AltV.Net.EntitySync.Entity.ResetData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.EntitySync.Entity.TryGetData(System.String,System.Object@)
+  commentId: M:AltV.Net.EntitySync.Entity.TryGetData(System.String,System.Object@)
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: TryGetData(String, Object)
+  nameWithType: Entity.TryGetData(String, Object)
+  fullName: AltV.Net.EntitySync.Entity.TryGetData(System.String, System.Object)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.TryGetData(System.String,System.Object@)
+    name: TryGetData
+    nameWithType: Entity.TryGetData
+    fullName: AltV.Net.EntitySync.Entity.TryGetData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.TryGetData(System.String,System.Object@)
+    name: TryGetData
+    nameWithType: Entity.TryGetData
+    fullName: AltV.Net.EntitySync.Entity.TryGetData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.EntitySync.Entity.TryGetData``1(System.String,{T}@)
+  commentId: M:AltV.Net.EntitySync.Entity.TryGetData``1(System.String,``0@)
+  parent: AltV.Net.EntitySync.Entity
+  definition: AltV.Net.EntitySync.Entity.TryGetData``1(System.String,``0@)
+  name: TryGetData<T>(String, T)
+  nameWithType: Entity.TryGetData<T>(String, T)
+  fullName: AltV.Net.EntitySync.Entity.TryGetData<T>(System.String, T)
+  nameWithType.vb: Entity.TryGetData(Of T)(String, T)
+  fullName.vb: AltV.Net.EntitySync.Entity.TryGetData(Of T)(System.String, T)
+  name.vb: TryGetData(Of T)(String, T)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.TryGetData``1(System.String,``0@)
+    name: TryGetData<T>
+    nameWithType: Entity.TryGetData<T>
+    fullName: AltV.Net.EntitySync.Entity.TryGetData<T>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.TryGetData``1(System.String,``0@)
+    name: TryGetData(Of T)
+    nameWithType: Entity.TryGetData(Of T)
+    fullName: AltV.Net.EntitySync.Entity.TryGetData(Of T)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.EntitySync.Entity.TryAddClient(AltV.Net.EntitySync.IClient)
+  commentId: M:AltV.Net.EntitySync.Entity.TryAddClient(AltV.Net.EntitySync.IClient)
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: TryAddClient(IClient)
+  nameWithType: Entity.TryAddClient(IClient)
+  fullName: AltV.Net.EntitySync.Entity.TryAddClient(AltV.Net.EntitySync.IClient)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.TryAddClient(AltV.Net.EntitySync.IClient)
+    name: TryAddClient
+    nameWithType: Entity.TryAddClient
+    fullName: AltV.Net.EntitySync.Entity.TryAddClient
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.EntitySync.IClient
+    name: IClient
+    nameWithType: IClient
+    fullName: AltV.Net.EntitySync.IClient
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.TryAddClient(AltV.Net.EntitySync.IClient)
+    name: TryAddClient
+    nameWithType: Entity.TryAddClient
+    fullName: AltV.Net.EntitySync.Entity.TryAddClient
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.EntitySync.IClient
+    name: IClient
+    nameWithType: IClient
+    fullName: AltV.Net.EntitySync.IClient
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.EntitySync.Entity.RemoveClient(AltV.Net.EntitySync.IClient)
+  commentId: M:AltV.Net.EntitySync.Entity.RemoveClient(AltV.Net.EntitySync.IClient)
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: RemoveClient(IClient)
+  nameWithType: Entity.RemoveClient(IClient)
+  fullName: AltV.Net.EntitySync.Entity.RemoveClient(AltV.Net.EntitySync.IClient)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.RemoveClient(AltV.Net.EntitySync.IClient)
+    name: RemoveClient
+    nameWithType: Entity.RemoveClient
+    fullName: AltV.Net.EntitySync.Entity.RemoveClient
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.EntitySync.IClient
+    name: IClient
+    nameWithType: IClient
+    fullName: AltV.Net.EntitySync.IClient
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.RemoveClient(AltV.Net.EntitySync.IClient)
+    name: RemoveClient
+    nameWithType: Entity.RemoveClient
+    fullName: AltV.Net.EntitySync.Entity.RemoveClient
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AltV.Net.EntitySync.IClient
+    name: IClient
+    nameWithType: IClient
+    fullName: AltV.Net.EntitySync.IClient
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.EntitySync.Entity.GetClients
+  commentId: M:AltV.Net.EntitySync.Entity.GetClients
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: GetClients()
+  nameWithType: Entity.GetClients()
+  fullName: AltV.Net.EntitySync.Entity.GetClients()
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.GetClients
+    name: GetClients
+    nameWithType: Entity.GetClients
+    fullName: AltV.Net.EntitySync.Entity.GetClients
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.GetClients
+    name: GetClients
+    nameWithType: Entity.GetClients
+    fullName: AltV.Net.EntitySync.Entity.GetClients
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.EntitySync.Entity.SetPositionInternal(System.Numerics.Vector3)
+  commentId: M:AltV.Net.EntitySync.Entity.SetPositionInternal(System.Numerics.Vector3)
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: SetPositionInternal(Vector3)
+  nameWithType: Entity.SetPositionInternal(Vector3)
+  fullName: AltV.Net.EntitySync.Entity.SetPositionInternal(System.Numerics.Vector3)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.SetPositionInternal(System.Numerics.Vector3)
+    name: SetPositionInternal
+    nameWithType: Entity.SetPositionInternal
+    fullName: AltV.Net.EntitySync.Entity.SetPositionInternal
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: System.Numerics.Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.SetPositionInternal(System.Numerics.Vector3)
+    name: SetPositionInternal
+    nameWithType: Entity.SetPositionInternal
+    fullName: AltV.Net.EntitySync.Entity.SetPositionInternal
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: System.Numerics.Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.EntitySync.Entity.SetDimensionInternal(System.Int32)
+  commentId: M:AltV.Net.EntitySync.Entity.SetDimensionInternal(System.Int32)
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: SetDimensionInternal(Int32)
+  nameWithType: Entity.SetDimensionInternal(Int32)
+  fullName: AltV.Net.EntitySync.Entity.SetDimensionInternal(System.Int32)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.SetDimensionInternal(System.Int32)
+    name: SetDimensionInternal
+    nameWithType: Entity.SetDimensionInternal
+    fullName: AltV.Net.EntitySync.Entity.SetDimensionInternal
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.SetDimensionInternal(System.Int32)
+    name: SetDimensionInternal
+    nameWithType: Entity.SetDimensionInternal
+    fullName: AltV.Net.EntitySync.Entity.SetDimensionInternal
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.EntitySync.Entity.SetRangeInternal(System.UInt32)
+  commentId: M:AltV.Net.EntitySync.Entity.SetRangeInternal(System.UInt32)
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: SetRangeInternal(UInt32)
+  nameWithType: Entity.SetRangeInternal(UInt32)
+  fullName: AltV.Net.EntitySync.Entity.SetRangeInternal(System.UInt32)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.SetRangeInternal(System.UInt32)
+    name: SetRangeInternal
+    nameWithType: Entity.SetRangeInternal
+    fullName: AltV.Net.EntitySync.Entity.SetRangeInternal
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.SetRangeInternal(System.UInt32)
+    name: SetRangeInternal
+    nameWithType: Entity.SetRangeInternal
+    fullName: AltV.Net.EntitySync.Entity.SetRangeInternal
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.EntitySync.Entity.TrySetPropertiesComputing(System.Numerics.Vector3@,System.UInt32@,System.Int32@)
+  commentId: M:AltV.Net.EntitySync.Entity.TrySetPropertiesComputing(System.Numerics.Vector3@,System.UInt32@,System.Int32@)
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: TrySetPropertiesComputing(Vector3, UInt32, Int32)
+  nameWithType: Entity.TrySetPropertiesComputing(Vector3, UInt32, Int32)
+  fullName: AltV.Net.EntitySync.Entity.TrySetPropertiesComputing(System.Numerics.Vector3, System.UInt32, System.Int32)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.TrySetPropertiesComputing(System.Numerics.Vector3@,System.UInt32@,System.Int32@)
+    name: TrySetPropertiesComputing
+    nameWithType: Entity.TrySetPropertiesComputing
+    fullName: AltV.Net.EntitySync.Entity.TrySetPropertiesComputing
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: System.Numerics.Vector3
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.TrySetPropertiesComputing(System.Numerics.Vector3@,System.UInt32@,System.Int32@)
+    name: TrySetPropertiesComputing
+    nameWithType: Entity.TrySetPropertiesComputing
+    fullName: AltV.Net.EntitySync.Entity.TrySetPropertiesComputing
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Numerics.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: System.Numerics.Vector3
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.EntitySync.Entity.SetThreadLocalData(System.String,System.Object)
+  commentId: M:AltV.Net.EntitySync.Entity.SetThreadLocalData(System.String,System.Object)
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: SetThreadLocalData(String, Object)
+  nameWithType: Entity.SetThreadLocalData(String, Object)
+  fullName: AltV.Net.EntitySync.Entity.SetThreadLocalData(System.String, System.Object)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.SetThreadLocalData(System.String,System.Object)
+    name: SetThreadLocalData
+    nameWithType: Entity.SetThreadLocalData
+    fullName: AltV.Net.EntitySync.Entity.SetThreadLocalData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.SetThreadLocalData(System.String,System.Object)
+    name: SetThreadLocalData
+    nameWithType: Entity.SetThreadLocalData
+    fullName: AltV.Net.EntitySync.Entity.SetThreadLocalData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.EntitySync.Entity.ResetThreadLocalData(System.String)
+  commentId: M:AltV.Net.EntitySync.Entity.ResetThreadLocalData(System.String)
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: ResetThreadLocalData(String)
+  nameWithType: Entity.ResetThreadLocalData(String)
+  fullName: AltV.Net.EntitySync.Entity.ResetThreadLocalData(System.String)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.ResetThreadLocalData(System.String)
+    name: ResetThreadLocalData
+    nameWithType: Entity.ResetThreadLocalData
+    fullName: AltV.Net.EntitySync.Entity.ResetThreadLocalData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.ResetThreadLocalData(System.String)
+    name: ResetThreadLocalData
+    nameWithType: Entity.ResetThreadLocalData
+    fullName: AltV.Net.EntitySync.Entity.ResetThreadLocalData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.EntitySync.Entity.TryGetThreadLocalData(System.String,System.Object@)
+  commentId: M:AltV.Net.EntitySync.Entity.TryGetThreadLocalData(System.String,System.Object@)
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: TryGetThreadLocalData(String, Object)
+  nameWithType: Entity.TryGetThreadLocalData(String, Object)
+  fullName: AltV.Net.EntitySync.Entity.TryGetThreadLocalData(System.String, System.Object)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.TryGetThreadLocalData(System.String,System.Object@)
+    name: TryGetThreadLocalData
+    nameWithType: Entity.TryGetThreadLocalData
+    fullName: AltV.Net.EntitySync.Entity.TryGetThreadLocalData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.TryGetThreadLocalData(System.String,System.Object@)
+    name: TryGetThreadLocalData
+    nameWithType: Entity.TryGetThreadLocalData
+    fullName: AltV.Net.EntitySync.Entity.TryGetThreadLocalData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.EntitySync.Entity.Serialize(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:AltV.Net.EntitySync.Entity.Serialize(System.Collections.Generic.IEnumerable{System.String})
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: Serialize(IEnumerable<String>)
+  nameWithType: Entity.Serialize(IEnumerable<String>)
+  fullName: AltV.Net.EntitySync.Entity.Serialize(System.Collections.Generic.IEnumerable<System.String>)
+  nameWithType.vb: Entity.Serialize(IEnumerable(Of String))
+  fullName.vb: AltV.Net.EntitySync.Entity.Serialize(System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: Serialize(IEnumerable(Of String))
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.Serialize(System.Collections.Generic.IEnumerable{System.String})
+    name: Serialize
+    nameWithType: Entity.Serialize
+    fullName: AltV.Net.EntitySync.Entity.Serialize
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.Serialize(System.Collections.Generic.IEnumerable{System.String})
+    name: Serialize
+    nameWithType: Entity.Serialize
+    fullName: AltV.Net.EntitySync.Entity.Serialize
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.EntitySync.Entity.SetExistsInternal(System.Boolean)
+  commentId: M:AltV.Net.EntitySync.Entity.SetExistsInternal(System.Boolean)
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: SetExistsInternal(Boolean)
+  nameWithType: Entity.SetExistsInternal(Boolean)
+  fullName: AltV.Net.EntitySync.Entity.SetExistsInternal(System.Boolean)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.SetExistsInternal(System.Boolean)
+    name: SetExistsInternal
+    nameWithType: Entity.SetExistsInternal
+    fullName: AltV.Net.EntitySync.Entity.SetExistsInternal
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.SetExistsInternal(System.Boolean)
+    name: SetExistsInternal
+    nameWithType: Entity.SetExistsInternal
+    fullName: AltV.Net.EntitySync.Entity.SetExistsInternal
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.EntitySync.Entity.GetHashCode
+  commentId: M:AltV.Net.EntitySync.Entity.GetHashCode
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Entity.GetHashCode()
+  fullName: AltV.Net.EntitySync.Entity.GetHashCode()
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.GetHashCode
+    name: GetHashCode
+    nameWithType: Entity.GetHashCode
+    fullName: AltV.Net.EntitySync.Entity.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.GetHashCode
+    name: GetHashCode
+    nameWithType: Entity.GetHashCode
+    fullName: AltV.Net.EntitySync.Entity.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.EntitySync.Entity.Equals(System.Object)
+  commentId: M:AltV.Net.EntitySync.Entity.Equals(System.Object)
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Entity.Equals(Object)
+  fullName: AltV.Net.EntitySync.Entity.Equals(System.Object)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.Equals(System.Object)
+    name: Equals
+    nameWithType: Entity.Equals
+    fullName: AltV.Net.EntitySync.Entity.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.Equals(System.Object)
+    name: Equals
+    nameWithType: Entity.Equals
+    fullName: AltV.Net.EntitySync.Entity.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AltV.Net.EntitySync.Entity.Id
+  commentId: P:AltV.Net.EntitySync.Entity.Id
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: Id
+  nameWithType: Entity.Id
+  fullName: AltV.Net.EntitySync.Entity.Id
+- uid: AltV.Net.EntitySync.Entity.Type
+  commentId: P:AltV.Net.EntitySync.Entity.Type
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: Type
+  nameWithType: Entity.Type
+  fullName: AltV.Net.EntitySync.Entity.Type
+- uid: AltV.Net.EntitySync.Entity.HashKey
+  commentId: P:AltV.Net.EntitySync.Entity.HashKey
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: HashKey
+  nameWithType: Entity.HashKey
+  fullName: AltV.Net.EntitySync.Entity.HashKey
+- uid: AltV.Net.EntitySync.Entity.Position
+  commentId: P:AltV.Net.EntitySync.Entity.Position
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: Position
+  nameWithType: Entity.Position
+  fullName: AltV.Net.EntitySync.Entity.Position
+- uid: AltV.Net.EntitySync.Entity.Exists
+  commentId: P:AltV.Net.EntitySync.Entity.Exists
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: Exists
+  nameWithType: Entity.Exists
+  fullName: AltV.Net.EntitySync.Entity.Exists
+- uid: AltV.Net.EntitySync.Entity.Dimension
+  commentId: P:AltV.Net.EntitySync.Entity.Dimension
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: Dimension
+  nameWithType: Entity.Dimension
+  fullName: AltV.Net.EntitySync.Entity.Dimension
+- uid: AltV.Net.EntitySync.Entity.Range
+  commentId: P:AltV.Net.EntitySync.Entity.Range
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: Range
+  nameWithType: Entity.Range
+  fullName: AltV.Net.EntitySync.Entity.Range
+- uid: AltV.Net.EntitySync.Entity.MigrationDistance
+  commentId: P:AltV.Net.EntitySync.Entity.MigrationDistance
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: MigrationDistance
+  nameWithType: Entity.MigrationDistance
+  fullName: AltV.Net.EntitySync.Entity.MigrationDistance
+- uid: AltV.Net.EntitySync.Entity.RangeSquared
+  commentId: P:AltV.Net.EntitySync.Entity.RangeSquared
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: RangeSquared
+  nameWithType: Entity.RangeSquared
+  fullName: AltV.Net.EntitySync.Entity.RangeSquared
+- uid: AltV.Net.EntitySync.Entity.TempNetOwner
+  commentId: P:AltV.Net.EntitySync.Entity.TempNetOwner
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: TempNetOwner
+  nameWithType: Entity.TempNetOwner
+  fullName: AltV.Net.EntitySync.Entity.TempNetOwner
+- uid: AltV.Net.EntitySync.Entity.NetOwner
+  commentId: P:AltV.Net.EntitySync.Entity.NetOwner
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: NetOwner
+  nameWithType: Entity.NetOwner
+  fullName: AltV.Net.EntitySync.Entity.NetOwner
+- uid: AltV.Net.EntitySync.Entity.NetOwnerRange
+  commentId: P:AltV.Net.EntitySync.Entity.NetOwnerRange
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: NetOwnerRange
+  nameWithType: Entity.NetOwnerRange
+  fullName: AltV.Net.EntitySync.Entity.NetOwnerRange
+- uid: AltV.Net.EntitySync.Entity.TempNetOwnerRange
+  commentId: P:AltV.Net.EntitySync.Entity.TempNetOwnerRange
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: TempNetOwnerRange
+  nameWithType: Entity.TempNetOwnerRange
+  fullName: AltV.Net.EntitySync.Entity.TempNetOwnerRange
+- uid: AltV.Net.EntitySync.Entity.LastStreamInRange
+  commentId: P:AltV.Net.EntitySync.Entity.LastStreamInRange
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: LastStreamInRange
+  nameWithType: Entity.LastStreamInRange
+  fullName: AltV.Net.EntitySync.Entity.LastStreamInRange
+- uid: AltV.Net.EntitySync.Entity.ThreadLocalData
+  commentId: P:AltV.Net.EntitySync.Entity.ThreadLocalData
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: ThreadLocalData
+  nameWithType: Entity.ThreadLocalData
+  fullName: AltV.Net.EntitySync.Entity.ThreadLocalData
+- uid: AltV.Net.EntitySync.Entity.DataSnapshot
+  commentId: P:AltV.Net.EntitySync.Entity.DataSnapshot
+  parent: AltV.Net.EntitySync.Entity
+  isExternal: true
+  name: DataSnapshot
+  nameWithType: Entity.DataSnapshot
+  fullName: AltV.Net.EntitySync.Entity.DataSnapshot
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AltV.Net.EntitySync
+  commentId: N:AltV.Net.EntitySync
+  isExternal: true
+  name: AltV.Net.EntitySync
+  nameWithType: AltV.Net.EntitySync
+  fullName: AltV.Net.EntitySync
+- uid: AltV.Net.EntitySync.Entity.TryGetData``1(System.String,``0@)
+  commentId: M:AltV.Net.EntitySync.Entity.TryGetData``1(System.String,``0@)
+  isExternal: true
+  name: TryGetData<T>(String, T)
+  nameWithType: Entity.TryGetData<T>(String, T)
+  fullName: AltV.Net.EntitySync.Entity.TryGetData<T>(System.String, T)
+  nameWithType.vb: Entity.TryGetData(Of T)(String, T)
+  fullName.vb: AltV.Net.EntitySync.Entity.TryGetData(Of T)(System.String, T)
+  name.vb: TryGetData(Of T)(String, T)
+  spec.csharp:
+  - uid: AltV.Net.EntitySync.Entity.TryGetData``1(System.String,``0@)
+    name: TryGetData<T>
+    nameWithType: Entity.TryGetData<T>
+    fullName: AltV.Net.EntitySync.Entity.TryGetData<T>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AltV.Net.EntitySync.Entity.TryGetData``1(System.String,``0@)
+    name: TryGetData(Of T)
+    nameWithType: Entity.TryGetData(Of T)
+    fullName: AltV.Net.EntitySync.Entity.TryGetData(Of T)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Altv_Roleplay.EntityStreamer.Blip.Name*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.Blip.Name
+  name: Name
+  nameWithType: Blip.Name
+  fullName: Altv_Roleplay.EntityStreamer.Blip.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Altv_Roleplay.EntityStreamer.Blip.Sprite*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.Blip.Sprite
+  name: Sprite
+  nameWithType: Blip.Sprite
+  fullName: Altv_Roleplay.EntityStreamer.Blip.Sprite
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.EntityStreamer.Blip.Color*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.Blip.Color
+  name: Color
+  nameWithType: Blip.Color
+  fullName: Altv_Roleplay.EntityStreamer.Blip.Color
+- uid: Altv_Roleplay.EntityStreamer.Blip.Scale*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.Blip.Scale
+  name: Scale
+  nameWithType: Blip.Scale
+  fullName: Altv_Roleplay.EntityStreamer.Blip.Scale
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Altv_Roleplay.EntityStreamer.Blip.ShortRange*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.Blip.ShortRange
+  name: ShortRange
+  nameWithType: Blip.ShortRange
+  fullName: Altv_Roleplay.EntityStreamer.Blip.ShortRange
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Altv_Roleplay.EntityStreamer.Blip.#ctor*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.Blip.#ctor
+  name: Blip
+  nameWithType: Blip.Blip
+  fullName: Altv_Roleplay.EntityStreamer.Blip.Blip
+- uid: System.Numerics.Vector3
+  commentId: T:System.Numerics.Vector3
+  parent: System.Numerics
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: System.Numerics.Vector3
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+- uid: Altv_Roleplay.EntityStreamer.Blip.IsStaticBlip*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.Blip.IsStaticBlip
+  name: IsStaticBlip
+  nameWithType: Blip.IsStaticBlip
+  fullName: Altv_Roleplay.EntityStreamer.Blip.IsStaticBlip
+- uid: Altv_Roleplay.EntityStreamer.Blip.Delete*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.Blip.Delete
+  name: Delete
+  nameWithType: Blip.Delete
+  fullName: Altv_Roleplay.EntityStreamer.Blip.Delete
+- uid: Altv_Roleplay.EntityStreamer.Blip.SetPosition*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.Blip.SetPosition
+  name: SetPosition
+  nameWithType: Blip.SetPosition
+  fullName: Altv_Roleplay.EntityStreamer.Blip.SetPosition
+- uid: AltV.Net.Data.Position
+  commentId: T:AltV.Net.Data.Position
+  parent: AltV.Net.Data
+  isExternal: true
+  name: Position
+  nameWithType: Position
+  fullName: AltV.Net.Data.Position
+- uid: AltV.Net.Data
+  commentId: N:AltV.Net.Data
+  isExternal: true
+  name: AltV.Net.Data
+  nameWithType: AltV.Net.Data
+  fullName: AltV.Net.Data
+- uid: Altv_Roleplay.EntityStreamer.Blip.SetBlipType*
+  commentId: Overload:Altv_Roleplay.EntityStreamer.Blip.SetBlipType
+  name: SetBlipType
+  nameWithType: Blip.SetBlipType
+  fullName: Altv_Roleplay.EntityStreamer.Blip.SetBlipType

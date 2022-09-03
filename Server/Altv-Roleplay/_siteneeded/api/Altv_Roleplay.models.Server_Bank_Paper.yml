@@ -1,0 +1,744 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.models.Server_Bank_Paper
+  commentId: T:Altv_Roleplay.models.Server_Bank_Paper
+  id: Server_Bank_Paper
+  parent: Altv_Roleplay.models
+  children:
+  - Altv_Roleplay.models.Server_Bank_Paper.accountNumber
+  - Altv_Roleplay.models.Server_Bank_Paper.Date
+  - Altv_Roleplay.models.Server_Bank_Paper.id
+  - Altv_Roleplay.models.Server_Bank_Paper.moneyAmount
+  - Altv_Roleplay.models.Server_Bank_Paper.Time
+  - Altv_Roleplay.models.Server_Bank_Paper.ToOrFrom
+  - Altv_Roleplay.models.Server_Bank_Paper.TransactionMessage
+  - Altv_Roleplay.models.Server_Bank_Paper.Type
+  - Altv_Roleplay.models.Server_Bank_Paper.zoneName
+  langs:
+  - csharp
+  - vb
+  name: Server_Bank_Paper
+  nameWithType: Server_Bank_Paper
+  fullName: Altv_Roleplay.models.Server_Bank_Paper
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Bank_Paper.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Server_Bank_Paper
+    path: models/Server_Bank_Paper.cs
+    startLine: 5
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public class Server_Bank_Paper
+    content.vb: Public Class Server_Bank_Paper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.models.Server_Bank_Paper.id
+  commentId: P:Altv_Roleplay.models.Server_Bank_Paper.id
+  id: id
+  parent: Altv_Roleplay.models.Server_Bank_Paper
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: Server_Bank_Paper.id
+  fullName: Altv_Roleplay.models.Server_Bank_Paper.id
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Bank_Paper.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: id
+    path: models/Server_Bank_Paper.cs
+    startLine: 7
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property id As Integer
+  overload: Altv_Roleplay.models.Server_Bank_Paper.id*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Bank_Paper.accountNumber
+  commentId: P:Altv_Roleplay.models.Server_Bank_Paper.accountNumber
+  id: accountNumber
+  parent: Altv_Roleplay.models.Server_Bank_Paper
+  langs:
+  - csharp
+  - vb
+  name: accountNumber
+  nameWithType: Server_Bank_Paper.accountNumber
+  fullName: Altv_Roleplay.models.Server_Bank_Paper.accountNumber
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Bank_Paper.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: accountNumber
+    path: models/Server_Bank_Paper.cs
+    startLine: 11
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int accountNumber { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property accountNumber As Integer
+  overload: Altv_Roleplay.models.Server_Bank_Paper.accountNumber*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Bank_Paper.Date
+  commentId: P:Altv_Roleplay.models.Server_Bank_Paper.Date
+  id: Date
+  parent: Altv_Roleplay.models.Server_Bank_Paper
+  langs:
+  - csharp
+  - vb
+  name: Date
+  nameWithType: Server_Bank_Paper.Date
+  fullName: Altv_Roleplay.models.Server_Bank_Paper.Date
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Bank_Paper.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Date
+    path: models/Server_Bank_Paper.cs
+    startLine: 12
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string Date { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Date As String
+  overload: Altv_Roleplay.models.Server_Bank_Paper.Date*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Bank_Paper.Time
+  commentId: P:Altv_Roleplay.models.Server_Bank_Paper.Time
+  id: Time
+  parent: Altv_Roleplay.models.Server_Bank_Paper
+  langs:
+  - csharp
+  - vb
+  name: Time
+  nameWithType: Server_Bank_Paper.Time
+  fullName: Altv_Roleplay.models.Server_Bank_Paper.Time
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Bank_Paper.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Time
+    path: models/Server_Bank_Paper.cs
+    startLine: 13
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string Time { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Time As String
+  overload: Altv_Roleplay.models.Server_Bank_Paper.Time*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Bank_Paper.Type
+  commentId: P:Altv_Roleplay.models.Server_Bank_Paper.Type
+  id: Type
+  parent: Altv_Roleplay.models.Server_Bank_Paper
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Server_Bank_Paper.Type
+  fullName: Altv_Roleplay.models.Server_Bank_Paper.Type
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Bank_Paper.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Type
+    path: models/Server_Bank_Paper.cs
+    startLine: 14
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string Type { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Type As String
+  overload: Altv_Roleplay.models.Server_Bank_Paper.Type*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Bank_Paper.ToOrFrom
+  commentId: P:Altv_Roleplay.models.Server_Bank_Paper.ToOrFrom
+  id: ToOrFrom
+  parent: Altv_Roleplay.models.Server_Bank_Paper
+  langs:
+  - csharp
+  - vb
+  name: ToOrFrom
+  nameWithType: Server_Bank_Paper.ToOrFrom
+  fullName: Altv_Roleplay.models.Server_Bank_Paper.ToOrFrom
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Bank_Paper.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: ToOrFrom
+    path: models/Server_Bank_Paper.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string ToOrFrom { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ToOrFrom As String
+  overload: Altv_Roleplay.models.Server_Bank_Paper.ToOrFrom*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Bank_Paper.TransactionMessage
+  commentId: P:Altv_Roleplay.models.Server_Bank_Paper.TransactionMessage
+  id: TransactionMessage
+  parent: Altv_Roleplay.models.Server_Bank_Paper
+  langs:
+  - csharp
+  - vb
+  name: TransactionMessage
+  nameWithType: Server_Bank_Paper.TransactionMessage
+  fullName: Altv_Roleplay.models.Server_Bank_Paper.TransactionMessage
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Bank_Paper.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: TransactionMessage
+    path: models/Server_Bank_Paper.cs
+    startLine: 16
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string TransactionMessage { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TransactionMessage As String
+  overload: Altv_Roleplay.models.Server_Bank_Paper.TransactionMessage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Bank_Paper.moneyAmount
+  commentId: P:Altv_Roleplay.models.Server_Bank_Paper.moneyAmount
+  id: moneyAmount
+  parent: Altv_Roleplay.models.Server_Bank_Paper
+  langs:
+  - csharp
+  - vb
+  name: moneyAmount
+  nameWithType: Server_Bank_Paper.moneyAmount
+  fullName: Altv_Roleplay.models.Server_Bank_Paper.moneyAmount
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Bank_Paper.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: moneyAmount
+    path: models/Server_Bank_Paper.cs
+    startLine: 17
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string moneyAmount { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property moneyAmount As String
+  overload: Altv_Roleplay.models.Server_Bank_Paper.moneyAmount*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Bank_Paper.zoneName
+  commentId: P:Altv_Roleplay.models.Server_Bank_Paper.zoneName
+  id: zoneName
+  parent: Altv_Roleplay.models.Server_Bank_Paper
+  langs:
+  - csharp
+  - vb
+  name: zoneName
+  nameWithType: Server_Bank_Paper.zoneName
+  fullName: Altv_Roleplay.models.Server_Bank_Paper.zoneName
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Bank_Paper.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: zoneName
+    path: models/Server_Bank_Paper.cs
+    startLine: 18
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string zoneName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property zoneName As String
+  overload: Altv_Roleplay.models.Server_Bank_Paper.zoneName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.models
+  commentId: N:Altv_Roleplay.models
+  name: Altv_Roleplay.models
+  nameWithType: Altv_Roleplay.models
+  fullName: Altv_Roleplay.models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.models.Server_Bank_Paper.id*
+  commentId: Overload:Altv_Roleplay.models.Server_Bank_Paper.id
+  name: id
+  nameWithType: Server_Bank_Paper.id
+  fullName: Altv_Roleplay.models.Server_Bank_Paper.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.models.Server_Bank_Paper.accountNumber*
+  commentId: Overload:Altv_Roleplay.models.Server_Bank_Paper.accountNumber
+  name: accountNumber
+  nameWithType: Server_Bank_Paper.accountNumber
+  fullName: Altv_Roleplay.models.Server_Bank_Paper.accountNumber
+- uid: Altv_Roleplay.models.Server_Bank_Paper.Date*
+  commentId: Overload:Altv_Roleplay.models.Server_Bank_Paper.Date
+  name: Date
+  nameWithType: Server_Bank_Paper.Date
+  fullName: Altv_Roleplay.models.Server_Bank_Paper.Date
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Altv_Roleplay.models.Server_Bank_Paper.Time*
+  commentId: Overload:Altv_Roleplay.models.Server_Bank_Paper.Time
+  name: Time
+  nameWithType: Server_Bank_Paper.Time
+  fullName: Altv_Roleplay.models.Server_Bank_Paper.Time
+- uid: Altv_Roleplay.models.Server_Bank_Paper.Type*
+  commentId: Overload:Altv_Roleplay.models.Server_Bank_Paper.Type
+  name: Type
+  nameWithType: Server_Bank_Paper.Type
+  fullName: Altv_Roleplay.models.Server_Bank_Paper.Type
+- uid: Altv_Roleplay.models.Server_Bank_Paper.ToOrFrom*
+  commentId: Overload:Altv_Roleplay.models.Server_Bank_Paper.ToOrFrom
+  name: ToOrFrom
+  nameWithType: Server_Bank_Paper.ToOrFrom
+  fullName: Altv_Roleplay.models.Server_Bank_Paper.ToOrFrom
+- uid: Altv_Roleplay.models.Server_Bank_Paper.TransactionMessage*
+  commentId: Overload:Altv_Roleplay.models.Server_Bank_Paper.TransactionMessage
+  name: TransactionMessage
+  nameWithType: Server_Bank_Paper.TransactionMessage
+  fullName: Altv_Roleplay.models.Server_Bank_Paper.TransactionMessage
+- uid: Altv_Roleplay.models.Server_Bank_Paper.moneyAmount*
+  commentId: Overload:Altv_Roleplay.models.Server_Bank_Paper.moneyAmount
+  name: moneyAmount
+  nameWithType: Server_Bank_Paper.moneyAmount
+  fullName: Altv_Roleplay.models.Server_Bank_Paper.moneyAmount
+- uid: Altv_Roleplay.models.Server_Bank_Paper.zoneName*
+  commentId: Overload:Altv_Roleplay.models.Server_Bank_Paper.zoneName
+  name: zoneName
+  nameWithType: Server_Bank_Paper.zoneName
+  fullName: Altv_Roleplay.models.Server_Bank_Paper.zoneName

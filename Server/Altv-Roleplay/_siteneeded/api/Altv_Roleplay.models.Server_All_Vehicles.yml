@@ -1,0 +1,874 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.models.Server_All_Vehicles
+  commentId: T:Altv_Roleplay.models.Server_All_Vehicles
+  id: Server_All_Vehicles
+  parent: Altv_Roleplay.models
+  children:
+  - Altv_Roleplay.models.Server_All_Vehicles.category
+  - Altv_Roleplay.models.Server_All_Vehicles.fuelType
+  - Altv_Roleplay.models.Server_All_Vehicles.hash
+  - Altv_Roleplay.models.Server_All_Vehicles.id
+  - Altv_Roleplay.models.Server_All_Vehicles.manufactor
+  - Altv_Roleplay.models.Server_All_Vehicles.maxFuel
+  - Altv_Roleplay.models.Server_All_Vehicles.name
+  - Altv_Roleplay.models.Server_All_Vehicles.price
+  - Altv_Roleplay.models.Server_All_Vehicles.seats
+  - Altv_Roleplay.models.Server_All_Vehicles.tax
+  - Altv_Roleplay.models.Server_All_Vehicles.trunkCapacity
+  - Altv_Roleplay.models.Server_All_Vehicles.vehClass
+  langs:
+  - csharp
+  - vb
+  name: Server_All_Vehicles
+  nameWithType: Server_All_Vehicles
+  fullName: Altv_Roleplay.models.Server_All_Vehicles
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_All_Vehicles.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Server_All_Vehicles
+    path: models/Server_All_Vehicles.cs
+    startLine: 5
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public class Server_All_Vehicles
+    content.vb: Public Class Server_All_Vehicles
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.models.Server_All_Vehicles.id
+  commentId: P:Altv_Roleplay.models.Server_All_Vehicles.id
+  id: id
+  parent: Altv_Roleplay.models.Server_All_Vehicles
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: Server_All_Vehicles.id
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.id
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_All_Vehicles.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: id
+    path: models/Server_All_Vehicles.cs
+    startLine: 7
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property id As Integer
+  overload: Altv_Roleplay.models.Server_All_Vehicles.id*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_All_Vehicles.category
+  commentId: P:Altv_Roleplay.models.Server_All_Vehicles.category
+  id: category
+  parent: Altv_Roleplay.models.Server_All_Vehicles
+  langs:
+  - csharp
+  - vb
+  name: category
+  nameWithType: Server_All_Vehicles.category
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.category
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_All_Vehicles.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: category
+    path: models/Server_All_Vehicles.cs
+    startLine: 11
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string category { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property category As String
+  overload: Altv_Roleplay.models.Server_All_Vehicles.category*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_All_Vehicles.manufactor
+  commentId: P:Altv_Roleplay.models.Server_All_Vehicles.manufactor
+  id: manufactor
+  parent: Altv_Roleplay.models.Server_All_Vehicles
+  langs:
+  - csharp
+  - vb
+  name: manufactor
+  nameWithType: Server_All_Vehicles.manufactor
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.manufactor
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_All_Vehicles.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: manufactor
+    path: models/Server_All_Vehicles.cs
+    startLine: 12
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string manufactor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property manufactor As String
+  overload: Altv_Roleplay.models.Server_All_Vehicles.manufactor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_All_Vehicles.name
+  commentId: P:Altv_Roleplay.models.Server_All_Vehicles.name
+  id: name
+  parent: Altv_Roleplay.models.Server_All_Vehicles
+  langs:
+  - csharp
+  - vb
+  name: name
+  nameWithType: Server_All_Vehicles.name
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.name
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_All_Vehicles.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: name
+    path: models/Server_All_Vehicles.cs
+    startLine: 13
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property name As String
+  overload: Altv_Roleplay.models.Server_All_Vehicles.name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_All_Vehicles.hash
+  commentId: P:Altv_Roleplay.models.Server_All_Vehicles.hash
+  id: hash
+  parent: Altv_Roleplay.models.Server_All_Vehicles
+  langs:
+  - csharp
+  - vb
+  name: hash
+  nameWithType: Server_All_Vehicles.hash
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.hash
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_All_Vehicles.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: hash
+    path: models/Server_All_Vehicles.cs
+    startLine: 14
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public long hash { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property hash As Long
+  overload: Altv_Roleplay.models.Server_All_Vehicles.hash*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_All_Vehicles.price
+  commentId: P:Altv_Roleplay.models.Server_All_Vehicles.price
+  id: price
+  parent: Altv_Roleplay.models.Server_All_Vehicles
+  langs:
+  - csharp
+  - vb
+  name: price
+  nameWithType: Server_All_Vehicles.price
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.price
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_All_Vehicles.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: price
+    path: models/Server_All_Vehicles.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int price { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property price As Integer
+  overload: Altv_Roleplay.models.Server_All_Vehicles.price*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_All_Vehicles.trunkCapacity
+  commentId: P:Altv_Roleplay.models.Server_All_Vehicles.trunkCapacity
+  id: trunkCapacity
+  parent: Altv_Roleplay.models.Server_All_Vehicles
+  langs:
+  - csharp
+  - vb
+  name: trunkCapacity
+  nameWithType: Server_All_Vehicles.trunkCapacity
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.trunkCapacity
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_All_Vehicles.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: trunkCapacity
+    path: models/Server_All_Vehicles.cs
+    startLine: 16
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int trunkCapacity { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property trunkCapacity As Integer
+  overload: Altv_Roleplay.models.Server_All_Vehicles.trunkCapacity*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_All_Vehicles.maxFuel
+  commentId: P:Altv_Roleplay.models.Server_All_Vehicles.maxFuel
+  id: maxFuel
+  parent: Altv_Roleplay.models.Server_All_Vehicles
+  langs:
+  - csharp
+  - vb
+  name: maxFuel
+  nameWithType: Server_All_Vehicles.maxFuel
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.maxFuel
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_All_Vehicles.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: maxFuel
+    path: models/Server_All_Vehicles.cs
+    startLine: 17
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int maxFuel { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property maxFuel As Integer
+  overload: Altv_Roleplay.models.Server_All_Vehicles.maxFuel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_All_Vehicles.fuelType
+  commentId: P:Altv_Roleplay.models.Server_All_Vehicles.fuelType
+  id: fuelType
+  parent: Altv_Roleplay.models.Server_All_Vehicles
+  langs:
+  - csharp
+  - vb
+  name: fuelType
+  nameWithType: Server_All_Vehicles.fuelType
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.fuelType
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_All_Vehicles.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: fuelType
+    path: models/Server_All_Vehicles.cs
+    startLine: 18
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public string fuelType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property fuelType As String
+  overload: Altv_Roleplay.models.Server_All_Vehicles.fuelType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_All_Vehicles.seats
+  commentId: P:Altv_Roleplay.models.Server_All_Vehicles.seats
+  id: seats
+  parent: Altv_Roleplay.models.Server_All_Vehicles
+  langs:
+  - csharp
+  - vb
+  name: seats
+  nameWithType: Server_All_Vehicles.seats
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.seats
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_All_Vehicles.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: seats
+    path: models/Server_All_Vehicles.cs
+    startLine: 19
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int seats { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property seats As Integer
+  overload: Altv_Roleplay.models.Server_All_Vehicles.seats*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_All_Vehicles.tax
+  commentId: P:Altv_Roleplay.models.Server_All_Vehicles.tax
+  id: tax
+  parent: Altv_Roleplay.models.Server_All_Vehicles
+  langs:
+  - csharp
+  - vb
+  name: tax
+  nameWithType: Server_All_Vehicles.tax
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.tax
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_All_Vehicles.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: tax
+    path: models/Server_All_Vehicles.cs
+    startLine: 20
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int tax { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property tax As Integer
+  overload: Altv_Roleplay.models.Server_All_Vehicles.tax*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_All_Vehicles.vehClass
+  commentId: P:Altv_Roleplay.models.Server_All_Vehicles.vehClass
+  id: vehClass
+  parent: Altv_Roleplay.models.Server_All_Vehicles
+  langs:
+  - csharp
+  - vb
+  name: vehClass
+  nameWithType: Server_All_Vehicles.vehClass
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.vehClass
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_All_Vehicles.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: vehClass
+    path: models/Server_All_Vehicles.cs
+    startLine: 21
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int vehClass { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property vehClass As Integer
+  overload: Altv_Roleplay.models.Server_All_Vehicles.vehClass*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.models
+  commentId: N:Altv_Roleplay.models
+  name: Altv_Roleplay.models
+  nameWithType: Altv_Roleplay.models
+  fullName: Altv_Roleplay.models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.models.Server_All_Vehicles.id*
+  commentId: Overload:Altv_Roleplay.models.Server_All_Vehicles.id
+  name: id
+  nameWithType: Server_All_Vehicles.id
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.models.Server_All_Vehicles.category*
+  commentId: Overload:Altv_Roleplay.models.Server_All_Vehicles.category
+  name: category
+  nameWithType: Server_All_Vehicles.category
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.category
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Altv_Roleplay.models.Server_All_Vehicles.manufactor*
+  commentId: Overload:Altv_Roleplay.models.Server_All_Vehicles.manufactor
+  name: manufactor
+  nameWithType: Server_All_Vehicles.manufactor
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.manufactor
+- uid: Altv_Roleplay.models.Server_All_Vehicles.name*
+  commentId: Overload:Altv_Roleplay.models.Server_All_Vehicles.name
+  name: name
+  nameWithType: Server_All_Vehicles.name
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.name
+- uid: Altv_Roleplay.models.Server_All_Vehicles.hash*
+  commentId: Overload:Altv_Roleplay.models.Server_All_Vehicles.hash
+  name: hash
+  nameWithType: Server_All_Vehicles.hash
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.hash
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: Altv_Roleplay.models.Server_All_Vehicles.price*
+  commentId: Overload:Altv_Roleplay.models.Server_All_Vehicles.price
+  name: price
+  nameWithType: Server_All_Vehicles.price
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.price
+- uid: Altv_Roleplay.models.Server_All_Vehicles.trunkCapacity*
+  commentId: Overload:Altv_Roleplay.models.Server_All_Vehicles.trunkCapacity
+  name: trunkCapacity
+  nameWithType: Server_All_Vehicles.trunkCapacity
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.trunkCapacity
+- uid: Altv_Roleplay.models.Server_All_Vehicles.maxFuel*
+  commentId: Overload:Altv_Roleplay.models.Server_All_Vehicles.maxFuel
+  name: maxFuel
+  nameWithType: Server_All_Vehicles.maxFuel
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.maxFuel
+- uid: Altv_Roleplay.models.Server_All_Vehicles.fuelType*
+  commentId: Overload:Altv_Roleplay.models.Server_All_Vehicles.fuelType
+  name: fuelType
+  nameWithType: Server_All_Vehicles.fuelType
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.fuelType
+- uid: Altv_Roleplay.models.Server_All_Vehicles.seats*
+  commentId: Overload:Altv_Roleplay.models.Server_All_Vehicles.seats
+  name: seats
+  nameWithType: Server_All_Vehicles.seats
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.seats
+- uid: Altv_Roleplay.models.Server_All_Vehicles.tax*
+  commentId: Overload:Altv_Roleplay.models.Server_All_Vehicles.tax
+  name: tax
+  nameWithType: Server_All_Vehicles.tax
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.tax
+- uid: Altv_Roleplay.models.Server_All_Vehicles.vehClass*
+  commentId: Overload:Altv_Roleplay.models.Server_All_Vehicles.vehClass
+  name: vehClass
+  nameWithType: Server_All_Vehicles.vehClass
+  fullName: Altv_Roleplay.models.Server_All_Vehicles.vehClass

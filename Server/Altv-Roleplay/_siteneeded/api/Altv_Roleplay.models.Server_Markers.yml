@@ -1,0 +1,915 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.models.Server_Markers
+  commentId: T:Altv_Roleplay.models.Server_Markers
+  id: Server_Markers
+  parent: Altv_Roleplay.models
+  children:
+  - Altv_Roleplay.models.Server_Markers.alpha
+  - Altv_Roleplay.models.Server_Markers.blue
+  - Altv_Roleplay.models.Server_Markers.bobUpAndDown
+  - Altv_Roleplay.models.Server_Markers.green
+  - Altv_Roleplay.models.Server_Markers.id
+  - Altv_Roleplay.models.Server_Markers.posX
+  - Altv_Roleplay.models.Server_Markers.posY
+  - Altv_Roleplay.models.Server_Markers.posZ
+  - Altv_Roleplay.models.Server_Markers.red
+  - Altv_Roleplay.models.Server_Markers.scaleX
+  - Altv_Roleplay.models.Server_Markers.scaleY
+  - Altv_Roleplay.models.Server_Markers.scaleZ
+  - Altv_Roleplay.models.Server_Markers.type
+  langs:
+  - csharp
+  - vb
+  name: Server_Markers
+  nameWithType: Server_Markers
+  fullName: Altv_Roleplay.models.Server_Markers
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Markers.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: Server_Markers
+    path: models/Server_Markers.cs
+    startLine: 5
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public class Server_Markers
+    content.vb: Public Class Server_Markers
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.models.Server_Markers.id
+  commentId: P:Altv_Roleplay.models.Server_Markers.id
+  id: id
+  parent: Altv_Roleplay.models.Server_Markers
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: Server_Markers.id
+  fullName: Altv_Roleplay.models.Server_Markers.id
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Markers.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: id
+    path: models/Server_Markers.cs
+    startLine: 7
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property id As Integer
+  overload: Altv_Roleplay.models.Server_Markers.id*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Markers.type
+  commentId: P:Altv_Roleplay.models.Server_Markers.type
+  id: type
+  parent: Altv_Roleplay.models.Server_Markers
+  langs:
+  - csharp
+  - vb
+  name: type
+  nameWithType: Server_Markers.type
+  fullName: Altv_Roleplay.models.Server_Markers.type
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Markers.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: type
+    path: models/Server_Markers.cs
+    startLine: 11
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int type { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property type As Integer
+  overload: Altv_Roleplay.models.Server_Markers.type*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Markers.posX
+  commentId: P:Altv_Roleplay.models.Server_Markers.posX
+  id: posX
+  parent: Altv_Roleplay.models.Server_Markers
+  langs:
+  - csharp
+  - vb
+  name: posX
+  nameWithType: Server_Markers.posX
+  fullName: Altv_Roleplay.models.Server_Markers.posX
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Markers.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: posX
+    path: models/Server_Markers.cs
+    startLine: 12
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float posX { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property posX As Single
+  overload: Altv_Roleplay.models.Server_Markers.posX*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Markers.posY
+  commentId: P:Altv_Roleplay.models.Server_Markers.posY
+  id: posY
+  parent: Altv_Roleplay.models.Server_Markers
+  langs:
+  - csharp
+  - vb
+  name: posY
+  nameWithType: Server_Markers.posY
+  fullName: Altv_Roleplay.models.Server_Markers.posY
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Markers.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: posY
+    path: models/Server_Markers.cs
+    startLine: 13
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float posY { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property posY As Single
+  overload: Altv_Roleplay.models.Server_Markers.posY*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Markers.posZ
+  commentId: P:Altv_Roleplay.models.Server_Markers.posZ
+  id: posZ
+  parent: Altv_Roleplay.models.Server_Markers
+  langs:
+  - csharp
+  - vb
+  name: posZ
+  nameWithType: Server_Markers.posZ
+  fullName: Altv_Roleplay.models.Server_Markers.posZ
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Markers.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: posZ
+    path: models/Server_Markers.cs
+    startLine: 14
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float posZ { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property posZ As Single
+  overload: Altv_Roleplay.models.Server_Markers.posZ*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Markers.scaleX
+  commentId: P:Altv_Roleplay.models.Server_Markers.scaleX
+  id: scaleX
+  parent: Altv_Roleplay.models.Server_Markers
+  langs:
+  - csharp
+  - vb
+  name: scaleX
+  nameWithType: Server_Markers.scaleX
+  fullName: Altv_Roleplay.models.Server_Markers.scaleX
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Markers.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: scaleX
+    path: models/Server_Markers.cs
+    startLine: 15
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float scaleX { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property scaleX As Single
+  overload: Altv_Roleplay.models.Server_Markers.scaleX*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Markers.scaleY
+  commentId: P:Altv_Roleplay.models.Server_Markers.scaleY
+  id: scaleY
+  parent: Altv_Roleplay.models.Server_Markers
+  langs:
+  - csharp
+  - vb
+  name: scaleY
+  nameWithType: Server_Markers.scaleY
+  fullName: Altv_Roleplay.models.Server_Markers.scaleY
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Markers.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: scaleY
+    path: models/Server_Markers.cs
+    startLine: 16
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float scaleY { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property scaleY As Single
+  overload: Altv_Roleplay.models.Server_Markers.scaleY*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Markers.scaleZ
+  commentId: P:Altv_Roleplay.models.Server_Markers.scaleZ
+  id: scaleZ
+  parent: Altv_Roleplay.models.Server_Markers
+  langs:
+  - csharp
+  - vb
+  name: scaleZ
+  nameWithType: Server_Markers.scaleZ
+  fullName: Altv_Roleplay.models.Server_Markers.scaleZ
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Markers.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: scaleZ
+    path: models/Server_Markers.cs
+    startLine: 17
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public float scaleZ { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property scaleZ As Single
+  overload: Altv_Roleplay.models.Server_Markers.scaleZ*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Markers.red
+  commentId: P:Altv_Roleplay.models.Server_Markers.red
+  id: red
+  parent: Altv_Roleplay.models.Server_Markers
+  langs:
+  - csharp
+  - vb
+  name: red
+  nameWithType: Server_Markers.red
+  fullName: Altv_Roleplay.models.Server_Markers.red
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Markers.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: red
+    path: models/Server_Markers.cs
+    startLine: 18
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int red { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property red As Integer
+  overload: Altv_Roleplay.models.Server_Markers.red*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Markers.green
+  commentId: P:Altv_Roleplay.models.Server_Markers.green
+  id: green
+  parent: Altv_Roleplay.models.Server_Markers
+  langs:
+  - csharp
+  - vb
+  name: green
+  nameWithType: Server_Markers.green
+  fullName: Altv_Roleplay.models.Server_Markers.green
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Markers.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: green
+    path: models/Server_Markers.cs
+    startLine: 19
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int green { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property green As Integer
+  overload: Altv_Roleplay.models.Server_Markers.green*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Markers.blue
+  commentId: P:Altv_Roleplay.models.Server_Markers.blue
+  id: blue
+  parent: Altv_Roleplay.models.Server_Markers
+  langs:
+  - csharp
+  - vb
+  name: blue
+  nameWithType: Server_Markers.blue
+  fullName: Altv_Roleplay.models.Server_Markers.blue
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Markers.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: blue
+    path: models/Server_Markers.cs
+    startLine: 20
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int blue { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property blue As Integer
+  overload: Altv_Roleplay.models.Server_Markers.blue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Markers.alpha
+  commentId: P:Altv_Roleplay.models.Server_Markers.alpha
+  id: alpha
+  parent: Altv_Roleplay.models.Server_Markers
+  langs:
+  - csharp
+  - vb
+  name: alpha
+  nameWithType: Server_Markers.alpha
+  fullName: Altv_Roleplay.models.Server_Markers.alpha
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Markers.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: alpha
+    path: models/Server_Markers.cs
+    startLine: 21
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public int alpha { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property alpha As Integer
+  overload: Altv_Roleplay.models.Server_Markers.alpha*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.models.Server_Markers.bobUpAndDown
+  commentId: P:Altv_Roleplay.models.Server_Markers.bobUpAndDown
+  id: bobUpAndDown
+  parent: Altv_Roleplay.models.Server_Markers
+  langs:
+  - csharp
+  - vb
+  name: bobUpAndDown
+  nameWithType: Server_Markers.bobUpAndDown
+  fullName: Altv_Roleplay.models.Server_Markers.bobUpAndDown
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/models/Server_Markers.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: bobUpAndDown
+    path: models/Server_Markers.cs
+    startLine: 22
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.models
+  syntax:
+    content: public bool bobUpAndDown { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property bobUpAndDown As Boolean
+  overload: Altv_Roleplay.models.Server_Markers.bobUpAndDown*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.models
+  commentId: N:Altv_Roleplay.models
+  name: Altv_Roleplay.models
+  nameWithType: Altv_Roleplay.models
+  fullName: Altv_Roleplay.models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.models.Server_Markers.id*
+  commentId: Overload:Altv_Roleplay.models.Server_Markers.id
+  name: id
+  nameWithType: Server_Markers.id
+  fullName: Altv_Roleplay.models.Server_Markers.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.models.Server_Markers.type*
+  commentId: Overload:Altv_Roleplay.models.Server_Markers.type
+  name: type
+  nameWithType: Server_Markers.type
+  fullName: Altv_Roleplay.models.Server_Markers.type
+- uid: Altv_Roleplay.models.Server_Markers.posX*
+  commentId: Overload:Altv_Roleplay.models.Server_Markers.posX
+  name: posX
+  nameWithType: Server_Markers.posX
+  fullName: Altv_Roleplay.models.Server_Markers.posX
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Altv_Roleplay.models.Server_Markers.posY*
+  commentId: Overload:Altv_Roleplay.models.Server_Markers.posY
+  name: posY
+  nameWithType: Server_Markers.posY
+  fullName: Altv_Roleplay.models.Server_Markers.posY
+- uid: Altv_Roleplay.models.Server_Markers.posZ*
+  commentId: Overload:Altv_Roleplay.models.Server_Markers.posZ
+  name: posZ
+  nameWithType: Server_Markers.posZ
+  fullName: Altv_Roleplay.models.Server_Markers.posZ
+- uid: Altv_Roleplay.models.Server_Markers.scaleX*
+  commentId: Overload:Altv_Roleplay.models.Server_Markers.scaleX
+  name: scaleX
+  nameWithType: Server_Markers.scaleX
+  fullName: Altv_Roleplay.models.Server_Markers.scaleX
+- uid: Altv_Roleplay.models.Server_Markers.scaleY*
+  commentId: Overload:Altv_Roleplay.models.Server_Markers.scaleY
+  name: scaleY
+  nameWithType: Server_Markers.scaleY
+  fullName: Altv_Roleplay.models.Server_Markers.scaleY
+- uid: Altv_Roleplay.models.Server_Markers.scaleZ*
+  commentId: Overload:Altv_Roleplay.models.Server_Markers.scaleZ
+  name: scaleZ
+  nameWithType: Server_Markers.scaleZ
+  fullName: Altv_Roleplay.models.Server_Markers.scaleZ
+- uid: Altv_Roleplay.models.Server_Markers.red*
+  commentId: Overload:Altv_Roleplay.models.Server_Markers.red
+  name: red
+  nameWithType: Server_Markers.red
+  fullName: Altv_Roleplay.models.Server_Markers.red
+- uid: Altv_Roleplay.models.Server_Markers.green*
+  commentId: Overload:Altv_Roleplay.models.Server_Markers.green
+  name: green
+  nameWithType: Server_Markers.green
+  fullName: Altv_Roleplay.models.Server_Markers.green
+- uid: Altv_Roleplay.models.Server_Markers.blue*
+  commentId: Overload:Altv_Roleplay.models.Server_Markers.blue
+  name: blue
+  nameWithType: Server_Markers.blue
+  fullName: Altv_Roleplay.models.Server_Markers.blue
+- uid: Altv_Roleplay.models.Server_Markers.alpha*
+  commentId: Overload:Altv_Roleplay.models.Server_Markers.alpha
+  name: alpha
+  nameWithType: Server_Markers.alpha
+  fullName: Altv_Roleplay.models.Server_Markers.alpha
+- uid: Altv_Roleplay.models.Server_Markers.bobUpAndDown*
+  commentId: Overload:Altv_Roleplay.models.Server_Markers.bobUpAndDown
+  name: bobUpAndDown
+  nameWithType: Server_Markers.bobUpAndDown
+  fullName: Altv_Roleplay.models.Server_Markers.bobUpAndDown
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

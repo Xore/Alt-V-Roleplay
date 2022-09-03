@@ -1,0 +1,794 @@
+### YamlMime:ManagedReference
+items:
+- uid: Altv_Roleplay.Handler.WeedPot
+  commentId: T:Altv_Roleplay.Handler.WeedPot
+  id: WeedPot
+  parent: Altv_Roleplay.Handler
+  children:
+  - Altv_Roleplay.Handler.WeedPot.dimension
+  - Altv_Roleplay.Handler.WeedPot.hasFertilizer
+  - Altv_Roleplay.Handler.WeedPot.id
+  - Altv_Roleplay.Handler.WeedPot.position
+  - Altv_Roleplay.Handler.WeedPot.prop
+  - Altv_Roleplay.Handler.WeedPot.remainingMinutes
+  - Altv_Roleplay.Handler.WeedPot.state
+  - Altv_Roleplay.Handler.WeedPot.textLabel
+  - Altv_Roleplay.Handler.WeedPot.water
+  langs:
+  - csharp
+  - vb
+  name: WeedPot
+  nameWithType: WeedPot
+  fullName: Altv_Roleplay.Handler.WeedPot
+  type: Class
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/WeedPlantHandler.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: WeedPot
+    path: Handler/WeedPlantHandler.cs
+    startLine: 24
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: public class WeedPot
+    content.vb: Public Class WeedPot
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Altv_Roleplay.Handler.WeedPot.id
+  commentId: P:Altv_Roleplay.Handler.WeedPot.id
+  id: id
+  parent: Altv_Roleplay.Handler.WeedPot
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: WeedPot.id
+  fullName: Altv_Roleplay.Handler.WeedPot.id
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/WeedPlantHandler.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: id
+    path: Handler/WeedPlantHandler.cs
+    startLine: 26
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property id As Integer
+  overload: Altv_Roleplay.Handler.WeedPot.id*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.WeedPot.remainingMinutes
+  commentId: P:Altv_Roleplay.Handler.WeedPot.remainingMinutes
+  id: remainingMinutes
+  parent: Altv_Roleplay.Handler.WeedPot
+  langs:
+  - csharp
+  - vb
+  name: remainingMinutes
+  nameWithType: WeedPot.remainingMinutes
+  fullName: Altv_Roleplay.Handler.WeedPot.remainingMinutes
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/WeedPlantHandler.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: remainingMinutes
+    path: Handler/WeedPlantHandler.cs
+    startLine: 30
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: public int remainingMinutes { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property remainingMinutes As Integer
+  overload: Altv_Roleplay.Handler.WeedPot.remainingMinutes*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.WeedPot.dimension
+  commentId: P:Altv_Roleplay.Handler.WeedPot.dimension
+  id: dimension
+  parent: Altv_Roleplay.Handler.WeedPot
+  langs:
+  - csharp
+  - vb
+  name: dimension
+  nameWithType: WeedPot.dimension
+  fullName: Altv_Roleplay.Handler.WeedPot.dimension
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/WeedPlantHandler.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: dimension
+    path: Handler/WeedPlantHandler.cs
+    startLine: 31
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: public int dimension { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property dimension As Integer
+  overload: Altv_Roleplay.Handler.WeedPot.dimension*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.WeedPot.water
+  commentId: P:Altv_Roleplay.Handler.WeedPot.water
+  id: water
+  parent: Altv_Roleplay.Handler.WeedPot
+  langs:
+  - csharp
+  - vb
+  name: water
+  nameWithType: WeedPot.water
+  fullName: Altv_Roleplay.Handler.WeedPot.water
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/WeedPlantHandler.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: water
+    path: Handler/WeedPlantHandler.cs
+    startLine: 32
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: public int water { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property water As Integer
+  overload: Altv_Roleplay.Handler.WeedPot.water*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.WeedPot.hasFertilizer
+  commentId: P:Altv_Roleplay.Handler.WeedPot.hasFertilizer
+  id: hasFertilizer
+  parent: Altv_Roleplay.Handler.WeedPot
+  langs:
+  - csharp
+  - vb
+  name: hasFertilizer
+  nameWithType: WeedPot.hasFertilizer
+  fullName: Altv_Roleplay.Handler.WeedPot.hasFertilizer
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/WeedPlantHandler.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: hasFertilizer
+    path: Handler/WeedPlantHandler.cs
+    startLine: 33
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: public bool hasFertilizer { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property hasFertilizer As Boolean
+  overload: Altv_Roleplay.Handler.WeedPot.hasFertilizer*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.WeedPot.position
+  commentId: P:Altv_Roleplay.Handler.WeedPot.position
+  id: position
+  parent: Altv_Roleplay.Handler.WeedPot
+  langs:
+  - csharp
+  - vb
+  name: position
+  nameWithType: WeedPot.position
+  fullName: Altv_Roleplay.Handler.WeedPot.position
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/WeedPlantHandler.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: position
+    path: Handler/WeedPlantHandler.cs
+    startLine: 34
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: public Position position { get; set; }
+    parameters: []
+    return:
+      type: AltV.Net.Data.Position
+    content.vb: Public Property position As Position
+  overload: Altv_Roleplay.Handler.WeedPot.position*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.WeedPot.state
+  commentId: P:Altv_Roleplay.Handler.WeedPot.state
+  id: state
+  parent: Altv_Roleplay.Handler.WeedPot
+  langs:
+  - csharp
+  - vb
+  name: state
+  nameWithType: WeedPot.state
+  fullName: Altv_Roleplay.Handler.WeedPot.state
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/WeedPlantHandler.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: state
+    path: Handler/WeedPlantHandler.cs
+    startLine: 35
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: public int state { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property state As Integer
+  overload: Altv_Roleplay.Handler.WeedPot.state*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.WeedPot.prop
+  commentId: P:Altv_Roleplay.Handler.WeedPot.prop
+  id: prop
+  parent: Altv_Roleplay.Handler.WeedPot
+  langs:
+  - csharp
+  - vb
+  name: prop
+  nameWithType: WeedPot.prop
+  fullName: Altv_Roleplay.Handler.WeedPot.prop
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/WeedPlantHandler.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: prop
+    path: Handler/WeedPlantHandler.cs
+    startLine: 37
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [NotMapped]
+
+      public Prop prop { get; set; }
+    parameters: []
+    return:
+      type: Altv_Roleplay.EntityStreamer.Prop
+    content.vb: >-
+      <NotMapped>
+
+      Public Property prop As Prop
+  overload: Altv_Roleplay.Handler.WeedPot.prop*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Altv_Roleplay.Handler.WeedPot.textLabel
+  commentId: P:Altv_Roleplay.Handler.WeedPot.textLabel
+  id: textLabel
+  parent: Altv_Roleplay.Handler.WeedPot
+  langs:
+  - csharp
+  - vb
+  name: textLabel
+  nameWithType: WeedPot.textLabel
+  fullName: Altv_Roleplay.Handler.WeedPot.textLabel
+  type: Property
+  source:
+    remote:
+      path: Server/Altv-Roleplay/Handler/WeedPlantHandler.cs
+      branch: master
+      repo: https://xore@dev.azure.com/xore/Nightout-Gaming/_git/Nightout-Gaming
+    id: textLabel
+    path: Handler/WeedPlantHandler.cs
+    startLine: 40
+  assemblies:
+  - NightOut-Gaming
+  namespace: Altv_Roleplay.Handler
+  syntax:
+    content: >-
+      [NotMapped]
+
+      public PlayerLabel textLabel { get; set; }
+    parameters: []
+    return:
+      type: Altv_Roleplay.EntityStreamer.PlayerLabel
+    content.vb: >-
+      <NotMapped>
+
+      Public Property textLabel As PlayerLabel
+  overload: Altv_Roleplay.Handler.WeedPot.textLabel*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.NotMappedAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Altv_Roleplay.Handler
+  commentId: N:Altv_Roleplay.Handler
+  name: Altv_Roleplay.Handler
+  nameWithType: Altv_Roleplay.Handler
+  fullName: Altv_Roleplay.Handler
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Altv_Roleplay.Handler.WeedPot.id*
+  commentId: Overload:Altv_Roleplay.Handler.WeedPot.id
+  name: id
+  nameWithType: WeedPot.id
+  fullName: Altv_Roleplay.Handler.WeedPot.id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Altv_Roleplay.Handler.WeedPot.remainingMinutes*
+  commentId: Overload:Altv_Roleplay.Handler.WeedPot.remainingMinutes
+  name: remainingMinutes
+  nameWithType: WeedPot.remainingMinutes
+  fullName: Altv_Roleplay.Handler.WeedPot.remainingMinutes
+- uid: Altv_Roleplay.Handler.WeedPot.dimension*
+  commentId: Overload:Altv_Roleplay.Handler.WeedPot.dimension
+  name: dimension
+  nameWithType: WeedPot.dimension
+  fullName: Altv_Roleplay.Handler.WeedPot.dimension
+- uid: Altv_Roleplay.Handler.WeedPot.water*
+  commentId: Overload:Altv_Roleplay.Handler.WeedPot.water
+  name: water
+  nameWithType: WeedPot.water
+  fullName: Altv_Roleplay.Handler.WeedPot.water
+- uid: Altv_Roleplay.Handler.WeedPot.hasFertilizer*
+  commentId: Overload:Altv_Roleplay.Handler.WeedPot.hasFertilizer
+  name: hasFertilizer
+  nameWithType: WeedPot.hasFertilizer
+  fullName: Altv_Roleplay.Handler.WeedPot.hasFertilizer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Altv_Roleplay.Handler.WeedPot.position*
+  commentId: Overload:Altv_Roleplay.Handler.WeedPot.position
+  name: position
+  nameWithType: WeedPot.position
+  fullName: Altv_Roleplay.Handler.WeedPot.position
+- uid: AltV.Net.Data.Position
+  commentId: T:AltV.Net.Data.Position
+  parent: AltV.Net.Data
+  isExternal: true
+  name: Position
+  nameWithType: Position
+  fullName: AltV.Net.Data.Position
+- uid: AltV.Net.Data
+  commentId: N:AltV.Net.Data
+  isExternal: true
+  name: AltV.Net.Data
+  nameWithType: AltV.Net.Data
+  fullName: AltV.Net.Data
+- uid: Altv_Roleplay.Handler.WeedPot.state*
+  commentId: Overload:Altv_Roleplay.Handler.WeedPot.state
+  name: state
+  nameWithType: WeedPot.state
+  fullName: Altv_Roleplay.Handler.WeedPot.state
+- uid: Altv_Roleplay.Handler.WeedPot.prop*
+  commentId: Overload:Altv_Roleplay.Handler.WeedPot.prop
+  name: prop
+  nameWithType: WeedPot.prop
+  fullName: Altv_Roleplay.Handler.WeedPot.prop
+- uid: Altv_Roleplay.EntityStreamer.Prop
+  commentId: T:Altv_Roleplay.EntityStreamer.Prop
+  parent: Altv_Roleplay.EntityStreamer
+  name: Prop
+  nameWithType: Prop
+  fullName: Altv_Roleplay.EntityStreamer.Prop
+- uid: Altv_Roleplay.EntityStreamer
+  commentId: N:Altv_Roleplay.EntityStreamer
+  name: Altv_Roleplay.EntityStreamer
+  nameWithType: Altv_Roleplay.EntityStreamer
+  fullName: Altv_Roleplay.EntityStreamer
+- uid: Altv_Roleplay.Handler.WeedPot.textLabel*
+  commentId: Overload:Altv_Roleplay.Handler.WeedPot.textLabel
+  name: textLabel
+  nameWithType: WeedPot.textLabel
+  fullName: Altv_Roleplay.Handler.WeedPot.textLabel
+- uid: Altv_Roleplay.EntityStreamer.PlayerLabel
+  commentId: T:Altv_Roleplay.EntityStreamer.PlayerLabel
+  parent: Altv_Roleplay.EntityStreamer
+  name: PlayerLabel
+  nameWithType: PlayerLabel
+  fullName: Altv_Roleplay.EntityStreamer.PlayerLabel
